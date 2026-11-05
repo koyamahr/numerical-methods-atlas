@@ -8,9 +8,15 @@ the public website.
 
 ## Proposed public presentation
 
-Keep `https://koyamahr.github.io/the-art-of-numerical-algorithms/` as the
-canonical address and retain its sibling link to *The Art of Thermal
-Instability*. English remains the source edition. The local bilingual candidate adds Japanese/English switching, a 137-term glossary and four Japanese draft chapters; the other 38 chapters retain explicit English fallback. See `BILINGUAL_STATUS.md` for untranslated advanced notebooks and source annotations.
+Use **An Atlas of Numerical Methods** / **数値計算法アトラス**, with
+`https://koyamahr.github.io/numerical-methods-atlas/` as the new canonical
+publication target. Keep the sibling link to *The Art of Thermal Instability*.
+The existing public site remains at the old URL until cutover; see
+`URL_MIGRATION.md` for the separate legacy landing artifact and publication guard.
+English remains the source edition. The bilingual candidate adds a 137-term
+glossary and four Japanese draft chapters; the other 38 chapters retain explicit
+English fallback. See `BILINGUAL_STATUS.md` for untranslated advanced notebooks
+and source annotations.
 The homepage leads with 126 journal/conference papers and distinguishes
 42 equation/model entries, 83 methods/building blocks, 146 total sources,
 and nine saved-profile gallery cases.
@@ -56,5 +62,6 @@ module imports, bibliography/coverage consistency and artifact hashes.
 
 Both CI and the Pages workflow use the same preparation/check path. The Pages
 workflow watches the catalogs, documents and preparation scripts as well as
-the website. Publication keeps its existing `main` branch trigger and URL;
-this candidate does not create a new host, domain, release tag or deployment.
+the website. Publication keeps its `main` branch trigger, but verifies the repository against
+`site.config.json` before deploying to the new URL. This candidate does not
+create or rename a repository, replace the legacy site, or deploy either artifact.

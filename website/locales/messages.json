@@ -43,20 +43,20 @@
     "en": "Main navigation",
     "ja": "メインナビゲーション"
   },
-  "ui.the-art-of-numerical-algorithms-home.118982": {
-    "en": "The Art of Numerical Algorithms home",
+  "site.home-label": {
+    "en": "An Atlas of Numerical Methods home",
     "ja": "数値計算法アトラスのホーム"
   },
-  "ui.the-art-of.ae837b": {
-    "en": "The Art of",
-    "ja": "数値計算法の"
+  "site.brand-lead": {
+    "en": "An Atlas of",
+    "ja": "数値計算法"
   },
-  "ui.numerical-algorithms.d4d820": {
-    "en": "Numerical Algorithms",
+  "site.brand-subject": {
+    "en": "Numerical Methods",
     "ja": "アトラス"
   },
-  "ui.the-art-of-numerical-algorithms.330128": {
-    "en": "The Art of Numerical Algorithms",
+  "site.title": {
+    "en": "An Atlas of Numerical Methods",
     "ja": "数値計算法アトラス"
   },
   "ui.opening-the-atlas.9d720c": {

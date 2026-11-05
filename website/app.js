@@ -10,7 +10,7 @@ import {hamiltonianPage,wireHamiltonian} from './hamiltonian.js';
 import {timePage,meshPage,wireTime,wireMesh} from './foundations.js';
 import {stabilityPage,convergencePage,wireStability,wireConvergence} from './experiments.js';
 const main = document.querySelector('main');
-const repo = 'https://github.com/koyamahr/the-art-of-numerical-algorithms';
+let repo = 'https://github.com/koyamahr/numerical-methods-atlas', site;
 const escapeHTML = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const methods = [
   {id:'stability',number:'01',title:'Differences & stability',subtitle:'Start with the stencil.',description:'Follow information through a grid. Separate spatial differences, time integration, the CFL condition, and linear stability.',formula:'uₜ + a uₓ = 0',tag:'FINITE DIFFERENCES'},
@@ -120,7 +120,7 @@ function renderShell() {
  const description = currentLanguage()==='ja' ? '方程式、数値計算法、原論文、再現可能なテスト計算をつなぐ数値計算アトラス。' : 'A living atlas of numerical algorithms. Explore the original papers, understand the methods, and inspect reproducible benchmark results.';
  document.querySelector('meta[name="description"]').content=description;
  document.querySelector('meta[property="og:description"]').content=description;
- document.querySelector('meta[property="og:title"]').content=translateText('The Art of Numerical Algorithms');
+ document.querySelector('meta[property="og:title"]').content=site.title[currentLanguage()];
  localizeTree(document.body);
 }
 async function changeLanguage(language, {historyEntry=true}={}) {
@@ -250,7 +250,7 @@ async function route(options={}) {
  }
  document.querySelectorAll('[data-nav]').forEach(a=>{if(a.dataset.nav===type||(type==='movies'&&a.dataset.nav==='gallery')||(['convergence','time-integration','meshes','hamiltonian','limiters','runge-kutta','cip'].includes(type)&&a.dataset.nav==='experiments'))a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
  document.querySelector('.site-header').classList.remove('menu-open');document.querySelector('.mobile-menu').setAttribute('aria-expanded','false');
- document.title=type==='home'?'The Art of Numerical Algorithms':`${type==='read'?(documents[parts[1]]?.title||'Reading room'):({glossary:currentLanguage()==='ja'?'日英用語集':'Bilingual glossary',coverage:'The atlas in numbers',equations:'Equation gallery',atlas:'Historical atlas',methods:'Explore the methods',gallery:'Numerical gallery',movies:'Motion gallery',references:'Reference library',experiments:'Stability laboratory',convergence:'Convergence notebook','time-integration':'Time integration notebook',meshes:'Mesh explorer',hamiltonian:'Hamiltonian map notebook',limiters:'Slope limiter notebook','runge-kutta':'Runge–Kutta family notebook',cip:'CIP profile notebook'}[type]||'Page not found')} · The Art of Numerical Algorithms`;
+ document.title=type==='home'?site.title[currentLanguage()]:`${type==='read'?(documents[parts[1]]?.title||'Reading room'):({glossary:currentLanguage()==='ja'?'日英用語集':'Bilingual glossary',coverage:'The atlas in numbers',equations:'Equation gallery',atlas:'Historical atlas',methods:'Explore the methods',gallery:'Numerical gallery',movies:'Motion gallery',references:'Reference library',experiments:'Stability laboratory',convergence:'Convergence notebook','time-integration':'Time integration notebook',meshes:'Mesh explorer',hamiltonian:'Hamiltonian map notebook',limiters:'Slope limiter notebook','runge-kutta':'Runge–Kutta family notebook',cip:'CIP profile notebook'}[type]||'Page not found')} · ${site.title[currentLanguage()]}`;
  document.title=document.title.split(' · ').map(translateText).join(' · ');
  if(type==='read')document.querySelectorAll('.heading-anchor').forEach(a=>{a.href=`#/read/${parts[1]}?section=${a.parentElement.id}`;});
  if(type==='references') {filterReferences(query.get('q')||'');document.querySelector('#reference-search').addEventListener('input',e=>filterReferences(e.target.value));}
@@ -278,7 +278,8 @@ async function route(options={}) {
 document.querySelector('.skip-link').addEventListener('click',e=>{e.preventDefault();main.focus();main.scrollIntoView();});
 document.querySelector('#figure-dialog').addEventListener('click',e=>{if(e.target===e.currentTarget)e.currentTarget.close();});
 try {
- [localeCatalog,references,sod,experiments,foundations,coverage,translationStatus,glossary]=await Promise.all(['locales/messages.json','references.json','sod.json','experiments.json','foundations.json','coverage.json','translation-status.json','glossary.json'].map(async file=>{const response=await fetch(file);if(!response.ok)throw Error(`Cannot load ${file}`);return response.json();}));
+ [localeCatalog,references,sod,experiments,foundations,coverage,translationStatus,glossary,site]=await Promise.all(['locales/messages.json','references.json','sod.json','experiments.json','foundations.json','coverage.json','translation-status.json','glossary.json','site.json'].map(async file=>{const response=await fetch(file);if(!response.ok)throw Error(`Cannot load ${file}`);return response.json();}));
+ repo=site.repositoryUrl;
  references.sort((a,b)=>a.year-b.year||a.id.localeCompare(b.id));
  let saved;try{saved=localStorage.getItem('numart-language');}catch{}
  configureLocale(localeCatalog,resolveLanguage(location.search,saved));

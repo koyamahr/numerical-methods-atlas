@@ -1,0 +1,15 @@
+{
+  "title": {
+    "en": "An Atlas of Numerical Methods",
+    "ja": "数値計算法アトラス"
+  },
+  "brand": {
+    "lead": "An Atlas of",
+    "subject": "Numerical Methods"
+  },
+  "publicUrl": "https://koyamahr.github.io/numerical-methods-atlas/",
+  "repositoryUrl": "https://github.com/koyamahr/numerical-methods-atlas",
+  "publicationRepository": "koyamahr/numerical-methods-atlas",
+  "legacyPublicUrl": "https://koyamahr.github.io/the-art-of-numerical-algorithms/",
+  "legacyRepositoryUrl": "https://github.com/koyamahr/the-art-of-numerical-algorithms"
+}

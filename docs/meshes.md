@@ -1,6 +1,6 @@
 # Structured, unstructured, and triangular meshes
 
-A mesh describes geometry **and connectivity**. Cell shape and indexing are different choices: triangles may be obtained by splitting a structured lattice, or connected in an irregular unstructured triangulation. The [mesh explorer](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/meshes) makes this distinction visible.
+A mesh describes geometry **and connectivity**. Cell shape and indexing are different choices: triangles may be obtained by splitting a structured lattice, or connected in an irregular unstructured triangulation. The [mesh explorer](https://koyamahr.github.io/numerical-methods-atlas/#/meshes) makes this distinction visible.
 
 ## Structured meshes
 

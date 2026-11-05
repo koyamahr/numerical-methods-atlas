@@ -1,6 +1,6 @@
 # Differences, CFL, von Neumann analysis, and Lax
 
-Try the [interactive stability laboratory](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/experiments) and read the [experiment guide](experiments.md) to connect the formulas below with live browser calculations.
+Try the [interactive stability laboratory](https://koyamahr.github.io/numerical-methods-atlas/#/experiments) and read the [experiment guide](experiments.md) to connect the formulas below with live browser calculations.
 
 ## Choose space and time discretizations separately
 

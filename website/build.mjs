@@ -7,8 +7,18 @@ import katex from 'katex';
 
 const root = path.dirname(fileURLToPath(import.meta.url));
 process.chdir(root);
+const site = JSON.parse(fs.readFileSync('site.config.json', 'utf8'));
+const publicURL = new URL(site.publicUrl);
+if (publicURL.protocol !== 'https:' || publicURL.pathname !== `/${site.publicationRepository.split('/')[1]}/`) throw new Error('Publication URL and repository do not match');
 fs.mkdirSync('dist', { recursive: true });
 for (const f of ['index.html', 'style.css', 'app.js', 'i18n.js', 'glossary.js', 'experiments.js', 'foundations.js', 'hamiltonian.js', 'movies.js', 'limiters.js', 'runge-kutta.js', 'cip.js', 'equations.js', 'coverage.js', 'numerics.js', 'favicon.svg']) fs.copyFileSync(f, `dist/${f}`);
+const escapeHTML = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const substitutions = {SITE_TITLE:site.title.en, BRAND_LEAD:site.brand.lead, BRAND_SUBJECT:site.brand.subject, SITE_URL:site.publicUrl, REPOSITORY_URL:site.repositoryUrl, LEGACY_REPOSITORY_URL:site.legacyRepositoryUrl};
+let index = fs.readFileSync('index.html', 'utf8');
+for (const [key, value] of Object.entries(substitutions)) index = index.replaceAll(`{{${key}}}`, escapeHTML(value));
+if (/\{\{[A-Z_]+\}\}/.test(index)) throw new Error('Unresolved site metadata placeholder');
+fs.writeFileSync('dist/index.html', index);
+fs.writeFileSync('dist/site.json', JSON.stringify(site));
 fs.cpSync('public', 'dist', { recursive: true });
 fs.cpSync('locales', 'dist/locales', { recursive: true });
 fs.copyFileSync('../catalog/glossary.json', 'dist/glossary.json');
@@ -37,6 +47,7 @@ function renderDocument(text, locale = 'en') {
     const name = path.basename(url, '.md');
     return `href="${name.toLowerCase() === 'readme' ? '#/' : `#/read/${name}`}${fragment ? `?section=${fragment.slice(1)}` : ''}"`;
   }).replace(/(?:src|href)="figures\//g, match => match.replace('figures/', 'assets/')).replace(/href="(?:\.\.\/)?references\.bib"/g, 'href="assets/references.bib"');
+  for (const base of [site.publicUrl, site.legacyPublicUrl]) html = html.replaceAll(`href="${base}#/`, 'href="#/');
   const title = (html.match(/<h1>(.*?)<\/h1>/) || [])[1];
   return { title, html, headings, locale };
 }
@@ -69,7 +80,15 @@ fs.writeFileSync('dist/translation-status.json', JSON.stringify({chapters: statu
 for (const file of ['references.json', 'sod.json', 'experiments.json', 'advection-reference.json', 'foundations.json', 'hamiltonian.json', 'limiters.json', 'runge-kutta.json', 'cip.json', 'equation-gallery.json', 'coverage.json']) fs.copyFileSync(`content/${file}`, `dist/${file}`);
 const hosting = JSON.parse(fs.readFileSync('.openai/hosting.json', 'utf8'));
 if (hosting.static?.directory !== 'dist') throw new Error('Unexpected Site configuration');
-const origin = 'https://koyamahr.github.io/the-art-of-numerical-algorithms';
+const origin = site.publicUrl.replace(/\/$/, '');
 fs.writeFileSync('dist/robots.txt', `User-agent: *\nAllow: /\nSitemap: ${origin}/sitemap.xml\n`);
 fs.writeFileSync('dist/sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${origin}/</loc></url></urlset>\n`);
 console.log(`Built static web edition with ${Object.keys(documents).length} complete reading chapters.`);
+
+// Keep the old-address landing page separate from the atlas deployment artifact.
+const legacyDirectory = path.resolve(root, '../outputs/legacy-redirect');
+fs.mkdirSync(legacyDirectory, {recursive:true});
+const legacyHTML = `<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,follow"><link rel="canonical" href="${escapeHTML(site.publicUrl)}"><title>移転のお知らせ · ${escapeHTML(site.title.en)}</title><style>body{max-width:760px;margin:12vh auto;padding:24px;background:#f5f2ea;color:#23392f;font:17px/1.8 system-ui,sans-serif}h1{font-size:30px}a{color:#a34829;overflow-wrap:anywhere}</style></head><body><h1>数値計算法アトラスは移転しました</h1><p lang="en">${escapeHTML(site.title.en)} has moved.</p><p><a href="${escapeHTML(site.publicUrl)}">新しいサイトを開く / Open the atlas →</a></p><p>言語設定と章・節へのリンクを引き継いで移動します。</p><noscript><p>JavaScriptが無効な場合は、上のリンクから移動してください。</p></noscript><script type="module">import {migrationURL} from './migration.js'; location.replace(migrationURL(location.href,${JSON.stringify(site.publicUrl)}));</script></body></html>`;
+fs.writeFileSync(path.join(legacyDirectory, 'index.html'), legacyHTML);
+fs.writeFileSync(path.join(legacyDirectory, '404.html'), legacyHTML);
+fs.copyFileSync('migration.js', path.join(legacyDirectory, 'migration.js'));

@@ -1,6 +1,6 @@
 # Symplectic integration: a canonical map, not an exact energy promise
 
-A symplectic integrator advances a Hamiltonian system while preserving its canonical two-form. This is the map property behind the good long-time behavior of many orbital and particle integrators. It does **not** generally preserve the original Hamiltonian exactly. The [Hamiltonian map notebook](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/hamiltonian) separates those two questions with computed examples.
+A symplectic integrator advances a Hamiltonian system while preserving its canonical two-form. This is the map property behind the good long-time behavior of many orbital and particle integrators. It does **not** generally preserve the original Hamiltonian exactly. The [Hamiltonian map notebook](https://koyamahr.github.io/numerical-methods-atlas/#/hamiltonian) separates those two questions with computed examples.
 
 ![Fixed-step energy and phase-space comparisons for harmonic and quartic oscillators.](figures/hamiltonian.png)
 

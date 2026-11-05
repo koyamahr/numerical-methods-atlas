@@ -1,10 +1,10 @@
 # Time integration and leapfrog
 
-Spatial reconstruction and time integration are independent choices. After spatial discretization, a PDE becomes an ODE system dU/dt = L(U). Accuracy, stability, monotonicity, dissipation, and cost then depend on both parts. The [time integration notebook](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/time-integration) isolates the temporal choice using y′ = i y, y(0) = 1.
+Spatial reconstruction and time integration are independent choices. After spatial discretization, a PDE becomes an ODE system dU/dt = L(U). Accuracy, stability, monotonicity, dissipation, and cost then depend on both parts. The [time integration notebook](https://koyamahr.github.io/numerical-methods-atlas/#/time-integration) isolates the temporal choice using y′ = i y, y(0) = 1.
 
 ## Twelve methods on one oscillator
 
-The exact solution exp(i t) follows the unit circle. Forward Euler and backward Euler are first order: the former grows on this undamped oscillator, while the latter damps it. The explicit RK2 family includes Heun / SSPRK(2,2), explicit midpoint, and Ralston. Kutta RK3, SSPRK(3,3), and SSPRK(4,3) are third order; classical RK4 and SSPRK(5,4) are fourth order. Implicit midpoint is second order and preserves the amplitude of this linear oscillator. Its phase still has error. Read the [RK family chapter](runge-kutta.md) and use the [family notebook](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/runge-kutta) for stage/order/SSP comparisons and nonlinear tests.
+The exact solution exp(i t) follows the unit circle. Forward Euler and backward Euler are first order: the former grows on this undamped oscillator, while the latter damps it. The explicit RK2 family includes Heun / SSPRK(2,2), explicit midpoint, and Ralston. Kutta RK3, SSPRK(3,3), and SSPRK(4,3) are third order; classical RK4 and SSPRK(5,4) are fourth order. Implicit midpoint is second order and preserves the amplitude of this linear oscillator. Its phase still has error. Read the [RK family chapter](runge-kutta.md) and use the [family notebook](https://koyamahr.github.io/numerical-methods-atlas/#/runge-kutta) for stage/order/SSP comparisons and nonlinear tests.
 
 For y′ = lambda y, define z = lambda delta t. One-step amplification factors include
 
@@ -48,4 +48,4 @@ Continue with [the spatial stability laboratory](experiments.md), [SPH](particle
 
 ## Canonical mechanical maps
 
-The [symplectic integration chapter](symplectic.md) now implements mechanical kick–drift–kick Verlet, a fourth-order Yoshida composition, symplectic Euler, and implicit midpoint on harmonic and quartic Hamiltonians. The [map notebook](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/hamiltonian) compares them with RK4, separating canonical structure from exact energy conservation.
+The [symplectic integration chapter](symplectic.md) now implements mechanical kick–drift–kick Verlet, a fourth-order Yoshida composition, symplectic Euler, and implicit midpoint on harmonic and quartic Hamiltonians. The [map notebook](https://koyamahr.github.io/numerical-methods-atlas/#/hamiltonian) compares them with RK4, separating canonical structure from exact energy conservation.

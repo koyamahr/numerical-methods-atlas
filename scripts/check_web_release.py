@@ -90,6 +90,23 @@ messages=json.loads((SITE/'locales/messages.json').read_text())
 require(messages==json.loads((DIST/'locales/messages.json').read_text()),'Built language messages are stale')
 for term in glossary['terms']:
     require(messages.get('term.'+term['id'])=={key:term[key] for key in ('en','ja')},'Glossary message differs from source: '+term['id'])
+site=json.loads((SITE/'site.config.json').read_text())
+require(site==json.loads((DIST/'site.json').read_text()),'Built site metadata is stale')
+index=(DIST/'index.html').read_text()
+require(f'<title>{site["title"]["en"]}</title>' in index,'Incorrect site title')
+require(f'<link rel="canonical" href="{site["publicUrl"]}">' in index,'Incorrect canonical URL')
+require(f'<meta property="og:url" content="{site["publicUrl"]}">' in index,'Incorrect Open Graph URL')
+require('{{SITE_' not in index and '{{BRAND_' not in index,'Unrendered site metadata')
+require(site['publicUrl'] in (DIST/'sitemap.xml').read_text(),'Sitemap points to the wrong site')
+require(site['publicUrl']+'sitemap.xml' in (DIST/'robots.txt').read_text(),'Robots sitemap points to the wrong site')
+for name,document in documents.items():
+    require('href="'+site['legacyPublicUrl']+'#/' not in document['html'],f'{name}: legacy site link remains')
+    require('href="'+site['publicUrl']+'#/' not in document['html'],f'{name}: same-site link would leave the current language')
+legacy=ROOT/'outputs/legacy-redirect'
+for filename in ['index.html','404.html','migration.js']:
+    require((legacy/filename).is_file(),'Missing legacy landing artifact: '+filename)
+require((legacy/'migration.js').read_bytes()==(SITE/'migration.js').read_bytes(),'Legacy migration module is stale')
+require(site['publicUrl'] in (legacy/'index.html').read_text(),'Legacy landing points to the wrong site')
 if errors:raise SystemExit('\n'.join(errors))
 files=sorted(p for p in DIST.rglob('*') if p.is_file())
 file_hashes={p.relative_to(DIST).as_posix():sha256(p.read_bytes()).hexdigest() for p in files}

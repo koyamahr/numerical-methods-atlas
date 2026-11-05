@@ -55,4 +55,4 @@ For strong-shock instability diagnostics, continue to [the carbuncle phenomenon]
 
 ## Watch the reflection evolve
 
-[The saved-state movie](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/movies?case=double-mach) shows density and pressure from the same 256 × 64 calculation. It includes actual physical times, solver steps, fixed scales, frame inspection, and MP4 export. Read [the sampling definitions](movies.md).
+[The saved-state movie](https://koyamahr.github.io/numerical-methods-atlas/#/movies?case=double-mach) shows density and pressure from the same 256 × 64 calculation. It includes actual physical times, solver steps, fixed scales, frame inspection, and MP4 export. Read [the sampling definitions](movies.md).

@@ -12,6 +12,7 @@ on:
       - 'scripts/build_biology_survey.py'
       - 'scripts/build_coverage.py'
       - 'scripts/prepare_web_content.py'
+      - 'scripts/check_pages_target.py'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 
@@ -36,6 +37,7 @@ jobs:
           node-version: '22'
           cache: npm
           cache-dependency-path: website/package-lock.json
+      - run: python scripts/check_pages_target.py
       - uses: actions/configure-pages@v5
       - run: npm ci
         working-directory: website

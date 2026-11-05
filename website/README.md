@@ -1,8 +1,8 @@
 # Web edition
 
-A static, English reading site for **The Art of Numerical Algorithms**.
+A static Japanese/English reading site for **An Atlas of Numerical Methods** / **数値計算法アトラス**.
 
-Public URL: https://koyamahr.github.io/the-art-of-numerical-algorithms/
+Publication target: `https://koyamahr.github.io/numerical-methods-atlas/` (not deployed yet). The old site remains live during migration. Branding and URLs are defined in `site.config.json`; see [migration preparation](../URL_MIGRATION.md).
 
 ## Build
 

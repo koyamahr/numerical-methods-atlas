@@ -1,4 +1,4 @@
-# The Art of Numerical Algorithms
+# An Atlas of Numerical Methods
 
 **Read the paper. Understand the method. Run the benchmark.**
 
@@ -12,7 +12,7 @@ compare the results with analytical solutions and conservation checks. The
 library covers selected educational models; the [roadmap](docs/roadmap.md)
 identifies the extensions still to be implemented.
 
-**[Read the web edition](https://koyamahr.github.io/the-art-of-numerical-algorithms/)** — browse the atlas, methods, gallery, and searchable references.
+**[Read the currently published edition](https://koyamahr.github.io/the-art-of-numerical-algorithms/)** — the existing site remains live during preparation. The approved new address is `https://koyamahr.github.io/numerical-methods-atlas/`; it is not deployed yet. See [URL migration](URL_MIGRATION.md).
 
 ## Getting started
 
@@ -103,14 +103,14 @@ and tested linear rotating-shallow-water Fourier symbols.
 
 ## Interactive notebooks
 
-- [Stability laboratory](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/experiments): compute periodic FTCS, upwind, LF, and LW advection in the browser. Change the signed Courant number, initial profile, and step count; inspect amplification and export the experiment.
-- [Convergence notebook](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/convergence): inspect the original DG and Euler entropy-wave refinement data, switch between elements and unknowns, and read measured convergence orders.
-- [CIP profiles](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/cip): cubic-Hermite value/gradient transport, scalar advection, refinement, oscillations, and a conservation counterexample.
-- [Runge–Kutta families](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/runge-kutta): nine explicit RK methods, actual nonlinear stages, Butcher tableaus, stability contours, measured orders, and conditional SSP bounds.
-- [Time integration](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/time-integration): twelve Python-computed oscillator methods, including unfiltered leapfrog and its startup mode.
-- [Mesh explorer](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/meshes): select cells and inspect face-sharing neighbors in structured and irregular meshes.
-- [Hamiltonian maps](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/hamiltonian): symplectic Euler, Verlet, Yoshida fourth order, implicit midpoint, and RK4 on two Hamiltonians.
-- [Limiter notebook](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/limiters): minmod, Superbee, MC, van Leer, and clipped van Albada; scalar advection, Sod, Sweby bounds, refinement, TVB parameters, and a separate mean-preserving positive Euler reconstruction.
+- [Stability laboratory](https://koyamahr.github.io/numerical-methods-atlas/#/experiments): compute periodic FTCS, upwind, LF, and LW advection in the browser. Change the signed Courant number, initial profile, and step count; inspect amplification and export the experiment.
+- [Convergence notebook](https://koyamahr.github.io/numerical-methods-atlas/#/convergence): inspect the original DG and Euler entropy-wave refinement data, switch between elements and unknowns, and read measured convergence orders.
+- [CIP profiles](https://koyamahr.github.io/numerical-methods-atlas/#/cip): cubic-Hermite value/gradient transport, scalar advection, refinement, oscillations, and a conservation counterexample.
+- [Runge–Kutta families](https://koyamahr.github.io/numerical-methods-atlas/#/runge-kutta): nine explicit RK methods, actual nonlinear stages, Butcher tableaus, stability contours, measured orders, and conditional SSP bounds.
+- [Time integration](https://koyamahr.github.io/numerical-methods-atlas/#/time-integration): twelve Python-computed oscillator methods, including unfiltered leapfrog and its startup mode.
+- [Mesh explorer](https://koyamahr.github.io/numerical-methods-atlas/#/meshes): select cells and inspect face-sharing neighbors in structured and irregular meshes.
+- [Hamiltonian maps](https://koyamahr.github.io/numerical-methods-atlas/#/hamiltonian): symplectic Euler, Verlet, Yoshida fourth order, implicit midpoint, and RK4 on two Hamiltonians.
+- [Limiter notebook](https://koyamahr.github.io/numerical-methods-atlas/#/limiters): minmod, Superbee, MC, van Leer, and clipped van Albada; scalar advection, Sod, Sweby bounds, refinement, TVB parameters, and a separate mean-preserving positive Euler reconstruction.
 - [Experiment guide](docs/experiments.md): equations, provenance, reproducibility, and the limits of each comparison.
 
 ## Run a benchmark
@@ -232,5 +232,7 @@ python scripts/sync_web_content.py
 ```
 
 ## Bilingual edition in preparation
+
+English title: **An Atlas of Numerical Methods**. Japanese title: **数値計算法アトラス**. Interactive links in this README target the planned new address; the published edition above still uses the old address.
 
 The local review candidate now supports Japanese/English switching, 137 bilingual terms and four Japanese draft chapters. Remaining reading chapters and advanced notebooks expose their English status explicitly. See [implementation status](BILINGUAL_STATUS.md) and [migration plan](BILINGUAL_PLAN.md). These changes have not been deployed to the public site.

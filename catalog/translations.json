@@ -9,7 +9,7 @@
     "stability": {
       "ja": {
         "status": "draft",
-        "source_sha256": "b0c0554021abbfe55f3946cfc4b9ffa253434a1fc70cff904d1405d6f61dce13",
+        "source_sha256": "a9cae9b041a4acd2430a85f0664a125fd1535188a022dfc9ab9c50e7b16d4d3b",
         "checked_on": null
       }
     },
@@ -30,7 +30,7 @@
     "experiments": {
       "ja": {
         "status": "draft",
-        "source_sha256": "574e55c108d9028c2d717f62986415acfcbb1569cf78369251a92de3bcb9dd4b",
+        "source_sha256": "c390069f975222f6938c64eff04be8e6b77df609bb3858326d7996a2d369b007",
         "checked_on": null
       }
     }

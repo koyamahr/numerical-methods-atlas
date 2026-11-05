@@ -2,7 +2,7 @@
 
 KEEP stands for **kinetic-energy and entropy preserving**. The work of Yuichi Kuya, Kosuke Totani, and Soshi Kawai at Tohoku University seeks a low-dissipation balance between the conservative equations of compressible flow. [The original 2018 paper](https://doi.org/10.1016/j.jcp.2018.08.058) is the starting point. The authors’ [2022 conference explanation](https://www.iccfd.org/iccfd11/assets/pdf/papers/ICCFD11_Paper-0401.pdf), especially §2.2 and Eq. (9), states the Cartesian flux implemented here.
 
-This exhibit implements **the original second-order arithmetic-mean Cartesian flux**, with periodic boundaries and classical RK4. It does not implement every later scheme named KEEP. [Watch its smooth-vortex evolution](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/movies?case=keep-vortex).
+This exhibit implements **the original second-order arithmetic-mean Cartesian flux**, with periodic boundaries and classical RK4. It does not implement every later scheme named KEEP. [Watch its smooth-vortex evolution](https://koyamahr.github.io/numerical-methods-atlas/#/movies?case=keep-vortex).
 
 ![Original KEEP on a smooth isentropic vortex: density, analytic-reference error, refinement, and entropy-proxy history.](figures/keep-vortex.png)
 
