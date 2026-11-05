@@ -1,3 +1,4 @@
+import {stabilityPage,convergencePage,wireStability,wireConvergence} from './experiments.js';
 const main = document.querySelector('main');
 const repo = 'https://github.com/koyamahr/the-art-of-numerical-algorithms';
 const escapeHTML = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -32,7 +33,7 @@ const eras = [
  ['1991–1996','Physical time and nonlinear weights','Jameson · Toro et al. · Liu–Osher–Chan · Jiang–Shu','Explore dual time, contact restoration, low-density flows, and WENO5-JS reconstruction.','advanced','jiang1996'],
  ['2000–2008','Multidimensional robustness','Tóth · Dedner et al. · Abgrall · Nishikawa–Kitamura','Examine discrete constraints and the path toward residual distribution and rotated-hybrid fluxes.','advanced','dedner2002']
 ];
-let documents, references, sod;
+let documents, references, sod, experiments;
 const eyebrow = text => `<p class="eyebrow">${text}</p>`;
 const arrow = '<span aria-hidden="true">↗</span>';
 const figureCard = (f, i) => `<article class="figure-card"><button class="figure-open" data-figure="${figures.indexOf(f)}" aria-label="Enlarge ${escapeHTML(f.title)}"><img src="assets/${f.file}" alt="${escapeHTML(f.description)}" loading="lazy" width="1000" height="450"><span class="enlarge" aria-hidden="true">＋</span></button><div class="figure-meta"><span>${f.category}</span><span>${f.year}</span></div><h3>${f.title}</h3><p>${f.description}</p><a class="text-link" href="#/read/${f.chapter}">Read the method ${arrow}</a></article>`;
@@ -49,6 +50,7 @@ function home() {
  return `<section class="hero page-width"><div class="hero-copy">${eyebrow('AN EXECUTABLE ATLAS · FIRST EDITION')}<h1>The ideas behind<br>the <em>computation.</em></h1><p class="hero-description">A journey through numerical algorithms.<br>From the original paper to the computed solution.</p><div class="hero-actions"><a class="button primary" href="#/atlas">Explore the atlas <span aria-hidden="true">→</span></a><a class="text-link" href="#/read/benchmarks">Start with a benchmark ${arrow}</a></div><div class="hero-footnote"><span class="status-dot"></span> Python · Reproducible examples · Public source</div></div><div class="hero-experiment"><div class="experiment-heading"><span class="eyebrow">A CLASSIC, COMPUTED</span><span class="small-mono">1978 / SOD</span></div><h2>One problem.<br>Different numerical lenses.</h2><div id="sod-chart">${plot()}</div><div class="chart-legend"><span class="legend-exact">Exact solution</span><span class="legend-numerical">MUSCL + <span id="flux-label">Roe</span></span></div><div class="flux-controls" aria-label="Choose Riemann flux">${['roe','hllc','hll','rusanov'].map((s,i)=>`<button data-flux="${s}" aria-pressed="${i===0}">${s==='roe'?'Roe':s==='rusanov'?'Rusanov':s.toUpperCase()}</button>`).join('')}</div><p class="experiment-note">N = 200 · t = 0.20 · pointwise density comparison</p><a class="experiment-source" href="#/read/benchmarks">See the setup & verification ${arrow}</a></div></section>
  <section class="principles page-width" id="reading-guide" aria-label="How to use the atlas"><div><span>01</span><p><strong>Read the paper.</strong> Find the original idea and the sources behind it.</p></div><div><span>02</span><p><strong>Understand the method.</strong> Follow the equations, assumptions, and limits.</p></div><div><span>03</span><p><strong>Run the benchmark.</strong> Inspect the result and the evidence that checks it.</p></div></section>
  <section class="section page-width"><div class="section-heading"><div>${eyebrow('FOLLOW THE IDEAS')}<h2>A century of better questions.</h2></div><a class="text-link" href="#/atlas">Open the historical atlas ${arrow}</a></div><div class="history-strip">${[['1928','Can the stencil reach it?','CFL'],['1959','What crosses the interface?','GODUNOV'],['1977','Which scale holds the error?','MULTIGRID'],['1996','Where should the weights go?','WENO5-JS']].map(([year,title,label])=>`<a href="#/atlas"><span class="history-year">${year}</span><h3>${title}</h3><span class="small-mono">${label} <span aria-hidden="true">→</span></span></a>`).join('')}</div></section>
+ <section class="experiment-invitation page-width"><div><p class="eyebrow">NEW / INTERACTIVE NOTEBOOKS</p><h2>Change a parameter.<br>Ask a better question.</h2><p>Explore stability with live calculations, then examine the measured orders behind a refinement plot.</p></div><a class="experiment-entry" href="#/experiments"><span class="small-mono">01 / COMPUTE</span><h3>The stability laboratory</h3><p>CFL, direction, and stencil.<br>One wave, four methods.</p><span aria-hidden="true">↗</span></a><a class="experiment-entry" href="#/convergence"><span class="small-mono">02 / INSPECT</span><h3>The convergence notebook</h3><p>Elements, unknowns, errors,<br>and observed orders.</p><span aria-hidden="true">↗</span></a></section>
  <section class="section methods-section"><div class="page-width"><div class="section-heading"><div>${eyebrow('EXPLORE BY METHOD')}<h2>From a stencil to a solver.</h2></div><a class="text-link" href="#/methods">All methods ${arrow}</a></div><div class="method-grid">${methods.slice(0,3).map(methodCard).join('')}</div></div></section>
  <section class="section page-width"><div class="section-heading"><div>${eyebrow('THE COMPUTED EVIDENCE')}<h2>See the method at work.</h2></div><a class="text-link" href="#/gallery">Browse the gallery ${arrow}</a></div><div class="figure-grid home-figures">${[figures[0],figures[2],figures[4]].map(figureCard).join('')}</div><p class="scope-note"><span aria-hidden="true">↳</span> Independent educational implementations. Each exhibit states its reference solution, assumptions, and verification limits.</p></section>
  <section class="reading-banner page-width"><div>${eyebrow('KEEP THE PAPER CLOSE')}<h2>Every method has a history.<br>Every result needs a reference.</h2><p>39 papers and books, ordered by original publication year.<br>Source notes distinguish original texts, later expositions, and open questions.</p><a class="button primary" href="#/references">Explore the references <span aria-hidden="true">→</span></a></div><div class="reference-mark" aria-hidden="true">[39]<span>1928 — 2022</span></div></section>
@@ -80,7 +82,7 @@ function filterReferences(query) {
 function chapter(id) {
  const d=documents[id];
  if(!d) return notFound();
- const links=[['history','Historical atlas'],...methods.filter((m,i,a)=>a.findIndex(x=>x.id===m.id)===i).map(m=>[m.id,m.title]),['nasa-2d','NASA case catalog'],['references','Reference catalog'],['roadmap','Implementation roadmap'],['release-notes-v0.1.0','First-edition notes']];
+ const links=[['history','Historical atlas'],['experiments','Interactive experiment guide'],...methods.filter((m,i,a)=>a.findIndex(x=>x.id===m.id)===i).map(m=>[m.id,m.title]),['nasa-2d','NASA case catalog'],['references','Reference catalog'],['roadmap','Implementation roadmap'],['release-notes-v0.1.0','First-edition notes']];
  return `<div class="reading-shell page-width"><aside class="reading-nav"><a class="back-link" href="#/methods">← Explore the methods</a><p class="eyebrow">IN THIS EDITION</p><nav aria-label="Reading chapters">${links.map(([key,label])=>`<a href="#/read/${key}" ${id===key?'aria-current="page"':''}>${label}</a>`).join('')}</nav><p class="small-mono">FIRST EDITION · v0.1.0</p></aside><div class="chapter-wrap"><div class="chapter-topline"><span>THE READING ROOM</span><a href="${repo}/blob/main/docs/${id}.md">View source ↗</a></div><article class="prose">${d.html}</article><div class="chapter-bottom"><span>Continue exploring</span><a href="#/atlas">Historical atlas →</a><a href="#/gallery">Computed gallery →</a></div></div><aside class="chapter-toc"><p class="eyebrow">ON THIS PAGE</p><nav aria-label="On this page">${d.headings.filter(h=>h.level===2).map(h=>`<a href="#/read/${id}?section=${h.id}">${h.title}</a>`).join('')}</nav></aside></div>`;
 }
 function notFound(){return `<section class="page-intro page-width"><p class="eyebrow">PAGE NOT FOUND</p><h1>Back to<br>the <em>atlas.</em></h1><p>This chapter could not be found.</p><a class="button primary" href="#/">Return home →</a></section>`;}
@@ -111,15 +113,17 @@ function wire() {
 function route() {
  const [path,queryString='']=(location.hash.slice(1)||'/').split('?');
  const parts=path.split('/').filter(Boolean),type=parts[0]||'home',query=new URLSearchParams(queryString);
- const renderers={home,atlas,methods:methodPage,gallery,references:()=>referencePage(query.get('q')||''),read:()=>chapter(parts[1])};
+ const renderers={home,atlas,methods:methodPage,gallery,experiments:stabilityPage,convergence:convergencePage,references:()=>referencePage(query.get('q')||''),read:()=>chapter(parts[1])};
  main.innerHTML=(renderers[type]||notFound)();
  document.body.dataset.page=type;
- document.querySelectorAll('[data-nav]').forEach(a=>{if(a.dataset.nav===type)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
+ document.querySelectorAll('[data-nav]').forEach(a=>{if(a.dataset.nav===type||(type==='convergence'&&a.dataset.nav==='experiments'))a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
  document.querySelector('.site-header').classList.remove('menu-open');document.querySelector('.mobile-menu').setAttribute('aria-expanded','false');
- document.title=type==='home'?'The Art of Numerical Algorithms':`${type==='read'?(documents[parts[1]]?.title||'Reading room'):({atlas:'Historical atlas',methods:'Explore the methods',gallery:'Numerical gallery',references:'Reference library'}[type]||'Page not found')} · The Art of Numerical Algorithms`;
+ document.title=type==='home'?'The Art of Numerical Algorithms':`${type==='read'?(documents[parts[1]]?.title||'Reading room'):({atlas:'Historical atlas',methods:'Explore the methods',gallery:'Numerical gallery',references:'Reference library',experiments:'Stability laboratory',convergence:'Convergence notebook'}[type]||'Page not found')} · The Art of Numerical Algorithms`;
  if(type==='read')document.querySelectorAll('.heading-anchor').forEach(a=>{a.href=`#/read/${parts[1]}?section=${a.parentElement.id}`;});
  if(type==='references') {filterReferences(query.get('q')||'');document.querySelector('#reference-search').addEventListener('input',e=>filterReferences(e.target.value));}
  wire();
+ if(type==='experiments')wireStability(experiments);
+ if(type==='convergence')wireConvergence(experiments);
  if(query.get('section'))requestAnimationFrame(()=>document.getElementById(query.get('section'))?.scrollIntoView());else window.scrollTo({top:0,behavior:'instant'});
 }
 document.querySelector('.skip-link').addEventListener('click',e=>{e.preventDefault();main.focus();main.scrollIntoView();});
@@ -127,7 +131,7 @@ document.querySelector('.mobile-menu').addEventListener('click',e=>{const open=d
 document.querySelector('.dialog-close').addEventListener('click',()=>document.querySelector('#figure-dialog').close());
 document.querySelector('#figure-dialog').addEventListener('click',e=>{if(e.target===e.currentTarget)e.currentTarget.close();});
 try {
- [documents,references,sod]=await Promise.all(['content.json','references.json','sod.json'].map(async file=>{const response=await fetch(file);if(!response.ok)throw Error(`Cannot load ${file}`);return response.json();}));
+ [documents,references,sod,experiments]=await Promise.all(['content.json','references.json','sod.json','experiments.json'].map(async file=>{const response=await fetch(file);if(!response.ok)throw Error(`Cannot load ${file}`);return response.json();}));
  references.sort((a,b)=>a.year-b.year||a.id.localeCompare(b.id));
  window.addEventListener('hashchange',route);route();
 } catch(error) {main.innerHTML=`<section class="page-intro page-width"><h1>The atlas could not load.</h1><p>Please reload the page, or read the complete edition on GitHub.</p><a class="button primary" href="${repo}">Open the source edition ↗</a></section>`;console.error(error);}

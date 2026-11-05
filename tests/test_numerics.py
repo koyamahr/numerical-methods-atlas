@@ -81,14 +81,22 @@ def test_weno_spatial_fifth_order():
     assert min(np.log2(np.array(errors[:-1])/errors[1:]))>4.5
 
 
-@pytest.mark.parametrize("method",["upwind","lax-friedrichs","lax-wendroff"])
-@pytest.mark.parametrize("c",[-.8,.8,1.1])
+@pytest.mark.parametrize("method",["ftcs","upwind","lax-friedrichs","lax-wendroff"])
+@pytest.mark.parametrize("c",[-1.1,-.8,0.,.8,1.1])
 def test_amplification_matches_actual_discrete_mode(method,c):
     n,k=64,13
     q=np.exp(2j*np.pi*k*np.arange(n)/n)
     np.testing.assert_allclose(difference_step(q,c,method),amplification(2*np.pi*k/n,c,method)*q,atol=2e-14)
     maxg=max(abs(amplification(np.linspace(0,np.pi,1000),c,method)))
-    assert (maxg <= 1+1e-12) == (abs(c)<=1)
+    stable = c == 0 if method == "ftcs" else abs(c) <= 1
+    assert (maxg <= 1+1e-12) == stable
+
+
+@pytest.mark.parametrize("method",["ftcs","upwind","lax-friedrichs","lax-wendroff"])
+@pytest.mark.parametrize("c",[-.8,.8])
+def test_periodic_difference_conserves_mean(method,c):
+    q=np.random.default_rng(42).normal(size=64)
+    np.testing.assert_allclose(difference_step(q,c,method).sum(),q.sum(),atol=4e-15)
 
 
 def test_fourier_derivative_and_propagator():

@@ -1,0 +1,93 @@
+{
+  "advection_reference_sha256": "27128109c8a6f416eabce891d912436505cbc09fea460c30d71dcd44829504bd",
+  "dg": {
+    "n": [
+      8,
+      16,
+      32,
+      64
+    ],
+    "time": 0.2,
+    "cfl": 0.2,
+    "norm": "Quadrature-sampled RMS error",
+    "series": [
+      {
+        "label": "DG P0",
+        "degree": 0,
+        "expected_order": 1,
+        "errors": [
+          0.3173576032585342,
+          0.17688504536042293,
+          0.0933353775729456,
+          0.04791951577234439
+        ]
+      },
+      {
+        "label": "DG P1",
+        "degree": 1,
+        "expected_order": 2,
+        "errors": [
+          0.027424044628649582,
+          0.007221859657150685,
+          0.0018372725857665679,
+          0.0004623145303491599
+        ]
+      },
+      {
+        "label": "DG P2",
+        "degree": 2,
+        "expected_order": 3,
+        "errors": [
+          0.0017735978739235939,
+          0.00021799282581466122,
+          2.7215688802135564e-05,
+          3.401095792422818e-06
+        ]
+      }
+    ]
+  },
+  "entropy": {
+    "n": [
+      40,
+      80,
+      160
+    ],
+    "time": 1.0,
+    "cfl": 0.3,
+    "norm": "Pointwise density L1 error",
+    "series": [
+      {
+        "label": "MUSCL",
+        "errors": [
+          0.009102385393112557,
+          0.002674580058157812,
+          0.0007623807414468428
+        ],
+        "expected_order": 2
+      },
+      {
+        "label": "WENO5-JS",
+        "errors": [
+          2.101370487010146e-05,
+          6.819097100818627e-07,
+          2.4429211525206496e-08
+        ],
+        "expected_order": 5
+      }
+    ]
+  },
+  "gallery_manifest": "assets/validation.json",
+  "gallery_source_sha256": {
+    "__init__.py": "7236458e494b37263cb625bb51a2fa2c65b284396fab9a0b5a05359770121628",
+    "advection.py": "ba81f593ca288fe480dc60f67bbc433320bb06c21f4b5fae4002d204b6a9b82d",
+    "benchmarks.py": "dc8f83aafea473b5f0e1e7bf82630484dd60aa446859c1f602571adc3c59f019",
+    "cli.py": "3fd1769b74ae81713365598e49a5d69a1a5cf437eb9c622bd6134672de4f7e7a",
+    "equations.py": "d1b589ad4b8a31d316c20926ef7104664609d789f31f6fb239c1d74bb310b619",
+    "linear.py": "d58db4efc09a3358b28cff07ba3a2e732244eaaf2f82a5fcf1ce0de001ba87a9",
+    "mhd.py": "14fe39abf43ef1ba47c3eb1dbe22bea462c12944ed28f37d2b33cfaee61fd0d9",
+    "multigrid.py": "45370e4ffeccfbabbce5ccf48eff90c5c99614d0549536dcd4209bd028ee2d75",
+    "riemann.py": "702ce9e08fbef67ed77363e8603e64f2da8a979d3b5abd6ffa62ab78344c95cf",
+    "solvers.py": "227d5c480e4cad8c5665b3afcdd22a631a3cac2bcedc2056bdb4d4f87fe7a5e7"
+  },
+  "scope": "Existing gallery measurements; no wall-clock or equal-cost ranking."
+}

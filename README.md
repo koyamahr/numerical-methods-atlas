@@ -42,6 +42,12 @@ source hashes to identify the implementation.
 7. [NASA 2D case catalog](docs/nasa-2d.md): official verification and validation resources for future implementations.
 8. [References](docs/references.md), [BibTeX](references.bib), [roadmap](docs/roadmap.md), and [first-edition release notes](docs/release-notes-v0.1.0.md).
 
+## Interactive notebooks
+
+- [Stability laboratory](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/experiments): compute periodic FTCS, upwind, LF, and LW advection in the browser. Change the signed Courant number, initial profile, and step count; inspect amplification and export the experiment.
+- [Convergence notebook](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/convergence): inspect the original DG and Euler entropy-wave refinement data, switch between elements and unknowns, and read measured convergence orders.
+- [Experiment guide](docs/experiments.md): equations, provenance, reproducibility, and the limits of each comparison.
+
 ## Run a benchmark
 
 ```bash
@@ -126,7 +132,7 @@ python scripts/build_references.py
 
 ## Build the web edition
 
-The static website lives in [`website/`](website/README.md). It renders all ten
+The static website lives in [`website/`](website/README.md). It renders all eleven
 reading chapters and their equations, includes eleven gallery figures, and uses
 precomputed library results for the interactive Sod comparison. See the web
 README for local preview and content-refresh commands.

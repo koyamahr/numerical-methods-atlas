@@ -7,7 +7,7 @@ import katex from 'katex';
 const root = path.dirname(fileURLToPath(import.meta.url));
 process.chdir(root);
 fs.mkdirSync('dist', { recursive: true });
-for (const f of ['index.html', 'style.css', 'app.js', 'favicon.svg']) fs.copyFileSync(f, `dist/${f}`);
+for (const f of ['index.html', 'style.css', 'app.js', 'experiments.js', 'numerics.js', 'favicon.svg']) fs.copyFileSync(f, `dist/${f}`);
 fs.cpSync('public', 'dist', { recursive: true });
 fs.mkdirSync('dist/vendor', { recursive: true });
 fs.copyFileSync('node_modules/katex/dist/katex.min.css', 'dist/vendor/katex.min.css');
@@ -35,7 +35,7 @@ for (const file of fs.readdirSync('content').filter(f => f.endsWith('.md'))) {
   documents[path.basename(file, '.md')] = { title, html, headings };
 }
 fs.writeFileSync('dist/content.json', JSON.stringify(documents));
-for (const file of ['references.json', 'sod.json']) fs.copyFileSync(`content/${file}`, `dist/${file}`);
+for (const file of ['references.json', 'sod.json', 'experiments.json', 'advection-reference.json']) fs.copyFileSync(`content/${file}`, `dist/${file}`);
 const hosting = JSON.parse(fs.readFileSync('.openai/hosting.json', 'utf8'));
 if (hosting.static?.directory !== 'dist') throw new Error('Unexpected Site configuration');
 const origin = 'https://koyamahr.github.io/the-art-of-numerical-algorithms';

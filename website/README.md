@@ -10,6 +10,7 @@ Requires Node.js 22 or later. From this directory:
 
 ```bash
 npm ci
+npm test
 npm run build
 npm run dev
 ```
@@ -32,7 +33,9 @@ npm --prefix website run build
 The sync script copies the English chapters, citation catalog, figures, and
 original gallery manifest, then computes four Sod density curves using the
 library's MUSCL solver. The browser switches between these precomputed curves;
-it does not run the Python solver. The embedded plot data includes hashes of
+it does not run the Python solver. The separate stability laboratory computes
+periodic scalar advection directly in JavaScript, with tests against Python
+reference arrays and amplification factors. The embedded plot data includes hashes of
 the numerical source files used to produce it.
 
 `content/` and `public/assets/` are checked-in publishing inputs. Keep them in
@@ -46,6 +49,8 @@ this workspace does not enable public Sites hosting.
 - `#/`: introduction and interactive Sod density comparison.
 - `#/atlas`: historical reading path.
 - `#/methods`: methods and implementation scope.
+- `#/experiments`: live periodic-advection and Fourier-amplification laboratory.
+- `#/convergence`: original gallery refinement data, observed orders, and unknown counts.
 - `#/gallery`: eleven figures with category filtering and enlarged views.
 - `#/references`: searchable bibliography and BibTeX download.
 - `#/read/<chapter>`: complete documentation with equations and section links.

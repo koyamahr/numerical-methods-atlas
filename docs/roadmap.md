@@ -42,3 +42,15 @@ manifest remain available alongside the complete source edition. Future
 exhibits should continue to distinguish tested educational examples,
 original-figure reproductions, prototypes, literature-only entries, and
 planned work.
+
+## First expansion: interactive numerical notebooks
+
+The stability laboratory runs periodic FTCS, upwind, classical LF, and LW
+updates in the browser, with both velocity signs, Fourier amplification,
+pointwise error, and downloadable experiment snapshots. Its numerical kernels
+are checked against the Python implementation across 24 reference cases.
+
+The convergence notebook makes the existing DG and Euler entropy-wave gallery
+measurements inspectable, including observed slopes and scalar-unknown counts.
+It introduces no new wall-clock ranking or general nonlinear stability claim.
+The [experiment guide](experiments.md) records definitions and provenance.

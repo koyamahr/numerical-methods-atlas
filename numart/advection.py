@@ -21,6 +21,8 @@ def finite_difference(q, dx, stencil="centered", speed=1.):
 
 def amplification(theta, courant, method):
     """Fourier amplification G(theta), q_j^n=G^n exp(i*j*theta)."""
+    if method == "ftcs":
+        return 1-1j*courant*np.sin(theta)
     if method == "lax-friedrichs":
         return np.cos(theta)-1j*courant*np.sin(theta)
     if method == "lax-wendroff":
@@ -32,6 +34,8 @@ def amplification(theta, courant, method):
 
 def difference_step(q, courant, method):
     left,right = np.roll(q,1),np.roll(q,-1)
+    if method == "ftcs":
+        return q-.5*courant*(right-left)
     if method == "lax-friedrichs":
         return .5*(right+left)-.5*courant*(right-left)
     if method == "lax-wendroff":
