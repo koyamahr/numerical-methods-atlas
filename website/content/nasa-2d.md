@@ -6,7 +6,8 @@ and [Turbulence Modeling Resource](https://tmbwg.github.io/turbmodels/).
 NASA's [TMR information page](https://www.nasa.gov/nasa-turbulence-modeling-resource/)
 describes the resource's move to GitHub in February 2026.
 The entries below are **cataloged candidates**. This repository does not yet
-contain implementations or reproduction results for these 2D flow cases.
+contain implementations or reproduction results for the NASA cases listed below.
+A separate classical [Double Mach Reflection baseline](double-mach.md) is now computed.
 
 ## Starting with Euler and analytical references
 
@@ -38,7 +39,10 @@ contain implementations or reproduction results for these 2D flow cases.
 Double Mach Reflection, the Mach 3 forward-facing step, 2D Riemann
 configurations, the isentropic vortex, and odd-even shock/carbuncle tests are
 also useful flux demonstrations. The first two have a representative source
-in [Woodward–Colella (1984), original paper](https://crd.lbl.gov/assets/pubs_presos/AMCS/ANAG/A31984.pdf).
+in [Woodward–Colella (1984)](https://doi.org/10.1016/0021-9991(84)90142-6).
+[Our Double Mach Reflection exhibit](double-mach.md) is an implemented first-order
+HLL baseline; the step and other tests in this paragraph remain future work.
+See the separate [carbuncle notes](carbuncle.md) for the required stability comparisons.
 Do not label all of these as NASA-originated problems. ONERA M6 is a 3D wing;
 axisymmetric bump and jet cases are also different from planar 2D cases and
 are excluded from the main list.

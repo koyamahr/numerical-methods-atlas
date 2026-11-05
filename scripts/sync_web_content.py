@@ -32,7 +32,7 @@ data = {'x': result.x.tolist(), 'exact': reference[:, 0].tolist(), 'curves': cur
         'source_sha256': {p.name: hashlib.sha256(p.read_bytes()).hexdigest()
                           for p in (ROOT / 'numart').glob('*.py')}}
 (content / 'sod.json').write_text(json.dumps(data, separators=(',', ':'))+'\n')
-print('Synced English documents, 39 references, figures, and four computed Sod curves.')
+print('Synced English documents, references, figures, and four computed Sod curves.')
 
 # Cross-language reference cases for the browser's live advection laboratory.
 import numpy as np
@@ -73,3 +73,26 @@ experiments = {
     'scope':'Existing gallery measurements; no wall-clock or equal-cost ranking.'}
 (content/'experiments.json').write_text(json.dumps(experiments,indent=2)+'\n')
 print(f'Exported {len(cases)} Python advection reference cases and two convergence studies.')
+
+# Python-computed temporal trajectories and explicit mesh connectivity.
+from numart.time_integration import METHODS, linear_trajectory, leapfrog_roots
+from numart.geometry import example_meshes
+trajectories=[]
+for method in METHODS:
+    for dt in (.05,.1,.2,.5,1.,1.25,2.):
+        for epsilon in ((0.,.01,.03) if method=='leapfrog' else (0.,)):
+            t,y=linear_trajectory(rate=1j,dt=dt,steps=round(20/dt),method=method,
+                                  startup_perturbation=epsilon)
+            trajectories.append({'method':method,'dt':dt,'epsilon':epsilon,
+                                 't':t.tolist(),'real':y.real.tolist(),'imag':y.imag.tolist(),
+                                 'max_error':float(np.max(np.abs(y-np.exp(1j*t)))),
+                                 'final_amplitude':float(abs(y[-1])),
+                                 'roots':[[z.real,z.imag] for z in leapfrog_roots(1j*dt)]
+                                          if method=='leapfrog' else None})
+foundations={'time':trajectories,'meshes':example_meshes(),'final_time':20,
+             'source_sha256':{name:hashlib.sha256((ROOT/'numart'/name).read_bytes()).hexdigest()
+                              for name in ('time_integration.py','geometry.py')}}
+(content/'foundations.json').write_text(json.dumps(foundations,separators=(',',':'),allow_nan=False)+'\n')
+for name in ('double-mach-run.json','double-mach.npz'):
+    shutil.copyfile(ROOT/'docs/figures'/name,assets/name)
+print(f'Exported {len(trajectories)} temporal trajectories, three meshes, and DMR provenance.')

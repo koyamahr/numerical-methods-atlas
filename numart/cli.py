@@ -9,6 +9,7 @@ import numpy as np
 from .benchmarks import get_problem, list_problems
 from .solvers import solve
 from .mhd import solve_orszag_tang, primitive as mhd_primitive
+from .euler2d import solve_double_mach, primitive as euler2d_primitive
 from .advection import (amplification, difference_step, dg_advection,
                         spectral_advection, dual_time_advection, conditioning_example)
 from .linear import (diffusion_1d,poisson_1d,Boundary,poisson_boundary_1d,
@@ -43,7 +44,30 @@ def _write_json(path, value):
 def run_case(args):
     out = Path(args.output)
     out.mkdir(parents=True,exist_ok=True)
-    if args.problem == "orszag-tang":
+    if args.problem == "double-mach":
+        if args.method not in (None,"godunov") or args.riemann not in (None,"hll"):
+            raise ValueError("The 2D double-mach baseline supports godunov + hll only")
+        method = "godunov"
+        r = solve_double_mach(args.n,args.time if args.time is not None else .2,args.cfl)
+        w = euler2d_primitive(r.q)
+        np.savez_compressed(out/"solution.npz",x=r.x,y=r.y,q=r.q,time=r.time)
+        plt = _plotting()
+        fig,axes = plt.subplots(2,1,figsize=(12,6))
+        image = axes[0].pcolormesh(r.x,r.y,w[...,0].T,shading="nearest",cmap="magma")
+        fig.colorbar(image,ax=axes[0],label="density")
+        levels = np.linspace(float(w[...,0].min()),float(w[...,0].max()),32)[1:-1]
+        axes[1].contour(r.x,r.y,w[...,0].T,levels=levels,colors="#26382f",linewidths=.5)
+        for ax in axes:
+            ax.set(xlim=(0,4),ylim=(0,1),xlabel="x",ylabel="y",aspect="equal")
+        axes[0].set_title(f"Double Mach Reflection | {4*args.n} x {args.n} | t={r.time:g} | first-order HLL + SSPRK2")
+        axes[1].set_title("Density contours | qualitative baseline; not the original PPM resolution")
+        fig.tight_layout();fig.savefig(out/"double-mach.png");plt.close(fig)
+        stats = {"steps":r.steps,"time":r.time,"riemann":"HLL with Davis wave speeds",
+                 "shape":[4*args.n,args.n],"domain":[[0,4],[0,1]],"gamma":1.4,
+                 "min_density":float(w[...,0].min()),"min_pressure":float(w[...,3].min()),
+                 "boundary":"postshock left; outflow right; mixed reflecting/inflow bottom; moving shock top",
+                 "citation":"woodward1984","scope":"first-order 2D educational baseline; no fine-grid reproduction claim"}
+    elif args.problem == "orszag-tang":
         method = args.method or "ct"
         r = solve_orszag_tang(args.n,args.time if args.time is not None else .5,method,args.cfl)
         np.savez_compressed(out/"solution.npz",q=r.q,time=r.time,divergence=r.divergence,
@@ -269,7 +293,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest="command",required=True)
     run = sub.add_parser("run")
-    run.add_argument("problem",choices=(*list_problems(),"orszag-tang"))
+    run.add_argument("problem",choices=(*list_problems(),"orszag-tang","double-mach"))
     run.add_argument("--n",type=int,default=200)
     run.add_argument("--method",choices=("godunov","muscl","weno5","ct","glm"))
     run.add_argument("--riemann",choices=("rusanov","hll","hlle","hllc","roe"))

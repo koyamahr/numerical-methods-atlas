@@ -54,3 +54,9 @@ The convergence notebook makes the existing DG and Euler entropy-wave gallery
 measurements inspectable, including observed slopes and scalar-unknown counts.
 It introduces no new wall-clock ranking or general nonlinear stability claim.
 The [experiment guide](experiments.md) records definitions and provenance.
+
+## Second expansion: geometry, time, and multidimensional shocks
+
+Added seven scalar ODE integrators with a temporal notebook; three mesh-connectivity examples with an explorer; 1D SPH kernel reconstruction; a 1D ALE geometric-conservation check; and cylindrical gradient, Newtonian stress, and stress-divergence operators verified against analytic fields. The [coordinate and viscosity chapter](coordinates-viscosity.md) distinguishes physical components from coordinate-basis tensors.
+
+[The 2D Double Mach Reflection baseline](double-mach.md) now computes an actual Mach-10 interaction with first-order HLL and SSPRK2. Higher-order reconstruction, full grid refinement, and resolution of the fine wall jet remain future work. This does not implement the other cataloged NASA cases. [Carbuncle comparisons](carbuncle.md), a complete SPH fluid solver, unstructured flow fluxes, and a complete ALE Euler solver also remain future work. [The Roe memorial](roe-memorial.md) is sourced from official university records.

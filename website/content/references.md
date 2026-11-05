@@ -93,6 +93,14 @@ Reed, W. H. and Hill, T. R.. **Triangular mesh methods for the neutron transport
 
 Public government-report record. This edition implements modal DG for 1D linear advection, rather than triangular-mesh neutron transport.
 
+## 1974 · hirt1974
+
+Hirt, C. W. and Amsden, A. A. and Cook, J. L.. **An arbitrary Lagrangian-Eulerian computing method for all flow speeds**. Journal of Computational Physics.
+
+[Original bibliographic record](https://doi.org/10.1016/0021-9991(74)90051-5) · [Full text or implementation reference](https://www.sciencedirect.com/science/article/pii/0021999174900515)
+
+Publisher record and abstract. Historical ALE reference; the implemented example is only a 1D moving-volume uniform-state check.
+
 ## 1977 · brandt1977
 
 Brandt, Achi. **Multi-level adaptive solutions to boundary-value problems**. Mathematics of Computation.
@@ -100,6 +108,22 @@ Brandt, Achi. **Multi-level adaptive solutions to boundary-value problems**. Mat
 [Original bibliographic record](https://doi.org/10.1090/S0025-5718-1977-0431719-X) · [Full text or implementation reference](https://www.ams.org/mcom/1977-31-138/S0025-5718-1977-0431719-X/S0025-5718-1977-0431719-X.pdf)
 
 AMS-hosted original paper. This edition implements a fixed-grid geometric V-cycle, rather than the full adaptive framework.
+
+## 1977 · gingold1977
+
+Gingold, R. A. and Monaghan, J. J.. **Smoothed particle hydrodynamics: theory and application to non-spherical stars**. Monthly Notices of the Royal Astronomical Society.
+
+[Original bibliographic record](https://doi.org/10.1093/mnras/181.3.375) · [Full text or implementation reference](https://academic.oup.com/mnras/article/181/3/375/988212)
+
+Original publisher record. Early SPH paper; this edition implements static 1D kernel reconstruction, not the stellar calculation.
+
+## 1977 · lucy1977
+
+Lucy, L. B.. **A numerical approach to the testing of the fission hypothesis**. The Astronomical Journal.
+
+[Original bibliographic record](https://doi.org/10.1086/112164) · [Full text or implementation reference](https://articles.adsabs.harvard.edu/pdf/1977AJ.....82.1013L)
+
+ADS-hosted original article. Independent early particle-method reference; the cubic-spline reconstruction here is not a reproduction of Lucy’s original kernel or dynamics.
 
 ## 1977 · spectral1977
 
@@ -153,9 +177,9 @@ Publicly accessible original paper. Background on HLL; the hll implementation he
 
 Woodward, Paul and Colella, Phillip. **The numerical simulation of two-dimensional fluid flow with strong shocks**. Journal of Computational Physics.
 
-[Original bibliographic record](https://doi.org/10.1016/0021-9991(84)90142-6) · [Full text or implementation reference](https://crd.lbl.gov/assets/pubs_presos/AMCS/ANAG/A31984.pdf)
+[Original bibliographic record](https://doi.org/10.1016/0021-9991(84)90142-6) · [Full text or implementation reference](https://www.nas.nasa.gov/LAVA/unst_docs/tutorials/double_mach/double_mach/)
 
-Publicly accessible original paper. Double Mach Reflection and step flows are candidates for future 2D exhibits and are not implemented here.
+DOI identifies the original 1984 paper; linked NASA tutorial is a later setup reference. This edition computes a first-order 2D HLL Double Mach Reflection baseline, not the original PPM figure. Forward-facing step remains future work.
 
 ## 1987 · eno1987
 
@@ -237,6 +261,14 @@ Toro, E. F. and Spruce, M. and Speares, W.. **Restoration of the contact surface
 
 Publisher bibliographic record and abstract. This edition uses HLLC with Davis-type wave speeds and does not implement every original wave-speed estimate or WAF construction.
 
+## 1994 · quirk1994
+
+Quirk, James J.. **A contribution to the great Riemann solver debate**. International Journal for Numerical Methods in Fluids.
+
+[Original bibliographic record](https://doi.org/10.1002/fld.1650180603) · [Full text or implementation reference](https://onlinelibrary.wiley.com/doi/10.1002/fld.1650180603)
+
+Publisher record and abstract. Background for shock instability and complementary fluxes. Controlled odd-even and blunt-body carbuncle experiments remain future work.
+
 ## 1994 · templates1994
 
 Barrett, Richard and Berry, Michael and Chan, Tony F. and Demmel, James and Donato, June and Dongarra, Jack and Eijkhout, Victor and Pozo, Roldan and Romine, Charles and van der Vorst, Henk. **Templates for the Solution of Linear Systems: Building Blocks for Iterative Methods**. SIAM.
@@ -261,6 +293,14 @@ Jiang, Guang-Shan and Shu, Chi-Wang. **Efficient Implementation of Weighted ENO 
 
 Publicly accessible original paper. Reference for WENO5-JS flux reconstruction, smoothness indicators, and nonlinear weights.
 
+## 1996 · shewchuk1996
+
+Shewchuk, Jonathan Richard. **Triangle: Engineering a 2D Quality Mesh Generator and Delaunay Triangulator**. Springer.
+
+[Original bibliographic record](https://www.cs.cmu.edu/~quake/tripaper/triangle0.html) · [Full text or implementation reference](https://www.cs.cmu.edu/~quake/tripaper/triangle0.html)
+
+Author-hosted paper. Mesh-generation reading reference; the example meshes use Matplotlib triangulation and do not invoke Triangle.
+
 ## 2000 · toth2000
 
 Tóth, Gábor. **The ∇·B = 0 Constraint in Shock-Capturing Magnetohydrodynamics Codes**. Journal of Computational Physics.
@@ -268,6 +308,14 @@ Tóth, Gábor. **The ∇·B = 0 Constraint in Shock-Capturing Magnetohydrodynami
 [Original bibliographic record](https://doi.org/10.1006/jcph.2000.6519) · [Full text or implementation reference](https://public.websites.umich.edu/~gtoth/Papers/Toth2000_divb.pdf)
 
 Author-hosted original paper. Reference for CT variants and differences between discrete divergence operators.
+
+## 2001 · pandolfi2001
+
+Pandolfi, Maurizio and D’Ambrosio, Domenic. **Numerical Instabilities in Upwind Methods: Analysis and Cures for the “Carbuncle” Phenomenon**. Journal of Computational Physics.
+
+[Original bibliographic record](https://doi.org/10.1006/jcph.2000.6652) · [Full text or implementation reference](https://www.sciencedirect.com/science/article/pii/S002199910096652X)
+
+Publisher record and abstract. Linearized shock-instability analysis and localized cures; the proposed methods are not implemented in this edition.
 
 ## 2002 · dedner2002
 
@@ -309,6 +357,22 @@ Toro, Eleuterio F.. **Riemann Solvers and Numerical Methods for Fluid Dynamics: 
 
 Publisher bibliographic record. Background for exact Riemann solutions and the standard double-rarefaction setup.
 
+## 2009 · williams2009
+
+Williams, Paul D.. **A Proposed Modification to the Robert–Asselin Time Filter**. Monthly Weather Review.
+
+[Original bibliographic record](https://doi.org/10.1175/2009MWR2724.1) · [Full text or implementation reference](https://journals.ametsoc.org/abstract/journals/mwre/137/8/2009mwr2724.1.xml)
+
+Publisher record identifies the time-filter paper. The ODE laboratory uses unfiltered leapfrog with RK4 startup and does not implement this filter.
+
+## 2016 · fitzpatrick2016
+
+Fitzpatrick, Richard. **Fluid Equations in Cylindrical Coordinates**. University of Texas at Austin.
+
+[Original bibliographic record](https://farside.ph.utexas.edu/teaching/336L/Fluid/node20.html) · [Full text or implementation reference](https://farside.ph.utexas.edu/teaching/336L/Fluid/node20.html)
+
+Author lecture notes, dated January 22, 2016. Reference for cylindrical fluid operators; the atlas declares its bulk-viscosity and orthonormal-component conventions separately.
+
 ## 2022 · quokka2022
 
 Wibking, Benjamin D. and Krumholz, Mark R.. **quokka: a code for two-moment AMR radiation hydrodynamics on GPUs**. Monthly Notices of the Royal Astronomical Society.
@@ -316,3 +380,11 @@ Wibking, Benjamin D. and Krumholz, Mark R.. **quokka: a code for two-moment AMR 
 [Original bibliographic record](https://doi.org/10.1093/mnras/stac439) · [Full text or implementation reference](https://academic.oup.com/mnras/article/512/1/1430/6530656)
 
 Section 3.1.5 of the public paper is the reference for the adopted Shu–Osher parameters. The Quokka code itself is not reproduced.
+
+## 2026 · powell2026
+
+Powell, Ken. **Philip Lawrence Roe, Professor Emeritus of Aerospace Engineering at the University of Michigan, passed away April 26, 2026, at the age of 87**. University of Michigan Aerospace Engineering.
+
+[Original bibliographic record](https://aero.engin.umich.edu/2026/04/29/philip-lawrence-roe-professor-emeritus-of-aerospace-engineering-at-the-university-of-michigan-passed-away-april-26-2026-at-the-age-of-87/) · [Full text or implementation reference](https://aero.engin.umich.edu/2026/04/29/philip-lawrence-roe-professor-emeritus-of-aerospace-engineering-at-the-university-of-michigan-passed-away-april-26-2026-at-the-age-of-87/)
+
+Official university memorial published April 29, 2026. A biographical source, not a numerical-method research paper.

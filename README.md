@@ -42,16 +42,21 @@ source hashes to identify the implementation.
 7. [NASA 2D case catalog](docs/nasa-2d.md): official verification and validation resources for future implementations.
 8. [References](docs/references.md), [BibTeX](references.bib), [roadmap](docs/roadmap.md), and [first-edition release notes](docs/release-notes-v0.1.0.md).
 
+Additional reading: [time integration and leapfrog](docs/time-integration.md), [meshes](docs/meshes.md), [SPH](docs/particles-sph.md), [ALE](docs/ale.md), [cylindrical tensors and viscosity](docs/coordinates-viscosity.md), [Double Mach Reflection](docs/double-mach.md), [carbuncle](docs/carbuncle.md), and [Remembering Philip L. Roe](docs/roe-memorial.md).
+
 ## Interactive notebooks
 
 - [Stability laboratory](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/experiments): compute periodic FTCS, upwind, LF, and LW advection in the browser. Change the signed Courant number, initial profile, and step count; inspect amplification and export the experiment.
 - [Convergence notebook](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/convergence): inspect the original DG and Euler entropy-wave refinement data, switch between elements and unknowns, and read measured convergence orders.
+- [Time integration](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/time-integration): seven Python-computed oscillator trajectories, including unfiltered leapfrog and its startup mode.
+- [Mesh explorer](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/meshes): select cells and inspect face-sharing neighbors in structured and irregular meshes.
 - [Experiment guide](docs/experiments.md): equations, provenance, reproducibility, and the limits of each comparison.
 
 ## Run a benchmark
 
 ```bash
 python -m numart.cli run sod --method muscl --riemann roe --n 200
+python -m numart.cli run double-mach --n 64 --cfl 0.4 --output outputs/double-mach
 python -m numart.cli run lax --method muscl --riemann hllc --n 200
 python -m numart.cli run shu-osher --method weno5 --n 400
 python -m numart.cli run entropy-wave --method weno5 --n 160
@@ -96,12 +101,15 @@ claim to reproduce the original papers' figures. CT and GLM use different
 discrete operators and dissipation; magnetic-divergence values alone do not
 establish which method is more accurate.
 
-## Implemented in v0.1.0
+## Implemented in the current first edition
 
 - **Finite differences:** forward, backward, centered, and upwind stencils; Lax–Friedrichs, Lax–Wendroff, and componentwise FD WENO5-JS.
 - **Finite volumes:** piecewise-constant Godunov-type updates and primitive-variable minmod MUSCL; Rusanov, HLL, HLLE, HLLC, and Roe fluxes.
 - **Discontinuous Galerkin:** periodic linear advection with modal Legendre P0/P1/P2, upwind fluxes, and SSPRK3.
 - **Spectral methods:** periodic Fourier advection and diffusion, exact integration of linear modes, and Fourier differentiation.
+- **2D Euler:** first-order HLL + SSPRK2 Double Mach Reflection with time-dependent shock and reflecting-wall boundaries.
+- **Temporal and geometric models:** seven scalar ODE integrators, explicit mesh connectivity, 1D SPH reconstruction, and a moving-volume ALE identity check.
+- **Cylindrical tensors:** orthonormal velocity gradient, Newtonian stress with bulk viscosity, and symmetric stress divergence at r > 0.
 - **MHD:** planar 2D ideal MHD with first-order Rusanov fluxes, staggered constrained transport, and cell-centered GLM cleaning.
 - **Diffusion and elliptic equations:** FTCS, backward Euler, Crank–Nicolson, 1D Thomas elimination, and 2D matrix-free conjugate gradients.
 - **Iterative methods:** Jacobi, Gauss–Seidel, and SOR iteration matrices; red-black relaxation; and geometric multigrid V-cycles.
@@ -132,7 +140,7 @@ python scripts/build_references.py
 
 ## Build the web edition
 
-The static website lives in [`website/`](website/README.md). It renders all eleven
-reading chapters and their equations, includes eleven gallery figures, and uses
+The static website lives in [`website/`](website/README.md). It renders nineteen
+reading chapters and their equations, includes twelve gallery figures, and uses
 precomputed library results for the interactive Sod comparison. See the web
 README for local preview and content-refresh commands.

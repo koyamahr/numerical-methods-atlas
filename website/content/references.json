@@ -93,17 +93,6 @@
     "note": "Publisher bibliographic record. Background for linear-advection Lax–Wendroff and systems of conservation laws."
   },
   {
-    "id": "rusanov1961",
-    "year": 1961,
-    "author": "Rusanov, Vladimir V.",
-    "title": "The calculation of the interaction of non-stationary shock waves with barriers",
-    "journal": "Zhurnal Vychislitelnoi Matematiki i Matematicheskoi Fiziki",
-    "volume": "1",
-    "pages": "267--279",
-    "source": "https://www.mathnet.ru/eng/zvmmf7987",
-    "note": "Russian original in 1961; English translation in 1962. This edition uses a modern local Lax–Friedrichs/Rusanov flux."
-  },
-  {
     "id": "fedorenko1961",
     "year": 1961,
     "author": "Fedorenko, Radii P.",
@@ -113,6 +102,17 @@
     "pages": "922--927",
     "source": "https://www.mathnet.ru/eng/zvmmf8014",
     "note": "Original publication in 1961; English translation in 1962. A historical entry point to multigrid."
+  },
+  {
+    "id": "rusanov1961",
+    "year": 1961,
+    "author": "Rusanov, Vladimir V.",
+    "title": "The calculation of the interaction of non-stationary shock waves with barriers",
+    "journal": "Zhurnal Vychislitelnoi Matematiki i Matematicheskoi Fiziki",
+    "volume": "1",
+    "pages": "267--279",
+    "source": "https://www.mathnet.ru/eng/zvmmf7987",
+    "note": "Russian original in 1961; English translation in 1962. This edition uses a modern local Lax–Friedrichs/Rusanov flux."
   },
   {
     "id": "reed1973",
@@ -126,15 +126,16 @@
     "note": "Public government-report record. This edition implements modal DG for 1D linear advection, rather than triangular-mesh neutron transport."
   },
   {
-    "id": "spectral1977",
-    "type": "book",
-    "year": 1977,
-    "author": "Gottlieb, David and Orszag, Steven A.",
-    "title": "Numerical Analysis of Spectral Methods: Theory and Applications",
-    "publisher": "SIAM",
-    "doi": "10.1137/1.9781611970425",
-    "source": "https://epubs.siam.org/doi/abs/10.1137/1.9781611970425.ch2",
-    "note": "Publisher chapter information for a representative spectral-methods monograph. This edition is limited to periodic linear Fourier problems."
+    "id": "hirt1974",
+    "year": 1974,
+    "author": "Hirt, C. W. and Amsden, A. A. and Cook, J. L.",
+    "title": "An arbitrary Lagrangian-Eulerian computing method for all flow speeds",
+    "journal": "Journal of Computational Physics",
+    "volume": "14",
+    "pages": "227--253",
+    "doi": "10.1016/0021-9991(74)90051-5",
+    "source": "https://www.sciencedirect.com/science/article/pii/0021999174900515",
+    "note": "Publisher record and abstract. Historical ALE reference; the implemented example is only a 1D moving-volume uniform-state check."
   },
   {
     "id": "brandt1977",
@@ -149,6 +150,41 @@
     "note": "AMS-hosted original paper. This edition implements a fixed-grid geometric V-cycle, rather than the full adaptive framework."
   },
   {
+    "id": "gingold1977",
+    "year": 1977,
+    "author": "Gingold, R. A. and Monaghan, J. J.",
+    "title": "Smoothed particle hydrodynamics: theory and application to non-spherical stars",
+    "journal": "Monthly Notices of the Royal Astronomical Society",
+    "volume": "181",
+    "pages": "375--389",
+    "doi": "10.1093/mnras/181.3.375",
+    "source": "https://academic.oup.com/mnras/article/181/3/375/988212",
+    "note": "Original publisher record. Early SPH paper; this edition implements static 1D kernel reconstruction, not the stellar calculation."
+  },
+  {
+    "id": "lucy1977",
+    "year": 1977,
+    "author": "Lucy, L. B.",
+    "title": "A numerical approach to the testing of the fission hypothesis",
+    "journal": "The Astronomical Journal",
+    "volume": "82",
+    "pages": "1013--1024",
+    "doi": "10.1086/112164",
+    "source": "https://articles.adsabs.harvard.edu/pdf/1977AJ.....82.1013L",
+    "note": "ADS-hosted original article. Independent early particle-method reference; the cubic-spline reconstruction here is not a reproduction of Lucy’s original kernel or dynamics."
+  },
+  {
+    "id": "spectral1977",
+    "type": "book",
+    "year": 1977,
+    "author": "Gottlieb, David and Orszag, Steven A.",
+    "title": "Numerical Analysis of Spectral Methods: Theory and Applications",
+    "publisher": "SIAM",
+    "doi": "10.1137/1.9781611970425",
+    "source": "https://epubs.siam.org/doi/abs/10.1137/1.9781611970425.ch2",
+    "note": "Publisher chapter information for a representative spectral-methods monograph. This edition is limited to periodic linear Fourier problems."
+  },
+  {
     "id": "sod1978",
     "year": 1978,
     "author": "Sod, Gary A.",
@@ -161,18 +197,6 @@
     "note": "The DOI identifies the original paper; the source is an implementation reference for the standard Sod problem and exact solution. The original methods and figures are not reproduced in full."
   },
   {
-    "id": "vanleer1979",
-    "year": 1979,
-    "author": "van Leer, Bram",
-    "title": "Towards the ultimate conservative difference scheme. V. A second-order sequel to Godunov's method",
-    "journal": "Journal of Computational Physics",
-    "volume": "32",
-    "pages": "101--136",
-    "doi": "10.1016/0021-9991(79)90145-1",
-    "source": "https://www.sciencedirect.com/science/article/pii/0021999179901451",
-    "note": "Publisher bibliographic record and abstract. This edition uses minmod MUSCL with SSPRK3, rather than reproducing the original Lagrangian/remap construction."
-  },
-  {
     "id": "orszag1979",
     "year": 1979,
     "author": "Orszag, Steven A. and Tang, Cha-Mei",
@@ -183,6 +207,18 @@
     "doi": "10.1017/S002211207900210X",
     "source": "https://doi.org/10.1017/S002211207900210X",
     "note": "The original study concerns incompressible MHD. Distinguish it from the normalization of the modern compressible Orszag–Tang test used here."
+  },
+  {
+    "id": "vanleer1979",
+    "year": 1979,
+    "author": "van Leer, Bram",
+    "title": "Towards the ultimate conservative difference scheme. V. A second-order sequel to Godunov's method",
+    "journal": "Journal of Computational Physics",
+    "volume": "32",
+    "pages": "101--136",
+    "doi": "10.1016/0021-9991(79)90145-1",
+    "source": "https://www.sciencedirect.com/science/article/pii/0021999179901451",
+    "note": "Publisher bibliographic record and abstract. This edition uses minmod MUSCL with SSPRK3, rather than reproducing the original Lagrangian/remap construction."
   },
   {
     "id": "roe1981",
@@ -217,8 +253,8 @@
     "volume": "54",
     "pages": "115--173",
     "doi": "10.1016/0021-9991(84)90142-6",
-    "source": "https://crd.lbl.gov/assets/pubs_presos/AMCS/ANAG/A31984.pdf",
-    "note": "Publicly accessible original paper. Double Mach Reflection and step flows are candidates for future 2D exhibits and are not implemented here."
+    "source": "https://www.nas.nasa.gov/LAVA/unst_docs/tutorials/double_mach/double_mach/",
+    "note": "DOI identifies the original 1984 paper; linked NASA tutorial is a later setup reference. This edition computes a first-order 2D HLL Double Mach Reflection baseline, not the original PPM figure. Forward-facing step remains future work."
   },
   {
     "id": "eno1987",
@@ -340,16 +376,16 @@
     "note": "Publisher bibliographic record and abstract. This edition uses HLLC with Davis-type wave speeds and does not implement every original wave-speed estimate or WAF construction."
   },
   {
-    "id": "weno1994",
+    "id": "quirk1994",
     "year": 1994,
-    "author": "Liu, Xu-Dong and Osher, Stanley and Chan, Tony",
-    "title": "Weighted Essentially Non-oscillatory Schemes",
-    "journal": "Journal of Computational Physics",
-    "volume": "115",
-    "pages": "200--212",
-    "doi": "10.1006/jcph.1994.1187",
-    "source": "https://www.sciencedirect.com/science/article/pii/S0021999184711879",
-    "note": "Publisher bibliographic record and abstract. Historical introduction to WENO; the weights implemented here are Jiang–Shu (1996)."
+    "author": "Quirk, James J.",
+    "title": "A contribution to the great Riemann solver debate",
+    "journal": "International Journal for Numerical Methods in Fluids",
+    "volume": "18",
+    "pages": "555--574",
+    "doi": "10.1002/fld.1650180603",
+    "source": "https://onlinelibrary.wiley.com/doi/10.1002/fld.1650180603",
+    "note": "Publisher record and abstract. Background for shock instability and complementary fluxes. Controlled odd-even and blunt-body carbuncle experiments remain future work."
   },
   {
     "id": "templates1994",
@@ -360,6 +396,18 @@
     "publisher": "SIAM",
     "source": "https://www.netlib.org/templates/templates.html",
     "note": "Publicly available author-side reference material for Jacobi, Gauss–Seidel, preconditioning, and multigrid."
+  },
+  {
+    "id": "weno1994",
+    "year": 1994,
+    "author": "Liu, Xu-Dong and Osher, Stanley and Chan, Tony",
+    "title": "Weighted Essentially Non-oscillatory Schemes",
+    "journal": "Journal of Computational Physics",
+    "volume": "115",
+    "pages": "200--212",
+    "doi": "10.1006/jcph.1994.1187",
+    "source": "https://www.sciencedirect.com/science/article/pii/S0021999184711879",
+    "note": "Publisher bibliographic record and abstract. Historical introduction to WENO; the weights implemented here are Jiang–Shu (1996)."
   },
   {
     "id": "jiang1996",
@@ -374,6 +422,18 @@
     "note": "Publicly accessible original paper. Reference for WENO5-JS flux reconstruction, smoothness indicators, and nonlinear weights."
   },
   {
+    "id": "shewchuk1996",
+    "type": "inproceedings",
+    "year": 1996,
+    "author": "Shewchuk, Jonathan Richard",
+    "title": "Triangle: Engineering a 2D Quality Mesh Generator and Delaunay Triangulator",
+    "booktitle": "Applied Computational Geometry: Towards Geometric Engineering",
+    "publisher": "Springer",
+    "pages": "203--222",
+    "source": "https://www.cs.cmu.edu/~quake/tripaper/triangle0.html",
+    "note": "Author-hosted paper. Mesh-generation reading reference; the example meshes use Matplotlib triangulation and do not invoke Triangle."
+  },
+  {
     "id": "toth2000",
     "year": 2000,
     "author": "Tóth, Gábor",
@@ -384,6 +444,18 @@
     "doi": "10.1006/jcph.2000.6519",
     "source": "https://public.websites.umich.edu/~gtoth/Papers/Toth2000_divb.pdf",
     "note": "Author-hosted original paper. Reference for CT variants and differences between discrete divergence operators."
+  },
+  {
+    "id": "pandolfi2001",
+    "year": 2001,
+    "author": "Pandolfi, Maurizio and D’Ambrosio, Domenic",
+    "title": "Numerical Instabilities in Upwind Methods: Analysis and Cures for the “Carbuncle” Phenomenon",
+    "journal": "Journal of Computational Physics",
+    "volume": "166",
+    "pages": "271--301",
+    "doi": "10.1006/jcph.2000.6652",
+    "source": "https://www.sciencedirect.com/science/article/pii/S002199910096652X",
+    "note": "Publisher record and abstract. Linearized shock-instability analysis and localized cures; the proposed methods are not implemented in this edition."
   },
   {
     "id": "dedner2002",
@@ -445,6 +517,27 @@
     "note": "Publisher bibliographic record. Background for exact Riemann solutions and the standard double-rarefaction setup."
   },
   {
+    "id": "williams2009",
+    "year": 2009,
+    "author": "Williams, Paul D.",
+    "title": "A Proposed Modification to the Robert–Asselin Time Filter",
+    "journal": "Monthly Weather Review",
+    "volume": "137",
+    "doi": "10.1175/2009MWR2724.1",
+    "source": "https://journals.ametsoc.org/abstract/journals/mwre/137/8/2009mwr2724.1.xml",
+    "note": "Publisher record identifies the time-filter paper. The ODE laboratory uses unfiltered leapfrog with RK4 startup and does not implement this filter."
+  },
+  {
+    "id": "fitzpatrick2016",
+    "type": "misc",
+    "year": 2016,
+    "author": "Fitzpatrick, Richard",
+    "title": "Fluid Equations in Cylindrical Coordinates",
+    "institution": "University of Texas at Austin",
+    "source": "https://farside.ph.utexas.edu/teaching/336L/Fluid/node20.html",
+    "note": "Author lecture notes, dated January 22, 2016. Reference for cylindrical fluid operators; the atlas declares its bulk-viscosity and orthonormal-component conventions separately."
+  },
+  {
     "id": "quokka2022",
     "year": 2022,
     "author": "Wibking, Benjamin D. and Krumholz, Mark R.",
@@ -455,5 +548,15 @@
     "doi": "10.1093/mnras/stac439",
     "source": "https://academic.oup.com/mnras/article/512/1/1430/6530656",
     "note": "Section 3.1.5 of the public paper is the reference for the adopted Shu–Osher parameters. The Quokka code itself is not reproduced."
+  },
+  {
+    "id": "powell2026",
+    "type": "misc",
+    "year": 2026,
+    "author": "Powell, Ken",
+    "title": "Philip Lawrence Roe, Professor Emeritus of Aerospace Engineering at the University of Michigan, passed away April 26, 2026, at the age of 87",
+    "institution": "University of Michigan Aerospace Engineering",
+    "source": "https://aero.engin.umich.edu/2026/04/29/philip-lawrence-roe-professor-emeritus-of-aerospace-engineering-at-the-university-of-michigan-passed-away-april-26-2026-at-the-age-of-87/",
+    "note": "Official university memorial published April 29, 2026. A biographical source, not a numerical-method research paper."
   }
 ]

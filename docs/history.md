@@ -93,3 +93,11 @@ The [NASA 2D case catalog](nasa-2d.md) introduces the distinction between
 numerical verification and physical validation against experiments. Each
 future exhibit should connect its original source, current data access point,
 implementation status, and verification evidence.
+
+## Moving meshes, particles, and temporal modes
+
+The fixed-grid history has parallel branches. [Hirt, Amsden, and Cook (1974)](https://doi.org/10.1016/0021-9991(74)90051-5) provide a classical ALE framework; [Gingold and Monaghan (1977)](https://doi.org/10.1093/mnras/181.3.375) and [Lucy (1977)](https://doi.org/10.1086/112164) are independent early SPH sources. The new [ALE](ale.md), [particle](particles-sph.md), and [mesh](meshes.md) chapters connect their different representations of geometry and motion. The code implements small reconstruction and geometric-conservation examples, rather than those original flow calculations.
+
+The [time integration chapter](time-integration.md) gives the two-step leapfrog recurrence and its computational root. Its discussion of time filtering points to a later modification by [Williams (2009)](https://doi.org/10.1175/2009MWR2724.1), without assigning the invention of leapfrog to that paper.
+
+The [Double Mach Reflection exhibit](double-mach.md) adds a computed two-dimensional shock interaction. [Quirk (1994)](https://doi.org/10.1002/fld.1650180603) and [Pandolfi and D’Ambrosio (2001)](https://doi.org/10.1006/jcph.2000.6652) lead into the separate [carbuncle reading notes](carbuncle.md). Finally, [Remembering Philip L. Roe](roe-memorial.md) records the university’s 2026 memorial and returns to his 1981 contribution.

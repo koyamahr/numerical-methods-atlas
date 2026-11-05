@@ -122,6 +122,18 @@
   note = {Public government-report record. This edition implements modal DG for 1D linear advection, rather than triangular-mesh neutron transport.}
 }
 
+@article{hirt1974,
+  author = {Hirt, C. W. and Amsden, A. A. and Cook, J. L.},
+  title = {An arbitrary Lagrangian-Eulerian computing method for all flow speeds},
+  year = {1974},
+  journal = {Journal of Computational Physics},
+  volume = {14},
+  pages = {227--253},
+  doi = {10.1016/0021-9991(74)90051-5},
+  url = {https://www.sciencedirect.com/science/article/pii/0021999174900515},
+  note = {Publisher record and abstract. Historical ALE reference; the implemented example is only a 1D moving-volume uniform-state check.}
+}
+
 @article{brandt1977,
   author = {Brandt, Achi},
   title = {Multi-level adaptive solutions to boundary-value problems},
@@ -132,6 +144,30 @@
   doi = {10.1090/S0025-5718-1977-0431719-X},
   url = {https://www.ams.org/mcom/1977-31-138/S0025-5718-1977-0431719-X/S0025-5718-1977-0431719-X.pdf},
   note = {AMS-hosted original paper. This edition implements a fixed-grid geometric V-cycle, rather than the full adaptive framework.}
+}
+
+@article{gingold1977,
+  author = {Gingold, R. A. and Monaghan, J. J.},
+  title = {Smoothed particle hydrodynamics: theory and application to non-spherical stars},
+  year = {1977},
+  journal = {Monthly Notices of the Royal Astronomical Society},
+  volume = {181},
+  pages = {375--389},
+  doi = {10.1093/mnras/181.3.375},
+  url = {https://academic.oup.com/mnras/article/181/3/375/988212},
+  note = {Original publisher record. Early SPH paper; this edition implements static 1D kernel reconstruction, not the stellar calculation.}
+}
+
+@article{lucy1977,
+  author = {Lucy, L. B.},
+  title = {A numerical approach to the testing of the fission hypothesis},
+  year = {1977},
+  journal = {The Astronomical Journal},
+  volume = {82},
+  pages = {1013--1024},
+  doi = {10.1086/112164},
+  url = {https://articles.adsabs.harvard.edu/pdf/1977AJ.....82.1013L},
+  note = {ADS-hosted original article. Independent early particle-method reference; the cubic-spline reconstruction here is not a reproduction of Lucy’s original kernel or dynamics.}
 }
 
 @book{spectral1977,
@@ -212,8 +248,8 @@
   volume = {54},
   pages = {115--173},
   doi = {10.1016/0021-9991(84)90142-6},
-  url = {https://crd.lbl.gov/assets/pubs_presos/AMCS/ANAG/A31984.pdf},
-  note = {Publicly accessible original paper. Double Mach Reflection and step flows are candidates for future 2D exhibits and are not implemented here.}
+  url = {https://www.nas.nasa.gov/LAVA/unst_docs/tutorials/double_mach/double_mach/},
+  note = {DOI identifies the original 1984 paper; linked NASA tutorial is a later setup reference. This edition computes a first-order 2D HLL Double Mach Reflection baseline, not the original PPM figure. Forward-facing step remains future work.}
 }
 
 @article{eno1987,
@@ -334,6 +370,18 @@
   note = {Publisher bibliographic record and abstract. This edition uses HLLC with Davis-type wave speeds and does not implement every original wave-speed estimate or WAF construction.}
 }
 
+@article{quirk1994,
+  author = {Quirk, James J.},
+  title = {A contribution to the great Riemann solver debate},
+  year = {1994},
+  journal = {International Journal for Numerical Methods in Fluids},
+  volume = {18},
+  pages = {555--574},
+  doi = {10.1002/fld.1650180603},
+  url = {https://onlinelibrary.wiley.com/doi/10.1002/fld.1650180603},
+  note = {Publisher record and abstract. Background for shock instability and complementary fluxes. Controlled odd-even and blunt-body carbuncle experiments remain future work.}
+}
+
 @book{templates1994,
   author = {Barrett, Richard and Berry, Michael and Chan, Tony F. and Demmel, James and Donato, June and Dongarra, Jack and Eijkhout, Victor and Pozo, Roldan and Romine, Charles and van der Vorst, Henk},
   title = {Templates for the Solution of Linear Systems: Building Blocks for Iterative Methods},
@@ -367,6 +415,17 @@
   note = {Publicly accessible original paper. Reference for WENO5-JS flux reconstruction, smoothness indicators, and nonlinear weights.}
 }
 
+@inproceedings{shewchuk1996,
+  author = {Shewchuk, Jonathan Richard},
+  title = {Triangle: Engineering a 2D Quality Mesh Generator and Delaunay Triangulator},
+  year = {1996},
+  pages = {203--222},
+  publisher = {Springer},
+  booktitle = {Applied Computational Geometry: Towards Geometric Engineering},
+  url = {https://www.cs.cmu.edu/~quake/tripaper/triangle0.html},
+  note = {Author-hosted paper. Mesh-generation reading reference; the example meshes use Matplotlib triangulation and do not invoke Triangle.}
+}
+
 @article{toth2000,
   author = {Tóth, Gábor},
   title = {The ∇·B = 0 Constraint in Shock-Capturing Magnetohydrodynamics Codes},
@@ -377,6 +436,18 @@
   doi = {10.1006/jcph.2000.6519},
   url = {https://public.websites.umich.edu/~gtoth/Papers/Toth2000_divb.pdf},
   note = {Author-hosted original paper. Reference for CT variants and differences between discrete divergence operators.}
+}
+
+@article{pandolfi2001,
+  author = {Pandolfi, Maurizio and D’Ambrosio, Domenic},
+  title = {Numerical Instabilities in Upwind Methods: Analysis and Cures for the “Carbuncle” Phenomenon},
+  year = {2001},
+  journal = {Journal of Computational Physics},
+  volume = {166},
+  pages = {271--301},
+  doi = {10.1006/jcph.2000.6652},
+  url = {https://www.sciencedirect.com/science/article/pii/S002199910096652X},
+  note = {Publisher record and abstract. Linearized shock-instability analysis and localized cures; the proposed methods are not implemented in this edition.}
 }
 
 @article{dedner2002,
@@ -436,6 +507,26 @@
   note = {Publisher bibliographic record. Background for exact Riemann solutions and the standard double-rarefaction setup.}
 }
 
+@article{williams2009,
+  author = {Williams, Paul D.},
+  title = {A Proposed Modification to the Robert–Asselin Time Filter},
+  year = {2009},
+  journal = {Monthly Weather Review},
+  volume = {137},
+  doi = {10.1175/2009MWR2724.1},
+  url = {https://journals.ametsoc.org/abstract/journals/mwre/137/8/2009mwr2724.1.xml},
+  note = {Publisher record identifies the time-filter paper. The ODE laboratory uses unfiltered leapfrog with RK4 startup and does not implement this filter.}
+}
+
+@misc{fitzpatrick2016,
+  author = {Fitzpatrick, Richard},
+  title = {Fluid Equations in Cylindrical Coordinates},
+  year = {2016},
+  institution = {University of Texas at Austin},
+  url = {https://farside.ph.utexas.edu/teaching/336L/Fluid/node20.html},
+  note = {Author lecture notes, dated January 22, 2016. Reference for cylindrical fluid operators; the atlas declares its bulk-viscosity and orthonormal-component conventions separately.}
+}
+
 @article{quokka2022,
   author = {Wibking, Benjamin D. and Krumholz, Mark R.},
   title = {quokka: a code for two-moment AMR radiation hydrodynamics on GPUs},
@@ -446,4 +537,13 @@
   doi = {10.1093/mnras/stac439},
   url = {https://academic.oup.com/mnras/article/512/1/1430/6530656},
   note = {Section 3.1.5 of the public paper is the reference for the adopted Shu–Osher parameters. The Quokka code itself is not reproduced.}
+}
+
+@misc{powell2026,
+  author = {Powell, Ken},
+  title = {Philip Lawrence Roe, Professor Emeritus of Aerospace Engineering at the University of Michigan, passed away April 26, 2026, at the age of 87},
+  year = {2026},
+  institution = {University of Michigan Aerospace Engineering},
+  url = {https://aero.engin.umich.edu/2026/04/29/philip-lawrence-roe-professor-emeritus-of-aerospace-engineering-at-the-university-of-michigan-passed-away-april-26-2026-at-the-age-of-87/},
+  note = {Official university memorial published April 29, 2026. A biographical source, not a numerical-method research paper.}
 }

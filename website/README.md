@@ -51,8 +51,13 @@ this workspace does not enable public Sites hosting.
 - `#/methods`: methods and implementation scope.
 - `#/experiments`: live periodic-advection and Fourier-amplification laboratory.
 - `#/convergence`: original gallery refinement data, observed orders, and unknown counts.
-- `#/gallery`: eleven figures with category filtering and enlarged views.
+- `#/gallery`: twelve figures with category filtering and enlarged views.
 - `#/references`: searchable bibliography and BibTeX download.
 - `#/read/<chapter>`: complete documentation with equations and section links.
 
 A `?section=<heading-id>` suffix opens a specific section in a chapter.
+
+- `#/time-integration`: seven precomputed ODE integrators, startup perturbations, and leapfrog roots.
+- `#/meshes`: three mesh geometries with selectable cells and face-sharing neighbors.
+
+The nineteen chapters now include SPH/ALE models, cylindrical viscous tensors, a computed Double Mach Reflection baseline, carbuncle reading notes, and a sourced Philip L. Roe memorial. `foundations.json` records temporal/mesh source hashes; the DMR run manifest and arrays are separate downloads.

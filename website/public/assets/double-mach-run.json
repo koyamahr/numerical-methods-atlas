@@ -1,0 +1,49 @@
+{
+  "python": "3.9.6",
+  "numpy": "2.0.2",
+  "source_sha256": {
+    "__init__.py": "7236458e494b37263cb625bb51a2fa2c65b284396fab9a0b5a05359770121628",
+    "advection.py": "27128109c8a6f416eabce891d912436505cbc09fea460c30d71dcd44829504bd",
+    "benchmarks.py": "dc8f83aafea473b5f0e1e7bf82630484dd60aa446859c1f602571adc3c59f019",
+    "cli.py": "652bd0aa534afef775c7b83be3fe6885f928cc9599bd5d40a53ef8607182b5c5",
+    "coordinates.py": "c05903b96e57667c9a492aabc5c9ab1375ad37f774108ce189d4f43a3225d862",
+    "equations.py": "d1b589ad4b8a31d316c20926ef7104664609d789f31f6fb239c1d74bb310b619",
+    "euler2d.py": "290f08d6ad5762576158e3bc6c7345834fdf22a2e8f7c0a5cd29efd50fa35ed7",
+    "geometry.py": "ce62b61ff5989643e87fbdbda8507179b1c0c94af094c91c09d142c1a2a23a84",
+    "linear.py": "d58db4efc09a3358b28cff07ba3a2e732244eaaf2f82a5fcf1ce0de001ba87a9",
+    "mhd.py": "14fe39abf43ef1ba47c3eb1dbe22bea462c12944ed28f37d2b33cfaee61fd0d9",
+    "multigrid.py": "45370e4ffeccfbabbce5ccf48eff90c5c99614d0549536dcd4209bd028ee2d75",
+    "riemann.py": "702ce9e08fbef67ed77363e8603e64f2da8a979d3b5abd6ffa62ab78344c95cf",
+    "solvers.py": "227d5c480e4cad8c5665b3afcdd22a631a3cac2bcedc2056bdb4d4f87fe7a5e7",
+    "time_integration.py": "63b25f63a0279dee60b08eb33fbdbde0cc394b73e288b28ac06b3a3174a0e98d"
+  },
+  "git_revision": "cb12ad6751868001ebe1894bd8dafdf457eb09ff",
+  "git_dirty": true,
+  "scope": "first-order 2D educational baseline; no fine-grid reproduction claim",
+  "problem": "double-mach",
+  "n": 64,
+  "method": "godunov",
+  "cfl": 0.4,
+  "steps": 811,
+  "time": 0.2,
+  "riemann": "HLL with Davis wave speeds",
+  "shape": [
+    256,
+    64
+  ],
+  "domain": [
+    [
+      0,
+      4
+    ],
+    [
+      0,
+      1
+    ]
+  ],
+  "gamma": 1.4,
+  "min_density": 1.4,
+  "min_pressure": 1.0,
+  "boundary": "postshock left; outflow right; mixed reflecting/inflow bottom; moving shock top",
+  "citation": "woodward1984"
+}
