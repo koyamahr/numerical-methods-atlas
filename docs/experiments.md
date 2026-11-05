@@ -140,3 +140,20 @@ The [Hamiltonian notebook](https://koyamahr.github.io/the-art-of-numerical-algor
 ## Nonsteady movie and KEEP exhibits
 
 The [motion gallery](movies.md) presents actual saved solver states and explicit physical timestamps, with fixed color scales and MP4 export. [KEEP](keep.md) is evaluated on a smooth exact-reference vortex, with separate spatial/time-refinement and entropy diagnostics. No shock-capturing claim follows from that smooth computation.
+
+## Slope limiters and advanced reconstruction
+
+The [limiter notebook](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/limiters)
+loads 45 Python-computed curves on demand, together with six smooth-refinement
+studies and three constructed Euler reconstruction failures. Select minmod,
+Superbee, MC, van Leer, or clipped van Albada, inspect scalar periodic TV and
+mass, and compare Sod with the same HLLC flux. Scalar errors use exact cell
+averages; Sod retains its pointwise reference convention. First-order and
+unlimited baselines apply only to scalar advection.
+
+The advanced controls select TVB M=0,10,50 and demonstrate conservative
+positive-state scaling. Read [slope definitions](limiters.md) and the
+[advanced assumptions](advanced-limiters.md). `python scripts/build_limiters.py`
+generates `docs/figures/limiters.json` with source hashes; the standard sync
+copies it to the web edition. Neither the scalar TVB example nor the positive
+reconstruction helper confers a fully discrete Euler positivity guarantee.

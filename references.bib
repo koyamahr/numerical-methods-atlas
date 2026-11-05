@@ -134,6 +134,18 @@
   note = {Publisher record and abstract. Historical ALE reference; the implemented example is only a 1D moving-volume uniform-state check.}
 }
 
+@article{vanleer1974,
+  author = {van Leer, Bram},
+  title = {Towards the ultimate conservative difference scheme. II. Monotonicity and conservation combined in a second-order scheme},
+  year = {1974},
+  journal = {Journal of Computational Physics},
+  volume = {14},
+  pages = {361--370},
+  doi = {10.1016/0021-9991(74)90019-9},
+  url = {https://www.sciencedirect.com/science/article/pii/0021999174900199},
+  note = {Publisher bibliographic record inspected. Historical monotonicity and conservative second-order reconstruction; not a claim to reproduce the original algorithm.}
+}
+
 @article{brandt1977,
   author = {Brandt, Achi},
   title = {Multi-level adaptive solutions to boundary-value problems},
@@ -213,7 +225,7 @@
   pages = {101--136},
   doi = {10.1016/0021-9991(79)90145-1},
   url = {https://www.sciencedirect.com/science/article/pii/0021999179901451},
-  note = {Publisher bibliographic record and abstract. This edition uses minmod MUSCL with SSPRK3, rather than reproducing the original Lagrangian/remap construction.}
+  note = {Publisher bibliographic record and abstract. This edition uses selectable-limiter MUSCL with SSPRK3, rather than reproducing the original Lagrangian/remap construction.}
 }
 
 @book{hockney1981book,
@@ -257,6 +269,18 @@
   doi = {10.1137/1025002},
   url = {https://www.ece.uvic.ca/~bctill/papers/numacoust/Harten_etal_1983.pdf},
   note = {Publicly accessible original paper. Background on HLL; the hll implementation here uses Davis-type minimum/maximum acoustic wave speeds.}
+}
+
+@article{sweby1984,
+  author = {Sweby, P. K.},
+  title = {High Resolution Schemes Using Flux Limiters for Hyperbolic Conservation Laws},
+  year = {1984},
+  journal = {SIAM Journal on Numerical Analysis},
+  volume = {21},
+  pages = {995--1011},
+  doi = {10.1137/0721062},
+  url = {https://epubs.siam.org/doi/10.1137/0721062},
+  note = {Publisher record and abstract inspected. Historical scalar TVD flux-limiter framework, including the compressive limiter due to Roe. The notebook uses explicitly documented slope conventions and a separate MUSCL/SSPRK3 operator.}
 }
 
 @article{woodward1984,
@@ -365,6 +389,18 @@
   doi = {10.1090/S0025-5718-1989-0983311-4},
   url = {https://www-users.cse.umn.edu/~cockburn/lecture_notes/DG-4.pdf},
   note = {The DOI identifies the original paper; the linked source is a later set of author lecture notes. This edition implements DG for smooth advection without a TVB limiter.}
+}
+
+@article{cockburn1989tvb,
+  author = {Cockburn, Bernardo and Shu, Chi-Wang},
+  title = {TVB Runge-Kutta local projection discontinuous Galerkin finite element method for conservation laws. II. General framework},
+  year = {1989},
+  journal = {Mathematics of Computation},
+  volume = {52},
+  pages = {411--435},
+  doi = {10.1090/S0025-5718-1989-0983311-4},
+  url = {https://www.ams.org/mcom/1989-52-186/S0025-5718-1989-0983311-4/},
+  note = {Historical RKDG/TVB reference. Publisher full-text retrieval was unavailable in this session. This edition demonstrates the modified-minmod operation in scalar finite volumes, not the complete RKDG framework or its theorem.}
 }
 
 @article{shu1989,
@@ -609,6 +645,18 @@
   note = {Publisher record identifies the time-filter paper. The ODE laboratory uses unfiltered leapfrog with RK4 startup and does not implement this filter.}
 }
 
+@article{zhangshu2010euler,
+  author = {Zhang, Xiangxiong and Shu, Chi-Wang},
+  title = {On positivity-preserving high order discontinuous Galerkin schemes for compressible Euler equations on rectangular meshes},
+  year = {2010},
+  journal = {Journal of Computational Physics},
+  volume = {229},
+  pages = {8918--8934},
+  doi = {10.1016/j.jcp.2010.08.016},
+  url = {https://www.math.purdue.edu/~zhan1966/research/paper/euler.pdf},
+  note = {Author-hosted manuscript inspected. Convex admissible Euler states, mean-preserving limiting, and additional flux, quadrature, CFL, and SSP requirements. The atlas implements only a common-state reconstruction scaling building block, not the full time-update scheme.}
+}
+
 @misc{fitzpatrick2016,
   author = {Fitzpatrick, Richard},
   title = {Fluid Equations in Cylindrical Coordinates},
@@ -686,6 +734,22 @@
   doi = {10.1016/j.compfluid.2023.106143},
   url = {https://www.sciencedirect.com/science/article/pii/S0045793023003687},
   note = {Publisher record and abstract. Published in 2024 despite 2023 in the DOI. The auxiliary-variable temporal method is not implemented; the exhibit uses classical RK4 with a time-refinement diagnostic.}
+}
+
+@misc{amrvaclimiters,
+  author = {MPI-AMRVAC Team},
+  title = {Slope Limiters},
+  year = {2026},
+  url = {https://amrvac.org/md_doc_2limiter.html},
+  note = {Official code documentation inspected in November 2026; access year only. Implementation notes on minmod, Superbee, MC, van Leer, van Albada variants, and regularization. The atlas uses an explicitly clipped van Albada form without epsilon smoothing.}
+}
+
+@misc{clawpacklimiters,
+  author = {Clawpack Development Team},
+  title = {Pyclaw Limiters},
+  year = {2026},
+  url = {https://www.clawpack.org/pyclaw/evolve/limiters.html},
+  note = {Official implementation documentation inspected in November 2026; this is an access-year record, not an invention date. Used to distinguish common limiter functions and wave-limiting conventions from the atlas slope reconstruction.}
 }
 
 @misc{powell2026,

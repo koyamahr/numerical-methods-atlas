@@ -105,3 +105,6 @@ print('Synced Hamiltonian trajectories and particle/boundary-gravity manifests.'
 
 shutil.copyfile(ROOT/'docs/figures/keep-vortex.json',assets/'keep-vortex.json')
 print('Synced smooth KEEP validation; movies are built directly into public assets.')
+
+shutil.copyfile(ROOT/'docs/figures/limiters.json',content/'limiters.json')
+print('Synced limiter curves, TVB comparisons, and conservative positive-state scaling.')

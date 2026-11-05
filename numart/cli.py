@@ -8,6 +8,7 @@ import hashlib
 import numpy as np
 from .benchmarks import get_problem, list_problems
 from .solvers import solve
+from .limiters import LIMITERS
 from .mhd import solve_orszag_tang, primitive as mhd_primitive
 from .euler2d import solve_double_mach, primitive as euler2d_primitive
 from .advection import (amplification, difference_step, dg_advection,
@@ -42,6 +43,8 @@ def _write_json(path, value):
 
 
 def run_case(args):
+    if args.limiter != "minmod" and (args.problem in ("double-mach", "orszag-tang") or args.method not in (None, "muscl")):
+        raise ValueError("--limiter selects a 1D MUSCL reconstruction only")
     out = Path(args.output)
     out.mkdir(parents=True,exist_ok=True)
     if args.problem == "double-mach":
@@ -78,10 +81,11 @@ def run_case(args):
         p = get_problem(args.problem)
         method = args.method or "muscl"
         solver = args.riemann or ("hlle" if p.name == "double-rarefaction" else "hllc" if p.equation.name == "euler" else "hll")
-        r = solve(p,args.n,method,solver,args.cfl,args.time)
+        r = solve(p,args.n,method,solver,args.cfl,args.time,limiter=args.limiter)
         np.savez_compressed(out/"solution.npz",x=r.x,q=r.q,time=r.time)
         stats = {"steps":r.steps,"time":r.time,"riemann":solver if method != "weno5" else "global LF flux splitting",
-                 "boundary":p.boundary,"domain":p.domain,"citation":p.citation}
+                 "boundary":p.boundary,"domain":p.domain,"citation":p.citation,
+                 "limiter":args.limiter if method == "muscl" else None}
         if p.reference:
             stats["density_L1_pointwise"] = float(np.mean(abs(r.q[:,0]-p.reference(r.x,r.time)[:,0])))
     _write_json(out/"run.json",{**_metadata(),"problem":args.problem,"n":args.n,"method":method,"cfl":args.cfl,**stats})
@@ -298,6 +302,7 @@ def main():
     run.add_argument("--method",choices=("godunov","muscl","weno5","ct","glm"))
     run.add_argument("--riemann",choices=("rusanov","hll","hlle","hllc","roe"))
     run.add_argument("--cfl",type=float,default=.3)
+    run.add_argument("--limiter",choices=LIMITERS,default="minmod",help="1D MUSCL slope limiter (default: minmod)")
     run.add_argument("--time",type=float)
     run.add_argument("--output",default="outputs/run")
     gallery = sub.add_parser("gallery")

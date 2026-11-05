@@ -101,6 +101,14 @@ Hirt, C. W. and Amsden, A. A. and Cook, J. L.. **An arbitrary Lagrangian-Euleria
 
 Publisher record and abstract. Historical ALE reference; the implemented example is only a 1D moving-volume uniform-state check.
 
+## 1974 · vanleer1974
+
+van Leer, Bram. **Towards the ultimate conservative difference scheme. II. Monotonicity and conservation combined in a second-order scheme**. Journal of Computational Physics.
+
+[Original bibliographic record](https://doi.org/10.1016/0021-9991(74)90019-9) · [Full text or implementation reference](https://www.sciencedirect.com/science/article/pii/0021999174900199)
+
+Publisher bibliographic record inspected. Historical monotonicity and conservative second-order reconstruction; not a claim to reproduce the original algorithm.
+
 ## 1977 · brandt1977
 
 Brandt, Achi. **Multi-level adaptive solutions to boundary-value problems**. Mathematics of Computation.
@@ -155,7 +163,7 @@ van Leer, Bram. **Towards the ultimate conservative difference scheme. V. A seco
 
 [Original bibliographic record](https://doi.org/10.1016/0021-9991(79)90145-1) · [Full text or implementation reference](https://www.sciencedirect.com/science/article/pii/0021999179901451)
 
-Publisher bibliographic record and abstract. This edition uses minmod MUSCL with SSPRK3, rather than reproducing the original Lagrangian/remap construction.
+Publisher bibliographic record and abstract. This edition uses selectable-limiter MUSCL with SSPRK3, rather than reproducing the original Lagrangian/remap construction.
 
 ## 1981 · hockney1981book
 
@@ -188,6 +196,14 @@ Harten, Amiram and Lax, Peter D. and van Leer, Bram. **On Upstream Differencing 
 [Original bibliographic record](https://doi.org/10.1137/1025002) · [Full text or implementation reference](https://www.ece.uvic.ca/~bctill/papers/numacoust/Harten_etal_1983.pdf)
 
 Publicly accessible original paper. Background on HLL; the hll implementation here uses Davis-type minimum/maximum acoustic wave speeds.
+
+## 1984 · sweby1984
+
+Sweby, P. K.. **High Resolution Schemes Using Flux Limiters for Hyperbolic Conservation Laws**. SIAM Journal on Numerical Analysis.
+
+[Original bibliographic record](https://doi.org/10.1137/0721062) · [Full text or implementation reference](https://epubs.siam.org/doi/10.1137/0721062)
+
+Publisher record and abstract inspected. Historical scalar TVD flux-limiter framework, including the compressive limiter due to Roe. The notebook uses explicitly documented slope conventions and a separate MUSCL/SSPRK3 operator.
 
 ## 1984 · woodward1984
 
@@ -260,6 +276,14 @@ Cockburn, Bernardo and Shu, Chi-Wang. **TVB Runge-Kutta local projection discont
 [Original bibliographic record](https://doi.org/10.1090/S0025-5718-1989-0983311-4) · [Full text or implementation reference](https://www-users.cse.umn.edu/~cockburn/lecture_notes/DG-4.pdf)
 
 The DOI identifies the original paper; the linked source is a later set of author lecture notes. This edition implements DG for smooth advection without a TVB limiter.
+
+## 1989 · cockburn1989tvb
+
+Cockburn, Bernardo and Shu, Chi-Wang. **TVB Runge-Kutta local projection discontinuous Galerkin finite element method for conservation laws. II. General framework**. Mathematics of Computation.
+
+[Original bibliographic record](https://doi.org/10.1090/S0025-5718-1989-0983311-4) · [Full text or implementation reference](https://www.ams.org/mcom/1989-52-186/S0025-5718-1989-0983311-4/)
+
+Historical RKDG/TVB reference. Publisher full-text retrieval was unavailable in this session. This edition demonstrates the modified-minmod operation in scalar finite volumes, not the complete RKDG framework or its theorem.
 
 ## 1989 · shu1989
 
@@ -429,6 +453,14 @@ Williams, Paul D.. **A Proposed Modification to the Robert–Asselin Time Filter
 
 Publisher record identifies the time-filter paper. The ODE laboratory uses unfiltered leapfrog with RK4 startup and does not implement this filter.
 
+## 2010 · zhangshu2010euler
+
+Zhang, Xiangxiong and Shu, Chi-Wang. **On positivity-preserving high order discontinuous Galerkin schemes for compressible Euler equations on rectangular meshes**. Journal of Computational Physics.
+
+[Original bibliographic record](https://doi.org/10.1016/j.jcp.2010.08.016) · [Full text or implementation reference](https://www.math.purdue.edu/~zhan1966/research/paper/euler.pdf)
+
+Author-hosted manuscript inspected. Convex admissible Euler states, mean-preserving limiting, and additional flux, quadrature, CFL, and SSP requirements. The atlas implements only a common-state reconstruction scaling building block, not the full time-update scheme.
+
 ## 2016 · fitzpatrick2016
 
 Fitzpatrick, Richard. **Fluid Equations in Cylindrical Coordinates**. University of Texas at Austin.
@@ -484,6 +516,22 @@ Asada, Hiroyuki and Maruyama, Kanako and Kawai, Soshi. **Temporal discretization
 [Original bibliographic record](https://doi.org/10.1016/j.compfluid.2023.106143) · [Full text or implementation reference](https://www.sciencedirect.com/science/article/pii/S0045793023003687)
 
 Publisher record and abstract. Published in 2024 despite 2023 in the DOI. The auxiliary-variable temporal method is not implemented; the exhibit uses classical RK4 with a time-refinement diagnostic.
+
+## 2026 · amrvaclimiters
+
+MPI-AMRVAC Team. **Slope Limiters**. .
+
+[Original bibliographic record](https://amrvac.org/md_doc_2limiter.html) · [Full text or implementation reference](https://amrvac.org/md_doc_2limiter.html)
+
+Official code documentation inspected in November 2026; access year only. Implementation notes on minmod, Superbee, MC, van Leer, van Albada variants, and regularization. The atlas uses an explicitly clipped van Albada form without epsilon smoothing.
+
+## 2026 · clawpacklimiters
+
+Clawpack Development Team. **Pyclaw Limiters**. .
+
+[Original bibliographic record](https://www.clawpack.org/pyclaw/evolve/limiters.html) · [Full text or implementation reference](https://www.clawpack.org/pyclaw/evolve/limiters.html)
+
+Official implementation documentation inspected in November 2026; this is an access-year record, not an invention date. Used to distinguish common limiter functions and wave-limiting conventions from the atlas slope reconstruction.
 
 ## 2026 · powell2026
 

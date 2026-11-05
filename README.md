@@ -46,7 +46,7 @@ Additional reading: [time integration and leapfrog](docs/time-integration.md), [
 
 Further reading: [symplectic Hamiltonian maps](docs/symplectic.md), [PM / P³M / Tree / multipoles](docs/particle-gravity.md), and [Hockney–Eastwood / Koyama–Ostriker gravity kernels](docs/gravity-boundaries.md).
 
-New exhibits: [nonsteady movies](docs/movies.md) and [original KEEP with smooth tests and caveats](docs/keep.md). Steady fields remain still figures.
+New exhibits: [slope limiters](docs/limiters.md), [advanced TVB and positive-state scaling](docs/advanced-limiters.md), [nonsteady movies](docs/movies.md), and [original KEEP with smooth tests and caveats](docs/keep.md). Steady fields remain still figures.
 
 ## Interactive notebooks
 
@@ -55,6 +55,7 @@ New exhibits: [nonsteady movies](docs/movies.md) and [original KEEP with smooth 
 - [Time integration](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/time-integration): seven Python-computed oscillator trajectories, including unfiltered leapfrog and its startup mode.
 - [Mesh explorer](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/meshes): select cells and inspect face-sharing neighbors in structured and irregular meshes.
 - [Hamiltonian maps](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/hamiltonian): symplectic Euler, Verlet, Yoshida fourth order, implicit midpoint, and RK4 on two Hamiltonians.
+- [Limiter notebook](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/limiters): minmod, Superbee, MC, van Leer, and clipped van Albada; scalar advection, Sod, Sweby bounds, refinement, TVB parameters, and a separate mean-preserving positive Euler reconstruction.
 - [Experiment guide](docs/experiments.md): equations, provenance, reproducibility, and the limits of each comparison.
 
 ## Run a benchmark
@@ -148,8 +149,8 @@ python scripts/build_references.py
 
 ## Build the web edition
 
-The static website lives in [`website/`](website/README.md). It renders twenty-four
-reading chapters and their equations, includes sixteen gallery figures and four computed movies, and uses
+The static website lives in [`website/`](website/README.md). It renders twenty-six
+reading chapters and their equations, includes seventeen gallery figures and four computed movies, and uses
 precomputed library results for the interactive Sod comparison. See the web
 README for local preview and content-refresh commands.
 
@@ -159,6 +160,7 @@ Regenerate the new geometric and gravity exhibits before syncing the web content
 python scripts/build_hamiltonian.py
 python scripts/build_particle_gravity.py
 python scripts/build_gravity_boundaries.py
+python scripts/build_limiters.py
 python scripts/sync_web_content.py
 ```
 

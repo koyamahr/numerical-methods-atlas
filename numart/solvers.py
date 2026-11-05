@@ -1,12 +1,13 @@
 """Finite-volume MUSCL and componentwise finite-difference WENO5-JS.
 
     WENO uses global Lax–Friedrichs flux splitting and SSPRK(3,3).
-    MUSCL uses minmod on primitive variables and the selected Riemann flux.
+    MUSCL uses a selectable slope limiter on primitive variables.
     Neither method is a general positivity-preserving scheme.
 """
 from dataclasses import dataclass
 import numpy as np
 from .riemann import numerical_flux
+from .limiters import LIMITERS, limited_slope, minmod
 
 
 @dataclass
@@ -34,10 +35,6 @@ def _pad(q, problem, width):
     return g
 
 
-def minmod(a, b):
-    return np.where(a*b > 0, np.sign(a)*np.minimum(abs(a), abs(b)), 0.)
-
-
 def _weno_left(v):
     """Left-biased flux at interfaces; input includes three ghost points."""
     a,b,c,d,e = v[:-4],v[1:-3],v[2:-2],v[3:-1],v[4:]
@@ -49,9 +46,11 @@ def _weno_left(v):
     return np.sum(alpha*polynomials, axis=0)/np.sum(alpha, axis=0)
 
 
-def solve(problem, n=200, method="muscl", riemann="hllc", cfl=.3, final_time=None):
+def solve(problem, n=200, method="muscl", riemann="hllc", cfl=.3, final_time=None, limiter="minmod"):
     if method not in ("godunov", "muscl", "weno5"):
         raise ValueError("method must be godunov, muscl, or weno5")
+    if limiter not in LIMITERS or (method != "muscl" and limiter != "minmod"):
+        raise ValueError("A selectable limiter applies only to MUSCL; choose a supported limiter")
     if not 0 < cfl <= .5:
         raise ValueError("These baseline implementations require 0 < CFL <= 0.5")
     if method != "weno5" and riemann in ("hllc","roe","hlle") and problem.equation.name != "euler":
@@ -78,7 +77,7 @@ def solve(problem, n=200, method="muscl", riemann="hllc", cfl=.3, final_time=Non
             w = eq.primitive(g)
             slope = np.zeros_like(w)
             if method == "muscl":
-                slope[1:-1] = minmod(w[1:-1]-w[:-2], w[2:]-w[1:-1])
+                slope[1:-1] = limited_slope(w[1:-1]-w[:-2], w[2:]-w[1:-1], limiter)
             left = eq.conserved((w+.5*slope)[1:-2])
             right = eq.conserved((w-.5*slope)[2:-1])
             flux = numerical_flux(left, right, eq, riemann)

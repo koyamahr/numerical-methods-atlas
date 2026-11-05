@@ -62,6 +62,10 @@ The original incompressible Orszag–Tang study and the normalization of today's
 compressible test are also distinguished.
 [Benchmark definitions](benchmarks.md), [MHD](mhd.md).
 
+## 1984–1989: TVD slopes and TVB extrema relaxation
+
+[Sweby (1984)](https://doi.org/10.1137/0721062) organizes scalar flux-limiter bounds. [Cockburn–Shu (1989)](https://doi.org/10.1090/S0025-5718-1989-0983311-4) develops the TVB RKDG framework. Compare five [slope limiters](limiters.md), then inspect the separate [TVB and positive-state scaling](advanced-limiters.md) building blocks. The latter also links the positivity framework of Zhang–Shu (2010), with its required flux, quadrature, CFL, and SSP conditions.
+
 ## 1987–1989: higher order, preconditioning, and magnetic constraints
 
 ENO by Harten and colleagues (1987), Turkel's low-speed preconditioning (1987),

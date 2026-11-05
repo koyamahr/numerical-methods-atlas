@@ -60,7 +60,7 @@ A `?section=<heading-id>` suffix opens a specific section in a chapter.
 - `#/time-integration`: seven precomputed ODE integrators, startup perturbations, and leapfrog roots.
 - `#/meshes`: three mesh geometries with selectable cells and face-sharing neighbors.
 
-The twenty-four chapters now include SPH/ALE models, cylindrical viscous tensors, a computed Double Mach Reflection baseline, carbuncle reading notes, and a sourced Philip L. Roe memorial. `foundations.json` records temporal/mesh source hashes; the DMR run manifest and arrays are separate downloads.
+The twenty-six chapters now include SPH/ALE models, cylindrical viscous tensors, a computed Double Mach Reflection baseline, carbuncle reading notes, a sourced Philip L. Roe memorial, slope limiters, and advanced TVB/positivity building blocks. `foundations.json` records temporal/mesh source hashes; the DMR run manifest and arrays are separate downloads.
 
 - `#/hamiltonian`: five canonical-map/accuracy comparisons, two Hamiltonians, energy histories, local Jacobian diagnostics, and one-step phase patches. Data loads on demand from `hamiltonian.json`.
 
@@ -69,3 +69,5 @@ The gallery also includes PM/Tree force studies and isolated/slab Fourier-kernel
 - `#/movies`: computed saved-state player, physical-time diagnostics, exact frame stepping, and MP4 export. Use `?case=double-mach`, `orszag-tang-ct`, `orszag-tang-glm`, or `keep-vortex`.
 
 Movies load on demand. Image preloading is bounded; playback timers and native video stop on route changes. No autoplay is used. Steady solutions remain still images. Regenerate with `python scripts/build_movies.py` after installing `.[movies]`; validate all MP4 decodes with `python scripts/check_movies.py`.
+
+- `#/limiters`: five classical slope limiters, scalar baselines, Sod, Sweby bounds, smooth refinement, TVB parameter comparisons, and positive Euler reconstruction scaling. Loads `limiters.json` on demand; all PDE and scaling curves are computed in Python. Rebuild with `python scripts/build_limiters.py` before syncing. Positivity scaling is a standalone reconstruction helper, not a change to Euler/WENO/MHD/KEEP time updates.

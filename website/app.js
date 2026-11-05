@@ -1,3 +1,4 @@
+import {limiterPage,wireLimiters} from './limiters.js';
 import {moviesPage,wireMovies,disposeMovies} from './movies.js';
 import {hamiltonianPage,wireHamiltonian} from './hamiltonian.js';
 import {timePage,meshPage,wireTime,wireMesh} from './foundations.js';
@@ -22,9 +23,12 @@ const methods = [
   {id:'symplectic',number:'14',title:'Symplectic Hamiltonian maps',description:'Canonical structure, Verlet and Yoshida compositions, time reversal, and long-time energy errors.',formula:'Mᵀ J M = J',tag:'GEOMETRIC INTEGRATION'},
   {id:'particle-gravity',number:'15',title:'Particle gravity & Poisson',description:'CIC particle–mesh forces, P³M and TreePM splitting, octrees, multipole moments, and multigrid.',formula:'∇²φ = 4πGρ',tag:'PM · TREE · MULTIPOLES'},
   {id:'gravity-boundaries',number:'16',title:'Isolated & slab gravity',description:'Hockney–Eastwood convolution and Koyama–Ostriker slab kernels, with explicit Fourier and zero-mode conventions.',formula:'Gₖ(z) ∝ exp(−k|z|)',tag:'FFT · GREEN FUNCTIONS'},
-  {id:'keep',number:'17',title:'KEEP & smooth-flow structure',description:'Original Kuya–Totani–Kawai flux, isentropic vortex refinement, entropy diagnostics, and explicit shock/positivity caveats.',formula:'Fᴱ = C(½uᴸ · uᴿ + ē) + P',tag:'LOW DISSIPATION · EULER'}
+  {id:'limiters',number:'17',title:'Slope limiters & TVD',description:'Compare minmod, Superbee, MC, van Leer, and van Albada on common scalar and Euler tests.',formula:'s = φ(r) Δ⁺u',tag:'MUSCL · SWEBY'},
+  {id:'advanced-limiters',number:'18',title:'TVB & positive-state scaling',description:'Relax smooth extrema with modified minmod, then scale Euler reconstruction states while preserving a consistent conservative mean.',formula:'Û = Ū + θ(U − Ū)',tag:'ADVANCED · ADMISSIBILITY'},
+  {id:'keep',number:'19',title:'KEEP & smooth-flow structure',description:'Original Kuya–Totani–Kawai flux, isentropic vortex refinement, entropy diagnostics, and explicit shock/positivity caveats.',formula:'Fᴱ = C(½uᴸ · uᴿ + ē) + P',tag:'LOW DISSIPATION · EULER'}
 ];
 const figures = [
+ {file:'limiters.png',title:'Choose the slope limiter',category:'Conservation laws',year:'1974–2010',description:'Five slope choices on the same periodic pulse and Sod problem, plus smooth-wave refinement. TVB and positive reconstruction have a separate advanced explanation.',chapter:'limiters'},
  {file:'keep-vortex.png',title:'KEEP on a smooth vortex',category:'Advection & stability',year:'2018–2024',description:'Original second-order Cartesian KEEP + RK4: smooth-vortex refinement and approximate entropy preservation. No shock stabilization or pressure-equilibrium extension.',chapter:'keep',movie:'keep-vortex'},
  {file:'hamiltonian.png',title:'Canonical maps and energy',category:'Particles & gravity',year:'1990–2003',description:'Five fixed-step integrators on harmonic and quartic Hamiltonians. Energy histories to T=200 and phase orbits to T=10; no equal-cost ranking.',chapter:'symplectic'},
  {file:'particle-gravity.png',title:'PM, Tree, and multipole forces',category:'Particles & gravity',year:'1981–2005',description:'An isolated octree compared with the same softened direct force sum, and a separate periodic CIC/FFT Poisson example.',chapter:'particle-gravity'},
@@ -50,6 +54,7 @@ const eras = [
  ['1974–1977','Moving with the fluid, or moving the mesh','Hirt–Amsden–Cook · Gingold–Monaghan · Lucy','Separate mesh velocity from fluid velocity, then replace fixed connectivity by particle kernel sums.','ale','hirt1974'],
  ['1978–1983','A shared language of benchmarks','Sod · van Leer · Orszag–Tang · Roe · Harten et al.','Use common test problems to compare contacts, acoustic waves, and magnetic structures.','benchmarks','sod1978'],
  ['1981–1987','Particles, meshes, and far-field expansions','Hockney–Eastwood · Barnes–Hut · Greengard–Rokhlin','Assign mass to a grid, organize nearby particles in a tree, and reuse distant interactions through expansions.','particle-gravity','barnes1986'],
+ ['1984–1989','Limit the oscillations, retain the smooth peaks','Sweby · Cockburn–Shu','Connect scalar TVD bounds to slope choices, then relax small extrema with a TVB threshold.','limiters','sweby1984'],
  ['1987–1989','Higher order and magnetic constraints','Harten et al. · Turkel · Einfeldt · Evans–Hawley · Shu–Osher','High order, positivity, entropy correction, and magnetic divergence become distinct design questions.','mhd','evans1988'],
  ['1990','Compose a canonical map','Yoshida','Build higher-order symplectic steps from symmetric lower-order maps, and separate energy error from geometry.','symplectic','yoshida1990'],
  ['1991–1996','Physical time and nonlinear weights','Jameson · Toro et al. · Liu–Osher–Chan · Jiang–Shu','Explore dual time, contact restoration, low-density flows, and WENO5-JS reconstruction.','advanced','jiang1996'],
@@ -78,6 +83,7 @@ function home() {
  <aside class="callout page-width"><p class="eyebrow">NEW / HAMILTONIAN MAPS & PARTICLE GRAVITY</p><h2>Preserve the geometry. Choose the boundary.</h2><p>Inspect canonical maps and energy histories, then follow particles through PM, Tree forces, multipole expansions, and isolated or slab Poisson kernels.</p><a class="text-link" href="#/hamiltonian">Open the Hamiltonian notebook ↗</a> · <a class="text-link" href="#/read/gravity-boundaries">Read the gravity kernels ↗</a></aside>
  <section class="section methods-section"><div class="page-width"><div class="section-heading"><div>${eyebrow('EXPLORE BY METHOD')}<h2>From a stencil to a solver.</h2></div><a class="text-link" href="#/methods">All methods ${arrow}</a></div><div class="method-grid">${methods.slice(0,3).map(methodCard).join('')}</div></div></section>
  <section class="section page-width"><div class="section-heading"><div>${eyebrow('THE COMPUTED EVIDENCE')}<h2>See the method at work.</h2></div><a class="text-link" href="#/gallery">Browse the gallery ${arrow}</a></div><div class="figure-grid home-figures">${[figures[0],figures[3],figures[4]].map(figureCard).join('')}</div><p class="scope-note"><span aria-hidden="true">↳</span> Independent educational implementations. Each exhibit states its reference solution, assumptions, and verification limits.</p></section>
+ <aside class="callout page-width"><p class="eyebrow">NEW / LIMITERS &amp; ADVANCED RECONSTRUCTION</p><h2>Choose the slope. Preserve the mean.</h2><p>Compare minmod, Superbee, MC, van Leer, and van Albada. Inspect scalar TVD bounds, TVB extrema relaxation, and positive Euler-state scaling with explicit scope.</p><a class="text-link" href="#/limiters">Open the limiter notebook ↗</a> · <a class="text-link" href="#/read/advanced-limiters">Read TVB &amp; positivity ↗</a></aside>
  <aside class="callout page-width motion-banner"><p class="eyebrow">NEW / TIME-DEPENDENT COMPUTATIONS</p><h2>Some results need time.</h2><p>Play Double Mach Reflection, Orszag–Tang CT/GLM, and a smooth KEEP vortex. Inspect the actual solver time, step count, and fixed color scales.</p><a class="text-link" href="#/movies">Open the motion gallery ▷</a></aside>
  <section class="reading-banner page-width"><div>${eyebrow('KEEP THE PAPER CLOSE')}<h2>Every method has a history.<br>Every result needs a reference.</h2><p>${references.length} research and source records, ordered by original publication year.<br>Source notes distinguish original texts, later expositions, and open questions.</p><a class="button primary" href="#/references">Explore the references <span aria-hidden="true">→</span></a></div><div class="reference-mark" aria-hidden="true">[${references.length}]<span>1928 — 2026</span></div></section>
  <aside class="memorial-note page-width"><div><p class="eyebrow">IN MEMORIAM · PHILIP L. ROE</p><h2>A legacy carried by the waves.</h2><p>Remembering his contribution to computational fluid dynamics through the original ideas, their equations, and the questions they continue to open.</p></div><a class="text-link" href="#/read/roe-memorial">Read the tribute ↗</a></aside>
@@ -141,12 +147,12 @@ function route() {
  disposeMovies();
  const [path,queryString='']=(location.hash.slice(1)||'/').split('?');
  const parts=path.split('/').filter(Boolean),type=parts[0]||'home',query=new URLSearchParams(queryString);
- const renderers={home,atlas,methods:methodPage,gallery,movies:moviesPage,experiments:stabilityPage,convergence:convergencePage,'time-integration':timePage,meshes:meshPage,hamiltonian:hamiltonianPage,references:()=>referencePage(query.get('q')||''),read:()=>chapter(parts[1])};
+ const renderers={home,atlas,methods:methodPage,gallery,movies:moviesPage,limiters:limiterPage,experiments:stabilityPage,convergence:convergencePage,'time-integration':timePage,meshes:meshPage,hamiltonian:hamiltonianPage,references:()=>referencePage(query.get('q')||''),read:()=>chapter(parts[1])};
  main.innerHTML=(renderers[type]||notFound)();
  document.body.dataset.page=type;
- document.querySelectorAll('[data-nav]').forEach(a=>{if(a.dataset.nav===type||(type==='movies'&&a.dataset.nav==='gallery')||(['convergence','time-integration','meshes','hamiltonian'].includes(type)&&a.dataset.nav==='experiments'))a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
+ document.querySelectorAll('[data-nav]').forEach(a=>{if(a.dataset.nav===type||(type==='movies'&&a.dataset.nav==='gallery')||(['convergence','time-integration','meshes','hamiltonian','limiters'].includes(type)&&a.dataset.nav==='experiments'))a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
  document.querySelector('.site-header').classList.remove('menu-open');document.querySelector('.mobile-menu').setAttribute('aria-expanded','false');
- document.title=type==='home'?'The Art of Numerical Algorithms':`${type==='read'?(documents[parts[1]]?.title||'Reading room'):({atlas:'Historical atlas',methods:'Explore the methods',gallery:'Numerical gallery',movies:'Motion gallery',references:'Reference library',experiments:'Stability laboratory',convergence:'Convergence notebook','time-integration':'Time integration notebook',meshes:'Mesh explorer',hamiltonian:'Hamiltonian map notebook'}[type]||'Page not found')} · The Art of Numerical Algorithms`;
+ document.title=type==='home'?'The Art of Numerical Algorithms':`${type==='read'?(documents[parts[1]]?.title||'Reading room'):({atlas:'Historical atlas',methods:'Explore the methods',gallery:'Numerical gallery',movies:'Motion gallery',references:'Reference library',experiments:'Stability laboratory',convergence:'Convergence notebook','time-integration':'Time integration notebook',meshes:'Mesh explorer',hamiltonian:'Hamiltonian map notebook',limiters:'Slope limiter notebook'}[type]||'Page not found')} · The Art of Numerical Algorithms`;
  if(type==='read')document.querySelectorAll('.heading-anchor').forEach(a=>{a.href=`#/read/${parts[1]}?section=${a.parentElement.id}`;});
  if(type==='references') {filterReferences(query.get('q')||'');document.querySelector('#reference-search').addEventListener('input',e=>filterReferences(e.target.value));}
  wire();
@@ -155,6 +161,7 @@ function route() {
  if(type==='time-integration')wireTime(foundations);
  if(type==='meshes')wireMesh(foundations);
  if(type==='hamiltonian')wireHamiltonian();
+ if(type==='limiters')wireLimiters();
  if(type==='movies')wireMovies(query.get('case'));
  if(query.get('section'))requestAnimationFrame(()=>document.getElementById(query.get('section'))?.scrollIntoView());else window.scrollTo({top:0,behavior:'instant'});
 }

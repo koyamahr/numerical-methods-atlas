@@ -73,10 +73,14 @@ Roe applies quadratic entropy smoothing to acoustic eigenvalues with
 `δ=0.1ã`, leaving the contact eigenvalue unchanged. This is neither a
 low-density positivity fix nor a general entropy-stable flux construction.
 
-MUSCL uses minmod reconstruction in primitive variables. WENO5-JS is a
+MUSCL uses selectable minmod (default), Superbee, MC, van Leer, or clipped
+van Albada reconstruction in primitive variables; see [limiters](limiters.md).
+WENO5-JS is a
 componentwise **finite-difference** implementation with pointwise fluxes and
-global LF splitting. Characteristic reconstruction, WENO-Z, and positivity
-limiters are future work. Errors are labeled `pointwise`: finite-volume cell
+global LF splitting. Characteristic reconstruction, WENO-Z, and fully discrete
+positivity preservation are future work. A separate [advanced limiter](advanced-limiters.md)
+exhibit implements TVB modified minmod and positive Euler reconstruction scaling;
+neither is coupled to these Euler time updates. Errors are labeled `pointwise`: finite-volume cell
 averages and finite-difference point values are not strictly interchangeable.
 
 See [MHD](mhd.md) for Orszag–Tang definitions and limits, and
