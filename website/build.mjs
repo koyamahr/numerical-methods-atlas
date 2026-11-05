@@ -35,7 +35,7 @@ function renderDocument(text, locale = 'en') {
   let html = marked.parse(text);
   const headings = [];
   html = html.replace(/<h([23])>(.*?)<\/h\1>/g, (_, level, rawTitle) => {
-    const explicit = rawTitle.match(/\s*\{#([a-zA-Z0-9_-]+)\}$/);
+    const explicit = rawTitle.match(/\s*\{#([\p{L}\p{N}_-]+)\}$/u);
     if (locale === 'ja' && !explicit) throw new Error(`Japanese heading needs a stable section ID: ${rawTitle}`);
     const title = explicit ? rawTitle.slice(0, explicit.index) : rawTitle;
     const id = explicit ? explicit[1] : slug(title);
@@ -66,6 +66,9 @@ for (const file of fs.readdirSync('content').filter(f => f.endsWith('.md'))) {
   if (JSON.stringify(sourceSections) !== JSON.stringify(translatedSections)) throw new Error(`Translation section mismatch: ${id}`);
   const math = value => value.match(/\\\[[\s\S]*?\\\]/g) || [];
   if (JSON.stringify(math(text)) !== JSON.stringify(math(translated))) throw new Error(`Translation changed display mathematics: ${id}`);
+  const externalLinks = html => [...new Set([...html.matchAll(/href="(https?:\/\/[^"]+)"/g)].map(match => match[1]))].sort();
+  if (JSON.stringify(externalLinks(documents[id].html)) !== JSON.stringify(externalLinks(japanese[id].html))) throw new Error(`Translation changed external sources: ${id}`);
+
   if (!['draft','reviewed'].includes(translation.status)) throw new Error(`Unknown translation status: ${id}`);
   const code = value => value.match(/```[\s\S]*?```/g) || [];
   if (JSON.stringify(code(text)) !== JSON.stringify(code(translated))) throw new Error(`Translation changed executable code: ${id}`);

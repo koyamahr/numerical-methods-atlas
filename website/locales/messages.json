@@ -1213,7 +1213,8 @@
   },
   "atlas.inutsuka-s-godunov-sph.311f3a": {
     "en": "Inutsuka’s Godunov SPH",
-    "ja": "井筒のGodunov SPH"
+    "ja": "犬塚のGodunov SPH",
+    "source": "https://www.astro-th.phys.nagoya-u.ac.jp/~inutsuka/index_j.html"
   },
   "atlas.relativistic-fluid-methods.06be31": {
     "en": "Relativistic fluid methods",
@@ -3266,5 +3267,1821 @@
   "group.bf9bbb8cbc": {
     "en": "Time integration",
     "ja": "時間積分"
+  },
+  "foundations.one-oscillator-twelve-time-integrators.d03280": {
+    "en": "ONE OSCILLATOR · TWELVE TIME INTEGRATORS",
+    "ja": "ひとつの振動子・12の時間積分法"
+  },
+  "foundations.find-the.1a5d72": {
+    "en": "Find the",
+    "ja": "注目するのは、"
+  },
+  "foundations.extra-mode.443141": {
+    "en": "extra mode.",
+    "ja": "もうひとつのモード。"
+  },
+  "foundations.an-undamped-oscillator-separates-amplitude-er.b365d0": {
+    "en": "An undamped oscillator separates amplitude error, phase error, and leapfrog’s computational mode. Select verified Python trajectories over the same time interval.",
+    "ja": "無減衰振動子で、振幅誤差、位相誤差、leapfrogの計算モードを分けます。同じ時間区間について検証したPython計算軌道を選べます。"
+  },
+  "foundations.set-the-comparison.8b3e98": {
+    "en": "SET THE COMPARISON",
+    "ja": "比較を設定する"
+  },
+  "foundations.time-integrator.bde1a0": {
+    "en": "Time integrator",
+    "ja": "時間積分法"
+  },
+  "foundations.step-size-t.dbf368": {
+    "en": "Step size Δt",
+    "ja": "刻み幅 Δt"
+  },
+  "foundations.leapfrog-startup-perturbation.3eb11f": {
+    "en": "Leapfrog startup perturbation ε",
+    "ja": "leapfrog開始摂動 ε"
+  },
+  "foundations.0-rk4-startup.5a6dfc": {
+    "en": "0 · RK4 startup",
+    "ja": "0・RK4で開始"
+  },
+  "foundations.exact-y-t-exp-i-t.98df8b": {
+    "en": "Exact: y(t) = exp(i t)",
+    "ja": "厳密解：y(t) = exp(i t)"
+  },
+  "foundations.final-time-t-20.6118e3": {
+    "en": "Final time T = 20",
+    "ja": "終了時刻 T = 20"
+  },
+  "foundations.unfiltered-leapfrog.7fc01c": {
+    "en": "Unfiltered leapfrog",
+    "ja": "時間フィルターなしのleapfrog"
+  },
+  "foundations.explore-rk2-rk4-ssprk-families.12088d": {
+    "en": "Explore RK2, RK4 & SSPRK families ↗",
+    "ja": "RK2・RK4・SSPRKの系譜へ ↗"
+  },
+  "foundations.equations-two-roots.8f7b45": {
+    "en": "Equations & two roots ↗",
+    "ja": "方程式と2つの根 ↗"
+  },
+  "foundations.download-trajectories-meshes.03ecf7": {
+    "en": "Download trajectories & meshes ↓",
+    "ja": "軌道と格子をダウンロード ↓"
+  },
+  "foundations.the-real-component.218fca": {
+    "en": "The real component",
+    "ja": "実部の時間変化"
+  },
+  "foundations.fixed-final-time-t-20.f71cb4": {
+    "en": "FIXED FINAL TIME · T = 20",
+    "ja": "終了時刻を固定・T = 20"
+  },
+  "foundations.exact-oscillator.9ef4d8": {
+    "en": "Exact oscillator",
+    "ja": "厳密な振動子"
+  },
+  "foundations.the-vertical-scale-expands-when-a-trajectory-.e9734f": {
+    "en": "The vertical scale expands when a trajectory grows. Lines join discrete samples; they do not represent additional integration steps.",
+    "ja": "軌道が増幅すると縦軸範囲を広げます。線は離散標本を結び、追加の積分ステップを表すものではありません。"
+  },
+  "foundations.the-complex-plane.71e4b2": {
+    "en": "The complex plane",
+    "ja": "複素平面"
+  },
+  "foundations.the-exact-orbit-is-the-unit-circle-damping-sp.34d7ee": {
+    "en": "The exact orbit is the unit circle. Damping spirals inward; amplification moves outward.",
+    "ja": "厳密軌道は単位円です。減衰すると内側へ巻き込み、増幅すると外へ広がります。"
+  },
+  "foundations.read-the-mode.74bda7": {
+    "en": "READ THE MODE",
+    "ja": "モードを読む"
+  },
+  "foundations.time-accuracy-needs-its-own-experiment.06cd8f": {
+    "en": "Time accuracy needs its own experiment.",
+    "ja": "時間精度には独立した実験を。"
+  },
+  "foundations.these-are-precomputed-scalar-ode-trajectories.30eee8": {
+    "en": "These are precomputed scalar ODE trajectories from the tested Python implementation. No spatial mesh or PDE CFL condition enters this model. Equal final time does not imply equal work. Implicit midpoint preserves this linear oscillator’s amplitude, while leapfrog requires two starting samples and two amplification roots.",
+    "ja": "検証済みPython実装で事前計算したスカラーODE軌道です。このモデルには空間格子やPDEのCFL条件は入りません。終了時刻が同じでも計算量は異なります。陰的中点則はこの線形振動子の振幅を保ち、leapfrogには2つの開始標本と2つの増幅根が必要です。"
+  },
+  "foundations.continue-toward-particle-methods.ddb4ca": {
+    "en": "Continue toward particle methods ↗",
+    "ja": "粒子法の解説へ ↗"
+  },
+  "foundations.max-sampled-error.2ec6da": {
+    "en": "max sampled error =",
+    "ja": "標本上の最大誤差 ="
+  },
+  "foundations.time-t.fc0226": {
+    "en": "TIME t",
+    "ja": "時刻 t"
+  },
+  "foundations.two-distinct-roots-have-unit-modulus-on-this-.2376b2": {
+    "en": "Two distinct roots have unit modulus on this oscillator. A starting perturbation excites both the physical and alternating computational modes.",
+    "ja": "この振動子では異なる2根の絶対値は1です。開始摂動は、物理モードと交互に変わる計算モードの両方を励起します。"
+  },
+  "foundations.at-t-1-the-roots-coincide-the-repeated-root-r.dc5792": {
+    "en": "At Δt = 1 the roots coincide. The repeated-root recurrence can grow linearly even though each root has unit modulus.",
+    "ja": "Δt=1で2根が一致します。各根の絶対値が1でも、重根を持つ漸化式は線形に増大する場合があります。"
+  },
+  "foundations.above-t-1-one-characteristic-root-grows-a-sma.9d8638": {
+    "en": "Above Δt = 1 one characteristic root grows. A smaller starting perturbation does not repair this instability.",
+    "ja": "Δt>1では一方の特性根が増幅します。開始摂動を小さくしても、この不安定性は解消しません。"
+  },
+  "foundations.amplitude-stays-one-to-roundoff-for-this-line.fdabe7": {
+    "en": "Amplitude stays one to roundoff for this linear oscillator. A finite time step still changes the phase.",
+    "ja": "この線形振動子では丸め誤差を除き振幅を1に保ちますが、有限の時間刻みでは位相がずれます。"
+  },
+  "foundations.every-nonzero-step-amplifies-this-undamped-os.82d10a": {
+    "en": "Every nonzero step amplifies this undamped oscillator. First-order consistency does not guarantee stability.",
+    "ja": "ゼロでない任意の刻み幅で、この無減衰振動子は増幅します。1次の整合性は安定性を保証しません。"
+  },
+  "foundations.the-stable-implicit-step-damps-a-physically-u.db4ca5": {
+    "en": "The stable implicit step damps a physically undamped oscillator. Stability and faithful amplitude are different properties.",
+    "ja": "安定な陰的更新でも、物理的には無減衰の振動子を減衰させます。安定性と正しい振幅の再現は別の性質です。"
+  },
+  "foundations.compare-the-sampled-phase-and-amplitude-with-.de05b1": {
+    "en": "Compare the sampled phase and amplitude with the exact orbit. The method’s formal order is an asymptotic refinement statement, not an error guarantee at every step size.",
+    "ja": "標本の位相と振幅を厳密軌道と比較してください。形式次数は刻みを小さくしたときの漸近的な性質で、任意の刻み幅での誤差を保証しません。"
+  },
+  "foundations.final-amplitude-y-t.015138": {
+    "en": "Final amplitude |y(T)|",
+    "ja": "最終振幅 |y(T)|"
+  },
+  "foundations.startup.74d88d": {
+    "en": "Startup ε",
+    "ja": "開始摂動 ε"
+  },
+  "foundations.root.ba6a6d": {
+    "en": "Root ξ₊",
+    "ja": "特性根 ξ₊"
+  },
+  "foundations.root.8de081": {
+    "en": "Root ξ₋",
+    "ja": "特性根 ξ₋"
+  },
+  "foundations.explicit-midpoint-rk2.f35eb9": {
+    "en": "Explicit midpoint / RK2",
+    "ja": "陽的中点則／RK2"
+  },
+  "foundations.ralston-rk2.dcaad2": {
+    "en": "Ralston / RK2",
+    "ja": "Ralston／RK2"
+  },
+  "foundations.kutta-rk3.89edc3": {
+    "en": "Kutta / RK3",
+    "ja": "Kutta／RK3"
+  },
+  "foundations.leapfrog-two-step.425f11": {
+    "en": "Leapfrog / two-step",
+    "ja": "leapfrog／2ステップ"
+  },
+  "foundations.geometry-connectivity-conservation.65c1a8": {
+    "en": "GEOMETRY · CONNECTIVITY · CONSERVATION",
+    "ja": "幾何・接続関係・保存性"
+  },
+  "foundations.a-triangle-is-a-shape.89d220": {
+    "en": "A triangle is a shape.",
+    "ja": "三角形は形状。"
+  },
+  "foundations.a-mesh-is-a.ea1f52": {
+    "en": "A mesh is a",
+    "ja": "格子は、"
+  },
+  "foundations.relationship.4924ea": {
+    "en": "relationship.",
+    "ja": "つながり。"
+  },
+  "foundations.compare-a-structured-quadrilateral-grid-split.2fce0c": {
+    "en": "Compare a structured quadrilateral grid, split-lattice triangles, and an irregular triangulation. Select a cell to inspect its face-sharing neighbors.",
+    "ja": "構造四角形格子、構造格子を分割した三角形、不規則な三角形分割を比較します。セルを選ぶと、面を共有する隣接セルを確認できます。"
+  },
+  "foundations.mesh-family.15e8e5": {
+    "en": "Mesh family",
+    "ja": "格子の種類"
+  },
+  "foundations.selected-cell.3bc79e": {
+    "en": "Selected cell",
+    "ja": "選択したセル"
+  },
+  "foundations.show-cell-numbers.ade96f": {
+    "en": "Show cell numbers",
+    "ja": "セル番号を表示"
+  },
+  "foundations.unit-square-0-1.bd8b85": {
+    "en": "Unit square [0,1]²",
+    "ja": "単位正方形 [0,1]²"
+  },
+  "foundations.counterclockwise-cells.ac439e": {
+    "en": "Counterclockwise cells",
+    "ja": "頂点は反時計回り"
+  },
+  "foundations.neighbors-share-an-edge.a3a825": {
+    "en": "Neighbors share an edge",
+    "ja": "隣接セルは辺を共有"
+  },
+  "foundations.mesh-definitions-face-fluxes.b3f2d3": {
+    "en": "Mesh definitions & face fluxes ↗",
+    "ja": "格子の定義と面流束 ↗"
+  },
+  "foundations.moving-meshes-ale.5c141c": {
+    "en": "Moving meshes / ALE ↗",
+    "ja": "移動格子／ALE ↗"
+  },
+  "foundations.particles-sph.d24188": {
+    "en": "Particles / SPH ↗",
+    "ja": "粒子／SPH ↗"
+  },
+  "foundations.select-a-cell.172b75": {
+    "en": "SELECT A CELL",
+    "ja": "セルを選択"
+  },
+  "foundations.face-sharing-neighbor.010e75": {
+    "en": "Face-sharing neighbor",
+    "ja": "面を共有する隣接セル"
+  },
+  "foundations.this-is-a-geometry-and-connectivity-exhibit-n.e0d72d": {
+    "en": "This is a geometry and connectivity exhibit. No unstructured flow solver or mesh-quality optimizer runs here. Triangle-shaped cells do not by themselves imply irregular connectivity.",
+    "ja": "幾何と接続関係の展示です。非構造流体ソルバーや格子品質の最適化は実行しません。三角形セルであることだけでは、不規則な接続関係を意味しません。"
+  },
+  "foundations.the-same-interface-two-opposite-fluxes.ce1479": {
+    "en": "The same interface, two opposite fluxes.",
+    "ja": "同じ界面、逆符号の2つの流束。"
+  },
+  "foundations.a-conservative-finite-volume-method-assigns-o.e81a65": {
+    "en": "A conservative finite-volume method assigns one flux to each interior face and applies opposite signs to its two cells. Explicit adjacency makes that cancellation possible on both structured and unstructured meshes. Positive areas, reciprocal neighbors, total area, and connected topology are checked in Python.",
+    "ja": "保存的な有限体積法では、内部面にひとつの流束を与え、両側のセルへ逆符号で適用します。隣接関係を明示することで、構造・非構造格子の両方で相殺できます。正の面積、相互的な隣接関係、総面積、連結した位相をPythonで確認しています。"
+  },
+  "foundations.continue-to-coordinate-bases-and-viscous-tens.6c4f2c": {
+    "en": "Continue to coordinate bases and viscous tensors ↗",
+    "ja": "座標基底と粘性テンソルの解説へ ↗"
+  },
+  "foundations.structured-quadrilaterals.36b54d": {
+    "en": "Structured quadrilaterals",
+    "ja": "構造四角形格子"
+  },
+  "foundations.triangles-on-a-structured-lattice.997421": {
+    "en": "Triangles on a structured lattice",
+    "ja": "構造格子上の三角形"
+  },
+  "foundations.unstructured-delaunay-triangles.97a73c": {
+    "en": "Unstructured Delaunay triangles",
+    "ja": "非構造Delaunay三角形"
+  },
+  "foundations.selected-cell-vertices.dcc847": {
+    "en": "Selected cell / vertices",
+    "ja": "選択セル／頂点数"
+  },
+  "foundations.cell-area.f48622": {
+    "en": "Cell area",
+    "ja": "セル面積"
+  },
+  "foundations.face-sharing-neighbors.059dde": {
+    "en": "Face-sharing neighbors",
+    "ja": "面を共有する隣接セル"
+  },
+  "foundations.total-mesh-area.fe055e": {
+    "en": "Total mesh area",
+    "ja": "格子の総面積"
+  },
+  "foundations.none.dc937b": {
+    "en": "None",
+    "ja": "なし"
+  },
+  "foundations.t-dt-steps-steps.3c0350": {
+    "en": "Δt = {dt} · {steps} steps",
+    "ja": "Δt = {dt}・{steps}ステップ"
+  },
+  "foundations.method-real-component-step-dt.794e8f": {
+    "en": "{method} real component, step {dt}",
+    "ja": "{method}の実部・刻み幅{dt}"
+  },
+  "foundations.method-complex-plane-trajectory.9a6a77": {
+    "en": "{method} complex-plane trajectory",
+    "ja": "{method}の複素平面軌道"
+  },
+  "foundations.cell-cell.c1fbe6": {
+    "en": "Cell {cell}",
+    "ja": "セル {cell}"
+  },
+  "foundations.cells-cells.d74c02": {
+    "en": "{cells} cells",
+    "ja": "{cells}セル"
+  },
+  "foundations.vertices-vertices-edges-edges.ed2442": {
+    "en": "{vertices} vertices · {edges} edges",
+    "ja": "{vertices}頂点・{edges}辺"
+  },
+  "foundations.edges-boundary-edges.95ef2b": {
+    "en": "{edges} boundary edges",
+    "ja": "{edges}境界辺"
+  },
+  "foundations.mesh-select-a-cell.05165a": {
+    "en": "{mesh}; select a cell",
+    "ja": "{mesh}・セルを選択"
+  },
+  "foundations.cell-cell-area-area.78eceb": {
+    "en": "Cell {cell}, area {area}",
+    "ja": "セル {cell}、面積 {area}"
+  },
+  "notebook.canonical-maps-fixed-time-steps.eef271": {
+    "en": "CANONICAL MAPS · FIXED TIME STEPS",
+    "ja": "正準写像・固定時間刻み"
+  },
+  "notebook.preserve-the-structure.d6c0b0": {
+    "en": "Preserve the structure.",
+    "ja": "構造を保つ。"
+  },
+  "notebook.inspect-the.76f474": {
+    "en": "Inspect the",
+    "ja": "注目するのは、"
+  },
+  "notebook.energy.c7b2df": {
+    "en": "energy.",
+    "ja": "エネルギー。"
+  },
+  "notebook.compare-five-integrators-on-harmonic-and-nonl.83a53d": {
+    "en": "Compare five integrators on harmonic and nonlinear Hamiltonians. A symplectic map preserves the canonical two-form; exact conservation of the original energy is a separate property.",
+    "ja": "調和・非線形Hamilton系で5つの積分法を比較します。シンプレクティック写像が保存する正準2形式と、元のエネルギーの厳密な保存は別の性質です。"
+  },
+  "notebook.hamiltonian.a5369e": {
+    "en": "Hamiltonian",
+    "ja": "Hamilton関数"
+  },
+  "notebook.fixed-step-h.e5952a": {
+    "en": "Fixed step h",
+    "ja": "固定刻み h"
+  },
+  "notebook.inspect-a-map.ac06b8": {
+    "en": "Inspect a map",
+    "ja": "写像を選ぶ"
+  },
+  "notebook.phase-space-view.a2f9cb": {
+    "en": "Phase-space view",
+    "ja": "位相空間の表示"
+  },
+  "notebook.one-step-map-of-a-small-square.f08995": {
+    "en": "One-step map of a small square",
+    "ja": "小さな正方形の1ステップ写像"
+  },
+  "notebook.orbit-over-the-first-10-time-units.0f8b3d": {
+    "en": "Orbit over the first 10 time units",
+    "ja": "最初の10時間単位の軌道"
+  },
+  "notebook.energy-history-t-200.21252e": {
+    "en": "Energy history: T = 200",
+    "ja": "エネルギー履歴：T = 200"
+  },
+  "notebook.mass-1-fixed-h.3362dc": {
+    "en": "Mass = 1 · fixed h",
+    "ja": "質量 = 1・hを固定"
+  },
+  "notebook.map-patch-center-0-7-0-4.a37682": {
+    "en": "Map patch center: (0.7, 0.4)",
+    "ja": "写像領域の中心：(0.7, 0.4)"
+  },
+  "notebook.maps-equations-assumptions.39cb5e": {
+    "en": "Maps, equations & assumptions ↗",
+    "ja": "写像・方程式・仮定へ ↗"
+  },
+  "notebook.download-computed-cases.792fe2": {
+    "en": "Download computed cases ↓",
+    "ja": "計算済み例をダウンロード ↓"
+  },
+  "notebook.loading-computed-maps.3123bc": {
+    "en": "Loading computed maps…",
+    "ja": "計算済み写像を読み込み中…"
+  },
+  "notebook.the-original-hamiltonian.cc3e7c": {
+    "en": "The original Hamiltonian",
+    "ja": "元のHamilton関数"
+  },
+  "notebook.all-five-methods-same-h-and-t.c05d5a": {
+    "en": "ALL FIVE METHODS · SAME h AND T",
+    "ja": "5手法すべて・hとTを共通に"
+  },
+  "notebook.relative-error-h-h-h-with-zero-marked-by-a-da.2c5e65": {
+    "en": "Relative error (Hₙ − H₀) / H₀, with zero marked by a dashed line. The scale is shared across methods. Displayed samples are reduced; maximum errors use every step.",
+    "ja": "相対誤差(Hₙ − H₀) / H₀を示し、破線はゼロです。全手法で同じ軸範囲を使います。表示標本は間引きますが、最大誤差は全ステップから求めます。"
+  },
+  "notebook.a-map-in-phase-space.4cc4ad": {
+    "en": "A map in phase space",
+    "ja": "位相空間で見る写像"
+  },
+  "notebook.the-geometric-question.211abc": {
+    "en": "THE GEOMETRIC QUESTION",
+    "ja": "幾何学的な問い"
+  },
+  "notebook.area-energy-and-time-reversal-are-different-t.8458f1": {
+    "en": "Area, energy, and time reversal are different tests.",
+    "ja": "面積・エネルギー・時間反転を別々に調べる。"
+  },
+  "notebook.the-local-matrix-defect-is-m-jm-j-evaluated-f.c51a6a": {
+    "en": "The local matrix defect is ‖MᵀJM − J‖, evaluated from an analytic Jacobian at the patch center. In one degree of freedom, determinant one characterizes a symplectic map. A sampled polygon illustrates its deformation; it is not the exact curved image’s area integral. No particle gravity or adaptive stepping is applied in this experiment.",
+    "ja": "局所行列の欠損‖MᵀJM − J‖は、領域中心の解析的Jacobianから評価します。1自由度では行列式1がシンプレクティック写像を特徴づけます。標本多角形は変形を可視化しますが、曲がった写像像の厳密な面積積分ではありません。この実験に粒子重力や適応刻みは含みません。"
+  },
+  "notebook.continue-to-pm-tree-and-poisson-solvers.b50466": {
+    "en": "Continue to PM, Tree, and Poisson solvers ↗",
+    "ja": "PM・Tree・Poisson解法へ ↗"
+  },
+  "notebook.quadratic-oscillator.7352ec": {
+    "en": "Quadratic oscillator",
+    "ja": "2次Hamilton関数の振動子"
+  },
+  "notebook.nonlinear-quartic-oscillator.4ca3bb": {
+    "en": "Nonlinear quartic oscillator",
+    "ja": "4次非線形項を持つ振動子"
+  },
+  "notebook.steps-steps-h-h.32ed64": {
+    "en": "{steps} steps · h = {h}",
+    "ja": "{steps}ステップ・h = {h}"
+  },
+  "notebook.symplectic-method.1a4389": {
+    "en": "Symplectic method",
+    "ja": "シンプレクティック法"
+  },
+  "notebook.rk4-comparison.004b5d": {
+    "en": "RK4 comparison",
+    "ja": "RK4との比較"
+  },
+  "notebook.method-order-order.b36381": {
+    "en": "{method} · order {order}",
+    "ja": "{method}・{order}次"
+  },
+  "notebook.relative-energy-error.7adddf": {
+    "en": "RELATIVE ENERGY ERROR",
+    "ja": "相対エネルギー誤差"
+  },
+  "notebook.system-energy-errors-fixed-step-h.853034": {
+    "en": "{system} energy errors, fixed step {h}",
+    "ja": "{system}のエネルギー誤差・固定刻み{h}"
+  },
+  "notebook.harmonic.3354db": {
+    "en": "harmonic",
+    "ja": "調和系"
+  },
+  "notebook.quartic.1d3182": {
+    "en": "quartic",
+    "ja": "4次非線形系"
+  },
+  "notebook.patch.a4895e": {
+    "en": "patch",
+    "ja": "小領域"
+  },
+  "notebook.orbit.4fa1a1": {
+    "en": "orbit",
+    "ja": "軌道"
+  },
+  "notebook.one-step-one-canonical-map.6f878b": {
+    "en": "One step, one canonical map",
+    "ja": "1ステップの正準写像"
+  },
+  "notebook.dashed-initial-square-solid-mapped-boundary-s.116809": {
+    "en": "Dashed: initial square. Solid: mapped boundary samples. The tangent matrix is evaluated at (q,p) = (0.7,0.4), independently of the energy trajectory’s initial state.",
+    "ja": "破線は初期正方形、実線は写像後の境界標本です。接行列は(q,p) = (0.7,0.4)で評価し、エネルギー軌道の初期状態とは独立です。"
+  },
+  "notebook.the-phase-space-orbit.c691f0": {
+    "en": "The phase-space orbit",
+    "ja": "位相空間の軌道"
+  },
+  "notebook.dashed-the-exact-initial-energy-contour-solid.4405ff": {
+    "en": "Dashed: the exact initial-energy contour. Solid/dots: computed trajectory samples for t ≤ 10. An accurate contour alone does not establish accurate orbital phase.",
+    "ja": "破線は初期エネルギーの厳密な等高線、実線・点はt ≤ 10の計算軌道です。等高線が正確でも軌道位相の正確さは保証されません。"
+  },
+  "notebook.position-q.b54c19": {
+    "en": "POSITION q",
+    "ja": "位置 q"
+  },
+  "notebook.momentum-p.9874a7": {
+    "en": "MOMENTUM p",
+    "ja": "運動量 p"
+  },
+  "notebook.method-view-view-system.c0e304": {
+    "en": "{method}, {view} view, {system}",
+    "ja": "{method}・{view}表示・{system}"
+  },
+  "notebook.max-h-h-all-steps.dd9462": {
+    "en": "Max |ΔH / H₀|, all steps",
+    "ja": "全ステップの最大 |ΔH / H₀|"
+  },
+  "notebook.final-h-h.a1023f": {
+    "en": "Final ΔH / H₀",
+    "ja": "最終 ΔH / H₀"
+  },
+  "notebook.local-det-m.2b7f08": {
+    "en": "Local det(M)",
+    "ja": "局所 det(M)"
+  },
+  "notebook.local-m-jm-j.57bc56": {
+    "en": "Local ‖MᵀJM − J‖",
+    "ja": "局所 ‖MᵀJM − J‖"
+  },
+  "notebook.a-first-order-kick-drift-canonical-map-it-pre.463e11": {
+    "en": "A first-order kick–drift canonical map. It preserves the two-form, but is not time symmetric and generally changes the original Hamiltonian.",
+    "ja": "1次のkick–drift正準写像です。2形式を保存しますが時間対称ではなく、一般に元のHamilton関数を変えます。"
+  },
+  "notebook.a-second-order-symmetric-kick-drift-kick-map-.b6647f": {
+    "en": "A second-order symmetric kick–drift–kick map. Small fixed steps give bounded, oscillatory energy errors in these examples; the original Hamiltonian is not exactly preserved.",
+    "ja": "2次対称のkick–drift–kick写像です。この例では小さな固定刻みでエネルギー誤差が有界に振動しますが、元のHamilton関数を厳密には保存しません。"
+  },
+  "notebook.three-verlet-steps-with-coefficients-a-b-a-pr.32c2e9": {
+    "en": "Three Verlet steps with coefficients a, b, a produce a fourth-order symmetric symplectic map. The middle coefficient is negative. Higher order does not imply unconditional stability.",
+    "ja": "係数a,b,aの3回のVerlet更新で4次対称シンプレクティック写像を作ります。中央の係数は負です。高次であることは無条件安定性を意味しません。"
+  },
+  "notebook.an-implicit-second-order-symmetric-symplectic.54e948": {
+    "en": "An implicit second-order symmetric symplectic map. It preserves this harmonic oscillator’s quadratic energy to roundoff, but need not conserve the nonlinear quartic Hamiltonian exactly.",
+    "ja": "陰的な2次対称シンプレクティック写像です。この調和振動子の2次エネルギーは丸め誤差まで保存しますが、4次非線形Hamilton関数を厳密に保存するとは限りません。"
+  },
+  "notebook.a-fourth-order-accuracy-comparison-classical-.9cd8f9": {
+    "en": "A fourth-order accuracy comparison. Classical RK4 is generally not symplectic or time symmetric. The local canonical defect and the long-time energy trace measure different properties.",
+    "ja": "4次精度の比較対象です。古典RK4は一般にシンプレクティックでも時間対称でもありません。局所的な正準性の欠損と長時間のエネルギー履歴は異なる性質を測ります。"
+  },
+  "notebook.the-map-data-could-not-load-reload-the-page-o.9fe9d9": {
+    "en": "The map data could not load. Reload the page or read the chapter.",
+    "ja": "写像データを読み込めませんでした。再読み込みするか、解説章を参照してください。"
+  },
+  "notebook.interactive-notebook-06.91d2b5": {
+    "en": "INTERACTIVE NOTEBOOK / 06",
+    "ja": "インタラクティブノート / 06"
+  },
+  "notebook.choose-the-slope.ef4d73": {
+    "en": "Choose the slope.",
+    "ja": "勾配を選び、"
+  },
+  "notebook.watch-the-waves.ad5a09": {
+    "en": "Watch the waves.",
+    "ja": "波を追う。"
+  },
+  "notebook.minmod-superbee-mc-van-leer-and-van-albada-on.8f4d33": {
+    "en": "Minmod, Superbee, MC, van Leer, and van Albada on shared test problems. Then relax a smooth extremum with TVB, or keep an Euler reconstruction admissible.",
+    "ja": "共通のテストでminmod、Superbee、MC、van Leer、van Albadaを比較します。さらにTVBで滑らかな極値の制限を緩め、Euler再構成の許容状態も調べます。"
+  },
+  "notebook.the-controlled-comparison.07299d": {
+    "en": "THE CONTROLLED COMPARISON",
+    "ja": "条件を揃えた比較"
+  },
+  "notebook.test-problem.91eed6": {
+    "en": "Test problem",
+    "ja": "テスト問題"
+  },
+  "notebook.periodic-square-pulse.0d4293": {
+    "en": "Periodic square pulse",
+    "ja": "周期的な矩形パルス"
+  },
+  "notebook.periodic-smooth-sine.2a4c94": {
+    "en": "Periodic smooth sine",
+    "ja": "周期的な滑らかな正弦波"
+  },
+  "notebook.sod-shock-tube-density.918f7e": {
+    "en": "Sod shock tube / density",
+    "ja": "Sod衝撃波管／密度"
+  },
+  "notebook.slope-limiter.0c5090": {
+    "en": "Slope limiter",
+    "ja": "勾配制限関数"
+  },
+  "notebook.scalar-advection-direction.43e673": {
+    "en": "Scalar advection direction",
+    "ja": "スカラー移流の向き"
+  },
+  "notebook.right-a-1.89ab1a": {
+    "en": "Right / a = +1",
+    "ja": "右向き／a = +1"
+  },
+  "notebook.left-a-1.6ffb7d": {
+    "en": "Left / a = −1",
+    "ja": "左向き／a = −1"
+  },
+  "notebook.advanced-tvb-parameter-m.fe7df2": {
+    "en": "Advanced: TVB parameter M",
+    "ja": "発展：TVBパラメータ M"
+  },
+  "notebook.0-minmod-limit.396a88": {
+    "en": "0 / minmod limit",
+    "ja": "0／minmod極限"
+  },
+  "notebook.overlay-the-five-classic-limiters.ae3ed8": {
+    "en": "Overlay the five classic limiters",
+    "ja": "古典的な5制限関数を重ねる"
+  },
+  "notebook.scalar-t-1-periodic-upwind-flux.b2ce8e": {
+    "en": "Scalar: t = 1, periodic upwind flux",
+    "ja": "スカラー：t = 1、周期境界・風上流束"
+  },
+  "notebook.sod-t-0-2-primitive-muscl-hllc.43e1f0": {
+    "en": "Sod: t = 0.2, primitive MUSCL + HLLC",
+    "ja": "Sod：t = 0.2、基本変数MUSCL + HLLC"
+  },
+  "notebook.slope-formulas-verification.01e6b8": {
+    "en": "Slope formulas & verification ↗",
+    "ja": "勾配の式と検証へ ↗"
+  },
+  "notebook.advanced-tvb-positivity.29fe88": {
+    "en": "Advanced: TVB & positivity ↗",
+    "ja": "発展：TVBと正値性へ ↗"
+  },
+  "notebook.download-computed-arrays.fd1e72": {
+    "en": "Download computed arrays ↓",
+    "ja": "計算配列をダウンロード ↓"
+  },
+  "notebook.loading-computed-comparisons.f6a853": {
+    "en": "Loading computed comparisons…",
+    "ja": "計算済み比較を読み込み中…"
+  },
+  "notebook.the-reconstructed-solution.dad817": {
+    "en": "The reconstructed solution",
+    "ja": "再構成した解"
+  },
+  "notebook.python-computed-curves.689b83": {
+    "en": "PYTHON-COMPUTED CURVES",
+    "ja": "Pythonで計算した曲線"
+  },
+  "notebook.inside-the-sweby-bounds.243a55": {
+    "en": "Inside the Sweby bounds",
+    "ja": "Swebyの範囲内で"
+  },
+  "notebook.shaded-0-r-min-2r-2-with-0-for-r-0-these-five.4c30f2": {
+    "en": "Shaded: 0 ≤ φ(r) ≤ min(2r, 2), with φ = 0 for r ≤ 0. These five functions have φ(1) = 1. TVB depends on M and Δx and has no single ratio-only curve.",
+    "ja": "網掛けは0 ≤ φ(r) ≤ min(2r, 2)、r ≤ 0ではφ = 0です。この5関数はφ(1) = 1を満たします。TVBはMとΔxに依存し、比rだけの単一曲線にはなりません。"
+  },
+  "notebook.the-selected-reconstruction.aeb48f": {
+    "en": "THE SELECTED RECONSTRUCTION",
+    "ja": "選択した再構成"
+  },
+  "notebook.smooth-wave-refinement.2be8ee": {
+    "en": "Smooth-wave refinement",
+    "ja": "滑らかな波の細分化"
+  },
+  "notebook.exact-cell-average-reference.416c76": {
+    "en": "EXACT CELL-AVERAGE REFERENCE",
+    "ja": "厳密なセル平均を基準に"
+  },
+  "notebook.periodic-sine-a-1-t-0-2-cfl-0-3-ssprk3-resolu.9ea75c": {
+    "en": "Periodic sine, a = +1, t = 0.2, CFL = 0.3, SSPRK3. Resolution N = 40, 80, 160. TVB uses M = 50. Same grids and integrator; no equal-cost ranking.",
+    "ja": "周期正弦波、a = +1、t = 0.2、CFL = 0.3、SSPRK3を用います。N = 40, 80, 160、TVBはM = 50です。格子と積分法は共通ですが、同じ計算量による順位付けではありません。"
+  },
+  "notebook.advanced-positivity-preserving-building-block.3192ab": {
+    "en": "ADVANCED / POSITIVITY-PRESERVING BUILDING BLOCK",
+    "ja": "発展／正値性を保つ構成要素"
+  },
+  "notebook.keep-the-mean.ce5d63": {
+    "en": "Keep the mean.",
+    "ja": "平均を保ち、"
+  },
+  "notebook.bring-the-states-inside.b8c916": {
+    "en": "Bring the states inside.",
+    "ja": "状態を許容領域へ。"
+  },
+  "notebook.scale-every-conservative-component-by-one-com.9710f1": {
+    "en": "Scale every conservative component by one common θ around an admissible cell average. Positive density and positive pressure are separate tests.",
+    "ja": "許容セル平均のまわりで、全保存成分を共通のθで縮小します。密度の正値性と圧力の正値性は別々に検査します。"
+  },
+  "notebook.constructed-reconstruction-failure.e00dd0": {
+    "en": "Constructed reconstruction failure",
+    "ja": "再構成の人工的な破綻例"
+  },
+  "notebook.negative-pressure-positive-density.77b901": {
+    "en": "Negative pressure / positive density",
+    "ja": "負圧／密度は正"
+  },
+  "notebook.negative-density.d0a3f0": {
+    "en": "Negative density",
+    "ja": "負の密度"
+  },
+  "notebook.density-and-pressure-violations.0e25e7": {
+    "en": "Density and pressure violations",
+    "ja": "密度と圧力の違反"
+  },
+  "notebook.quantity-at-the-three-nodes.ed30ad": {
+    "en": "Quantity at the three nodes",
+    "ja": "3節点で見る量"
+  },
+  "notebook.ideal-gas-pressure-p.5ea397": {
+    "en": "Ideal-gas pressure p",
+    "ja": "理想気体圧力 p"
+  },
+  "notebook.density.a6aedc": {
+    "en": "Density ρ",
+    "ja": "密度 ρ"
+  },
+  "notebook.raw-node-values.3b5e0f": {
+    "en": "Raw node values",
+    "ja": "縮小前の節点値"
+  },
+  "notebook.scaled-node-values.cf73ff": {
+    "en": "Scaled node values",
+    "ja": "縮小後の節点値"
+  },
+  "notebook.only-the-three-supplied-nodes-are-tested-line.8cf204": {
+    "en": "Only the three supplied nodes are tested; lines connect those samples. Negative-density raw states are inadmissible, so their algebraic pressure is not a physical pressure.",
+    "ja": "検査するのは与えた3節点のみで、線は標本を結びます。負密度の元状態は許容されず、その代数的な圧力値を物理的な圧力とは扱えません。"
+  },
+  "notebook.scope-three-different-questions.26a170": {
+    "en": "SCOPE / THREE DIFFERENT QUESTIONS",
+    "ja": "範囲／3つの異なる問い"
+  },
+  "notebook.tvd-tvb-and-positivity-have-different-jobs.02ffc0": {
+    "en": "TVD, TVB, and positivity have different jobs.",
+    "ja": "TVD・TVB・正値性は異なる役割を持つ。"
+  },
+  "notebook.the-classic-scalar-updates-use-a-tvd-forward-.62d26e": {
+    "en": "The classic scalar updates use a TVD forward-Euler building block and SSPRK3 under |a| Δt/Δx ≤ 1/2. TVB relaxes extrema limiting. Positive-state scaling preserves an already consistent conservative quadrature mean at the supplied nodes. A complete positivity-preserving Euler time update additionally needs compatible fluxes, quadrature, CFL bounds, boundary treatment, and stage-by-stage limiting.",
+    "ja": "古典的なスカラー更新は|a| Δt/Δx ≤ 1/2でTVDな前進Eulerの構成要素とSSPRK3を用います。TVBは極値での制限を緩めます。正値化の縮小は、与えた節点の整合した保存的求積平均を保ちます。Euler時間更新全体の正値性には、適切な流束、求積、CFL制限、境界処理、各段階の制限も必要です。"
+  },
+  "notebook.the-scaling-helper-is-separate-from-the-atlas.eb4232": {
+    "en": "The scaling helper is separate from the atlas’s Euler, WENO, MHD, and KEEP time updates; those retain their documented limitations.",
+    "ja": "この縮小処理は、アトラスのEuler・WENO・MHD・KEEPの時間更新とは別です。各実装には解説した制約が残ります。"
+  },
+  "notebook.read-the-assumptions-and-advanced-derivations.53d2a3": {
+    "en": "Read the assumptions and advanced derivations ↗",
+    "ja": "仮定と発展的な導出へ ↗"
+  },
+  "notebook.select-the-smaller-same-sign-increment-a-diff.67da10": {
+    "en": "Select the smaller same-sign increment. A diffusive baseline that clips a local extremum.",
+    "ja": "同符号の増分のうち小さい方を選びます。局所極値を削る、拡散的な基準です。"
+  },
+  "notebook.a-compressive-choice-inspect-contact-sharpnes.b16f8d": {
+    "en": "A compressive choice. Inspect contact sharpness alongside deformation of a smooth profile.",
+    "ja": "圧縮的な選択です。接触面の鋭さと、滑らかな形状の変形を併せて調べます。"
+  },
+  "notebook.monotonized-central-bound-a-centered-incremen.f53845": {
+    "en": "Monotonized central: bound a centered increment by twice each one-sided increment.",
+    "ja": "monotonized central：中心増分を、各片側増分の2倍で制限します。"
+  },
+  "notebook.a-harmonic-mean-slope-for-same-sign-increment.eb1298": {
+    "en": "A harmonic-mean slope for same-sign increments; zero at a sign change.",
+    "ja": "同符号の増分には調和平均の勾配を用い、符号が変わる場所ではゼロにします。"
+  },
+  "notebook.the-symmetric-r-r-1-r-form-clipped-to-zero-fo.a343a6": {
+    "en": "The symmetric (r²+r)/(1+r²) form, clipped to zero for r ≤ 0. No epsilon regularization.",
+    "ja": "対称形(r²+r)/(1+r²)を使い、r ≤ 0でゼロに切ります。εによる正則化は行いません。"
+  },
+  "notebook.zero-reconstructed-slope-with-the-same-ssprk3.90da59": {
+    "en": "Zero reconstructed slope with the same SSPRK3 time integrator. A first-order spatial baseline.",
+    "ja": "同じSSPRK3を使い、再構成勾配をゼロにします。空間1次精度の基準です。"
+  },
+  "notebook.centered-slope-with-no-nonlinear-limiter-over.d2cc02": {
+    "en": "Centered slope with no nonlinear limiter. Overshoots and increased variation are possible.",
+    "ja": "非線形制限なしの中心勾配です。オーバーシュートや全変動の増加が起こりえます。"
+  },
+  "notebook.keep-the-centered-increment-when-its-magnitud.fdc089": {
+    "en": "Keep the centered increment when its magnitude is at most M Δx²; otherwise use minmod. TV need not decrease.",
+    "ja": "中心増分の絶対値がM Δx²以下なら保持し、それ以外はminmodを使います。全変動が減少するとは限りません。"
+  },
+  "notebook.a-shock-a-contact-and-a-rarefaction.c71a5b": {
+    "en": "A shock, a contact, and a rarefaction",
+    "ja": "衝撃波・接触不連続・希薄波"
+  },
+  "notebook.a-pulse-after-one-complete-crossing.8f5b80": {
+    "en": "A pulse after one complete crossing",
+    "ja": "1周後のパルス"
+  },
+  "notebook.a-smooth-wave-after-one-complete-crossing.65f930": {
+    "en": "A smooth wave after one complete crossing",
+    "ja": "1周後の滑らかな波"
+  },
+  "notebook.cell-average.772eee": {
+    "en": "CELL AVERAGE ū",
+    "ja": "セル平均 ū"
+  },
+  "notebook.profile-with-method.eb7efc": {
+    "en": "{profile} with {method}",
+    "ja": "{profile}／{method}"
+  },
+  "notebook.square.4ba3e8": {
+    "en": "square",
+    "ja": "矩形波"
+  },
+  "notebook.sine.ef7c96": {
+    "en": "sine",
+    "ja": "正弦波"
+  },
+  "notebook.sod.e3fa01": {
+    "en": "sod",
+    "ja": "Sod問題"
+  },
+  "notebook.exact-reference-dashed.267b6b": {
+    "en": "Exact reference / dashed",
+    "ja": "厳密な基準／破線"
+  },
+  "notebook.exact-pointwise-density-following-the-existin.65b124": {
+    "en": "Exact pointwise density, following the existing Sod convention. This is not an exact cell-average error. Outflow boundaries; no periodic mass or TV claim.",
+    "ja": "既存のSodの規約に従う点での厳密密度です。厳密セル平均に対する誤差ではありません。流出境界を用い、周期系の質量や全変動の主張はしません。"
+  },
+  "notebook.initial-state-and-translated-reference-are-ex.ece99a": {
+    "en": "Initial state and translated reference are exact cell averages. Square pulse on [0.2, 0.4], or sin(2πx). The last step is shortened; periodic TV includes the boundary jump.",
+    "ja": "初期状態と移流後の基準は厳密セル平均です。[0.2, 0.4]の矩形波、またはsin(2πx)を用います。最終ステップを短縮し、周期全変動には境界の跳びも含めます。"
+  },
+  "notebook.density-l1-pointwise.f43e0e": {
+    "en": "Density L1 / pointwise",
+    "ja": "密度L1／点値"
+  },
+  "notebook.l1-cell-averages.dd7c2c": {
+    "en": "L1 / cell averages",
+    "ja": "L1／セル平均"
+  },
+  "notebook.minimum-maximum.22b1e1": {
+    "en": "Minimum / maximum",
+    "ja": "最小／最大"
+  },
+  "notebook.minimum-pressure.6c9d95": {
+    "en": "Minimum pressure",
+    "ja": "最小圧力"
+  },
+  "notebook.initial-final-tv.ac7a25": {
+    "en": "Initial / final TV",
+    "ja": "初期／最終の全変動"
+  },
+  "notebook.maximum-tv-all-full-steps.eed3bd": {
+    "en": "Maximum TV / all full steps",
+    "ja": "全完了ステップの最大全変動"
+  },
+  "notebook.mass-change.901f2d": {
+    "en": "Mass change",
+    "ja": "質量変化"
+  },
+  "notebook.r-backward-forward.4972bc": {
+    "en": "r = BACKWARD / FORWARD",
+    "ja": "r = 後退増分／前進増分"
+  },
+  "notebook.five-classic-limiter-functions-within-the-sca.982fa4": {
+    "en": "Five classic limiter functions within the scalar Sweby bounds",
+    "ja": "スカラーSweby範囲と古典的な5制限関数"
+  },
+  "notebook.selected-method-measured-orders-40-80-first-8.ef88c7": {
+    "en": "Selected: {method}. Measured orders 40→80: {first}; 80→160: {second}. A smooth-region order is not a discontinuity accuracy guarantee.",
+    "ja": "選択：{method}。観測次数40→80：{first}、80→160：{second}。滑らかな領域の次数は不連続での精度保証ではありません。"
+  },
+  "notebook.refinement-curves-show-the-five-classic-choic.303dd4": {
+    "en": "Refinement curves show the five classic choices and TVB at M = 50; no refinement series is provided for this selected baseline or TVB parameter.",
+    "ja": "細分化曲線は古典的な5手法とM = 50のTVBです。選択中の基準法またはTVBパラメータには細分化系列がありません。"
+  },
+  "notebook.cells-n-log-scale.51c6ba": {
+    "en": "CELLS N / LOG SCALE",
+    "ja": "セル数 N／対数軸"
+  },
+  "notebook.cell-average-l1-log-scale.488bbd": {
+    "en": "CELL-AVERAGE L1 / LOG SCALE",
+    "ja": "セル平均L1／対数軸"
+  },
+  "notebook.measured-smooth-sine-refinement-for-classic-l.7af1ea": {
+    "en": "Measured smooth sine refinement for classic limiters and TVB M 50",
+    "ja": "古典的制限関数とTVB M 50の滑らかな正弦波収束"
+  },
+  "notebook.reference-cell-node.8a4b60": {
+    "en": "REFERENCE-CELL NODE ξ",
+    "ja": "参照セルの節点 ξ"
+  },
+  "notebook.pressure-p.4e6169": {
+    "en": "PRESSURE p",
+    "ja": "圧力 p"
+  },
+  "notebook.failure-failure-quantity-before-and-after-con.07c156": {
+    "en": "{failure} failure, {quantity} before and after conservative scaling",
+    "ja": "{failure}の破綻・保存的縮小の前後の{quantity}"
+  },
+  "notebook.pressure.b66744": {
+    "en": "pressure",
+    "ja": "圧力"
+  },
+  "notebook.density.06f838": {
+    "en": "density",
+    "ja": "密度"
+  },
+  "notebook.combined.8a92bc": {
+    "en": "combined",
+    "ja": "密度と圧力"
+  },
+  "notebook.common.337bcd": {
+    "en": "Common θ",
+    "ja": "共通の θ"
+  },
+  "notebook.minimum-limited-density.c29ac3": {
+    "en": "Minimum limited density",
+    "ja": "制限後の最小密度"
+  },
+  "notebook.minimum-limited-pressure.31fdfb": {
+    "en": "Minimum limited pressure",
+    "ja": "制限後の最小圧力"
+  },
+  "notebook.conservative-mean-defect.9e6b97": {
+    "en": "Conservative mean defect",
+    "ja": "保存平均のずれ"
+  },
+  "notebook.density-pressure-floors.92fbcd": {
+    "en": "Density / pressure floors",
+    "ja": "密度／圧力の下限"
+  },
+  "notebook.the-computed-comparisons-could-not-load-reloa.99d5fc": {
+    "en": "The computed comparisons could not load. Reload to retry, or read the source chapter.",
+    "ja": "比較データを読み込めませんでした。再読み込みするか、解説章を参照してください。"
+  },
+  "notebook.mc-monotonized-central.141b37": {
+    "en": "MC / monotonized central",
+    "ja": "MC／単調性を保つ中心勾配"
+  },
+  "notebook.van-albada-clipped.cef6b6": {
+    "en": "van Albada / clipped",
+    "ja": "van Albada／負の比を切り捨て"
+  },
+  "notebook.unlimited-centered-slope.1ccbf5": {
+    "en": "Unlimited centered slope",
+    "ja": "制限なしの中心勾配"
+  },
+  "notebook.time-integration-the-runge-kutta-family.c5a04d": {
+    "en": "TIME INTEGRATION / THE RUNGE–KUTTA FAMILY",
+    "ja": "時間積分／Runge–Kuttaの系譜"
+  },
+  "notebook.count-the-stages.8c015d": {
+    "en": "Count the stages.",
+    "ja": "段数を数える。"
+  },
+  "notebook.question-the.8872ad": {
+    "en": "Question the",
+    "ja": "確かめるのは、"
+  },
+  "notebook.guarantee.d6cb26": {
+    "en": "guarantee.",
+    "ja": "保証の条件。"
+  },
+  "notebook.rk2-is-a-family-four-stages-need-not-mean-fou.2d703e": {
+    "en": "RK2 is a family. Four stages need not mean fourth order. Compare accuracy, nonlinear stage structure, linear stability, and SSP inheritance on their own terms.",
+    "ja": "RK2は手法の一群です。4段でも4次とは限りません。精度、非線形な段構造、線形安定性、SSPの継承を、それぞれの基準で比較します。"
+  },
+  "notebook.nine-explicit-methods.764d58": {
+    "en": "NINE EXPLICIT METHODS",
+    "ja": "9つの陽解法"
+  },
+  "notebook.runge-kutta-method.77992c": {
+    "en": "Runge–Kutta method",
+    "ja": "Runge–Kutta法"
+  },
+  "notebook.nonlinear-example-step-h.9f116e": {
+    "en": "Nonlinear example step h",
+    "ja": "非線形例の刻み h"
+  },
+  "notebook.compare-all-orders.a8d5f8": {
+    "en": "Compare all orders",
+    "ja": "全次数を比較する"
+  },
+  "notebook.refinement-horizontal-axis.d8c22d": {
+    "en": "Refinement horizontal axis",
+    "ja": "細分化グラフの横軸"
+  },
+  "notebook.time-steps-n-shared-h-1-n.da27b3": {
+    "en": "Time steps N / shared h = 1/N",
+    "ja": "ステップ数 N／共通 h = 1/N"
+  },
+  "notebook.rhs-evaluations-s-n.8f9813": {
+    "en": "RHS evaluations / s × N",
+    "ja": "右辺評価回数／s × N"
+  },
+  "notebook.nonlinear-y-y-y-0-1.03730c": {
+    "en": "Nonlinear: y′ = −y², y(0) = 1",
+    "ja": "非線形系：y′ = −y²、y(0) = 1"
+  },
+  "notebook.exact-y-t-1-1-t.6fc303": {
+    "en": "Exact: y(t) = 1/(1+t)",
+    "ja": "厳密解：y(t) = 1/(1+t)"
+  },
+  "notebook.refinement-t-1.0887e2": {
+    "en": "Refinement: T = 1",
+    "ja": "細分化：T = 1"
+  },
+  "notebook.no-spatial-discretization.b104ec": {
+    "en": "No spatial discretization",
+    "ja": "空間離散化なし"
+  },
+  "notebook.stages-formulas-ssp-assumptions.11d43f": {
+    "en": "Stages, formulas & SSP assumptions ↗",
+    "ja": "段階・式・SSPの仮定へ ↗"
+  },
+  "notebook.compare-twelve-oscillator-methods.08bfd7": {
+    "en": "Compare twelve oscillator methods ↗",
+    "ja": "12の振動子積分法を比較 ↗"
+  },
+  "notebook.positive-state-reconstruction.8f055e": {
+    "en": "Positive-state reconstruction ↗",
+    "ja": "正値状態の再構成へ ↗"
+  },
+  "notebook.download-tableaus-computed-data.3a559c": {
+    "en": "Download tableaus & computed data ↓",
+    "ja": "係数表と計算データをダウンロード ↓"
+  },
+  "notebook.loading-verified-rk-families.46e54f": {
+    "en": "Loading verified RK families…",
+    "ja": "検証済みRK系列を読み込み中…"
+  },
+  "notebook.stages-are-internal-predictors.f25a76": {
+    "en": "Stages are internal predictors",
+    "ja": "各段階は内部予測値"
+  },
+  "notebook.exact-solution-dashed.bb0ba3": {
+    "en": "Exact solution / dashed",
+    "ja": "厳密解／破線"
+  },
+  "notebook.rhs-stage-states-dots.1ee605": {
+    "en": "RHS-stage states / dots",
+    "ja": "右辺評価の段階値／点"
+  },
+  "notebook.final-rk-value-dark-dot.247902": {
+    "en": "Final RK value / dark dot",
+    "ja": "最終RK値／濃い点"
+  },
+  "notebook.each-orange-dot-is-an-actual-rhs-evaluation-p.ff005f": {
+    "en": "Each orange dot is an actual RHS evaluation point (tₙ + cᵢh, Yᵢ), not a claimed intermediate exact solution. Nonchronological stage times are allowed. The dark dot is the completed step.",
+    "ja": "橙色の点は実際の右辺評価点(tₙ + cᵢh, Yᵢ)であり、中間時刻の厳密解を示すものではありません。段階の時刻は昇順でなくても構いません。濃い点は完了したステップです。"
+  },
+  "notebook.linear-stability-boundaries.96af8a": {
+    "en": "Linear stability boundaries",
+    "ja": "線形安定境界"
+  },
+  "notebook.approximate-r-z-1-contours-on-a-401-401-grid-.0631a0": {
+    "en": "Approximate |R(z)| = 1 contours on a 401 × 401 grid. Selected method solid; comparisons dashed. RK2 boundaries coincide. This is scalar linear stability, not an SSP proof.",
+    "ja": "401 × 401格子で求めた|R(z)| = 1の近似等高線です。選択手法は実線、比較は破線で、RK2の境界は重なります。これはスカラー線形安定性であり、SSPの証明ではありません。"
+  },
+  "notebook.stages-order-ssp.d12486": {
+    "en": "STAGES ≠ ORDER ≠ SSP",
+    "ja": "段数 ≠ 次数 ≠ SSP"
+  },
+  "notebook.a-method-in-its-coefficients.d27d77": {
+    "en": "A method in its coefficients",
+    "ja": "係数から見る手法"
+  },
+  "notebook.butcher-tableau-c-a-then-b.63a568": {
+    "en": "BUTCHER TABLEAU / c | A, THEN b",
+    "ja": "Butcher係数表／c と A、最終行は b"
+  },
+  "notebook.rows-are-stage-predictors-the-final-row-conta.f94343": {
+    "en": "Rows are stage predictors; the final row contains output weights. cᵢ = Σⱼ aᵢⱼ. Coefficients are displayed to seven significant figures; downloads retain the implementation precision.",
+    "ja": "各行は段階の予測値、最終行は出力の重みです。cᵢ = Σⱼ aᵢⱼ。表示は有効数字7桁で、ダウンロードには実装精度の係数を保持します。"
+  },
+  "notebook.nonlinear-refinement.d1286a": {
+    "en": "Nonlinear refinement",
+    "ja": "非線形系の細分化"
+  },
+  "notebook.final-absolute-error-for-y-y-t-1-n-10-20-40-8.546f29": {
+    "en": "Final absolute error for y′ = −y², T = 1, N = 10, 20, 40, 80. Counting s RHS calls per step includes every stage, with no FSAL or low-storage optimization. RHS counts are not wall-clock measurements.",
+    "ja": "y′ = −y²、T = 1、N = 10, 20, 40, 80の最終絶対誤差です。各ステップで全s段の右辺評価を数え、FSALや低記憶化の最適化は行いません。右辺評価回数は実時間の測定ではありません。"
+  },
+  "notebook.the-conditional-statement.b9a0b7": {
+    "en": "THE CONDITIONAL STATEMENT",
+    "ja": "条件付きの主張"
+  },
+  "notebook.ssp-preserves-a-property-that-forward-euler-a.906472": {
+    "en": "SSP preserves a property that forward Euler already has.",
+    "ja": "SSPは前進Eulerがすでに持つ性質を継承する。"
+  },
+  "notebook.if-the-spatial-operator-has-the-required-conv.6fdbcd": {
+    "en": "If the spatial operator has the required convex stability property for h ≤ h_FE, an SSP method inherits it for h ≤ C h_FE. The letters SSP do not create positive states or repair an unsuitable flux. Classical RK4 can work well without having a general nonlinear SSP guarantee.",
+    "ja": "空間作用素がh ≤ h_FEで必要な凸安定性を持つなら、SSP法はh ≤ C h_FEでそれを継承します。SSPという名称だけでは正値性は生まれず、不適切な流束も修復できません。古典RK4は一般的な非線形SSP保証がなくても良い結果を出せる場合があります。"
+  },
+  "notebook.ssprk-s-p-names-stages-then-order-embedded-rk.95d584": {
+    "en": "SSPRK(s,p) names stages then order. Embedded RK 5(4), low-storage RK, implicit RK, and IMEX are different branches, explained in the chapter. Adaptivity and embedded error estimates are not implemented here.",
+    "ja": "SSPRK(s,p)は段数、次数の順です。埋め込みRK 5(4)、低記憶RK、陰的RK、IMEXは別の分岐として本文で説明します。この実験では適応刻みと埋め込み誤差推定を実装していません。"
+  },
+  "notebook.follow-the-family-and-the-assumptions.6c7c61": {
+    "en": "Follow the family and the assumptions ↗",
+    "ja": "系譜と仮定を読む ↗"
+  },
+  "notebook.one-rhs-evaluation-first-order-accuracy-this-.4e26d7": {
+    "en": "One RHS evaluation, first-order accuracy. This is the reference step whose stability property an SSP construction may inherit.",
+    "ja": "右辺評価1回、1次精度です。SSP構成が安定性を継承する際の基準となるステップです。"
+  },
+  "notebook.heun-explicit-trapezoid-is-ssprk-2-2-its-two-.4d944d": {
+    "en": "Heun / explicit trapezoid is SSPRK(2,2). Its two-stage RK2 siblings share its scalar stability polynomial, but have different nonlinear stages and SSP coefficients.",
+    "ja": "Heun／陽的台形則はSSPRK(2,2)です。他の2段RK2も同じスカラー安定多項式を持ちますが、非線形の段階値とSSP係数は異なります。"
+  },
+  "notebook.this-is-the-explicit-two-stage-midpoint-rk2-m.339d76": {
+    "en": "This is the explicit two-stage midpoint RK2 method, distinct from implicit midpoint. Its general nonlinear SSP coefficient is zero, despite sharing Heun’s linear stability polynomial.",
+    "ja": "陰的中点則とは異なる、陽的2段の中点RK2法です。Heunと線形安定多項式が同じでも、一般的な非線形SSP係数はゼロです。"
+  },
+  "notebook.a-two-stage-rk2-method-with-c-2-3-its-general.da0f9a": {
+    "en": "A two-stage RK2 method with c₂ = 2/3. Its general nonlinear SSP coefficient is 1/2. The same formal order and linear polynomial do not fix the nonlinear error.",
+    "ja": "c₂ = 2/3の2段RK2で、一般的な非線形SSP係数は1/2です。形式次数と線形多項式が同じでも非線形誤差は決まりません。"
+  },
+  "notebook.classical-three-stage-rk3-has-the-same-scalar.df6bcb": {
+    "en": "Classical three-stage RK3 has the same scalar stability polynomial as SSPRK(3,3), but a negative tableau entry and zero general nonlinear SSP coefficient.",
+    "ja": "古典3段RK3はSSPRK(3,3)と同じスカラー安定多項式を持ちますが、係数表に負の成分があり、一般的な非線形SSP係数はゼロです。"
+  },
+  "notebook.the-three-stage-third-order-shu-osher-method-.4d55b0": {
+    "en": "The three-stage, third-order Shu–Osher method. Its SSP coefficient C = 1 inherits the applicable forward-Euler property under h ≤ h_FE.",
+    "ja": "3段3次のShu–Osher法です。SSP係数C = 1で、h ≤ h_FEにおいて適用可能な前進Eulerの性質を継承します。"
+  },
+  "notebook.four-stages-third-order-c-2-allows-twice-the-.257e84": {
+    "en": "Four stages, third order. C = 2 allows twice the applicable forward-Euler step, subject to the same spatial and stage-treatment premises. Stage times are not chronological.",
+    "ja": "4段3次です。同じ空間作用素・段階処理の仮定のもとで、C = 2により適用可能な前進Euler刻みの2倍を許します。段階時刻は昇順ではありません。"
+  },
+  "notebook.classical-four-stage-fourth-order-rk4-has-a-u.6f379f": {
+    "en": "Classical four-stage, fourth-order RK4 has a useful scalar stability region, but C = 0 for the general nonlinear SSP property. This does not predict failure on every problem.",
+    "ja": "古典4段4次RK4は有用なスカラー安定領域を持ちますが、一般的な非線形SSP係数はC = 0です。すべての問題で失敗するという意味ではありません。"
+  },
+  "notebook.five-stages-fourth-order-using-the-spiteri-ru.5a8707": {
+    "en": "Five stages, fourth order, using the Spiteri–Ruuth coefficients given in the SSP review. The conservative rounded bound C = 1.508 has been checked against the full tableau.",
+    "ja": "SSP総説に掲載されたSpiteri–Ruuth係数を使う5段4次法です。安全側に丸めた限界C = 1.508を完全な係数表に対して確認しています。"
+  },
+  "notebook.family-formal-order-order.91d974": {
+    "en": "{family} / formal order {order}",
+    "ja": "{family}／形式{order}次"
+  },
+  "notebook.rhs-stage-time-c-h.1ada4a": {
+    "en": "RHS-STAGE TIME cᵢh",
+    "ja": "右辺評価の段階時刻 cᵢh"
+  },
+  "notebook.predictor-y-final-value.ecd402": {
+    "en": "PREDICTOR Yᵢ / FINAL VALUE",
+    "ja": "予測値 Yᵢ／最終値"
+  },
+  "notebook.actual-nonlinear-stages-of-method-h-h.fef1e3": {
+    "en": "Actual nonlinear stages of {method}, h = {h}",
+    "ja": "{method}の実際の非線形段階値・h = {h}"
+  },
+  "notebook.stages-stages-order-order.14339d": {
+    "en": "{stages} stages · order {order}",
+    "ja": "{stages}段・{order}次"
+  },
+  "notebook.scalar-linear-stability-contours-for-family.11f0dc": {
+    "en": "Scalar linear stability contours for {family}",
+    "ja": "{family}のスカラー線形安定等高線"
+  },
+  "notebook.all-methods.827c08": {
+    "en": "all methods",
+    "ja": "全手法"
+  },
+  "notebook.stages-rhs-calls.0f19fc": {
+    "en": "Stages / RHS calls",
+    "ja": "段数／右辺評価回数"
+  },
+  "notebook.formal-global-order.56cd2d": {
+    "en": "Formal global order",
+    "ja": "形式的な大域次数"
+  },
+  "notebook.ssp-coefficient-c.2f1c91": {
+    "en": "SSP coefficient C",
+    "ja": "SSP係数 C"
+  },
+  "notebook.ssp-bound-per-rhs-c-s.69da92": {
+    "en": "SSP bound per RHS / C÷s",
+    "ja": "右辺評価あたりのSSP限界／C÷s"
+  },
+  "notebook.step-result.49f71f": {
+    "en": "Step result",
+    "ja": "ステップの結果"
+  },
+  "notebook.exact-final-value.0008fe": {
+    "en": "Exact final value",
+    "ja": "厳密な最終値"
+  },
+  "notebook.one-step-absolute-error.fb9e20": {
+    "en": "One-step absolute error",
+    "ja": "1ステップの絶対誤差"
+  },
+  "notebook.method-c-a-and-b.4adcb2": {
+    "en": "{method}: c, A, and b",
+    "ja": "{method}：c、A、b"
+  },
+  "notebook.actual-stage-evaluations-y-y-h-h.e7ef8d": {
+    "en": "Actual stage evaluations / y′ = −y², h = {h}",
+    "ja": "実際の段階評価／y′ = −y²、h = {h}"
+  },
+  "notebook.stage-i.00a1c4": {
+    "en": "Stage i",
+    "ja": "段階 i"
+  },
+  "notebook.total-rhs-evaluations.1010eb": {
+    "en": "TOTAL RHS EVALUATIONS",
+    "ja": "右辺の総評価回数"
+  },
+  "notebook.time-steps-n.b68a70": {
+    "en": "TIME STEPS N",
+    "ja": "時間ステップ数 N"
+  },
+  "notebook.final-absolute-error.10e8d1": {
+    "en": "FINAL ABSOLUTE ERROR",
+    "ja": "最終絶対誤差"
+  },
+  "notebook.nonlinear-rk-refinement-by-axis.0bbb3a": {
+    "en": "Nonlinear RK refinement by {axis}",
+    "ja": "{axis}による非線形RK細分化"
+  },
+  "notebook.rhs-count.68e697": {
+    "en": "RHS count",
+    "ja": "右辺評価回数"
+  },
+  "notebook.time-steps.5984d3": {
+    "en": "time steps",
+    "ja": "時間ステップ数"
+  },
+  "notebook.selected-method-measured-orders-orders-succes.827296": {
+    "en": "Selected: {method}. Measured orders: {orders} (successive step halvings). This is one smooth nonlinear ODE, not a shock or spatial-CFL experiment.",
+    "ja": "選択：{method}。観測次数：{orders}（順次刻みを半分にした場合）。滑らかな非線形ODEの一例であり、衝撃波や空間CFLの実験ではありません。"
+  },
+  "notebook.log-log-rhs-count.8d0ef3": {
+    "en": "LOG–LOG / RHS COUNT",
+    "ja": "両対数／右辺評価回数"
+  },
+  "notebook.log-log-shared-step-count.d8b05c": {
+    "en": "LOG–LOG / SHARED STEP COUNT",
+    "ja": "両対数／共通ステップ数"
+  },
+  "notebook.the-rk-data-could-not-load-reload-to-retry-or.b9de42": {
+    "en": "The RK data could not load. Reload to retry, or read the source chapter.",
+    "ja": "RKデータを読み込めませんでした。再読み込みするか、解説章を参照してください。"
+  },
+  "notebook.forward-euler-rk1.be088b": {
+    "en": "Forward Euler / RK1",
+    "ja": "前進Euler／RK1"
+  },
+  "notebook.semi-lagrangian-original-cubic-cip.b00259": {
+    "en": "SEMI-LAGRANGIAN / ORIGINAL CUBIC CIP",
+    "ja": "セミLagrange法／原型の3次CIP"
+  },
+  "notebook.carry-the-slope.3edb14": {
+    "en": "Carry the slope.",
+    "ja": "勾配も運ぶ。"
+  },
+  "notebook.keep-the.79f6e0": {
+    "en": "Keep the",
+    "ja": "保ちたいのは、"
+  },
+  "notebook.profile.2e7c32": {
+    "en": "profile.",
+    "ja": "形状。"
+  },
+  "notebook.transport-a-point-value-and-its-independent-g.c9b021": {
+    "en": "Transport a point value and its independent gradient along characteristics. Compare diffusion and oscillations, then test whether remapping preserves an integral.",
+    "ja": "点値と独立した勾配を特性曲線に沿って輸送します。拡散と振動を比較し、再配置が積分を保存するかを調べます。"
+  },
+  "notebook.value-gradient.3a46d8": {
+    "en": "VALUE + GRADIENT",
+    "ja": "値 + 勾配"
+  },
+  "notebook.initial-profile.4effc6": {
+    "en": "Initial profile",
+    "ja": "初期形状"
+  },
+  "notebook.smooth-sine-positive-offset.e2df62": {
+    "en": "Smooth sine / positive offset",
+    "ja": "滑らかな正弦波／正の平均値"
+  },
+  "notebook.advection-direction.f548bf": {
+    "en": "Advection direction",
+    "ja": "移流方向"
+  },
+  "notebook.courant-magnitude-a-t-x.3a06c6": {
+    "en": "Courant magnitude |a| Δt/Δx",
+    "ja": "Courant数の絶対値 |a| Δt/Δx"
+  },
+  "notebook.1-exact-one-cell-shift.e19388": {
+    "en": "1 / exact one-cell shift",
+    "ja": "1／厳密な1セル移動"
+  },
+  "notebook.final-time.ada00d": {
+    "en": "Final time",
+    "ja": "終了時刻"
+  },
+  "notebook.1-complete-crossing.20d890": {
+    "en": "1 / complete crossing",
+    "ja": "1／1周"
+  },
+  "notebook.initial-gradient-convention.168cc5": {
+    "en": "Initial gradient convention",
+    "ja": "初期勾配の規約"
+  },
+  "notebook.analytic-for-sine-zero-for-square.629b8f": {
+    "en": "Analytic for sine / zero for square",
+    "ja": "正弦波は解析値／矩形波はゼロ"
+  },
+  "notebook.centered-periodic-difference.2335cc": {
+    "en": "Centered periodic difference",
+    "ja": "周期中心差分"
+  },
+  "notebook.n-128-point-nodes-periodic-0-1.301572": {
+    "en": "N = 128 point nodes · periodic [0,1]",
+    "ja": "N = 128点・周期区間 [0,1]"
+  },
+  "notebook.cip-2n-scalar-states.e986ff": {
+    "en": "CIP: 2N scalar states",
+    "ja": "CIP：2N個のスカラー状態"
+  },
+  "notebook.linear-comparison-n-scalar-states.1fed2f": {
+    "en": "Linear comparison: N scalar states",
+    "ja": "線形比較：N個のスカラー状態"
+  },
+  "notebook.constant-velocity-no-slope-limiter.a2439b": {
+    "en": "Constant velocity · no slope limiter",
+    "ja": "一定速度・勾配制限なし"
+  },
+  "notebook.cubic-formulas-conservation-limits.c1cd17": {
+    "en": "Cubic formulas & conservation limits ↗",
+    "ja": "3次式と保存性の限界へ ↗"
+  },
+  "notebook.compare-slope-limited-finite-volumes.6b0379": {
+    "en": "Compare slope-limited finite volumes ↗",
+    "ja": "勾配制限付き有限体積法を比較 ↗"
+  },
+  "notebook.loading-computed-cip-profiles.67dfd8": {
+    "en": "Loading computed CIP profiles…",
+    "ja": "CIPの計算形状を読み込み中…"
+  },
+  "notebook.follow-the-translated-profile.6c764c": {
+    "en": "Follow the translated profile",
+    "ja": "移流する形状を追う"
+  },
+  "notebook.point-values-not-cell-averages.fe3953": {
+    "en": "POINT VALUES / NOT CELL AVERAGES",
+    "ja": "セル平均ではなく点値"
+  },
+  "notebook.exact-point-samples-dashed.803b3b": {
+    "en": "Exact point samples / dashed",
+    "ja": "厳密な点標本／破線"
+  },
+  "notebook.original-cubic-cip.40c2ad": {
+    "en": "Original cubic CIP",
+    "ja": "原型の3次CIP"
+  },
+  "notebook.linear-interpolation.6fe04a": {
+    "en": "Linear interpolation",
+    "ja": "線形補間"
+  },
+  "notebook.the-independently-evolved-slope.2852bf": {
+    "en": "The independently evolved slope",
+    "ja": "独立に発展させる勾配"
+  },
+  "notebook.a-different-set-of-unknowns.4425b8": {
+    "en": "A DIFFERENT SET OF UNKNOWNS",
+    "ja": "異なる未知量の組"
+  },
+  "notebook.the-new-value-and-gradient-come-from-the-same.8e6e60": {
+    "en": "The new value and gradient come from the same cubic at the upstream departure point. The gradient is transported, rather than recomputed from the new nodal values after every step.",
+    "ja": "新しい値と勾配を、風上側の出発点で同じ3次式から求めます。勾配自体を輸送し、各ステップ後の新節点値から再計算する方法とは異なります。"
+  },
+  "notebook.noninteger-courant-0-6.232a21": {
+    "en": "NONINTEGER COURANT / 0.6",
+    "ja": "非整数のCourant数／0.6"
+  },
+  "notebook.cip-analytic-initial-g.5697bf": {
+    "en": "CIP / analytic initial g",
+    "ja": "CIP／解析的な初期 g"
+  },
+  "notebook.cip-centered-initial-g.667c33": {
+    "en": "CIP / centered initial g",
+    "ja": "CIP／中心差分の初期 g"
+  },
+  "notebook.positive-sine-t-0-37-a-1-n-32-64-128-256-cip-.9b5627": {
+    "en": "Positive sine, T = 0.37, a = +1, N = 32, 64, 128, 256. CIP uses twice as many scalar states. Matching N is not matching work or degrees of freedom.",
+    "ja": "正の正弦波、T = 0.37、a = +1、N = 32, 64, 128, 256を用います。CIPはスカラー状態数が2倍です。同じNでも計算量や自由度は一致しません。"
+  },
+  "notebook.a-conservation-counterexample.1f2d1d": {
+    "en": "A conservation counterexample",
+    "ja": "保存性の反例"
+  },
+  "notebook.one-step-periodic-c-field.965857": {
+    "en": "ONE STEP / PERIODIC C¹ FIELD",
+    "ja": "1ステップ／周期的なC¹関数"
+  },
+  "notebook.exact-translation-dashed.93d93a": {
+    "en": "Exact translation / dashed",
+    "ja": "厳密な移流／破線"
+  },
+  "notebook.cip-reconstruction.969cc2": {
+    "en": "CIP reconstruction",
+    "ja": "CIP再構成"
+  },
+  "notebook.q-1-and-g-1-define-small-subcell-hermite-ripp.056bcc": {
+    "en": "qᵢ = 1 and gᵢ = 1 define small subcell Hermite ripples, not a constant function. This constructed grid-scale field exposes a remapping property that a sine wave can hide. Both integrals are analytic.",
+    "ja": "qᵢ = 1、gᵢ = 1が表すのは、定数関数ではなくセル内部に小さなHermiteのうねりを持つ場です。この人工的な格子尺度の場によって、正弦波では隠れる再配置の性質を示します。両積分は解析値です。"
+  },
+  "notebook.the-family-and-the-limits.7fd244": {
+    "en": "THE FAMILY AND THE LIMITS",
+    "ja": "系譜と限界"
+  },
+  "notebook.a-good-profile-is-not-a-conservation-theorem.f01673": {
+    "en": "A good profile is not a conservation theorem.",
+    "ja": "良好な形状は保存定理の代わりにならない。"
+  },
+  "notebook.the-original-cubic-can-overshoot-and-has-no-g.b2296b": {
+    "en": "The original cubic can overshoot and has no general conservative remapping guarantee. CIP–CSL introduces integral constraints; rational CIP and shape-preserving variants change the reconstruction. Those extensions are described in the chapter, rather than silently attributed to this basic example.",
+    "ja": "原型の3次式はオーバーシュートし、一般的な保存的再配置を保証しません。CIP–CSLは積分制約を追加し、有理CIPや形状保存型では再構成を変えます。これらの拡張は本文で区別し、この基本例の性質とは扱いません。"
+  },
+  "notebook.this-implementation-uses-constant-velocity-an.c1be44": {
+    "en": "This implementation uses constant velocity, an adjacent upwind cell with |Courant| ≤ 1, and periodic 1D scalar data. Variable-velocity stretching, source splitting, and compressible or multiphase flow need additional algorithms.",
+    "ja": "一定速度、|Courant| ≤ 1の隣接風上セル、周期1次元スカラーデータを使います。可変速度による伸縮、生成項の分割、圧縮性・多相流には追加のアルゴリズムが必要です。"
+  },
+  "notebook.read-the-equations-and-the-cip-branches.0ba291": {
+    "en": "Read the equations and the CIP branches ↗",
+    "ja": "方程式とCIPの分岐を読む ↗"
+  },
+  "notebook.original-cubic-cip-nodes-point-nodes.3d306f": {
+    "en": "Original cubic CIP · {nodes} point nodes",
+    "ja": "原型の3次CIP・{nodes}節点"
+  },
+  "notebook.point-value-f.f8301a": {
+    "en": "POINT VALUE f",
+    "ja": "点値 f"
+  },
+  "notebook.cip-and-linear-interpolation-on-the-profile-p.82647c": {
+    "en": "CIP and linear interpolation on the {profile} profile",
+    "ja": "{profile}形状のCIPと線形補間"
+  },
+  "notebook.exact-translated-point-values-of-1-0-2-sin-2-.fae574": {
+    "en": "Exact translated point values of 1 + 0.2 sin(2πx). A cubic interpolation basis is not a fourth-order global refinement claim.",
+    "ja": "1 + 0.2 sin(2πx)を移流した厳密点値です。3次補間基底を使うことは、大域4次収束の主張ではありません。"
+  },
+  "notebook.unit-square-pulse-on-0-2-0-4-the-unconstraine.20b4b3": {
+    "en": "Unit square pulse on [0.2,0.4). The unconstrained cubic can exceed the original bounds. Initialization at the discontinuity is a convention.",
+    "ja": "[0.2,0.4)の単位矩形波です。無制限の3次式は元の値の範囲を越ええます。不連続点での初期化は規約です。"
+  },
+  "notebook.evolved-point-gradient-g.0a8795": {
+    "en": "EVOLVED POINT GRADIENT g",
+    "ja": "発展させた点勾配 g"
+  },
+  "notebook.cip-derivative-transport-for-the-profile-prof.aba186": {
+    "en": "CIP derivative transport for the {profile} profile",
+    "ja": "{profile}形状のCIP勾配輸送"
+  },
+  "notebook.solid-evolved-cip-derivative-dashed-exact-tra.21807c": {
+    "en": "Solid: evolved CIP derivative. Dashed: exact translated analytic derivative. The initial analytic and centered choices use different derivative data.",
+    "ja": "実線は発展させたCIP勾配、破線は移流後の解析的な厳密勾配です。解析値と中心差分では初期の勾配データが異なります。"
+  },
+  "notebook.a-discontinuous-square-has-no-classical-deriv.939d47": {
+    "en": "A discontinuous square has no classical derivative at its jumps. This panel shows the evolved numerical gradient, with no exact gradient error claimed.",
+    "ja": "不連続な矩形波は跳びで古典的な導関数を持ちません。ここでは発展させた数値勾配を示し、厳密勾配に対する誤差は主張しません。"
+  },
+  "notebook.cip-pointwise-l1.e29875": {
+    "en": "CIP pointwise L1",
+    "ja": "CIP点値L1"
+  },
+  "notebook.linear-pointwise-l1.5a55cb": {
+    "en": "Linear pointwise L1",
+    "ja": "線形補間の点値L1"
+  },
+  "notebook.cip-gradient-l1.448536": {
+    "en": "CIP gradient L1",
+    "ja": "CIP勾配L1"
+  },
+  "notebook.cip-minimum-maximum.8dbbe6": {
+    "en": "CIP minimum / maximum",
+    "ja": "CIP最小／最大"
+  },
+  "notebook.initial-reconstructed-integral.f42d31": {
+    "en": "Initial reconstructed integral",
+    "ja": "初期再構成の積分"
+  },
+  "notebook.maximum-integral-change-all-steps.d1685e": {
+    "en": "Maximum integral change / all steps",
+    "ja": "全ステップの最大積分変化"
+  },
+  "notebook.point-nodes-n.c6fcb1": {
+    "en": "POINT NODES N",
+    "ja": "節点数 N"
+  },
+  "notebook.pointwise-l1-error.4da643": {
+    "en": "POINTWISE L1 ERROR",
+    "ja": "点値のL1誤差"
+  },
+  "notebook.smooth-cip-and-linear-interpolation-refinemen.618f61": {
+    "en": "Smooth CIP and linear-interpolation refinement",
+    "ja": "滑らかな場でのCIP・線形補間の細分化"
+  },
+  "notebook.cip-gradient-g-measured-orders-orders.6ac41f": {
+    "en": "CIP / {gradient} g: measured orders {orders}",
+    "ja": "CIP／{gradient} g：観測次数 {orders}"
+  },
+  "notebook.linear-measured-orders-orders.58afc1": {
+    "en": "Linear: measured orders {orders}",
+    "ja": "線形補間：観測次数 {orders}"
+  },
+  "notebook.analytic.6710e4": {
+    "en": "analytic",
+    "ja": "解析的初期値"
+  },
+  "notebook.centered.aeb554": {
+    "en": "centered",
+    "ja": "中心差分初期値"
+  },
+  "notebook.reconstructed-f-x.f4b99a": {
+    "en": "RECONSTRUCTED f(x)",
+    "ja": "再構成 f(x)"
+  },
+  "notebook.x-first-four-intervals.802f6f": {
+    "en": "x / FIRST FOUR INTERVALS",
+    "ja": "x／最初の4区間"
+  },
+  "notebook.conservative-exact-translation-versus-noncons.e1c211": {
+    "en": "Conservative exact translation versus nonconservative CIP remapping",
+    "ja": "保存的な厳密移流と非保存的なCIP再配置"
+  },
+  "notebook.n-n-c-c-integral-before-before-exact-translat.c28446": {
+    "en": "N = {n}, C = {c}. Integral before: {before}. Exact translated integral: {exact}. Reconstructed CIP integral: {after}. Change: {change}.",
+    "ja": "N = {n}、C = {c}。初期積分：{before}。厳密移流の積分：{exact}。CIP再構成積分：{after}。変化：{change}。"
+  },
+  "notebook.the-cip-cases-could-not-load-reload-to-retry-.a38e5b": {
+    "en": "The CIP cases could not load. Reload to retry, or read the source chapter.",
+    "ja": "CIP例を読み込めませんでした。再読み込みするか、解説章を参照してください。"
+  },
+  "notebook.the-motion-gallery-genuine-computed-states.1bc022": {
+    "en": "THE MOTION GALLERY · GENUINE COMPUTED STATES",
+    "ja": "動画ギャラリー・実際の計算状態"
+  },
+  "notebook.watch-the-computation.faafbf": {
+    "en": "Watch the computation",
+    "ja": "計算の進展を"
+  },
+  "notebook.unfold.099248": {
+    "en": "unfold.",
+    "ja": "見届ける。"
+  },
+  "notebook.time-dependent-tests-deserve-a-time-history-p.d1f384": {
+    "en": "Time-dependent tests deserve a time history. Play saved states, pause at a shock interaction, or inspect one frame at a time. Steady solutions remain still figures.",
+    "ja": "非定常テストを時間履歴で確かめます。保存状態を再生し、衝撃波の相互作用で停止し、1フレームずつ確認できます。定常解は静止図で示します。"
+  },
+  "notebook.time-dependent-test.b3182f": {
+    "en": "Time-dependent test",
+    "ja": "非定常テスト"
+  },
+  "notebook.loading-movie-catalog.a5288c": {
+    "en": "Loading movie catalog…",
+    "ja": "動画カタログを読み込み中…"
+  },
+  "notebook.playback-speed.afec2b": {
+    "en": "Playback speed",
+    "ja": "再生速度"
+  },
+  "notebook.loop-playback.cfb9c9": {
+    "en": "Loop playback",
+    "ja": "繰り返し再生"
+  },
+  "notebook.playback-speed-changes-presentation-timing-ph.dbb4d5": {
+    "en": "Playback speed changes presentation timing. Physical simulation time is printed in each saved frame.",
+    "ja": "再生速度が変えるのは表示のタイミングです。物理的な計算時刻は各保存フレームに記しています。"
+  },
+  "notebook.sampling-color-scale-definitions.3d2948": {
+    "en": "Sampling & color-scale definitions ↗",
+    "ja": "標本と色尺度の定義へ ↗"
+  },
+  "notebook.download-run-manifests.e247b3": {
+    "en": "Download run manifests ↓",
+    "ja": "計算マニフェストをダウンロード ↓"
+  },
+  "notebook.loading-computed-snapshots.07b9cc": {
+    "en": "Loading computed snapshots…",
+    "ja": "計算済みスナップショットを読み込み中…"
+  },
+  "notebook.saved-simulation-states.be4186": {
+    "en": "Saved simulation states",
+    "ja": "保存した計算状態"
+  },
+  "notebook.saved-frame-playback-controls.212b48": {
+    "en": "Saved-frame playback controls",
+    "ja": "保存フレームの再生操作"
+  },
+  "notebook.open-frame.41b7b3": {
+    "en": "Open frame ↗",
+    "ja": "フレームを開く ↗"
+  },
+  "notebook.saved-frame.4185bd": {
+    "en": "Saved frame",
+    "ja": "保存フレーム"
+  },
+  "notebook.at-this-physical-time.52237c": {
+    "en": "AT THIS PHYSICAL TIME",
+    "ja": "この物理時刻で"
+  },
+  "notebook.export-present.28611a": {
+    "en": "EXPORT & PRESENT",
+    "ja": "書き出しと表示"
+  },
+  "notebook.download-mp4.296029": {
+    "en": "Download MP4 ↓",
+    "ja": "MP4をダウンロード ↓"
+  },
+  "notebook.download-this-frame.0bd895": {
+    "en": "Download this frame ↓",
+    "ja": "このフレームをダウンロード ↓"
+  },
+  "notebook.mp4-uses-the-same-computed-frames-at-12-frame.811d92": {
+    "en": "MP4 uses the same computed frames at 12 frames per second. No sound. Image frames retain the fixed scales and physical timestamps.",
+    "ja": "MP4は同じ計算フレームを毎秒12枚で再生し、音声はありません。画像には固定した尺度と物理時刻を保持します。"
+  },
+  "notebook.watch-the-mp4-in-the-native-player.d64788": {
+    "en": "Watch the MP4 in the native player",
+    "ja": "標準プレーヤーでMP4を見る"
+  },
+  "notebook.computed-simulation-movie.06e633": {
+    "en": "Computed simulation movie",
+    "ja": "計算結果の動画"
+  },
+  "notebook.motion-is-evidence-of-evolution-not-convergen.416f07": {
+    "en": "Motion is evidence of evolution, not convergence.",
+    "ja": "動画は時間発展を示し、収束は別に検証する。"
+  },
+  "notebook.these-movies-use-the-same-educational-solvers.a6f8c2": {
+    "en": "These movies use the same educational solvers as the reading chapters. Each color scale stays fixed over its complete run; frames are never interpolated. The initial and final states are included. CT and GLM use different native magnetic-divergence operators. The original KEEP example is a smooth vortex with no shock stabilization.",
+    "ja": "本文と同じ教育用ソルバーで作った動画です。全計算を通じて色尺度を固定し、フレーム間の補間は行いません。初期・最終状態を含みます。CTとGLMでは固有の磁場発散演算子が異なります。原型KEEPの例は衝撃波安定化を行わない滑らかな渦です。"
+  },
+  "notebook.return-to-the-still-image-gallery.611f29": {
+    "en": "Return to the still-image gallery ↗",
+    "ja": "静止図ギャラリーへ戻る ↗"
+  },
+  "notebook.loading-saved-frame.2db61a": {
+    "en": "Loading saved frame…",
+    "ja": "保存フレームを読み込み中…"
+  },
+  "notebook.this-frame-could-not-load-try-another-frame-o.3534ed": {
+    "en": "This frame could not load. Try another frame or the MP4.",
+    "ja": "このフレームを読み込めませんでした。別フレームまたはMP4を試してください。"
+  },
+  "notebook.title-density-and-pressure-at-physical-time-t.fa92c0": {
+    "en": "{title}: density and pressure at physical time {time}, solver step {step}",
+    "ja": "{title}：物理時刻{time}、計算ステップ{step}の密度と圧力"
+  },
+  "notebook.physical-t-time.59bb52": {
+    "en": "Physical t = {time}",
+    "ja": "物理時刻 t = {time}"
+  },
+  "notebook.solver-step-step.280c77": {
+    "en": "Solver step {step}",
+    "ja": "計算ステップ {step}"
+  },
+  "notebook.density-range.4c390c": {
+    "en": "Density range",
+    "ja": "密度の範囲"
+  },
+  "notebook.pressure-range.5a8605": {
+    "en": "Pressure range",
+    "ja": "圧力の範囲"
+  },
+  "notebook.mass-weighted-entropy-proxy-change.19cf70": {
+    "en": "Mass-weighted entropy-proxy change",
+    "ja": "質量重み付きエントロピー指標の変化"
+  },
+  "notebook.cells-cells-cfl-cfl.c42e6f": {
+    "en": "{cells} cells · CFL = {cfl}",
+    "ja": "{cells}セル・CFL = {cfl}"
+  },
+  "notebook.physical-final-time-time.a6f856": {
+    "en": "Physical final time = {time}",
+    "ja": "物理的な終了時刻 = {time}"
+  },
+  "notebook.label-min-to-max.ea8fa4": {
+    "en": "{label}: {min} to {max}",
+    "ja": "{label}：{min} ～ {max}"
+  },
+  "notebook.fixed-for-this-entire-movie.f45042": {
+    "en": "fixed for this entire movie",
+    "ja": "この動画全体で固定"
+  },
+  "notebook.orszag-tang-constrained-transport.e45ebc": {
+    "en": "Orszag–Tang / constrained transport",
+    "ja": "Orszag–Tang／制約付き輸送法"
+  },
+  "notebook.orszag-tang-glm-cleaning.d995f9": {
+    "en": "Orszag–Tang / GLM cleaning",
+    "ja": "Orszag–Tang／GLMクリーニング"
+  },
+  "notebook.isentropic-vortex-original-keep.efc329": {
+    "en": "Isentropic vortex / original KEEP",
+    "ja": "等エントロピー渦／原型KEEP"
+  },
+  "notebook.first-order-hll-ssprk2.82933e": {
+    "en": "First-order HLL + SSPRK2",
+    "ja": "1次HLL + SSPRK2"
+  },
+  "notebook.first-order-rusanov-forward-euler-ct.e41a20": {
+    "en": "First-order Rusanov + forward Euler | CT",
+    "ja": "1次Rusanov + 前進Euler | CT"
+  },
+  "notebook.first-order-rusanov-forward-euler-glm.1d0eaf": {
+    "en": "First-order Rusanov + forward Euler | GLM",
+    "ja": "1次Rusanov + 前進Euler | GLM"
+  },
+  "notebook.second-order-original-keep-classical-rk4.00627d": {
+    "en": "Second-order original KEEP + classical RK4",
+    "ja": "2次の原型KEEP + 古典RK4"
+  },
+  "notebook.mixed-inflow-reflecting-wall-moving-top-shock.edb880": {
+    "en": "mixed inflow / reflecting wall / moving top shock",
+    "ja": "混合流入／反射壁／上端を移動する衝撃波"
+  },
+  "notebook.periodic-square.e6940b": {
+    "en": "periodic square",
+    "ja": "周期正方領域"
+  },
+  "notebook.staggered-face-difference.0d3761": {
+    "en": "staggered face difference",
+    "ja": "スタガード面差分"
+  },
+  "notebook.cell-centered-central-difference.073f9a": {
+    "en": "cell-centered central difference",
+    "ja": "セル中心の中心差分"
+  },
+  "notebook.diffusive-first-order-baseline-no-fine-wall-j.b6dc13": {
+    "en": "Diffusive first-order baseline; no fine wall-jet reproduction.",
+    "ja": "拡散的な1次の基準例で、微細な壁面噴流は再現しません。"
+  },
+  "notebook.first-order-planar-ideal-mhd-ct-glm-native-di.3dcc0e": {
+    "en": "First-order planar ideal MHD; CT/GLM native divergence operators differ; not an equal-accuracy ranking.",
+    "ja": "1次の平面理想MHDです。CT／GLMの固有の発散演算子は異なり、同精度での順位付けではありません。"
+  },
+  "notebook.smooth-vortex-only-original-second-order-keep.ad5ecb": {
+    "en": "Smooth vortex only; original second-order KEEP, approximate entropy preservation, no shock stabilization or PEP extension.",
+    "ja": "滑らかな渦のみを扱う原型の2次KEEPです。エントロピーは近似保存で、衝撃波安定化やPEP拡張は含みません。"
+  },
+  "notebook.the-movie-catalog-could-not-load-reload-the-p.30e989": {
+    "en": "The movie catalog could not load. Reload the page or read the movie guide.",
+    "ja": "動画カタログを読み込めませんでした。再読み込みするか、動画ガイドを参照してください。"
+  },
+  "notebook.extra.436e61016e": {
+    "en": "Play",
+    "ja": "再生"
+  },
+  "notebook.extra.858e4ba7a2": {
+    "en": "Pause",
+    "ja": "一時停止"
+  },
+  "notebook.extra.70c0e501e5": {
+    "en": "First frame",
+    "ja": "最初のフレーム"
+  },
+  "notebook.extra.27060bf3ae": {
+    "en": "Previous frame",
+    "ja": "前のフレーム"
+  },
+  "notebook.extra.92489d93cd": {
+    "en": "Next frame",
+    "ja": "次のフレーム"
+  },
+  "notebook.extra.909e0b8a1f": {
+    "en": "Last frame",
+    "ja": "最後のフレーム"
+  },
+  "notebook.extra.2ee2acd429": {
+    "en": "Yoshida fourth order",
+    "ja": "Yoshidaの4次法"
+  },
+  "notebook.extra.400b3ab94b": {
+    "en": "f and ∂f/∂x",
+    "ja": "f と ∂f/∂x"
+  },
+  "notebook.extra.0c79ca9738": {
+    "en": "Selected: {method} · M = {m}",
+    "ja": "選択：{method}・M = {m}"
+  },
+  "notebook.extra.0aa9626001": {
+    "en": "N = {n} · t = {time} · {steps} steps",
+    "ja": "N = {n}・t = {time}・{steps}ステップ"
+  },
+  "notebook.extra.5cda10a277": {
+    "en": "Scalar / a = {speed}",
+    "ja": "スカラー／a = {speed}"
+  },
+  "notebook.extra.1ffd759d0d": {
+    "en": "SSP C {bound}",
+    "ja": "SSP係数 C {bound}"
+  },
+  "notebook.extra.6c4ce14c1e": {
+    "en": "≥ 1.508 (rounded bound)",
+    "ja": "≥ 1.508（丸めた限界）"
+  },
+  "notebook.extra.b451c01489": {
+    "en": "1.508 / rounded bound",
+    "ja": "1.508／丸めた限界"
+  },
+  "notebook.extra.6458e97c24": {
+    "en": "{label} / selected",
+    "ja": "{label}／選択中"
+  },
+  "notebook.extra.35d900116a": {
+    "en": "Frame {current} of {total}",
+    "ja": "全{total}枚中{current}枚目"
+  },
+  "notebook.extra.9788c4cc49": {
+    "en": "max |div B| ({operator})",
+    "ja": "最大 |div B|（{operator}）"
+  },
+  "notebook.extra.422f919d98": {
+    "en": "The motion gallery",
+    "ja": "動画ギャラリー"
+  },
+  "notebook.scale.pressure": {
+    "en": "Pressure",
+    "ja": "圧力"
+  },
+  "notebook.scale.density": {
+    "en": "Density",
+    "ja": "密度"
+  },
+  "notebook.final.d03e2342af": {
+    "en": "Selected: {method}",
+    "ja": "選択：{method}"
+  },
+  "notebook.final.270cac5a5e": {
+    "en": "First-order upwind",
+    "ja": "1次風上法"
+  },
+  "notebook.final.eb45b66ada": {
+    "en": "Pressure p",
+    "ja": "圧力 p"
   }
 }

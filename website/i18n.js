@@ -19,9 +19,10 @@ export function configureLocale(catalog, locale) {
     else {
       const keys = [], chunks = source.split(/(\{\w+\})/g);
       const expression = chunks.map(chunk => /^\{\w+\}$/.test(chunk) ? (keys.push(chunk.slice(1, -1)), '(.+?)') : escapePattern(chunk)).join('');
-      patterns.push({id, keys, pattern: new RegExp('^' + expression + '$')});
+      patterns.push({id, keys, specificity: chunks.filter(chunk => !/^\{\w+\}$/.test(chunk)).join('').length, pattern: new RegExp('^' + expression + '$')});
     }
   }
+  patterns.sort((a, b) => b.specificity - a.specificity);
 }
 export const currentLanguage = () => language;
 export function t(id, values = {}) {
@@ -55,7 +56,7 @@ export function languageURL(href, locale) {
 }
 
 const excluded = 'pre,code,script,style,.katex,.prose,[data-original],[data-localize="false"]';
-const attributes = ['aria-label', 'placeholder', 'alt', 'title'];
+const attributes = ['aria-label', 'placeholder', 'alt', 'title', 'label'];
 export function localizeTree(root) {
   if (language !== 'ja' || !root) return;
   const visit = node => {

@@ -1,3 +1,4 @@
+import {translateText} from './i18n.js';
 let catalog;
 let cleanup=()=>{};
 const base='assets/movies/';
@@ -31,7 +32,7 @@ export async function wireMovies(requestedCase){
    get('movie-frame').src=base+frame.file;get('movie-frame').alt=`${movie.title}: density and pressure at physical time ${frame.time.toFixed(6)}, solver step ${frame.step}`;
    get('movie-time').textContent=`t = ${frame.time.toFixed(6)}`;
    get('movie-position').textContent=`${current+1} / ${movie.frames.length}`;
-   get('movie-seek').value=current;get('movie-seek-label').textContent=`${current+1} of ${movie.frames.length}`;
+   get('movie-seek').value=current;get('movie-seek-label').textContent=`Frame ${current+1} of ${movie.frames.length}`;
    get('movie-summary').innerHTML=`<span>${esc(movie.title)}</span><span>Physical t = ${frame.time.toFixed(6)}</span><span>Solver step ${frame.step}</span>`;
    get('movie-first').disabled=get('movie-previous').disabled=current===0;
    get('movie-last').disabled=get('movie-next').disabled=current===movie.frames.length-1;
@@ -55,7 +56,7 @@ export async function wireMovies(requestedCase){
    get('movie-seek').max=movie.frames.length-1;get('movie-seek').disabled=false;
    get('movie-download').href=base+movie.video;get('movie-download').download=movie.id+'.mp4';
    get('movie-video').src=base+movie.video;get('movie-video').poster=base+movie.poster;get('movie-video').load();
-   get('movie-scale-note').textContent=movie.scales.map(s=>`${s.label}: ${s.min.toPrecision(4)} to ${s.max.toPrecision(4)}`).join(' · ')+' · fixed for this entire movie';
+   get('movie-scale-note').textContent=movie.scales.map(s=>translateText(`${s.label}: ${s.min.toPrecision(4)} to ${s.max.toPrecision(4)}`)).join(' · ')+' · '+translateText('fixed for this entire movie');
    get('movie-play').disabled=false;await show(0);
   };
   get('movie-case').innerHTML=data.movies.map(m=>`<option value="${esc(m.id)}">${esc(m.title)}</option>`).join('');get('movie-case').disabled=false;

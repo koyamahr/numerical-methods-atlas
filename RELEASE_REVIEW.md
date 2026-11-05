@@ -2,9 +2,9 @@
 
 This candidate adds the equation gallery, solver foundations, source-based
 biology/GSPH/relativistic chapters, Arakawa-grid comparisons and audited
-homepage coverage. It is prepared for the existing GitHub Pages site;
-merging to `main` triggers publication, so the review branch does not update
-the public website.
+homepage coverage. It is prepared on a review branch and does not update the public website.
+The publication guard requires the planned new repository; merging this
+candidate to the legacy repository does not deploy the new edition there.
 
 ## Proposed public presentation
 
@@ -14,9 +14,11 @@ publication target. Keep the sibling link to *The Art of Thermal Instability*.
 The existing public site remains at the old URL until cutover; see
 `URL_MIGRATION.md` for the separate legacy landing artifact and publication guard.
 English remains the source edition. The bilingual candidate adds a 137-term
-glossary and four Japanese draft chapters; the other 38 chapters retain explicit
-English fallback. See `BILINGUAL_STATUS.md` for untranslated advanced notebooks
-and source annotations.
+glossary and Japanese drafts for all 42 reading chapters. All experiment
+notebooks localize their controls and explanations. Original bibliographic
+metadata/source notes, detailed coverage annotations and image/video lettering
+remain shared. The drafts have not been marked editorially reviewed; see
+`BILINGUAL_STATUS.md`.
 The homepage leads with 126 journal/conference papers and distinguishes
 42 equation/model entries, 83 methods/building blocks, 146 total sources,
 and nine saved-profile gallery cases.
@@ -59,6 +61,9 @@ references, catalogs and already saved numerical assets. They do not rerun
 numerical solvers. Numerical builders remain explicit commands. The static
 release checker verifies chapter synchronization, local reading/asset links,
 module imports, bibliography/coverage consistency and artifact hashes.
+The bilingual build also compares section IDs, display equations, executable
+code blocks and external citation links against the English source. Japanese
+catalog chapters reuse the same 22 model identities and 146 source records.
 
 Both CI and the Pages workflow use the same preparation/check path. The Pages
 workflow watches the catalogs, documents and preparation scripts as well as

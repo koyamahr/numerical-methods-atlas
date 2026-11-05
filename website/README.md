@@ -108,4 +108,4 @@ sources; local examples and reading-only entries remain labeled.
 
 ## Japanese and English
 
-The local bilingual edition adds a language switch, a bilingual glossary and four complete Japanese draft chapters. Other chapters retain an explicit English fallback; advanced notebooks and original source notes currently retain English. See [implementation status](../BILINGUAL_STATUS.md) and [migration plan](../BILINGUAL_PLAN.md). Translation files do not increase the logical chapter, method, model or publication counts.
+The local bilingual edition adds a language switch, a bilingual glossary and all 42 complete Japanese draft chapters. Experiment notebooks also localize their controls and explanations. Original bibliographic metadata/source notes, detailed coverage annotations and lettering baked into images/video retain their source form. The Japanese drafts have not been marked editorially reviewed. See [implementation status](../BILINGUAL_STATUS.md) and [migration plan](../BILINGUAL_PLAN.md). Translation files do not increase the logical chapter, method, model or publication counts.

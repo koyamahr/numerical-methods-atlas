@@ -235,4 +235,4 @@ python scripts/sync_web_content.py
 
 English title: **An Atlas of Numerical Methods**. Japanese title: **数値計算法アトラス**. Interactive links in this README target the planned new address; the published edition above still uses the old address.
 
-The local review candidate now supports Japanese/English switching, 137 bilingual terms and four Japanese draft chapters. Remaining reading chapters and advanced notebooks expose their English status explicitly. See [implementation status](BILINGUAL_STATUS.md) and [migration plan](BILINGUAL_PLAN.md). These changes have not been deployed to the public site.
+The local review candidate now supports Japanese/English switching, 137 bilingual terms, all 42 reading chapters in Japanese draft, and Japanese controls/explanations across the experiment notebooks. Original bibliography metadata, source notes and image/video lettering remain shared. The drafts still need editorial review. See [implementation status](BILINGUAL_STATUS.md) and [migration plan](BILINGUAL_PLAN.md). These changes have not been deployed to the public site.

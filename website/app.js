@@ -102,7 +102,6 @@ const eras = [
 let documents, references, sod, experiments, foundations, coverage, translationStatus, localeCatalog, glossary;
 const documentCache = new Map();
 const originalShell = new Map([...document.querySelectorAll('.site-header,.site-footer,#figure-dialog,.skip-link')].map(element => [element, element.innerHTML]));
-const englishNotebooks = new Set(['time-integration','meshes','hamiltonian','limiters','runge-kutta','cip','movies']);
 let navigationVersion = 0, switching = false;
 async function loadDocuments(language) {
  if (!documentCache.has(language)) documentCache.set(language, fetch(`content.${language}.json`).then(response => {if(!response.ok)throw Error('Cannot load reading language');return response.json();}).catch(error => {documentCache.delete(language);throw error;}));
@@ -243,11 +242,6 @@ async function route(options={}) {
  main.innerHTML=(renderers[type]||notFound)();
  document.body.dataset.page=type;
  main.lang=currentLanguage();main.removeAttribute('data-localize');
- if(currentLanguage()==='ja' && englishNotebooks.has(type)) {
-  const wrapper=document.createElement('div');wrapper.lang='en';wrapper.dataset.localize='false';
-  while(main.firstChild)wrapper.append(main.firstChild);
-  const notice=document.createElement('p');notice.className='translation-notice page-width';notice.lang='ja';notice.textContent=t('translation.experiment');main.append(notice,wrapper);
- }
  document.querySelectorAll('[data-nav]').forEach(a=>{if(a.dataset.nav===type||(type==='movies'&&a.dataset.nav==='gallery')||(['convergence','time-integration','meshes','hamiltonian','limiters','runge-kutta','cip'].includes(type)&&a.dataset.nav==='experiments'))a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
  document.querySelector('.site-header').classList.remove('menu-open');document.querySelector('.mobile-menu').setAttribute('aria-expanded','false');
  document.title=type==='home'?site.title[currentLanguage()]:`${type==='read'?(documents[parts[1]]?.title||'Reading room'):({glossary:currentLanguage()==='ja'?'日英用語集':'Bilingual glossary',coverage:'The atlas in numbers',equations:'Equation gallery',atlas:'Historical atlas',methods:'Explore the methods',gallery:'Numerical gallery',movies:'Motion gallery',references:'Reference library',experiments:'Stability laboratory',convergence:'Convergence notebook','time-integration':'Time integration notebook',meshes:'Mesh explorer',hamiltonian:'Hamiltonian map notebook',limiters:'Slope limiter notebook','runge-kutta':'Runge–Kutta family notebook',cip:'CIP profile notebook'}[type]||'Page not found')} · ${site.title[currentLanguage()]}`;
