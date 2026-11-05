@@ -68,3 +68,17 @@ Added fixed-step canonical maps and a notebook for harmonic/quartic oscillators;
 ## Fourth expansion: nonsteady movies and smooth KEEP
 
 Added saved-state output that leaves solver time steps unchanged, four numerical movies with frame inspection and MP4 export, and the original second-order Cartesian KEEP flux with smooth-vortex refinement. Steady fields retain still images. The KEEP implementation excludes shock stabilization, later PEP/redefined variants, high-order curvilinear forms, and the 3D TGV/LES examples discussed in the reading guide.
+
+## Fifth expansion: limiters, RK families, and CIP
+
+Added selectable MUSCL slopes, TVB modified-minmod and positive-reconstruction building blocks, nine explicit RK tableaus with nonlinear stage verification, twelve oscillator methods, and original cubic-Hermite CIP with a conservation counterexample. Full Euler-update positivity is still a separate extension.
+
+## Authorized next work
+
+- PPM, characteristic reconstruction, and WENO-Z with controlled shock/contact comparisons.
+- HLLD, Brio–Wu, Alfvén-wave and field-loop verification, with explicit CT/GLM scope.
+- Stiff integration: implicit RK, IMEX, and operator splitting with exact or manufactured references.
+- Krylov solvers: BiCGSTAB and restarted GMRES, CG applicability, Jacobi and ILU preconditioning, true-residual/error checks and explicit failure reporting.
+- Viscous/incompressible flow: projection, SIMPLE/PISO, cavity and cylinder-wake validation.
+
+AMR is deferred at the author’s request; it is not part of this expansion.

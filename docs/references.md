@@ -213,6 +213,14 @@ Woodward, Paul and Colella, Phillip. **The numerical simulation of two-dimension
 
 DOI identifies the original 1984 paper; linked NASA tutorial is a later setup reference. This edition computes a first-order 2D HLL Double Mach Reflection baseline, not the original PPM figure. Forward-facing step remains future work.
 
+## 1985 · takewaki1985cip
+
+Takewaki, H. and Nishiguchi, A. and Yabe, T.. **Cubic interpolated pseudo-particle method (CIP) for solving hyperbolic-type equations**. Journal of Computational Physics.
+
+[Original bibliographic record](https://doi.org/10.1016/0021-9991(85)90085-3) · [Full text or implementation reference](https://www.sciencedirect.com/science/article/pii/0021999185900853)
+
+Publisher bibliographic record and indexed abstract inspected; full-text retrieval was unavailable. Early cubic reconstruction with independently specified gradients. The atlas implements a documented constant-speed 1D Hermite case, not all original algorithm variants.
+
 ## 1986 · barnes1986
 
 Barnes, Josh and Hut, Piet. **A hierarchical O(N log N) force-calculation algorithm**. Nature.
@@ -317,6 +325,14 @@ Jameson, Antony. **Time dependent calculations using multigrid, with application
 
 The DOI identifies the original paper; the linked source is a later exposition by a coauthor. Dual time stepping here is a minimal linear-advection model.
 
+## 1991 · yabe1991cip
+
+Yabe, T. and Aoki, T.. **A universal solver for hyperbolic equations by cubic-polynomial interpolation I. One-dimensional solver**. Computer Physics Communications.
+
+[Original bibliographic record](https://doi.org/10.1016/0010-4655(91)90071-R) · [Full text or implementation reference](https://www.sciencedirect.com/science/article/pii/001046559190071R)
+
+Publisher indexed abstract and bibliographic data inspected; full-text retrieval was unavailable. Value-and-gradient cubic CIP evolution is demonstrated for uniform periodic constant-speed scalar advection only.
+
 ## 1994 · hllc1994
 
 Toro, E. F. and Spruce, M. and Speares, W.. **Restoration of the contact surface in the HLL-Riemann solver**. Shock Waves.
@@ -388,6 +404,14 @@ Pandolfi, Maurizio and D’Ambrosio, Domenic. **Numerical Instabilities in Upwin
 [Original bibliographic record](https://doi.org/10.1006/jcph.2000.6652) · [Full text or implementation reference](https://www.sciencedirect.com/science/article/pii/S002199910096652X)
 
 Publisher record and abstract. Linearized shock-instability analysis and localized cures; the proposed methods are not implemented in this edition.
+
+## 2001 · yabe2001csl
+
+Yabe, T. and Tanaka, R. and Nakamura, T. and Xiao, F.. **An Exactly Conservative Semi-Lagrangian Scheme (CIP–CSL) in One Dimension**. Monthly Weather Review.
+
+[Original bibliographic record](https://doi.org/10.1175/1520-0493(2001)129<0332:AECSLS>2.0.CO;2) · [Full text or implementation reference](https://journals.ametsoc.org/view/journals/mwre/129/2/1520-0493_2001_129_0332_aecsls_2.0.co_2.xml)
+
+Publisher indexed abstract and bibliographic data inspected; full-page retrieval was unavailable. Integral constraints and exactly conservative CIP-CSL are reading context, not implemented by the basic cubic-CIP example.
 
 ## 2002 · dedner2002
 
@@ -500,6 +524,14 @@ Kuya, Yuichi and Totani, Kosuke and Kawai, Soshi. **Kinetic energy and entropy p
 [Original bibliographic record](https://doi.org/10.1016/j.jcp.2018.08.058) · [Full text or implementation reference](https://www.iccfd.org/iccfd11/assets/pdf/papers/ICCFD11_Paper-0401.pdf)
 
 DOI identifies the original 2018 paper. The authors’ 2022 conference explanation, Eq. (9), is the accessible implementation source for our second-order arithmetic-mean Cartesian baseline. Entropy is not claimed exact to roundoff; no shock stabilization is implemented.
+
+## 2020 · saito2020rcip
+
+Saito, Fuyuki and Obase, Takashi and Abe-Ouchi, Ayako. **Implementation of the RCIP scheme and its performance for 1-D age computations in ice-sheet models**. Geoscientific Model Development.
+
+[Original bibliographic record](https://doi.org/10.5194/gmd-13-5875-2020) · [Full text or implementation reference](https://gmd.copernicus.org/articles/13/5875/2020/)
+
+Open primary paper inspected. CIP-family value/gradient transport, velocity-gradient terms, and rational reconstruction conventions. The atlas does not implement this RCIP ice-age model or its variable-velocity departure correction.
 
 ## 2021 · shima2021
 

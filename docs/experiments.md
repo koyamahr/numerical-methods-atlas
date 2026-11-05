@@ -161,3 +161,7 @@ reconstruction helper confers a fully discrete Euler positivity guarantee.
 ## Runge–Kutta family notebook
 
 The [family notebook](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/runge-kutta) compares nine fixed-step explicit RK tableaus. Three RK2 methods share a linear stability polynomial but differ on the nonlinear y′=−y² test. Select a one-step size, inspect actual RHS-stage predictors, and compare sampled stability contours and final-time refinement. Formal order, stage count, nonlinear SSP coefficient, and RHS work are displayed separately. Read [the RK chapter](runge-kutta.md) for all definitions and conditional SSP assumptions. `python scripts/build_runge_kutta.py` creates the plotted data and source manifest. The existing oscillator notebook now offers twelve temporal methods; its implicit options remain scalar linear models.
+
+## CIP value and gradient transport
+
+The [CIP notebook](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/cip) compares original cubic-Hermite CIP with linear point interpolation on uniform periodic scalar advection. It displays the independently transported gradient, derivative-initialization choices, smooth refinement, overshoot on a square pulse, and an analytic conservation counterexample. Read [the definitions](cip.md); point samples and finite-volume averages are not interchangeable. Rebuild with `python scripts/build_cip.py` before syncing.

@@ -111,3 +111,6 @@ print('Synced limiter curves, TVB comparisons, and conservative positive-state s
 
 shutil.copyfile(ROOT/'docs/figures/runge-kutta.json',content/'runge-kutta.json')
 print('Synced RK tableaus, nonlinear stage cases, stability contours, and temporal refinement.')
+
+shutil.copyfile(ROOT/'docs/figures/cip.json',content/'cip.json')
+print('Synced original CIP values, gradients, scalar refinements, and conservation counterexample.')

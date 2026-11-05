@@ -66,6 +66,10 @@ compressible test are also distinguished.
 
 [Sweby (1984)](https://doi.org/10.1137/0721062) organizes scalar flux-limiter bounds. [Cockburn–Shu (1989)](https://doi.org/10.1090/S0025-5718-1989-0983311-4) develops the TVB RKDG framework. Compare five [slope limiters](limiters.md), then inspect the separate [TVB and positive-state scaling](advanced-limiters.md) building blocks. The latter also links the positivity framework of Zhang–Shu (2010), with its required flux, quadrature, CFL, and SSP conditions.
 
+## 1985–1991: cubic profiles and transported gradients
+
+[Takewaki–Nishiguchi–Yabe (1985)](https://doi.org/10.1016/0021-9991(85)90085-3) and [Yabe–Aoki (1991)](https://doi.org/10.1016/0010-4655(91)90071-R) develop the CIP line of cubic value/gradient transport. The [CIP chapter](cip.md) computes a constant-speed scalar example and distinguishes later conservative and rational branches. Its constructed Hermite-field test separates low diffusion from a mass-conservation guarantee.
+
 ## 1987–1989: higher order, preconditioning, and magnetic constraints
 
 ENO by Harten and colleagues (1987), Turkel's low-speed preconditioning (1987),

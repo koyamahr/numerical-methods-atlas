@@ -1,3 +1,4 @@
+import {cipPage,wireCIP} from './cip.js';
 import {rkPage,wireRK} from './runge-kutta.js';
 import {limiterPage,wireLimiters} from './limiters.js';
 import {moviesPage,wireMovies,disposeMovies} from './movies.js';
@@ -27,9 +28,11 @@ const methods = [
   {id:'limiters',number:'17',title:'Slope limiters & TVD',description:'Compare minmod, Superbee, MC, van Leer, and van Albada on common scalar and Euler tests.',formula:'s = φ(r) Δ⁺u',tag:'MUSCL · SWEBY'},
   {id:'advanced-limiters',number:'18',title:'TVB & positive-state scaling',description:'Relax smooth extrema with modified minmod, then scale Euler reconstruction states while preserving a consistent conservative mean.',formula:'Û = Ū + θ(U − Ū)',tag:'ADVANCED · ADMISSIBILITY'},
   {id:'keep',number:'19',title:'KEEP & smooth-flow structure',description:'Original Kuya–Totani–Kawai flux, isentropic vortex refinement, entropy diagnostics, and explicit shock/positivity caveats.',formula:'Fᴱ = C(½uᴸ · uᴿ + ē) + P',tag:'LOW DISSIPATION · EULER'},
-  {id:'runge-kutta',number:'20',title:'Runge–Kutta families',description:'RK2 variants, classical RK4, SSPRK stages and orders, Butcher tableaus, linear stability contours, and nonlinear tests.',formula:'h ≤ C h_FE',tag:'STAGES · ORDER · SSP'}
+  {id:'runge-kutta',number:'20',title:'Runge–Kutta families',description:'RK2 variants, classical RK4, SSPRK stages and orders, Butcher tableaus, linear stability contours, and nonlinear tests.',formula:'h ≤ C h_FE',tag:'STAGES · ORDER · SSP'},
+  {id:'cip',number:'21',title:'CIP / value and gradient',description:'Characteristic cubic-Hermite transport, evolved derivatives, sharp-profile oscillations, refinement, and a conservation counterexample.',formula:'fⁿ⁺¹ = P(x − aΔt)',tag:'SEMI-LAGRANGIAN · HERMITE'}
 ];
 const figures = [
+ {file:'cip.png',title:'CIP carries the gradient',category:'Advection & stability',year:'1985–2001',description:'Original cubic-Hermite CIP with smooth and square profiles, independently evolved gradients, and an analytic conservation counterexample.',chapter:'cip'},
  {file:'runge-kutta.png',title:'Runge–Kutta family relationships',category:'Advection & stability',year:'2001–2009',description:'Nine explicit RK methods: shared linear stability polynomials, different nonlinear stages, measured orders, and conditional SSP bounds.',chapter:'runge-kutta'},
  {file:'limiters.png',title:'Choose the slope limiter',category:'Conservation laws',year:'1974–2010',description:'Five slope choices on the same periodic pulse and Sod problem, plus smooth-wave refinement. TVB and positive reconstruction have a separate advanced explanation.',chapter:'limiters'},
  {file:'keep-vortex.png',title:'KEEP on a smooth vortex',category:'Advection & stability',year:'2018–2024',description:'Original second-order Cartesian KEEP + RK4: smooth-vortex refinement and approximate entropy preservation. No shock stabilization or pressure-equilibrium extension.',chapter:'keep',movie:'keep-vortex'},
@@ -86,6 +89,7 @@ function home() {
  <aside class="callout page-width"><p class="eyebrow">NEW / HAMILTONIAN MAPS & PARTICLE GRAVITY</p><h2>Preserve the geometry. Choose the boundary.</h2><p>Inspect canonical maps and energy histories, then follow particles through PM, Tree forces, multipole expansions, and isolated or slab Poisson kernels.</p><a class="text-link" href="#/hamiltonian">Open the Hamiltonian notebook ↗</a> · <a class="text-link" href="#/read/gravity-boundaries">Read the gravity kernels ↗</a></aside>
  <section class="section methods-section"><div class="page-width"><div class="section-heading"><div>${eyebrow('EXPLORE BY METHOD')}<h2>From a stencil to a solver.</h2></div><a class="text-link" href="#/methods">All methods ${arrow}</a></div><div class="method-grid">${methods.slice(0,3).map(methodCard).join('')}</div></div></section>
  <section class="section page-width"><div class="section-heading"><div>${eyebrow('THE COMPUTED EVIDENCE')}<h2>See the method at work.</h2></div><a class="text-link" href="#/gallery">Browse the gallery ${arrow}</a></div><div class="figure-grid home-figures">${[figures[0],figures[3],figures[4]].map(figureCard).join('')}</div><p class="scope-note"><span aria-hidden="true">↳</span> Independent educational implementations. Each exhibit states its reference solution, assumptions, and verification limits.</p></section>
+ <aside class="callout page-width"><p class="eyebrow">NEW / CUBIC CIP</p><h2>Carry the value. Evolve the gradient.</h2><p>Compare cubic-Hermite CIP with linear interpolation, inspect smooth refinement and sharp-profile overshoots, and test a conservative-remapping claim.</p><a class="text-link" href="#/cip">Open the CIP notebook ↗</a></aside>
  <aside class="callout page-width"><p class="eyebrow">NEW / RUNGE–KUTTA FAMILIES</p><h2>More stages. A different guarantee.</h2><p>Compare RK2 variants, classical RK4, and SSPRK(2,2), (3,3), (4,3), and (5,4). Inspect actual nonlinear stages, full coefficients, linear stability, and the forward-Euler inheritance condition.</p><a class="text-link" href="#/runge-kutta">Explore the RK family ↗</a></aside>
  <aside class="callout page-width"><p class="eyebrow">NEW / LIMITERS &amp; ADVANCED RECONSTRUCTION</p><h2>Choose the slope. Preserve the mean.</h2><p>Compare minmod, Superbee, MC, van Leer, and van Albada. Inspect scalar TVD bounds, TVB extrema relaxation, and positive Euler-state scaling with explicit scope.</p><a class="text-link" href="#/limiters">Open the limiter notebook ↗</a> · <a class="text-link" href="#/read/advanced-limiters">Read TVB &amp; positivity ↗</a></aside>
  <aside class="callout page-width motion-banner"><p class="eyebrow">NEW / TIME-DEPENDENT COMPUTATIONS</p><h2>Some results need time.</h2><p>Play Double Mach Reflection, Orszag–Tang CT/GLM, and a smooth KEEP vortex. Inspect the actual solver time, step count, and fixed color scales.</p><a class="text-link" href="#/movies">Open the motion gallery ▷</a></aside>
@@ -151,12 +155,12 @@ function route() {
  disposeMovies();
  const [path,queryString='']=(location.hash.slice(1)||'/').split('?');
  const parts=path.split('/').filter(Boolean),type=parts[0]||'home',query=new URLSearchParams(queryString);
- const renderers={home,atlas,methods:methodPage,gallery,movies:moviesPage,limiters:limiterPage,'runge-kutta':rkPage,experiments:stabilityPage,convergence:convergencePage,'time-integration':timePage,meshes:meshPage,hamiltonian:hamiltonianPage,references:()=>referencePage(query.get('q')||''),read:()=>chapter(parts[1])};
+ const renderers={home,atlas,methods:methodPage,gallery,movies:moviesPage,limiters:limiterPage,'runge-kutta':rkPage,cip:cipPage,experiments:stabilityPage,convergence:convergencePage,'time-integration':timePage,meshes:meshPage,hamiltonian:hamiltonianPage,references:()=>referencePage(query.get('q')||''),read:()=>chapter(parts[1])};
  main.innerHTML=(renderers[type]||notFound)();
  document.body.dataset.page=type;
- document.querySelectorAll('[data-nav]').forEach(a=>{if(a.dataset.nav===type||(type==='movies'&&a.dataset.nav==='gallery')||(['convergence','time-integration','meshes','hamiltonian','limiters','runge-kutta'].includes(type)&&a.dataset.nav==='experiments'))a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
+ document.querySelectorAll('[data-nav]').forEach(a=>{if(a.dataset.nav===type||(type==='movies'&&a.dataset.nav==='gallery')||(['convergence','time-integration','meshes','hamiltonian','limiters','runge-kutta','cip'].includes(type)&&a.dataset.nav==='experiments'))a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
  document.querySelector('.site-header').classList.remove('menu-open');document.querySelector('.mobile-menu').setAttribute('aria-expanded','false');
- document.title=type==='home'?'The Art of Numerical Algorithms':`${type==='read'?(documents[parts[1]]?.title||'Reading room'):({atlas:'Historical atlas',methods:'Explore the methods',gallery:'Numerical gallery',movies:'Motion gallery',references:'Reference library',experiments:'Stability laboratory',convergence:'Convergence notebook','time-integration':'Time integration notebook',meshes:'Mesh explorer',hamiltonian:'Hamiltonian map notebook',limiters:'Slope limiter notebook','runge-kutta':'Runge–Kutta family notebook'}[type]||'Page not found')} · The Art of Numerical Algorithms`;
+ document.title=type==='home'?'The Art of Numerical Algorithms':`${type==='read'?(documents[parts[1]]?.title||'Reading room'):({atlas:'Historical atlas',methods:'Explore the methods',gallery:'Numerical gallery',movies:'Motion gallery',references:'Reference library',experiments:'Stability laboratory',convergence:'Convergence notebook','time-integration':'Time integration notebook',meshes:'Mesh explorer',hamiltonian:'Hamiltonian map notebook',limiters:'Slope limiter notebook','runge-kutta':'Runge–Kutta family notebook',cip:'CIP profile notebook'}[type]||'Page not found')} · The Art of Numerical Algorithms`;
  if(type==='read')document.querySelectorAll('.heading-anchor').forEach(a=>{a.href=`#/read/${parts[1]}?section=${a.parentElement.id}`;});
  if(type==='references') {filterReferences(query.get('q')||'');document.querySelector('#reference-search').addEventListener('input',e=>filterReferences(e.target.value));}
  wire();
@@ -167,6 +171,7 @@ function route() {
  if(type==='hamiltonian')wireHamiltonian();
  if(type==='limiters')wireLimiters();
  if(type==='runge-kutta')wireRK();
+ if(type==='cip')wireCIP();
  if(type==='movies')wireMovies(query.get('case'));
  if(query.get('section'))requestAnimationFrame(()=>document.getElementById(query.get('section'))?.scrollIntoView());else window.scrollTo({top:0,behavior:'instant'});
 }

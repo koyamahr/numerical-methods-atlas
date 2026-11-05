@@ -46,12 +46,13 @@ Additional reading: [time integration and leapfrog](docs/time-integration.md), [
 
 Further reading: [symplectic Hamiltonian maps](docs/symplectic.md), [PM / P³M / Tree / multipoles](docs/particle-gravity.md), and [Hockney–Eastwood / Koyama–Ostriker gravity kernels](docs/gravity-boundaries.md).
 
-New exhibits: [Runge–Kutta families](docs/runge-kutta.md), [slope limiters](docs/limiters.md), [advanced TVB and positive-state scaling](docs/advanced-limiters.md), [nonsteady movies](docs/movies.md), and [original KEEP with smooth tests and caveats](docs/keep.md). Steady fields remain still figures.
+New exhibits: [CIP value/gradient transport](docs/cip.md), [Runge–Kutta families](docs/runge-kutta.md), [slope limiters](docs/limiters.md), [advanced TVB and positive-state scaling](docs/advanced-limiters.md), [nonsteady movies](docs/movies.md), and [original KEEP with smooth tests and caveats](docs/keep.md). Steady fields remain still figures.
 
 ## Interactive notebooks
 
 - [Stability laboratory](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/experiments): compute periodic FTCS, upwind, LF, and LW advection in the browser. Change the signed Courant number, initial profile, and step count; inspect amplification and export the experiment.
 - [Convergence notebook](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/convergence): inspect the original DG and Euler entropy-wave refinement data, switch between elements and unknowns, and read measured convergence orders.
+- [CIP profiles](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/cip): cubic-Hermite value/gradient transport, scalar advection, refinement, oscillations, and a conservation counterexample.
 - [Runge–Kutta families](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/runge-kutta): nine explicit RK methods, actual nonlinear stages, Butcher tableaus, stability contours, measured orders, and conditional SSP bounds.
 - [Time integration](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/time-integration): twelve Python-computed oscillator methods, including unfiltered leapfrog and its startup mode.
 - [Mesh explorer](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/meshes): select cells and inspect face-sharing neighbors in structured and irregular meshes.
@@ -111,7 +112,7 @@ establish which method is more accurate.
 ## Implemented in the current first edition
 
 - **Finite differences:** forward, backward, centered, and upwind stencils; Lax–Friedrichs, Lax–Wendroff, and componentwise FD WENO5-JS.
-- **Finite volumes:** piecewise-constant Godunov-type updates and primitive-variable minmod MUSCL; Rusanov, HLL, HLLE, HLLC, and Roe fluxes.
+- **Finite volumes:** piecewise-constant Godunov-type updates and primitive-variable slope-limited MUSCL; Rusanov, HLL, HLLE, HLLC, and Roe fluxes.
 - **Discontinuous Galerkin:** periodic linear advection with modal Legendre P0/P1/P2, upwind fluxes, and SSPRK3.
 - **Spectral methods:** periodic Fourier advection and diffusion, exact integration of linear modes, and Fourier differentiation.
 - **Smooth KEEP:** original second-order arithmetic-mean Cartesian Euler flux with RK4, periodic isentropic-vortex refinement and explicit entropy/shock/PEP caveats.
@@ -150,8 +151,8 @@ python scripts/build_references.py
 
 ## Build the web edition
 
-The static website lives in [`website/`](website/README.md). It renders twenty-seven
-reading chapters and their equations, includes eighteen gallery figures and four computed movies, and uses
+The static website lives in [`website/`](website/README.md). It renders twenty-eight
+reading chapters and their equations, includes nineteen gallery figures and four computed movies, and uses
 precomputed library results for the interactive Sod comparison. See the web
 README for local preview and content-refresh commands.
 
@@ -163,6 +164,7 @@ python scripts/build_particle_gravity.py
 python scripts/build_gravity_boundaries.py
 python scripts/build_limiters.py
 python scripts/build_runge_kutta.py
+python scripts/build_cip.py
 python scripts/sync_web_content.py
 ```
 

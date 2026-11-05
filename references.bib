@@ -295,6 +295,18 @@
   note = {DOI identifies the original 1984 paper; linked NASA tutorial is a later setup reference. This edition computes a first-order 2D HLL Double Mach Reflection baseline, not the original PPM figure. Forward-facing step remains future work.}
 }
 
+@article{takewaki1985cip,
+  author = {Takewaki, H. and Nishiguchi, A. and Yabe, T.},
+  title = {Cubic interpolated pseudo-particle method (CIP) for solving hyperbolic-type equations},
+  year = {1985},
+  journal = {Journal of Computational Physics},
+  volume = {61},
+  pages = {261--268},
+  doi = {10.1016/0021-9991(85)90085-3},
+  url = {https://www.sciencedirect.com/science/article/pii/0021999185900853},
+  note = {Publisher bibliographic record and indexed abstract inspected; full-text retrieval was unavailable. Early cubic reconstruction with independently specified gradients. The atlas implements a documented constant-speed 1D Hermite case, not all original algorithm variants.}
+}
+
 @article{barnes1986,
   author = {Barnes, Josh and Hut, Piet},
   title = {A hierarchical O(N log N) force-calculation algorithm},
@@ -449,6 +461,18 @@
   note = {The DOI identifies the original paper; the linked source is a later exposition by a coauthor. Dual time stepping here is a minimal linear-advection model.}
 }
 
+@article{yabe1991cip,
+  author = {Yabe, T. and Aoki, T.},
+  title = {A universal solver for hyperbolic equations by cubic-polynomial interpolation I. One-dimensional solver},
+  year = {1991},
+  journal = {Computer Physics Communications},
+  volume = {66},
+  pages = {219--232},
+  doi = {10.1016/0010-4655(91)90071-R},
+  url = {https://www.sciencedirect.com/science/article/pii/001046559190071R},
+  note = {Publisher indexed abstract and bibliographic data inspected; full-text retrieval was unavailable. Value-and-gradient cubic CIP evolution is demonstrated for uniform periodic constant-speed scalar advection only.}
+}
+
 @article{hllc1994,
   author = {Toro, E. F. and Spruce, M. and Speares, W.},
   title = {Restoration of the contact surface in the HLL-Riemann solver},
@@ -551,6 +575,18 @@
   doi = {10.1006/jcph.2000.6652},
   url = {https://www.sciencedirect.com/science/article/pii/S002199910096652X},
   note = {Publisher record and abstract. Linearized shock-instability analysis and localized cures; the proposed methods are not implemented in this edition.}
+}
+
+@article{yabe2001csl,
+  author = {Yabe, T. and Tanaka, R. and Nakamura, T. and Xiao, F.},
+  title = {An Exactly Conservative Semi-Lagrangian Scheme (CIP–CSL) in One Dimension},
+  year = {2001},
+  journal = {Monthly Weather Review},
+  volume = {129},
+  pages = {332--344},
+  doi = {10.1175/1520-0493(2001)129<0332:AECSLS>2.0.CO;2},
+  url = {https://journals.ametsoc.org/view/journals/mwre/129/2/1520-0493_2001_129_0332_aecsls_2.0.co_2.xml},
+  note = {Publisher indexed abstract and bibliographic data inspected; full-page retrieval was unavailable. Integral constraints and exactly conservative CIP-CSL are reading context, not implemented by the basic cubic-CIP example.}
 }
 
 @article{dedner2002,
@@ -712,6 +748,18 @@
   doi = {10.1016/j.jcp.2018.08.058},
   url = {https://www.iccfd.org/iccfd11/assets/pdf/papers/ICCFD11_Paper-0401.pdf},
   note = {DOI identifies the original 2018 paper. The authors’ 2022 conference explanation, Eq. (9), is the accessible implementation source for our second-order arithmetic-mean Cartesian baseline. Entropy is not claimed exact to roundoff; no shock stabilization is implemented.}
+}
+
+@article{saito2020rcip,
+  author = {Saito, Fuyuki and Obase, Takashi and Abe-Ouchi, Ayako},
+  title = {Implementation of the RCIP scheme and its performance for 1-D age computations in ice-sheet models},
+  year = {2020},
+  journal = {Geoscientific Model Development},
+  volume = {13},
+  pages = {5875--5896},
+  doi = {10.5194/gmd-13-5875-2020},
+  url = {https://gmd.copernicus.org/articles/13/5875/2020/},
+  note = {Open primary paper inspected. CIP-family value/gradient transport, velocity-gradient terms, and rational reconstruction conventions. The atlas does not implement this RCIP ice-age model or its variable-velocity departure correction.}
 }
 
 @article{shima2021,

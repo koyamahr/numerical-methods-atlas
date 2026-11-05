@@ -821,5 +821,53 @@
     "title": "Numipedia: Runge–Kutta method records",
     "source": "https://ketch.github.io/numipedia/methods/RK44.html",
     "note": "Author-maintained coefficient and stability records inspected in November 2026; access year, not an invention date. RK44, SSPRK22, and SSPRK43 records cross-check tableaus, scalar polynomials, and absolute-monotonicity radii."
+  },
+  {
+    "id": "takewaki1985cip",
+    "year": 1985,
+    "author": "Takewaki, H. and Nishiguchi, A. and Yabe, T.",
+    "title": "Cubic interpolated pseudo-particle method (CIP) for solving hyperbolic-type equations",
+    "journal": "Journal of Computational Physics",
+    "volume": "61",
+    "pages": "261--268",
+    "doi": "10.1016/0021-9991(85)90085-3",
+    "source": "https://www.sciencedirect.com/science/article/pii/0021999185900853",
+    "note": "Publisher bibliographic record and indexed abstract inspected; full-text retrieval was unavailable. Early cubic reconstruction with independently specified gradients. The atlas implements a documented constant-speed 1D Hermite case, not all original algorithm variants."
+  },
+  {
+    "id": "yabe1991cip",
+    "year": 1991,
+    "author": "Yabe, T. and Aoki, T.",
+    "title": "A universal solver for hyperbolic equations by cubic-polynomial interpolation I. One-dimensional solver",
+    "journal": "Computer Physics Communications",
+    "volume": "66",
+    "pages": "219--232",
+    "doi": "10.1016/0010-4655(91)90071-R",
+    "source": "https://www.sciencedirect.com/science/article/pii/001046559190071R",
+    "note": "Publisher indexed abstract and bibliographic data inspected; full-text retrieval was unavailable. Value-and-gradient cubic CIP evolution is demonstrated for uniform periodic constant-speed scalar advection only."
+  },
+  {
+    "id": "yabe2001csl",
+    "year": 2001,
+    "author": "Yabe, T. and Tanaka, R. and Nakamura, T. and Xiao, F.",
+    "title": "An Exactly Conservative Semi-Lagrangian Scheme (CIP–CSL) in One Dimension",
+    "journal": "Monthly Weather Review",
+    "volume": "129",
+    "pages": "332--344",
+    "doi": "10.1175/1520-0493(2001)129<0332:AECSLS>2.0.CO;2",
+    "source": "https://journals.ametsoc.org/view/journals/mwre/129/2/1520-0493_2001_129_0332_aecsls_2.0.co_2.xml",
+    "note": "Publisher indexed abstract and bibliographic data inspected; full-page retrieval was unavailable. Integral constraints and exactly conservative CIP-CSL are reading context, not implemented by the basic cubic-CIP example."
+  },
+  {
+    "id": "saito2020rcip",
+    "year": 2020,
+    "author": "Saito, Fuyuki and Obase, Takashi and Abe-Ouchi, Ayako",
+    "title": "Implementation of the RCIP scheme and its performance for 1-D age computations in ice-sheet models",
+    "journal": "Geoscientific Model Development",
+    "volume": "13",
+    "pages": "5875--5896",
+    "doi": "10.5194/gmd-13-5875-2020",
+    "source": "https://gmd.copernicus.org/articles/13/5875/2020/",
+    "note": "Open primary paper inspected. CIP-family value/gradient transport, velocity-gradient terms, and rational reconstruction conventions. The atlas does not implement this RCIP ice-age model or its variable-velocity departure correction."
   }
 ]
