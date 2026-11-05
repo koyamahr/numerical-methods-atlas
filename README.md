@@ -46,13 +46,14 @@ Additional reading: [time integration and leapfrog](docs/time-integration.md), [
 
 Further reading: [symplectic Hamiltonian maps](docs/symplectic.md), [PM / P³M / Tree / multipoles](docs/particle-gravity.md), and [Hockney–Eastwood / Koyama–Ostriker gravity kernels](docs/gravity-boundaries.md).
 
-New exhibits: [slope limiters](docs/limiters.md), [advanced TVB and positive-state scaling](docs/advanced-limiters.md), [nonsteady movies](docs/movies.md), and [original KEEP with smooth tests and caveats](docs/keep.md). Steady fields remain still figures.
+New exhibits: [Runge–Kutta families](docs/runge-kutta.md), [slope limiters](docs/limiters.md), [advanced TVB and positive-state scaling](docs/advanced-limiters.md), [nonsteady movies](docs/movies.md), and [original KEEP with smooth tests and caveats](docs/keep.md). Steady fields remain still figures.
 
 ## Interactive notebooks
 
 - [Stability laboratory](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/experiments): compute periodic FTCS, upwind, LF, and LW advection in the browser. Change the signed Courant number, initial profile, and step count; inspect amplification and export the experiment.
 - [Convergence notebook](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/convergence): inspect the original DG and Euler entropy-wave refinement data, switch between elements and unknowns, and read measured convergence orders.
-- [Time integration](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/time-integration): seven Python-computed oscillator trajectories, including unfiltered leapfrog and its startup mode.
+- [Runge–Kutta families](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/runge-kutta): nine explicit RK methods, actual nonlinear stages, Butcher tableaus, stability contours, measured orders, and conditional SSP bounds.
+- [Time integration](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/time-integration): twelve Python-computed oscillator methods, including unfiltered leapfrog and its startup mode.
 - [Mesh explorer](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/meshes): select cells and inspect face-sharing neighbors in structured and irregular meshes.
 - [Hamiltonian maps](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/hamiltonian): symplectic Euler, Verlet, Yoshida fourth order, implicit midpoint, and RK4 on two Hamiltonians.
 - [Limiter notebook](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/limiters): minmod, Superbee, MC, van Leer, and clipped van Albada; scalar advection, Sod, Sweby bounds, refinement, TVB parameters, and a separate mean-preserving positive Euler reconstruction.
@@ -115,7 +116,7 @@ establish which method is more accurate.
 - **Spectral methods:** periodic Fourier advection and diffusion, exact integration of linear modes, and Fourier differentiation.
 - **Smooth KEEP:** original second-order arithmetic-mean Cartesian Euler flux with RK4, periodic isentropic-vortex refinement and explicit entropy/shock/PEP caveats.
 - **2D Euler:** first-order HLL + SSPRK2 Double Mach Reflection with time-dependent shock and reflecting-wall boundaries.
-- **Temporal and geometric models:** seven scalar ODE integrators, explicit mesh connectivity, 1D SPH reconstruction, and a moving-volume ALE identity check.
+- **Temporal and geometric models:** twelve scalar ODE integrators, explicit mesh connectivity, 1D SPH reconstruction, and a moving-volume ALE identity check.
 - **Cylindrical tensors:** orthonormal velocity gradient, Newtonian stress with bulk viscosity, and symmetric stress divergence at r > 0.
 - **Particle gravity:** periodic 3D CIC/FFT PM; isolated softened octree with monopole or second moments; isolated doubled-grid and periodic-horizontal/vacuum-vertical slab convolution. Full P³M, TreePM, and FMM remain reading directions.
 - **Hamiltonian maps:** fixed-step symplectic Euler, Verlet, Yoshida fourth order, implicit midpoint, and RK4 comparisons for harmonic/quartic oscillators.
@@ -149,8 +150,8 @@ python scripts/build_references.py
 
 ## Build the web edition
 
-The static website lives in [`website/`](website/README.md). It renders twenty-six
-reading chapters and their equations, includes seventeen gallery figures and four computed movies, and uses
+The static website lives in [`website/`](website/README.md). It renders twenty-seven
+reading chapters and their equations, includes eighteen gallery figures and four computed movies, and uses
 precomputed library results for the interactive Sod comparison. See the web
 README for local preview and content-refresh commands.
 
@@ -161,6 +162,7 @@ python scripts/build_hamiltonian.py
 python scripts/build_particle_gravity.py
 python scripts/build_gravity_boundaries.py
 python scripts/build_limiters.py
+python scripts/build_runge_kutta.py
 python scripts/sync_web_content.py
 ```
 

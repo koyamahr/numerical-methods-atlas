@@ -91,7 +91,7 @@ for method in METHODS:
                                           if method=='leapfrog' else None})
 foundations={'time':trajectories,'meshes':example_meshes(),'final_time':20,
              'source_sha256':{name:hashlib.sha256((ROOT/'numart'/name).read_bytes()).hexdigest()
-                              for name in ('time_integration.py','geometry.py')}}
+                              for name in ('time_integration.py','runge_kutta.py','geometry.py')}}
 (content/'foundations.json').write_text(json.dumps(foundations,separators=(',',':'),allow_nan=False)+'\n')
 for name in ('double-mach-run.json','double-mach.npz'):
     shutil.copyfile(ROOT/'docs/figures'/name,assets/name)
@@ -108,3 +108,6 @@ print('Synced smooth KEEP validation; movies are built directly into public asse
 
 shutil.copyfile(ROOT/'docs/figures/limiters.json',content/'limiters.json')
 print('Synced limiter curves, TVB comparisons, and conservative positive-state scaling.')
+
+shutil.copyfile(ROOT/'docs/figures/runge-kutta.json',content/'runge-kutta.json')
+print('Synced RK tableaus, nonlinear stage cases, stability contours, and temporal refinement.')

@@ -776,5 +776,50 @@
     "title": "Slope Limiters",
     "source": "https://amrvac.org/md_doc_2limiter.html",
     "note": "Official code documentation inspected in November 2026; access year only. Implementation notes on minmod, Superbee, MC, van Leer, van Albada variants, and regularization. The atlas uses an explicitly clipped van Albada form without epsilon smoothing."
+  },
+  {
+    "id": "gottlieb2001ssp",
+    "year": 2001,
+    "author": "Gottlieb, Sigal and Shu, Chi-Wang and Tadmor, Eitan",
+    "title": "Strong Stability-Preserving High-Order Time Discretization Methods",
+    "journal": "SIAM Review",
+    "volume": "43",
+    "pages": "89--112",
+    "doi": "10.1137/S003614450036757X",
+    "source": "https://www.math.umd.edu/~tadmor/pub/linear-stability/Gottlieb-Shu-Tadmor.SIREV-01.pdf",
+    "note": "Author-hosted original manuscript inspected. Conditional inheritance of forward-Euler convex stability, and the distinction between linear and nonlinear SSP. The atlas verifies full-tableau inequalities for its explicit RK methods."
+  },
+  {
+    "id": "spiteri2002ssp",
+    "year": 2002,
+    "author": "Spiteri, Raymond J. and Ruuth, Steven J.",
+    "title": "A New Class of Optimal High-Order Strong-Stability-Preserving Time Discretization Methods",
+    "journal": "SIAM Journal on Numerical Analysis",
+    "volume": "40",
+    "pages": "469--491",
+    "doi": "10.1137/S0036142901389025",
+    "source": "https://epubs.siam.org/doi/abs/10.1137/S0036142901389025",
+    "note": "Publisher record and abstract inspected. SSP methods with more stages than their order. The implemented five-stage fourth-order coefficients are taken from the later author-hosted Gottlieb–Ketcheson–Shu review, rather than asserting direct full-text reproduction of this paper."
+  },
+  {
+    "id": "gottlieb2009ssp",
+    "year": 2009,
+    "author": "Gottlieb, Sigal and Ketcheson, David I. and Shu, Chi-Wang",
+    "title": "High Order Strong Stability Preserving Time Discretizations",
+    "journal": "Journal of Scientific Computing",
+    "volume": "38",
+    "pages": "251--289",
+    "doi": "10.1007/s10915-008-9239-z",
+    "source": "https://www.davidketcheson.info/assets/papers/sspreview.pdf",
+    "note": "Author-hosted 2008 draft of the 2009 review inspected. Section 3.1 supplies the SSPRK(5,4) decimal coefficients; the atlas converts its state combinations to increments and uses the conservative rounded bound C=1.508. SSP order barriers, low-storage, and alternative families are reading context."
+  },
+  {
+    "id": "numipediark",
+    "type": "misc",
+    "year": 2026,
+    "author": "Ketcheson, David I.",
+    "title": "Numipedia: Runge–Kutta method records",
+    "source": "https://ketch.github.io/numipedia/methods/RK44.html",
+    "note": "Author-maintained coefficient and stability records inspected in November 2026; access year, not an invention date. RK44, SSPRK22, and SSPRK43 records cross-check tableaus, scalar polynomials, and absolute-monotonicity radii."
   }
 ]

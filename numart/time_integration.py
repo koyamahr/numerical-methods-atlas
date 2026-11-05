@@ -5,8 +5,10 @@ Leapfrog is the two-step first-order-system recurrence, with RK4 startup.
 """
 import cmath
 import numpy as np
+from .runge_kutta import EXPLICIT_METHODS, stability_function
 
-METHODS = ('forward-euler','backward-euler','heun','ssprk3','rk4','midpoint','leapfrog')
+METHODS = ('forward-euler','backward-euler','heun','explicit-midpoint','ralston',
+           'kutta3','ssprk3','ssprk43','rk4','ssprk54','midpoint','leapfrog')
 
 
 def stability_factor(z, method):
@@ -15,6 +17,7 @@ def stability_factor(z, method):
     if method == 'heun': return 1+z+z*z/2
     if method == 'ssprk3': return 1+z+z*z/2+z**3/6
     if method == 'rk4': return 1+z+z*z/2+z**3/6+z**4/24
+    if method in EXPLICIT_METHODS: return stability_function(z,method)
     if method == 'midpoint': return (1+z/2)/(1-z/2)
     raise ValueError('Use a one-step method; leapfrog has two amplification roots')
 

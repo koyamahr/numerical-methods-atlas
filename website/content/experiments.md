@@ -127,7 +127,7 @@ and the [implementation roadmap](roadmap.md) for the remaining checks.
 
 ## Temporal trajectories and mesh connectivity
 
-The [time integration notebook](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/time-integration) selects Python-computed y′ = i y trajectories for seven temporal methods, with fixed final time 20. It exposes step size, leapfrog startup perturbation, two characteristic roots, sampled error, and amplitude. These are precomputed ODE results, unlike the browser-computed spatial stability laboratory. Read the [time integration definitions](time-integration.md).
+The [time integration notebook](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/time-integration) selects Python-computed y′ = i y trajectories for twelve temporal methods, with fixed final time 20. It exposes step size, leapfrog startup perturbation, two characteristic roots, sampled error, and amplitude. These are precomputed ODE results, unlike the browser-computed spatial stability laboratory. Read the [time integration definitions](time-integration.md).
 
 The [mesh explorer](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/meshes) displays three explicit vertex/cell datasets. Selection highlights face-sharing neighbors; the cell dropdown and keyboard-accessible polygons provide equivalent controls. Geometry is fixed, and no flow is integrated. Read [mesh definitions](meshes.md), [ALE](ale.md), and [SPH](particles-sph.md).
 
@@ -157,3 +157,7 @@ positive-state scaling. Read [slope definitions](limiters.md) and the
 generates `docs/figures/limiters.json` with source hashes; the standard sync
 copies it to the web edition. Neither the scalar TVB example nor the positive
 reconstruction helper confers a fully discrete Euler positivity guarantee.
+
+## Runge–Kutta family notebook
+
+The [family notebook](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/runge-kutta) compares nine fixed-step explicit RK tableaus. Three RK2 methods share a linear stability polynomial but differ on the nonlinear y′=−y² test. Select a one-step size, inspect actual RHS-stage predictors, and compare sampled stability contours and final-time refinement. Formal order, stage count, nonlinear SSP coefficient, and RHS work are displayed separately. Read [the RK chapter](runge-kutta.md) for all definitions and conditional SSP assumptions. `python scripts/build_runge_kutta.py` creates the plotted data and source manifest. The existing oscillator notebook now offers twelve temporal methods; its implicit options remain scalar linear models.

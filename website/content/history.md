@@ -91,6 +91,10 @@ conservative residual distribution, rotated-hybrid fluxes, and the carbuncle
 instability. The 2006 date identifies the RD review, rather than the invention
 of residual distribution.
 
+## 2001–2009: SSP inheritance and additional Runge–Kutta stages
+
+[Gottlieb–Shu–Tadmor (2001)](https://doi.org/10.1137/S003614450036757X), [Spiteri–Ruuth (2002)](https://doi.org/10.1137/S0036142901389025), and [Gottlieb–Ketcheson–Shu (2009)](https://doi.org/10.1007/s10915-008-9239-z) distinguish scalar linear stability from conditional nonlinear stability inheritance. These are developments in the SSP branch, not the origin of Runge–Kutta methods. The [RK family chapter](runge-kutta.md) compares RK2 variants, RK4, and SSPRK(s,p), with actual nonlinear stages and refinement.
+
 ## Toward modern verification and validation
 
 The [NASA 2D case catalog](nasa-2d.md) introduces the distinction between

@@ -2,9 +2,9 @@
 
 Spatial reconstruction and time integration are independent choices. After spatial discretization, a PDE becomes an ODE system dU/dt = L(U). Accuracy, stability, monotonicity, dissipation, and cost then depend on both parts. The [time integration notebook](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/time-integration) isolates the temporal choice using y′ = i y, y(0) = 1.
 
-## Seven methods on one oscillator
+## Twelve methods on one oscillator
 
-The exact solution exp(i t) follows the unit circle. Forward Euler and backward Euler are first order: the former grows on this undamped oscillator, while the latter damps it. Heun is second order; SSPRK3 and classical RK4 have orders three and four. Implicit midpoint is second order and preserves the amplitude of this linear oscillator. Its phase still has error.
+The exact solution exp(i t) follows the unit circle. Forward Euler and backward Euler are first order: the former grows on this undamped oscillator, while the latter damps it. The explicit RK2 family includes Heun / SSPRK(2,2), explicit midpoint, and Ralston. Kutta RK3, SSPRK(3,3), and SSPRK(4,3) are third order; classical RK4 and SSPRK(5,4) are fourth order. Implicit midpoint is second order and preserves the amplitude of this linear oscillator. Its phase still has error. Read the [RK family chapter](runge-kutta.md) and use the [family notebook](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/runge-kutta) for stage/order/SSP comparisons and nonlinear tests.
 
 For y′ = lambda y, define z = lambda delta t. One-step amplification factors include
 
@@ -13,7 +13,7 @@ R_{\rm FE}=1+z,\quad R_{\rm BE}=\frac1{1-z},\quad
 R_{\rm midpoint}=\frac{1+z/2}{1-z/2}.
 \]
 
-The RK factors are the exponential Taylor polynomial through degree two, three, or four for Heun, SSPRK3, or RK4 on this scalar linear equation. This coincidence does not make the nonlinear RK stages identical. SSPRK3’s strong-stability property also depends on a forward-Euler bound for the spatial operator; it is not unconditional stability.
+The RK factors are the exponential Taylor polynomial through degree two, three, or four for the three RK2 variants, Kutta RK3 / SSPRK(3,3), or classical RK4 on this scalar linear equation. SSPRK(4,3) instead has a degree-four term z⁴/48; SSPRK(5,4) has an additional degree-five term. Shared scalar amplification does not make nonlinear RK stages identical. SSP properties depend on a forward-Euler bound for the spatial operator; they are not unconditional stability.
 
 ## Leapfrog needs two roots
 
@@ -42,7 +42,7 @@ t, y = linear_trajectory(rate=1j, dt=0.1, steps=200, method='leapfrog')
 print(leapfrog_roots(0.1j))
 ```
 
-The browser selects from Python-computed trajectories with fixed final time 20, seven methods, seven step sizes, and three leapfrog starting perturbations. Axes expand for unstable samples. A matching time interval is not an equal-cost comparison: implicit solves and RK stages differ. Tests measure temporal refinement orders and check the leapfrog roots, alternating mode, and midpoint amplitude.
+The browser selects from Python-computed trajectories with fixed final time 20, twelve methods, seven step sizes, and three leapfrog starting perturbations. Axes expand for unstable samples. A matching time interval is not an equal-cost comparison: implicit solves and RK stages differ. Tests measure temporal refinement orders and check the leapfrog roots, alternating mode, and midpoint amplitude. These oscillator trajectories evaluate the scalar stability factor, which is algebraically equivalent to RK stages on this linear test equation; the separate family notebook evaluates full nonlinear stages.
 
 Continue with [the spatial stability laboratory](experiments.md), [SPH](particles-sph.md), and [ALE](ale.md).
 

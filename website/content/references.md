@@ -373,6 +373,14 @@ Tóth, Gábor. **The ∇·B = 0 Constraint in Shock-Capturing Magnetohydrodynami
 
 Author-hosted original paper. Reference for CT variants and differences between discrete divergence operators.
 
+## 2001 · gottlieb2001ssp
+
+Gottlieb, Sigal and Shu, Chi-Wang and Tadmor, Eitan. **Strong Stability-Preserving High-Order Time Discretization Methods**. SIAM Review.
+
+[Original bibliographic record](https://doi.org/10.1137/S003614450036757X) · [Full text or implementation reference](https://www.math.umd.edu/~tadmor/pub/linear-stability/Gottlieb-Shu-Tadmor.SIREV-01.pdf)
+
+Author-hosted original manuscript inspected. Conditional inheritance of forward-Euler convex stability, and the distinction between linear and nonlinear SSP. The atlas verifies full-tableau inequalities for its explicit RK methods.
+
 ## 2001 · pandolfi2001
 
 Pandolfi, Maurizio and D’Ambrosio, Domenic. **Numerical Instabilities in Upwind Methods: Analysis and Cures for the “Carbuncle” Phenomenon**. Journal of Computational Physics.
@@ -396,6 +404,14 @@ LeVeque, Randall J.. **Finite Volume Methods for Hyperbolic Problems**. Cambridg
 [Original bibliographic record](https://doi.org/10.1017/CBO9780511791253) · [Full text or implementation reference](https://www.cambridge.org/core/books/finite-volume-methods-for-hyperbolic-problems/97D5D1ACB1926DA1D4D52EAD6909E2B9)
 
 Publisher bibliographic record and abstract. Background for conservation laws and shallow-water implementations.
+
+## 2002 · spiteri2002ssp
+
+Spiteri, Raymond J. and Ruuth, Steven J.. **A New Class of Optimal High-Order Strong-Stability-Preserving Time Discretization Methods**. SIAM Journal on Numerical Analysis.
+
+[Original bibliographic record](https://doi.org/10.1137/S0036142901389025) · [Full text or implementation reference](https://epubs.siam.org/doi/abs/10.1137/S0036142901389025)
+
+Publisher record and abstract inspected. SSP methods with more stages than their order. The implemented five-stage fourth-order coefficients are taken from the later author-hosted Gottlieb–Ketcheson–Shu review, rather than asserting direct full-text reproduction of this paper.
 
 ## 2003 · hairer2003
 
@@ -428,6 +444,14 @@ Nishikawa, Hiroaki and Kitamura, Keiichi. **Very simple, carbuncle-free, boundar
 [Original bibliographic record](https://doi.org/10.1016/j.jcp.2007.11.003) · [Full text or implementation reference](https://www.sciencedirect.com/science/article/abs/pii/S0021999107004822)
 
 Publisher bibliographic record and abstract. The 2D rotated solver and carbuncle tests are future work.
+
+## 2009 · gottlieb2009ssp
+
+Gottlieb, Sigal and Ketcheson, David I. and Shu, Chi-Wang. **High Order Strong Stability Preserving Time Discretizations**. Journal of Scientific Computing.
+
+[Original bibliographic record](https://doi.org/10.1007/s10915-008-9239-z) · [Full text or implementation reference](https://www.davidketcheson.info/assets/papers/sspreview.pdf)
+
+Author-hosted 2008 draft of the 2009 review inspected. Section 3.1 supplies the SSPRK(5,4) decimal coefficients; the atlas converts its state combinations to increments and uses the conservative rounded bound C=1.508. SSP order barriers, low-storage, and alternative families are reading context.
 
 ## 2009 · koyama2009
 
@@ -532,6 +556,14 @@ Clawpack Development Team. **Pyclaw Limiters**. .
 [Original bibliographic record](https://www.clawpack.org/pyclaw/evolve/limiters.html) · [Full text or implementation reference](https://www.clawpack.org/pyclaw/evolve/limiters.html)
 
 Official implementation documentation inspected in November 2026; this is an access-year record, not an invention date. Used to distinguish common limiter functions and wave-limiting conventions from the atlas slope reconstruction.
+
+## 2026 · numipediark
+
+Ketcheson, David I.. **Numipedia: Runge–Kutta method records**. .
+
+[Original bibliographic record](https://ketch.github.io/numipedia/methods/RK44.html) · [Full text or implementation reference](https://ketch.github.io/numipedia/methods/RK44.html)
+
+Author-maintained coefficient and stability records inspected in November 2026; access year, not an invention date. RK44, SSPRK22, and SSPRK43 records cross-check tableaus, scalar polynomials, and absolute-monotonicity radii.
 
 ## 2026 · powell2026
 

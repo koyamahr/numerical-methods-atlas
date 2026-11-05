@@ -51,16 +51,16 @@ this workspace does not enable public Sites hosting.
 - `#/methods`: methods and implementation scope.
 - `#/experiments`: live periodic-advection and Fourier-amplification laboratory.
 - `#/convergence`: original gallery refinement data, observed orders, and unknown counts.
-- `#/gallery`: sixteen figures and four movies with category filtering and enlarged views.
+- `#/gallery`: eighteen figures and four movies with category filtering and enlarged views.
 - `#/references`: searchable bibliography and BibTeX download.
 - `#/read/<chapter>`: complete documentation with equations and section links.
 
 A `?section=<heading-id>` suffix opens a specific section in a chapter.
 
-- `#/time-integration`: seven precomputed ODE integrators, startup perturbations, and leapfrog roots.
+- `#/time-integration`: twelve precomputed ODE integrators, startup perturbations, and leapfrog roots.
 - `#/meshes`: three mesh geometries with selectable cells and face-sharing neighbors.
 
-The twenty-six chapters now include SPH/ALE models, cylindrical viscous tensors, a computed Double Mach Reflection baseline, carbuncle reading notes, a sourced Philip L. Roe memorial, slope limiters, and advanced TVB/positivity building blocks. `foundations.json` records temporal/mesh source hashes; the DMR run manifest and arrays are separate downloads.
+The twenty-seven chapters now include SPH/ALE models, cylindrical viscous tensors, a computed Double Mach Reflection baseline, carbuncle reading notes, a sourced Philip L. Roe memorial, slope limiters, and advanced TVB/positivity building blocks. `foundations.json` records temporal/mesh source hashes; the DMR run manifest and arrays are separate downloads.
 
 - `#/hamiltonian`: five canonical-map/accuracy comparisons, two Hamiltonians, energy histories, local Jacobian diagnostics, and one-step phase patches. Data loads on demand from `hamiltonian.json`.
 
@@ -71,3 +71,5 @@ The gallery also includes PM/Tree force studies and isolated/slab Fourier-kernel
 Movies load on demand. Image preloading is bounded; playback timers and native video stop on route changes. No autoplay is used. Steady solutions remain still images. Regenerate with `python scripts/build_movies.py` after installing `.[movies]`; validate all MP4 decodes with `python scripts/check_movies.py`.
 
 - `#/limiters`: five classical slope limiters, scalar baselines, Sod, Sweby bounds, smooth refinement, TVB parameter comparisons, and positive Euler reconstruction scaling. Loads `limiters.json` on demand; all PDE and scaling curves are computed in Python. Rebuild with `python scripts/build_limiters.py` before syncing. Positivity scaling is a standalone reconstruction helper, not a change to Euler/WENO/MHD/KEEP time updates.
+
+- `#/runge-kutta`: RK1, three RK2 choices, three RK3 choices, and two RK4 choices. Shows actual nonlinear stages, full tableaus, sampled scalar stability contours, and refinement by step count or RHS count. Loads `runge-kutta.json` on demand; regenerate with `python scripts/build_runge_kutta.py` before syncing. No adaptive or embedded-pair implementation.
