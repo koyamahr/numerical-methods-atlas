@@ -2,7 +2,7 @@
 
 A static, English reading site for **The Art of Numerical Algorithms**.
 
-Public URL: https://the-art-of-numerical-algorithms.riken-2026-5021.chatgpt.site/
+Public URL: https://koyamahr.github.io/the-art-of-numerical-algorithms/
 
 ## Build
 
@@ -37,7 +37,9 @@ the numerical source files used to produce it.
 
 `content/` and `public/assets/` are checked-in publishing inputs. Keep them in
 sync with the numerical-library edition using the commands above. The
-`.openai/hosting.json` manifest binds this directory to its existing Site.
+`.openai/hosting.json` manifest preserves the optional Sites project identity.
+Public hosting uses GitHub Pages through `.github/workflows/pages.yml`, because
+this workspace does not enable public Sites hosting.
 
 ## Reading routes
 

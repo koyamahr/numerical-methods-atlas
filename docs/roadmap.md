@@ -31,7 +31,7 @@ and difficulty and complements the atlas's publication chronology.
 
 ## Web edition
 
-[The public web edition](https://the-art-of-numerical-algorithms.riken-2026-5021.chatgpt.site/)
+[The public web edition](https://koyamahr.github.io/the-art-of-numerical-algorithms/)
 organizes the first-edition library as a historical atlas, method reading room,
 computed gallery, and searchable reference library. Each exhibit connects
 literature, equations, execution, figures, and verification scope.

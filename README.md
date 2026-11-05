@@ -12,7 +12,7 @@ compare the results with analytical solutions and conservation checks. The
 library covers selected educational models; the [roadmap](docs/roadmap.md)
 identifies the extensions still to be implemented.
 
-**[Read the web edition](https://the-art-of-numerical-algorithms.riken-2026-5021.chatgpt.site/)** — browse the atlas, methods, gallery, and searchable references.
+**[Read the web edition](https://koyamahr.github.io/the-art-of-numerical-algorithms/)** — browse the atlas, methods, gallery, and searchable references.
 
 ## Getting started
 

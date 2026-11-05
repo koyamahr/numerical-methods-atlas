@@ -37,8 +37,8 @@ for (const file of fs.readdirSync('content').filter(f => f.endsWith('.md'))) {
 fs.writeFileSync('dist/content.json', JSON.stringify(documents));
 for (const file of ['references.json', 'sod.json']) fs.copyFileSync(`content/${file}`, `dist/${file}`);
 const hosting = JSON.parse(fs.readFileSync('.openai/hosting.json', 'utf8'));
-if (hosting.project_id !== 'appgprj_6aec333142c88191825e8ffb8cc153b0' || hosting.static?.directory !== 'dist') throw new Error('Unexpected Site configuration');
-const origin = 'https://the-art-of-numerical-algorithms.riken-2026-5021.chatgpt.site';
+if (hosting.static?.directory !== 'dist') throw new Error('Unexpected Site configuration');
+const origin = 'https://koyamahr.github.io/the-art-of-numerical-algorithms';
 fs.writeFileSync('dist/robots.txt', `User-agent: *\nAllow: /\nSitemap: ${origin}/sitemap.xml\n`);
 fs.writeFileSync('dist/sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${origin}/</loc></url></urlset>\n`);
 console.log(`Built static web edition with ${Object.keys(documents).length} complete reading chapters.`);
