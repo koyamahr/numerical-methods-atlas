@@ -1,10 +1,12 @@
-# MHD：CT と divergence cleaning
+# MHD: constrained transport and divergence cleaning
 
-## 問題と単位
+## Problem and units
 
-2D planar ideal MHD、γ=5/3、μ0=1、vz=Bz=0、周期単位正方形を対象とします。
-`q=(ρ,mx,my,E,Bx,By,ψ)`、配列順は `[x,y,variable]`。
-Orszag–Tang は
+The model is planar 2D ideal MHD with `γ=5/3`, `μ0=1`, and `vz=Bz=0` on the
+periodic unit square. Arrays are indexed `[x,y,variable]`, with state
+`q=(ρ,mx,my,E,Bx,By,ψ)` and
+`E=p/(γ-1)+ρ(vx²+vy²)/2+(Bx²+By²)/2`.
+The Orszag–Tang initial condition is
 
 \[
 \rho=\frac{25}{36\pi},\quad p=\frac5{12\pi},\quad
@@ -12,55 +14,65 @@ Orszag–Tang は
 \mathbf B=\frac1{\sqrt{4\pi}}(-\sin2\pi y,\sin4\pi x).
 \]
 
-これは広く使われる圧縮性テストの正規化です。
-元の [Orszag–Tang (1979)](https://doi.org/10.1017/S002211207900210X) の非圧縮 MHD の計算条件を完全再現したものではありません。
-正規化の実装例は [MASCLET の論文](https://doi.org/10.1093/mnras/staa877) などでも確認できます。
+This is a widely used compressible-test normalization, rather than a complete
+reproduction of the original incompressible MHD study by
+[Orszag–Tang (1979)](https://doi.org/10.1017/S002211207900210X).
+The [MASCLET paper](https://doi.org/10.1093/mnras/staa877) is one reference for
+this compressible normalization.
 
-## CT：同じ辺の電場を共有する
+## CT: share the same edge electric field
 
-磁場の法線成分をセル面に置き、角の同じ `Ez` で両方向の磁場を更新します。
-たとえば `Bx <- Bx - Δt D_y Ez`、`By <- By + Δt D_x Ez`。
-発散の更新に `-D_xD_y Ez+D_yD_x Ez=0` が現れ、対応する離散発散が保存されます。
+Store normal magnetic components on cell faces and update both directions
+with a shared corner `Ez`: for example, `Bx <- Bx - Δt D_y Ez` and
+`By <- By + Δt D_x Ez`. The corresponding divergence update contains
+`-D_xD_y Ez+D_yD_x Ez=0`, preserving the matching discrete divergence.
 
-初版は Rusanov 面流束から電場を算術平均する単純な flux-CT 型です。
-面 Riemann 問題には単一の法線磁場を与え、primitive 圧力を保つよう界面エネルギーを調整します。
-更新後は面磁場からセル磁場を平均し直します。総エネルギーの非保存的リセットは行いません。
-Evans–Hawley 原著の座標系や Athena の upwind CT をそのまま実装したものではありません。
-[Evans–Hawley (1988)](https://doi.org/10.1086/166684)、
-[Tóth (2000)](https://doi.org/10.1006/jcph.2000.6519)。
+This edition uses a simple flux-CT construction with arithmetic averages of
+electric fields from Rusanov face fluxes. Face Riemann problems use a single
+normal magnetic field; interface energy is adjusted to preserve primitive
+pressure. After each update, cell-centered fields are averaged from faces.
+Total energy is not reset nonconservatively. This implementation does not
+reproduce every coordinate-system detail of Evans–Hawley or Athena's upwind CT.
+[Evans–Hawley (1988)](https://doi.org/10.1086/166684),
+[Tóth (2000)](https://doi.org/10.1006/jcph.2000.6519).
 
-## GLM：発散誤差を波として運び、減衰させる
+## GLM: transport and damp divergence errors
 
-セル中心 B と補助変数 ψ を使い
+With cell-centered B and an auxiliary variable ψ, solve
 
 \[
 \partial_t\mathbf B+\nabla\cdot(\mathbf v\mathbf B-\mathbf B\mathbf v)+\nabla\psi=0,
 \qquad
-\partial_t\psi+c_h^2\nabla\cdot\mathbf B=-\alpha\psi
+\partial_t\psi+c_h^2\nabla\cdot\mathbf B=-\alpha\psi.
 \]
 
-を解きます（誘導流束の成分は `F_i(B_j)=v_i B_j-B_i v_j+δij ψ`）。
-初版は固定 ch=3、`α=damping*ch/h`、damping=0.18。
-ψ の線形減衰は指数関数で演算子分割し、その他は 1 次 Rusanov + forward Euler。
-エネルギー変数は通常の MHD エネルギーで ψ² の項は含みません。
-これは Dedner 型の教育実装で、すべての GLM／EGLM 変種を含むものではありません。
-[Dedner ほか (2002)](https://doi.org/10.1006/jcph.2001.6961)。
+The induction flux components are `F_i(B_j)=v_i B_j-B_i v_j+δij ψ`.
+This edition fixes `ch=3` and uses `α=damping*ch/h`, with `damping=0.18`.
+Linear ψ damping is split off and integrated exponentially; the remaining
+update uses first-order Rusanov fluxes and forward Euler. The energy variable
+is conventional MHD energy without a ψ² contribution. This educational
+Dedner-type model covers a subset of GLM/EGLM formulations.
+[Dedner et al. (2002)](https://doi.org/10.1006/jcph.2001.6961).
 
-## ∇·B の測り方
+## Measuring ∇·B
 
-CT では面磁場の差、GLM ではセル中心 B の中心差分を使います。
-どちらも**演算子名を付けて**記録し、異なる離散発散の値をそのままランキングにしません。
-今回の GLM は固定で大きめの散逸波速を使い、対称な OT 初期値では中心差分発散が非常に小さくなることがあります。
-OT の結果だけでは cleaning の能力を十分に検証できません。
+CT uses face-field differences; GLM uses centered differences of cell-centered
+B. Records include the **operator name**, because values from different discrete
+divergences cannot directly rank methods. With the fixed, relatively dissipative
+GLM wave speed and symmetric OT data, centered divergence can remain extremely
+small. OT alone therefore gives incomplete evidence about cleaning performance.
 
-そのため `magnetic_error=0.01` で `Bx += 0.01sin(2πx)` を与える別の診断を用意します。
-初期のガス圧を保つようエネルギーを変更します。
-この試験は**標準 OT そのものではありません**。
-発散波の伝播と減衰を調べ、減衰だけでなく数値粘性も誤差を減らすことを区別します。
-CT は既存の磁気単極子誤差を自動的に消す方法ではなく、初期の離散制約を保存する構造です。
+A separate diagnostic injects `Bx += 0.01sin(2πx)` with
+`magnetic_error=0.01`, adjusting energy to preserve initial gas pressure.
+This **is not the standard OT problem**. It examines divergence-wave transport
+and damping while distinguishing damping from error reduction by numerical
+viscosity. CT preserves an initial discrete constraint; it does not
+automatically remove an existing magnetic-monopole error.
 
-## 検証範囲
+## Verification scope
 
-周期領域の質量・総エネルギー、選定例の密度・圧力の正値性、CT の離散発散保存、GLM の誤差注入を自動確認します。
-参照コードとの解の一致、格子収束、Brio–Wu、field-loop advection、Alfvén 波は今後の検証です。
-低解像度・1次精度の OT 図は、磁場制約の仕組みを見るための初期例です。
+Tests check periodic mass and total energy, density and pressure positivity
+on selected cases, CT divergence preservation, and GLM injected-error cleaning.
+Reference-code comparisons, grid refinement, Brio–Wu, field-loop advection,
+and Alfvén waves remain future work. The low-resolution, first-order OT figures
+are introductory demonstrations of magnetic-constraint handling.

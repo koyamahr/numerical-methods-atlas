@@ -1,31 +1,38 @@
-# 実装と公開のロードマップ
+# Implementation roadmap
 
-## 現在：計算と資料の土台
+## First edition: executable foundations
 
-ローカルで動く教育用計算、年代順解説、出典・BibTeX、比較図、自動テストを準備しています。
-公開サイト、GitHub リモート、ライセンスの設定はこれから相談します。
-NASA のカタログと rotated solver の文献整理を、流れの実装が済んだ状態とは表示しません。
+Version 0.1.0 brings together an educational Python library, a historical atlas,
+English method notes, a bibliographic catalog, comparison figures, and automated
+numerical checks. The repository is the first-edition distribution; the reading
+guide in the [README](../README.md) connects the material.
 
-## 次の数値検証
+The NASA case catalog and rotated-solver reading notes describe future work.
+Their inclusion does not indicate that those flow simulations are implemented.
 
-- 全展示の run manifest と出力データの対応を強化し、格子・時間収束と wall-clock を整理。
-- FV のセル平均初期化・参照解積分、WENO の特性分解、正値性 limiter、より強い衝撃波試験。
-- 浅水と等温の厳密参照、地形と well-balanced、乾床は独立した実装段階。
-- MHD の Alfvén 波、Brio–Wu、field loop、より低散逸の upwind CT。外部参照コードとの比較。
-- 非線形 Fourier と dealiasing、Euler DG と limiter、多次元 residual distribution。
-- 低 Mach PDE 前処理と 2D Euler rotated-hybrid solver。エントロピー修正・正値性・carbuncle を別々に検証。
-- elliptic の可変係数・異方性・line smoothing、FAS、AMG、混合境界の 2D 拡張。
+## Next verification work
 
-## NASA ケースの導入順案
+- Strengthen links between run manifests and saved arrays; report grid and time refinement together with wall-clock costs.
+- Add finite-volume cell-average initialization and integrated references, characteristic WENO, positivity limiters, and stronger shock tests.
+- Add exact shallow-water and isothermal references; treat topography, well balancing, and dry beds as separate implementation steps.
+- Extend MHD verification with Alfvén waves, Brio–Wu, field loops, less dissipative upwind CT, and external reference-code comparisons.
+- Explore nonlinear Fourier methods and dealiasing, Euler DG with limiting, and multidimensional residual distribution.
+- Implement low-Mach PDE preconditioning and 2D Euler rotated-hybrid solvers; test entropy correction, positivity, and carbuncle resistance separately.
+- Extend elliptic solvers to variable coefficients, anisotropy, line smoothing, FAS, AMG, and 2D mixed boundaries.
 
-まず wedge と expansion で 2D Euler の流束・壁境界を確認。
-次に cavity と Blasius で粘性と圧力・境界を整え、円柱で非定常時間精度を確認。
-RANS は平板と bump でモデル実装を検証した後、翼型、step、diffuser、hump に進みます。
-これは難度と依存関係による順序で、原論文の年代順アトラスと併用します。
+## Suggested order for NASA cases
 
-## 公開サイトを相談する段階
+Start with wedge and expansion flows to verify 2D Euler fluxes and wall
+boundaries. Use the cavity and Blasius cases to establish viscous, pressure,
+and boundary treatments, then the cylinder to examine unsteady accuracy.
+For RANS, verify model implementations on flat-plate and bump cases before
+moving to airfoils, steps, diffusers, and humps. This order follows dependencies
+and difficulty and complements the atlas's publication chronology.
 
-姉妹サイトと同じ「文献 → 方程式 → 実行 → 図 → 検証」を展示単位にします。
-数値的に検証した教育例、原図再現、試作、文献のみ、今後の計画を区別して表示します。
-公開時には名前、URL、デザイン、日英の扱い、ライセンス、掲載する展示の基準を相談します。
-その前に自動的な公開は行いません。
+## Future presentation
+
+A future web edition can organize each exhibit as literature → equations →
+execution → figures → verification evidence. Exhibits should state whether they
+are tested educational examples, original-figure reproductions, prototypes,
+literature-only entries, or planned work. The first edition includes the
+library and documentation; a standalone website is a separate publishing step.

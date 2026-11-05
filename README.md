@@ -2,11 +2,19 @@
 
 **Read the paper. Understand the method. Run the benchmark.**
 
-数値計算法を、歴史・方程式・実装・検証から読み直すショーケース。
-[The Art of Thermal Instability](https://koyamahr.github.io/the-art-of-thermal-instability/#home)
-と並ぶ姉妹企画として準備中です。現在はローカルの計算ライブラリと資料であり、公開サイトは未作成です。
+A historical, executable guide to numerical algorithms: the equations they solve,
+the ideas behind their discretizations, and the evidence used to check them.
+This is the **first edition, v0.1.0**, and a companion to
+[The Art of Thermal Instability](https://koyamahr.github.io/the-art-of-thermal-instability/#home).
 
-## はじめに
+Explore the [historical atlas](docs/history.md), run the Python examples, and
+compare the results with analytical solutions and conservation checks. The
+library covers selected educational models; the [roadmap](docs/roadmap.md)
+identifies the extensions still to be implemented.
+
+## Getting started
+
+Requires Python 3.9 or later.
 
 ```bash
 python3 -m venv .venv
@@ -16,22 +24,23 @@ python -m pytest -q
 python -m numart.cli gallery --output outputs/gallery
 ```
 
-既存の仮想環境を使う場合は `source .venv/bin/activate` から実行します。
-図版、計算データ、設定、ソースの SHA-256 は同じ出力ディレクトリに保存します。
-チェックイン前の計算では Git revision は `null` になり、ソースハッシュで版を識別します。
+For an existing environment, start with `source .venv/bin/activate`.
+Figures, numerical data, settings, and source SHA-256 hashes are saved together.
+Runs made before the first Git commit record a `null` Git revision and use the
+source hashes to identify the implementation.
 
-## 読む順序
+## Reading guide
 
-1. [歴史順のアトラス](docs/history.md)：CFL、拡散・陰解法、Lax、Godunov、マルチグリッド、DG、スペクトル法、Roe、ENO/WENO、MHD、dual time stepping。
-2. [差分・CFL・安定性・Lax の定理](docs/stability.md)：前進／後退／風上と、陽／陰の違い。
-3. [拡散・楕円型・境界条件・反復法](docs/elliptic.md)：Thomas、Dirichlet／Neumann／Robin、緩和、スペクトル半径、V-cycle。
-4. [テスト計算ライブラリ](docs/benchmarks.md)：定義、参照解、境界条件、比較の範囲。
-5. [MHD：CT と GLM](docs/mhd.md)：離散的 ∇·B、Orszag–Tang、誤差注入試験。
-6. [前処理・dual time・residual distribution](docs/advanced.md)：実装した最小モデルと多次元への拡張。
-7. [NASA の 2D ケース集](docs/nasa-2d.md)：公式の検証資料への導線。これらの流体計算は未実装。
-8. [論文と書籍](docs/references.md)、[BibTeX](references.bib)、[実装・公開ロードマップ](docs/roadmap.md)。
+1. [Historical atlas](docs/history.md): CFL, implicit diffusion, Lax, Godunov, multigrid, DG, spectral methods, Roe, ENO/WENO, MHD, and dual time stepping.
+2. [Differences, CFL, and stability](docs/stability.md): spatial stencils, explicit and implicit time integration, von Neumann analysis, and the Lax equivalence theorem.
+3. [Diffusion, elliptic problems, and iteration](docs/elliptic.md): Thomas elimination, boundary conditions, spectral radii, and a multigrid V-cycle.
+4. [Benchmark library](docs/benchmarks.md): initial conditions, reference solutions, boundaries, and the limits of each comparison.
+5. [MHD: CT and GLM](docs/mhd.md): discrete magnetic divergence, Orszag–Tang, and injected-error diagnostics.
+6. [Preconditioning and advanced methods](docs/advanced.md): dual time stepping, residual distribution, and the path to multidimensional solvers.
+7. [NASA 2D case catalog](docs/nasa-2d.md): official verification and validation resources for future implementations.
+8. [References](docs/references.md), [BibTeX](references.bib), [roadmap](docs/roadmap.md), and [first-edition release notes](docs/release-notes-v0.1.0.md).
 
-## 実行例
+## Run a benchmark
 
 ```bash
 python -m numart.cli run sod --method muscl --riemann roe --n 200
@@ -45,11 +54,12 @@ python -m numart.cli run orszag-tang --method ct --n 64 --output outputs/ct
 python -m numart.cli run orszag-tang --method glm --n 64 --output outputs/glm
 ```
 
-`run` は数値データと `run.json` を書きます。比較図は `gallery` で生成します。
-同じ出力先は上書きされるので、保存したい比較には別々の `--output` を指定してください。
-WENO の `--riemann` は使用されません。WENO は大域的 Lax–Friedrichs 流束分離です。
+`run` writes numerical arrays and a `run.json` manifest. `gallery` generates
+comparison figures. Reusing an output directory overwrites its files; use a
+separate `--output` for each result you want to retain.
+WENO uses global Lax–Friedrichs flux splitting and ignores `--riemann`.
 
-Python からも、例えば次のように使えます。
+The same methods are available from Python:
 
 ```python
 from numart import get_problem, solve
@@ -65,36 +75,49 @@ x, u = poisson_boundary_1d(63, -2., Boundary.dirichlet(1.), Boundary.neumann(2.)
 u, residual = solve_poisson_multigrid(np.ones((63, 63)))
 ```
 
-## 初版の計算例
+## First-edition gallery
 
-![Sod と厳密解](docs/figures/sod.png)
+![Sod shock tube compared with the exact Riemann solution](docs/figures/sod.png)
 
-![DG と Fourier](docs/figures/dg-spectral.png)
+![Discontinuous Galerkin and Fourier advection examples](docs/figures/dg-spectral.png)
 
-![Orszag–Tang](docs/figures/orszag-tang.png)
+![Orszag–Tang vortex: CT and GLM educational implementations](docs/figures/orszag-tang.png)
 
-これらは独立した教育用実装の図です。原論文の図そのものの再現とは区別しています。
-CT と GLM の図は異なる離散演算子・散逸を使っており、∇·B の数値だけで優劣を判断できません。
+These figures come from independent educational implementations. They do not
+claim to reproduce the original papers' figures. CT and GLM use different
+discrete operators and dissipation; magnetic-divergence values alone do not
+establish which method is more accurate.
 
-## 初版で実装した範囲
+## Implemented in v0.1.0
 
-- 空間差分：前進・後退・中心・風上、Lax–Friedrichs、Lax–Wendroff、成分別 FD WENO5-JS。
-- 有限体積：区分一定 Godunov 型、primitive minmod MUSCL。Rusanov／HLL／HLLE／HLLC／Roe。
-- DG：周期線形移流の modal Legendre P0/P1/P2、upwind flux、SSPRK3。
-- スペクトル：周期線形移流・拡散の Fourier 法とモードの厳密時間積分、Fourier 微分。
-- MHD：2D planar、1次 Rusanov、staggered CT とセル中心 GLM。
-- 拡散・楕円型：FTCS／後退 Euler／Crank–Nicolson、1D Thomas、2D matrix-free CG。
-- 反復法：Jacobi／GS／SOR の反復行列、red-black GS／SOR、幾何学的 multigrid V-cycle。
-- 最小モデル：BDF1/BDF2 dual time stepping、Jacobi スケーリングと条件数、1D scalar residual distribution。
+- **Finite differences:** forward, backward, centered, and upwind stencils; Lax–Friedrichs, Lax–Wendroff, and componentwise FD WENO5-JS.
+- **Finite volumes:** piecewise-constant Godunov-type updates and primitive-variable minmod MUSCL; Rusanov, HLL, HLLE, HLLC, and Roe fluxes.
+- **Discontinuous Galerkin:** periodic linear advection with modal Legendre P0/P1/P2, upwind fluxes, and SSPRK3.
+- **Spectral methods:** periodic Fourier advection and diffusion, exact integration of linear modes, and Fourier differentiation.
+- **MHD:** planar 2D ideal MHD with first-order Rusanov fluxes, staggered constrained transport, and cell-centered GLM cleaning.
+- **Diffusion and elliptic equations:** FTCS, backward Euler, Crank–Nicolson, 1D Thomas elimination, and 2D matrix-free conjugate gradients.
+- **Iterative methods:** Jacobi, Gauss–Seidel, and SOR iteration matrices; red-black relaxation; and geometric multigrid V-cycles.
+- **Minimal advanced models:** BDF1/BDF2 dual time stepping, symmetric Jacobi scaling, and 1D scalar residual distribution.
 
-多次元 Euler の rotated-hybrid Riemann solver、低 Mach PDE 前処理、2D residual distribution、Euler/MHD DG は資料・計画の段階です。
-NASA の翼型・境界層・剥離ケースには別途 Navier–Stokes/RANS と格子・壁面処理が必要です。
+Multidimensional Euler rotated-hybrid fluxes, low-Mach PDE preconditioning,
+2D residual distribution, and Euler/MHD DG remain future work. The NASA airfoil,
+boundary-layer, and separated-flow catalog requires additional Navier–Stokes or
+RANS solvers, meshes, and wall treatments.
 
-## 検証と公開
+## Verification and reproducibility
 
-`tests/` は流束整合性、厳密解、収束次数、周期保存、正値性の選定試験、CT の離散発散保存、GLM の誤差注入、線形系残差、境界条件、multigrid を確認します。
-汎用的な正値性や非線形安定性を証明するものではありません。
-GitHub Actions 用のワークフローは用意していますが、リモート CI はまだ実行していません。
+The test suite checks flux consistency, exact solutions, selected convergence
+orders, periodic conservation, selected positivity cases, CT divergence
+preservation, GLM error cleaning, linear-system residuals, boundary conditions,
+and multigrid. These checks establish behavior for the tested cases; they do
+not prove general positivity or nonlinear stability.
 
-将来のサイトは「年代順の文献 → 解説 → 実行 → 比較図 → 検証記録」を単位にします。
-公開先・外観・ライセンスは資料を整えた後に相談します。
+[GitHub Actions](https://github.com/koyamahr/the-art-of-numerical-algorithms/actions)
+runs the numerical checks and gallery generation on Python 3.9 and 3.12.
+Bibliographic notes record whether a source is an original paper, a later
+exposition, or a reference that still needs direct inspection. Regenerate the
+reference list and BibTeX together with:
+
+```bash
+python scripts/build_references.py
+```

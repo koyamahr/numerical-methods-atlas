@@ -1,74 +1,95 @@
-# 年代順のアトラス
+# Historical atlas
 
-年は原著の刊行年です。オンライン公開年、翻訳年、再録年を区別します。
-これは代表文献をたどる読書順であり、すべての手法の発明者・優先権を決める年表ではありません。
-原論文との対応・未確認事項は [参考文献](references.md) に記載します。
+Dates refer to original publication years, with translations, reprints, and
+online publication dates distinguished where relevant. This atlas offers a
+reading path through representative sources. It does not settle every claim
+of invention or priority. The [reference catalog](references.md) records the
+relationship between each source and the implementation, including open questions.
 
-## 古典的な準備：方程式、差分、反復
+## Classical foundations: equations, differences, and iteration
 
-前進差分・後退差分・中心差分、Euler の時間積分、Fourier 展開、熱伝導、Laplace／Poisson 方程式を準備します。
-境界値と境界フラックスを区別してから、Dirichlet・Neumann・Robin を扱います。
-これらの数学的起源と、後世の CFD 実装の成立年を同一視しません。
+Begin with forward, backward, and centered differences, Euler time integration,
+Fourier expansions, heat conduction, and the Laplace and Poisson equations.
+Distinguish boundary values from boundary fluxes before introducing Dirichlet,
+Neumann, and Robin conditions. The mathematical origins of these ideas precede
+their later use in computational fluid dynamics.
 
-## 1928：CFL と依存領域
+## 1928: CFL and domains of dependence
 
-Courant–Friedrichs–Lewy。連続問題の依存領域と離散ステンシルの到達範囲を比べます。
-線形移流で `C=a Δt/Δx` を変え、必要条件と十分条件を分けて考えます。
-[CFL 原論文](https://doi.org/10.1007/BF01448839)、[実験と導出](stability.md)。
+Courant–Friedrichs–Lewy compares the continuous domain of dependence with the
+reach of a discrete stencil. Vary `C=a Δt/Δx` in linear advection to distinguish
+necessary conditions from sufficient ones.
+[Original CFL paper](https://doi.org/10.1007/BF01448839),
+[derivations and experiments](stability.md).
 
-## 1947–1950：拡散、陰解法、線形安定性
+## 1947–1950: diffusion, implicit methods, and linear stability
 
-Crank–Nicolson (1947)、Thomas の三重対角消去（1949 年報告として引用されるが原報は未確認）、
-Charney–Fjørtoft–von Neumann (1950) の数値予報における安定性解析。
-von Neumann 解析の成立を 1950 年の一論文だけに帰する趣旨ではありません。
-拡散数 `r=ν Δt/Δx²`、A 安定性、単調性、陰的線形系を接続します。
-[拡散・線形系](elliptic.md)。
+Crank–Nicolson (1947); Thomas tridiagonal elimination, commonly cited to a 1949
+report whose original text has not been inspected here; and stability analysis
+in Charney–Fjørtoft–von Neumann's numerical forecasting work (1950).
+The 1950 paper is historical context, rather than a claim that von Neumann
+analysis originated in that paper alone. Connect the diffusion number
+`r=ν Δt/Δx²` with A-stability, monotonicity, and implicit linear systems.
+[Diffusion and linear solvers](elliptic.md).
 
-## 1954–1961：Lax、Godunov、保存形
+## 1954–1961: Lax, Godunov, and conservation form
 
-Lax (1954) の弱解と差分、Lax–Richtmyer (1956) の同値定理、Godunov (1959)、
-Lax–Wendroff (1960)、Rusanov (1961)。
-保存形、数値流束、衝撃波速度、数値粘性、分散を学びます。
-Lax–Richtmyer の線形収束定理と、非線形保存則の Lax–Wendroff 型の弱解に関する結果は別です。
-`method="godunov"` は本実装では近似リーマン流束を使う Godunov 型で、原著の厳密流束の完全再現ではありません。
+Lax (1954), Lax–Richtmyer (1956), Godunov (1959), Lax–Wendroff (1960), and
+Rusanov (1961) lead into weak solutions, numerical fluxes, shock speeds,
+numerical viscosity, and dispersion. The Lax–Richtmyer linear convergence
+theorem and Lax–Wendroff-type results about weak limits of nonlinear
+conservative approximations have different hypotheses.
+Here, `method="godunov"` denotes a Godunov-type finite-volume method with
+approximate Riemann fluxes, rather than a complete reproduction of the
+original exact-flux algorithm.
 
-## 1961–1977：緩和から multigrid、局所多項式と大域基底
+## 1961–1977: relaxation, multigrid, and local and global bases
 
-Fedorenko (1961)、Reed–Hill (1973)、Gottlieb–Orszag (1977)、Brandt (1977)。
-Poisson の反復を「高周波誤差の平滑化」と「低周波誤差の粗格子補正」に分けます。
-一方、DG は要素ごとの多項式と境界流束、スペクトル法は大域的な基底を使います。
-DG・スペクトル法の解説では、この 1970 年代以前の Galerkin 法や Fourier 法の由来も背景として位置づけます。
-[Poisson と multigrid](elliptic.md)、`numart.advection.dg_advection`。
+Fedorenko (1961), Reed–Hill (1973), Gottlieb–Orszag (1977), and Brandt (1977).
+Split Poisson iteration into smoothing of high-frequency errors and coarse-grid
+correction of smooth errors. DG uses elementwise polynomials joined by boundary
+fluxes; spectral methods use global bases. Earlier Galerkin and Fourier ideas
+provide the mathematical background to these developments.
+[Poisson and multigrid](elliptic.md), `numart.advection.dg_advection`.
 
-## 1978–1983：共通テストと高解像度流束
+## 1978–1983: shared benchmarks and high-resolution fluxes
 
-Sod (1978)、van Leer (1979) の MUSCL、Orszag–Tang (1979)、Roe (1981)、Harten–Lax–van Leer (1983)。
-同じ Sod 問題で、接触面と音響波の解像度を比較します。
-MUSCL の初版は minmod + method of lines であり、van Leer の原論文の Lagrange/remap 実装とは異なります。
-Orszag–Tang も原著の非圧縮 MHD の研究と、現在の圧縮性テストの正規化を区別します。
-[テスト定義](benchmarks.md)、[MHD](mhd.md)。
+Sod (1978), van Leer's MUSCL (1979), Orszag–Tang (1979), Roe (1981), and
+Harten–Lax–van Leer (1983). Compare contact and acoustic-wave resolution on the
+same Sod problem. The first-edition MUSCL implementation uses minmod and the
+method of lines; van Leer's original Lagrangian/remap construction is different.
+The original incompressible Orszag–Tang study and the normalization of today's
+compressible test are also distinguished.
+[Benchmark definitions](benchmarks.md), [MHD](mhd.md).
 
-## 1987–1989：高次化、前処理、磁場制約
+## 1987–1989: higher order, preconditioning, and magnetic constraints
 
-Harten ほか (1987) の ENO、Turkel (1987) の低速前処理、Einfeldt (1988)、
-Evans–Hawley (1988) の CT、Shu–Osher (1988, 1989)、Cockburn–Shu (1989) の RKDG。
-高次補間だけで衝撃波の安定性は保証されません。エントロピー修正と正値性も別の課題です。
-Shu–Osher は衝撃波と滑らかな密度波を同時に解くテストとして使います。
+ENO by Harten and colleagues (1987), Turkel's low-speed preconditioning (1987),
+Einfeldt (1988), Evans–Hawley CT (1988), Shu–Osher (1988, 1989), and
+Cockburn–Shu RKDG (1989). High-order interpolation alone does not ensure robust
+shock capture. Entropy fixes and positivity require separate attention.
+The Shu–Osher test combines a shock with a smooth density wave.
 
-## 1991–1996：非定常の反復、低密度、HLLC と WENO
+## 1991–1996: unsteady iteration, low densities, HLLC, and WENO
 
-Einfeldt ほか (1991)、Jameson (1991)、Toro–Spruce–Speares (1994)、Liu–Osher–Chan (1994)、Jiang–Shu (1996)。
-物理時間と擬似時間、低密度での破綻、接触波の復元、WENO の非線形重みへ進みます。
-WENO の始まり (1994) と、初版に実装した WENO5-JS (1996) は分けて表示します。
-[前処理と dual time](advanced.md)。
+Einfeldt and colleagues (1991), Jameson (1991), Toro–Spruce–Speares (1994),
+Liu–Osher–Chan (1994), and Jiang–Shu (1996). Study physical and pseudo-time,
+low-density failure, contact restoration, and nonlinear WENO weights.
+The origin of WENO in 1994 is distinguished from WENO5-JS (1996), which is the
+variant implemented in this edition.
+[Preconditioning and dual time stepping](advanced.md).
 
-## 2000–2008：多次元の頑健性と制約
+## 2000–2008: multidimensional robustness and constraints
 
-Tóth (2000)、Dedner ほか (2002)、Abgrall (2006) の residual distribution の整理、Nishikawa–Kitamura (2008)。
-CT／GLM の離散演算子、残差の分配による保存性、rotated-hybrid 流束と carbuncle を扱います。
-RD の 2006 年はレビューの刊行年であり、手法の発明年ではありません。
+Tóth (2000), Dedner and colleagues (2002), Abgrall's residual-distribution
+review (2006), and Nishikawa–Kitamura (2008). Follow discrete CT/GLM operators,
+conservative residual distribution, rotated-hybrid fluxes, and the carbuncle
+instability. The 2006 date identifies the RD review, rather than the invention
+of residual distribution.
 
-## 現代の検証へ
+## Toward modern verification and validation
 
-[NASA の 2D 検証ケース](nasa-2d.md) は、純粋な数値検証と実験との物理検証を分けるための入口です。
-歴史アトラスには原論文、現在のデータ入口、実装・検証状態を別々に紐付けます。
+The [NASA 2D case catalog](nasa-2d.md) introduces the distinction between
+numerical verification and physical validation against experiments. Each
+future exhibit should connect its original source, current data access point,
+implementation status, and verification evidence.

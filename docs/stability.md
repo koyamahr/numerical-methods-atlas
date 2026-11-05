@@ -1,8 +1,8 @@
-# 差分、CFL、von Neumann、Lax
+# Differences, CFL, von Neumann analysis, and Lax
 
-## 空間と時間を別々に選ぶ
+## Choose space and time discretizations separately
 
-空間微分の前進・後退・中心差分は、それぞれ
+Forward, backward, and centered spatial differences are
 
 \[
 D_+u_j=\frac{u_{j+1}-u_j}{h},\qquad
@@ -10,35 +10,39 @@ D_-u_j=\frac{u_j-u_{j-1}}h,\qquad
 D_0u_j=\frac{u_{j+1}-u_{j-1}}{2h}.
 \]
 
-滑らかな関数では前二者は 1 次、中心差分は 2 次です。
-`numart.advection.finite_difference` で比較できます。
-風上差分は線形移流 `u_t+a u_x=0` の情報伝播方向で選び、`a>0` なら後退、`a<0` なら前進です。
-前進差分と風上差分は同義ではありません。
+For smooth functions, the first two are first-order accurate and the centered
+stencil is second order. Compare them with `numart.advection.finite_difference`.
+For linear advection `u_t+a u_x=0`, upwinding follows information propagation:
+use a backward difference for `a>0` and a forward difference for `a<0`.
+A forward difference is therefore not synonymous with an upwind difference.
 
-時間の前進 Euler は `u^{n+1}=u^n+Δt L_h u^n`、後退 Euler は
-`u^{n+1}=u^n+Δt L_h u^{n+1}`。後者は連立方程式を解きます。
-空間に後退差分を使うことだけでは陰解法になりません。
+Forward Euler in time gives `u^{n+1}=u^n+Δt L_h u^n`; backward Euler gives
+`u^{n+1}=u^n+Δt L_h u^{n+1}` and requires a system solve. A backward spatial
+stencil alone does not make a method implicit.
 
-## CFL：必要な情報に到達できるか
+## CFL: can the stencil reach the information it needs?
 
-周期・定係数の移流と最近傍の陽的ステンシルなら、依存領域から `|a|Δt/h ≤ 1` が必要になります。
-他のステンシル、Runge–Kutta、DG、多次元で定数は変わり、拡散では `Δt=O(h²)` の制限が現れます。
-CFL 条件は一般に安定性の十分条件ではありません。
-[Courant–Friedrichs–Lewy (1928)](https://doi.org/10.1007/BF01448839)。
+For constant-coefficient periodic advection with an explicit nearest-neighbor
+stencil, domain-of-dependence reasoning requires `|a|Δt/h ≤ 1`. The constant
+changes with the stencil, Runge–Kutta method, DG degree, and dimension.
+Explicit diffusion introduces a `Δt=O(h²)` restriction. A CFL condition is
+generally necessary rather than sufficient for stability.
+[Courant–Friedrichs–Lewy (1928)](https://doi.org/10.1007/BF01448839).
 
-反例は前進時間・中心空間 (FTCS) の純移流です。
-Fourier モード `u_j^n=G^n e^{ijθ}` を代入すると
+Forward-time, centered-space (FTCS) advection is a counterexample. Substituting
+a Fourier mode `u_j^n=G^n e^{ijθ}` gives
 
 \[
 G=1-i C\sin θ,\quad |G|^2=1+C^2\sin^2 θ,
 \qquad C=a\Delta t/h.
 \]
 
-`|C|<1` でも増幅するモードがあり、通常の固定 CFL の格子細分化では不安定です。
+Some modes grow even when `|C|<1`. The scheme is unstable under ordinary
+fixed-CFL grid refinement.
 
-## Lax–Friedrichs と Lax–Wendroff
+## Lax–Friedrichs and Lax–Wendroff
 
-Lax–Friedrichs は
+The classical Lax–Friedrichs scheme is
 
 \[
 u_j^{n+1}=\tfrac12(u_{j+1}^n+u_{j-1}^n)
@@ -46,12 +50,13 @@ u_j^{n+1}=\tfrac12(u_{j+1}^n+u_{j-1}^n)
 G=\cos θ-iC\sin θ.
 \]
 
-`|G|²=1-(1-C²)sin²θ` なので周期線形移流では `|C|≤1` が安定条件です。
-ここでの古典的 LF は数値粘性係数 `h/Δt` を持ちます。
-局所最大波速を係数に使う Rusanov 流束と、WENO の大域 LF 流束分離を同一の離散化として扱いません。
-[Lax (1954)](https://doi.org/10.1002/cpa.3160070112)。
+Since `|G|²=1-(1-C²)sin²θ`, periodic linear advection is stable for `|C|≤1`.
+Classical LF uses the numerical-viscosity coefficient `h/Δt`. Rusanov uses a
+local maximum wave speed; WENO here uses global LF flux splitting. These are
+different discrete constructions.
+[Lax (1954)](https://doi.org/10.1002/cpa.3160070112).
 
-Lax–Wendroff は
+Lax–Wendroff is
 
 \[
 u_j^{n+1}=u_j^n-\tfrac C2(u_{j+1}^n-u_{j-1}^n)
@@ -62,33 +67,39 @@ G=1-iC\sin θ+C^2(\cos θ-1),\quad
 |G|^2=1-4C^2(1-C^2)\sin^4(θ/2).
 \]
 
-こちらもこの問題では `|C|≤1`。2 次精度でも、不連続付近の振動を抑える性質は別です。
-[Lax–Wendroff (1960)](https://doi.org/10.1002/cpa.3160130205)。
+Its stability condition for this problem is also `|C|≤1`. Second-order accuracy
+does not itself suppress oscillations near discontinuities.
+[Lax–Wendroff (1960)](https://doi.org/10.1002/cpa.3160130205).
 
-`amplification` と `difference_step` は解析式と実際のモードの増幅が一致するか自動検証します。
-`gallery` は小さな Nyquist 誤差を種に、`C=0.8` と `C=1.1` を比較します。
+Tests compare the analytical amplification factors from `amplification` with
+actual mode evolution from `difference_step`. The gallery seeds a small
+Nyquist perturbation and compares `C=0.8` with `C=1.1`.
 
-![増幅率と計算](figures/stability.png)
+![Fourier amplification factors and computed advection](figures/stability.png)
 
-## Lax–Richtmyer の同値定理
+## The Lax–Richtmyer equivalence theorem
 
-適切な Banach 空間で適切に設定された**線形初期値問題**と、それに整合的な**線形差分近似**を考えます。
-安定性を、固定した有限時間区間における離散発展作用素の一様有界性として定義すると、
-安定性と収束性は同値です。
-[Lax–Richtmyer (1956), 原論文](https://math.berkeley.edu/~wilken/228B.S07/LaxRichtmyer.pdf)。
+Consider a **well-posed linear initial-value problem** in an appropriate Banach
+space and a **consistent linear difference approximation**. When stability
+means uniform boundedness of the discrete evolution operators over a fixed
+finite time interval, stability is equivalent to convergence.
+[Lax–Richtmyer (1956), original paper](https://math.berkeley.edu/~wilken/228B.S07/LaxRichtmyer.pdf).
 
-誤差を `e^{n+1}=S_h e^n+Δt τ^n` と書き、`||S_h^m||≤M_T` なら
-`||e^n||≤M_T||e^0||+M_T T max||τ^k||`。
-整合性から右辺の打切り誤差項が消え、収束する、というのが一方向の基本構造です。
-逆方向には一様有界性の議論が必要です。
+Writing the error as `e^{n+1}=S_h e^n+Δt τ^n`, the bound `||S_h^m||≤M_T` gives
+`||e^n||≤M_T||e^0||+M_T T max||τ^k||`. Consistency makes the truncation-error
+term tend to zero, providing the basic stability-to-convergence argument.
+The converse requires a uniform-boundedness argument.
 
-この定理をそのまま非線形 Euler、WENO、衝撃波、任意の境界処理の保証に使うことはできません。
-Fourier の `|G|≤1` 判定も、ここでは周期・定係数のスカラー問題を対象にしています。
-境界、変係数、非正規な行列、多段法では追加の解析が必要です。
+The theorem does not directly certify nonlinear Euler, WENO, shocks, or
+arbitrary boundary treatments. The Fourier criterion `|G|≤1` used here applies
+to periodic, constant-coefficient scalar problems. Boundaries, variable
+coefficients, nonnormal matrices, and multistep schemes need additional analysis.
 
-## 初版の時間刻み
+## Time steps in the first edition
 
-Euler／barotropic は `Δt=C h/max(|u|+c)`、既定 C=0.3。
-DG は `Δt=C h/((2p+1)|a|)`、既定 C=0.2。
-2D MHD は `Δt=C/[max(s_x)/h+max(s_y)/h]`、既定 C=0.3。
-これらは選定例で確認した保守的な設定であり、あらゆる初期値に対する厳密な非線形安定限界ではありません。
+- Euler and barotropic systems: `Δt=C h/max(|u|+c)`, with default `C=0.3`.
+- DG: `Δt=C h/((2p+1)|a|)`, with default `C=0.2`.
+- 2D MHD: `Δt=C/[max(s_x)/h+max(s_y)/h]`, with default `C=0.3`.
+
+These conservative choices are checked on selected examples. They are not
+rigorous nonlinear stability limits for every initial condition.

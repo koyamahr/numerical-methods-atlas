@@ -2,7 +2,8 @@ name: Numerical validation
 on: [push, pull_request, workflow_dispatch]
 jobs:
   verify:
-    runs-on: ubuntu-latest
+    # Keep Python 3.9 available when ubuntu-latest advances.
+    runs-on: ubuntu-22.04
     strategy:
       matrix:
         python-version: ['3.9', '3.12']

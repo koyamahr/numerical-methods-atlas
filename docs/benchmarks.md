@@ -1,69 +1,83 @@
-# テスト計算ライブラリ
+# Benchmark library
 
-各 1D 問題は `Problem` に方程式、領域、終了時刻、境界、初期値、参照解、引用キーを持ちます。
-`get_problem(name)` は同じ定義を全手法から利用するための入口です。
-数値配列の最後の軸が変数です。Euler は `(ρ,ρu,E)`、浅水／等温は `(h,hu)` または `(ρ,ρu)`。
+Each 1D `Problem` stores the equation, domain, final time, boundaries, initial
+condition, reference solution, and citation keys. `get_problem(name)` exposes
+the same definition to every method. The last array axis contains variables:
+Euler uses `(ρ,ρu,E)`, shallow water uses `(h,hu)`, and isothermal flow uses `(ρ,ρu)`.
 
-## 滑らかな問題
+## Smooth problems
 
-線形移流は周期 `[0,1]`、速度 a、`sin(2πx)`。厳密な並進解で差分、DG、Fourier を比較します。
-DG は Legendre modal P0/P1/P2、upwind 境界流束、SSPRK3。
-Pp の空間精度と時間 3 次の制限を分けます。DG の未知数は要素数×(p+1) です。
-Fourier は線形モードを厳密時間積分するので、比較図は同一コストや同一自由度の優劣を示しません。
-非線形積、dealiasing、Gibbs 対策は初版の対象外です。
+Linear advection uses periodic `[0,1]`, speed a, and initial data `sin(2πx)`.
+The exact translated solution compares finite differences, DG, and Fourier
+methods. DG uses modal Legendre P0/P1/P2, upwind boundary fluxes, and SSPRK3.
+Distinguish the spatial order of Pp from the third-order time integrator.
+DG has elements × (p+1) unknowns. Fourier integrates the linear modes exactly
+in time; the gallery does not establish an equal-cost or equal-degree-of-freedom
+ranking. Nonlinear products, dealiasing, and Gibbs treatments are future work.
 
-`entropy-wave` は Euler の `ρ=1+0.2sin(2πx)`、`u=1,p=1,γ=1.4`。
-周期 `[0,1]`、t=1。密度のみを厳密に並進させた参照解があり、滑らかな精度と周期保存を調べます。
-等温 Euler はエネルギー・独立なエントロピー変数を持たないため、この Euler エントロピー波とは別です。
+`entropy-wave` uses Euler data `ρ=1+0.2sin(2πx)`, `u=1,p=1,γ=1.4`, periodic
+`[0,1]`, and `t=1`. Only density translates, giving an exact reference for smooth
+accuracy and periodic conservation. Isothermal Euler has no independent energy
+or entropy variable and does not support this same Euler entropy-wave problem.
 
-## 衝撃波管
+## Shock tubes
 
-Sod は `[0,1]`、x0=0.5、左 `(ρ,u,p)=(1,0,1)`、右 `(0.125,0,0.1)`、γ=1.4、t=0.2。
-境界はゼロ勾配の外挿です。終了時刻まで主要波が境界に到達しない設定です。
-厳密リーマン解の圧力一致を二分法で解き、衝撃波・接触面・希薄波内を標本化します。
-真空を含む厳密解は未対応です。
-[Sod (1978)](https://doi.org/10.1016/0021-9991(78)90023-2)、
-[厳密解の実装資料](https://faculty.washington.edu/rjl/riemann_book/Euler_equations.html)。
+**Sod:** `[0,1]`, `x0=0.5`, left `(ρ,u,p)=(1,0,1)`, right `(0.125,0,0.1)`,
+`γ=1.4`, and `t=0.2`. Boundaries use zero-gradient extrapolation; the main waves
+do not reach them before the final time. The exact Riemann solver finds the
+matching pressure by bisection and samples shocks, contacts, and rarefaction
+fans. Exact solutions containing a vacuum are unsupported.
+[Sod (1978)](https://doi.org/10.1016/0021-9991(78)90023-2),
+[exact-solution implementation reference](https://faculty.washington.edu/rjl/riemann_book/Euler_equations.html).
 
-Lax は `[-5,5]`、x0=0、左 `(0.445,0.698,3.528)`、右 `(0.5,0,0.571)`、t=1.3。
-γ=1.4、外挿境界。Lax–Friedrichs の手法名と Lax のテスト名は区別します。
-このパラメータ表現は後続文献で使われる標準設定で、1954 年原論文の表をそのまま再現したと主張しません。
+**Lax:** `[-5,5]`, `x0=0`, left `(0.445,0.698,3.528)`, right `(0.5,0,0.571)`,
+`γ=1.4`, `t=1.3`, and extrapolation boundaries. The Lax test and the
+Lax–Friedrichs algorithm are different namesakes. These are standard parameters
+from later literature; the original 1954 paper's table has not been directly
+matched here.
 
-Shu–Osher は `[-5,5]`、x0=-4、t=1.8、γ=1.4。
-左 `(3.857143,2.629369,10.33333)`、右 `(1+0.2sin(5x),0,1)`。
-左右 ghost は端点で評価した初期状態に固定します。
-厳密な最終解は付けていません。初版の図は MUSCL と WENO の数値比較です。
-[Shu–Osher (1989)](https://doi.org/10.1016/0021-9991(89)90222-2)、
-[採用した設定を明記する Quokka 論文 §3.1.5](https://academic.oup.com/mnras/article/512/1/1430/6530656)。
+**Shu–Osher:** `[-5,5]`, `x0=-4`, `t=1.8`, `γ=1.4`, left
+`(3.857143,2.629369,10.33333)`, and right `(1+0.2sin(5x),0,1)`.
+Ghost states are fixed to the initial conditions evaluated at the domain ends.
+There is no exact final-time reference; the first-edition figure compares
+MUSCL and WENO numerical results.
+[Shu–Osher (1989)](https://doi.org/10.1016/0021-9991(89)90222-2),
+[adopted parameters in Quokka, §3.1.5](https://academic.oup.com/mnras/article/512/1/1430/6530656).
 
-## 低密度・Einfeldt
+## Low densities and Einfeldt-type tests
 
-`double-rarefaction` は `[0,1]`、x0=0.5、左 `(1,-2,0.4)`、右 `(1,2,0.4)`、γ=1.4、t=0.15。
-1–2–3 問題として知られる強膨張の設定です。
-初版の正値性試験は区分一定 + HLLE を対象とします。
-高次 MUSCL／WENO に同じ正値性の保証が自動的に付くわけではありません。
-[Einfeldt ほか (1991)](https://doi.org/10.1016/0021-9991(91)90211-3)。
+`double-rarefaction` uses `[0,1]`, `x0=0.5`, left `(1,-2,0.4)`, right
+`(1,2,0.4)`, `γ=1.4`, and `t=0.15`. This strong expansion is commonly called
+the 1–2–3 problem. The selected positivity test uses piecewise-constant
+reconstruction with HLLE. It does not transfer a positivity guarantee to
+high-order MUSCL or WENO.
+[Einfeldt et al. (1991)](https://doi.org/10.1016/0021-9991(91)90211-3).
 
-## 浅水・等温
+## Shallow-water and isothermal flow
 
-`dam-break` は平坦底の浅水方程式、g=1、左 h=2、右 h=1、u=0、`[0,1]`、t=0.1。
-乾床、地形ソース、well-balanced、wetting/drying は未対応です。
-`isothermal` は p=cs²ρ、cs=1、左 ρ=1、右 ρ=0.125、u=0、同じ領域と時刻。
-いずれも外挿境界で、初版の参照はソルバー間比較・物理状態・保存形の確認に限ります。
-厳密なリーマン参照解はまだ付けていません。
-[LeVeque (2002)](https://doi.org/10.1017/CBO9780511791253)。
+`dam-break` solves flat-bottom shallow water with `g=1`, left `h=2`, right
+`h=1`, `u=0`, `[0,1]`, and `t=0.1`. Dry beds, topographic sources,
+well-balanced discretization, and wetting/drying are unsupported.
+`isothermal` uses `p=cs²ρ`, `cs=1`, left `ρ=1`, right `ρ=0.125`, and `u=0`
+on the same domain and time interval. Both use extrapolation boundaries.
+First-edition checks compare solvers, admissible states, and conservative
+form; exact Riemann references remain to be added.
+[LeVeque (2002)](https://doi.org/10.1017/CBO9780511791253).
 
-## リーマン流束の対応
+## Riemann fluxes and reconstruction
 
-Rusanov と HLL は Euler・浅水・等温で利用できます。
-HLLC、Roe、HLLE の初版は理想気体 Euler 限定です。
-HLL は左右の局所音響速度の最小／最大、HLLE は Roe 平均を含む Einfeldt 型の速度を使います。
-Roe は音響固有値に二次のエントロピー平滑化（δ=0.1ã）を適用します。接触固有値は変更しません。
-これは低密度での正値性修正ではなく、一般的な entropy-stable flux の実装でもありません。
+Rusanov and HLL support Euler, shallow water, and isothermal flow. HLLC, Roe,
+and HLLE currently support ideal-gas Euler only. HLL uses minimum/maximum
+local acoustic speeds; HLLE uses Einfeldt-type estimates including Roe averages.
+Roe applies quadratic entropy smoothing to acoustic eigenvalues with
+`δ=0.1ã`, leaving the contact eigenvalue unchanged. This is neither a
+low-density positivity fix nor a general entropy-stable flux construction.
 
-MUSCL は primitive 変数を minmod 再構成します。
-WENO5-JS は**有限差分**の点値流束に大域 LF 分離を使う成分別実装です。
-特性分解、WENO-Z、正値性 limiter は未実装。
-有限体積のセル平均と有限差分の点値を厳密に同一視しないため、初版の誤差は `pointwise` と明記します。
+MUSCL uses minmod reconstruction in primitive variables. WENO5-JS is a
+componentwise **finite-difference** implementation with pointwise fluxes and
+global LF splitting. Characteristic reconstruction, WENO-Z, and positivity
+limiters are future work. Errors are labeled `pointwise`: finite-volume cell
+averages and finite-difference point values are not strictly interchangeable.
 
-Orszag–Tang の定義・制約は [MHD](mhd.md)、拡散と Poisson は [楕円型](elliptic.md) を参照してください。
+See [MHD](mhd.md) for Orszag–Tang definitions and limits, and
+[elliptic problems](elliptic.md) for diffusion and Poisson cases.
