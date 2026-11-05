@@ -89,3 +89,10 @@ See [MHD](mhd.md) for Orszag–Tang definitions and limits, and
 ## Matching the benchmark to the scheme
 
 The [original KEEP exhibit](keep.md) uses a smooth isentropic vortex and conservation diagnostics. Its bare central flux has no shock stabilization and is not presented as a Sod/DMR solver. The [movie guide](movies.md) separates those smooth computations from shock-capturing and MHD movies, and keeps steady fields as still images.
+
+## Equation-first scalar comparisons
+
+The [equation gallery](equation-gallery.md) adds Burgers and LWR traffic
+Riemann problems with exact cell-integrated references, plus advection and heat
+mode tests. It also connects the existing Sod, wet dam-break and isothermal
+baselines, with each reference convention explicitly labeled.

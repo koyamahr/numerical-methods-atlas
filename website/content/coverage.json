@@ -1,0 +1,1891 @@
+{
+  "schema_version": 1,
+  "edition": "Prepared local edition",
+  "counted_on": "2026-11-06",
+  "policy": {
+    "equations": "Named equation/model entries, not scalar component equations or mathematically disjoint families. Includes frameworks and auxiliary formulations; variants share one entry except the three separately explained SR/GR fluid systems. Biological entries are imported once from their own catalog.",
+    "methods": "Named numerical methods and building blocks with a reading chapter. Aliases count once; RK stages, dimensions, parameter combinations, mesh layouts and theoretical conditions do not add methods. A family and a separately explained algorithm may both appear. Not a count of mutually exclusive end-to-end solvers.",
+    "papers": "Unique bibliographic publications classified as journal articles or conference papers, deduplicated by DOI or author/title/year. Includes reviews, translations and explicitly labeled accepted papers; not a claim that every full text was inspected. Books, chapters, reports, preprints and documentation are separate.",
+    "references": "Unique cataloged works across all publication types. An original publication and a later translation are separate works; duplicate DOI records are not. NASA case links in prose are not catalog records."
+  },
+  "counts": {
+    "equations": 42,
+    "methods": 83,
+    "papers": 125,
+    "references": 145,
+    "journal_articles": 122,
+    "conference_papers": 3,
+    "books": 7,
+    "chapters": 2,
+    "reports": 3,
+    "other_sources": 8,
+    "local_equations": 15,
+    "reading_equations": 27,
+    "local_methods": 77,
+    "reading_methods": 6,
+    "biological_entries": 22,
+    "gallery_cases": 9,
+    "gallery_equations": 7,
+    "reading_chapters": 41
+  },
+  "items": [
+    {
+      "kind": "equation",
+      "id": "linear-advection",
+      "label": "Linear advection",
+      "chapter": "stability",
+      "status": "local-example",
+      "group": "Physics & mathematical models",
+      "scope": ""
+    },
+    {
+      "kind": "equation",
+      "id": "heat",
+      "label": "Heat / diffusion",
+      "chapter": "elliptic",
+      "status": "local-example",
+      "group": "Physics & mathematical models",
+      "scope": ""
+    },
+    {
+      "kind": "equation",
+      "id": "poisson-laplace",
+      "label": "Poisson / Laplace",
+      "chapter": "elliptic",
+      "status": "local-example",
+      "group": "Physics & mathematical models",
+      "scope": ""
+    },
+    {
+      "kind": "equation",
+      "id": "burgers",
+      "label": "Inviscid Burgers",
+      "chapter": "equation-gallery",
+      "status": "local-example",
+      "group": "Physics & mathematical models",
+      "scope": ""
+    },
+    {
+      "kind": "equation",
+      "id": "traffic",
+      "label": "LWR traffic flow",
+      "chapter": "equation-gallery",
+      "status": "local-example",
+      "group": "Physics & mathematical models",
+      "scope": ""
+    },
+    {
+      "kind": "equation",
+      "id": "euler",
+      "label": "Compressible Euler",
+      "chapter": "benchmarks",
+      "status": "local-example",
+      "group": "Physics & mathematical models",
+      "scope": ""
+    },
+    {
+      "kind": "equation",
+      "id": "shallow-water",
+      "label": "Shallow water, including the rotating linear model",
+      "chapter": "geophysical-grids",
+      "status": "local-example",
+      "group": "Physics & mathematical models",
+      "scope": "Wet 1D flow and linear rotating Fourier symbols; no full geophysical dynamical core."
+    },
+    {
+      "kind": "equation",
+      "id": "isothermal",
+      "label": "Isothermal Euler",
+      "chapter": "benchmarks",
+      "status": "local-example",
+      "group": "Physics & mathematical models",
+      "scope": ""
+    },
+    {
+      "kind": "equation",
+      "id": "mhd",
+      "label": "Ideal MHD",
+      "chapter": "mhd",
+      "status": "local-example",
+      "group": "Physics & mathematical models",
+      "scope": ""
+    },
+    {
+      "kind": "equation",
+      "id": "navier-stokes",
+      "label": "Incompressible Navier–Stokes",
+      "chapter": "incompressible",
+      "status": "local-example",
+      "group": "Physics & mathematical models",
+      "scope": ""
+    },
+    {
+      "kind": "equation",
+      "id": "bgk",
+      "label": "Isothermal lattice BGK",
+      "chapter": "lattice-boltzmann",
+      "status": "local-example",
+      "group": "Physics & mathematical models",
+      "scope": ""
+    },
+    {
+      "kind": "equation",
+      "id": "hamiltonian",
+      "label": "Hamiltonian oscillators",
+      "chapter": "symplectic",
+      "status": "local-example",
+      "group": "Physics & mathematical models",
+      "scope": ""
+    },
+    {
+      "kind": "equation",
+      "id": "particle-gravity",
+      "label": "Gravitational particle model",
+      "chapter": "particle-gravity",
+      "status": "local-example",
+      "group": "Physics & mathematical models",
+      "scope": "Static force evaluations and boundary kernels; no coupled self-gravitating fluid evolution."
+    },
+    {
+      "kind": "equation",
+      "id": "bratu",
+      "label": "Bratu nonlinear boundary-value problem",
+      "chapter": "sparse-nonlinear",
+      "status": "local-example",
+      "group": "Physics & mathematical models",
+      "scope": ""
+    },
+    {
+      "kind": "equation",
+      "id": "hyperbolic-diffusion",
+      "label": "Auxiliary hyperbolic diffusion system",
+      "chapter": "hyperbolic-diffusion",
+      "status": "local-example",
+      "group": "Physics & mathematical models",
+      "scope": "Periodic first-order steady-solution baseline, not physical-time heat diffusion."
+    },
+    {
+      "kind": "equation",
+      "id": "srhd",
+      "label": "Special-relativistic hydrodynamics",
+      "chapter": "relativistic-hydrodynamics",
+      "status": "reading",
+      "group": "Relativistic models",
+      "scope": "Literature review; no local relativistic solver."
+    },
+    {
+      "kind": "equation",
+      "id": "grhd",
+      "label": "General-relativistic hydrodynamics",
+      "chapter": "relativistic-hydrodynamics",
+      "status": "reading",
+      "group": "Relativistic models",
+      "scope": "Literature review; no local relativistic solver."
+    },
+    {
+      "kind": "equation",
+      "id": "grmhd",
+      "label": "General-relativistic MHD",
+      "chapter": "relativistic-hydrodynamics",
+      "status": "reading",
+      "group": "Relativistic models",
+      "scope": "Literature review; no local relativistic solver."
+    },
+    {
+      "kind": "equation",
+      "id": "m1-radiation",
+      "label": "Relativistic radiation moments / M1",
+      "chapter": "relativistic-hydrodynamics",
+      "status": "reading",
+      "group": "Relativistic models",
+      "scope": "Literature review; no local relativistic solver."
+    },
+    {
+      "kind": "equation",
+      "id": "causal-viscous",
+      "label": "Causal relativistic viscous fluid",
+      "chapter": "relativistic-hydrodynamics",
+      "status": "reading",
+      "group": "Relativistic models",
+      "scope": "Literature review; no local relativistic solver."
+    },
+    {
+      "kind": "method",
+      "id": "forward-difference",
+      "label": "Forward spatial difference",
+      "chapter": "stability",
+      "status": "local-example",
+      "group": "Spatial discretization",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "backward-difference",
+      "label": "Backward spatial difference",
+      "chapter": "stability",
+      "status": "local-example",
+      "group": "Spatial discretization",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "centered-difference",
+      "label": "Centered spatial difference",
+      "chapter": "stability",
+      "status": "local-example",
+      "group": "Spatial discretization",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "upwind",
+      "label": "Upwind finite differences",
+      "chapter": "stability",
+      "status": "local-example",
+      "group": "Spatial discretization",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "lax-friedrichs",
+      "label": "Lax–Friedrichs",
+      "chapter": "stability",
+      "status": "local-example",
+      "group": "Spatial discretization",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "lax-wendroff",
+      "label": "Lax–Wendroff",
+      "chapter": "stability",
+      "status": "local-example",
+      "group": "Spatial discretization",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "godunov",
+      "label": "Godunov-type finite volumes",
+      "chapter": "benchmarks",
+      "status": "local-example",
+      "group": "Spatial discretization",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "muscl",
+      "label": "MUSCL reconstruction",
+      "chapter": "benchmarks",
+      "status": "local-example",
+      "group": "Spatial discretization",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "weno-js",
+      "label": "WENO5-JS",
+      "chapter": "benchmarks",
+      "status": "local-example",
+      "group": "Spatial discretization",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "dg",
+      "label": "Discontinuous Galerkin / Legendre",
+      "chapter": "benchmarks",
+      "status": "local-example",
+      "group": "Spatial discretization",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "fourier",
+      "label": "Fourier differentiation and evolution",
+      "chapter": "benchmarks",
+      "status": "local-example",
+      "group": "Spatial discretization",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "cip",
+      "label": "Cubic-Hermite CIP",
+      "chapter": "cip",
+      "status": "local-example",
+      "group": "Spatial discretization",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "p1-fem",
+      "label": "Continuous P1 Galerkin FEM",
+      "chapter": "fem",
+      "status": "local-example",
+      "group": "Spatial discretization",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "rusanov",
+      "label": "Rusanov / local Lax–Friedrichs flux",
+      "chapter": "benchmarks",
+      "status": "local-example",
+      "group": "Riemann fluxes & corrections",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "hll",
+      "label": "HLL",
+      "chapter": "benchmarks",
+      "status": "local-example",
+      "group": "Riemann fluxes & corrections",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "hllc",
+      "label": "HLLC",
+      "chapter": "benchmarks",
+      "status": "local-example",
+      "group": "Riemann fluxes & corrections",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "roe",
+      "label": "Roe",
+      "chapter": "benchmarks",
+      "status": "local-example",
+      "group": "Riemann fluxes & corrections",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "hlle",
+      "label": "HLLE / Einfeldt wave speeds",
+      "chapter": "benchmarks",
+      "status": "local-example",
+      "group": "Riemann fluxes & corrections",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "entropy-fix",
+      "label": "Acoustic Roe entropy correction",
+      "chapter": "advanced",
+      "status": "local-example",
+      "group": "Riemann fluxes & corrections",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "rotated-hybrid",
+      "label": "Rotated-hybrid Riemann solver",
+      "chapter": "advanced",
+      "status": "reading",
+      "group": "Riemann fluxes & corrections",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "minmod",
+      "label": "Minmod",
+      "chapter": "limiters",
+      "status": "local-example",
+      "group": "Limiters & admissibility",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "superbee",
+      "label": "Superbee",
+      "chapter": "limiters",
+      "status": "local-example",
+      "group": "Limiters & admissibility",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "mc",
+      "label": "Monotonized central / MC",
+      "chapter": "limiters",
+      "status": "local-example",
+      "group": "Limiters & admissibility",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "van-leer",
+      "label": "Van Leer limiter",
+      "chapter": "limiters",
+      "status": "local-example",
+      "group": "Limiters & admissibility",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "van-albada",
+      "label": "Clipped Van Albada limiter",
+      "chapter": "limiters",
+      "status": "local-example",
+      "group": "Limiters & admissibility",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "tvb",
+      "label": "TVB modified minmod",
+      "chapter": "advanced-limiters",
+      "status": "local-example",
+      "group": "Limiters & admissibility",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "positive-scaling",
+      "label": "Mean-preserving positive-state scaling",
+      "chapter": "advanced-limiters",
+      "status": "local-example",
+      "group": "Limiters & admissibility",
+      "scope": "Reconstruction building block; no full Euler-update positivity guarantee."
+    },
+    {
+      "kind": "method",
+      "id": "forward-euler",
+      "label": "Forward Euler",
+      "chapter": "time-integration",
+      "status": "local-example",
+      "group": "Time integration",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "backward-euler",
+      "label": "Backward Euler",
+      "chapter": "time-integration",
+      "status": "local-example",
+      "group": "Time integration",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "heun",
+      "label": "Heun / SSPRK(2,2)",
+      "chapter": "time-integration",
+      "status": "local-example",
+      "group": "Time integration",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "explicit-midpoint",
+      "label": "Explicit midpoint RK2",
+      "chapter": "time-integration",
+      "status": "local-example",
+      "group": "Time integration",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "ralston",
+      "label": "Ralston RK2",
+      "chapter": "time-integration",
+      "status": "local-example",
+      "group": "Time integration",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "kutta3",
+      "label": "Kutta RK3",
+      "chapter": "time-integration",
+      "status": "local-example",
+      "group": "Time integration",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "ssprk33",
+      "label": "SSPRK(3,3)",
+      "chapter": "time-integration",
+      "status": "local-example",
+      "group": "Time integration",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "ssprk43",
+      "label": "SSPRK(4,3)",
+      "chapter": "time-integration",
+      "status": "local-example",
+      "group": "Time integration",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "rk4",
+      "label": "Classical RK4",
+      "chapter": "time-integration",
+      "status": "local-example",
+      "group": "Time integration",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "ssprk54",
+      "label": "SSPRK(5,4)",
+      "chapter": "time-integration",
+      "status": "local-example",
+      "group": "Time integration",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "implicit-midpoint",
+      "label": "Implicit midpoint",
+      "chapter": "time-integration",
+      "status": "local-example",
+      "group": "Time integration",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "leapfrog",
+      "label": "Two-step leapfrog",
+      "chapter": "time-integration",
+      "status": "local-example",
+      "group": "Time integration",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "crank-nicolson",
+      "label": "Crank–Nicolson",
+      "chapter": "elliptic",
+      "status": "local-example",
+      "group": "Time integration",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "bdf2",
+      "label": "BDF2",
+      "chapter": "stiff-integration",
+      "status": "local-example",
+      "group": "Time integration",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "sdirk2",
+      "label": "L-stable SDIRK2",
+      "chapter": "stiff-integration",
+      "status": "local-example",
+      "group": "Time integration",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "imex-euler",
+      "label": "IMEX Euler",
+      "chapter": "stiff-integration",
+      "status": "local-example",
+      "group": "Time integration",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "step-doubling",
+      "label": "Adaptive SDIRK2 / step doubling",
+      "chapter": "stiff-integration",
+      "status": "local-example",
+      "group": "Time integration",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "symplectic-euler",
+      "label": "Symplectic Euler",
+      "chapter": "symplectic",
+      "status": "local-example",
+      "group": "Time integration",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "verlet",
+      "label": "Velocity Verlet / particle leapfrog",
+      "chapter": "symplectic",
+      "status": "local-example",
+      "group": "Time integration",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "yoshida4",
+      "label": "Yoshida fourth-order composition",
+      "chapter": "symplectic",
+      "status": "local-example",
+      "group": "Time integration",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "thomas",
+      "label": "Thomas tridiagonal elimination",
+      "chapter": "elliptic",
+      "status": "local-example",
+      "group": "Linear & nonlinear solvers",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "jacobi-iteration",
+      "label": "Jacobi iteration",
+      "chapter": "elliptic",
+      "status": "local-example",
+      "group": "Linear & nonlinear solvers",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "gauss-seidel",
+      "label": "Gauss–Seidel iteration",
+      "chapter": "elliptic",
+      "status": "local-example",
+      "group": "Linear & nonlinear solvers",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "sor",
+      "label": "Successive over-relaxation / SOR",
+      "chapter": "elliptic",
+      "status": "local-example",
+      "group": "Linear & nonlinear solvers",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "cg",
+      "label": "Conjugate gradients",
+      "chapter": "elliptic",
+      "status": "local-example",
+      "group": "Linear & nonlinear solvers",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "rbgs",
+      "label": "Red-black Gauss–Seidel",
+      "chapter": "elliptic",
+      "status": "local-example",
+      "group": "Linear & nonlinear solvers",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "multigrid",
+      "label": "Geometric multigrid V-cycle",
+      "chapter": "elliptic",
+      "status": "local-example",
+      "group": "Linear & nonlinear solvers",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "gmres",
+      "label": "Restarted GMRES",
+      "chapter": "sparse-nonlinear",
+      "status": "local-example",
+      "group": "Linear & nonlinear solvers",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "bicgstab",
+      "label": "BiCGSTAB",
+      "chapter": "sparse-nonlinear",
+      "status": "local-example",
+      "group": "Linear & nonlinear solvers",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "jacobi-preconditioner",
+      "label": "Jacobi / diagonal preconditioning",
+      "chapter": "sparse-nonlinear",
+      "status": "local-example",
+      "group": "Linear & nonlinear solvers",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "ilu0",
+      "label": "Unpivoted ILU(0)",
+      "chapter": "sparse-nonlinear",
+      "status": "local-example",
+      "group": "Linear & nonlinear solvers",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "newton",
+      "label": "Armijo-damped Newton",
+      "chapter": "sparse-nonlinear",
+      "status": "local-example",
+      "group": "Linear & nonlinear solvers",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "newton-krylov",
+      "label": "Newton–Krylov with assembled Jacobian",
+      "chapter": "sparse-nonlinear",
+      "status": "local-example",
+      "group": "Linear & nonlinear solvers",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "dual-time",
+      "label": "Dual time stepping",
+      "chapter": "advanced",
+      "status": "local-example",
+      "group": "Coupling, constraints & particles",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "residual-distribution",
+      "label": "Scalar residual distribution",
+      "chapter": "advanced",
+      "status": "local-example",
+      "group": "Coupling, constraints & particles",
+      "scope": "1D P1 upwind equivalent, not multidimensional Euler RD."
+    },
+    {
+      "kind": "method",
+      "id": "low-mach-preconditioning",
+      "label": "Low-Mach PDE preconditioning",
+      "chapter": "advanced",
+      "status": "reading",
+      "group": "Coupling, constraints & particles",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "ct",
+      "label": "Constrained transport / CT",
+      "chapter": "mhd",
+      "status": "local-example",
+      "group": "Coupling, constraints & particles",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "glm",
+      "label": "GLM divergence cleaning",
+      "chapter": "mhd",
+      "status": "local-example",
+      "group": "Coupling, constraints & particles",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "projection",
+      "label": "MAC pressure projection",
+      "chapter": "incompressible",
+      "status": "local-example",
+      "group": "Coupling, constraints & particles",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "d2q9-bgk",
+      "label": "D2Q9–BGK collision and streaming",
+      "chapter": "lattice-boltzmann",
+      "status": "local-example",
+      "group": "Coupling, constraints & particles",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "guo",
+      "label": "Guo forcing",
+      "chapter": "lattice-boltzmann",
+      "status": "local-example",
+      "group": "Coupling, constraints & particles",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "bounce-back",
+      "label": "Half-way bounce-back",
+      "chapter": "lattice-boltzmann",
+      "status": "local-example",
+      "group": "Coupling, constraints & particles",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "hyperbolic-diffusion",
+      "label": "First-order hyperbolic diffusion baseline",
+      "chapter": "hyperbolic-diffusion",
+      "status": "local-example",
+      "group": "Coupling, constraints & particles",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "sph",
+      "label": "SPH kernel reconstruction",
+      "chapter": "particles-sph",
+      "status": "local-example",
+      "group": "Coupling, constraints & particles",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "ale",
+      "label": "ALE uniform-state / geometric-conservation model",
+      "chapter": "ale",
+      "status": "local-example",
+      "group": "Coupling, constraints & particles",
+      "scope": "Moving-volume scalar check; no complete ALE Euler solver."
+    },
+    {
+      "kind": "method",
+      "id": "gsph",
+      "label": "Godunov SPH / GSPH",
+      "chapter": "gsph",
+      "status": "reading",
+      "group": "Coupling, constraints & particles",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "cic",
+      "label": "Cloud-in-cell assignment and interpolation",
+      "chapter": "particle-gravity",
+      "status": "local-example",
+      "group": "Particle fields & gravity",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "pm",
+      "label": "FFT particle–mesh forces",
+      "chapter": "particle-gravity",
+      "status": "local-example",
+      "group": "Particle fields & gravity",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "barnes-hut",
+      "label": "Barnes–Hut octree",
+      "chapter": "particle-gravity",
+      "status": "local-example",
+      "group": "Particle fields & gravity",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "multipole",
+      "label": "Monopole and second-moment expansion",
+      "chapter": "particle-gravity",
+      "status": "local-example",
+      "group": "Particle fields & gravity",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "hockney",
+      "label": "Isolated doubled-grid FFT convolution",
+      "chapter": "gravity-boundaries",
+      "status": "local-example",
+      "group": "Particle fields & gravity",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "slab",
+      "label": "Horizontal-periodic slab Green-function FFT",
+      "chapter": "gravity-boundaries",
+      "status": "local-example",
+      "group": "Particle fields & gravity",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "p3m",
+      "label": "P³M short-range correction",
+      "chapter": "particle-gravity",
+      "status": "reading",
+      "group": "Particle fields & gravity",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "treepm",
+      "label": "TreePM force splitting",
+      "chapter": "particle-gravity",
+      "status": "reading",
+      "group": "Particle fields & gravity",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "fmm",
+      "label": "Fast multipole translations",
+      "chapter": "particle-gravity",
+      "status": "reading",
+      "group": "Particle fields & gravity",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "keep",
+      "label": "Original Cartesian KEEP split flux",
+      "chapter": "keep",
+      "status": "local-example",
+      "group": "Additional formulations",
+      "scope": ""
+    },
+    {
+      "kind": "equation",
+      "id": "bio-logistic",
+      "label": "Logistic population growth",
+      "chapter": "biological-models",
+      "status": "reading",
+      "group": "Biological model survey",
+      "scope": "The linked original is the later 1847 memoir; the 1838 note itself was not audited. The differential equation is not the discrete logistic map."
+    },
+    {
+      "kind": "equation",
+      "id": "bio-enzyme",
+      "label": "Michaelis–Menten and full enzyme kinetics",
+      "chapter": "biological-models",
+      "status": "reading",
+      "group": "Biological model survey",
+      "scope": "The 1913 rapid-equilibrium interpretation and the 1925 quasi-steady-state derivation must remain distinct."
+    },
+    {
+      "kind": "equation",
+      "id": "bio-lotka-volterra",
+      "label": "Lotka–Volterra predator–prey",
+      "chapter": "biological-models",
+      "status": "reading",
+      "group": "Biological model survey",
+      "scope": ""
+    },
+    {
+      "kind": "equation",
+      "id": "bio-age-structure",
+      "label": "McKendrick age-structured population",
+      "chapter": "biological-models",
+      "status": "reading",
+      "group": "Biological model survey",
+      "scope": "This is the classical age-transport form; the later von Foerster lineage is acknowledged without treating its date as the first appearance."
+    },
+    {
+      "kind": "equation",
+      "id": "bio-sir",
+      "label": "SIR and SEIR compartment models",
+      "chapter": "biological-models",
+      "status": "reading",
+      "group": "Biological model survey",
+      "scope": "The original general epidemic framework is broader than this SIR specialization. Population-count and fraction conventions give different β definitions."
+    },
+    {
+      "kind": "equation",
+      "id": "bio-fisher-kpp",
+      "label": "Fisher–KPP invasion front",
+      "chapter": "biological-models",
+      "status": "reading",
+      "group": "Biological model survey",
+      "scope": "Fisher–KPP is a conventional family name; the independent KPP 1937 original remains an archival follow-up. The exact special speed is not the minimal speed."
+    },
+    {
+      "kind": "equation",
+      "id": "bio-monod",
+      "label": "Monod growth and chemostat",
+      "chapter": "biological-models",
+      "status": "reading",
+      "group": "Biological model survey",
+      "scope": "This writes one constant-yield extension of saturation growth, not a universal metabolic model."
+    },
+    {
+      "kind": "equation",
+      "id": "bio-hodgkin-huxley",
+      "label": "Hodgkin–Huxley membrane dynamics",
+      "chapter": "biological-models",
+      "status": "reading",
+      "group": "Biological model survey",
+      "scope": "The original squid-axon model is not a calibrated human cardiac model. No single rate parameter set is selected by this survey."
+    },
+    {
+      "kind": "equation",
+      "id": "bio-turing",
+      "label": "Turing reaction–diffusion framework",
+      "chapter": "biological-models",
+      "status": "reading",
+      "group": "Biological model survey",
+      "scope": "A spot image or unequal diffusion coefficients alone do not establish a Turing mechanism. Boundary conditions determine the available modes."
+    },
+    {
+      "kind": "equation",
+      "id": "bio-fitzhugh-nagumo",
+      "label": "FitzHugh–Nagumo excitation and recovery",
+      "chapter": "biological-models",
+      "status": "reading",
+      "group": "Biological model survey",
+      "scope": "This is a common normalized variant; cubic coefficients, recovery signs and nondimensionalization differ between formulations."
+    },
+    {
+      "kind": "equation",
+      "id": "bio-keller-segel",
+      "label": "Keller–Segel chemotaxis",
+      "chapter": "biological-models",
+      "status": "reading",
+      "group": "Biological model survey",
+      "scope": "This is a common two-field reduction of a more detailed original formulation. Blowup thresholds depend on dimension, domain, boundary and chemical dynamics."
+    },
+    {
+      "kind": "equation",
+      "id": "bio-gierer-meinhardt",
+      "label": "Gierer–Meinhardt activator–inhibitor",
+      "chapter": "biological-models",
+      "status": "reading",
+      "group": "Biological model survey",
+      "scope": "Source densities, saturation and baseline production vary across the model family. This simplified formula is not a verbatim transcription of every original variant."
+    },
+    {
+      "kind": "equation",
+      "id": "bio-immersed-boundary",
+      "label": "Fluid–elastic structure and immersed boundaries",
+      "chapter": "biological-models",
+      "status": "reading",
+      "group": "Biological model survey",
+      "scope": "Immersed boundary is a numerical coupling method, not itself a closed biological constitutive equation. The existing periodic MAC solver does not implement this coupling."
+    },
+    {
+      "kind": "equation",
+      "id": "bio-chemical-master",
+      "label": "Chemical master equation and Gillespie SSA",
+      "chapter": "biological-models",
+      "status": "reading",
+      "group": "Biological model survey",
+      "scope": "The 1977 paper is a foundational SSA reference, not a priority claim for all master equations. SSA is a solver; the reaction network is the model. A seed documents a trajectory, not an ensemble validation."
+    },
+    {
+      "kind": "equation",
+      "id": "bio-mackey-glass",
+      "label": "Mackey–Glass delayed physiological feedback",
+      "chapter": "biological-models",
+      "status": "reading",
+      "group": "Biological model survey",
+      "scope": "A scalar initial value alone is insufficient. The delayed ODE is distinct from a spatial reaction–diffusion model."
+    },
+    {
+      "kind": "equation",
+      "id": "bio-replicator",
+      "label": "Replicator evolutionary game dynamics",
+      "chapter": "biological-models",
+      "status": "reading",
+      "group": "Biological model survey",
+      "scope": "No universal Lyapunov function or equivalence of fixed point and evolutionarily stable strategy is assumed."
+    },
+    {
+      "kind": "equation",
+      "id": "bio-schnakenberg",
+      "label": "Schnakenberg reaction–diffusion",
+      "chapter": "biological-models",
+      "status": "reading",
+      "group": "Biological model survey",
+      "scope": "A mathematical chemical pattern model; matching a visual biological pattern does not calibrate it to a tissue."
+    },
+    {
+      "kind": "equation",
+      "id": "bio-skt",
+      "label": "Shigesada–Kawasaki–Teramoto cross-diffusion",
+      "chapter": "biological-models",
+      "status": "reading",
+      "group": "Biological model survey",
+      "scope": "The displayed homogeneous-environment reduction omits the original environmental-potential terms. It is not equivalent to two independent scalar diffusion equations."
+    },
+    {
+      "kind": "equation",
+      "id": "bio-gray-scott",
+      "label": "Gray–Scott spatial autocatalysis",
+      "chapter": "biological-models",
+      "status": "reading",
+      "group": "Biological model survey",
+      "scope": "1983 is the well-mixed CSTR source; Pearson 1993 is the spatial pattern reference. Spot division does not by itself demonstrate cell division or a linear Turing instability."
+    },
+    {
+      "kind": "equation",
+      "id": "bio-cardiac",
+      "label": "Aliev–Panfilov cardiac excitation",
+      "chapter": "biological-models",
+      "status": "reading",
+      "group": "Biological model survey",
+      "scope": "Monodomain/bidomain tissue models add conductivity tensors and, for bidomain, an extracellular elliptic constraint. They are not automatically included by this two-variable model."
+    },
+    {
+      "kind": "equation",
+      "id": "bio-repressilator",
+      "label": "Repressilator mRNA–protein network",
+      "chapter": "biological-models",
+      "status": "reading",
+      "group": "Biological model survey",
+      "scope": "The six-variable form is distinct from a reduced three-protein oscillator; oscillations are parameter-dependent."
+    },
+    {
+      "kind": "equation",
+      "id": "bio-toggle",
+      "label": "Genetic toggle switch",
+      "chapter": "biological-models",
+      "status": "reading",
+      "group": "Biological model survey",
+      "scope": "Bistability is not guaranteed for arbitrary Hill exponents or production rates. Induction, mRNA dynamics and noise are additional model choices."
+    }
+  ],
+  "publications": [
+    {
+      "id": "cfl1928",
+      "type": "article",
+      "identity": "doi:10.1007/bf01448839"
+    },
+    {
+      "id": "crank1947",
+      "type": "article",
+      "identity": "doi:10.1017/s0305004100023197"
+    },
+    {
+      "id": "thomas1949",
+      "type": "techreport",
+      "identity": "work:thomasllewellynhilleth:ellipticproblemsinlineardifferenceequationsoveranetwork:1949"
+    },
+    {
+      "id": "charney1950",
+      "type": "article",
+      "identity": "doi:10.1111/j.2153-3490.1950.tb00336.x"
+    },
+    {
+      "id": "lax1954",
+      "type": "article",
+      "identity": "doi:10.1002/cpa.3160070112"
+    },
+    {
+      "id": "lax1956",
+      "type": "article",
+      "identity": "doi:10.1002/cpa.3160090206"
+    },
+    {
+      "id": "godunov1959",
+      "type": "article",
+      "identity": "work:godunovsergeik:adifferencemethodfornumericalcalculationofdiscontinuoussolutionsoftheequationsofhydrodynamics:1959"
+    },
+    {
+      "id": "lax1960",
+      "type": "article",
+      "identity": "doi:10.1002/cpa.3160130205"
+    },
+    {
+      "id": "fedorenko1961",
+      "type": "article",
+      "identity": "work:fedorenkoradiip:arelaxationmethodforsolvingellipticdifferenceequations:1961"
+    },
+    {
+      "id": "rusanov1961",
+      "type": "article",
+      "identity": "work:rusanovvladimirv:thecalculationoftheinteractionofnonstationaryshockwaveswithbarriers:1961"
+    },
+    {
+      "id": "reed1973",
+      "type": "techreport",
+      "identity": "work:reedwhandhilltr:triangularmeshmethodsfortheneutrontransportequation:1973"
+    },
+    {
+      "id": "hirt1974",
+      "type": "article",
+      "identity": "doi:10.1016/0021-9991(74)90051-5"
+    },
+    {
+      "id": "brandt1977",
+      "type": "article",
+      "identity": "doi:10.1090/s0025-5718-1977-0431719-x"
+    },
+    {
+      "id": "gingold1977",
+      "type": "article",
+      "identity": "doi:10.1093/mnras/181.3.375"
+    },
+    {
+      "id": "lucy1977",
+      "type": "article",
+      "identity": "doi:10.1086/112164"
+    },
+    {
+      "id": "spectral1977",
+      "type": "book",
+      "identity": "doi:10.1137/1.9781611970425"
+    },
+    {
+      "id": "sod1978",
+      "type": "article",
+      "identity": "doi:10.1016/0021-9991(78)90023-2"
+    },
+    {
+      "id": "orszag1979",
+      "type": "article",
+      "identity": "doi:10.1017/s002211207900210x"
+    },
+    {
+      "id": "vanleer1979",
+      "type": "article",
+      "identity": "doi:10.1016/0021-9991(79)90145-1"
+    },
+    {
+      "id": "hockney1981book",
+      "type": "book",
+      "identity": "doi:10.1201/9780367806934"
+    },
+    {
+      "id": "hockney1981p3m",
+      "type": "misc",
+      "identity": "work:hockneyrw:thep³mcode:1981"
+    },
+    {
+      "id": "roe1981",
+      "type": "article",
+      "identity": "doi:10.1016/0021-9991(81)90128-5"
+    },
+    {
+      "id": "hll1983",
+      "type": "article",
+      "identity": "doi:10.1137/1025002"
+    },
+    {
+      "id": "woodward1984",
+      "type": "article",
+      "identity": "doi:10.1016/0021-9991(84)90142-6"
+    },
+    {
+      "id": "barnes1986",
+      "type": "article",
+      "identity": "doi:10.1038/324446a0"
+    },
+    {
+      "id": "eno1987",
+      "type": "article",
+      "identity": "doi:10.1016/0021-9991(87)90031-3"
+    },
+    {
+      "id": "greengard1987",
+      "type": "article",
+      "identity": "doi:10.1016/0021-9991(87)90140-9"
+    },
+    {
+      "id": "turkel1987",
+      "type": "article",
+      "identity": "doi:10.1016/0021-9991(87)90084-2"
+    },
+    {
+      "id": "einfeldt1988",
+      "type": "article",
+      "identity": "doi:10.1137/0725021"
+    },
+    {
+      "id": "evans1988",
+      "type": "article",
+      "identity": "doi:10.1086/166684"
+    },
+    {
+      "id": "shu1988",
+      "type": "article",
+      "identity": "doi:10.1016/0021-9991(88)90177-5"
+    },
+    {
+      "id": "cockburn1989",
+      "type": "article",
+      "identity": "doi:10.1090/s0025-5718-1989-0983311-4"
+    },
+    {
+      "id": "shu1989",
+      "type": "article",
+      "identity": "doi:10.1016/0021-9991(89)90222-2"
+    },
+    {
+      "id": "yoshida1990",
+      "type": "article",
+      "identity": "doi:10.1016/0375-9601(90)90092-3"
+    },
+    {
+      "id": "einfeldt1991",
+      "type": "article",
+      "identity": "doi:10.1016/0021-9991(91)90211-3"
+    },
+    {
+      "id": "jameson1991",
+      "type": "inproceedings",
+      "identity": "doi:10.2514/6.1991-1596"
+    },
+    {
+      "id": "hllc1994",
+      "type": "article",
+      "identity": "doi:10.1007/bf01414629"
+    },
+    {
+      "id": "quirk1994",
+      "type": "article",
+      "identity": "doi:10.1002/fld.1650180603"
+    },
+    {
+      "id": "templates1994",
+      "type": "book",
+      "identity": "work:barrettrichardandberrymichaelandchantonyfanddemmeljamesanddonatojuneanddongarrajackandeijkhoutvictorandpozoroldanandrominecharlesandvandervorsthenk:templatesforthesolutionoflinearsystemsbuildingblocksforiterativemethods:1994"
+    },
+    {
+      "id": "weno1994",
+      "type": "article",
+      "identity": "doi:10.1006/jcph.1994.1187"
+    },
+    {
+      "id": "jiang1996",
+      "type": "article",
+      "identity": "doi:10.1006/jcph.1996.0130"
+    },
+    {
+      "id": "shewchuk1996",
+      "type": "inproceedings",
+      "identity": "work:shewchukjonathanrichard:triangleengineeringa2dqualitymeshgeneratoranddelaunaytriangulator:1996"
+    },
+    {
+      "id": "toth2000",
+      "type": "article",
+      "identity": "doi:10.1006/jcph.2000.6519"
+    },
+    {
+      "id": "pandolfi2001",
+      "type": "article",
+      "identity": "doi:10.1006/jcph.2000.6652"
+    },
+    {
+      "id": "dedner2002",
+      "type": "article",
+      "identity": "doi:10.1006/jcph.2001.6961"
+    },
+    {
+      "id": "leveque2002",
+      "type": "book",
+      "identity": "doi:10.1017/cbo9780511791253"
+    },
+    {
+      "id": "hairer2003",
+      "type": "article",
+      "identity": "doi:10.1017/s0962492902000144"
+    },
+    {
+      "id": "springel2005",
+      "type": "article",
+      "identity": "doi:10.1111/j.1365-2966.2005.09655.x"
+    },
+    {
+      "id": "abgrall2006",
+      "type": "article",
+      "identity": "doi:10.1016/j.compfluid.2005.01.007"
+    },
+    {
+      "id": "nishikawa2008",
+      "type": "article",
+      "identity": "doi:10.1016/j.jcp.2007.11.003"
+    },
+    {
+      "id": "koyama2009",
+      "type": "article",
+      "identity": "doi:10.1088/0004-637x/693/2/1316"
+    },
+    {
+      "id": "toro2009",
+      "type": "book",
+      "identity": "doi:10.1007/b79761"
+    },
+    {
+      "id": "williams2009",
+      "type": "article",
+      "identity": "doi:10.1175/2009mwr2724.1"
+    },
+    {
+      "id": "fitzpatrick2016",
+      "type": "misc",
+      "identity": "work:fitzpatrickrichard:fluidequationsincylindricalcoordinates:2016"
+    },
+    {
+      "id": "kuya2018",
+      "type": "article",
+      "identity": "doi:10.1016/j.jcp.2018.08.058"
+    },
+    {
+      "id": "shima2021",
+      "type": "article",
+      "identity": "doi:10.1016/j.jcp.2020.110060"
+    },
+    {
+      "id": "kuya2022keep",
+      "type": "inproceedings",
+      "identity": "work:kuyayuichiandkawaisoshi:stableandnondissipativekineticenergyandentropypreservingkeepschemesforcompressibleflows:2022"
+    },
+    {
+      "id": "quokka2022",
+      "type": "article",
+      "identity": "doi:10.1093/mnras/stac439"
+    },
+    {
+      "id": "tamaki2022",
+      "type": "article",
+      "identity": "doi:10.1016/j.jcp.2022.111494"
+    },
+    {
+      "id": "asada2024",
+      "type": "article",
+      "identity": "doi:10.1016/j.compfluid.2023.106143"
+    },
+    {
+      "id": "powell2026",
+      "type": "misc",
+      "identity": "work:powellken:philiplawrenceroeprofessoremeritusofaerospaceengineeringattheuniversityofmichiganpassedawayapril262026attheageof87:2026"
+    },
+    {
+      "id": "sweby1984",
+      "type": "article",
+      "identity": "doi:10.1137/0721062"
+    },
+    {
+      "id": "vanleer1974",
+      "type": "article",
+      "identity": "doi:10.1016/0021-9991(74)90019-9"
+    },
+    {
+      "id": "zhangshu2010euler",
+      "type": "article",
+      "identity": "doi:10.1016/j.jcp.2010.08.016"
+    },
+    {
+      "id": "clawpacklimiters",
+      "type": "misc",
+      "identity": "work:clawpackdevelopmentteam:pyclawlimiters:2026"
+    },
+    {
+      "id": "amrvaclimiters",
+      "type": "misc",
+      "identity": "work:mpiamrvacteam:slopelimiters:2026"
+    },
+    {
+      "id": "gottlieb2001ssp",
+      "type": "article",
+      "identity": "doi:10.1137/s003614450036757x"
+    },
+    {
+      "id": "spiteri2002ssp",
+      "type": "article",
+      "identity": "doi:10.1137/s0036142901389025"
+    },
+    {
+      "id": "gottlieb2009ssp",
+      "type": "article",
+      "identity": "doi:10.1007/s10915-008-9239-z"
+    },
+    {
+      "id": "numipediark",
+      "type": "misc",
+      "identity": "work:ketchesondavidi:numipediarungekuttamethodrecords:2026"
+    },
+    {
+      "id": "takewaki1985cip",
+      "type": "article",
+      "identity": "doi:10.1016/0021-9991(85)90085-3"
+    },
+    {
+      "id": "yabe1991cip",
+      "type": "article",
+      "identity": "doi:10.1016/0010-4655(91)90071-r"
+    },
+    {
+      "id": "yabe2001csl",
+      "type": "article",
+      "identity": "doi:10.1175/1520-0493(2001)129<0332:aecsls>2.0.co;2"
+    },
+    {
+      "id": "saito2020rcip",
+      "type": "article",
+      "identity": "doi:10.5194/gmd-13-5875-2020"
+    },
+    {
+      "id": "inutsuka1994",
+      "type": "article",
+      "identity": "work:inutsukashuichiro:godunovtypesph:1994"
+    },
+    {
+      "id": "inutsuka2002",
+      "type": "article",
+      "identity": "doi:10.1006/jcph.2002.7053"
+    },
+    {
+      "id": "iwasaki2011gsph",
+      "type": "article",
+      "identity": "doi:10.1111/j.1365-2966.2011.19588.x"
+    },
+    {
+      "id": "kitajima2026srgsph",
+      "type": "article",
+      "identity": "doi:10.1016/j.jcp.2025.114448"
+    },
+    {
+      "id": "wilson1972grhd",
+      "type": "article",
+      "identity": "doi:10.1086/151434"
+    },
+    {
+      "id": "marti1994srriemann",
+      "type": "article",
+      "identity": "doi:10.1017/s0022112094003344"
+    },
+    {
+      "id": "banyuls1997",
+      "type": "article",
+      "identity": "doi:10.1086/303604"
+    },
+    {
+      "id": "pons1998grriemann",
+      "type": "article",
+      "identity": "work:ponsjaandfontjaandibáñezjmandmartíjmandmirallesja:generalrelativistichydrodynamicswithspecialrelativisticriemannsolvers:1998"
+    },
+    {
+      "id": "komissarov1999rmhd",
+      "type": "article",
+      "identity": "doi:10.1046/j.1365-8711.1999.02244.x"
+    },
+    {
+      "id": "gammie2003harm",
+      "type": "article",
+      "identity": "doi:10.1086/374594"
+    },
+    {
+      "id": "duez2005grmhd",
+      "type": "article",
+      "identity": "doi:10.1103/physrevd.72.024028"
+    },
+    {
+      "id": "noble2006recovery",
+      "type": "article",
+      "identity": "doi:10.1086/500349"
+    },
+    {
+      "id": "font2008grhd",
+      "type": "article",
+      "identity": "doi:10.12942/lrr-2008-7"
+    },
+    {
+      "id": "sadowski2013radiation",
+      "type": "article",
+      "identity": "doi:10.1093/mnras/sts632"
+    },
+    {
+      "id": "deppe2022dgfd",
+      "type": "article",
+      "identity": "doi:10.1088/1361-6382/ac8864"
+    },
+    {
+      "id": "foucart2023neutrino",
+      "type": "article",
+      "identity": "doi:10.1007/s41115-023-00016-y"
+    },
+    {
+      "id": "deppe2024bns",
+      "type": "misc",
+      "identity": "work:deppenilsandfoucartfrancoisandbonillamarcelinesandothers:binaryneutronstarmergersusingadiscontinuousgalerkinfinitedifferencehybridmethod:2024"
+    },
+    {
+      "id": "fields2025athenak",
+      "type": "article",
+      "identity": "doi:10.3847/1538-4365/ad9687"
+    },
+    {
+      "id": "kalinani2025asterx",
+      "type": "article",
+      "identity": "doi:10.1088/1361-6382/ad9c11"
+    },
+    {
+      "id": "cao2025pcpdg",
+      "type": "article",
+      "identity": "doi:10.1016/j.jcp.2025.113770"
+    },
+    {
+      "id": "musolino2026grace",
+      "type": "article",
+      "identity": "doi:10.1103/yq78-m749"
+    },
+    {
+      "id": "israel1979viscous",
+      "type": "article",
+      "identity": "doi:10.1016/0003-4916(79)90130-1"
+    },
+    {
+      "id": "bemfica2019causality",
+      "type": "article",
+      "identity": "doi:10.1103/physrevd.100.104020"
+    },
+    {
+      "id": "kovtun2019stable",
+      "type": "article",
+      "identity": "doi:10.1007/jhep10(2019)034"
+    },
+    {
+      "id": "courant1943",
+      "type": "article",
+      "identity": "doi:10.1090/s0002-9904-1943-07818-4"
+    },
+    {
+      "id": "burgers1948",
+      "type": "incollection",
+      "identity": "doi:10.1016/s0065-2156(08)70100-5"
+    },
+    {
+      "id": "bgk1954",
+      "type": "article",
+      "identity": "doi:10.1103/physrev.94.511"
+    },
+    {
+      "id": "lighthill1955",
+      "type": "article",
+      "identity": "doi:10.1098/rspa.1955.0089"
+    },
+    {
+      "id": "richards1956",
+      "type": "article",
+      "identity": "doi:10.1287/opre.4.1.42"
+    },
+    {
+      "id": "chorin1968",
+      "type": "article",
+      "identity": "doi:10.1090/s0025-5718-1968-0242392-2"
+    },
+    {
+      "id": "alexander1977",
+      "type": "article",
+      "identity": "doi:10.1137/0714068"
+    },
+    {
+      "id": "saad1986",
+      "type": "article",
+      "identity": "doi:10.1137/0907058"
+    },
+    {
+      "id": "vanderVorst1992",
+      "type": "article",
+      "identity": "doi:10.1137/0913035"
+    },
+    {
+      "id": "qian1992",
+      "type": "article",
+      "identity": "doi:10.1209/0295-5075/17/6/001"
+    },
+    {
+      "id": "ascher1997",
+      "type": "article",
+      "identity": "doi:10.1016/s0168-9274(97)00056-1"
+    },
+    {
+      "id": "guo2002",
+      "type": "article",
+      "identity": "doi:10.1103/physreve.65.046308"
+    },
+    {
+      "id": "nishikawa2007",
+      "type": "article",
+      "identity": "doi:10.1016/j.jcp.2007.07.029"
+    },
+    {
+      "id": "nishikawa2010",
+      "type": "article",
+      "identity": "doi:10.1016/j.jcp.2009.10.040"
+    },
+    {
+      "id": "chapman1939",
+      "type": "book",
+      "identity": "work:chapmansydneyandcowlingtg:themathematicaltheoryofnonuniformgases:1939"
+    },
+    {
+      "id": "verhulst1847",
+      "type": "article",
+      "identity": "doi:10.3406/marb.1847.3457"
+    },
+    {
+      "id": "michaelis1913",
+      "type": "article",
+      "identity": "work:michaelisleonorandmentenmaudl:diekinetikderinvertinwirkung:1913"
+    },
+    {
+      "id": "lotka1920",
+      "type": "article",
+      "identity": "doi:10.1073/pnas.6.7.410"
+    },
+    {
+      "id": "briggs1925",
+      "type": "article",
+      "identity": "doi:10.1042/bj0190338"
+    },
+    {
+      "id": "volterra1926",
+      "type": "article",
+      "identity": "doi:10.1038/118558a0"
+    },
+    {
+      "id": "mckendrick1926",
+      "type": "article",
+      "identity": "doi:10.1017/s0013091500034428"
+    },
+    {
+      "id": "kermack1927",
+      "type": "article",
+      "identity": "doi:10.1098/rspa.1927.0118"
+    },
+    {
+      "id": "fisher1937",
+      "type": "article",
+      "identity": "doi:10.1111/j.1469-1809.1937.tb02153.x"
+    },
+    {
+      "id": "monod1949",
+      "type": "article",
+      "identity": "doi:10.1146/annurev.mi.03.100149.002103"
+    },
+    {
+      "id": "turing1952",
+      "type": "article",
+      "identity": "doi:10.1098/rstb.1952.0012"
+    },
+    {
+      "id": "hodgkin1952",
+      "type": "article",
+      "identity": "doi:10.1113/jphysiol.1952.sp004764"
+    },
+    {
+      "id": "fitzhugh1961",
+      "type": "article",
+      "identity": "doi:10.1016/s0006-3495(61)86902-6"
+    },
+    {
+      "id": "nagumo1962",
+      "type": "article",
+      "identity": "doi:10.1109/jrproc.1962.288235"
+    },
+    {
+      "id": "keller1970",
+      "type": "article",
+      "identity": "doi:10.1016/0022-5193(70)90092-5"
+    },
+    {
+      "id": "gierer1972",
+      "type": "article",
+      "identity": "doi:10.1007/bf00289234"
+    },
+    {
+      "id": "peskin1972",
+      "type": "article",
+      "identity": "doi:10.1016/0021-9991(72)90065-4"
+    },
+    {
+      "id": "mackey1977",
+      "type": "article",
+      "identity": "doi:10.1126/science.267326"
+    },
+    {
+      "id": "gillespie1977",
+      "type": "article",
+      "identity": "doi:10.1021/j100540a008"
+    },
+    {
+      "id": "taylor1978",
+      "type": "article",
+      "identity": "doi:10.1016/0025-5564(78)90077-9"
+    },
+    {
+      "id": "schnakenberg1979",
+      "type": "article",
+      "identity": "doi:10.1016/0022-5193(79)90042-0"
+    },
+    {
+      "id": "shigesada1979",
+      "type": "article",
+      "identity": "doi:10.1016/0022-5193(79)90258-3"
+    },
+    {
+      "id": "ablowitz1979",
+      "type": "article",
+      "identity": "doi:10.1007/bf02462380"
+    },
+    {
+      "id": "gray1983",
+      "type": "article",
+      "identity": "doi:10.1016/0009-2509(83)80132-8"
+    },
+    {
+      "id": "pearson1993",
+      "type": "article",
+      "identity": "doi:10.1126/science.261.5118.189"
+    },
+    {
+      "id": "aliev1996",
+      "type": "article",
+      "identity": "doi:10.1016/0960-0779(95)00089-5"
+    },
+    {
+      "id": "gardner2000",
+      "type": "article",
+      "identity": "doi:10.1038/35002131"
+    },
+    {
+      "id": "elowitz2000",
+      "type": "article",
+      "identity": "doi:10.1038/35002125"
+    },
+    {
+      "id": "johnson2011",
+      "type": "article",
+      "identity": "doi:10.1021/bi201284u"
+    },
+    {
+      "id": "murray2002",
+      "type": "book",
+      "identity": "doi:10.1007/b98868"
+    },
+    {
+      "id": "arakawa1977",
+      "type": "incollection",
+      "identity": "doi:10.1016/b978-0-12-460817-7.50009-4"
+    },
+    {
+      "id": "riddaway2002",
+      "type": "techreport",
+      "identity": "work:riddawayrwandhortalm:numericalmethods:2002"
+    },
+    {
+      "id": "mitgcm-c-grid",
+      "type": "misc",
+      "identity": "work:mitgcmcontributors:cgridstaggeringofvariables:2026"
+    }
+  ],
+  "source_sha256": {
+    "catalog/coverage.json": "98caaa80e8f39bfa356e8608ed46466053464ddb92546f29a83523f6d76dbec1",
+    "catalog/biological-models.json": "f0b55e0832cb17304b6d1bfdb626f2b66bb6e5c27a3730981ceb2b4fb151ab82",
+    "catalog/references.json": "36e1a83b0ae812b65a98448ea4d676822c40cdec0e3d33ac6a136f8d6ab24f89",
+    "scripts/build_coverage.py": "daa962bda57460252de9c32914bbfcad05630a825567d7f3db44f9fa04169d14"
+  }
+}

@@ -49,3 +49,11 @@ Tests check the continuous kernel’s normalization and discrete constant reprod
 ## Particle gravity is a separate operator
 
 PM, P³M, Tree, and multipole methods compute gravitational fields; SPH kernels reconstruct fluid quantities and their derivatives. Read [particle gravity](particle-gravity.md), [isolated and slab boundary kernels](gravity-boundaries.md), and [symplectic time integration](symplectic.md) to connect these different parts of a self-gravitating particle model.
+
+## Godunov SPH: the Riemann-solver branch
+
+[Inutsuka's GSPH](gsph.md) connects particle hydrodynamics with pairwise Riemann
+problems. The chapter follows the 2002 convolution-based derivation, identifies
+its 1994 precursor, and links the 2011 MHD extension by Iwasaki and Inutsuka.
+It is a reading and implementation plan; the kernel reconstruction above is
+not a GSPH fluid calculation.

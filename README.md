@@ -31,6 +31,22 @@ Figures, numerical data, settings, and source SHA-256 hashes are saved together.
 Runs made before the first Git commit record a `null` Git revision and use the
 source hashes to identify the implementation.
 
+## The atlas in numbers — prepared local edition
+
+**42 equation/model entries · 83 numerical methods and building blocks ·
+125 journal/conference papers · 145 unique sources in all.**
+
+The paper count is 122 journal articles plus 3 conference papers; other sources
+include books, chapters, reports, documentation and a separately identified
+preprint. The named inventory distinguishes 15 model entries and 77 method
+entries with scoped local examples from reading-only material. These are not
+counts of independent, complete production solvers. The equation gallery has
+9 saved-profile cases across 7 families.
+
+[Inspect the full inventory and counting rules](docs/site-coverage.md).
+Counts are regenerated from the catalogs during the Web build. One duplicate
+Cockburn–Shu record was merged, correcting the previous 146-source total.
+
 ## Reading guide
 
 1. [Historical atlas](docs/history.md): CFL, implicit diffusion, Lax, Godunov, multigrid, DG, spectral methods, Roe, ENO/WENO, MHD, and dual time stepping.
@@ -46,7 +62,43 @@ Additional reading: [time integration and leapfrog](docs/time-integration.md), [
 
 Further reading: [symplectic Hamiltonian maps](docs/symplectic.md), [PM / P³M / Tree / multipoles](docs/particle-gravity.md), and [Hockney–Eastwood / Koyama–Ostriker gravity kernels](docs/gravity-boundaries.md).
 
+Source-based additions: [Inutsuka's GSPH and its MHD/SR extensions](docs/gsph.md)
+and [the development of SRHD, GRHD, and GRMHD through November 2026](docs/relativistic-hydrodynamics.md).
+These are reading notes and staged implementation plans; no GSPH or relativistic
+fluid solver is implemented in the current library.
+
 New exhibits: [CIP value/gradient transport](docs/cip.md), [Runge–Kutta families](docs/runge-kutta.md), [slope limiters](docs/limiters.md), [advanced TVB and positive-state scaling](docs/advanced-limiters.md), [nonsteady movies](docs/movies.md), and [original KEEP with smooth tests and caveats](docs/keep.md). Steady fields remain still figures.
+
+## Local expansion: equation gallery and solver foundations
+
+The prepared Web edition adds an **Equations** route (`#/equations`): Burgers
+shock/fan, LWR traffic jam/clearing fan, advection, heat, Sod, wet dam break and
+isothermal flow. This expansion is prepared locally and has not been deployed.
+
+New verified models: [continuous P1 FEM](docs/fem.md),
+[GMRES / BiCGSTAB / ILU / Newton](docs/sparse-nonlinear.md),
+[stiff and adaptive integration](docs/stiff-integration.md),
+[periodic MAC projection](docs/incompressible.md),
+[D2Q9 lattice Boltzmann](docs/lattice-boltzmann.md), and
+[Nishikawa-inspired hyperbolic diffusion](docs/hyperbolic-diffusion.md).
+The [Chapman–Enskog derivation](docs/chapman-enskog.md) explains the lattice
+viscosity correction. See [equation definitions and sampling](docs/equation-gallery.md).
+
+```bash
+python scripts/build_equation_gallery.py
+python -m pytest tests/test_sparse_fem.py tests/test_new_models.py
+cd website
+npm test
+npm run build
+npm run dev
+```
+
+Additional local reading: [22 biological model families](docs/biological-models.md)
+with source equations and proposed benchmarks (survey only), and
+[Arakawa A/B/C grids](docs/geophysical-grids.md) with placement diagrams
+and tested linear rotating-shallow-water Fourier symbols.
+
+[Review the prepared expansion and publication boundary](RELEASE_REVIEW.md).
 
 ## Interactive notebooks
 

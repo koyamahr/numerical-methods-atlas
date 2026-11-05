@@ -32,3 +32,11 @@ Small angles, skewness, aspect ratio, nonorthogonality, and volume variation inf
 `numart.geometry.example_meshes` supplies the three examples. Tests verify positive cell areas, unit total area, connected face-neighbor graphs, reciprocal adjacency, and the planar Euler relation V−E+F_cells = 1 for these simply connected domains. The explorer is a geometry/connectivity demonstration; an unstructured Euler or viscous flow solver remains future work.
 
 Continue with [ALE moving cells](ale.md), [SPH particles](particles-sph.md), and [cylindrical metrics and tensors](coordinates-viscosity.md).
+
+## Variable staggering is another choice
+
+[Arakawa A/B/C placement](geophysical-grids.md) specifies which variables
+occupy centers, corners and faces on a given mesh. It is independent of
+structured versus unstructured connectivity and of temporal order. The new
+chapter connects the existing MAC layout to rotating shallow-water waves,
+with explicit Coriolis averaging and tested Fourier symbols.

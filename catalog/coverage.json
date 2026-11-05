@@ -1,0 +1,940 @@
+{
+  "schema_version": 1,
+  "edition": "Prepared local edition",
+  "counted_on": "2026-11-06",
+  "policy": {
+    "equations": "Named equation/model entries, not scalar component equations or mathematically disjoint families. Includes frameworks and auxiliary formulations; variants share one entry except the three separately explained SR/GR fluid systems. Biological entries are imported once from their own catalog.",
+    "methods": "Named numerical methods and building blocks with a reading chapter. Aliases count once; RK stages, dimensions, parameter combinations, mesh layouts and theoretical conditions do not add methods. A family and a separately explained algorithm may both appear. Not a count of mutually exclusive end-to-end solvers.",
+    "papers": "Unique bibliographic publications classified as journal articles or conference papers, deduplicated by DOI or author/title/year. Includes reviews, translations and explicitly labeled accepted papers; not a claim that every full text was inspected. Books, chapters, reports, preprints and documentation are separate.",
+    "references": "Unique cataloged works across all publication types. An original publication and a later translation are separate works; duplicate DOI records are not. NASA case links in prose are not catalog records."
+  },
+  "items": [
+    {
+      "kind": "equation",
+      "id": "linear-advection",
+      "label": "Linear advection",
+      "chapter": "stability",
+      "status": "local-example",
+      "group": "Physics & mathematical models",
+      "scope": ""
+    },
+    {
+      "kind": "equation",
+      "id": "heat",
+      "label": "Heat / diffusion",
+      "chapter": "elliptic",
+      "status": "local-example",
+      "group": "Physics & mathematical models",
+      "scope": ""
+    },
+    {
+      "kind": "equation",
+      "id": "poisson-laplace",
+      "label": "Poisson / Laplace",
+      "chapter": "elliptic",
+      "status": "local-example",
+      "group": "Physics & mathematical models",
+      "scope": ""
+    },
+    {
+      "kind": "equation",
+      "id": "burgers",
+      "label": "Inviscid Burgers",
+      "chapter": "equation-gallery",
+      "status": "local-example",
+      "group": "Physics & mathematical models",
+      "scope": ""
+    },
+    {
+      "kind": "equation",
+      "id": "traffic",
+      "label": "LWR traffic flow",
+      "chapter": "equation-gallery",
+      "status": "local-example",
+      "group": "Physics & mathematical models",
+      "scope": ""
+    },
+    {
+      "kind": "equation",
+      "id": "euler",
+      "label": "Compressible Euler",
+      "chapter": "benchmarks",
+      "status": "local-example",
+      "group": "Physics & mathematical models",
+      "scope": ""
+    },
+    {
+      "kind": "equation",
+      "id": "shallow-water",
+      "label": "Shallow water, including the rotating linear model",
+      "chapter": "geophysical-grids",
+      "status": "local-example",
+      "group": "Physics & mathematical models",
+      "scope": "Wet 1D flow and linear rotating Fourier symbols; no full geophysical dynamical core."
+    },
+    {
+      "kind": "equation",
+      "id": "isothermal",
+      "label": "Isothermal Euler",
+      "chapter": "benchmarks",
+      "status": "local-example",
+      "group": "Physics & mathematical models",
+      "scope": ""
+    },
+    {
+      "kind": "equation",
+      "id": "mhd",
+      "label": "Ideal MHD",
+      "chapter": "mhd",
+      "status": "local-example",
+      "group": "Physics & mathematical models",
+      "scope": ""
+    },
+    {
+      "kind": "equation",
+      "id": "navier-stokes",
+      "label": "Incompressible Navier–Stokes",
+      "chapter": "incompressible",
+      "status": "local-example",
+      "group": "Physics & mathematical models",
+      "scope": ""
+    },
+    {
+      "kind": "equation",
+      "id": "bgk",
+      "label": "Isothermal lattice BGK",
+      "chapter": "lattice-boltzmann",
+      "status": "local-example",
+      "group": "Physics & mathematical models",
+      "scope": ""
+    },
+    {
+      "kind": "equation",
+      "id": "hamiltonian",
+      "label": "Hamiltonian oscillators",
+      "chapter": "symplectic",
+      "status": "local-example",
+      "group": "Physics & mathematical models",
+      "scope": ""
+    },
+    {
+      "kind": "equation",
+      "id": "particle-gravity",
+      "label": "Gravitational particle model",
+      "chapter": "particle-gravity",
+      "status": "local-example",
+      "group": "Physics & mathematical models",
+      "scope": "Static force evaluations and boundary kernels; no coupled self-gravitating fluid evolution."
+    },
+    {
+      "kind": "equation",
+      "id": "bratu",
+      "label": "Bratu nonlinear boundary-value problem",
+      "chapter": "sparse-nonlinear",
+      "status": "local-example",
+      "group": "Physics & mathematical models",
+      "scope": ""
+    },
+    {
+      "kind": "equation",
+      "id": "hyperbolic-diffusion",
+      "label": "Auxiliary hyperbolic diffusion system",
+      "chapter": "hyperbolic-diffusion",
+      "status": "local-example",
+      "group": "Physics & mathematical models",
+      "scope": "Periodic first-order steady-solution baseline, not physical-time heat diffusion."
+    },
+    {
+      "kind": "equation",
+      "id": "srhd",
+      "label": "Special-relativistic hydrodynamics",
+      "chapter": "relativistic-hydrodynamics",
+      "status": "reading",
+      "group": "Relativistic models",
+      "scope": "Literature review; no local relativistic solver."
+    },
+    {
+      "kind": "equation",
+      "id": "grhd",
+      "label": "General-relativistic hydrodynamics",
+      "chapter": "relativistic-hydrodynamics",
+      "status": "reading",
+      "group": "Relativistic models",
+      "scope": "Literature review; no local relativistic solver."
+    },
+    {
+      "kind": "equation",
+      "id": "grmhd",
+      "label": "General-relativistic MHD",
+      "chapter": "relativistic-hydrodynamics",
+      "status": "reading",
+      "group": "Relativistic models",
+      "scope": "Literature review; no local relativistic solver."
+    },
+    {
+      "kind": "equation",
+      "id": "m1-radiation",
+      "label": "Relativistic radiation moments / M1",
+      "chapter": "relativistic-hydrodynamics",
+      "status": "reading",
+      "group": "Relativistic models",
+      "scope": "Literature review; no local relativistic solver."
+    },
+    {
+      "kind": "equation",
+      "id": "causal-viscous",
+      "label": "Causal relativistic viscous fluid",
+      "chapter": "relativistic-hydrodynamics",
+      "status": "reading",
+      "group": "Relativistic models",
+      "scope": "Literature review; no local relativistic solver."
+    },
+    {
+      "kind": "method",
+      "id": "forward-difference",
+      "label": "Forward spatial difference",
+      "chapter": "stability",
+      "status": "local-example",
+      "group": "Spatial discretization",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "backward-difference",
+      "label": "Backward spatial difference",
+      "chapter": "stability",
+      "status": "local-example",
+      "group": "Spatial discretization",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "centered-difference",
+      "label": "Centered spatial difference",
+      "chapter": "stability",
+      "status": "local-example",
+      "group": "Spatial discretization",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "upwind",
+      "label": "Upwind finite differences",
+      "chapter": "stability",
+      "status": "local-example",
+      "group": "Spatial discretization",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "lax-friedrichs",
+      "label": "Lax–Friedrichs",
+      "chapter": "stability",
+      "status": "local-example",
+      "group": "Spatial discretization",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "lax-wendroff",
+      "label": "Lax–Wendroff",
+      "chapter": "stability",
+      "status": "local-example",
+      "group": "Spatial discretization",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "godunov",
+      "label": "Godunov-type finite volumes",
+      "chapter": "benchmarks",
+      "status": "local-example",
+      "group": "Spatial discretization",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "muscl",
+      "label": "MUSCL reconstruction",
+      "chapter": "benchmarks",
+      "status": "local-example",
+      "group": "Spatial discretization",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "weno-js",
+      "label": "WENO5-JS",
+      "chapter": "benchmarks",
+      "status": "local-example",
+      "group": "Spatial discretization",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "dg",
+      "label": "Discontinuous Galerkin / Legendre",
+      "chapter": "benchmarks",
+      "status": "local-example",
+      "group": "Spatial discretization",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "fourier",
+      "label": "Fourier differentiation and evolution",
+      "chapter": "benchmarks",
+      "status": "local-example",
+      "group": "Spatial discretization",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "cip",
+      "label": "Cubic-Hermite CIP",
+      "chapter": "cip",
+      "status": "local-example",
+      "group": "Spatial discretization",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "p1-fem",
+      "label": "Continuous P1 Galerkin FEM",
+      "chapter": "fem",
+      "status": "local-example",
+      "group": "Spatial discretization",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "rusanov",
+      "label": "Rusanov / local Lax–Friedrichs flux",
+      "chapter": "benchmarks",
+      "status": "local-example",
+      "group": "Riemann fluxes & corrections",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "hll",
+      "label": "HLL",
+      "chapter": "benchmarks",
+      "status": "local-example",
+      "group": "Riemann fluxes & corrections",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "hllc",
+      "label": "HLLC",
+      "chapter": "benchmarks",
+      "status": "local-example",
+      "group": "Riemann fluxes & corrections",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "roe",
+      "label": "Roe",
+      "chapter": "benchmarks",
+      "status": "local-example",
+      "group": "Riemann fluxes & corrections",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "hlle",
+      "label": "HLLE / Einfeldt wave speeds",
+      "chapter": "benchmarks",
+      "status": "local-example",
+      "group": "Riemann fluxes & corrections",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "entropy-fix",
+      "label": "Acoustic Roe entropy correction",
+      "chapter": "advanced",
+      "status": "local-example",
+      "group": "Riemann fluxes & corrections",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "rotated-hybrid",
+      "label": "Rotated-hybrid Riemann solver",
+      "chapter": "advanced",
+      "status": "reading",
+      "group": "Riemann fluxes & corrections",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "minmod",
+      "label": "Minmod",
+      "chapter": "limiters",
+      "status": "local-example",
+      "group": "Limiters & admissibility",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "superbee",
+      "label": "Superbee",
+      "chapter": "limiters",
+      "status": "local-example",
+      "group": "Limiters & admissibility",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "mc",
+      "label": "Monotonized central / MC",
+      "chapter": "limiters",
+      "status": "local-example",
+      "group": "Limiters & admissibility",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "van-leer",
+      "label": "Van Leer limiter",
+      "chapter": "limiters",
+      "status": "local-example",
+      "group": "Limiters & admissibility",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "van-albada",
+      "label": "Clipped Van Albada limiter",
+      "chapter": "limiters",
+      "status": "local-example",
+      "group": "Limiters & admissibility",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "tvb",
+      "label": "TVB modified minmod",
+      "chapter": "advanced-limiters",
+      "status": "local-example",
+      "group": "Limiters & admissibility",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "positive-scaling",
+      "label": "Mean-preserving positive-state scaling",
+      "chapter": "advanced-limiters",
+      "status": "local-example",
+      "group": "Limiters & admissibility",
+      "scope": "Reconstruction building block; no full Euler-update positivity guarantee."
+    },
+    {
+      "kind": "method",
+      "id": "forward-euler",
+      "label": "Forward Euler",
+      "chapter": "time-integration",
+      "status": "local-example",
+      "group": "Time integration",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "backward-euler",
+      "label": "Backward Euler",
+      "chapter": "time-integration",
+      "status": "local-example",
+      "group": "Time integration",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "heun",
+      "label": "Heun / SSPRK(2,2)",
+      "chapter": "time-integration",
+      "status": "local-example",
+      "group": "Time integration",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "explicit-midpoint",
+      "label": "Explicit midpoint RK2",
+      "chapter": "time-integration",
+      "status": "local-example",
+      "group": "Time integration",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "ralston",
+      "label": "Ralston RK2",
+      "chapter": "time-integration",
+      "status": "local-example",
+      "group": "Time integration",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "kutta3",
+      "label": "Kutta RK3",
+      "chapter": "time-integration",
+      "status": "local-example",
+      "group": "Time integration",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "ssprk33",
+      "label": "SSPRK(3,3)",
+      "chapter": "time-integration",
+      "status": "local-example",
+      "group": "Time integration",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "ssprk43",
+      "label": "SSPRK(4,3)",
+      "chapter": "time-integration",
+      "status": "local-example",
+      "group": "Time integration",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "rk4",
+      "label": "Classical RK4",
+      "chapter": "time-integration",
+      "status": "local-example",
+      "group": "Time integration",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "ssprk54",
+      "label": "SSPRK(5,4)",
+      "chapter": "time-integration",
+      "status": "local-example",
+      "group": "Time integration",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "implicit-midpoint",
+      "label": "Implicit midpoint",
+      "chapter": "time-integration",
+      "status": "local-example",
+      "group": "Time integration",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "leapfrog",
+      "label": "Two-step leapfrog",
+      "chapter": "time-integration",
+      "status": "local-example",
+      "group": "Time integration",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "crank-nicolson",
+      "label": "Crank–Nicolson",
+      "chapter": "elliptic",
+      "status": "local-example",
+      "group": "Time integration",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "bdf2",
+      "label": "BDF2",
+      "chapter": "stiff-integration",
+      "status": "local-example",
+      "group": "Time integration",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "sdirk2",
+      "label": "L-stable SDIRK2",
+      "chapter": "stiff-integration",
+      "status": "local-example",
+      "group": "Time integration",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "imex-euler",
+      "label": "IMEX Euler",
+      "chapter": "stiff-integration",
+      "status": "local-example",
+      "group": "Time integration",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "step-doubling",
+      "label": "Adaptive SDIRK2 / step doubling",
+      "chapter": "stiff-integration",
+      "status": "local-example",
+      "group": "Time integration",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "symplectic-euler",
+      "label": "Symplectic Euler",
+      "chapter": "symplectic",
+      "status": "local-example",
+      "group": "Time integration",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "verlet",
+      "label": "Velocity Verlet / particle leapfrog",
+      "chapter": "symplectic",
+      "status": "local-example",
+      "group": "Time integration",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "yoshida4",
+      "label": "Yoshida fourth-order composition",
+      "chapter": "symplectic",
+      "status": "local-example",
+      "group": "Time integration",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "thomas",
+      "label": "Thomas tridiagonal elimination",
+      "chapter": "elliptic",
+      "status": "local-example",
+      "group": "Linear & nonlinear solvers",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "jacobi-iteration",
+      "label": "Jacobi iteration",
+      "chapter": "elliptic",
+      "status": "local-example",
+      "group": "Linear & nonlinear solvers",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "gauss-seidel",
+      "label": "Gauss–Seidel iteration",
+      "chapter": "elliptic",
+      "status": "local-example",
+      "group": "Linear & nonlinear solvers",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "sor",
+      "label": "Successive over-relaxation / SOR",
+      "chapter": "elliptic",
+      "status": "local-example",
+      "group": "Linear & nonlinear solvers",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "cg",
+      "label": "Conjugate gradients",
+      "chapter": "elliptic",
+      "status": "local-example",
+      "group": "Linear & nonlinear solvers",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "rbgs",
+      "label": "Red-black Gauss–Seidel",
+      "chapter": "elliptic",
+      "status": "local-example",
+      "group": "Linear & nonlinear solvers",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "multigrid",
+      "label": "Geometric multigrid V-cycle",
+      "chapter": "elliptic",
+      "status": "local-example",
+      "group": "Linear & nonlinear solvers",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "gmres",
+      "label": "Restarted GMRES",
+      "chapter": "sparse-nonlinear",
+      "status": "local-example",
+      "group": "Linear & nonlinear solvers",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "bicgstab",
+      "label": "BiCGSTAB",
+      "chapter": "sparse-nonlinear",
+      "status": "local-example",
+      "group": "Linear & nonlinear solvers",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "jacobi-preconditioner",
+      "label": "Jacobi / diagonal preconditioning",
+      "chapter": "sparse-nonlinear",
+      "status": "local-example",
+      "group": "Linear & nonlinear solvers",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "ilu0",
+      "label": "Unpivoted ILU(0)",
+      "chapter": "sparse-nonlinear",
+      "status": "local-example",
+      "group": "Linear & nonlinear solvers",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "newton",
+      "label": "Armijo-damped Newton",
+      "chapter": "sparse-nonlinear",
+      "status": "local-example",
+      "group": "Linear & nonlinear solvers",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "newton-krylov",
+      "label": "Newton–Krylov with assembled Jacobian",
+      "chapter": "sparse-nonlinear",
+      "status": "local-example",
+      "group": "Linear & nonlinear solvers",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "dual-time",
+      "label": "Dual time stepping",
+      "chapter": "advanced",
+      "status": "local-example",
+      "group": "Coupling, constraints & particles",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "residual-distribution",
+      "label": "Scalar residual distribution",
+      "chapter": "advanced",
+      "status": "local-example",
+      "group": "Coupling, constraints & particles",
+      "scope": "1D P1 upwind equivalent, not multidimensional Euler RD."
+    },
+    {
+      "kind": "method",
+      "id": "low-mach-preconditioning",
+      "label": "Low-Mach PDE preconditioning",
+      "chapter": "advanced",
+      "status": "reading",
+      "group": "Coupling, constraints & particles",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "ct",
+      "label": "Constrained transport / CT",
+      "chapter": "mhd",
+      "status": "local-example",
+      "group": "Coupling, constraints & particles",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "glm",
+      "label": "GLM divergence cleaning",
+      "chapter": "mhd",
+      "status": "local-example",
+      "group": "Coupling, constraints & particles",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "projection",
+      "label": "MAC pressure projection",
+      "chapter": "incompressible",
+      "status": "local-example",
+      "group": "Coupling, constraints & particles",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "d2q9-bgk",
+      "label": "D2Q9–BGK collision and streaming",
+      "chapter": "lattice-boltzmann",
+      "status": "local-example",
+      "group": "Coupling, constraints & particles",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "guo",
+      "label": "Guo forcing",
+      "chapter": "lattice-boltzmann",
+      "status": "local-example",
+      "group": "Coupling, constraints & particles",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "bounce-back",
+      "label": "Half-way bounce-back",
+      "chapter": "lattice-boltzmann",
+      "status": "local-example",
+      "group": "Coupling, constraints & particles",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "hyperbolic-diffusion",
+      "label": "First-order hyperbolic diffusion baseline",
+      "chapter": "hyperbolic-diffusion",
+      "status": "local-example",
+      "group": "Coupling, constraints & particles",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "sph",
+      "label": "SPH kernel reconstruction",
+      "chapter": "particles-sph",
+      "status": "local-example",
+      "group": "Coupling, constraints & particles",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "ale",
+      "label": "ALE uniform-state / geometric-conservation model",
+      "chapter": "ale",
+      "status": "local-example",
+      "group": "Coupling, constraints & particles",
+      "scope": "Moving-volume scalar check; no complete ALE Euler solver."
+    },
+    {
+      "kind": "method",
+      "id": "gsph",
+      "label": "Godunov SPH / GSPH",
+      "chapter": "gsph",
+      "status": "reading",
+      "group": "Coupling, constraints & particles",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "cic",
+      "label": "Cloud-in-cell assignment and interpolation",
+      "chapter": "particle-gravity",
+      "status": "local-example",
+      "group": "Particle fields & gravity",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "pm",
+      "label": "FFT particle–mesh forces",
+      "chapter": "particle-gravity",
+      "status": "local-example",
+      "group": "Particle fields & gravity",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "barnes-hut",
+      "label": "Barnes–Hut octree",
+      "chapter": "particle-gravity",
+      "status": "local-example",
+      "group": "Particle fields & gravity",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "multipole",
+      "label": "Monopole and second-moment expansion",
+      "chapter": "particle-gravity",
+      "status": "local-example",
+      "group": "Particle fields & gravity",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "hockney",
+      "label": "Isolated doubled-grid FFT convolution",
+      "chapter": "gravity-boundaries",
+      "status": "local-example",
+      "group": "Particle fields & gravity",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "slab",
+      "label": "Horizontal-periodic slab Green-function FFT",
+      "chapter": "gravity-boundaries",
+      "status": "local-example",
+      "group": "Particle fields & gravity",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "p3m",
+      "label": "P³M short-range correction",
+      "chapter": "particle-gravity",
+      "status": "reading",
+      "group": "Particle fields & gravity",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "treepm",
+      "label": "TreePM force splitting",
+      "chapter": "particle-gravity",
+      "status": "reading",
+      "group": "Particle fields & gravity",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "fmm",
+      "label": "Fast multipole translations",
+      "chapter": "particle-gravity",
+      "status": "reading",
+      "group": "Particle fields & gravity",
+      "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "keep",
+      "label": "Original Cartesian KEEP split flux",
+      "chapter": "keep",
+      "status": "local-example",
+      "group": "Additional formulations",
+      "scope": ""
+    }
+  ]
+}

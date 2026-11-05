@@ -22,6 +22,14 @@ necessary conditions from sufficient ones.
 [Original CFL paper](https://doi.org/10.1007/BF01448839),
 [derivations and experiments](stability.md).
 
+## 1939–1943: kinetic asymptotics and variational assembly
+
+Chapman–Cowling's kinetic-theory book appeared in 1939; this is a book date,
+not the invention date of the [Chapman–Enskog expansion](chapman-enskog.md).
+[Courant (1943)](https://doi.org/10.1090/S0002-9904-1943-07818-4) connects
+variational problems to piecewise representations. The [P1 FEM exhibit](fem.md)
+implements independent sparse Poisson examples.
+
 ## 1947–1950: diffusion, implicit methods, and linear stability
 
 Crank–Nicolson (1947); Thomas tridiagonal elimination, commonly cited to a 1949
@@ -31,6 +39,10 @@ The 1950 paper is historical context, rather than a claim that von Neumann
 analysis originated in that paper alone. Connect the diffusion number
 `r=ν Δt/Δx²` with A-stability, monotonicity, and implicit linear systems.
 [Diffusion and linear solvers](elliptic.md).
+
+[Burgers (1948)](https://doi.org/10.1016/S0065-2156(08)70100-5) supplies a
+parallel nonlinear model branch. The [equation gallery](equation-gallery.md)
+uses the inviscid shock/fan problem, rather than reproducing its turbulence analysis.
 
 ## 1954–1961: Lax, Godunov, and conservation form
 
@@ -43,6 +55,12 @@ Here, `method="godunov"` denotes a Godunov-type finite-volume method with
 approximate Riemann fluxes, rather than a complete reproduction of the
 original exact-flux algorithm.
 
+[BGK (1954)](https://doi.org/10.1103/PhysRev.94.511) provides a kinetic
+relaxation model. [Lighthill–Whitham (1955)](https://doi.org/10.1098/rspa.1955.0089)
+and [Richards (1956)](https://doi.org/10.1287/opre.4.1.42) connect conservation
+laws to traffic waves. These separate branches meet in the gallery through
+explicit equations and references, not a single invention chronology.
+
 ## 1961–1977: relaxation, multigrid, and local and global bases
 
 Fedorenko (1961), Reed–Hill (1973), Gottlieb–Orszag (1977), and Brandt (1977).
@@ -51,6 +69,12 @@ correction of smooth errors. DG uses elementwise polynomials joined by boundary
 fluxes; spectral methods use global bases. Earlier Galerkin and Fourier ideas
 provide the mathematical background to these developments.
 [Poisson and multigrid](elliptic.md), `numart.advection.dg_advection`.
+
+[Chorin (1968)](https://doi.org/10.1090/S0025-5718-1968-0242392-2)
+leads to [incompressible projection](incompressible.md).
+[Alexander (1977)](https://doi.org/10.1137/0714068) supplies the
+[SDIRK branch](stiff-integration.md); source treatment and adaptive error control
+remain distinct from a method's linear stability function.
 
 ## 1978–1983: shared benchmarks and high-resolution fluxes
 
@@ -95,9 +119,28 @@ conservative residual distribution, rotated-hybrid fluxes, and the carbuncle
 instability. The 2006 date identifies the RD review, rather than the invention
 of residual distribution.
 
+[Inutsuka (2002)](https://doi.org/10.1006/jcph.2002.7053) adds a parallel
+particle branch: convolution-based SPH evolution with pairwise Riemann
+problems. The [GSPH chapter](gsph.md) distinguishes its 1994 precursor from
+the detailed 2002 formulation and the later MHD extension by
+[Iwasaki–Inutsuka (2011)](https://doi.org/10.1111/j.1365-2966.2011.19588.x).
+These are source notes and planned fluid solvers, rather than the existing
+static SPH reconstruction.
+
 ## 2001–2009: SSP inheritance and additional Runge–Kutta stages
 
 [Gottlieb–Shu–Tadmor (2001)](https://doi.org/10.1137/S003614450036757X), [Spiteri–Ruuth (2002)](https://doi.org/10.1137/S0036142901389025), and [Gottlieb–Ketcheson–Shu (2009)](https://doi.org/10.1007/s10915-008-9239-z) distinguish scalar linear stability from conditional nonlinear stability inheritance. These are developments in the SSP branch, not the origin of Runge–Kutta methods. The [RK family chapter](runge-kutta.md) compares RK2 variants, RK4, and SSPRK(s,p), with actual nonlinear stages and refinement.
+
+## Relativistic branch: 1972–2026
+
+The [SRHD/GRHD/GRMHD review](relativistic-hydrodynamics.md) connects Wilson's
+Kerr-background calculation (1972), exact SR Riemann solutions (1994), Valencia
+(1997), local-frame solvers (1998), relativistic magnetic constraints, HARM
+(2003), dynamical spacetime, and nonlinear primitive recovery. Later branches
+include radiation, DG–FD hybrids, physical-state constraints, and GPU-oriented
+merger codes. [SRGSPH (2026)](https://doi.org/10.1016/j.jcp.2025.114448) connects
+back to Inutsuka's particle formulation. The review records source and
+publication status as checked on 6 November 2026; it adds no relativistic solver.
 
 ## Toward modern verification and validation
 
@@ -121,3 +164,30 @@ The [Double Mach Reflection exhibit](double-mach.md) adds a computed two-dimensi
 ## Smooth-flow structure and honest test selection
 
 [Kuya, Totani, and Kawai (2018)](https://doi.org/10.1016/j.jcp.2018.08.058) introduce the KEEP line of compressible-flow discretizations. The [KEEP chapter](keep.md) implements the original second-order Cartesian form and distinguishes later entropy, pressure-equilibrium, and temporal extensions. Its smooth-vortex refinement and [saved-state movie](movies.md) are separate from shock-capturing benchmarks; neither kinetic-energy consistency nor a visually smooth movie is a universal stability guarantee.
+
+## Parallel solver branches: 1986–2010
+
+[GMRES (1986)](https://doi.org/10.1137/0907058) and
+[BiCGSTAB (1992)](https://doi.org/10.1137/0913035) provide nonsymmetric
+[sparse-system solvers](sparse-nonlinear.md).
+[Qian et al. (1992)](https://doi.org/10.1209/0295-5075/17/6/001) and
+[Guo et al. (2002)](https://doi.org/10.1103/PhysRevE.65.046308) lead to the
+[lattice-BGK and forcing exhibits](lattice-boltzmann.md).
+[Nishikawa (2007)](https://doi.org/10.1016/j.jcp.2007.07.029) develops the
+[first-order hyperbolic diffusion system](hyperbolic-diffusion.md), with an
+advection–diffusion extension published in 2010. The reading room distinguishes
+that system's original second-order RD scheme from our first-order FV baseline.
+
+## Biological and geophysical branches
+
+The [biological equation survey](biological-models.md) follows population
+growth through Lotka/Volterra, age structure and SIR, then Fisher fronts,
+Turing morphogenesis, excitable membranes, chemotaxis, stochastic reaction
+networks and synthetic gene circuits. Original, translated and reduced model
+forms have separate source notes. All 22 biological entries are survey-only.
+
+[Arakawa–Lamb (1977)](https://doi.org/10.1016/B978-0-12-460817-7.50009-4)
+connects variable placement to geophysical waves. The [A/B/C chapter](geophysical-grids.md)
+adds independent centered f-plane symbol comparisons; the horizontal grid
+classification is separate from vertical staggering and nonlinear invariant
+conservation.

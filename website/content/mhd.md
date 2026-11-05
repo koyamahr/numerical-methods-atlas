@@ -1,5 +1,10 @@
 # MHD: constrained transport and divergence cleaning
 
+The [GSPH/GSPMHD notes](gsph.md) describe a separate particle branch.
+The [relativistic development review](relativistic-hydrodynamics.md) follows
+SRMHD and GRMHD, including CT, primitive recovery, and evolving spacetime.
+Neither branch is implemented by the Newtonian planar model below.
+
 ## Problem and units
 
 The model is planar 2D ideal MHD with `γ=5/3`, `μ0=1`, and `vz=Bz=0` on the

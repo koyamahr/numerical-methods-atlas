@@ -5,6 +5,62 @@ Each note identifies publicly available originals, later expositions, and origin
 
 This file and `references.bib` are generated from `catalog/references.json` by `python scripts/build_references.py`.
 
+## 1847 · verhulst1847
+
+Verhulst, Pierre-François. **Sur la loi d’accroissement de la population (Deuxième mémoire)**. Mémoires de l’Académie royale de Belgique.
+
+[Original bibliographic record](https://doi.org/10.3406/marb.1847.3457) · [Full text or implementation reference](https://www.persee.fr/doc/marb_0775-3225_1847_num_20_1_3457)
+
+Original archival text and metadata available. This is the later 1847 memoir, read in 1846; it must not be labeled the original 1838 logistic note. The early note is not audited in this survey.
+
+## 1913 · michaelis1913
+
+Michaelis, Leonor and Menten, Maud L.. **Die Kinetik der Invertinwirkung**. Biochemische Zeitschrift.
+
+[Original bibliographic record](https://doi.org/10.1021/bi201284u) · [Full text or implementation reference](https://doi.org/10.1021/bi201284u)
+
+Original 1913 bibliographic identification through the explicitly labeled Johnson–Goody 2011 translation. This URL identifies the translation, not a 1913 DOI. Original German text not audited; rapid-equilibrium and later quasi-steady-state interpretations are distinguished.
+
+## 1920 · lotka1920
+
+Lotka, Alfred J.. **Analytical Note on Certain Rhythmic Relations in Organic Systems**. Proceedings of the National Academy of Sciences.
+
+[Original bibliographic record](https://doi.org/10.1073/pnas.6.7.410) · [Full text or implementation reference](https://pmc.ncbi.nlm.nih.gov/articles/PMC1084562/)
+
+Original bibliographic record checked. Early rhythmic organic-system model, before the 1925 book and independent Volterra 1926 source. The survey gives a conventional normalized predator–prey system, not a reproduction of the original figures.
+
+## 1925 · briggs1925
+
+Briggs, George E. and Haldane, J. B. S.. **A Note on the Kinetics of Enzyme Action**. Biochemical Journal.
+
+[Original bibliographic record](https://doi.org/10.1042/bj0190338) · [Full text or implementation reference](https://pmc.ncbi.nlm.nih.gov/articles/PMC1259181/)
+
+Original bibliographic record and original-paper search excerpt checked. Quasi-steady-state enzyme-kinetics reference; not conflated with the original rapid-equilibrium interpretation.
+
+## 1926 · mckendrick1926
+
+McKendrick, A. G.. **Applications of Mathematics to Medical Problems**. Proceedings of the Edinburgh Mathematical Society.
+
+[Original bibliographic record](https://doi.org/10.1017/S0013091500034428) · [Full text or implementation reference](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/783296EFC2335171A04418C1B74C248B/S0013091500034428a.pdf/applications-of-mathematics-to-medical-problems.pdf)
+
+Original first-page text checked: read January 1926, received August 1926, in the 1925–26 session volume. Not dated to the much later online digitization. A later von Foerster lineage is not assigned to this author alone.
+
+## 1926 · volterra1926
+
+Volterra, Vito. **Fluctuations in the Abundance of a Species considered Mathematically**. Nature.
+
+[Original bibliographic record](https://doi.org/10.1038/118558a0) · [Full text or implementation reference](https://www.nature.com/articles/118558a0)
+
+Original publisher record and abstract checked. Independent ecological interaction source; Lotka’s earlier publications are cited separately.
+
+## 1927 · kermack1927
+
+Kermack, W. O. and McKendrick, A. G.. **A contribution to the mathematical theory of epidemics**. Proceedings of the Royal Society of London. Series A.
+
+[Original bibliographic record](https://doi.org/10.1098/rspa.1927.0118) · [Full text or implementation reference](https://royalsocietypublishing.org/doi/10.1098/rspa.1927.0118)
+
+Original publication identified separately from the 1991 reprint. The survey uses the closed homogeneous SIR specialization; it does not reproduce the original general infection-age formulation.
+
 ## 1928 · cfl1928
 
 Courant, Richard and Friedrichs, Kurt and Lewy, Hans. **Über die partiellen Differenzengleichungen der mathematischen Physik**. Mathematische Annalen.
@@ -13,6 +69,30 @@ Courant, Richard and Friedrichs, Kurt and Lewy, Hans. **Über die partiellen Dif
 
 Originally published in 1928; the linked source is a later English translation. Background on domains of dependence and the CFL condition.
 
+## 1937 · fisher1937
+
+Fisher, R. A.. **The wave of advance of advantageous genes**. Annals of Eugenics.
+
+[Original bibliographic record](https://doi.org/10.1111/j.1469-1809.1937.tb02153.x) · [Full text or implementation reference](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1469-1809.1937.tb02153.x)
+
+Original publisher metadata and original-text excerpt checked. Population-genetic front source. Fisher–KPP is a conventional family name; the independent KPP 1937 original is not audited here.
+
+## 1939 · chapman1939
+
+Chapman, Sydney and Cowling, T. G.. **The Mathematical Theory of Non-Uniform Gases**. Cambridge University Press.
+
+[Original bibliographic record](https://books.google.co.uk/books?id=d8PQAAAAMAAJ) · [Full text or implementation reference](https://books.google.co.uk/books?id=d8PQAAAAMAAJ)
+
+Original-edition bibliographic preview checked; the 1939 book is not assigned as the invention date of Chapman-Enskog expansion. Third edition appeared in 1970. The atlas gives its own formal unforced isothermal lattice-BGK expansion, not a full audit of this book.
+
+## 1943 · courant1943
+
+Courant, Richard. **Variational methods for the solution of problems of equilibrium and vibrations**. Bulletin of the American Mathematical Society.
+
+[Original bibliographic record](https://doi.org/10.1090/S0002-9904-1943-07818-4) · [Full text or implementation reference](https://www.ams.org/bull/1943-49-01/S0002-9904-1943-07818-4/S0002-9904-1943-07818-4.pdf)
+
+Original variational reference. The atlas implements an independent continuous P1 Poisson example; it does not reproduce the original numerical examples.
+
 ## 1947 · crank1947
 
 Crank, John and Nicolson, Phyllis. **A practical method for numerical evaluation of solutions of partial differential equations of the heat-conduction type**. Proceedings of the Cambridge Philosophical Society.
@@ -20,6 +100,22 @@ Crank, John and Nicolson, Phyllis. **A practical method for numerical evaluation
 [Original bibliographic record](https://doi.org/10.1017/S0305004100023197) · [Full text or implementation reference](https://doi.org/10.1007/BF02127704)
 
 Originally published in 1947; the linked source is a 1996 reprint. This edition implements the theta method for linear diffusion, rather than reproducing the original nonlinear problem.
+
+## 1948 · burgers1948
+
+Burgers, Johannes M.. **A mathematical model illustrating the theory of turbulence**. Advances in Applied Mechanics.
+
+[Original bibliographic record](https://doi.org/10.1016/S0065-2156(08)70100-5) · [Full text or implementation reference](https://www.sciencedirect.com/science/article/pii/S0065215608701005)
+
+Publisher metadata and summary checked. Classical model reference; the gallery implements the inviscid scalar Riemann problem, not viscous Burgers turbulence or original-paper figures.
+
+## 1949 · monod1949
+
+Monod, Jacques. **The Growth of Bacterial Cultures**. Annual Review of Microbiology.
+
+[Original bibliographic record](https://doi.org/10.1146/annurev.mi.03.100149.002103) · [Full text or implementation reference](https://garcialab.berkeley.edu/courses/papers/Monod1949.pdf)
+
+Original publisher metadata checked and university-hosted original identified. Historical microbial-growth review; the proposed batch/chemostat benchmark specifies its own yield and feed assumptions.
 
 ## 1949 · thomas1949
 
@@ -37,6 +133,30 @@ Charney, Jule G. and Fjørtoft, Ragnar and von Neumann, John. **Numerical Integr
 
 Publicly accessible original paper. Historical context for stability analysis; the numerical weather forecast is not implemented here.
 
+## 1952 · hodgkin1952
+
+Hodgkin, A. L. and Huxley, A. F.. **A quantitative description of membrane current and its application to conduction and excitation in nerve**. The Journal of Physiology.
+
+[Original bibliographic record](https://doi.org/10.1113/jphysiol.1952.sp004764) · [Full text or implementation reference](https://physoc.onlinelibrary.wiley.com/doi/10.1113/jphysiol.1952.sp004764)
+
+Original publisher metadata and the existence of its 2019 modern-convention supplement checked. Physiome CellML encoding identified separately. Voltage offsets, current signs and temperature conventions require an explicitly selected version before implementation.
+
+## 1952 · turing1952
+
+Turing, Alan M.. **The Chemical Basis of Morphogenesis**. Philosophical Transactions of the Royal Society of London. Series B.
+
+[Original bibliographic record](https://doi.org/10.1098/rstb.1952.0012) · [Full text or implementation reference](https://www.damtp.cam.ac.uk/user/gold/pdfs/teaching/old_literature/Turing1952.pdf)
+
+University-hosted original text inspected for the model setting and instability premise. The survey’s general two-species reaction–diffusion form is a framework, not one uniquely specified Turing kinetic law.
+
+## 1954 · bgk1954
+
+Bhatnagar, P. L. and Gross, E. P. and Krook, M.. **A Model for Collision Processes in Gases. I. Small Amplitude Processes in Charged and Neutral One-Component Systems**. Physical Review.
+
+[Original bibliographic record](https://doi.org/10.1103/PhysRev.94.511) · [Full text or implementation reference](https://journals.aps.org/pr/abstract/10.1103/PhysRev.94.511)
+
+Original publisher record checked. Continuous kinetic relaxation source, distinguished from later lattice BGK and its discrete-time viscosity correction. No full-paper numerical reproduction.
+
 ## 1954 · lax1954
 
 Lax, Peter D.. **Weak solutions of nonlinear hyperbolic equations and their numerical computation**. Communications on Pure and Applied Mathematics.
@@ -45,6 +165,14 @@ Lax, Peter D.. **Weak solutions of nonlinear hyperbolic equations and their nume
 
 Publisher bibliographic record and abstract. Background on weak solutions and Lax-type differences. The Lax shock-tube parameters have not been matched directly to the original table.
 
+## 1955 · lighthill1955
+
+Lighthill, M. J. and Whitham, G. B.. **On kinematic waves. II. A theory of traffic flow on long crowded roads**. Proceedings of the Royal Society of London. Series A.
+
+[Original bibliographic record](https://doi.org/10.1098/rspa.1955.0089) · [Full text or implementation reference](https://royalsocietypublishing.org/doi/10.1098/rspa.1955.0089)
+
+Original bibliographic record and publisher-supplied abstract checked. LWR traffic source; the atlas independently chooses a normalized quadratic fundamental diagram. Full original text was not audited.
+
 ## 1956 · lax1956
 
 Lax, Peter D. and Richtmyer, Robert D.. **Survey of the stability of linear finite difference equations**. Communications on Pure and Applied Mathematics.
@@ -52,6 +180,14 @@ Lax, Peter D. and Richtmyer, Robert D.. **Survey of the stability of linear fini
 [Original bibliographic record](https://doi.org/10.1002/cpa.3160090206) · [Full text or implementation reference](https://math.berkeley.edu/~wilken/228B.S07/LaxRichtmyer.pdf)
 
 Publicly accessible original paper. The equivalence theorem assumes a well-posed linear initial-value problem and a consistent linear approximation.
+
+## 1956 · richards1956
+
+Richards, Paul I.. **Shock Waves on the Highway**. Operations Research.
+
+[Original bibliographic record](https://doi.org/10.1287/opre.4.1.42) · [Full text or implementation reference](https://pubsonline.informs.org/doi/10.1287/opre.4.1.42)
+
+Original publisher record checked. Independent classical traffic-wave source; the atlas uses exact entropy Riemann solutions for its chosen quadratic flux.
 
 ## 1959 · godunov1959
 
@@ -77,6 +213,14 @@ Fedorenko, Radii P.. **A relaxation method for solving elliptic difference equat
 
 Original publication in 1961; English translation in 1962. A historical entry point to multigrid.
 
+## 1961 · fitzhugh1961
+
+FitzHugh, Richard. **Impulses and Physiological States in Theoretical Models of Nerve Membrane**. Biophysical Journal.
+
+[Original bibliographic record](https://doi.org/10.1016/S0006-3495(61)86902-6) · [Full text or implementation reference](https://pmc.ncbi.nlm.nih.gov/articles/PMC1366333/)
+
+Original bibliographic record and abstract checked. Two-state excitable/oscillatory model; the survey writes a conventional normalized FitzHugh–Nagumo form, not a claim of identical coefficients or signs across variants.
+
 ## 1961 · rusanov1961
 
 Rusanov, Vladimir V.. **The calculation of the interaction of non-stationary shock waves with barriers**. Zhurnal Vychislitelnoi Matematiki i Matematicheskoi Fiziki.
@@ -84,6 +228,54 @@ Rusanov, Vladimir V.. **The calculation of the interaction of non-stationary sho
 [Original bibliographic record](https://www.mathnet.ru/eng/zvmmf7987) · [Full text or implementation reference](https://www.mathnet.ru/eng/zvmmf7987)
 
 Russian original in 1961; English translation in 1962. This edition uses a modern local Lax–Friedrichs/Rusanov flux.
+
+## 1962 · nagumo1962
+
+Nagumo, Jinichi and Arimoto, Suguru and Yoshizawa, Shuji. **An Active Pulse Transmission Line Simulating Nerve Axon**. Proceedings of the IRE.
+
+[Original bibliographic record](https://doi.org/10.1109/JRPROC.1962.288235) · [Full text or implementation reference](https://doi.org/10.1109/JRPROC.1962.288235)
+
+Bibliographic cross-check only; full original not inspected. Independent electrical pulse-line contribution cited alongside FitzHugh rather than silently assigning both developments to a single paper.
+
+## 1968 · chorin1968
+
+Chorin, Alexandre Joel. **Numerical solution of the Navier-Stokes equations**. Mathematics of Computation.
+
+[Original bibliographic record](https://doi.org/10.1090/S0025-5718-1968-0242392-2) · [Full text or implementation reference](https://math.berkeley.edu/~chorin/chorin68.pdf)
+
+Original publisher record and author-hosted original checked. Projection source; the independent periodic MAC/SSPRK2 demonstration is not the original boundary/time algorithm.
+
+## 1970 · keller1970
+
+Keller, Evelyn F. and Segel, Lee A.. **Initiation of Slime Mold Aggregation Viewed as an Instability**. Journal of Theoretical Biology.
+
+[Original bibliographic record](https://doi.org/10.1016/0022-5193(70)90092-5) · [Full text or implementation reference](https://jxshix.people.wm.edu/2013-taiwan/Keller-Segel-1970-JTB.pdf)
+
+University-hosted original formulation inspected. It includes more biochemical species than the common two-field Keller–Segel reduction used in the survey. No universal critical mass or original-figure reproduction is asserted.
+
+## 1972 · gierer1972
+
+Gierer, Alfred and Meinhardt, Hans. **A theory of biological pattern formation**. Kybernetik.
+
+[Original bibliographic record](https://doi.org/10.1007/BF00289234) · [Full text or implementation reference](https://link.springer.com/article/10.1007/BF00289234)
+
+Original publisher metadata and abstract checked. Short-range activation/long-range inhibition source. The survey states a standard simplified activator–inhibitor variant; full original numerics not reproduced.
+
+## 1972 · peskin1972
+
+Peskin, Charles S.. **Flow patterns around heart valves: A numerical method**. Journal of Computational Physics.
+
+[Original bibliographic record](https://doi.org/10.1016/0021-9991(72)90065-4) · [Full text or implementation reference](https://www.sciencedirect.com/science/article/pii/0021999172900654)
+
+Bibliographic metadata cross-checked. Immersed-boundary fluid–structure source, distinguished from a biological reaction law. Original full text and valve calculations are not audited or reproduced.
+
+## 1972 · wilson1972grhd
+
+Wilson, James R.. **Numerical Study of Fluid Flow in a Kerr Space**. The Astrophysical Journal.
+
+[Original bibliographic record](https://doi.org/10.1086/151434) · [Full text or implementation reference](https://adsabs.harvard.edu/pdf/1972ApJ...173..431W)
+
+Original paper inspected for the early Kerr-background gas-flow calculation. Historical reading; not an evolving Einstein–matter solver and not reproduced here.
 
 ## 1973 · reed1973
 
@@ -109,6 +301,22 @@ van Leer, Bram. **Towards the ultimate conservative difference scheme. II. Monot
 
 Publisher bibliographic record inspected. Historical monotonicity and conservative second-order reconstruction; not a claim to reproduce the original algorithm.
 
+## 1977 · alexander1977
+
+Alexander, Roger K.. **Diagonally Implicit Runge-Kutta Methods for Stiff O.D.E.'s**. SIAM Journal on Numerical Analysis.
+
+[Original bibliographic record](https://doi.org/10.1137/0714068) · [Full text or implementation reference](https://epubs.siam.org/doi/10.1137/0714068)
+
+Original publisher record checked. Source for the two-stage second-order L-stable SDIRK family; adaptive step doubling in the atlas is a separate implementation choice.
+
+## 1977 · arakawa1977
+
+Arakawa, Akio and Lamb, Vivian R.. **Computational Design of the Basic Dynamical Processes of the UCLA General Circulation Model**. Methods in Computational Physics: Advances in Research and Applications.
+
+[Original bibliographic record](https://doi.org/10.1016/B978-0-12-460817-7.50009-4) · [Full text or implementation reference](https://data.coaps.fsu.edu/eric_pub/OCP5930/Papers/Arakawa_Lanb_1977.pdf)
+
+Original chapter and bibliographic identity located; full PDF extraction exceeded tool size limits. A/B/C layout is cross-checked with ECMWF/MITgcm documentation. The atlas independently derives and tests centered periodic f-plane Fourier symbols, not a reproduction of the complete UCLA dynamical core.
+
 ## 1977 · brandt1977
 
 Brandt, Achi. **Multi-level adaptive solutions to boundary-value problems**. Mathematics of Computation.
@@ -116,6 +324,14 @@ Brandt, Achi. **Multi-level adaptive solutions to boundary-value problems**. Mat
 [Original bibliographic record](https://doi.org/10.1090/S0025-5718-1977-0431719-X) · [Full text or implementation reference](https://www.ams.org/mcom/1977-31-138/S0025-5718-1977-0431719-X/S0025-5718-1977-0431719-X.pdf)
 
 AMS-hosted original paper. This edition implements a fixed-grid geometric V-cycle, rather than the full adaptive framework.
+
+## 1977 · gillespie1977
+
+Gillespie, Daniel T.. **Exact stochastic simulation of coupled chemical reactions**. The Journal of Physical Chemistry.
+
+[Original bibliographic record](https://doi.org/10.1021/j100540a008) · [Full text or implementation reference](https://www.ma.imperial.ac.uk/~nsjones/gillespie_1977.pdf)
+
+University-hosted original inspected for the master-equation/SSA distinction, reaction-channel sampling and well-mixed setting. Exact refers to sampling the specified continuous-time Markov model, not biological completeness or zero Monte Carlo error.
 
 ## 1977 · gingold1977
 
@@ -133,6 +349,14 @@ Lucy, L. B.. **A numerical approach to the testing of the fission hypothesis**. 
 
 ADS-hosted original article. Independent early particle-method reference; the cubic-spline reconstruction here is not a reproduction of Lucy’s original kernel or dynamics.
 
+## 1977 · mackey1977
+
+Mackey, Michael C. and Glass, Leon. **Oscillation and Chaos in Physiological Control Systems**. Science.
+
+[Original bibliographic record](https://doi.org/10.1126/science.267326) · [Full text or implementation reference](https://www.science.org/doi/10.1126/science.267326)
+
+Publisher-supplied abstract and bibliographic metadata identified; original full text not audited. Delay-equation model requires a full history function, not only a scalar initial value.
+
 ## 1977 · spectral1977
 
 Gottlieb, David and Orszag, Steven A.. **Numerical Analysis of Spectral Methods: Theory and Applications**. SIAM.
@@ -149,6 +373,30 @@ Sod, Gary A.. **A survey of several finite difference methods for systems of non
 
 The DOI identifies the original paper; the source is an implementation reference for the standard Sod problem and exact solution. The original methods and figures are not reproduced in full.
 
+## 1978 · taylor1978
+
+Taylor, Peter D. and Jonker, Leo B.. **Evolutionary stable strategies and game dynamics**. Mathematical Biosciences.
+
+[Original bibliographic record](https://doi.org/10.1016/0025-5564(78)90077-9) · [Full text or implementation reference](https://www.sciencedirect.com/science/article/pii/0025556478900779)
+
+Original publisher metadata and abstract checked. Continuous evolutionary-game dynamics source. Stability, ESS and a generic game equilibrium are not interchangeable.
+
+## 1979 · ablowitz1979
+
+Ablowitz, Mark J. and Zeppetella, Anthony. **Explicit solutions of Fisher’s equation for a special wave speed**. Bulletin of Mathematical Biology.
+
+[Original bibliographic record](https://doi.org/10.1007/BF02462380) · [Full text or implementation reference](https://link.springer.com/article/10.1007/BF02462380)
+
+Original publisher metadata and abstract checked. Special normalized wave speed ±5/sqrt(6), distinct from the minimal Fisher–KPP speed; dimensional scaling is stated in the survey.
+
+## 1979 · israel1979viscous
+
+Israel, W. and Stewart, J. M.. **Transient relativistic thermodynamics and kinetic theory**. Annals of Physics.
+
+[Original bibliographic record](https://doi.org/10.1016/0003-4916(79)90130-1) · [Full text or implementation reference](https://www.sciencedirect.com/science/article/pii/0003491679901301)
+
+Publisher bibliographic record inspected for the transient dissipative-fluid branch. Reading context only; full kinetic derivation and coefficient restrictions have not been audited or implemented.
+
 ## 1979 · orszag1979
 
 Orszag, Steven A. and Tang, Cha-Mei. **Small-scale structure of two-dimensional magnetohydrodynamic turbulence**. Journal of Fluid Mechanics.
@@ -156,6 +404,22 @@ Orszag, Steven A. and Tang, Cha-Mei. **Small-scale structure of two-dimensional 
 [Original bibliographic record](https://doi.org/10.1017/S002211207900210X) · [Full text or implementation reference](https://doi.org/10.1017/S002211207900210X)
 
 The original study concerns incompressible MHD. Distinguish it from the normalization of the modern compressible Orszag–Tang test used here.
+
+## 1979 · schnakenberg1979
+
+Schnakenberg, Jürgen. **Simple chemical reaction systems with limit cycle behaviour**. Journal of Theoretical Biology.
+
+[Original bibliographic record](https://doi.org/10.1016/0022-5193(79)90042-0) · [Full text or implementation reference](https://www.sciencedirect.com/science/article/pii/0022519379900420)
+
+Original publisher metadata and abstract checked. Autocatalytic reaction-network source. The spatial PDE benchmark is a reaction–diffusion extension of chemical kinetics, not automatically a calibrated developmental model.
+
+## 1979 · shigesada1979
+
+Shigesada, Nanako and Kawasaki, Kohkichi and Teramoto, Ei. **Spatial segregation of interacting species**. Journal of Theoretical Biology.
+
+[Original bibliographic record](https://doi.org/10.1016/0022-5193(79)90258-3) · [Full text or implementation reference](https://www.sciencedirect.com/science/article/pii/0022519379902583)
+
+Original publisher metadata and abstract checked. Cross-diffusion/segregation source. The survey writes a homogeneous-environment reduction, omitting the original environmental-potential terms explicitly.
 
 ## 1979 · vanleer1979
 
@@ -188,6 +452,14 @@ Roe, Philip L.. **Approximate Riemann solvers, parameter vectors, and difference
 [Original bibliographic record](https://doi.org/10.1016/0021-9991(81)90128-5) · [Full text or implementation reference](https://www.sciencedirect.com/science/article/pii/0021999181901285)
 
 Publisher bibliographic record and abstract. This edition implements 1D Euler with quadratic entropy smoothing of acoustic eigenvalues.
+
+## 1983 · gray1983
+
+Gray, Peter and Scott, Stephen K.. **Autocatalytic reactions in the isothermal, continuous stirred tank reactor: Isolas and other forms of multistability**. Chemical Engineering Science.
+
+[Original bibliographic record](https://doi.org/10.1016/0009-2509(83)80132-8) · [Full text or implementation reference](https://www.sciencedirect.com/science/article/pii/0009250983801328)
+
+Original publisher metadata and abstract checked. Well-mixed chemical CSTR source, distinguished from Pearson’s later spatial Gray–Scott pattern study and from a direct biological tissue model.
 
 ## 1983 · hll1983
 
@@ -228,6 +500,14 @@ Barnes, Josh and Hut, Piet. **A hierarchical O(N log N) force-calculation algori
 [Original bibliographic record](https://doi.org/10.1038/324446a0) · [Full text or implementation reference](https://www.nature.com/articles/324446a0)
 
 Original publisher record. The educational octree uses a geometric opening criterion and compares monopole/full second-moment forces with an identical softened direct sum.
+
+## 1986 · saad1986
+
+Saad, Youcef and Schultz, Martin H.. **GMRES: A generalized minimal residual algorithm for solving nonsymmetric linear systems**. SIAM Journal on Scientific and Statistical Computing.
+
+[Original bibliographic record](https://doi.org/10.1137/0907058) · [Full text or implementation reference](https://epubs.siam.org/doi/10.1137/0907058)
+
+Original publisher metadata and abstract checked. Restarted GMRES source; the atlas uses fixed right preconditioning, reorthogonalization, and explicitly recomputed true residuals.
 
 ## 1987 · eno1987
 
@@ -281,17 +561,9 @@ Publisher bibliographic record and abstract. Background on TVD Runge–Kutta and
 
 Cockburn, Bernardo and Shu, Chi-Wang. **TVB Runge-Kutta local projection discontinuous Galerkin finite element method for conservation laws. II. General framework**. Mathematics of Computation.
 
-[Original bibliographic record](https://doi.org/10.1090/S0025-5718-1989-0983311-4) · [Full text or implementation reference](https://www-users.cse.umn.edu/~cockburn/lecture_notes/DG-4.pdf)
-
-The DOI identifies the original paper; the linked source is a later set of author lecture notes. This edition implements DG for smooth advection without a TVB limiter.
-
-## 1989 · cockburn1989tvb
-
-Cockburn, Bernardo and Shu, Chi-Wang. **TVB Runge-Kutta local projection discontinuous Galerkin finite element method for conservation laws. II. General framework**. Mathematics of Computation.
-
 [Original bibliographic record](https://doi.org/10.1090/S0025-5718-1989-0983311-4) · [Full text or implementation reference](https://www.ams.org/mcom/1989-52-186/S0025-5718-1989-0983311-4/)
 
-Historical RKDG/TVB reference. Publisher full-text retrieval was unavailable in this session. This edition demonstrates the modified-minmod operation in scalar finite volumes, not the complete RKDG framework or its theorem.
+Original RKDG/TVB paper. Publisher full-text retrieval was unavailable; later author notes: https://www-users.cse.umn.edu/~cockburn/lecture_notes/DG-4.pdf . The atlas has smooth-advection DG and a separate scalar modified-minmod building block, not the complete RKDG/TVB theorem. Duplicate catalog key cockburn1989tvb was merged for unique-source counting.
 
 ## 1989 · shu1989
 
@@ -333,6 +605,30 @@ Yabe, T. and Aoki, T.. **A universal solver for hyperbolic equations by cubic-po
 
 Publisher indexed abstract and bibliographic data inspected; full-text retrieval was unavailable. Value-and-gradient cubic CIP evolution is demonstrated for uniform periodic constant-speed scalar advection only.
 
+## 1992 · qian1992
+
+Qian, Y. H. and d'Humières, D. and Lallemand, P.. **Lattice BGK Models for Navier-Stokes Equation**. Europhysics Letters.
+
+[Original bibliographic record](https://doi.org/10.1209/0295-5075/17/6/001) · [Full text or implementation reference](https://iopscience.iop.org/article/10.1209/0295-5075/17/6/001)
+
+Original publisher metadata and abstract checked. Lattice BGK source. The D2Q9 model is independently checked using shear-mode decay and a low-Mach channel; no arbitrary-Mach accuracy or full-text reproduction is claimed.
+
+## 1992 · vanderVorst1992
+
+van der Vorst, Henk A.. **Bi-CGSTAB: A Fast and Smoothly Converging Variant of Bi-CG for the Solution of Nonsymmetric Linear Systems**. SIAM Journal on Scientific and Statistical Computing.
+
+[Original bibliographic record](https://doi.org/10.1137/0913035) · [Full text or implementation reference](https://epubs.siam.org/doi/10.1137/0913035)
+
+Original publisher record checked. BiCGSTAB source; the educational implementation reports true residuals, breakdown and iteration-limit failures. Residual monotonicity is not promised.
+
+## 1993 · pearson1993
+
+Pearson, John E.. **Complex Patterns in a Simple System**. Science.
+
+[Original bibliographic record](https://doi.org/10.1126/science.261.5118.189) · [Full text or implementation reference](https://arxiv.org/abs/patt-sol/9304003)
+
+Author preprint abstract and linked journal DOI checked. Spatial reaction–diffusion patterns from finite-amplitude perturbations; pattern appearance is not by itself evidence of a linear Turing instability.
+
 ## 1994 · hllc1994
 
 Toro, E. F. and Spruce, M. and Speares, W.. **Restoration of the contact surface in the HLL-Riemann solver**. Shock Waves.
@@ -340,6 +636,22 @@ Toro, E. F. and Spruce, M. and Speares, W.. **Restoration of the contact surface
 [Original bibliographic record](https://doi.org/10.1007/BF01414629) · [Full text or implementation reference](https://doi.org/10.1007/BF01414629)
 
 Publisher bibliographic record and abstract. This edition uses HLLC with Davis-type wave speeds and does not implement every original wave-speed estimate or WAF construction.
+
+## 1994 · inutsuka1994
+
+Inutsuka, Shu-ichiro. **Godunov-type SPH**. Memorie della Società Astronomica Italiana.
+
+[Original bibliographic record](https://arxiv.org/html/astro-ph/0206401) · [Full text or implementation reference](https://arxiv.org/html/astro-ph/0206401)
+
+Provisional historical record from reference 9 of Inutsuka (2002). The 1994 original has not been inspected; the source link is the later paper, not a reproduction of the 1994 contribution.
+
+## 1994 · marti1994srriemann
+
+Martí, José M. and Müller, Ewald. **The analytical solution of the Riemann problem in relativistic hydrodynamics**. Journal of Fluid Mechanics.
+
+[Original bibliographic record](https://doi.org/10.1017/S0022112094003344) · [Full text or implementation reference](https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/abs/analytical-solution-of-the-riemann-problem-in-relativistic-hydrodynamics/ACFB60CD3557DF2AF8AFF6B72D8B03A4)
+
+Publisher abstract and bibliographic record inspected. Normal-flow SR Riemann reference; arbitrary transverse velocities need a later extension. Proposed verification source, not an implemented relativistic Riemann solver.
 
 ## 1994 · quirk1994
 
@@ -365,6 +677,14 @@ Liu, Xu-Dong and Osher, Stanley and Chan, Tony. **Weighted Essentially Non-oscil
 
 Publisher bibliographic record and abstract. Historical introduction to WENO; the weights implemented here are Jiang–Shu (1996).
 
+## 1996 · aliev1996
+
+Aliev, R. R. and Panfilov, A. V.. **A simple two-variable model of cardiac excitation**. Chaos, Solitons & Fractals.
+
+[Original bibliographic record](https://doi.org/10.1016/0960-0779(95)00089-5) · [Full text or implementation reference](https://models.cellml.org/workspace/241/file/1164ecbd63d818c0d6c9631ef6bd92f12e87ae6b/model.xml)
+
+Physiome-hosted model encoding and bibliographic identification checked; original full paper not audited. A reduced phenomenological cardiac model, not a detailed human ionic-cell model or a complete bidomain model.
+
 ## 1996 · jiang1996
 
 Jiang, Guang-Shan and Shu, Chi-Wang. **Efficient Implementation of Weighted ENO Schemes**. Journal of Computational Physics.
@@ -380,6 +700,54 @@ Shewchuk, Jonathan Richard. **Triangle: Engineering a 2D Quality Mesh Generator 
 [Original bibliographic record](https://www.cs.cmu.edu/~quake/tripaper/triangle0.html) · [Full text or implementation reference](https://www.cs.cmu.edu/~quake/tripaper/triangle0.html)
 
 Author-hosted paper. Mesh-generation reading reference; the example meshes use Matplotlib triangulation and do not invoke Triangle.
+
+## 1997 · ascher1997
+
+Ascher, Uri M. and Ruuth, Steven J. and Spiteri, Raymond J.. **Implicit-explicit Runge-Kutta methods for time-dependent partial differential equations**. Applied Numerical Mathematics.
+
+[Original bibliographic record](https://doi.org/10.1016/S0168-9274(97)00056-1) · [Full text or implementation reference](https://doi.org/10.1016/S0168-9274(97)00056-1)
+
+IMEX RK reading reference; bibliographic metadata checked, full original text not audited. The implemented IMEX Euler is first order and is not attributed to this higher-order RK construction.
+
+## 1997 · banyuls1997
+
+Banyuls, F. and Font, J. A. and Ibáñez, J. M. and Martí, J. M. and Miralles, J. A.. **Numerical 3+1 General Relativistic Hydrodynamics: A Local Characteristic Approach**. The Astrophysical Journal.
+
+[Original bibliographic record](https://doi.org/10.1086/303604) · [Full text or implementation reference](https://producciocientifica.uv.es/documentos/5eb2c7d029995223401a60f1)
+
+Author-institution bibliographic record checked; formulation context cross-checked against Font (2008). Central Valencia reference, without claiming direct inspection of the complete original or an implemented GRHD solver.
+
+## 1998 · pons1998grriemann
+
+Pons, J. A. and Font, J. A. and Ibáñez, J. M. and Martí, J. M. and Miralles, J. A.. **General Relativistic Hydrodynamics with Special Relativistic Riemann Solvers**. Astronomy and Astrophysics.
+
+[Original bibliographic record](https://arxiv.org/abs/astro-ph/9807215) · [Full text or implementation reference](https://arxiv.org/abs/astro-ph/9807215)
+
+Author abstract and original-paper scan inspected for the local Minkowskian-coordinate approach connecting GRHD to SR Riemann solvers. Geometric flux/source treatment remains necessary; no solver implemented here.
+
+## 1999 · komissarov1999rmhd
+
+Komissarov, S. S.. **A Godunov-type scheme for relativistic magnetohydrodynamics**. Monthly Notices of the Royal Astronomical Society.
+
+[Original bibliographic record](https://doi.org/10.1046/j.1365-8711.1999.02244.x) · [Full text or implementation reference](https://academic.oup.com/mnras/article/303/2/343/1067242)
+
+Original publisher abstract inspected for multidimensional Godunov-type relativistic MHD and magnetic-flux conservation. Historical reading, not an implemented RMHD method.
+
+## 2000 · elowitz2000
+
+Elowitz, Michael B. and Leibler, Stanislas. **A synthetic oscillatory network of transcriptional regulators**. Nature.
+
+[Original bibliographic record](https://doi.org/10.1038/35002125) · [Full text or implementation reference](https://www.nature.com/articles/35002125)
+
+Original publisher metadata and abstract checked. Repressilator source; mRNA and protein variables are retained separately in the proposed model, without silently replacing them by a three-state reduction.
+
+## 2000 · gardner2000
+
+Gardner, Timothy S. and Cantor, Charles R. and Collins, James J.. **Construction of a genetic toggle switch in Escherichia coli**. Nature.
+
+[Original bibliographic record](https://doi.org/10.1038/35002131) · [Full text or implementation reference](https://www.nature.com/articles/35002131)
+
+Original bibliographic record and abstract checked. Synthetic bistable gene-network source. The survey uses a normalized mutual-repression model, not a complete encoding of experimental induction protocols.
 
 ## 2000 · toth2000
 
@@ -421,6 +789,22 @@ Dedner, Andreas and Kemm, Friedemann and Kröner, Dietmar and Munz, Claus-Dieter
 
 Publicly accessible original paper, published in 2002 despite 2001 appearing in the DOI. This edition uses a simplified GLM model with fixed cleaning speed.
 
+## 2002 · guo2002
+
+Guo, Zhaoli and Zheng, Chuguang and Shi, Baochang. **Discrete lattice effects on the forcing term in the lattice Boltzmann method**. Physical Review E.
+
+[Original bibliographic record](https://doi.org/10.1103/PhysRevE.65.046308) · [Full text or implementation reference](https://journals.aps.org/pre/abstract/10.1103/PhysRevE.65.046308)
+
+Original publisher record and abstract checked. Force discretization source; the implementation uses the half-force momentum correction and checks low-Mach Poiseuille profiles against an analytic parabola.
+
+## 2002 · inutsuka2002
+
+Inutsuka, Shu-ichiro. **Reformulation of Smoothed Particle Hydrodynamics with Riemann Solver**. Journal of Computational Physics.
+
+[Original bibliographic record](https://doi.org/10.1006/jcph.2002.7053) · [Full text or implementation reference](https://arxiv.org/abs/astro-ph/0206401)
+
+Author preprint and HTML sections 2–4 inspected for convolution, Gaussian overlaps, pair Riemann states, variable smoothing lengths, matched conservative time updates, and the first shock-tube setup. Reading notes and implementation plan only; the atlas implements kernel interpolation, not GSPH dynamics.
+
 ## 2002 · leveque2002
 
 LeVeque, Randall J.. **Finite Volume Methods for Hyperbolic Problems**. Cambridge University Press.
@@ -428,6 +812,22 @@ LeVeque, Randall J.. **Finite Volume Methods for Hyperbolic Problems**. Cambridg
 [Original bibliographic record](https://doi.org/10.1017/CBO9780511791253) · [Full text or implementation reference](https://www.cambridge.org/core/books/finite-volume-methods-for-hyperbolic-problems/97D5D1ACB1926DA1D4D52EAD6909E2B9)
 
 Publisher bibliographic record and abstract. Background for conservation laws and shallow-water implementations.
+
+## 2002 · murray2002
+
+Murray, J. D.. **Mathematical Biology I: An Introduction**. Springer.
+
+[Original bibliographic record](https://doi.org/10.1007/b98868) · [Full text or implementation reference](https://link.springer.com/book/10.1007/b98868)
+
+Publisher edition metadata checked: third edition print copyright 2002, later eBook publication distinguished. Broad reading reference, not a substitute for original papers or an audited source of every parameter.
+
+## 2002 · riddaway2002
+
+Riddaway, R. W. and Hortal, M.. **Numerical methods**. ECMWF Meteorological Training Course Lecture Series.
+
+[Original bibliographic record](https://www.ecmwf.int/sites/default/files/elibrary/2002/16948-numerical-methods.pdf) · [Full text or implementation reference](https://www.ecmwf.int/sites/default/files/elibrary/2002/16948-numerical-methods.pdf)
+
+Official teaching notes inspected for horizontal staggering and A–E grid relationships. PDF carries ECMWF 2002 and revised March 2001, not a new original invention date. Used as an exposition, distinct from Arakawa–Lamb 1977.
 
 ## 2002 · spiteri2002ssp
 
@@ -437,6 +837,14 @@ Spiteri, Raymond J. and Ruuth, Steven J.. **A New Class of Optimal High-Order St
 
 Publisher record and abstract inspected. SSP methods with more stages than their order. The implemented five-stage fourth-order coefficients are taken from the later author-hosted Gottlieb–Ketcheson–Shu review, rather than asserting direct full-text reproduction of this paper.
 
+## 2003 · gammie2003harm
+
+Gammie, Charles F. and McKinney, Jonathan C. and Tóth, Gábor. **HARM: A Numerical Scheme for General Relativistic Magnetohydrodynamics**. The Astrophysical Journal.
+
+[Original bibliographic record](https://doi.org/10.1086/374594) · [Full text or implementation reference](https://arxiv.org/abs/astro-ph/0301509)
+
+Author abstract and publication metadata inspected. Conservative GRMHD, HLL, Tóth-type CT, and a magnetized black-hole torus; original formulation distinguished from later evolving-spacetime frameworks. Not reproduced here.
+
 ## 2003 · hairer2003
 
 Hairer, Ernst and Lubich, Christian and Wanner, Gerhard. **Geometric numerical integration illustrated by the Störmer–Verlet method**. Acta Numerica.
@@ -444,6 +852,14 @@ Hairer, Ernst and Lubich, Christian and Wanner, Gerhard. **Geometric numerical i
 [Original bibliographic record](https://doi.org/10.1017/S0962492902000144) · [Full text or implementation reference](https://jduarte.physics.ucsd.edu/phys141/_downloads/0b06fe9fe40aeb83699c2bc17b71a93d/stoermer-verlet.pdf)
 
 Original article hosted by a university course. Reference for symplecticity, reversibility, modified equations, and conditional long-time energy estimates; no general exact-energy claim is made.
+
+## 2005 · duez2005grmhd
+
+Duez, Matthew D. and Liu, Yuk Tung and Shapiro, Stuart L. and Stephens, Branson C.. **Relativistic Magnetohydrodynamics in Dynamical Spacetimes: Numerical Methods and Tests**. Physical Review D.
+
+[Original bibliographic record](https://doi.org/10.1103/PhysRevD.72.024028) · [Full text or implementation reference](https://arxiv.org/abs/astro-ph/0503420)
+
+Author abstract and journal metadata inspected. Coupled Einstein–Maxwell–MHD with BSSN and conservative matter evolution; historical source for the dynamical-spacetime step. No such coupling implemented here.
 
 ## 2005 · springel2005
 
@@ -460,6 +876,30 @@ Abgrall, Rémi. **Residual distribution schemes: Current status and future trend
 [Original bibliographic record](https://doi.org/10.1016/j.compfluid.2005.01.007) · [Full text or implementation reference](https://www.math.u-bordeaux.fr/~rabgrall/mes_papiers/caf_2006_35.pdf)
 
 Author-hosted review. The 2006 date identifies the review, rather than the origin of residual distribution. This edition implements only 1D scalar RD.
+
+## 2006 · noble2006recovery
+
+Noble, Scott C. and Gammie, Charles F. and McKinney, Jonathan C. and Del Zanna, Luca. **Primitive Variable Solvers for Conservative General Relativistic Magnetohydrodynamics**. The Astrophysical Journal.
+
+[Original bibliographic record](https://doi.org/10.1086/500349) · [Full text or implementation reference](https://arxiv.org/abs/astro-ph/0512420)
+
+Author abstract and journal metadata inspected for nonlinear conserved-to-primitive recovery and reduced systems. Reading context; current Newtonian primitive conversion is not this relativistic inversion.
+
+## 2007 · nishikawa2007
+
+Nishikawa, Hiroaki. **A first-order system approach for diffusion equation. I: Second-order residual-distribution schemes**. Journal of Computational Physics.
+
+[Original bibliographic record](https://doi.org/10.1016/j.jcp.2007.07.029) · [Full text or implementation reference](https://www.sciencedirect.com/science/article/pii/S002199910700335X)
+
+Original publisher metadata and abstract checked, full text not audited. The atlas implements an independent periodic first-order upwind baseline for the equivalent steady system, not the paper's second-order residual-distribution schemes.
+
+## 2008 · font2008grhd
+
+Font, José A.. **Numerical Hydrodynamics and Magnetohydrodynamics in General Relativity**. Living Reviews in Relativity.
+
+[Original bibliographic record](https://doi.org/10.12942/lrr-2008-7) · [Full text or implementation reference](https://link.springer.com/article/10.12942/lrr-2008-7)
+
+Open author review inspected for formulations and historical context. Explicitly the 2008 revision, following the 2000 and 2003 versions; used as review context rather than an invention date or a current code-performance comparison.
 
 ## 2008 · nishikawa2008
 
@@ -501,6 +941,14 @@ Williams, Paul D.. **A Proposed Modification to the Robert–Asselin Time Filter
 
 Publisher record identifies the time-filter paper. The ODE laboratory uses unfiltered leapfrog with RK4 startup and does not implement this filter.
 
+## 2010 · nishikawa2010
+
+Nishikawa, Hiroaki. **A first-order system approach for diffusion equation. II: Unification of advection and diffusion**. Journal of Computational Physics.
+
+[Original bibliographic record](https://doi.org/10.1016/j.jcp.2009.10.040) · [Full text or implementation reference](https://www.sciencedirect.com/science/article/abs/pii/S0021999109006019)
+
+Original publisher metadata and abstract checked. Publication year is 2010 despite 2009 in the DOI. Unified advection-diffusion system is reading/future implementation scope.
+
 ## 2010 · zhangshu2010euler
 
 Zhang, Xiangxiong and Shu, Chi-Wang. **On positivity-preserving high order discontinuous Galerkin schemes for compressible Euler equations on rectangular meshes**. Journal of Computational Physics.
@@ -508,6 +956,30 @@ Zhang, Xiangxiong and Shu, Chi-Wang. **On positivity-preserving high order disco
 [Original bibliographic record](https://doi.org/10.1016/j.jcp.2010.08.016) · [Full text or implementation reference](https://www.math.purdue.edu/~zhan1966/research/paper/euler.pdf)
 
 Author-hosted manuscript inspected. Convex admissible Euler states, mean-preserving limiting, and additional flux, quadrature, CFL, and SSP requirements. The atlas implements only a common-state reconstruction scaling building block, not the full time-update scheme.
+
+## 2011 · iwasaki2011gsph
+
+Iwasaki, Kazunari and Inutsuka, Shu-ichiro. **Smoothed particle magnetohydrodynamics with a Riemann solver and the method of characteristics**. Monthly Notices of the Royal Astronomical Society.
+
+[Original bibliographic record](https://doi.org/10.1111/j.1365-2966.2011.19588.x) · [Full text or implementation reference](https://arxiv.org/abs/1106.3389)
+
+Author preprint inspected for the split between compressive Riemann interactions and Alfvén characteristics, and its test suite. Newtonian particle MHD; separate from relativistic fluid dynamics and the existing grid CT/GLM code. Not implemented here.
+
+## 2011 · johnson2011
+
+Johnson, Kenneth A. and Goody, Roger S.. **The Original Michaelis Constant: Translation of the 1913 Michaelis–Menten Paper**. Biochemistry.
+
+[Original bibliographic record](https://doi.org/10.1021/bi201284u) · [Full text or implementation reference](https://pubs.acs.org/doi/10.1021/bi201284u)
+
+Translation bibliographic record checked. This is a 2011 translation/commentary route to the 1913 original, not an original publication dated 2011.
+
+## 2013 · sadowski2013radiation
+
+Sądowski, Aleksander and Narayan, Ramesh and Tchekhovskoy, Alexander and Zhu, Yucong. **Semi-implicit scheme for treating radiation under M1 closure in general relativistic conservative fluid dynamics codes**. Monthly Notices of the Royal Astronomical Society.
+
+[Original bibliographic record](https://doi.org/10.1093/mnras/sts632) · [Full text or implementation reference](https://arxiv.org/abs/1212.5050)
+
+Author abstract and public original inspected for covariant M1 radiation moments and semi-implicit matter interactions in KORAL. Published 2013, preprint 2012. Radiation closure/source integration is reading context, not implemented here.
 
 ## 2016 · fitzpatrick2016
 
@@ -525,6 +997,22 @@ Kuya, Yuichi and Totani, Kosuke and Kawai, Soshi. **Kinetic energy and entropy p
 
 DOI identifies the original 2018 paper. The authors’ 2022 conference explanation, Eq. (9), is the accessible implementation source for our second-order arithmetic-mean Cartesian baseline. Entropy is not claimed exact to roundoff; no shock stabilization is implemented.
 
+## 2019 · bemfica2019causality
+
+Bemfica, Fábio S. and Disconzi, Marcelo M. and Noronha, Jorge. **Nonlinear causality of general first-order relativistic viscous hydrodynamics**. Physical Review D.
+
+[Original bibliographic record](https://doi.org/10.1103/PhysRevD.100.104020) · [Full text or implementation reference](https://arxiv.org/abs/1907.12695)
+
+Original author abstract and publisher record inspected. A first-gradient constitutive theory with nonlinear-causality conditions, distinguished from extended-variable theories. Not a universal EOS/transport or discrete-stability guarantee; no viscous relativistic solver implemented.
+
+## 2019 · kovtun2019stable
+
+Kovtun, Pavel. **First-order relativistic hydrodynamics is stable**. Journal of High Energy Physics.
+
+[Original bibliographic record](https://doi.org/10.1007/JHEP10(2019)034) · [Full text or implementation reference](https://arxiv.org/abs/1907.08191)
+
+Author abstract and publisher record inspected for stable first-order hydrodynamic frames. Stability results retain the paper assumptions; numerical scheme stability is a separate question. Reading context, not an implemented solver.
+
 ## 2020 · saito2020rcip
 
 Saito, Fuyuki and Obase, Takashi and Abe-Ouchi, Ayako. **Implementation of the RCIP scheme and its performance for 1-D age computations in ice-sheet models**. Geoscientific Model Development.
@@ -540,6 +1028,14 @@ Shima, Nao and Kuya, Yuichi and Tamaki, Yoshiharu and Kawai, Soshi. **Preventing
 [Original bibliographic record](https://doi.org/10.1016/j.jcp.2020.110060) · [Full text or implementation reference](https://kyushu-u.elsevierpure.com/en/publications/preventing-spurious-pressure-oscillations-in-split-convective-for/)
 
 Author-university publication record; published in 2021 despite 2020 in the DOI. Pressure-equilibrium-preserving variants are discussed but are not the original arithmetic-mean flux used here.
+
+## 2022 · deppe2022dgfd
+
+Deppe, Nils and Hébert, François and Kidder, Lawrence E. and Teukolsky, Saul A.. **A high-order shock capturing discontinuous Galerkin-finite-difference hybrid method for GRMHD**. Classical and Quantum Gravity.
+
+[Original bibliographic record](https://doi.org/10.1088/1361-6382/ac8864) · [Full text or implementation reference](https://arxiv.org/abs/2109.11645)
+
+Author abstract and publication link inspected. Preprint 2021, journal publication 2022, arXiv update 2024. DG candidate updates and a posteriori FD fallback; not the scalar DG implementation in this atlas.
 
 ## 2022 · kuya2022keep
 
@@ -565,6 +1061,14 @@ Tamaki, Yoshiharu and Kuya, Yuichi and Kawai, Soshi. **Comprehensive analysis of
 
 Author-university record and abstract. Analyzes entropy-error terms and redefined KEEP variants with adjustable expansion order; these variants are not implemented in the original-flux exhibit.
 
+## 2023 · foucart2023neutrino
+
+Foucart, Francois. **Neutrino transport in general relativistic neutron star merger simulations**. Living Reviews in Computational Astrophysics.
+
+[Original bibliographic record](https://doi.org/10.1007/s41115-023-00016-y) · [Full text or implementation reference](https://link.springer.com/article/10.1007/s41115-023-00016-y)
+
+Open author review inspected for leakage, moment, and Monte Carlo transport, including unresolved physical-interaction limits. Review context; no neutrino solver implemented.
+
 ## 2024 · asada2024
 
 Asada, Hiroyuki and Maruyama, Kanako and Kawai, Soshi. **Temporal discretization for improving kinetic-energy and entropy preservation properties in KEEP schemes**. Computers & Fluids.
@@ -572,6 +1076,38 @@ Asada, Hiroyuki and Maruyama, Kanako and Kawai, Soshi. **Temporal discretization
 [Original bibliographic record](https://doi.org/10.1016/j.compfluid.2023.106143) · [Full text or implementation reference](https://www.sciencedirect.com/science/article/pii/S0045793023003687)
 
 Publisher record and abstract. Published in 2024 despite 2023 in the DOI. The auxiliary-variable temporal method is not implemented; the exhibit uses classical RK4 with a time-refinement diagnostic.
+
+## 2024 · deppe2024bns
+
+Deppe, Nils and Foucart, Francois and Bonilla, Marceline S. and others. **Binary neutron star mergers using a discontinuous Galerkin-finite difference hybrid method**. .
+
+[Original bibliographic record](https://arxiv.org/abs/2406.19038) · [Full text or implementation reference](https://arxiv.org/abs/2406.19038)
+
+Author abstract inspected. Cited as the June 2024 preprint, updated September 2024; a separate journal record was not verified in this review. Demonstration of DG–FD with dynamical-spacetime mergers, not a simulation reproduced here.
+
+## 2025 · cao2025pcpdg
+
+Cao, Huihui and Peng, Manting and Wu, Kailiang. **Robust discontinuous Galerkin methods maintaining physical constraints for general relativistic hydrodynamics**. Journal of Computational Physics.
+
+[Original bibliographic record](https://doi.org/10.1016/j.jcp.2025.113770) · [Full text or implementation reference](https://www.sciencedirect.com/science/article/pii/S0021999125000531)
+
+Publisher abstract, highlights, and record inspected. PCP/OEDG GRHD and primitive recovery under specified formulation/scheme assumptions. Full theorem hypotheses and proofs have not been audited here; no universal positivity or merger-code claim.
+
+## 2025 · fields2025athenak
+
+Fields, Jacob and Zhu, Hengrui and Radice, David and Stone, James M. and Cook, William and Bernuzzi, Sebastiano and Daszuta, Boris. **Performance-Portable Binary Neutron Star Mergers with AthenaK**. The Astrophysical Journal Supplement Series.
+
+[Original bibliographic record](https://doi.org/10.3847/1538-4365/ad9687) · [Full text or implementation reference](https://arxiv.org/abs/2409.10384)
+
+Author abstract and journal reference checked November 2026. Preprint 2024, journal 2025. Dynamical-spacetime GRMHD, CT, first-order flux correction, and GPU BNS demonstrations; no cross-code speed ranking or local rerun claimed.
+
+## 2025 · kalinani2025asterx
+
+Kalinani, Jay V. and Ji, Liwei and Ennoggi, Lorenzo and others. **AsterX: a new open-source GPU-accelerated GRMHD code for dynamical spacetimes**. Classical and Quantum Gravity.
+
+[Original bibliographic record](https://doi.org/10.1088/1361-6382/ad9c11) · [Full text or implementation reference](https://par.nsf.gov/servlets/purl/10563328)
+
+Author paper and institution metadata inspected. Online December 2024, 2025 journal issue. GPU-oriented Valencia/Z4c framework with CarpetX/AMReX; source infrastructure does not authorize adding AMR to the atlas, which remains deferred.
 
 ## 2026 · amrvaclimiters
 
@@ -588,6 +1124,30 @@ Clawpack Development Team. **Pyclaw Limiters**. .
 [Original bibliographic record](https://www.clawpack.org/pyclaw/evolve/limiters.html) · [Full text or implementation reference](https://www.clawpack.org/pyclaw/evolve/limiters.html)
 
 Official implementation documentation inspected in November 2026; this is an access-year record, not an invention date. Used to distinguish common limiter functions and wave-limiting conventions from the atlas slope reconstruction.
+
+## 2026 · kitajima2026srgsph
+
+Kitajima, Kanta and Inutsuka, Shu-ichiro and Seno, Izumi. **Special relativistic smoothed particle hydrodynamics based on Riemann solver**. Journal of Computational Physics.
+
+[Original bibliographic record](https://doi.org/10.1016/j.jcp.2025.114448) · [Full text or implementation reference](https://arxiv.org/abs/2510.18251)
+
+Publisher record and author abstract checked 6 November 2026. Journal issue 15 January 2026; preprint October 2025. SRGSPH addresses unequal baryon numbers, variable smoothing lengths, and relativistic shocks/Kelvin–Helmholtz tests. Special relativity only; no SRGSPH implementation or figure reproduction in this atlas.
+
+## 2026 · mitgcm-c-grid
+
+MITgcm contributors. **C grid staggering of variables**. MITgcm documentation.
+
+[Original bibliographic record](https://mitgcm.readthedocs.io/en/latest/algorithm/c-grid.html) · [Full text or implementation reference](https://mitgcm.readthedocs.io/en/latest/algorithm/c-grid.html)
+
+Official living documentation checked on 6 November 2026. Year denotes access, not invention. Face-normal three-dimensional placement reference; no assertion that the atlas uses the full MITgcm algorithm.
+
+## 2026 · musolino2026grace
+
+Musolino, Carlo and Ecker, Christian and Topolski, Konrad and Cassing, Marie and Miler, Keneth and Ng, Harry Ho-Yin and Pierre, Khalil and Most, Elias R. and Rezzolla, Luciano. **Open-source framework for GPU-accelerated numerical relativity**. Physical Review D (accepted).
+
+[Original bibliographic record](https://doi.org/10.1103/yq78-m749) · [Full text or implementation reference](https://journals.aps.org/prd/accepted/10.1103/yq78-m749)
+
+APS accepted-paper page checked 6 November 2026: accepted 2 November 2026, not a verified final volume/page record. July 2026 preprint arXiv:2607.09854 uses the GRACE title prefix. Kokkos, CT, Z4c and merger examples are reported; no local implementation or rerun.
 
 ## 2026 · numipediark
 

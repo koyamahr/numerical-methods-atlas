@@ -1,0 +1,365 @@
+{
+  "schema_version": 1,
+  "checked_on": "2026-11-06",
+  "scope": "Representative classical and selected later biological model families for a numerical-method atlas. All entries are survey-only; no biological simulation or validation is added by this survey.",
+  "models": [
+    {
+      "id": "logistic",
+      "name": "Logistic population growth",
+      "year": 1838,
+      "family": "Population and ecology",
+      "equation": "\\dot N=rN(1-N/K).",
+      "meaning": "Density-limited growth with carrying capacity K. It is the simplest biological ODE baseline.",
+      "numerics": "Positivity, preservation of equilibria and overshoot of K; an accurate-looking curve can still violate the invariant interval.",
+      "verification": "Compare with N(t)=K/[1+(K/N0−1)exp(−rt)] for N0>0; measure temporal order and behavior near 0 and K.",
+      "citations": [
+        "verhulst1847"
+      ],
+      "priority": "first",
+      "status": "survey-only",
+      "scope": "The linked original is the later 1847 memoir; the 1838 note itself was not audited. The differential equation is not the discrete logistic map."
+    },
+    {
+      "id": "enzyme",
+      "name": "Michaelis–Menten and full enzyme kinetics",
+      "year": 1913,
+      "family": "Biochemical reactions",
+      "equation": "E+S\\mathrel{\\mathop{\\rightleftharpoons}^{k_1}_{k_{-1}}}C\\mathrel{\\mathop{\\longrightarrow}^{k_2}}E+P,\\qquad v=V_{\\max}S/(K_M+S).",
+      "meaning": "Enzyme saturation; the full mass-action system resolves the transient complex C, while the rate law eliminates a fast variable.",
+      "numerics": "Fast initial layers and stiffness; full and reduced models have different validity regimes. Under the usual quasi-steady approximation KM=(k−1+k2)/k1.",
+      "verification": "Check E+C and S+C+P conservation in the closed mechanism. Compare reduced and full systems as enzyme/substrate scales vary, rather than calling the reduction exact.",
+      "citations": [
+        "michaelis1913",
+        "briggs1925",
+        "johnson2011"
+      ],
+      "priority": "first",
+      "status": "survey-only",
+      "scope": "The 1913 rapid-equilibrium interpretation and the 1925 quasi-steady-state derivation must remain distinct."
+    },
+    {
+      "id": "lotka-volterra",
+      "name": "Lotka–Volterra predator–prey",
+      "year": 1920,
+      "family": "Population and ecology",
+      "equation": "\\dot x=\\alpha x-\\beta xy,\\qquad\\dot y=\\delta xy-\\gamma y.",
+      "meaning": "Coupled prey growth and predation; a phase-plane and long-time integration test.",
+      "numerics": "Positive states and artificial damping or growth of closed orbits. Periodic orbits of this idealized system are not attracting limit cycles.",
+      "verification": "Monitor H=δx−γ ln(x)+βy−α ln(y) for positive x,y, and compare orbit drift under step refinement.",
+      "citations": [
+        "lotka1920",
+        "volterra1926"
+      ],
+      "priority": "first",
+      "status": "survey-only",
+      "scope": ""
+    },
+    {
+      "id": "age-structure",
+      "name": "McKendrick age-structured population",
+      "year": 1926,
+      "family": "Structured population transport",
+      "equation": "\\partial_t n+\\partial_a n=-\\mu(a)n,\\qquad n(0,t)=\\int_0^\\infty b(a)n(a,t)\\,da.",
+      "meaning": "Individuals move through age a at unit speed; newborns enter through a nonlocal renewal boundary.",
+      "numerics": "Upwind/FV transport in age, birth-boundary quadrature and truncation of the infinite age interval.",
+      "verification": "Use characteristic survival along cohorts and check d∫n da/dt=births−deaths, including any artificial oldest-age outflow.",
+      "citations": [
+        "mckendrick1926"
+      ],
+      "priority": "later",
+      "status": "survey-only",
+      "scope": "This is the classical age-transport form; the later von Foerster lineage is acknowledged without treating its date as the first appearance."
+    },
+    {
+      "id": "sir",
+      "name": "SIR and SEIR compartment models",
+      "year": 1927,
+      "family": "Epidemic compartments",
+      "equation": "\\dot s=-\\beta si,\\quad\\dot i=\\beta si-\\gamma i,\\quad\\dot r=\\gamma i,\\quad s+i+r=1.",
+      "meaning": "Closed, well-mixed normalized population fractions. SEIR adds an exposed compartment and a progression rate.",
+      "numerics": "Nonnegative compartments, invariant total population and correct resolution of epidemic peak times.",
+      "verification": "Check total 1 and i+s−(γ/β)ln(s) for β>0,s>0; compare early growth rate βs0−γ and final-size relation in the closed SIR specialization.",
+      "citations": [
+        "kermack1927"
+      ],
+      "priority": "first",
+      "status": "survey-only",
+      "scope": "The original general epidemic framework is broader than this SIR specialization. Population-count and fraction conventions give different β definitions."
+    },
+    {
+      "id": "fisher-kpp",
+      "name": "Fisher–KPP invasion front",
+      "year": 1937,
+      "family": "Population and ecology",
+      "equation": "u_t=D\\Delta u+ru(1-u),\\qquad 0\\leq u\\leq1.",
+      "meaning": "Spatial spread of an invading population or advantageous allele, represented by a reaction–diffusion front.",
+      "numerics": "Spatial and temporal front-speed errors; leading-edge resolution, positivity and finite-domain boundary contamination.",
+      "verification": "Use the Ablowitz–Zeppetella exact front at c=5√(Dr/6), or test the minimal speed 2√(Dr) only with the appropriate steep initial-data regime on a sufficiently large domain.",
+      "citations": [
+        "fisher1937",
+        "ablowitz1979"
+      ],
+      "priority": "first",
+      "status": "survey-only",
+      "scope": "Fisher–KPP is a conventional family name; the independent KPP 1937 original remains an archival follow-up. The exact special speed is not the minimal speed."
+    },
+    {
+      "id": "monod",
+      "name": "Monod growth and chemostat",
+      "year": 1949,
+      "family": "Biochemical reactions",
+      "equation": "\\mu(S)=\\mu_{\\max}\\frac{S}{K_S+S},\\quad\\dot X=(\\mu(S)-d)X,\\quad\\dot S=d(S_{in}-S)-\\mu(S)X/Y.",
+      "meaning": "Nutrient-limited biomass X, substrate S, yield Y and chemostat dilution d; d=0 gives a closed batch model.",
+      "numerics": "Washout near a threshold, disparate resource/growth scales, positivity and the distinction between yield and rate constants.",
+      "verification": "For d=0 check S+X/Y. For d>0 use d(S+X/Y)/dt=d[Sin−(S+X/Y)] and verify the washout equilibrium.",
+      "citations": [
+        "monod1949"
+      ],
+      "priority": "later",
+      "status": "survey-only",
+      "scope": "This writes one constant-yield extension of saturation growth, not a universal metabolic model."
+    },
+    {
+      "id": "hodgkin-huxley",
+      "name": "Hodgkin–Huxley membrane dynamics",
+      "year": 1952,
+      "family": "Excitable systems",
+      "equation": "C_m\\dot V=I_{app}-\\bar g_{Na}m^3h(V-E_{Na})-\\bar g_Kn^4(V-E_K)-g_L(V-E_L),\\quad\\dot z=\\alpha_z(V)(1-z)-\\beta_z(V)z.",
+      "meaning": "Voltage and gating variables z=m,h,n describe an ionic excitable membrane. A cable extension adds spatial axial current.",
+      "numerics": "Stiff gates, removable singularities in rate formulas, gating bounds, voltage/current sign and temperature conventions.",
+      "verification": "Select an explicitly versioned CellML/reference convention, verify resting equilibrium and gate relaxation at clamped voltage, then refine spike time and waveform.",
+      "citations": [
+        "hodgkin1952"
+      ],
+      "priority": "later",
+      "status": "survey-only",
+      "scope": "The original squid-axon model is not a calibrated human cardiac model. No single rate parameter set is selected by this survey."
+    },
+    {
+      "id": "turing",
+      "name": "Turing reaction–diffusion framework",
+      "year": 1952,
+      "family": "Pattern formation",
+      "equation": "u_t=D_u\\Delta u+f(u,v),\\qquad v_t=D_v\\Delta v+g(u,v).",
+      "meaning": "A framework for diffusion-driven pattern onset around a homogeneous reaction equilibrium, not a unique choice of f and g.",
+      "numerics": "Physical versus numerical instability, domain eigenmodes and errors in the discrete Laplacian dispersion relation.",
+      "verification": "For a selected kinetic law compare eigenvalues of J−k²diag(Du,Dv) with early-time Fourier-mode growth. Show that the k=0 reaction equilibrium is stable before asserting diffusion-driven instability.",
+      "citations": [
+        "turing1952"
+      ],
+      "priority": "first",
+      "status": "survey-only",
+      "scope": "A spot image or unequal diffusion coefficients alone do not establish a Turing mechanism. Boundary conditions determine the available modes."
+    },
+    {
+      "id": "fitzhugh-nagumo",
+      "name": "FitzHugh–Nagumo excitation and recovery",
+      "year": 1961,
+      "family": "Excitable systems",
+      "equation": "v_t=D\\Delta v+v-v^3/3-w+I,\\qquad w_t=\\epsilon(v+a-bw).",
+      "meaning": "A normalized fast excitation/slow recovery model for pulses, refractoriness and spiral waves when extended in space.",
+      "numerics": "Stiff time-scale separation, splitting error, wave-speed convergence and numerical wave breakup.",
+      "verification": "Check ODE fixed points/nullclines and small-perturbation eigenvalues first; then refine a 1D pulse before a 2D spiral movie.",
+      "citations": [
+        "fitzhugh1961",
+        "nagumo1962"
+      ],
+      "priority": "first",
+      "status": "survey-only",
+      "scope": "This is a common normalized variant; cubic coefficients, recovery signs and nondimensionalization differ between formulations."
+    },
+    {
+      "id": "keller-segel",
+      "name": "Keller–Segel chemotaxis",
+      "year": 1970,
+      "family": "Chemotaxis",
+      "equation": "n_t=D_n\\Delta n-\\chi\\nabla\\cdot(n\\nabla c),\\qquad\\tau_c c_t=D_c\\Delta c+\\alpha n-\\lambda c.",
+      "meaning": "Cell density n drifts up a chemoattractant gradient; τc=0 gives an elliptic chemical subproblem.",
+      "numerics": "Cross-coupled flux, positivity, mass conservation and concentrated peaks; spurious undershoots must not be mistaken for physical aggregation or blowup.",
+      "verification": "With zero total cell flux check ∫n conservation, homogeneous equilibria and linear growth; refine the peak and domain before discussing singularity. Use manufactured smooth solutions before aggregation cases.",
+      "citations": [
+        "keller1970"
+      ],
+      "priority": "later",
+      "status": "survey-only",
+      "scope": "This is a common two-field reduction of a more detailed original formulation. Blowup thresholds depend on dimension, domain, boundary and chemical dynamics."
+    },
+    {
+      "id": "gierer-meinhardt",
+      "name": "Gierer–Meinhardt activator–inhibitor",
+      "year": 1972,
+      "family": "Pattern formation",
+      "equation": "a_t=D_a\\Delta a+\\rho a^2/h-\\mu a+\\sigma_a,\\qquad h_t=D_h\\Delta h+\\rho_h a^2-\\nu h.",
+      "meaning": "A representative simplified short-range activation/long-range inhibition model.",
+      "numerics": "The inhibitor denominator can become singular; positive h, narrow peaks and reaction stiffness require explicit treatment.",
+      "verification": "Choose a positive homogeneous equilibrium, check its dispersion relation and inhibitor positivity, then refine spike width and pattern wavelength.",
+      "citations": [
+        "gierer1972"
+      ],
+      "priority": "later",
+      "status": "survey-only",
+      "scope": "Source densities, saturation and baseline production vary across the model family. This simplified formula is not a verbatim transcription of every original variant."
+    },
+    {
+      "id": "immersed-boundary",
+      "name": "Fluid–elastic structure and immersed boundaries",
+      "year": 1972,
+      "family": "Biomechanics",
+      "equation": "\\rho(\\boldsymbol u_t+\\boldsymbol u\\cdot\\nabla\\boldsymbol u)=-\\nabla p+\\mu\\Delta\\boldsymbol u+\\boldsymbol f,\\quad\\nabla\\cdot\\boldsymbol u=0,\\quad\\boldsymbol X_t=\\boldsymbol u(\\boldsymbol X,t).",
+      "meaning": "Fluid coupled to a deformable structure; biological examples include valves and membranes, once a force/constitutive law is supplied.",
+      "numerics": "Stiff elastic forces, pressure projection, Eulerian–Lagrangian interpolation/spreading and volume leakage.",
+      "verification": "Specify elastic energy and force before solving. Check force transfer, adjoint interpolation/spreading, fluid divergence and enclosed-volume drift on a simple relaxing boundary.",
+      "citations": [
+        "peskin1972"
+      ],
+      "priority": "later",
+      "status": "survey-only",
+      "scope": "Immersed boundary is a numerical coupling method, not itself a closed biological constitutive equation. The existing periodic MAC solver does not implement this coupling."
+    },
+    {
+      "id": "chemical-master",
+      "name": "Chemical master equation and Gillespie SSA",
+      "year": 1977,
+      "family": "Stochastic reaction networks",
+      "equation": "\\partial_t P(\\boldsymbol n,t)=\\sum_j\\left[a_j(\\boldsymbol n-\\boldsymbol\\nu_j)P(\\boldsymbol n-\\boldsymbol\\nu_j,t)-a_j(\\boldsymbol n)P(\\boldsymbol n,t)\\right].",
+      "meaning": "Integer molecule counts, reaction jumps νj and propensities aj; SSA samples paths of this continuous-time Markov model.",
+      "numerics": "Correct combinatorial propensities, event ordering, absorbing states and statistical error; tau-leaping is a separate approximation.",
+      "verification": "Use immigration–death reactions ∅→X at constant rate k and X→∅ at rate γn: stationary counts are Poisson(k/γ). Compare ensemble mean, variance and distribution with confidence intervals.",
+      "citations": [
+        "gillespie1977"
+      ],
+      "priority": "later",
+      "status": "survey-only",
+      "scope": "The 1977 paper is a foundational SSA reference, not a priority claim for all master equations. SSA is a solver; the reaction network is the model. A seed documents a trajectory, not an ensemble validation."
+    },
+    {
+      "id": "mackey-glass",
+      "name": "Mackey–Glass delayed physiological feedback",
+      "year": 1977,
+      "family": "Delay and gene regulation",
+      "equation": "\\dot x(t)=\\frac{\\beta x(t-\\tau)}{1+x(t-\\tau)^p}-\\gamma x(t).",
+      "meaning": "Delayed feedback in a normalized physiological control model; delay can change stability and oscillatory behavior.",
+      "numerics": "A history function over [−τ,0], delayed interpolation, propagated derivative discontinuities and delay-aware adaptive stepping.",
+      "verification": "Check the τ=0 ODE limit, a constant equilibrium history and a manufactured forced solution. Compare long-time statistics rather than expecting chaotic trajectories to match pointwise indefinitely.",
+      "citations": [
+        "mackey1977"
+      ],
+      "priority": "later",
+      "status": "survey-only",
+      "scope": "A scalar initial value alone is insufficient. The delayed ODE is distinct from a spatial reaction–diffusion model."
+    },
+    {
+      "id": "replicator",
+      "name": "Replicator evolutionary game dynamics",
+      "year": 1978,
+      "family": "Evolutionary dynamics",
+      "equation": "\\dot x_i=x_i[(A\\boldsymbol x)_i-\\boldsymbol x^TA\\boldsymbol x],\\qquad x_i\\geq0,\\quad\\sum_i x_i=1.",
+      "meaning": "Strategy fractions reproduce according to relative payoff in a specified matrix game.",
+      "numerics": "Preserving the probability simplex, behavior near extinction boundaries, neutral cycles versus attracting equilibria.",
+      "verification": "Check simplex conservation, exact invariant faces and an analytically chosen game equilibrium; use the appropriate game-specific invariant or Lyapunov function.",
+      "citations": [
+        "taylor1978"
+      ],
+      "priority": "later",
+      "status": "survey-only",
+      "scope": "No universal Lyapunov function or equivalence of fixed point and evolutionarily stable strategy is assumed."
+    },
+    {
+      "id": "schnakenberg",
+      "name": "Schnakenberg reaction–diffusion",
+      "year": 1979,
+      "family": "Pattern formation",
+      "equation": "u_t=D_u\\Delta u+a-u+u^2v,\\qquad v_t=D_v\\Delta v+b-u^2v.",
+      "meaning": "A simple autocatalytic kinetic law extended in space, useful for reproducible Turing-onset tests.",
+      "numerics": "Reaction stiffness, positive concentrations and the distinction between kinetic Hopf and spatial Turing instabilities.",
+      "verification": "Check u*=a+b, v*=b/(a+b)², then compare mode-growth rates with the linearized discrete and continuum operators under fixed boundaries.",
+      "citations": [
+        "schnakenberg1979"
+      ],
+      "priority": "first",
+      "status": "survey-only",
+      "scope": "A mathematical chemical pattern model; matching a visual biological pattern does not calibrate it to a tissue."
+    },
+    {
+      "id": "skt",
+      "name": "Shigesada–Kawasaki–Teramoto cross-diffusion",
+      "year": 1979,
+      "family": "Population and ecology",
+      "equation": "u_t=\\Delta[(d_1+\\alpha_{11}u+\\alpha_{12}v)u]+u(a_1-b_1u-c_1v),\\quad v_t=\\Delta[(d_2+\\alpha_{21}u+\\alpha_{22}v)v]+v(a_2-b_2u-c_2v).",
+      "meaning": "Competition with density-dependent self- and cross-dispersal can produce spatial segregation.",
+      "numerics": "A coupled nonlinear diffusion matrix, loss of simple scalar maximum-principle arguments, positivity and entropy-compatible discretization.",
+      "verification": "Start with manufactured smooth solutions and constant-state equilibria. With reactions removed and no normal flux, conserve each species mass; check coefficient assumptions before claiming an entropy law.",
+      "citations": [
+        "shigesada1979"
+      ],
+      "priority": "later",
+      "status": "survey-only",
+      "scope": "The displayed homogeneous-environment reduction omits the original environmental-potential terms. It is not equivalent to two independent scalar diffusion equations."
+    },
+    {
+      "id": "gray-scott",
+      "name": "Gray–Scott spatial autocatalysis",
+      "year": 1983,
+      "family": "Pattern formation",
+      "equation": "u_t=D_u\\Delta u-uv^2+F(1-u),\\qquad v_t=D_v\\Delta v+uv^2-(F+k)v.",
+      "meaning": "A chemical feed/decay model whose spatial extension supports diverse spot and wave patterns.",
+      "numerics": "Sensitivity to F,k, diffusion, domain and finite-amplitude initial perturbations; grid-scale patterns and floating-point variation can affect long-time morphology.",
+      "verification": "Record every parameter and the perturbation seed. Verify the homogeneous (1,0) state and early perturbation response, then perform grid/time refinement of quantitative observables.",
+      "citations": [
+        "gray1983",
+        "pearson1993"
+      ],
+      "priority": "later",
+      "status": "survey-only",
+      "scope": "1983 is the well-mixed CSTR source; Pearson 1993 is the spatial pattern reference. Spot division does not by itself demonstrate cell division or a linear Turing instability."
+    },
+    {
+      "id": "cardiac",
+      "name": "Aliev–Panfilov cardiac excitation",
+      "year": 1996,
+      "family": "Excitable systems",
+      "equation": "u_t=D\\Delta u-ku(u-a)(u-1)-uv,\\quad v_t=\\left(\\epsilon_0+\\frac{\\mu_1v}{u+\\mu_2}\\right)[-v-ku(u-b-1)].",
+      "meaning": "A reduced phenomenological excitation/recovery model for cardiac waves and restitution.",
+      "numerics": "Stiff recovery, denominator behavior and sensitivity of wave speed/restitution to resolution and time splitting.",
+      "verification": "Select a specific model encoding and parameters; establish single-cell and 1D conduction convergence before 2D reentry. Compare a restitution curve, not only a spiral image.",
+      "citations": [
+        "aliev1996"
+      ],
+      "priority": "later",
+      "status": "survey-only",
+      "scope": "Monodomain/bidomain tissue models add conductivity tensors and, for bidomain, an extracellular elliptic constraint. They are not automatically included by this two-variable model."
+    },
+    {
+      "id": "repressilator",
+      "name": "Repressilator mRNA–protein network",
+      "year": 2000,
+      "family": "Delay and gene regulation",
+      "equation": "\\dot m_i=\\frac{\\alpha}{1+p_{i-1}^n}+\\alpha_0-m_i,\\quad\\dot p_i=\\beta(m_i-p_i),\\qquad i=1,2,3\\ \\text{cyclic}.",
+      "meaning": "Three repressing genes form a cyclic network; retaining mRNA and protein gives six state variables.",
+      "numerics": "Multiple degradation scales, oscillation onset, phase error and differences between deterministic cycles and noisy individual-cell behavior.",
+      "verification": "Check the symmetric equilibrium and its linear stability. Compare period and amplitude under time refinement after a stated transient.",
+      "citations": [
+        "elowitz2000"
+      ],
+      "priority": "later",
+      "status": "survey-only",
+      "scope": "The six-variable form is distinct from a reduced three-protein oscillator; oscillations are parameter-dependent."
+    },
+    {
+      "id": "toggle",
+      "name": "Genetic toggle switch",
+      "year": 2000,
+      "family": "Delay and gene regulation",
+      "equation": "\\dot u=\\frac{\\alpha_1}{1+v^p}-u,\\qquad\\dot v=\\frac{\\alpha_2}{1+u^q}-v.",
+      "meaning": "Mutual repression produces a possible bistable genetic switch in a normalized model.",
+      "numerics": "Parameter-dependent bistability, saddle separatrices, continuation and sensitivity to perturbations near basin boundaries.",
+      "verification": "Find all positive equilibria and their Jacobian eigenvalues; verify hysteresis with sufficiently slow continuation and multiple initial conditions.",
+      "citations": [
+        "gardner2000"
+      ],
+      "priority": "later",
+      "status": "survey-only",
+      "scope": "Bistability is not guaranteed for arbitrary Hill exponents or production rates. Induction, mRNA dynamics and noise are additional model choices."
+    }
+  ]
+}

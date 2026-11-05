@@ -117,3 +117,11 @@ coefficients, anisotropy, curved grids, AMG, and FAS are outside this edition.
 ## Particle and disk gravity
 
 The new [particle-gravity chapter](particle-gravity.md) connects PM, P³M, Tree, multipoles, and multigrid. [Gravity boundary kernels](gravity-boundaries.md) adds Hockney–Eastwood isolated convolution and Koyama–Ostriker slab Fourier kernels. The existing multigrid example retains its 2D zero-Dirichlet operator; it is not a 3D open-boundary gravity solver.
+
+## Further routes to diffusion and elliptic problems
+
+See [continuous P1 FEM](fem.md) for weak-form assembly,
+[GMRES/ILU and nonlinear solves](sparse-nonlinear.md) for nonsymmetric systems,
+and [Nishikawa hyperbolic diffusion](hyperbolic-diffusion.md) for auxiliary-gradient
+pseudo-time iteration. The [equation gallery](equation-gallery.md) separately
+shows physical-time heat diffusion.

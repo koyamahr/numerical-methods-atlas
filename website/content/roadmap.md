@@ -73,12 +73,61 @@ Added saved-state output that leaves solver time steps unchanged, four numerical
 
 Added selectable MUSCL slopes, TVB modified-minmod and positive-reconstruction building blocks, nine explicit RK tableaus with nonlinear stage verification, twelve oscillator methods, and original cubic-Hermite CIP with a conservation counterexample. Full Euler-update positivity is still a separate extension.
 
+## Sixth expansion: equations, sparse systems and kinetic transport
+
+Added nine saved-profile cases across seven equation families, including
+Burgers and LWR traffic. Exact scalar cell averages, point-sampled Sod references,
+and missing shallow-water/isothermal overlays are explicitly distinguished.
+
+The new [continuous P1 FEM](fem.md), [sparse/nonlinear solvers](sparse-nonlinear.md),
+[stiff ODE integrators](stiff-integration.md), [periodic MAC projection](incompressible.md),
+[D2Q9–BGK](lattice-boltzmann.md), and [first-order hyperbolic diffusion baseline](hyperbolic-diffusion.md)
+have dedicated numerical checks, figures and source-hashed manifests.
+[Chapman–Enskog expansion](chapman-enskog.md) is a formal derivation linked to
+the measured shear viscosity. These local additions are prepared for review;
+they have not been deployed by this expansion.
+
 ## Authorized next work
 
+- Inutsuka's GSPH: Gaussian convolution and specific-volume reconstruction,
+  oriented pair Riemann states, a matched conservative energy update, and
+  smooth/contact/shock-tube verification before variable smoothing lengths.
+  The Iwasaki–Inutsuka GSPMHD extension is a later, separately verified stage;
+  see the [source notes and staged plan](gsph.md).
+- Relativistic hydrodynamics is a source-based extension plan: SRHD recovery
+  and characteristic tests before SRMHD, fixed-metric GR, and independently
+  verified Einstein–matter coupling. Radiation and SRGSPH are separate branches;
+  see the [development review checked in November 2026](relativistic-hydrodynamics.md).
 - PPM, characteristic reconstruction, and WENO-Z with controlled shock/contact comparisons.
 - HLLD, Brio–Wu, Alfvén-wave and field-loop verification, with explicit CT/GLM scope.
-- Stiff integration: implicit RK, IMEX, and operator splitting with exact or manufactured references.
-- Krylov solvers: BiCGSTAB and restarted GMRES, CG applicability, Jacobi and ILU preconditioning, true-residual/error checks and explicit failure reporting.
-- Viscous/incompressible flow: projection, SIMPLE/PISO, cavity and cylinder-wake validation.
+- Stiff integration: higher-order IMEX, embedded DIRK, variable-step BDF and operator splitting beyond the implemented BE/BDF2/SDIRK2/IMEX-Euler models.
+- Sparse/nonlinear solvers: matrix-free Newton–Krylov, robust reorderings/fill, flexible preconditioning and broader nonlinear benchmarks beyond the implemented fixed-right GMRES/BiCGSTAB and ILU(0).
+- Viscous/incompressible flow: wall projection, SIMPLE/PISO, cavity and cylinder-wake validation beyond periodic Taylor–Green.
+- FEM: mixed velocity–pressure pairs, inf–sup checks, curved/irregular meshes and natural/mixed boundary assembly.
+- LBM: MRT/TRT/cumulant collisions, thermal and multiphase models beyond low-Mach isothermal D2Q9–BGK.
+- Hyperbolic diffusion: full second-order RD, anisotropy and unified advection/viscous systems beyond the periodic first-order baseline.
 
 AMR is deferred at the author’s request; it is not part of this expansion.
+
+## Biological and geophysical survey additions
+
+[The biological catalog](biological-models.md) contains 22 survey-only model
+families, with equations, source conventions and proposed verification.
+A practical implementation sequence is logistic/SIR and enzyme kinetics,
+then Fisher fronts, FitzHugh–Nagumo, Schnakenberg and Keller–Segel, with a
+birth–death SSA as a separate stochastic branch. No biological solver or
+biological validation is added by the survey.
+
+[Arakawa A/B/C](geophysical-grids.md) has variable-location diagrams and
+tested semi-discrete f-plane Fourier symbols. D/E, vertical staggering,
+nonlinear potential-vorticity schemes, Kelvin/Rossby waves and coastlines
+remain additional work. This is not a full geophysical dynamical core.
+
+Quantum chemistry and electronic-structure methods could form an independent
+future branch: Schrödinger eigenproblems, Hartree–Fock, Kohn–Sham DFT, basis
+sets and self-consistent iteration. This is a scope idea, without a completed
+literature survey or an electronic-structure implementation in this edition.
+
+The next editorial priority is to connect shared equations to multiple
+verified discretizations, cost/error evidence and explicit failure cases,
+while retaining separate labels for surveys, prototypes and verified models.

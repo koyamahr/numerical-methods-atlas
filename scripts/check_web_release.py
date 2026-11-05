@@ -1,0 +1,70 @@
+"""Check a complete static release without network access or numerical reruns."""
+from argparse import ArgumentParser
+from hashlib import sha256
+from html.parser import HTMLParser
+from pathlib import Path
+from urllib.parse import unquote, urlsplit, parse_qs
+import json,re
+
+ROOT=Path(__file__).resolve().parents[1]
+SITE=ROOT/'website';DIST=SITE/'dist'
+parser=ArgumentParser();parser.add_argument('--output',type=Path)
+args=parser.parse_args()
+errors=[]
+
+def require(condition,message):
+    if not condition:errors.append(message)
+
+class Links(HTMLParser):
+    def __init__(self):
+        super().__init__();self.targets=[]
+    def handle_starttag(self,tag,attrs):
+        for key,value in attrs:
+            if key in ('src','href') and value:self.targets.append(value)
+
+if not (DIST/'content.json').is_file():raise SystemExit('Build website/dist before checking the release')
+documents=json.loads((DIST/'content.json').read_text())
+expected={p.stem for p in (ROOT/'docs').glob('*.md')}
+require(set(documents)==expected,'Built reading-room chapters do not match docs/')
+require({p.stem for p in (SITE/'content').glob('*.md')}==expected,'Source reading-room chapters do not match docs/')
+for name in sorted(expected):
+    require((ROOT/'docs'/f'{name}.md').read_bytes()==(SITE/'content'/f'{name}.md').read_bytes(),f'Unsynced chapter: {name}')
+    links=Links();links.feed(documents.get(name,{}).get('html',''))
+    for url in links.targets:
+        if url.startswith('#/read/'):
+            path,_,query=url.partition('?');chapter=unquote(path[len('#/read/'):])
+            require(chapter in documents,f'{name}: unknown reading route {url}')
+            section=parse_qs(query).get('section',[])
+            if section and chapter in documents:
+                require(section[0] in {h['id'] for h in documents[chapter]['headings']},f'{name}: unknown section {url}')
+        elif not url.startswith(('#','data:','mailto:')) and not urlsplit(url).scheme:
+            path=unquote(urlsplit(url).path)
+            target=(DIST/path).resolve()
+            require(DIST.resolve() in target.parents and target.is_file(),f'{name}: missing or out-of-tree local asset {url}')
+for entry in DIST.glob('*.js'):
+    for imported in re.findall(r"(?:from\s*|import\s*)['\"](\./[^'\"]+)['\"]",entry.read_text()):
+        require((entry.parent/imported).is_file(),f'{entry.name}: missing module {imported}')
+refs=json.loads((ROOT/'catalog/references.json').read_text())
+require(refs==json.loads((DIST/'references.json').read_text()),'Built reference catalog is stale')
+require((ROOT/'references.bib').read_bytes()==(DIST/'assets/references.bib').read_bytes(),'Built BibTeX is stale')
+coverage=json.loads((DIST/'coverage.json').read_text())
+require(coverage==json.loads((SITE/'content/coverage.json').read_text()),'Built coverage data is stale')
+require(coverage['counts']['references']==len(refs),'Coverage reference total differs from the catalog')
+require(coverage['counts']['reading_chapters']==len(documents),'Coverage chapter total is stale')
+inventory_labels=re.findall(r'^- \[([^\]]+)\]\(', (ROOT/'docs/site-coverage.md').read_text(), flags=re.MULTILINE)
+require(sorted(inventory_labels)==sorted(item['label'] for item in coverage['items']),'Static inventory must list each counted item exactly once')
+for item in coverage['items']:
+    require(item['chapter'] in documents,'Counted entry has no chapter: '+item['id'])
+for path,expected_hash in coverage['source_sha256'].items():
+    source=ROOT/path
+    require(source.is_file() and sha256(source.read_bytes()).hexdigest()==expected_hash,'Coverage source hash mismatch: '+path)
+if errors:raise SystemExit('\n'.join(errors))
+files=sorted(p for p in DIST.rglob('*') if p.is_file())
+file_hashes={p.relative_to(DIST).as_posix():sha256(p.read_bytes()).hexdigest() for p in files}
+report=dict(scope='Offline static-release check; no external DOI/link verification or numerical reruns.',counts=coverage['counts'],
+    files=len(files),bytes=sum(p.stat().st_size for p in files),
+    artifact_sha256=sha256(json.dumps(file_hashes,sort_keys=True,separators=(',',':')).encode()).hexdigest())
+if args.output:
+    args.output.parent.mkdir(parents=True,exist_ok=True)
+    args.output.write_text(json.dumps(report,indent=2)+'\n')
+print(json.dumps(report,indent=2))

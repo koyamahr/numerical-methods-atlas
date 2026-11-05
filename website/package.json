@@ -6,7 +6,10 @@
   "scripts": {
     "build": "node build.mjs",
     "dev": "python3 -m http.server 8765 --directory dist --bind 127.0.0.1",
-    "test": "node --test tests/*.test.mjs"
+    "test": "node --test tests/*.test.mjs",
+    "prebuild": "python3 ../scripts/prepare_web_content.py",
+    "pretest": "python3 ../scripts/prepare_web_content.py",
+    "prepare:content": "python3 ../scripts/prepare_web_content.py"
   },
   "dependencies": {
     "katex": "0.19.1",
