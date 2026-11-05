@@ -157,6 +157,22 @@ van Leer, Bram. **Towards the ultimate conservative difference scheme. V. A seco
 
 Publisher bibliographic record and abstract. This edition uses minmod MUSCL with SSPRK3, rather than reproducing the original Lagrangian/remap construction.
 
+## 1981 · hockney1981book
+
+Hockney, R. W. and Eastwood, J. W.. **Computer Simulation Using Particles**. McGraw-Hill.
+
+[Original bibliographic record](https://doi.org/10.1201/9780367806934) · [Full text or implementation reference](https://doi.org/10.1201/9780367806934)
+
+Original book date is 1981, as cited by Barnes and Hut (1986); DOI identifies a later Taylor & Francis reissue. Reference for particle-mesh methods and isolated doubled-domain convolution; the self-cell kernel convention is stated separately in our code.
+
+## 1981 · hockney1981p3m
+
+Hockney, R. W.. **The P³M Code**. CCP5 Information Quarterly, June 1981.
+
+[Original bibliographic record](https://www.ccp5.ac.uk/wp-content/uploads/2023/03/CCP5_Newsletter_1981_06_01.pdf) · [Full text or implementation reference](https://www.ccp5.ac.uk/wp-content/uploads/2023/03/CCP5_Newsletter_1981_06_01.pdf)
+
+Original newsletter scan hosted by CCP5. Describes mesh forces plus short-range pair corrections. A full P3M solver is not implemented here.
+
 ## 1981 · roe1981
 
 Roe, Philip L.. **Approximate Riemann solvers, parameter vectors, and difference schemes**. Journal of Computational Physics.
@@ -181,6 +197,14 @@ Woodward, Paul and Colella, Phillip. **The numerical simulation of two-dimension
 
 DOI identifies the original 1984 paper; linked NASA tutorial is a later setup reference. This edition computes a first-order 2D HLL Double Mach Reflection baseline, not the original PPM figure. Forward-facing step remains future work.
 
+## 1986 · barnes1986
+
+Barnes, Josh and Hut, Piet. **A hierarchical O(N log N) force-calculation algorithm**. Nature.
+
+[Original bibliographic record](https://doi.org/10.1038/324446a0) · [Full text or implementation reference](https://www.nature.com/articles/324446a0)
+
+Original publisher record. The educational octree uses a geometric opening criterion and compares monopole/full second-moment forces with an identical softened direct sum.
+
 ## 1987 · eno1987
 
 Harten, Amiram and Engquist, Bjorn and Osher, Stanley and Chakravarthy, Sukumar R.. **Uniformly high order accurate essentially non-oscillatory schemes, III**. Journal of Computational Physics.
@@ -188,6 +212,14 @@ Harten, Amiram and Engquist, Bjorn and Osher, Stanley and Chakravarthy, Sukumar 
 [Original bibliographic record](https://doi.org/10.1016/0021-9991(87)90031-3) · [Full text or implementation reference](https://www.sciencedirect.com/science/article/pii/0021999187900313)
 
 Original publication in 1987, distinct from the 1997 reprint. A standalone ENO implementation is planned; this edition implements WENO5-JS.
+
+## 1987 · greengard1987
+
+Greengard, L. and Rokhlin, V.. **A fast algorithm for particle simulations**. Journal of Computational Physics.
+
+[Original bibliographic record](https://doi.org/10.1016/0021-9991(87)90140-9) · [Full text or implementation reference](https://web.stanford.edu/class/cme324/classics/greengard-rokhlin.pdf)
+
+Original paper hosted by a university course. FMM reading reference; multipole-to-local translations and an FMM solver are not implemented here.
 
 ## 1987 · turkel1987
 
@@ -236,6 +268,14 @@ Shu, Chi-Wang and Osher, Stanley. **Efficient implementation of essentially non-
 [Original bibliographic record](https://doi.org/10.1016/0021-9991(89)90222-2) · [Full text or implementation reference](https://academic.oup.com/mnras/article/512/1/1430/6530656)
 
 The DOI identifies the original paper. Initial-condition parameters follow the later Quokka paper. Digitized comparisons with original figures have not been performed.
+
+## 1990 · yoshida1990
+
+Yoshida, Haruo. **Construction of higher order symplectic integrators**. Physics Letters A.
+
+[Original bibliographic record](https://doi.org/10.1016/0375-9601(90)90092-3) · [Full text or implementation reference](https://tlakoba.w3.uvm.edu/math6737/for_final_topics/SSM_1990_Yoshida.pdf)
+
+Original paper hosted by a university course. This edition implements the fourth-order triple composition of symmetric Verlet steps on two smooth 1-DOF Hamiltonians.
 
 ## 1991 · einfeldt1991
 
@@ -333,6 +373,22 @@ LeVeque, Randall J.. **Finite Volume Methods for Hyperbolic Problems**. Cambridg
 
 Publisher bibliographic record and abstract. Background for conservation laws and shallow-water implementations.
 
+## 2003 · hairer2003
+
+Hairer, Ernst and Lubich, Christian and Wanner, Gerhard. **Geometric numerical integration illustrated by the Störmer–Verlet method**. Acta Numerica.
+
+[Original bibliographic record](https://doi.org/10.1017/S0962492902000144) · [Full text or implementation reference](https://jduarte.physics.ucsd.edu/phys141/_downloads/0b06fe9fe40aeb83699c2bc17b71a93d/stoermer-verlet.pdf)
+
+Original article hosted by a university course. Reference for symplecticity, reversibility, modified equations, and conditional long-time energy estimates; no general exact-energy claim is made.
+
+## 2005 · springel2005
+
+Springel, Volker. **The cosmological simulation code GADGET-2**. Monthly Notices of the Royal Astronomical Society.
+
+[Original bibliographic record](https://doi.org/10.1111/j.1365-2966.2005.09655.x) · [Full text or implementation reference](https://arxiv.org/abs/astro-ph/0505010)
+
+Author preprint and publisher record. Reference for TreePM force splitting; the separate PM and Tree laboratories do not implement the GADGET code or a complete TreePM pipeline.
+
 ## 2006 · abgrall2006
 
 Abgrall, Rémi. **Residual distribution schemes: Current status and future trends**. Computers & Fluids.
@@ -348,6 +404,14 @@ Nishikawa, Hiroaki and Kitamura, Keiichi. **Very simple, carbuncle-free, boundar
 [Original bibliographic record](https://doi.org/10.1016/j.jcp.2007.11.003) · [Full text or implementation reference](https://www.sciencedirect.com/science/article/abs/pii/S0021999107004822)
 
 Publisher bibliographic record and abstract. The 2D rotated solver and carbuncle tests are future work.
+
+## 2009 · koyama2009
+
+Koyama, Hiroshi and Ostriker, Eve C.. **Gas Properties and Implications for Galactic Star Formation in Numerical Models of the Turbulent, Multiphase Interstellar Medium**. The Astrophysical Journal.
+
+[Original bibliographic record](https://doi.org/10.1088/0004-637X/693/2/1316) · [Full text or implementation reference](https://arxiv.org/abs/0812.1846)
+
+Published in 2009, with a December 2008 preprint. Section 2.3 and Appendix A give the Cartesian disk-potential FFT method. Our independent kernel laboratory distinguishes the sampled DFT from a continuous Fourier coefficient and does not reproduce the ISM simulations.
 
 ## 2009 · toro2009
 

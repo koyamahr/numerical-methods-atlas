@@ -16,3 +16,18 @@ test('published temporal and mesh data identify current Python sources and cover
  assert.deepEqual(Object.keys(data.meshes).sort(),['structured','triangular','unstructured']);
  for(const m of Object.values(data.meshes))assert.ok(Math.abs(m.areas.reduce((a,b)=>a+b,0)-1)<1e-12);
 });
+
+test('Hamiltonian and gravity exhibits retain source provenance and complete notebook cases',()=>{
+ for(const file of ['hamiltonian','particle-gravity','gravity-boundaries']){
+  const exhibit=JSON.parse(read(`../public/assets/${file}.json`));
+  for(const [name,hash] of Object.entries(exhibit.source_sha256))assert.equal(createHash('sha256').update(read(`../../numart/${name}`)).digest('hex'),hash);
+ }
+ const maps=JSON.parse(read('../content/hamiltonian.json'));
+ assert.equal(maps.cases.length,30);
+ for(const method of maps.methods)for(const system of ['harmonic','quartic'])for(const h of [.1,.2,.4]){
+  const c=maps.cases.find(c=>c.method===method.id&&c.system===system&&c.h===h);
+  assert.ok(c);assert.equal(c.t.at(-1),200);assert.equal(c.steps,Math.round(200/h));
+  assert.equal(c.q.length,c.t.length);assert.equal(c.p.length,c.t.length);
+  assert.ok(c.relative_energy_error.every(e=>Number.isFinite(e)&&Math.abs(e)<=c.max_relative_energy_error*(1+1e-12)+1e-15));
+ }
+});

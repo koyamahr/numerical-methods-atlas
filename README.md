@@ -44,12 +44,15 @@ source hashes to identify the implementation.
 
 Additional reading: [time integration and leapfrog](docs/time-integration.md), [meshes](docs/meshes.md), [SPH](docs/particles-sph.md), [ALE](docs/ale.md), [cylindrical tensors and viscosity](docs/coordinates-viscosity.md), [Double Mach Reflection](docs/double-mach.md), [carbuncle](docs/carbuncle.md), and [Remembering Philip L. Roe](docs/roe-memorial.md).
 
+Further reading: [symplectic Hamiltonian maps](docs/symplectic.md), [PM / P³M / Tree / multipoles](docs/particle-gravity.md), and [Hockney–Eastwood / Koyama–Ostriker gravity kernels](docs/gravity-boundaries.md).
+
 ## Interactive notebooks
 
 - [Stability laboratory](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/experiments): compute periodic FTCS, upwind, LF, and LW advection in the browser. Change the signed Courant number, initial profile, and step count; inspect amplification and export the experiment.
 - [Convergence notebook](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/convergence): inspect the original DG and Euler entropy-wave refinement data, switch between elements and unknowns, and read measured convergence orders.
 - [Time integration](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/time-integration): seven Python-computed oscillator trajectories, including unfiltered leapfrog and its startup mode.
 - [Mesh explorer](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/meshes): select cells and inspect face-sharing neighbors in structured and irregular meshes.
+- [Hamiltonian maps](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/hamiltonian): symplectic Euler, Verlet, Yoshida fourth order, implicit midpoint, and RK4 on two Hamiltonians.
 - [Experiment guide](docs/experiments.md): equations, provenance, reproducibility, and the limits of each comparison.
 
 ## Run a benchmark
@@ -110,6 +113,8 @@ establish which method is more accurate.
 - **2D Euler:** first-order HLL + SSPRK2 Double Mach Reflection with time-dependent shock and reflecting-wall boundaries.
 - **Temporal and geometric models:** seven scalar ODE integrators, explicit mesh connectivity, 1D SPH reconstruction, and a moving-volume ALE identity check.
 - **Cylindrical tensors:** orthonormal velocity gradient, Newtonian stress with bulk viscosity, and symmetric stress divergence at r > 0.
+- **Particle gravity:** periodic 3D CIC/FFT PM; isolated softened octree with monopole or second moments; isolated doubled-grid and periodic-horizontal/vacuum-vertical slab convolution. Full P³M, TreePM, and FMM remain reading directions.
+- **Hamiltonian maps:** fixed-step symplectic Euler, Verlet, Yoshida fourth order, implicit midpoint, and RK4 comparisons for harmonic/quartic oscillators.
 - **MHD:** planar 2D ideal MHD with first-order Rusanov fluxes, staggered constrained transport, and cell-centered GLM cleaning.
 - **Diffusion and elliptic equations:** FTCS, backward Euler, Crank–Nicolson, 1D Thomas elimination, and 2D matrix-free conjugate gradients.
 - **Iterative methods:** Jacobi, Gauss–Seidel, and SOR iteration matrices; red-black relaxation; and geometric multigrid V-cycles.
@@ -140,7 +145,16 @@ python scripts/build_references.py
 
 ## Build the web edition
 
-The static website lives in [`website/`](website/README.md). It renders nineteen
-reading chapters and their equations, includes twelve gallery figures, and uses
+The static website lives in [`website/`](website/README.md). It renders twenty-two
+reading chapters and their equations, includes fifteen gallery figures, and uses
 precomputed library results for the interactive Sod comparison. See the web
 README for local preview and content-refresh commands.
+
+Regenerate the new geometric and gravity exhibits before syncing the web content:
+
+```bash
+python scripts/build_hamiltonian.py
+python scripts/build_particle_gravity.py
+python scripts/build_gravity_boundaries.py
+python scripts/sync_web_content.py
+```

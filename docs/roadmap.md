@@ -60,3 +60,7 @@ The [experiment guide](experiments.md) records definitions and provenance.
 Added seven scalar ODE integrators with a temporal notebook; three mesh-connectivity examples with an explorer; 1D SPH kernel reconstruction; a 1D ALE geometric-conservation check; and cylindrical gradient, Newtonian stress, and stress-divergence operators verified against analytic fields. The [coordinate and viscosity chapter](coordinates-viscosity.md) distinguishes physical components from coordinate-basis tensors.
 
 [The 2D Double Mach Reflection baseline](double-mach.md) now computes an actual Mach-10 interaction with first-order HLL and SSPRK2. Higher-order reconstruction, full grid refinement, and resolution of the fine wall jet remain future work. This does not implement the other cataloged NASA cases. [Carbuncle comparisons](carbuncle.md), a complete SPH fluid solver, unstructured flow fluxes, and a complete ALE Euler solver also remain future work. [The Roe memorial](roe-memorial.md) is sourced from official university records.
+
+## Third expansion: Hamiltonian maps and particle gravity
+
+Added fixed-step canonical maps and a notebook for harmonic/quartic oscillators; periodic 3D CIC/FFT PM; an isolated softened octree with monopole/full second moments; isolated doubled-grid convolution; and sampled/continuum slab Green-transform options. Figures have dedicated source manifests. P³M corrections, a coupled TreePM solver, FMM translations, cosmological expansion, shear-periodic remapping, and a gravity-coupled SPH fluid integrator remain future work.

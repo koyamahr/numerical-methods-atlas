@@ -216,6 +216,25 @@
   note = {Publisher bibliographic record and abstract. This edition uses minmod MUSCL with SSPRK3, rather than reproducing the original Lagrangian/remap construction.}
 }
 
+@book{hockney1981book,
+  author = {Hockney, R. W. and Eastwood, J. W.},
+  title = {Computer Simulation Using Particles},
+  year = {1981},
+  publisher = {McGraw-Hill},
+  doi = {10.1201/9780367806934},
+  url = {https://doi.org/10.1201/9780367806934},
+  note = {Original book date is 1981, as cited by Barnes and Hut (1986); DOI identifies a later Taylor & Francis reissue. Reference for particle-mesh methods and isolated doubled-domain convolution; the self-cell kernel convention is stated separately in our code.}
+}
+
+@misc{hockney1981p3m,
+  author = {Hockney, R. W.},
+  title = {The P³M Code},
+  year = {1981},
+  institution = {CCP5 Information Quarterly, June 1981},
+  url = {https://www.ccp5.ac.uk/wp-content/uploads/2023/03/CCP5_Newsletter_1981_06_01.pdf},
+  note = {Original newsletter scan hosted by CCP5. Describes mesh forces plus short-range pair corrections. A full P3M solver is not implemented here.}
+}
+
 @article{roe1981,
   author = {Roe, Philip L.},
   title = {Approximate Riemann solvers, parameter vectors, and difference schemes},
@@ -252,6 +271,18 @@
   note = {DOI identifies the original 1984 paper; linked NASA tutorial is a later setup reference. This edition computes a first-order 2D HLL Double Mach Reflection baseline, not the original PPM figure. Forward-facing step remains future work.}
 }
 
+@article{barnes1986,
+  author = {Barnes, Josh and Hut, Piet},
+  title = {A hierarchical O(N log N) force-calculation algorithm},
+  year = {1986},
+  journal = {Nature},
+  volume = {324},
+  pages = {446--449},
+  doi = {10.1038/324446a0},
+  url = {https://www.nature.com/articles/324446a0},
+  note = {Original publisher record. The educational octree uses a geometric opening criterion and compares monopole/full second-moment forces with an identical softened direct sum.}
+}
+
 @article{eno1987,
   author = {Harten, Amiram and Engquist, Bjorn and Osher, Stanley and Chakravarthy, Sukumar R.},
   title = {Uniformly high order accurate essentially non-oscillatory schemes, III},
@@ -262,6 +293,18 @@
   doi = {10.1016/0021-9991(87)90031-3},
   url = {https://www.sciencedirect.com/science/article/pii/0021999187900313},
   note = {Original publication in 1987, distinct from the 1997 reprint. A standalone ENO implementation is planned; this edition implements WENO5-JS.}
+}
+
+@article{greengard1987,
+  author = {Greengard, L. and Rokhlin, V.},
+  title = {A fast algorithm for particle simulations},
+  year = {1987},
+  journal = {Journal of Computational Physics},
+  volume = {73},
+  pages = {325--348},
+  doi = {10.1016/0021-9991(87)90140-9},
+  url = {https://web.stanford.edu/class/cme324/classics/greengard-rokhlin.pdf},
+  note = {Original paper hosted by a university course. FMM reading reference; multipole-to-local translations and an FMM solver are not implemented here.}
 }
 
 @article{turkel1987,
@@ -334,6 +377,18 @@
   doi = {10.1016/0021-9991(89)90222-2},
   url = {https://academic.oup.com/mnras/article/512/1/1430/6530656},
   note = {The DOI identifies the original paper. Initial-condition parameters follow the later Quokka paper. Digitized comparisons with original figures have not been performed.}
+}
+
+@article{yoshida1990,
+  author = {Yoshida, Haruo},
+  title = {Construction of higher order symplectic integrators},
+  year = {1990},
+  journal = {Physics Letters A},
+  volume = {150},
+  pages = {262--268},
+  doi = {10.1016/0375-9601(90)90092-3},
+  url = {https://tlakoba.w3.uvm.edu/math6737/for_final_topics/SSM_1990_Yoshida.pdf},
+  note = {Original paper hosted by a university course. This edition implements the fourth-order triple composition of symmetric Verlet steps on two smooth 1-DOF Hamiltonians.}
 }
 
 @article{einfeldt1991,
@@ -472,6 +527,30 @@
   note = {Publisher bibliographic record and abstract. Background for conservation laws and shallow-water implementations.}
 }
 
+@article{hairer2003,
+  author = {Hairer, Ernst and Lubich, Christian and Wanner, Gerhard},
+  title = {Geometric numerical integration illustrated by the Störmer–Verlet method},
+  year = {2003},
+  journal = {Acta Numerica},
+  volume = {12},
+  pages = {399--450},
+  doi = {10.1017/S0962492902000144},
+  url = {https://jduarte.physics.ucsd.edu/phys141/_downloads/0b06fe9fe40aeb83699c2bc17b71a93d/stoermer-verlet.pdf},
+  note = {Original article hosted by a university course. Reference for symplecticity, reversibility, modified equations, and conditional long-time energy estimates; no general exact-energy claim is made.}
+}
+
+@article{springel2005,
+  author = {Springel, Volker},
+  title = {The cosmological simulation code GADGET-2},
+  year = {2005},
+  journal = {Monthly Notices of the Royal Astronomical Society},
+  volume = {364},
+  pages = {1105--1134},
+  doi = {10.1111/j.1365-2966.2005.09655.x},
+  url = {https://arxiv.org/abs/astro-ph/0505010},
+  note = {Author preprint and publisher record. Reference for TreePM force splitting; the separate PM and Tree laboratories do not implement the GADGET code or a complete TreePM pipeline.}
+}
+
 @article{abgrall2006,
   author = {Abgrall, Rémi},
   title = {Residual distribution schemes: Current status and future trends},
@@ -494,6 +573,18 @@
   doi = {10.1016/j.jcp.2007.11.003},
   url = {https://www.sciencedirect.com/science/article/abs/pii/S0021999107004822},
   note = {Publisher bibliographic record and abstract. The 2D rotated solver and carbuncle tests are future work.}
+}
+
+@article{koyama2009,
+  author = {Koyama, Hiroshi and Ostriker, Eve C.},
+  title = {Gas Properties and Implications for Galactic Star Formation in Numerical Models of the Turbulent, Multiphase Interstellar Medium},
+  year = {2009},
+  journal = {The Astrophysical Journal},
+  volume = {693},
+  pages = {1316--1345},
+  doi = {10.1088/0004-637X/693/2/1316},
+  url = {https://arxiv.org/abs/0812.1846},
+  note = {Published in 2009, with a December 2008 preprint. Section 2.3 and Appendix A give the Cartesian disk-potential FFT method. Our independent kernel laboratory distinguishes the sampled DFT from a continuous Fourier coefficient and does not reproduce the ISM simulations.}
 }
 
 @book{toro2009,

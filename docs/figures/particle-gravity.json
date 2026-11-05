@@ -1,0 +1,111 @@
+{
+  "source_sha256": {
+    "particle_gravity.py": "710fde37b69214cdd1adb97c86bea4eff45ad861e1d2c4e8194a5bd1ab4b540b"
+  },
+  "isolated_tree": {
+    "n": 192,
+    "seed": 17,
+    "softening": 0.03,
+    "gravity": 1.0,
+    "boundary": "isolated",
+    "reference": "direct Plummer-softened pair sum, identical particles and softening",
+    "measurements": [
+      {
+        "order": 0,
+        "theta": 0.25,
+        "relative_rms_force_error": 0.0005892934243577882,
+        "normalized_net_force": 7.788239236363751e-05,
+        "accepted_nodes": 4779,
+        "direct_pairs": 25653
+      },
+      {
+        "order": 0,
+        "theta": 0.4,
+        "relative_rms_force_error": 0.003203030001621657,
+        "normalized_net_force": 0.0006732796026457416,
+        "accepted_nodes": 7701,
+        "direct_pairs": 13012
+      },
+      {
+        "order": 0,
+        "theta": 0.6,
+        "relative_rms_force_error": 0.011269861724450197,
+        "normalized_net_force": 0.0006932669190110872,
+        "accepted_nodes": 7678,
+        "direct_pairs": 5609
+      },
+      {
+        "order": 0,
+        "theta": 0.8,
+        "relative_rms_force_error": 0.027862485800785357,
+        "normalized_net_force": 0.001702988129690642,
+        "accepted_nodes": 5183,
+        "direct_pairs": 2738
+      },
+      {
+        "order": 0,
+        "theta": 1.0,
+        "relative_rms_force_error": 0.04642830967934534,
+        "normalized_net_force": 0.0028583915861429905,
+        "accepted_nodes": 3987,
+        "direct_pairs": 1600
+      },
+      {
+        "order": 2,
+        "theta": 0.25,
+        "relative_rms_force_error": 2.9639985814575593e-05,
+        "normalized_net_force": 2.829190018219479e-06,
+        "accepted_nodes": 4779,
+        "direct_pairs": 25653
+      },
+      {
+        "order": 2,
+        "theta": 0.4,
+        "relative_rms_force_error": 0.00043143961721203017,
+        "normalized_net_force": 2.2058072933074735e-05,
+        "accepted_nodes": 7701,
+        "direct_pairs": 13012
+      },
+      {
+        "order": 2,
+        "theta": 0.6,
+        "relative_rms_force_error": 0.0028910490118654836,
+        "normalized_net_force": 0.0005580400709328113,
+        "accepted_nodes": 7678,
+        "direct_pairs": 5609
+      },
+      {
+        "order": 2,
+        "theta": 0.8,
+        "relative_rms_force_error": 0.011458370002321404,
+        "normalized_net_force": 0.0014164560691770605,
+        "accepted_nodes": 5183,
+        "direct_pairs": 2738
+      },
+      {
+        "order": 2,
+        "theta": 1.0,
+        "relative_rms_force_error": 0.026956321693122967,
+        "normalized_net_force": 0.002270572557301262,
+        "accepted_nodes": 3987,
+        "direct_pairs": 1600
+      }
+    ]
+  },
+  "periodic_pm": {
+    "n": 24,
+    "length": 1.0,
+    "gravity": 1.0,
+    "boundary": "3D periodic, mean density subtracted",
+    "total_deposited_mass": 1.0000000000000002,
+    "mass_weighted_net_force": [
+      -9.540979117872439e-18,
+      -1.3227266504323154e-17,
+      1.7401444868392346e-17
+    ],
+    "manufactured_potential_max_error": 3.469446951953614e-17,
+    "manufactured_density": "1+0.2*cos(2*pi*x)",
+    "scope": "Mesh Poisson accuracy only; not a periodic direct-sum force comparison"
+  },
+  "scope": "Static force/Poisson tests; no P3M, TreePM, FMM implementation or timing comparison."
+}

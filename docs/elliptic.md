@@ -113,3 +113,7 @@ interpolation, restriction, grid spacing, and boundary consistency. Variable
 coefficients, anisotropy, curved grids, AMG, and FAS are outside this edition.
 [Fedorenko (1961)](https://www.mathnet.ru/eng/zvmmf8014),
 [Brandt (1977)](https://doi.org/10.1090/S0025-5718-1977-0431719-X).
+
+## Particle and disk gravity
+
+The new [particle-gravity chapter](particle-gravity.md) connects PM, P³M, Tree, multipoles, and multigrid. [Gravity boundary kernels](gravity-boundaries.md) adds Hockney–Eastwood isolated convolution and Koyama–Ostriker slab Fourier kernels. The existing multigrid example retains its 2D zero-Dirichlet operator; it is not a 3D open-boundary gravity solver.

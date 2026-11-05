@@ -45,3 +45,7 @@ The routine uses periodic minimum-image distances on [0,1] and equal volume weig
 Density estimation or a continuity update, a consistent pressure force, momentum and energy evolution, boundary particles, time stepping, neighbor-search updates, and treatment of shocks or tensile/pairing instabilities are additional modeling decisions. Artificial viscosity used in shock-capturing SPH must be distinguished from the physical Newtonian [viscous stress tensor](coordinates-viscosity.md).
 
 Tests check the continuous kernel’s normalization and discrete constant reproduction after normalization. This edition implements **kernel reconstruction only**, not an SPH flow solver. See [time integration](time-integration.md) for why a particle kick–drift leapfrog and a two-step first-order ODE leapfrog should not be conflated.
+
+## Particle gravity is a separate operator
+
+PM, P³M, Tree, and multipole methods compute gravitational fields; SPH kernels reconstruct fluid quantities and their derivatives. Read [particle gravity](particle-gravity.md), [isolated and slab boundary kernels](gravity-boundaries.md), and [symplectic time integration](symplectic.md) to connect these different parts of a self-gravitating particle model.

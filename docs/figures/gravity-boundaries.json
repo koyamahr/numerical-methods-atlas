@@ -1,0 +1,23 @@
+{
+  "source_sha256": {
+    "gravity_boundaries.py": "3a71ceb894172ca70c021702b32fc1afbd2c5890ef4fadc49f16cd2fb6c7ee65"
+  },
+  "isolated_boundary_point_max_error": 9.71445146547012e-17,
+  "uniform_slab_gauge_aligned_max_error": 5.551115123125783e-16,
+  "sinusoidal_sheet_max_error": 2.220446049250313e-16,
+  "transform_nz": [
+    8,
+    16,
+    32,
+    64,
+    128
+  ],
+  "transform_difference_norm": [
+    0.034037865787471124,
+    0.008316555981213107,
+    0.0020677098737288792,
+    0.0005162224929921102,
+    0.00012901170655033048
+  ],
+  "scope": "Discrete convolution identities and manufactured sheets; not continuum mesh-convergence certification or a reproduction of the 2009 flow simulations."
+}

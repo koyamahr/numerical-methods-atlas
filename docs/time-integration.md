@@ -45,3 +45,7 @@ print(leapfrog_roots(0.1j))
 The browser selects from Python-computed trajectories with fixed final time 20, seven methods, seven step sizes, and three leapfrog starting perturbations. Axes expand for unstable samples. A matching time interval is not an equal-cost comparison: implicit solves and RK stages differ. Tests measure temporal refinement orders and check the leapfrog roots, alternating mode, and midpoint amplitude.
 
 Continue with [the spatial stability laboratory](experiments.md), [SPH](particles-sph.md), and [ALE](ale.md).
+
+## Canonical mechanical maps
+
+The [symplectic integration chapter](symplectic.md) now implements mechanical kick–drift–kick Verlet, a fourth-order Yoshida composition, symplectic Euler, and implicit midpoint on harmonic and quartic Hamiltonians. The [map notebook](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/hamiltonian) compares them with RK4, separating canonical structure from exact energy conservation.

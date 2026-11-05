@@ -96,3 +96,9 @@ foundations={'time':trajectories,'meshes':example_meshes(),'final_time':20,
 for name in ('double-mach-run.json','double-mach.npz'):
     shutil.copyfile(ROOT/'docs/figures'/name,assets/name)
 print(f'Exported {len(trajectories)} temporal trajectories, three meshes, and DMR provenance.')
+
+# Geometric integration and gravity exhibits have their own source manifests.
+for name in ('hamiltonian.json','particle-gravity.json','gravity-boundaries.json'):
+    shutil.copyfile(ROOT/'docs/figures'/name,assets/name)
+shutil.copyfile(ROOT/'docs/figures/hamiltonian.json',content/'hamiltonian.json')
+print('Synced Hamiltonian trajectories and particle/boundary-gravity manifests.')
