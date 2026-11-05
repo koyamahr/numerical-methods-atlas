@@ -46,6 +46,8 @@ Additional reading: [time integration and leapfrog](docs/time-integration.md), [
 
 Further reading: [symplectic Hamiltonian maps](docs/symplectic.md), [PM / P³M / Tree / multipoles](docs/particle-gravity.md), and [Hockney–Eastwood / Koyama–Ostriker gravity kernels](docs/gravity-boundaries.md).
 
+New exhibits: [nonsteady movies](docs/movies.md) and [original KEEP with smooth tests and caveats](docs/keep.md). Steady fields remain still figures.
+
 ## Interactive notebooks
 
 - [Stability laboratory](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/experiments): compute periodic FTCS, upwind, LF, and LW advection in the browser. Change the signed Courant number, initial profile, and step count; inspect amplification and export the experiment.
@@ -110,6 +112,7 @@ establish which method is more accurate.
 - **Finite volumes:** piecewise-constant Godunov-type updates and primitive-variable minmod MUSCL; Rusanov, HLL, HLLE, HLLC, and Roe fluxes.
 - **Discontinuous Galerkin:** periodic linear advection with modal Legendre P0/P1/P2, upwind fluxes, and SSPRK3.
 - **Spectral methods:** periodic Fourier advection and diffusion, exact integration of linear modes, and Fourier differentiation.
+- **Smooth KEEP:** original second-order arithmetic-mean Cartesian Euler flux with RK4, periodic isentropic-vortex refinement and explicit entropy/shock/PEP caveats.
 - **2D Euler:** first-order HLL + SSPRK2 Double Mach Reflection with time-dependent shock and reflecting-wall boundaries.
 - **Temporal and geometric models:** seven scalar ODE integrators, explicit mesh connectivity, 1D SPH reconstruction, and a moving-volume ALE identity check.
 - **Cylindrical tensors:** orthonormal velocity gradient, Newtonian stress with bulk viscosity, and symmetric stress divergence at r > 0.
@@ -145,8 +148,8 @@ python scripts/build_references.py
 
 ## Build the web edition
 
-The static website lives in [`website/`](website/README.md). It renders twenty-two
-reading chapters and their equations, includes fifteen gallery figures, and uses
+The static website lives in [`website/`](website/README.md). It renders twenty-four
+reading chapters and their equations, includes sixteen gallery figures and four computed movies, and uses
 precomputed library results for the interactive Sod comparison. See the web
 README for local preview and content-refresh commands.
 
@@ -156,5 +159,15 @@ Regenerate the new geometric and gravity exhibits before syncing the web content
 python scripts/build_hamiltonian.py
 python scripts/build_particle_gravity.py
 python scripts/build_gravity_boundaries.py
+python scripts/sync_web_content.py
+```
+
+Build and verify the nonsteady movies (optional MP4 encoder):
+
+```bash
+python -m pip install '.[movies]'
+python scripts/build_keep.py
+python scripts/build_movies.py
+python scripts/check_movies.py
 python scripts/sync_web_content.py
 ```

@@ -437,6 +437,30 @@ Fitzpatrick, Richard. **Fluid Equations in Cylindrical Coordinates**. University
 
 Author lecture notes, dated January 22, 2016. Reference for cylindrical fluid operators; the atlas declares its bulk-viscosity and orthonormal-component conventions separately.
 
+## 2018 · kuya2018
+
+Kuya, Yuichi and Totani, Kosuke and Kawai, Soshi. **Kinetic energy and entropy preserving schemes for compressible flows by split convective forms**. Journal of Computational Physics.
+
+[Original bibliographic record](https://doi.org/10.1016/j.jcp.2018.08.058) · [Full text or implementation reference](https://www.iccfd.org/iccfd11/assets/pdf/papers/ICCFD11_Paper-0401.pdf)
+
+DOI identifies the original 2018 paper. The authors’ 2022 conference explanation, Eq. (9), is the accessible implementation source for our second-order arithmetic-mean Cartesian baseline. Entropy is not claimed exact to roundoff; no shock stabilization is implemented.
+
+## 2021 · shima2021
+
+Shima, Nao and Kuya, Yuichi and Tamaki, Yoshiharu and Kawai, Soshi. **Preventing spurious pressure oscillations in split convective form discretization for compressible flows**. Journal of Computational Physics.
+
+[Original bibliographic record](https://doi.org/10.1016/j.jcp.2020.110060) · [Full text or implementation reference](https://kyushu-u.elsevierpure.com/en/publications/preventing-spurious-pressure-oscillations-in-split-convective-for/)
+
+Author-university publication record; published in 2021 despite 2020 in the DOI. Pressure-equilibrium-preserving variants are discussed but are not the original arithmetic-mean flux used here.
+
+## 2022 · kuya2022keep
+
+Kuya, Yuichi and Kawai, Soshi. **Stable and non-dissipative kinetic-energy and entropy preserving (KEEP) schemes for compressible flows**. Eleventh International Conference on Computational Fluid Dynamics.
+
+[Original bibliographic record](https://www.iccfd.org/iccfd11/assets/pdf/papers/ICCFD11_Paper-0401.pdf) · [Full text or implementation reference](https://www.iccfd.org/iccfd11/assets/pdf/papers/ICCFD11_Paper-0401.pdf)
+
+Official conference paper, inspected in full. Section 2.2 Eq. (9) specifies the implemented original Cartesian flux; Section 2.1 explicitly limits exact entropy-conservation claims. Other extensions in the paper are not implemented here.
+
 ## 2022 · quokka2022
 
 Wibking, Benjamin D. and Krumholz, Mark R.. **quokka: a code for two-moment AMR radiation hydrodynamics on GPUs**. Monthly Notices of the Royal Astronomical Society.
@@ -444,6 +468,22 @@ Wibking, Benjamin D. and Krumholz, Mark R.. **quokka: a code for two-moment AMR 
 [Original bibliographic record](https://doi.org/10.1093/mnras/stac439) · [Full text or implementation reference](https://academic.oup.com/mnras/article/512/1/1430/6530656)
 
 Section 3.1.5 of the public paper is the reference for the adopted Shu–Osher parameters. The Quokka code itself is not reproduced.
+
+## 2022 · tamaki2022
+
+Tamaki, Yoshiharu and Kuya, Yuichi and Kawai, Soshi. **Comprehensive analysis of entropy conservation property of non-dissipative schemes for compressible flows: KEEP scheme redefined**. Journal of Computational Physics.
+
+[Original bibliographic record](https://doi.org/10.1016/j.jcp.2022.111494) · [Full text or implementation reference](https://kyushu-u.elsevierpure.com/en/publications/comprehensive-analysis-of-entropy-conservation-property-of-non-di/)
+
+Author-university record and abstract. Analyzes entropy-error terms and redefined KEEP variants with adjustable expansion order; these variants are not implemented in the original-flux exhibit.
+
+## 2024 · asada2024
+
+Asada, Hiroyuki and Maruyama, Kanako and Kawai, Soshi. **Temporal discretization for improving kinetic-energy and entropy preservation properties in KEEP schemes**. Computers & Fluids.
+
+[Original bibliographic record](https://doi.org/10.1016/j.compfluid.2023.106143) · [Full text or implementation reference](https://www.sciencedirect.com/science/article/pii/S0045793023003687)
+
+Publisher record and abstract. Published in 2024 despite 2023 in the DOI. The auxiliary-variable temporal method is not implemented; the exhibit uses classical RK4 with a time-refinement diagnostic.
 
 ## 2026 · powell2026
 

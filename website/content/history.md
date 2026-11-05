@@ -105,3 +105,7 @@ The [Double Mach Reflection exhibit](double-mach.md) adds a computed two-dimensi
 ## Particle fields and canonical time maps
 
 [Hockney’s P³M account (1981)](https://www.ccp5.ac.uk/wp-content/uploads/2023/03/CCP5_Newsletter_1981_06_01.pdf), [Barnes–Hut (1986)](https://doi.org/10.1038/324446a0), and [Greengard–Rokhlin (1987)](https://doi.org/10.1016/0021-9991(87)90140-9) connect mesh, tree, and expansion-based field calculations. [Yoshida (1990)](https://doi.org/10.1016/0375-9601(90)90092-3) provides a route to high-order symplectic compositions. The new [gravity](particle-gravity.md) and [Hamiltonian-map](symplectic.md) chapters make their different roles explicit. [Koyama–Ostriker (2009)](https://doi.org/10.1088/0004-637X/693/2/1316) supplies the disk-potential FFT reference in the [boundary-kernel chapter](gravity-boundaries.md).
+
+## Smooth-flow structure and honest test selection
+
+[Kuya, Totani, and Kawai (2018)](https://doi.org/10.1016/j.jcp.2018.08.058) introduce the KEEP line of compressible-flow discretizations. The [KEEP chapter](keep.md) implements the original second-order Cartesian form and distinguishes later entropy, pressure-equilibrium, and temporal extensions. Its smooth-vortex refinement and [saved-state movie](movies.md) are separate from shock-capturing benchmarks; neither kinetic-energy consistency nor a visually smooth movie is a universal stability guarantee.

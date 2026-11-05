@@ -76,3 +76,7 @@ on selected cases, CT divergence preservation, and GLM injected-error cleaning.
 Reference-code comparisons, grid refinement, Brio–Wu, field-loop advection,
 and Alfvén waves remain future work. The low-resolution, first-order OT figures
 are introductory demonstrations of magnetic-constraint handling.
+
+## Time evolution
+
+The [motion gallery](movies.md) now includes separate 64² Orszag–Tang [CT](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/movies?case=orszag-tang-ct) and [GLM](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/movies?case=orszag-tang-glm) movies. Their actual adaptive-CFL snapshot times and native divergence diagnostics differ. Playback does not supply an equal-accuracy ranking.

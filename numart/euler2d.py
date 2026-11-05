@@ -5,6 +5,7 @@ RANS, or claim to reproduce the paper's fine-scale structures.
 """
 from dataclasses import dataclass
 import numpy as np
+from .snapshots import SnapshotRecorder
 
 GAMMA = 1.4
 
@@ -72,17 +73,21 @@ class Euler2DResult:
     q: np.ndarray
     time: float
     steps: int
+    snapshots: object = None
 
 
-def solve_double_mach(ny=64,final_time=.2,cfl=.4):
+def solve_double_mach(ny=64,final_time=.2,cfl=.4,snapshot_times=None):
     if not isinstance(ny,int) or ny<8 or final_time<0 or not np.isfinite(final_time) or not 0<cfl<=.45:
         raise ValueError('Require ny >= 8, time >= 0, 0 < CFL <= .45')
+    recorder=SnapshotRecorder(snapshot_times,final_time)
     nx=4*ny;dx=dy=1/ny
     x,y,q=double_mach_initial(nx,ny);time=0.;steps=0
+    recorder.capture(time,steps,q)
     while time<final_time:
         w=primitive(q);sound=np.sqrt(GAMMA*w[...,3]/w[...,0])
         dt=min(cfl/(np.max(abs(w[...,1])+sound)/dx+np.max(abs(w[...,2])+sound)/dy),final_time-time)
         first=q+dt*_rhs(q,time,x,dx,dy)
         q=.5*q+.5*(first+dt*_rhs(first,time+dt,x,dx,dy))
         primitive(q);time+=dt;steps+=1
-    return Euler2DResult(x,y,q,time,steps)
+        recorder.capture(time,steps,q)
+    return Euler2DResult(x,y,q,time,steps,recorder.frames)

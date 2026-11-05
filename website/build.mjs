@@ -7,7 +7,7 @@ import katex from 'katex';
 const root = path.dirname(fileURLToPath(import.meta.url));
 process.chdir(root);
 fs.mkdirSync('dist', { recursive: true });
-for (const f of ['index.html', 'style.css', 'app.js', 'experiments.js', 'foundations.js', 'hamiltonian.js', 'numerics.js', 'favicon.svg']) fs.copyFileSync(f, `dist/${f}`);
+for (const f of ['index.html', 'style.css', 'app.js', 'experiments.js', 'foundations.js', 'hamiltonian.js', 'movies.js', 'numerics.js', 'favicon.svg']) fs.copyFileSync(f, `dist/${f}`);
 fs.cpSync('public', 'dist', { recursive: true });
 fs.mkdirSync('dist/vendor', { recursive: true });
 fs.copyFileSync('node_modules/katex/dist/katex.min.css', 'dist/vendor/katex.min.css');

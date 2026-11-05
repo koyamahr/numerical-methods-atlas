@@ -81,3 +81,7 @@ averages and finite-difference point values are not strictly interchangeable.
 
 See [MHD](mhd.md) for Orszag–Tang definitions and limits, and
 [elliptic problems](elliptic.md) for diffusion and Poisson cases.
+
+## Matching the benchmark to the scheme
+
+The [original KEEP exhibit](keep.md) uses a smooth isentropic vortex and conservation diagnostics. Its bare central flux has no shock stabilization and is not presented as a Sod/DMR solver. The [movie guide](movies.md) separates those smooth computations from shock-capturing and MHD movies, and keeps steady fields as still images.

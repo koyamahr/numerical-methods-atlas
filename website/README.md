@@ -51,7 +51,7 @@ this workspace does not enable public Sites hosting.
 - `#/methods`: methods and implementation scope.
 - `#/experiments`: live periodic-advection and Fourier-amplification laboratory.
 - `#/convergence`: original gallery refinement data, observed orders, and unknown counts.
-- `#/gallery`: fifteen figures with category filtering and enlarged views.
+- `#/gallery`: sixteen figures and four movies with category filtering and enlarged views.
 - `#/references`: searchable bibliography and BibTeX download.
 - `#/read/<chapter>`: complete documentation with equations and section links.
 
@@ -60,8 +60,12 @@ A `?section=<heading-id>` suffix opens a specific section in a chapter.
 - `#/time-integration`: seven precomputed ODE integrators, startup perturbations, and leapfrog roots.
 - `#/meshes`: three mesh geometries with selectable cells and face-sharing neighbors.
 
-The twenty-two chapters now include SPH/ALE models, cylindrical viscous tensors, a computed Double Mach Reflection baseline, carbuncle reading notes, and a sourced Philip L. Roe memorial. `foundations.json` records temporal/mesh source hashes; the DMR run manifest and arrays are separate downloads.
+The twenty-four chapters now include SPH/ALE models, cylindrical viscous tensors, a computed Double Mach Reflection baseline, carbuncle reading notes, and a sourced Philip L. Roe memorial. `foundations.json` records temporal/mesh source hashes; the DMR run manifest and arrays are separate downloads.
 
 - `#/hamiltonian`: five canonical-map/accuracy comparisons, two Hamiltonians, energy histories, local Jacobian diagnostics, and one-step phase patches. Data loads on demand from `hamiltonian.json`.
 
 The gallery also includes PM/Tree force studies and isolated/slab Fourier-kernel checks, with separate downloadable source manifests.
+
+- `#/movies`: computed saved-state player, physical-time diagnostics, exact frame stepping, and MP4 export. Use `?case=double-mach`, `orszag-tang-ct`, `orszag-tang-glm`, or `keep-vortex`.
+
+Movies load on demand. Image preloading is bounded; playback timers and native video stop on route changes. No autoplay is used. Steady solutions remain still images. Regenerate with `python scripts/build_movies.py` after installing `.[movies]`; validate all MP4 decodes with `python scripts/check_movies.py`.

@@ -8,6 +8,7 @@ Dedner et al. (2002); see docs/mhd.md for normalization and limitations.
 """
 from dataclasses import dataclass
 import numpy as np
+from .snapshots import SnapshotRecorder
 
 
 @dataclass
@@ -19,6 +20,7 @@ class MHDResult:
     history: np.ndarray  # time, max(abs(divB)), mean(rho), mean(E)
     bx_face: object = None
     by_face: object = None
+    snapshots: object = None
 
 
 def primitive(q, gamma=5/3):
@@ -92,10 +94,11 @@ def discrete_divergence(q, bx_face=None, by_face=None):
                  +np.roll(q[...,5],-1,axis=1)-np.roll(q[...,5],1,axis=1))
 
 
-def solve_orszag_tang(n=64, final_time=.5, method="ct", cfl=.3, damping=.18, magnetic_error=0.):
+def solve_orszag_tang(n=64, final_time=.5, method="ct", cfl=.3, damping=.18, magnetic_error=0., snapshot_times=None):
     if (n < 8 or not 0 < cfl <= .4 or final_time < 0 or method not in ("ct","glm") or damping < 0
             or not np.all(np.isfinite([final_time,cfl,damping,magnetic_error]))):
         raise ValueError("Require n>=8, 0<CFL<=.4, t>=0, damping>=0, method ct/glm")
+    recorder=SnapshotRecorder(snapshot_times,final_time)
     q,bxf,byf = initial_orszag_tang(n)
     if magnetic_error:
         if method != "glm":
@@ -111,7 +114,8 @@ def solve_orszag_tang(n=64, final_time=.5, method="ct", cfl=.3, damping=.18, mag
         div = discrete_divergence(q,bxf,byf) if method == "ct" else discrete_divergence(q)
         history.append((t,float(abs(div).max()),float(q[...,0].mean()),float(q[...,3].mean())))
         return div
-    record()
+    div=record()
+    recorder.capture(t,steps,q,{"max_abs_divB":float(abs(div).max())})
     while t < final_time:
         fx,ax = _interfaces(q,0,ch,bxf if method == "ct" else None)
         fy,ay = _interfaces(q,1,ch,byf if method == "ct" else None)
@@ -133,5 +137,6 @@ def solve_orszag_tang(n=64, final_time=.5, method="ct", cfl=.3, damping=.18, mag
         t += dt
         steps += 1
         div = record()
+        recorder.capture(t,steps,q,{"max_abs_divB":float(abs(div).max())})
     div = record() if steps == 0 else div
-    return MHDResult(q,t,steps,div,np.asarray(history),bxf if method == "ct" else None,byf if method == "ct" else None)
+    return MHDResult(q,t,steps,div,np.asarray(history),bxf if method == "ct" else None,byf if method == "ct" else None,recorder.frames)

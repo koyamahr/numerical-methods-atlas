@@ -52,3 +52,7 @@ The image shows a computed incident/reflected shock pattern, with density and th
 Tests check equal-state flux consistency, a periodic uniform state, the incident-shock jump relation, moving-top and reflecting-wall data, and admissible states in a small-grid run. They do not establish convergence of the full reflection pattern. Further work should add higher-order reconstruction, refinement, and independent reference-code comparisons.
 
 For strong-shock instability diagnostics, continue to [the carbuncle phenomenon](carbuncle.md). This HLL image is not a demonstration that a Roe implementation is stable or unstable.
+
+## Watch the reflection evolve
+
+[The saved-state movie](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/movies?case=double-mach) shows density and pressure from the same 256 × 64 calculation. It includes actual physical times, solver steps, fixed scales, frame inspection, and MP4 export. Read [the sampling definitions](movies.md).

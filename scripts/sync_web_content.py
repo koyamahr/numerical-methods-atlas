@@ -102,3 +102,6 @@ for name in ('hamiltonian.json','particle-gravity.json','gravity-boundaries.json
     shutil.copyfile(ROOT/'docs/figures'/name,assets/name)
 shutil.copyfile(ROOT/'docs/figures/hamiltonian.json',content/'hamiltonian.json')
 print('Synced Hamiltonian trajectories and particle/boundary-gravity manifests.')
+
+shutil.copyfile(ROOT/'docs/figures/keep-vortex.json',assets/'keep-vortex.json')
+print('Synced smooth KEEP validation; movies are built directly into public assets.')

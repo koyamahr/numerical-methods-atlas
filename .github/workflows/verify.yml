@@ -37,3 +37,16 @@ jobs:
         working-directory: website
       - run: npm run build
         working-directory: website
+
+  movies:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install '.[movies]'
+      - run: python scripts/build_movies.py --quick --output "$RUNNER_TEMP/numart-movies"
+        env:
+          MPLCONFIGDIR: ${{ runner.temp }}/matplotlib
+      - run: python scripts/check_movies.py --input "$RUNNER_TEMP/numart-movies"
