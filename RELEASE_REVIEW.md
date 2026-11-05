@@ -10,16 +10,18 @@ the public website.
 
 Keep `https://koyamahr.github.io/the-art-of-numerical-algorithms/` as the
 canonical address and retain its sibling link to *The Art of Thermal
-Instability*. The English reading room remains the primary edition.
-The homepage leads with 125 journal/conference papers and distinguishes
-42 equation/model entries, 83 methods/building blocks, 145 total sources,
+Instability*. English remains the source edition. The local bilingual candidate adds Japanese/English switching, a 137-term glossary and four Japanese draft chapters; the other 38 chapters retain explicit English fallback. See `BILINGUAL_STATUS.md` for untranslated advanced notebooks and source annotations.
+The homepage leads with 126 journal/conference papers and distinguishes
+42 equation/model entries, 83 methods/building blocks, 146 total sources,
 and nine saved-profile gallery cases.
 
 `#/coverage` makes those counts inspectable and filterable by model/method,
 local example/reading-only, and text. Its linked inventory defines the counting
 units. It does not advertise every survey entry as an implemented solver.
 A duplicate Cockburn–Shu record was merged and Burgers 1948 was classified as
-a book chapter; the previous 146 catalog records become 145 unique works.
+a book chapter; the earlier 146 catalog records became 145 unique works. Adding Dahlquist
+(1963) for the A/L-stability and error-norm guide brings the candidate to 146
+unique works, including 126 journal/conference papers.
 
 ## Numerical and editorial scope
 

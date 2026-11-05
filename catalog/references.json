@@ -1695,5 +1695,17 @@
     "institution": "MITgcm documentation",
     "source": "https://mitgcm.readthedocs.io/en/latest/algorithm/c-grid.html",
     "note": "Official living documentation checked on 6 November 2026. Year denotes access, not invention. Face-normal three-dimensional placement reference; no assertion that the atlas uses the full MITgcm algorithm."
+  },
+  {
+    "id": "dahlquist1963",
+    "author": "Dahlquist, Germund G.",
+    "title": "A special stability problem for linear multistep methods",
+    "year": 1963,
+    "journal": "BIT",
+    "volume": "3",
+    "pages": "27--43",
+    "doi": "10.1007/BF01963532",
+    "source": "https://link.springer.com/article/10.1007/BF01963532",
+    "note": "Original publisher metadata and abstract checked. Foundational A-stability reference in the linear-multistep setting; full text not audited. The atlas distinguishes one-step stability functions, multistep root conditions, stiff damping and spatial error norms."
   }
 ]

@@ -52,3 +52,6 @@ Reproduce with `python scripts/build_equation_gallery.py`. The dedicated
 Mixed velocity–pressure elements, inf–sup conditions, curved meshes, general
 Neumann/Robin assembly and adaptive refinement remain future work. The current
 [projection example](incompressible.md) uses a staggered finite-difference grid.
+
+For definitions and comparisons of **A-stability, L-stability and L1/L2/L∞ error norms**,
+see the [shared accuracy and stability guide](accuracy-stability.md).

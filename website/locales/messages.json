@@ -1,0 +1,3270 @@
+{
+  "ui.skip-to-content.ac576a": {
+    "en": "Skip to content",
+    "ja": "本文へ移動"
+  },
+  "ui.the-atlas.ab3a16": {
+    "en": "The atlas",
+    "ja": "アトラス"
+  },
+  "ui.methods.869662": {
+    "en": "Methods",
+    "ja": "計算法"
+  },
+  "ui.experiments.716b52": {
+    "en": "Experiments",
+    "ja": "実験"
+  },
+  "ui.equations.3fab8f": {
+    "en": "Equations",
+    "ja": "方程式"
+  },
+  "ui.gallery.352cfc": {
+    "en": "Gallery",
+    "ja": "ギャラリー"
+  },
+  "ui.references.69824d": {
+    "en": "References",
+    "ja": "参考文献"
+  },
+  "ui.get-the-code.6e9ef2": {
+    "en": "Get the code",
+    "ja": "コードを入手"
+  },
+  "ui.menu.99af66": {
+    "en": "Menu",
+    "ja": "メニュー"
+  },
+  "ui.open-navigation.0ed77f": {
+    "en": "Open navigation",
+    "ja": "ナビゲーションを開く"
+  },
+  "ui.main-navigation.eb3559": {
+    "en": "Main navigation",
+    "ja": "メインナビゲーション"
+  },
+  "ui.the-art-of-numerical-algorithms-home.118982": {
+    "en": "The Art of Numerical Algorithms home",
+    "ja": "数値計算法アトラスのホーム"
+  },
+  "ui.the-art-of.ae837b": {
+    "en": "The Art of",
+    "ja": "数値計算法の"
+  },
+  "ui.numerical-algorithms.d4d820": {
+    "en": "Numerical Algorithms",
+    "ja": "アトラス"
+  },
+  "ui.the-art-of-numerical-algorithms.330128": {
+    "en": "The Art of Numerical Algorithms",
+    "ja": "数値計算法アトラス"
+  },
+  "ui.opening-the-atlas.9d720c": {
+    "en": "Opening the atlas…",
+    "ja": "アトラスを読み込み中…"
+  },
+  "ui.read-the-paper-understand-the-method-run-the-.f2d36d": {
+    "en": "Read the paper. Understand the method. Run the benchmark.",
+    "ja": "論文を読み、手法を理解し、テスト計算で確かめる。"
+  },
+  "ui.interactive-experiments.8fe905": {
+    "en": "Interactive experiments",
+    "ja": "インタラクティブ実験"
+  },
+  "ui.the-atlas-in-numbers.062951": {
+    "en": "The atlas in numbers",
+    "ja": "数字で見るアトラス"
+  },
+  "ui.roadmap.92375f": {
+    "en": "Roadmap",
+    "ja": "ロードマップ"
+  },
+  "ui.first-edition-v0-1-0.2b18ad": {
+    "en": "First edition · v0.1.0 ↗",
+    "ja": "初版・v0.1.0 ↗"
+  },
+  "ui.independent-educational-implementations-scope.858db4": {
+    "en": "Independent educational implementations. Scope and verification are documented for every exhibit.",
+    "ja": "独立した教育用実装です。各展示で実装範囲と検証方法を説明しています。"
+  },
+  "ui.close-figure.fe4645": {
+    "en": "Close figure",
+    "ja": "図を閉じる"
+  },
+  "ui.close.ad8c41": {
+    "en": "Close ×",
+    "ja": "閉じる ×"
+  },
+  "ui.the-ideas-behind.4f304c": {
+    "en": "The ideas behind",
+    "ja": "計算を支える"
+  },
+  "ui.the.dab142": {
+    "en": "the",
+    "ja": ""
+  },
+  "ui.computation.402be6": {
+    "en": "computation.",
+    "ja": "考え方。"
+  },
+  "ui.from-shock-waves-to-living-systems.107a00": {
+    "en": "From shock waves to living systems.",
+    "ja": "衝撃波から、生物のモデルまで。"
+  },
+  "ui.explore-the-atlas.796475": {
+    "en": "Explore the atlas",
+    "ja": "アトラスを開く"
+  },
+  "ui.what-s-inside-the-atlas.1c04dd": {
+    "en": "What’s inside the atlas",
+    "ja": "収録内容を見る"
+  },
+  "ui.python-reproducible-examples-public-source.09bb0b": {
+    "en": "Python · Reproducible examples · Public source",
+    "ja": "Python・再現可能な計算例・ソース公開"
+  },
+  "ui.a-classic-computed.317568": {
+    "en": "A CLASSIC, COMPUTED",
+    "ja": "古典的な問題を計算する"
+  },
+  "ui.one-problem.41bd3b": {
+    "en": "One problem.",
+    "ja": "ひとつの問題を、"
+  },
+  "ui.different-numerical-lenses.edc4f5": {
+    "en": "Different numerical lenses.",
+    "ja": "異なる手法で見る。"
+  },
+  "ui.exact-solution.818895": {
+    "en": "Exact solution",
+    "ja": "厳密解"
+  },
+  "ui.choose-riemann-flux.6f6c6e": {
+    "en": "Choose Riemann flux",
+    "ja": "リーマン流束を選択"
+  },
+  "ui.n-200-t-0-20-pointwise-density-comparison.532fcb": {
+    "en": "N = 200 · t = 0.20 · pointwise density comparison",
+    "ja": "N = 200・t = 0.20・点値による密度の比較"
+  },
+  "ui.see-the-setup-verification.f3fa81": {
+    "en": "See the setup & verification",
+    "ja": "設定と検証を見る"
+  },
+  "ui.how-to-use-the-atlas.51c0eb": {
+    "en": "How to use the atlas",
+    "ja": "アトラスの使い方"
+  },
+  "ui.read-the-paper.9053d3": {
+    "en": "Read the paper.",
+    "ja": "論文を読む。"
+  },
+  "ui.find-the-original-idea-and-the-sources-behind.f13648": {
+    "en": "Find the original idea and the sources behind it.",
+    "ja": "発想の原点と、それを支える出典にたどり着く。"
+  },
+  "ui.understand-the-method.ad5b9f": {
+    "en": "Understand the method.",
+    "ja": "手法を理解する。"
+  },
+  "ui.follow-the-equations-assumptions-and-limits.c7b856": {
+    "en": "Follow the equations, assumptions, and limits.",
+    "ja": "方程式、仮定、適用範囲を確かめる。"
+  },
+  "ui.run-the-benchmark.6074c1": {
+    "en": "Run the benchmark.",
+    "ja": "テスト問題を解く。"
+  },
+  "ui.inspect-the-result-and-the-evidence-that-chec.aa3788": {
+    "en": "Inspect the result and the evidence that checks it.",
+    "ja": "計算結果と、その正しさを確かめる根拠を見る。"
+  },
+  "ui.follow-the-ideas.295525": {
+    "en": "FOLLOW THE IDEAS",
+    "ja": "考え方をたどる"
+  },
+  "ui.a-century-of-better-questions.3f3e59": {
+    "en": "A century of better questions.",
+    "ja": "問いからたどる数値計算の歴史。"
+  },
+  "ui.open-the-historical-atlas.2e88d4": {
+    "en": "Open the historical atlas",
+    "ja": "歴史アトラスを開く"
+  },
+  "ui.can-the-stencil-reach-it.9550c8": {
+    "en": "Can the stencil reach it?",
+    "ja": "必要な情報に届くか？"
+  },
+  "ui.what-crosses-the-interface.e9984f": {
+    "en": "What crosses the interface?",
+    "ja": "界面を何が通過するか？"
+  },
+  "ui.which-scale-holds-the-error.b54e38": {
+    "en": "Which scale holds the error?",
+    "ja": "誤差はどのスケールにあるか？"
+  },
+  "ui.where-should-the-weights-go.35e95d": {
+    "en": "Where should the weights go?",
+    "ja": "重みをどこに配分するか？"
+  },
+  "ui.new-equation-gallery.4deef2": {
+    "en": "NEW / EQUATION GALLERY",
+    "ja": "方程式ギャラリー"
+  },
+  "ui.follow-a-wave-trace-its-equation.734163": {
+    "en": "Follow a wave. Trace its equation.",
+    "ja": "波を追い、方程式を知る。"
+  },
+  "ui.play-burgers-shocks-clearing-fans-upstream-tr.c1247b": {
+    "en": "Play Burgers shocks, clearing fans, upstream traffic jams, physical diffusion, Sod, shallow water and isothermal flow. Continue into lattice Boltzmann, Chapman–Enskog and hyperbolic diffusion.",
+    "ja": "Burgers衝撃波、膨張波、上流へ進む渋滞、拡散、Sod、浅水流、等温流を再生できます。格子Boltzmann法、Chapman–Enskog展開、双曲型拡散法へも進めます。"
+  },
+  "ui.open-the-equation-gallery.2cdabc": {
+    "en": "Open the equation gallery ▷",
+    "ja": "方程式ギャラリーを開く ▷"
+  },
+  "ui.new-interactive-notebooks.2ce794": {
+    "en": "NEW / INTERACTIVE NOTEBOOKS",
+    "ja": "操作して学ぶ実験ノート"
+  },
+  "ui.change-a-parameter.6fe90c": {
+    "en": "Change a parameter.",
+    "ja": "条件を変えて、"
+  },
+  "ui.ask-a-better-question.bfbafd": {
+    "en": "Ask a better question.",
+    "ja": "問いを深める。"
+  },
+  "ui.explore-stability-with-live-calculations-then.7d3bae": {
+    "en": "Explore stability with live calculations, then examine the measured orders behind a refinement plot.",
+    "ja": "その場で計算して安定性を調べ、格子細分化で実測した収束次数を確かめます。"
+  },
+  "ui.01-compute.39a022": {
+    "en": "01 / COMPUTE",
+    "ja": "01 / 計算する"
+  },
+  "ui.02-inspect.7db13a": {
+    "en": "02 / INSPECT",
+    "ja": "02 / 確かめる"
+  },
+  "ui.the-stability-laboratory.deef35": {
+    "en": "The stability laboratory",
+    "ja": "安定性実験室"
+  },
+  "ui.the-convergence-notebook.da747c": {
+    "en": "The convergence notebook",
+    "ja": "収束実験ノート"
+  },
+  "ui.cfl-direction-and-stencil.121de5": {
+    "en": "CFL, direction, and stencil.",
+    "ja": "CFL数、流れの向き、差分の組合せ。"
+  },
+  "ui.one-wave-four-methods.166269": {
+    "en": "One wave, four methods.",
+    "ja": "ひとつの波を4つの手法で。"
+  },
+  "ui.elements-unknowns-errors.caa99b": {
+    "en": "Elements, unknowns, errors,",
+    "ja": "要素数、未知数、誤差、"
+  },
+  "ui.and-observed-orders.e15ad2": {
+    "en": "and observed orders.",
+    "ja": "そして実測した次数。"
+  },
+  "ui.03-time-integration.073df1": {
+    "en": "03 / TIME INTEGRATION",
+    "ja": "03 / 時間積分"
+  },
+  "ui.04-mesh-explorer.a4160b": {
+    "en": "04 / MESH EXPLORER",
+    "ja": "04 / 格子を調べる"
+  },
+  "ui.follow-the-orbit.2fb40b": {
+    "en": "Follow the orbit.",
+    "ja": "軌道を追う。"
+  },
+  "ui.twelve-methods-two-leapfrog-roots.14c3ed": {
+    "en": "Twelve methods, two leapfrog roots,",
+    "ja": "12の手法、leapfrog法の2つの根、"
+  },
+  "ui.and-one-exact-oscillator.d359f5": {
+    "en": "and one exact oscillator.",
+    "ja": "そして厳密解のある振動子。"
+  },
+  "ui.inspect-the-neighbors.54cde3": {
+    "en": "Inspect the neighbors.",
+    "ja": "隣接関係を調べる。"
+  },
+  "ui.structured-grids-triangles.ea14bd": {
+    "en": "Structured grids, triangles,",
+    "ja": "構造格子、三角形、"
+  },
+  "ui.and-irregular-connectivity.225529": {
+    "en": "and irregular connectivity.",
+    "ja": "非規則な接続関係。"
+  },
+  "ui.new-hamiltonian-maps-particle-gravity.297511": {
+    "en": "NEW / HAMILTONIAN MAPS & PARTICLE GRAVITY",
+    "ja": "Hamilton写像と粒子重力"
+  },
+  "ui.preserve-the-geometry-choose-the-boundary.f3e19c": {
+    "en": "Preserve the geometry. Choose the boundary.",
+    "ja": "幾何構造を保ち、境界を選ぶ。"
+  },
+  "ui.inspect-canonical-maps-and-energy-histories-t.57a72e": {
+    "en": "Inspect canonical maps and energy histories, then follow particles through PM, Tree forces, multipole expansions, and isolated or slab Poisson kernels.",
+    "ja": "正準写像とエネルギーの時間変化を見て、PM法、ツリー法、多重極展開、孤立境界やスラブ境界のPoisson核を調べます。"
+  },
+  "ui.open-the-hamiltonian-notebook.5996f8": {
+    "en": "Open the Hamiltonian notebook ↗",
+    "ja": "Hamilton系のノートを開く ↗"
+  },
+  "ui.read-the-gravity-kernels.5a6a79": {
+    "en": "Read the gravity kernels ↗",
+    "ja": "重力核の解説へ ↗"
+  },
+  "ui.explore-by-method.527a5e": {
+    "en": "EXPLORE BY METHOD",
+    "ja": "計算法から探す"
+  },
+  "ui.from-a-stencil-to-a-solver.891d44": {
+    "en": "From a stencil to a solver.",
+    "ja": "差分からソルバーへ。"
+  },
+  "ui.all-methods.e601c1": {
+    "en": "All methods",
+    "ja": "すべての計算法"
+  },
+  "ui.the-computed-evidence.e8dc58": {
+    "en": "THE COMPUTED EVIDENCE",
+    "ja": "計算で確かめる"
+  },
+  "ui.see-the-method-at-work.7e3345": {
+    "en": "See the method at work.",
+    "ja": "手法の働きを見る。"
+  },
+  "ui.browse-the-gallery.36462e": {
+    "en": "Browse the gallery",
+    "ja": "ギャラリーを見る"
+  },
+  "ui.independent-educational-implementations-each-.a162c9": {
+    "en": "Independent educational implementations. Each exhibit states its reference solution, assumptions, and verification limits.",
+    "ja": "独立した教育用実装です。各展示で参照解、仮定、検証の範囲を明示しています。"
+  },
+  "ui.new-cubic-cip.f27c47": {
+    "en": "NEW / CUBIC CIP",
+    "ja": "3次CIP法"
+  },
+  "ui.carry-the-value-evolve-the-gradient.8fa1af": {
+    "en": "Carry the value. Evolve the gradient.",
+    "ja": "値を運び、勾配を発展させる。"
+  },
+  "ui.compare-cubic-hermite-cip-with-linear-interpo.74e44c": {
+    "en": "Compare cubic-Hermite CIP with linear interpolation, inspect smooth refinement and sharp-profile overshoots, and test a conservative-remapping claim.",
+    "ja": "3次Hermite補間によるCIPと線形補間を比較し、滑らかな解の収束、不連続近傍のオーバーシュート、保存性の反例を調べます。"
+  },
+  "ui.open-the-cip-notebook.fca462": {
+    "en": "Open the CIP notebook ↗",
+    "ja": "CIPノートを開く ↗"
+  },
+  "ui.new-runge-kutta-families.1f44b5": {
+    "en": "NEW / RUNGE–KUTTA FAMILIES",
+    "ja": "Runge–Kutta法の系譜"
+  },
+  "ui.more-stages-a-different-guarantee.5a2578": {
+    "en": "More stages. A different guarantee.",
+    "ja": "段数と、保証される性質。"
+  },
+  "ui.compare-rk2-variants-classical-rk4-and-ssprk-.1d42b4": {
+    "en": "Compare RK2 variants, classical RK4, and SSPRK(2,2), (3,3), (4,3), and (5,4). Inspect actual nonlinear stages, full coefficients, linear stability, and the forward-Euler inheritance condition.",
+    "ja": "RK2の各種公式、古典的RK4、SSPRK(2,2)、(3,3)、(4,3)、(5,4)を比較します。非線形段階値、係数、線形安定性、前進Euler法の性質を継承する条件を確認します。"
+  },
+  "ui.explore-the-rk-family.a10faf": {
+    "en": "Explore the RK family ↗",
+    "ja": "RK法の系譜を見る ↗"
+  },
+  "ui.new-limiters-advanced-reconstruction.744ec6": {
+    "en": "NEW / LIMITERS & ADVANCED RECONSTRUCTION",
+    "ja": "勾配制限と高次再構成"
+  },
+  "ui.choose-the-slope-preserve-the-mean.56df44": {
+    "en": "Choose the slope. Preserve the mean.",
+    "ja": "勾配を選び、平均値を保つ。"
+  },
+  "ui.compare-minmod-superbee-mc-van-leer-and-van-a.ef4da5": {
+    "en": "Compare minmod, Superbee, MC, van Leer, and van Albada. Inspect scalar TVD bounds, TVB extrema relaxation, and positive Euler-state scaling with explicit scope.",
+    "ja": "minmod、Superbee、MC、van Leer、van Albadaを比較します。スカラーTVD条件、TVBによる極値の緩和、Euler状態の正値性を保つスケーリングを、適用範囲とともに説明します。"
+  },
+  "ui.open-the-limiter-notebook.3ed022": {
+    "en": "Open the limiter notebook ↗",
+    "ja": "勾配制限ノートを開く ↗"
+  },
+  "ui.read-tvb-positivity.f5467d": {
+    "en": "Read TVB & positivity ↗",
+    "ja": "TVBと正値性の解説へ ↗"
+  },
+  "ui.new-time-dependent-computations.face08": {
+    "en": "NEW / TIME-DEPENDENT COMPUTATIONS",
+    "ja": "時間変化する計算結果"
+  },
+  "ui.some-results-need-time.7f1a12": {
+    "en": "Some results need time.",
+    "ja": "時間の流れで見る結果。"
+  },
+  "ui.play-double-mach-reflection-orszag-tang-ct-gl.09423c": {
+    "en": "Play Double Mach Reflection, Orszag–Tang CT/GLM, and a smooth KEEP vortex. Inspect the actual solver time, step count, and fixed color scales.",
+    "ja": "二重Mach反射、Orszag–Tang渦のCT／GLM計算、滑らかなKEEP渦を再生します。実際の物理時刻、ステップ数、固定した色範囲を確認できます。"
+  },
+  "ui.open-the-motion-gallery.0d05ad": {
+    "en": "Open the motion gallery ▷",
+    "ja": "動画ギャラリーを開く ▷"
+  },
+  "ui.keep-the-paper-close.edba9a": {
+    "en": "KEEP THE PAPER CLOSE",
+    "ja": "原論文を手元に"
+  },
+  "ui.every-method-has-a-history.4c0c6b": {
+    "en": "Every method has a history.",
+    "ja": "手法には歴史があり、"
+  },
+  "ui.every-result-needs-a-reference.dbbe43": {
+    "en": "Every result needs a reference.",
+    "ja": "結果には検証の基準がある。"
+  },
+  "ui.source-notes-distinguish-original-texts-later.18b9be": {
+    "en": "Source notes distinguish original texts, later expositions, and open questions.",
+    "ja": "出典注記で、原論文、後の解説、未確認の事項を区別します。"
+  },
+  "ui.explore-the-references.fc75db": {
+    "en": "Explore the references",
+    "ja": "参考文献を探す"
+  },
+  "ui.in-memoriam-philip-l-roe.df01cc": {
+    "en": "IN MEMORIAM · PHILIP L. ROE",
+    "ja": "Philip L. Roeを偲んで"
+  },
+  "ui.a-legacy-carried-by-the-waves.b28d48": {
+    "en": "A legacy carried by the waves.",
+    "ja": "波に受け継がれる業績。"
+  },
+  "ui.remembering-his-contribution-to-computational.992f78": {
+    "en": "Remembering his contribution to computational fluid dynamics through the original ideas, their equations, and the questions they continue to open.",
+    "ja": "発想の原点と方程式、そこから生まれ続ける問いを通して、数値流体力学への貢献を振り返ります。"
+  },
+  "ui.read-the-tribute.c1ced1": {
+    "en": "Read the tribute ↗",
+    "ja": "追悼文を読む ↗"
+  },
+  "ui.your-next-experiment.abeef1": {
+    "en": "YOUR NEXT EXPERIMENT",
+    "ja": "次の計算へ"
+  },
+  "ui.start-with-sod.50e3ab": {
+    "en": "Start with Sod.",
+    "ja": "Sod問題から始める。"
+  },
+  "ui.the-same-definitions-and-solvers-used-in-this.2a928d": {
+    "en": "The same definitions and solvers used in this atlas are available in the Python library.",
+    "ja": "このアトラスで用いた問題定義とソルバーを、Pythonライブラリで利用できます。"
+  },
+  "ui.installation-source.32367c": {
+    "en": "Installation & source",
+    "ja": "インストールとソース"
+  },
+  "ui.terminal-after-installation.9c3bee": {
+    "en": "TERMINAL · AFTER INSTALLATION",
+    "ja": "ターミナル・インストール後"
+  },
+  "ui.copy.e21f93": {
+    "en": "Copy",
+    "ja": "コピー"
+  },
+  "ui.copied.8d525e": {
+    "en": "Copied",
+    "ja": "コピーしました"
+  },
+  "ui.select-the-command-below.447b78": {
+    "en": "Select the command below",
+    "ja": "下のコマンドを選択してください"
+  },
+  "ui.copy-code-example.223723": {
+    "en": "Copy code example",
+    "ja": "コード例をコピー"
+  },
+  "ui.select-code-to-copy.8e6f78": {
+    "en": "Select code to copy",
+    "ja": "コードを選択してコピー"
+  },
+  "ui.numerical-arrays-a-run-manifest-saved-togethe.c73e94": {
+    "en": "Numerical arrays + a run manifest, saved together.",
+    "ja": "数値配列と計算条件の記録を一緒に保存します。"
+  },
+  "ui.the-historical-atlas.939283": {
+    "en": "THE HISTORICAL ATLAS",
+    "ja": "歴史アトラス"
+  },
+  "ui.follow-the-ideas.258ad5": {
+    "en": "Follow the ideas",
+    "ja": "考え方を"
+  },
+  "ui.through.9c6725": {
+    "en": "through",
+    "ja": "歴史から"
+  },
+  "ui.time.707956": {
+    "en": "time.",
+    "ja": "たどる。"
+  },
+  "ui.read-by-original-publication-year-trace-the-q.f2e6ad": {
+    "en": "Read by original publication year. Trace the questions that connect a classical stencil to a modern solver.",
+    "ja": "原著の出版年を軸に読みます。古典的な差分から現代のソルバーへ、問いのつながりをたどります。"
+  },
+  "ui.read-the-complete-historical-notes.9212c9": {
+    "en": "Read the complete historical notes",
+    "ja": "歴史の解説を読む"
+  },
+  "ui.explore-the-method.438107": {
+    "en": "Explore the method →",
+    "ja": "計算法を調べる →"
+  },
+  "ui.read-the-source.2ef60e": {
+    "en": "Read the source ↗",
+    "ja": "原典を読む ↗"
+  },
+  "ui.a-reading-path-not-a-priority-claim.dbc131": {
+    "en": "A reading path, not a priority claim.",
+    "ja": "歴史を読むための道案内。"
+  },
+  "ui.publication-dates-distinguish-originals-from-.e69158": {
+    "en": "Publication dates distinguish originals from translations and reprints. The reference notes record source status, and the atlas does not assign every invention to a single paper.",
+    "ja": "原著と翻訳・再版の年を区別しています。出典の確認状況を注記し、発明の優先権を単一の論文に帰してはいません。"
+  },
+  "ui.continue-toward-nasa-verification-validation-.925523": {
+    "en": "Continue toward NASA verification & validation cases",
+    "ja": "NASAの検証・妥当性確認問題へ"
+  },
+  "ui.understand-the.0f50cd": {
+    "en": "Understand the",
+    "ja": "理解する、"
+  },
+  "ui.discretization.c9b1bc": {
+    "en": "discretization.",
+    "ja": "離散化。"
+  },
+  "ui.inspect-the-counted-inventory.f707c2": {
+    "en": "Inspect the counted inventory →",
+    "ja": "集計対象を見る →"
+  },
+  "ui.start-with-the-equations-follow-the-numerical.e92f7b": {
+    "en": "Start with the equations, follow the numerical choices, and check the evidence.",
+    "ja": "方程式から始め、数値的な選択をたどり、検証結果を確かめます。"
+  },
+  "ui.implementation-and-ambition-clearly-separated.4c691a": {
+    "en": "Implementation and ambition, clearly separated.",
+    "ja": "実装範囲と今後の展開。"
+  },
+  "ui.the-first-edition-includes-selected-education.e052ef": {
+    "en": "The first edition includes selected educational models. Multidimensional Euler rotated-hybrid fluxes, low-Mach PDE preconditioning, Euler/MHD DG, and the cataloged NASA airfoil, viscous, and turbulence cases remain future work.",
+    "ja": "初版は選定した教育用モデルを含みます。多次元Eulerの回転ハイブリッド流束、低Mach数のPDE前処理、Euler／MHDのDG法、NASAの翼型・粘性・乱流問題の計算は今後の課題です。"
+  },
+  "ui.read-the-implementation-roadmap.ed4dc1": {
+    "en": "Read the implementation roadmap",
+    "ja": "実装ロードマップを読む"
+  },
+  "ui.the-numerical-gallery.af71f7": {
+    "en": "THE NUMERICAL GALLERY",
+    "ja": "計算ギャラリー"
+  },
+  "ui.look-closely.73dcf2": {
+    "en": "Look closely",
+    "ja": "計算結果を"
+  },
+  "ui.at-the.2c72d2": {
+    "en": "at the",
+    "ja": "詳しく"
+  },
+  "ui.result.e36ee2": {
+    "en": "result.",
+    "ja": "見る。"
+  },
+  "ui.computed-figures-from-the-first-edition-stead.91c223": {
+    "en": "Computed figures from the first edition. Steady fields stay as still images; unsteady tests also have saved-state movies.",
+    "ja": "初版の計算結果です。定常場は静止図で示し、非定常問題には保存状態から作った動画もあります。"
+  },
+  "ui.watch-the-motion-gallery.76125a": {
+    "en": "Watch the motion gallery ▷",
+    "ja": "動画ギャラリーを見る ▷"
+  },
+  "ui.explore-equations.c5eefc": {
+    "en": "Explore equations →",
+    "ja": "方程式を探す →"
+  },
+  "ui.filter-gallery.022b89": {
+    "en": "Filter gallery",
+    "ja": "ギャラリーを絞り込む"
+  },
+  "ui.all-figures.9472ca": {
+    "en": "All figures",
+    "ja": "すべての図"
+  },
+  "ui.particles-gravity.39f6e6": {
+    "en": "Particles & gravity",
+    "ja": "粒子と重力"
+  },
+  "ui.2d-shock-interactions.36238f": {
+    "en": "2D shock interactions",
+    "ja": "2次元衝撃波干渉"
+  },
+  "ui.conservation-laws.7b23ab": {
+    "en": "Conservation laws",
+    "ja": "保存則"
+  },
+  "ui.advection-stability.75dd68": {
+    "en": "Advection & stability",
+    "ja": "移流と安定性"
+  },
+  "ui.elliptic-iterative.31a235": {
+    "en": "Elliptic & iterative",
+    "ja": "楕円型と反復法"
+  },
+  "ui.these-comparisons-are-educational-examples-no.9ee18d": {
+    "en": "These comparisons are educational examples, not reproductions of original-paper figures. Read the method notes before comparing accuracy, cost, or magnetic-divergence measures.",
+    "ja": "教育用の比較例です。原論文の図を再現したものではありません。精度、計算量、磁場の発散を比較する前に、各手法の定義を確認してください。"
+  },
+  "ui.download-the-original-eleven-figure-validatio.82b670": {
+    "en": "Download the original eleven-figure validation manifest",
+    "ja": "初期11図の検証記録をダウンロード"
+  },
+  "ui.download-the-double-mach-reflection-run-manif.ea689b": {
+    "en": "Download the Double Mach Reflection run manifest",
+    "ja": "二重Mach反射の計算記録をダウンロード"
+  },
+  "ui.read-the-method.70c2b2": {
+    "en": "Read the method",
+    "ja": "計算法を読む"
+  },
+  "ui.read-the-method.cb76ad": {
+    "en": "Read the method ↗",
+    "ja": "計算法を読む ↗"
+  },
+  "ui.watch-time-evolution.317bb2": {
+    "en": "Watch time evolution ▷",
+    "ja": "時間発展を見る ▷"
+  },
+  "ui.density.2e4f6f": {
+    "en": "DENSITY ρ",
+    "ja": "密度 ρ"
+  },
+  "ui.position-x.d73f49": {
+    "en": "POSITION x",
+    "ja": "位置 x"
+  },
+  "ui.the-reference-library.ee4ca9": {
+    "en": "THE REFERENCE LIBRARY",
+    "ja": "参考文献ライブラリ"
+  },
+  "ui.return-to.e96d0b": {
+    "en": "Return to",
+    "ja": "原典に"
+  },
+  "ui.source.68730f": {
+    "en": "source.",
+    "ja": "戻る。"
+  },
+  "ui.search-the-library.99b9ae": {
+    "en": "Search the library",
+    "ja": "文献を検索"
+  },
+  "ui.author-method-year.d580dd": {
+    "en": "Author, method, year…",
+    "ja": "著者、手法、出版年…"
+  },
+  "ui.download-bibtex.a3cef4": {
+    "en": "Download BibTeX ↓",
+    "ja": "BibTeXをダウンロード ↓"
+  },
+  "ui.a-doi-identifies-a-publication-it-does-not-im.76bbaf": {
+    "en": "A DOI identifies a publication. It does not imply that its full text has been inspected or its figures reproduced.",
+    "ja": "DOIは出版物を識別します。本文の確認や図の再現を済ませたことを意味するものではありません。"
+  },
+  "ui.read-the-complete-catalog.f6f5da": {
+    "en": "Read the complete catalog →",
+    "ja": "文献一覧を読む →"
+  },
+  "ui.original-record.7e1c1d": {
+    "en": "Original record ↗",
+    "ja": "原著の書誌情報 ↗"
+  },
+  "ui.text-implementation-source.96c3d4": {
+    "en": "Text / implementation source ↗",
+    "ja": "本文・実装の参照先 ↗"
+  },
+  "ui.no-references-found.dfb14e": {
+    "en": "No references found.",
+    "ja": "該当する文献がありません。"
+  },
+  "ui.try-an-author-a-method-such-as-weno-or-a-publ.2e54b2": {
+    "en": "Try an author, a method such as WENO, or a publication year.",
+    "ja": "著者名、WENOなどの手法名、出版年で検索してください。"
+  },
+  "ui.explore-the-methods.07a0e3": {
+    "en": "← Explore the methods",
+    "ja": "← 計算法から探す"
+  },
+  "ui.in-this-edition.76cb45": {
+    "en": "IN THIS EDITION",
+    "ja": "この版の解説"
+  },
+  "ui.reading-chapters.ab41f8": {
+    "en": "Reading chapters",
+    "ja": "解説章"
+  },
+  "ui.first-edition-v0-1-0.2beaaa": {
+    "en": "FIRST EDITION · v0.1.0",
+    "ja": "初版・v0.1.0"
+  },
+  "ui.the-reading-room.335501": {
+    "en": "THE READING ROOM",
+    "ja": "解説を読む"
+  },
+  "ui.view-source.dda224": {
+    "en": "View source ↗",
+    "ja": "原稿を見る ↗"
+  },
+  "ui.continue-exploring.ba12ec": {
+    "en": "Continue exploring",
+    "ja": "続けて調べる"
+  },
+  "ui.historical-atlas.783da7": {
+    "en": "Historical atlas →",
+    "ja": "歴史アトラス →"
+  },
+  "ui.computed-gallery.d98bbd": {
+    "en": "Computed gallery →",
+    "ja": "計算ギャラリー →"
+  },
+  "ui.on-this-page.073c74": {
+    "en": "ON THIS PAGE",
+    "ja": "このページの内容"
+  },
+  "ui.on-this-page.b5658f": {
+    "en": "On this page",
+    "ja": "このページの内容"
+  },
+  "ui.link-to-this-section.9dc5ba": {
+    "en": "Link to this section",
+    "ja": "この節へのリンク"
+  },
+  "ui.page-not-found.80445c": {
+    "en": "PAGE NOT FOUND",
+    "ja": "ページが見つかりません"
+  },
+  "ui.back-to.cd9182": {
+    "en": "Back to",
+    "ja": "アトラスへ"
+  },
+  "ui.atlas.77d8a0": {
+    "en": "atlas.",
+    "ja": "戻る。"
+  },
+  "ui.this-chapter-could-not-be-found.45e98a": {
+    "en": "This chapter could not be found.",
+    "ja": "指定された章が見つかりません。"
+  },
+  "ui.return-home.664cf5": {
+    "en": "Return home →",
+    "ja": "ホームへ戻る →"
+  },
+  "ui.the-atlas-could-not-load.b5780c": {
+    "en": "The atlas could not load.",
+    "ja": "アトラスを読み込めませんでした。"
+  },
+  "ui.please-reload-the-page-or-read-the-complete-e.f8c458": {
+    "en": "Please reload the page, or read the complete edition on GitHub.",
+    "ja": "再読み込みするか、GitHubで原稿をご覧ください。"
+  },
+  "ui.open-the-source-edition.b2cb7f": {
+    "en": "Open the source edition ↗",
+    "ja": "GitHubの原稿を開く ↗"
+  },
+  "ui.reading-room.37146d": {
+    "en": "Reading room",
+    "ja": "解説"
+  },
+  "ui.historical-atlas.a36c4b": {
+    "en": "Historical atlas",
+    "ja": "歴史アトラス"
+  },
+  "ui.explore-the-methods.8d73bf": {
+    "en": "Explore the methods",
+    "ja": "計算法から探す"
+  },
+  "ui.numerical-gallery.5946cf": {
+    "en": "Numerical gallery",
+    "ja": "計算ギャラリー"
+  },
+  "ui.motion-gallery.cb4d0a": {
+    "en": "Motion gallery",
+    "ja": "動画ギャラリー"
+  },
+  "ui.reference-library.6144a7": {
+    "en": "Reference library",
+    "ja": "参考文献ライブラリ"
+  },
+  "ui.stability-laboratory.c30bb0": {
+    "en": "Stability laboratory",
+    "ja": "安定性実験室"
+  },
+  "ui.convergence-notebook.ffad6b": {
+    "en": "Convergence notebook",
+    "ja": "収束実験ノート"
+  },
+  "ui.time-integration-notebook.d462a0": {
+    "en": "Time integration notebook",
+    "ja": "時間積分ノート"
+  },
+  "ui.mesh-explorer.cab67c": {
+    "en": "Mesh explorer",
+    "ja": "格子を調べる"
+  },
+  "ui.hamiltonian-map-notebook.251939": {
+    "en": "Hamiltonian map notebook",
+    "ja": "Hamilton写像ノート"
+  },
+  "ui.slope-limiter-notebook.de6fe5": {
+    "en": "Slope limiter notebook",
+    "ja": "勾配制限ノート"
+  },
+  "ui.runge-kutta-family-notebook.6757be": {
+    "en": "Runge–Kutta family notebook",
+    "ja": "Runge–Kutta法ノート"
+  },
+  "ui.cip-profile-notebook.cdc9db": {
+    "en": "CIP profile notebook",
+    "ja": "CIPノート"
+  },
+  "ui.equation-gallery.3fa80c": {
+    "en": "Equation gallery",
+    "ja": "方程式ギャラリー"
+  },
+  "ui.page-not-found.a469ab": {
+    "en": "Page not found",
+    "ja": "ページが見つかりません"
+  },
+  "ui.a-l-stability-error-norms.9e1533": {
+    "en": "A/L stability & error norms",
+    "ja": "A／L安定性と誤差ノルム"
+  },
+  "ui.coverage-counting-rules.819d13": {
+    "en": "Coverage & counting rules",
+    "ja": "収録範囲と集計規則"
+  },
+  "ui.interactive-experiment-guide.2cc49d": {
+    "en": "Interactive experiment guide",
+    "ja": "実験ガイド"
+  },
+  "ui.movie-definitions-provenance.b26208": {
+    "en": "Movie definitions & provenance",
+    "ja": "動画の定義と計算記録"
+  },
+  "ui.remembering-philip-l-roe.90e640": {
+    "en": "Remembering Philip L. Roe",
+    "ja": "Philip L. Roeを偲んで"
+  },
+  "ui.nasa-case-catalog.1f37ae": {
+    "en": "NASA case catalog",
+    "ja": "NASAテスト問題集"
+  },
+  "ui.reference-catalog.a92b3e": {
+    "en": "Reference catalog",
+    "ja": "参考文献一覧"
+  },
+  "ui.implementation-roadmap.32bf0a": {
+    "en": "Implementation roadmap",
+    "ja": "実装ロードマップ"
+  },
+  "ui.first-edition-notes.88d598": {
+    "en": "First-edition notes",
+    "ja": "初版の注記"
+  },
+  "ui.journal-conference-papers.104ddb": {
+    "en": "Journal & conference papers",
+    "ja": "学術誌・会議論文"
+  },
+  "ui.equation-model-entries.520a2a": {
+    "en": "Equation & model entries",
+    "ja": "方程式・モデル"
+  },
+  "ui.methods-building-blocks.608614": {
+    "en": "Methods & building blocks",
+    "ja": "計算法・構成要素"
+  },
+  "ui.equation-gallery-cases.ec9a62": {
+    "en": "Equation-gallery cases",
+    "ja": "方程式ギャラリーのケース"
+  },
+  "ui.see-what-is-counted.f7e498": {
+    "en": "See what is counted →",
+    "ja": "集計内容を見る →"
+  },
+  "ui.read-the-counting-rules.f78adf": {
+    "en": "Read the counting rules ↗",
+    "ja": "集計規則を読む ↗"
+  },
+  "ui.download-the-inventory.51a456": {
+    "en": "Download the inventory ↓",
+    "ja": "収録一覧をダウンロード ↓"
+  },
+  "ui.browse-the-inventory.9675aa": {
+    "en": "Browse the inventory",
+    "ja": "収録一覧を探す"
+  },
+  "ui.all-models-and-methods.d60f8e": {
+    "en": "All models and methods",
+    "ja": "すべてのモデルと計算法"
+  },
+  "ui.equations-models.e8258f": {
+    "en": "Equations & models",
+    "ja": "方程式とモデル"
+  },
+  "ui.scope.b073f6": {
+    "en": "Scope",
+    "ja": "実装範囲"
+  },
+  "ui.all-scopes.93c843": {
+    "en": "All scopes",
+    "ja": "すべての範囲"
+  },
+  "ui.with-local-examples.67d61c": {
+    "en": "With local examples",
+    "ja": "計算例あり"
+  },
+  "ui.reading-only.8804b0": {
+    "en": "Reading only",
+    "ja": "解説のみ"
+  },
+  "ui.local-example.eca11e": {
+    "en": "Local example",
+    "ja": "計算例あり"
+  },
+  "ui.find-an-entry.967ce8": {
+    "en": "Find an entry",
+    "ja": "項目を検索"
+  },
+  "ui.burgers-gmres-turing.41da6b": {
+    "en": "Burgers, GMRES, Turing…",
+    "ja": "Burgers、GMRES、Turing、拡散…"
+  },
+  "ui.the-counting-unit.ac2d4e": {
+    "en": "THE COUNTING UNIT",
+    "ja": "何を1項目と数えるか"
+  },
+  "ui.equations-and-models.b47a98": {
+    "en": "Equations and models",
+    "ja": "方程式とモデル"
+  },
+  "ui.methods-and-building-blocks.82ee36": {
+    "en": "Methods and building blocks",
+    "ja": "計算法と構成要素"
+  },
+  "ui.keep-the-sources-visible.13f17a": {
+    "en": "KEEP THE SOURCES VISIBLE",
+    "ja": "出典を明らかに"
+  },
+  "ui.journal-articles.8f0423": {
+    "en": "Journal articles",
+    "ja": "学術誌論文"
+  },
+  "ui.conference-papers.f4a08d": {
+    "en": "Conference papers",
+    "ja": "会議論文"
+  },
+  "ui.books.9da7f7": {
+    "en": "Books",
+    "ja": "書籍"
+  },
+  "ui.book-chapters.b01087": {
+    "en": "Book chapters",
+    "ja": "書籍の章"
+  },
+  "ui.technical-teaching-reports.0fb7da": {
+    "en": "Technical / teaching reports",
+    "ja": "技術報告・講義資料"
+  },
+  "ui.other-sources-documentation-preprint.d5baf5": {
+    "en": "Other sources / documentation / preprint",
+    "ja": "その他の出典・文書・プレプリント"
+  },
+  "ui.open-the-searchable-reference-library.99407d": {
+    "en": "Open the searchable reference library ↗",
+    "ja": "検索できる文献ライブラリへ ↗"
+  },
+  "ui.no-entries-match-try-a-different-term-or-scop.19fe9e": {
+    "en": "No entries match. Try a different term or scope.",
+    "ja": "該当項目がありません。検索語や実装範囲を変えてください。"
+  },
+  "ui.a-named-inventory-across-fluids-fields-kineti.c272a8": {
+    "en": "A named inventory across fluids, fields, kinetic models and biology. Open the model or method behind each number, and see which entries have a local example.",
+    "ja": "流体、場、運動論、生物のモデルを名前で整理した一覧です。各数字の内訳を開き、計算例の有無を確認できます。"
+  },
+  "ui.local-example-can-mean-a-reduced-model-static.c868b6": {
+    "en": "“Local example” can mean a reduced model, static force calculation, reconstruction operator or linear Fourier symbol. Each linked chapter states its verified scope. It does not imply a complete production solver.",
+    "ja": "「計算例あり」には簡略モデル、静的な力の計算、再構成演算子、線形Fourier記号の例も含みます。各章に検証範囲を記し、実用ソルバー全体の完成を意味しません。"
+  },
+  "ui.full-text-inspection-status-remains-in-each-s.748f72": {
+    "en": "Full-text inspection status remains in each source note. Catalog entries are counted once per publication identity; a separately published translation is a separate work.",
+    "ja": "本文の確認状況は各出典注記に残します。同じ出版物は1回だけ数え、別途出版された翻訳は別の資料として扱います。"
+  },
+  "ui.count-papers-total-sources-one-atlas.f42c1c": {
+    "en": "{count} PAPERS · {total} SOURCES · ONE ATLAS",
+    "ja": "{count}論文・{total}参考資料・ひとつのアトラス"
+  },
+  "ui.count-equation-model-entries-total-numerical-.ed6f1b": {
+    "en": "{count} equation & model entries. {total} numerical methods and building blocks.",
+    "ja": "{count}の方程式・モデル。{total}の計算法と構成要素。"
+  },
+  "ui.count-research-and-source-records-ordered-by-.3b78fb": {
+    "en": "{count} research and source records, ordered by original publication year.",
+    "ja": "原著の出版年で整理した{count}件の論文・参考資料。"
+  },
+  "ui.count-research-and-source-records-original-pu.30caaf": {
+    "en": "{count} research and source records. Original publication dates, implementation sources, and honest notes on what has been verified.",
+    "ja": "{count}件の論文・参考資料。原著の出版年、実装の参照先、確認できた範囲を明示します。"
+  },
+  "ui.count-named-numerical-methods-and-building-bl.93e0b7": {
+    "en": "{count} named numerical methods and building blocks across {total} reading entry points.",
+    "ja": "{count}の計算法・構成要素を、{total}の解説入口から探せます。"
+  },
+  "ui.count-of-total-references.da866c": {
+    "en": "{count} of {total} references",
+    "ja": "{total}件中{count}件の参考文献"
+  },
+  "ui.count-of-total-named-model-and-method-entries.8e593e": {
+    "en": "{count} of {total} named model and method entries",
+    "ja": "全{total}項目中{count}項目"
+  },
+  "ui.count-journal-total-conference-all-sources-in.fe2f59": {
+    "en": "{count} journal · {total} conference · {all} sources in all",
+    "ja": "学術誌{count}・会議{total}・参考資料は全{all}件"
+  },
+  "ui.count-with-local-examples-total-reading-only.335709": {
+    "en": "{count} with local examples · {total} reading only",
+    "ja": "計算例あり{count}・解説のみ{total}"
+  },
+  "ui.count-equation-families-saved-numerical-profi.c03dae": {
+    "en": "{count} equation families · saved numerical profiles",
+    "ja": "{count}系統の方程式・保存した数値解"
+  },
+  "ui.named-entries-with-scope-shown-paper-totals-i.fe54d0": {
+    "en": "Named entries, with scope shown. Paper totals include reviews, translations and accepted records. {count} reading chapters.",
+    "ja": "実装範囲を明示した名前付き項目。論文数には総説・翻訳・受理済みの文献を含みます。解説は{count}章。"
+  },
+  "ui.the-atlas-in-numbers-counted-date.c2f1db": {
+    "en": "THE ATLAS IN NUMBERS / COUNTED {date}",
+    "ja": "数字で見るアトラス / 集計日 {date}"
+  },
+  "ui.count-models.de168c": {
+    "en": "{count} models.",
+    "ja": "{count}のモデル。"
+  },
+  "ui.count-methods.5248f1": {
+    "en": "{count} methods.",
+    "ja": "{count}の計算法。"
+  },
+  "ui.count-papers.dcf6a7": {
+    "en": "{count} papers.",
+    "ja": "{count}の論文。"
+  },
+  "ui.count-sources-in-all.d23b93": {
+    "en": "{count} sources in all.",
+    "ja": "全{count}件の参考資料。"
+  },
+  "ui.enlarge-title.d10f9c": {
+    "en": "Enlarge {title}",
+    "ja": "図を拡大：{title}"
+  },
+  "ui.computed-method-and-exact-sod-shock-tube-dens.ef97d2": {
+    "en": "Computed {method} and exact Sod shock-tube density at t=0.2",
+    "ja": "t=0.2のSod衝撃波管密度：{method}計算値と厳密解"
+  },
+  "ui.sod-density-method-and-exact-riemann-solution.d49f94": {
+    "en": "Sod density: {method} and exact Riemann solution",
+    "ja": "Sod密度：{method}と厳密リーマン解"
+  },
+  "language.label": {
+    "en": "Language",
+    "ja": "表示言語"
+  },
+  "language.switching": {
+    "en": "Changing language…",
+    "ja": "表示言語を切り替えています…"
+  },
+  "translation.fallback": {
+    "en": "This chapter is currently available in English.",
+    "ja": "この章は現在、英語版を表示しています。日本語訳を順次追加しています。"
+  },
+  "translation.draft": {
+    "en": "Japanese translation · editorial review pending",
+    "ja": "日本語訳・編集確認待ち"
+  },
+  "translation.stale": {
+    "en": "The English source has changed; this translation needs review.",
+    "ja": "英語原稿が更新されています。この日本語訳は再確認待ちです。"
+  },
+  "translation.progress": {
+    "en": "Japanese drafts: {count} of {total} chapters",
+    "ja": "日本語訳の草稿：全{total}章中{count}章"
+  },
+  "translation.original": {
+    "en": "Source notes are shown in their original English.",
+    "ja": "各文献の出典注記は英語原文を表示しています。"
+  },
+  "translation.experiment": {
+    "en": "This advanced notebook currently uses English labels.",
+    "ja": "この発展実験ノートの操作・説明は現在英語です。計算と操作はそのまま利用できます。"
+  },
+  "translation.failed": {
+    "en": "The selected language could not load. Please retry.",
+    "ja": "選択した言語を読み込めませんでした。再度お試しください。"
+  },
+  "atlas.differences-stability.b02197": {
+    "en": "Differences & stability",
+    "ja": "差分と安定性"
+  },
+  "atlas.conservation-laws.7b23ab": {
+    "en": "Conservation laws",
+    "ja": "保存則"
+  },
+  "atlas.diffusion-elliptic-solvers.9db906": {
+    "en": "Diffusion & elliptic solvers",
+    "ja": "拡散と楕円型ソルバー"
+  },
+  "atlas.dg-spectral-methods.28a771": {
+    "en": "DG & spectral methods",
+    "ja": "DG法とスペクトル法"
+  },
+  "atlas.magnetic-constraints.7bbd77": {
+    "en": "Magnetic constraints",
+    "ja": "磁場の制約"
+  },
+  "atlas.beyond-the-explicit-step.61dd82": {
+    "en": "Beyond the explicit step",
+    "ja": "陽的時間発展から先へ"
+  },
+  "atlas.time-integration-leapfrog.bd778b": {
+    "en": "Time integration & leapfrog",
+    "ja": "時間積分とleapfrog法"
+  },
+  "atlas.meshes-connectivity.b2718b": {
+    "en": "Meshes & connectivity",
+    "ja": "格子と接続関係"
+  },
+  "atlas.particles-sph.6cc61b": {
+    "en": "Particles & SPH",
+    "ja": "粒子法とSPH"
+  },
+  "atlas.moving-volumes-ale.3bb532": {
+    "en": "Moving volumes & ALE",
+    "ja": "移動する体積とALE法"
+  },
+  "atlas.coordinates-tensors-viscosity.58040c": {
+    "en": "Coordinates, tensors & viscosity",
+    "ja": "座標・テンソル・粘性"
+  },
+  "atlas.double-mach-reflection.c825b3": {
+    "en": "Double Mach Reflection",
+    "ja": "二重Mach反射"
+  },
+  "atlas.the-carbuncle-phenomenon.12d321": {
+    "en": "The carbuncle phenomenon",
+    "ja": "カーバンクル現象"
+  },
+  "atlas.symplectic-hamiltonian-maps.1fe913": {
+    "en": "Symplectic Hamiltonian maps",
+    "ja": "シンプレクティックなHamilton写像"
+  },
+  "atlas.particle-gravity-poisson.b71b07": {
+    "en": "Particle gravity & Poisson",
+    "ja": "粒子重力とPoisson方程式"
+  },
+  "atlas.isolated-slab-gravity.90a75f": {
+    "en": "Isolated & slab gravity",
+    "ja": "孤立境界・スラブ境界の重力"
+  },
+  "atlas.slope-limiters-tvd.922c27": {
+    "en": "Slope limiters & TVD",
+    "ja": "勾配制限とTVD"
+  },
+  "atlas.tvb-positive-state-scaling.63702a": {
+    "en": "TVB & positive-state scaling",
+    "ja": "TVBと正値状態のスケーリング"
+  },
+  "atlas.keep-smooth-flow-structure.2da15d": {
+    "en": "KEEP & smooth-flow structure",
+    "ja": "KEEPと滑らかな流れの構造"
+  },
+  "atlas.runge-kutta-families.3cfad2": {
+    "en": "Runge–Kutta families",
+    "ja": "Runge–Kutta法の系譜"
+  },
+  "atlas.cip-value-and-gradient.46dd5b": {
+    "en": "CIP / value and gradient",
+    "ja": "CIP法／値と勾配"
+  },
+  "atlas.inutsuka-s-godunov-sph.311f3a": {
+    "en": "Inutsuka’s Godunov SPH",
+    "ja": "井筒のGodunov SPH"
+  },
+  "atlas.relativistic-fluid-methods.06be31": {
+    "en": "Relativistic fluid methods",
+    "ja": "相対論的流体の計算法"
+  },
+  "atlas.continuous-finite-elements.033ec7": {
+    "en": "Continuous finite elements",
+    "ja": "連続有限要素法"
+  },
+  "atlas.sparse-nonlinear-systems.e92ae5": {
+    "en": "Sparse & nonlinear systems",
+    "ja": "疎行列・非線形方程式系"
+  },
+  "atlas.stiff-adaptive-integration.aca92d": {
+    "en": "Stiff & adaptive integration",
+    "ja": "硬い方程式と適応時間積分"
+  },
+  "atlas.incompressible-projection.144bb3": {
+    "en": "Incompressible projection",
+    "ja": "非圧縮流の射影法"
+  },
+  "atlas.lattice-boltzmann-d2q9.5223a2": {
+    "en": "Lattice Boltzmann / D2Q9",
+    "ja": "格子Boltzmann法／D2Q9"
+  },
+  "atlas.chapman-enskog-expansion.d2c0b0": {
+    "en": "Chapman–Enskog expansion",
+    "ja": "Chapman–Enskog展開"
+  },
+  "atlas.nishikawa-hyperbolic-diffusion.2a375c": {
+    "en": "Nishikawa / hyperbolic diffusion",
+    "ja": "西川の双曲型拡散法"
+  },
+  "atlas.burgers-traffic-equations.ae60c0": {
+    "en": "Burgers & traffic equations",
+    "ja": "Burgers方程式と交通流方程式"
+  },
+  "atlas.biological-model-equations.8a2cd5": {
+    "en": "Biological model equations",
+    "ja": "生物系のモデル方程式"
+  },
+  "atlas.arakawa-a-b-c-grids.a67c7b": {
+    "en": "Arakawa A / B / C grids",
+    "ja": "Arakawa A／B／C格子"
+  },
+  "atlas.follow-information-through-a-grid-separate-sp.cbe5fc": {
+    "en": "Follow information through a grid. Separate spatial differences, time integration, the CFL condition, and linear stability.",
+    "ja": "格子上の情報伝播を追います。空間差分、時間積分、CFL条件、線形安定性を分けて考えます。"
+  },
+  "atlas.from-godunov-type-finite-volumes-to-muscl-and.f235e9": {
+    "en": "From Godunov-type finite volumes to MUSCL and WENO. Compare numerical fluxes on shared, precisely defined problems.",
+    "ja": "Godunov型有限体積法からMUSCL、WENOへ。同じ定義のテスト問題で数値流束を比較します。"
+  },
+  "atlas.boundary-conditions-implicit-steps-tridiagona.f6dceb": {
+    "en": "Boundary conditions, implicit steps, tridiagonal elimination, iterative matrices, and a geometric multigrid V-cycle.",
+    "ja": "境界条件、陰的時間積分、三重対角消去、反復行列、幾何マルチグリッドのVサイクルを扱います。"
+  },
+  "atlas.local-legendre-polynomials-meet-global-fourie.ea6129": {
+    "en": "Local Legendre polynomials meet global Fourier modes in periodic linear advection, with exact translation as a reference.",
+    "ja": "周期的な線形移流で局所Legendre多項式と大域Fourierモードを比較し、厳密な平行移動を基準にします。"
+  },
+  "atlas.explore-staggered-constrained-transport-and-g.ad89ac": {
+    "en": "Explore staggered constrained transport and GLM cleaning. Learn why a divergence measurement needs its discrete operator.",
+    "ja": "スタガード配置のCT法とGLMクリーニングを調べます。発散の測定には離散演算子の定義が必要です。"
+  },
+  "atlas.minimal-models-for-dual-time-stepping-matrix-.039f54": {
+    "en": "Minimal models for dual time stepping, matrix preconditioning, and scalar residual distribution, with their limits made explicit.",
+    "ja": "二重時間積分、行列前処理、スカラー残差分配の最小モデルを、適用範囲とともに説明します。"
+  },
+  "atlas.compare-twelve-temporal-methods-on-an-oscilla.f68229": {
+    "en": "Compare twelve temporal methods on an oscillator; distinguish the physical and computational roots.",
+    "ja": "振動子で12の時間積分法を比較し、物理モードと計算モードの根を区別します。"
+  },
+  "atlas.structured-quadrilaterals-split-lattice-trian.0ca74a": {
+    "en": "Structured quadrilaterals, split-lattice triangles, and irregular triangulations. Inspect face-sharing neighbors.",
+    "ja": "構造四角形格子、格子を分割した三角形、非規則三角形格子で、面を共有する隣接要素を調べます。"
+  },
+  "atlas.kernel-reconstruction-particle-volume-weights.c75c0a": {
+    "en": "Kernel reconstruction, particle volume weights, normalization, and the additional requirements of fluid dynamics.",
+    "ja": "カーネル再構成、粒子の体積重み、規格化、流体計算に必要な追加条件を扱います。"
+  },
+  "atlas.follow-the-relative-face-flux-and-test-unifor.66db99": {
+    "en": "Follow the relative face flux and test uniform-state preservation under mesh motion.",
+    "ja": "移動する面に対する相対流束を追い、格子移動時の一様状態保存を検証します。"
+  },
+  "atlas.physical-cylindrical-components-all-six-visco.8602fb": {
+    "en": "Physical cylindrical components, all six viscous stresses, tensor divergence, and analytic checks.",
+    "ja": "円筒座標の物理成分、6つの粘性応力、テンソルの発散、解析解による検証を扱います。"
+  },
+  "atlas.an-actual-2d-euler-shock-reflection-computati.85ffa2": {
+    "en": "An actual 2D Euler shock-reflection computation, with moving boundaries, a run manifest, and explicit resolution limits.",
+    "ja": "2次元Euler方程式の衝撃波反射を実際に計算し、移動境界、計算記録、解像度の限界を示します。"
+  },
+  "atlas.strong-shock-instability-transverse-dissipati.f50293": {
+    "en": "Strong-shock instability, transverse dissipation, and why entropy correction and positivity are different tests.",
+    "ja": "強い衝撃波の不安定性と横方向散逸を調べ、エントロピー修正と正値性の検証を区別します。"
+  },
+  "atlas.canonical-structure-verlet-and-yoshida-compos.932561": {
+    "en": "Canonical structure, Verlet and Yoshida compositions, time reversal, and long-time energy errors.",
+    "ja": "正準構造、Verlet法と吉田の合成法、時間反転、長時間のエネルギー誤差を扱います。"
+  },
+  "atlas.cic-particle-mesh-forces-p-m-and-treepm-split.2b5e67": {
+    "en": "CIC particle–mesh forces, P³M and TreePM splitting, octrees, multipole moments, and multigrid.",
+    "ja": "CICの粒子格子力、P³MとTreePMの分割、八分木、多重極モーメント、マルチグリッドを扱います。"
+  },
+  "atlas.hockney-eastwood-convolution-and-koyama-ostri.c98816": {
+    "en": "Hockney–Eastwood convolution and Koyama–Ostriker slab kernels, with explicit Fourier and zero-mode conventions.",
+    "ja": "Hockney–Eastwoodの畳み込みとKoyama–Ostrikerのスラブ核を、Fourier変換とゼロモードの規約を明示して扱います。"
+  },
+  "atlas.compare-minmod-superbee-mc-van-leer-and-van-a.cd1be1": {
+    "en": "Compare minmod, Superbee, MC, van Leer, and van Albada on common scalar and Euler tests.",
+    "ja": "同じスカラー問題とEuler問題で、minmod、Superbee、MC、van Leer、van Albadaを比較します。"
+  },
+  "atlas.relax-smooth-extrema-with-modified-minmod-the.5f3115": {
+    "en": "Relax smooth extrema with modified minmod, then scale Euler reconstruction states while preserving a consistent conservative mean.",
+    "ja": "修正minmodで滑らかな極値の制限を緩め、保存平均と整合させながらEuler再構成状態をスケーリングします。"
+  },
+  "atlas.original-kuya-totani-kawai-flux-isentropic-vo.6c3407": {
+    "en": "Original Kuya–Totani–Kawai flux, isentropic vortex refinement, entropy diagnostics, and explicit shock/positivity caveats.",
+    "ja": "Kuya–Totani–Kawaiの原流束、等エントロピー渦の収束、エントロピー診断を扱い、衝撃波と正値性に関する限界を示します。"
+  },
+  "atlas.rk2-variants-classical-rk4-ssprk-stages-and-o.3e41ad": {
+    "en": "RK2 variants, classical RK4, SSPRK stages and orders, Butcher tableaus, linear stability contours, and nonlinear tests.",
+    "ja": "RK2の各種公式、古典的RK4、SSPRKの段数と次数、Butcher表、線形安定領域、非線形テストを扱います。"
+  },
+  "atlas.characteristic-cubic-hermite-transport-evolve.8d6197": {
+    "en": "Characteristic cubic-Hermite transport, evolved derivatives, sharp-profile oscillations, refinement, and a conservation counterexample.",
+    "ja": "特性線に沿う3次Hermite輸送、勾配の発展、急峻な分布の振動、収束、保存性の反例を扱います。"
+  },
+  "atlas.convolution-pair-riemann-states-conservative-.d19b40": {
+    "en": "Convolution, pair Riemann states, conservative particle updates, and the MHD/SR branches. Source notes and an implementation plan.",
+    "ja": "畳み込み、粒子対のリーマン状態、保存的な粒子更新、MHD・特殊相対論への発展を調べた文献ノートと実装計画です。"
+  },
+  "atlas.from-sr-riemann-solvers-and-valencia-to-grmhd.883e1a": {
+    "en": "From SR Riemann solvers and Valencia to GRMHD, primitive recovery, high-order hybrids, radiation, and GPU merger codes. Literature through November 2026.",
+    "ja": "特殊相対論のリーマンソルバーとValencia形式から、GRMHD、基本変数回復、高次混合法、放射、GPU合体計算まで。2026年11月までの文献調査です。"
+  },
+  "atlas.weak-forms-triangular-p1-assembly-dirichlet-e.88558f": {
+    "en": "Weak forms, triangular P1 assembly, Dirichlet elimination, and measured L2/H1 convergence.",
+    "ja": "弱形式、三角形P1要素の組立て、Dirichlet条件の消去、L2／H1誤差の収束を扱います。"
+  },
+  "atlas.restarted-gmres-bicgstab-jacobi-ilu-0-and-dam.c8e447": {
+    "en": "Restarted GMRES, BiCGSTAB, Jacobi, ILU(0), and damped Newton with true-residual verification.",
+    "ja": "再始動GMRES、BiCGSTAB、Jacobi、ILU(0)、減衰Newton法を、真の残差で検証します。"
+  },
+  "atlas.be-bdf2-l-stable-sdirk2-imex-euler-and-step-d.d1d51a": {
+    "en": "BE, BDF2, L-stable SDIRK2, IMEX Euler, and step-doubling error control.",
+    "ja": "後退Euler、BDF2、L安定なSDIRK2、IMEX Euler、ステップ倍分割による誤差制御を扱います。"
+  },
+  "atlas.compatible-mac-divergence-gradient-discrete-f.5f2927": {
+    "en": "Compatible MAC divergence/gradient, discrete FFT Poisson, and periodic Taylor–Green refinement.",
+    "ja": "整合するMAC発散・勾配演算子、離散FFT Poisson解法、周期Taylor–Green渦の収束を扱います。"
+  },
+  "atlas.bgk-collision-guo-forcing-shear-viscosity-and.f79f7b": {
+    "en": "BGK collision, Guo forcing, shear viscosity, and half-way-wall Poiseuille verification.",
+    "ja": "BGK衝突、Guo外力、せん断粘性、中間壁Poiseuille流による検証を扱います。"
+  },
+  "atlas.slow-scales-nonequilibrium-stress-hydrodynami.a1d756": {
+    "en": "Slow scales, nonequilibrium stress, hydrodynamic moments and the lattice-time half-step correction.",
+    "ja": "遅いスケール、非平衡応力、流体力学的モーメント、格子時間の半ステップ補正を扱います。"
+  },
+  "atlas.an-equivalent-first-order-steady-system-with-.bff168": {
+    "en": "An equivalent first-order steady system with a tested 1D upwind baseline and RD source notes.",
+    "ja": "等価な1階の定常系を、検証済みの1次元風上法と残差分配法の文献ノートで説明します。"
+  },
+  "atlas.entropy-shocks-and-rarefactions-upstream-traf.3d810e": {
+    "en": "Entropy shocks and rarefactions, upstream traffic jams, exact cell averages and fluid-system profiles.",
+    "ja": "エントロピー条件を満たす衝撃波・膨張波、上流へ進む渋滞、厳密なセル平均、流体系の分布を扱います。"
+  },
+  "atlas.twenty-two-literature-only-model-families-gro.2fc4d5": {
+    "en": "Twenty-two literature-only model families: growth, epidemics, reaction–diffusion, chemotaxis, excitable membranes, delayed and stochastic gene networks, and biomechanics.",
+    "ja": "増殖、感染症、反応拡散、走化性、興奮性膜、遅延・確率的遺伝子回路、生体力学の22モデル系統を文献で調査します。生物ソルバーは未実装です。"
+  },
+  "atlas.inspect-variable-placement-tested-f-plane-sha.44b794": {
+    "en": "Inspect variable placement, tested f-plane shallow-water Fourier symbols, energy structure, and axis/diagonal wave dispersion.",
+    "ja": "変数配置、検証済みのf平面浅水波Fourier記号、エネルギー構造、軸方向・対角方向の波の分散を調べます。"
+  },
+  "atlas.stagger-the-variables-change-the-waves.e0f103": {
+    "en": "Stagger the variables. Change the waves.",
+    "ja": "変数配置が波を変える。"
+  },
+  "atlas.equations-and-their-waves.015baa": {
+    "en": "Equations and their waves",
+    "ja": "方程式と、その波"
+  },
+  "atlas.from-a-weak-form-to-a-projection.bc3b0b": {
+    "en": "From a weak form to a projection",
+    "ja": "弱形式から射影へ"
+  },
+  "atlas.kinetic-and-hyperbolic-routes.fbb656": {
+    "en": "Kinetic and hyperbolic routes",
+    "ja": "運動論と双曲型への道"
+  },
+  "atlas.cip-carries-the-gradient.08dfce": {
+    "en": "CIP carries the gradient",
+    "ja": "CIPが運ぶ勾配"
+  },
+  "atlas.runge-kutta-family-relationships.8e6751": {
+    "en": "Runge–Kutta family relationships",
+    "ja": "Runge–Kutta法の関係"
+  },
+  "atlas.choose-the-slope-limiter.251977": {
+    "en": "Choose the slope limiter",
+    "ja": "勾配制限を選ぶ"
+  },
+  "atlas.keep-on-a-smooth-vortex.376434": {
+    "en": "KEEP on a smooth vortex",
+    "ja": "滑らかな渦とKEEP"
+  },
+  "atlas.canonical-maps-and-energy.14bf6a": {
+    "en": "Canonical maps and energy",
+    "ja": "正準写像とエネルギー"
+  },
+  "atlas.pm-tree-and-multipole-forces.77423e": {
+    "en": "PM, Tree, and multipole forces",
+    "ja": "PM・ツリー・多重極の力"
+  },
+  "atlas.gravity-follows-the-boundary.9d64ca": {
+    "en": "Gravity follows the boundary",
+    "ja": "境界で変わる重力"
+  },
+  "atlas.sod-shock-tube.3cfc8c": {
+    "en": "Sod shock tube",
+    "ja": "Sod衝撃波管"
+  },
+  "atlas.shock-meets-a-density-wave.410546": {
+    "en": "Shock meets a density wave",
+    "ja": "衝撃波と密度波の出会い"
+  },
+  "atlas.local-polynomials-global-waves.126733": {
+    "en": "Local polynomials, global waves",
+    "ja": "局所多項式と大域的な波"
+  },
+  "atlas.the-shape-of-stability.bbea37": {
+    "en": "The shape of stability",
+    "ja": "安定性の形"
+  },
+  "atlas.orszag-tang-vortex.5b6f70": {
+    "en": "Orszag–Tang vortex",
+    "ja": "Orszag–Tang渦"
+  },
+  "atlas.where-divergence-errors-go.26e2e3": {
+    "en": "Where divergence errors go",
+    "ja": "発散誤差の行き先"
+  },
+  "atlas.the-boundary-changes-the-problem.5d4e88": {
+    "en": "The boundary changes the problem",
+    "ja": "境界条件で変わる問題"
+  },
+  "atlas.from-smoothing-to-correction.5ab52f": {
+    "en": "From smoothing to correction",
+    "ja": "平滑化から補正へ"
+  },
+  "atlas.a-second-clock.187df3": {
+    "en": "A second clock",
+    "ja": "もうひとつの時間"
+  },
+  "atlas.shocks-and-smooth-refinement.d80475": {
+    "en": "Shocks and smooth refinement",
+    "ja": "衝撃波と滑らかな解の収束"
+  },
+  "atlas.two-barotropic-systems.4727f7": {
+    "en": "Two barotropic systems",
+    "ja": "2つのバロトロピック系"
+  },
+  "atlas.finite-differences.91e581": {
+    "en": "FINITE DIFFERENCES",
+    "ja": "有限差分法"
+  },
+  "atlas.finite-volumes-weno.354e8a": {
+    "en": "FINITE VOLUMES · WENO",
+    "ja": "有限体積法・WENO"
+  },
+  "atlas.thomas-cg-multigrid.45e1a7": {
+    "en": "THOMAS · CG · MULTIGRID",
+    "ja": "Thomas法・CG・マルチグリッド"
+  },
+  "atlas.local-global-bases.725ca7": {
+    "en": "LOCAL & GLOBAL BASES",
+    "ja": "局所基底と大域基底"
+  },
+  "atlas.planar-ideal-mhd.170172": {
+    "en": "PLANAR IDEAL MHD",
+    "ja": "平面内の理想MHD"
+  },
+  "atlas.advanced-models.320ab3": {
+    "en": "ADVANCED MODELS",
+    "ja": "発展モデル"
+  },
+  "atlas.ode-two-step-modes.a890a6": {
+    "en": "ODE · TWO-STEP MODES",
+    "ja": "常微分方程式・2段階モード"
+  },
+  "atlas.structured-unstructured.580440": {
+    "en": "STRUCTURED · UNSTRUCTURED",
+    "ja": "構造格子・非構造格子"
+  },
+  "atlas.particle-methods.dd5e62": {
+    "en": "PARTICLE METHODS",
+    "ja": "粒子法"
+  },
+  "atlas.geometric-conservation.c63a93": {
+    "en": "GEOMETRIC CONSERVATION",
+    "ja": "幾何保存則"
+  },
+  "atlas.polar-cylindrical.1c1bd5": {
+    "en": "POLAR · CYLINDRICAL",
+    "ja": "極座標・円筒座標"
+  },
+  "atlas.mach-10-computed.e40de8": {
+    "en": "MACH 10 · COMPUTED",
+    "ja": "Mach 10・計算結果"
+  },
+  "atlas.multidimensional-robustness.0a7b96": {
+    "en": "MULTIDIMENSIONAL ROBUSTNESS",
+    "ja": "多次元での頑健性"
+  },
+  "atlas.geometric-integration.4623e5": {
+    "en": "GEOMETRIC INTEGRATION",
+    "ja": "幾何学的数値積分"
+  },
+  "atlas.pm-tree-multipoles.4b7622": {
+    "en": "PM · TREE · MULTIPOLES",
+    "ja": "PM・ツリー・多重極"
+  },
+  "atlas.fft-green-functions.586ce1": {
+    "en": "FFT · GREEN FUNCTIONS",
+    "ja": "FFT・Green関数"
+  },
+  "atlas.muscl-sweby.05508a": {
+    "en": "MUSCL · SWEBY",
+    "ja": "MUSCL・Sweby"
+  },
+  "atlas.advanced-admissibility.6e58a7": {
+    "en": "ADVANCED · ADMISSIBILITY",
+    "ja": "発展・許容状態"
+  },
+  "atlas.low-dissipation-euler.0447b9": {
+    "en": "LOW DISSIPATION · EULER",
+    "ja": "低散逸・Euler"
+  },
+  "atlas.stages-order-ssp.7c7410": {
+    "en": "STAGES · ORDER · SSP",
+    "ja": "段数・次数・SSP"
+  },
+  "atlas.semi-lagrangian-hermite.ed847c": {
+    "en": "SEMI-LAGRANGIAN · HERMITE",
+    "ja": "半Lagrange・Hermite"
+  },
+  "atlas.particles-reading-notes.b81b08": {
+    "en": "PARTICLES · READING NOTES",
+    "ja": "粒子・文献ノート"
+  },
+  "atlas.srhd-grhd-grmhd-reading.a1ed29": {
+    "en": "SRHD · GRHD · GRMHD · READING",
+    "ja": "SRHD・GRHD・GRMHD・文献調査"
+  },
+  "atlas.assembly-poisson.e70552": {
+    "en": "ASSEMBLY · POISSON",
+    "ja": "組立て・Poisson"
+  },
+  "atlas.krylov-newton.c63c46": {
+    "en": "KRYLOV · NEWTON",
+    "ja": "Krylov・Newton"
+  },
+  "atlas.implicit-stages.4062e6": {
+    "en": "IMPLICIT STAGES",
+    "ja": "陰的段階"
+  },
+  "atlas.mac-projection.5e3ccf": {
+    "en": "MAC · PROJECTION",
+    "ja": "MAC・射影"
+  },
+  "atlas.kinetic-low-mach.79470b": {
+    "en": "KINETIC · LOW MACH",
+    "ja": "運動論・低Mach数"
+  },
+  "atlas.asymptotic-derivation.9efdb6": {
+    "en": "ASYMPTOTIC DERIVATION",
+    "ja": "漸近展開"
+  },
+  "atlas.pseudo-time-diffusion.a51870": {
+    "en": "PSEUDO-TIME · DIFFUSION",
+    "ja": "擬似時間・拡散"
+  },
+  "atlas.equation-gallery.a8f3ea": {
+    "en": "EQUATION GALLERY",
+    "ja": "方程式ギャラリー"
+  },
+  "atlas.biology-survey-no-solver.85fc51": {
+    "en": "BIOLOGY · SURVEY / NO SOLVER",
+    "ja": "生物・文献調査／ソルバー未実装"
+  },
+  "atlas.geophysics-linear-symbols.0be102": {
+    "en": "GEOPHYSICS · LINEAR SYMBOLS",
+    "ja": "地球流体・線形記号"
+  },
+  "term.equation.linear-advection": {
+    "en": "Linear advection",
+    "ja": "線形移流"
+  },
+  "term.equation.heat": {
+    "en": "Heat / diffusion",
+    "ja": "熱・拡散"
+  },
+  "term.equation.poisson-laplace": {
+    "en": "Poisson / Laplace",
+    "ja": "Poisson／Laplace方程式"
+  },
+  "term.equation.burgers": {
+    "en": "Inviscid Burgers",
+    "ja": "非粘性Burgers方程式"
+  },
+  "term.equation.traffic": {
+    "en": "LWR traffic flow",
+    "ja": "LWR交通流"
+  },
+  "term.equation.euler": {
+    "en": "Compressible Euler",
+    "ja": "圧縮性Euler方程式"
+  },
+  "term.equation.shallow-water": {
+    "en": "Shallow water, including the rotating linear model",
+    "ja": "浅水方程式（線形回転モデルを含む）"
+  },
+  "term.equation.isothermal": {
+    "en": "Isothermal Euler",
+    "ja": "等温Euler方程式"
+  },
+  "term.equation.mhd": {
+    "en": "Ideal MHD",
+    "ja": "理想MHD"
+  },
+  "term.equation.navier-stokes": {
+    "en": "Incompressible Navier–Stokes",
+    "ja": "非圧縮Navier–Stokes方程式"
+  },
+  "term.equation.bgk": {
+    "en": "Isothermal lattice BGK",
+    "ja": "等温格子BGK"
+  },
+  "term.equation.hamiltonian": {
+    "en": "Hamiltonian oscillators",
+    "ja": "Hamilton振動子"
+  },
+  "term.equation.particle-gravity": {
+    "en": "Gravitational particle model",
+    "ja": "重力粒子モデル"
+  },
+  "term.equation.bratu": {
+    "en": "Bratu nonlinear boundary-value problem",
+    "ja": "Bratu非線形境界値問題"
+  },
+  "term.equation.hyperbolic-diffusion": {
+    "en": "Auxiliary hyperbolic diffusion system",
+    "ja": "補助変数による双曲型拡散系"
+  },
+  "term.equation.srhd": {
+    "en": "Special-relativistic hydrodynamics",
+    "ja": "特殊相対論的流体力学"
+  },
+  "term.equation.grhd": {
+    "en": "General-relativistic hydrodynamics",
+    "ja": "一般相対論的流体力学"
+  },
+  "term.equation.grmhd": {
+    "en": "General-relativistic MHD",
+    "ja": "一般相対論的MHD"
+  },
+  "term.equation.m1-radiation": {
+    "en": "Relativistic radiation moments / M1",
+    "ja": "相対論的放射モーメント／M1"
+  },
+  "term.equation.causal-viscous": {
+    "en": "Causal relativistic viscous fluid",
+    "ja": "因果的な相対論的粘性流体"
+  },
+  "term.method.forward-difference": {
+    "en": "Forward spatial difference",
+    "ja": "空間前進差分"
+  },
+  "term.method.backward-difference": {
+    "en": "Backward spatial difference",
+    "ja": "空間後退差分"
+  },
+  "term.method.centered-difference": {
+    "en": "Centered spatial difference",
+    "ja": "空間中心差分"
+  },
+  "term.method.upwind": {
+    "en": "Upwind finite differences",
+    "ja": "風上差分（upwind）"
+  },
+  "term.method.lax-friedrichs": {
+    "en": "Lax–Friedrichs",
+    "ja": "Lax–Friedrichs法"
+  },
+  "term.method.lax-wendroff": {
+    "en": "Lax–Wendroff",
+    "ja": "Lax–Wendroff法"
+  },
+  "term.method.godunov": {
+    "en": "Godunov-type finite volumes",
+    "ja": "Godunov型有限体積法"
+  },
+  "term.method.muscl": {
+    "en": "MUSCL reconstruction",
+    "ja": "MUSCL再構成"
+  },
+  "term.method.weno-js": {
+    "en": "WENO5-JS",
+    "ja": "WENO5-JS"
+  },
+  "term.method.dg": {
+    "en": "Discontinuous Galerkin / Legendre",
+    "ja": "不連続Galerkin法／Legendre"
+  },
+  "term.method.fourier": {
+    "en": "Fourier differentiation and evolution",
+    "ja": "Fourier微分と時間発展"
+  },
+  "term.method.cip": {
+    "en": "Cubic-Hermite CIP",
+    "ja": "3次Hermite CIP"
+  },
+  "term.method.p1-fem": {
+    "en": "Continuous P1 Galerkin FEM",
+    "ja": "連続P1 Galerkin有限要素法"
+  },
+  "term.method.rusanov": {
+    "en": "Rusanov / local Lax–Friedrichs flux",
+    "ja": "Rusanov／局所Lax–Friedrichs流束"
+  },
+  "term.method.hll": {
+    "en": "HLL",
+    "ja": "HLL"
+  },
+  "term.method.hllc": {
+    "en": "HLLC",
+    "ja": "HLLC"
+  },
+  "term.method.roe": {
+    "en": "Roe",
+    "ja": "Roe法"
+  },
+  "term.method.hlle": {
+    "en": "HLLE / Einfeldt wave speeds",
+    "ja": "HLLE／Einfeldt波速"
+  },
+  "term.method.entropy-fix": {
+    "en": "Acoustic Roe entropy correction",
+    "ja": "Roe音響波のエントロピー修正"
+  },
+  "term.method.rotated-hybrid": {
+    "en": "Rotated-hybrid Riemann solver",
+    "ja": "回転ハイブリッド・リーマンソルバー"
+  },
+  "term.method.minmod": {
+    "en": "Minmod",
+    "ja": "Minmod"
+  },
+  "term.method.superbee": {
+    "en": "Superbee",
+    "ja": "Superbee"
+  },
+  "term.method.mc": {
+    "en": "Monotonized central / MC",
+    "ja": "単調中心勾配制限／MC"
+  },
+  "term.method.van-leer": {
+    "en": "Van Leer limiter",
+    "ja": "Van Leer勾配制限"
+  },
+  "term.method.van-albada": {
+    "en": "Clipped Van Albada limiter",
+    "ja": "切り詰めたVan Albada勾配制限"
+  },
+  "term.method.tvb": {
+    "en": "TVB modified minmod",
+    "ja": "TVB修正minmod"
+  },
+  "term.method.positive-scaling": {
+    "en": "Mean-preserving positive-state scaling",
+    "ja": "平均を保つ正値状態スケーリング"
+  },
+  "term.method.forward-euler": {
+    "en": "Forward Euler",
+    "ja": "前進Euler法"
+  },
+  "term.method.backward-euler": {
+    "en": "Backward Euler",
+    "ja": "後退Euler法"
+  },
+  "term.method.heun": {
+    "en": "Heun / SSPRK(2,2)",
+    "ja": "Heun法／SSPRK(2,2)"
+  },
+  "term.method.explicit-midpoint": {
+    "en": "Explicit midpoint RK2",
+    "ja": "陽的中点RK2"
+  },
+  "term.method.ralston": {
+    "en": "Ralston RK2",
+    "ja": "Ralston RK2"
+  },
+  "term.method.kutta3": {
+    "en": "Kutta RK3",
+    "ja": "Kutta RK3"
+  },
+  "term.method.ssprk33": {
+    "en": "SSPRK(3,3)",
+    "ja": "SSPRK(3,3)"
+  },
+  "term.method.ssprk43": {
+    "en": "SSPRK(4,3)",
+    "ja": "SSPRK(4,3)"
+  },
+  "term.method.rk4": {
+    "en": "Classical RK4",
+    "ja": "古典的RK4"
+  },
+  "term.method.ssprk54": {
+    "en": "SSPRK(5,4)",
+    "ja": "SSPRK(5,4)"
+  },
+  "term.method.implicit-midpoint": {
+    "en": "Implicit midpoint",
+    "ja": "陰的中点則"
+  },
+  "term.method.leapfrog": {
+    "en": "Two-step leapfrog",
+    "ja": "2ステップleapfrog法"
+  },
+  "term.method.crank-nicolson": {
+    "en": "Crank–Nicolson",
+    "ja": "Crank–Nicolson法"
+  },
+  "term.method.bdf2": {
+    "en": "BDF2",
+    "ja": "BDF2"
+  },
+  "term.method.sdirk2": {
+    "en": "L-stable SDIRK2",
+    "ja": "L安定なSDIRK2"
+  },
+  "term.method.imex-euler": {
+    "en": "IMEX Euler",
+    "ja": "IMEX Euler"
+  },
+  "term.method.step-doubling": {
+    "en": "Adaptive SDIRK2 / step doubling",
+    "ja": "適応SDIRK2／ステップ倍分割"
+  },
+  "term.method.symplectic-euler": {
+    "en": "Symplectic Euler",
+    "ja": "シンプレクティックEuler法"
+  },
+  "term.method.verlet": {
+    "en": "Velocity Verlet / particle leapfrog",
+    "ja": "速度Verlet／粒子leapfrog法"
+  },
+  "term.method.yoshida4": {
+    "en": "Yoshida fourth-order composition",
+    "ja": "吉田の4次合成法"
+  },
+  "term.method.thomas": {
+    "en": "Thomas tridiagonal elimination",
+    "ja": "Thomas法／三重対角消去"
+  },
+  "term.method.jacobi-iteration": {
+    "en": "Jacobi iteration",
+    "ja": "Jacobi反復"
+  },
+  "term.method.gauss-seidel": {
+    "en": "Gauss–Seidel iteration",
+    "ja": "Gauss–Seidel反復"
+  },
+  "term.method.sor": {
+    "en": "Successive over-relaxation / SOR",
+    "ja": "逐次過緩和法／SOR"
+  },
+  "term.method.cg": {
+    "en": "Conjugate gradients",
+    "ja": "共役勾配法"
+  },
+  "term.method.rbgs": {
+    "en": "Red-black Gauss–Seidel",
+    "ja": "赤黒Gauss–Seidel法"
+  },
+  "term.method.multigrid": {
+    "en": "Geometric multigrid V-cycle",
+    "ja": "幾何マルチグリッドVサイクル"
+  },
+  "term.method.gmres": {
+    "en": "Restarted GMRES",
+    "ja": "再始動GMRES"
+  },
+  "term.method.bicgstab": {
+    "en": "BiCGSTAB",
+    "ja": "BiCGSTAB"
+  },
+  "term.method.jacobi-preconditioner": {
+    "en": "Jacobi / diagonal preconditioning",
+    "ja": "Jacobi／対角前処理"
+  },
+  "term.method.ilu0": {
+    "en": "Unpivoted ILU(0)",
+    "ja": "ピボット選択なしILU(0)"
+  },
+  "term.method.newton": {
+    "en": "Armijo-damped Newton",
+    "ja": "Armijo減衰Newton法"
+  },
+  "term.method.newton-krylov": {
+    "en": "Newton–Krylov with assembled Jacobian",
+    "ja": "組み立てたJacobianによるNewton–Krylov法"
+  },
+  "term.method.dual-time": {
+    "en": "Dual time stepping",
+    "ja": "二重時間積分"
+  },
+  "term.method.residual-distribution": {
+    "en": "Scalar residual distribution",
+    "ja": "スカラー残差分配法"
+  },
+  "term.method.low-mach-preconditioning": {
+    "en": "Low-Mach PDE preconditioning",
+    "ja": "低Mach数のPDE前処理"
+  },
+  "term.method.ct": {
+    "en": "Constrained transport / CT",
+    "ja": "制約輸送法／CT"
+  },
+  "term.method.glm": {
+    "en": "GLM divergence cleaning",
+    "ja": "GLM発散クリーニング"
+  },
+  "term.method.projection": {
+    "en": "MAC pressure projection",
+    "ja": "MAC圧力射影法"
+  },
+  "term.method.d2q9-bgk": {
+    "en": "D2Q9–BGK collision and streaming",
+    "ja": "D2Q9–BGK衝突・並進"
+  },
+  "term.method.guo": {
+    "en": "Guo forcing",
+    "ja": "Guo外力"
+  },
+  "term.method.bounce-back": {
+    "en": "Half-way bounce-back",
+    "ja": "中間壁バウンスバック"
+  },
+  "term.method.hyperbolic-diffusion": {
+    "en": "First-order hyperbolic diffusion baseline",
+    "ja": "1次の双曲型拡散ベースライン"
+  },
+  "term.method.sph": {
+    "en": "SPH kernel reconstruction",
+    "ja": "SPHカーネル再構成"
+  },
+  "term.method.ale": {
+    "en": "ALE uniform-state / geometric-conservation model",
+    "ja": "ALE一様状態・幾何保存モデル"
+  },
+  "term.method.gsph": {
+    "en": "Godunov SPH / GSPH",
+    "ja": "Godunov SPH／GSPH"
+  },
+  "term.method.cic": {
+    "en": "Cloud-in-cell assignment and interpolation",
+    "ja": "Cloud-in-cellの割当てと補間"
+  },
+  "term.method.pm": {
+    "en": "FFT particle–mesh forces",
+    "ja": "FFT粒子格子力"
+  },
+  "term.method.barnes-hut": {
+    "en": "Barnes–Hut octree",
+    "ja": "Barnes–Hut八分木"
+  },
+  "term.method.multipole": {
+    "en": "Monopole and second-moment expansion",
+    "ja": "単極と2次モーメント展開"
+  },
+  "term.method.hockney": {
+    "en": "Isolated doubled-grid FFT convolution",
+    "ja": "孤立境界の倍格子FFT畳み込み"
+  },
+  "term.method.slab": {
+    "en": "Horizontal-periodic slab Green-function FFT",
+    "ja": "水平周期スラブGreen関数FFT"
+  },
+  "term.method.p3m": {
+    "en": "P³M short-range correction",
+    "ja": "P³M短距離補正"
+  },
+  "term.method.treepm": {
+    "en": "TreePM force splitting",
+    "ja": "TreePM力分割"
+  },
+  "term.method.fmm": {
+    "en": "Fast multipole translations",
+    "ja": "高速多重極法の移動演算"
+  },
+  "term.method.keep": {
+    "en": "Original Cartesian KEEP split flux",
+    "ja": "直交座標の原KEEP分割流束"
+  },
+  "term.equation.bio-logistic": {
+    "en": "Logistic population growth",
+    "ja": "ロジスティック個体群増殖"
+  },
+  "term.equation.bio-enzyme": {
+    "en": "Michaelis–Menten and full enzyme kinetics",
+    "ja": "Michaelis–Mentenと完全酵素反応系"
+  },
+  "term.equation.bio-lotka-volterra": {
+    "en": "Lotka–Volterra predator–prey",
+    "ja": "Lotka–Volterra捕食・被食"
+  },
+  "term.equation.bio-age-structure": {
+    "en": "McKendrick age-structured population",
+    "ja": "McKendrick年齢構造個体群"
+  },
+  "term.equation.bio-sir": {
+    "en": "SIR and SEIR compartment models",
+    "ja": "SIR・SEIR区画モデル"
+  },
+  "term.equation.bio-fisher-kpp": {
+    "en": "Fisher–KPP invasion front",
+    "ja": "Fisher–KPP侵入前線"
+  },
+  "term.equation.bio-monod": {
+    "en": "Monod growth and chemostat",
+    "ja": "Monod増殖とケモスタット"
+  },
+  "term.equation.bio-hodgkin-huxley": {
+    "en": "Hodgkin–Huxley membrane dynamics",
+    "ja": "Hodgkin–Huxley膜動態"
+  },
+  "term.equation.bio-turing": {
+    "en": "Turing reaction–diffusion framework",
+    "ja": "Turing反応拡散の枠組み"
+  },
+  "term.equation.bio-fitzhugh-nagumo": {
+    "en": "FitzHugh–Nagumo excitation and recovery",
+    "ja": "FitzHugh–Nagumoの興奮と回復"
+  },
+  "term.equation.bio-keller-segel": {
+    "en": "Keller–Segel chemotaxis",
+    "ja": "Keller–Segel走化性"
+  },
+  "term.equation.bio-gierer-meinhardt": {
+    "en": "Gierer–Meinhardt activator–inhibitor",
+    "ja": "Gierer–Meinhardt活性化・抑制"
+  },
+  "term.equation.bio-immersed-boundary": {
+    "en": "Fluid–elastic structure and immersed boundaries",
+    "ja": "流体・弾性構造と埋め込み境界"
+  },
+  "term.equation.bio-chemical-master": {
+    "en": "Chemical master equation and Gillespie SSA",
+    "ja": "化学マスター方程式とGillespie SSA"
+  },
+  "term.equation.bio-mackey-glass": {
+    "en": "Mackey–Glass delayed physiological feedback",
+    "ja": "Mackey–Glass遅延生理フィードバック"
+  },
+  "term.equation.bio-replicator": {
+    "en": "Replicator evolutionary game dynamics",
+    "ja": "レプリケータ進化ゲーム動態"
+  },
+  "term.equation.bio-schnakenberg": {
+    "en": "Schnakenberg reaction–diffusion",
+    "ja": "Schnakenberg反応拡散"
+  },
+  "term.equation.bio-skt": {
+    "en": "Shigesada–Kawasaki–Teramoto cross-diffusion",
+    "ja": "Shigesada–Kawasaki–Teramoto交差拡散"
+  },
+  "term.equation.bio-gray-scott": {
+    "en": "Gray–Scott spatial autocatalysis",
+    "ja": "Gray–Scott空間自己触媒反応"
+  },
+  "term.equation.bio-cardiac": {
+    "en": "Aliev–Panfilov cardiac excitation",
+    "ja": "Aliev–Panfilov心筋興奮"
+  },
+  "term.equation.bio-repressilator": {
+    "en": "Repressilator mRNA–protein network",
+    "ja": "Repressilator mRNA・タンパク質回路"
+  },
+  "term.equation.bio-toggle": {
+    "en": "Genetic toggle switch",
+    "ja": "遺伝子トグルスイッチ"
+  },
+  "term.concept.a-stability": {
+    "en": "A-stability",
+    "ja": "A安定性"
+  },
+  "term.concept.l-stability": {
+    "en": "L-stability",
+    "ja": "L安定性"
+  },
+  "term.concept.cfl": {
+    "en": "CFL condition",
+    "ja": "CFL条件"
+  },
+  "term.concept.von-neumann": {
+    "en": "von Neumann stability analysis",
+    "ja": "von Neumann安定性解析"
+  },
+  "term.concept.neumann": {
+    "en": "Neumann boundary condition",
+    "ja": "Neumann境界条件"
+  },
+  "term.concept.dirichlet": {
+    "en": "Dirichlet boundary condition",
+    "ja": "Dirichlet境界条件"
+  },
+  "term.concept.robin": {
+    "en": "Robin boundary condition",
+    "ja": "Robin境界条件"
+  },
+  "term.concept.spectral-radius": {
+    "en": "Spectral radius",
+    "ja": "スペクトル半径"
+  },
+  "term.concept.condition-number": {
+    "en": "Condition number",
+    "ja": "条件数"
+  },
+  "term.concept.entropy-wave": {
+    "en": "Entropy wave",
+    "ja": "エントロピー波"
+  },
+  "term.concept.riemann": {
+    "en": "Riemann solver",
+    "ja": "リーマンソルバー"
+  },
+  "term.concept.chapman-enskog": {
+    "en": "Chapman–Enskog expansion",
+    "ja": "Chapman–Enskog展開"
+  },
+  "experiment.compute-in-the-browser.0b0d53": {
+    "en": "COMPUTE IN THE BROWSER",
+    "ja": "ブラウザーで計算する"
+  },
+  "experiment.when-does-a-wave.9d8f02": {
+    "en": "When does a wave",
+    "ja": "波はいつ"
+  },
+  "experiment.grow.d11d53": {
+    "en": "grow?",
+    "ja": "増幅する？"
+  },
+  "experiment.change-the-courant-number-stencil-or-direc.e79ac1": {
+    "en": "Change the Courant number, stencil, or direction. Watch the same periodic advection problem through its solution and Fourier amplification.",
+    "ja": "Courant数、差分、流れの方向を変え、同じ周期移流問題を解とFourier増幅係数で調べます。"
+  },
+  "experiment.set-the-experiment.520a2b": {
+    "en": "SET THE EXPERIMENT",
+    "ja": "実験を設定する"
+  },
+  "experiment.difference-method.ee1570": {
+    "en": "Difference method",
+    "ja": "差分法"
+  },
+  "experiment.courant-magnitude.f98d01": {
+    "en": "Courant magnitude",
+    "ja": "Courant数の絶対値"
+  },
+  "experiment.advection-velocity.492c26": {
+    "en": "Advection velocity",
+    "ja": "移流速度"
+  },
+  "experiment.time-steps.f2df4c": {
+    "en": "Time steps",
+    "ja": "時間ステップ数"
+  },
+  "experiment.initial-data.d7b5a3": {
+    "en": "Initial data",
+    "ja": "初期条件"
+  },
+  "experiment.a-1-to-the-right.fce0c7": {
+    "en": "a = +1 · to the right",
+    "ja": "a = +1・右向き"
+  },
+  "experiment.a-1-to-the-left.e6cc91": {
+    "en": "a = −1 · to the left",
+    "ja": "a = −1・左向き"
+  },
+  "experiment.sine-small-grid-scale-ripple.3f5996": {
+    "en": "Sine + small grid-scale ripple",
+    "ja": "正弦波＋小さな格子スケール摂動"
+  },
+  "experiment.smooth-sine-wave.5d31fe": {
+    "en": "Smooth sine wave",
+    "ja": "滑らかな正弦波"
+  },
+  "experiment.square-pulse.46d10e": {
+    "en": "Square pulse",
+    "ja": "矩形パルス"
+  },
+  "experiment.n-64-periodic-0-1.830de6": {
+    "en": "N = 64 · periodic [0, 1]",
+    "ja": "N = 64・周期境界 [0, 1]"
+  },
+  "experiment.signed-c-a-t-x.bb2ce8": {
+    "en": "Signed C = a Δt / Δx",
+    "ja": "符号付き C = a Δt / Δx"
+  },
+  "experiment.download-experiment.4f3ad0": {
+    "en": "Download experiment ↓",
+    "ja": "実験データをダウンロード ↓"
+  },
+  "experiment.definitions-limitations.5620b4": {
+    "en": "Definitions & limitations ↗",
+    "ja": "定義と適用範囲 ↗"
+  },
+  "experiment.suggested-experiments.48a299": {
+    "en": "Suggested experiments",
+    "ja": "実験の例"
+  },
+  "experiment.stable-but-diffusive.6badd9": {
+    "en": "Stable, but diffusive",
+    "ja": "安定だが拡散的"
+  },
+  "experiment.second-order.855a7e": {
+    "en": "Second order",
+    "ja": "2次精度"
+  },
+  "experiment.beyond-cfl.b34029": {
+    "en": "Beyond CFL",
+    "ja": "CFL条件を超える"
+  },
+  "experiment.cfl-is-not-enough.6e78b5": {
+    "en": "CFL is not enough",
+    "ja": "CFL条件だけでは不十分"
+  },
+  "experiment.the-transported-solution.2ae95b": {
+    "en": "The transported solution",
+    "ja": "移流する解"
+  },
+  "experiment.exact-translation.15698f": {
+    "en": "Exact translation",
+    "ja": "厳密な平行移動"
+  },
+  "experiment.computed-samples.520b5c": {
+    "en": "Computed samples",
+    "ja": "計算した標本値"
+  },
+  "experiment.fourier-amplification.8382c4": {
+    "en": "Fourier amplification",
+    "ja": "Fourier増幅係数"
+  },
+  "experiment.the-dashed-line-marks-g-1-growth-above-it-.3ddc92": {
+    "en": "The dashed line marks |G| = 1. Growth above it identifies unstable modes for this periodic linear problem.",
+    "ja": "破線は|G|=1です。この周期線形問題では、これを超える増幅が不安定モードを表します。"
+  },
+  "experiment.read-the-result.d50f00": {
+    "en": "READ THE RESULT",
+    "ja": "結果を読む"
+  },
+  "experiment.follow-the-derivation.68b708": {
+    "en": "Follow the derivation ↗",
+    "ja": "導出を読む ↗"
+  },
+  "experiment.a-controlled-model-with-a-precise-scope.0a67b7": {
+    "en": "A controlled model, with a precise scope.",
+    "ja": "条件と適用範囲を定めたモデル。"
+  },
+  "experiment.the-browser-runs-the-periodic-finite-diffe.efd631": {
+    "en": "The browser runs the periodic finite-difference updates directly. Its numerical kernels are checked against 24 Python reference cases, including both velocity signs and unstable settings. The Fourier result applies to constant-coefficient linear advection; it does not certify nonlinear Euler, WENO, or arbitrary boundaries.",
+    "ja": "ブラウザーが周期差分の更新を直接計算します。数値カーネルは、正負の速度と不安定設定を含む24のPython参照ケースで確認しています。Fourier解析は定係数線形移流に適用され、非線形Euler、WENO、任意の境界を保証しません。"
+  },
+  "experiment.read-the-python-implementation.04aff9": {
+    "en": "Read the Python implementation ↗",
+    "ja": "Python実装を読む ↗"
+  },
+  "experiment.bounded-fourier-modes.6090b0": {
+    "en": "Bounded Fourier modes",
+    "ja": "Fourierモードは有界"
+  },
+  "experiment.growing-fourier-modes.b1ebee": {
+    "en": "Growing Fourier modes",
+    "ja": "Fourierモードが増幅"
+  },
+  "experiment.max-discrete-g.2ff731": {
+    "en": "max discrete |G| =",
+    "ja": "離散波数の最大 |G| ="
+  },
+  "experiment.the-vertical-scale-has-expanded-to-show-th.1ce252": {
+    "en": "The vertical scale has expanded to show the growing solution. Compare the amplitude and error below.",
+    "ja": "増幅した解を表示するため縦軸を広げています。下の振幅と誤差も比較してください。"
+  },
+  "experiment.exact-values-are-sampled-from-the-continuo.4f72a4": {
+    "en": "Exact values are sampled from the continuous periodic translation of the selected initial data.",
+    "ja": "厳密値は、選んだ初期分布を連続的に周期移動して標本化しています。"
+  },
+  "experiment.wavenumber-angle-radians.63a64c": {
+    "en": "WAVENUMBER ANGLE θ (RADIANS)",
+    "ja": "波数角 θ（ラジアン）"
+  },
+  "experiment.pointwise-l1-error.138474": {
+    "en": "Pointwise L1 error",
+    "ja": "点値L1誤差"
+  },
+  "experiment.maximum-u.10d45d": {
+    "en": "Maximum |u|",
+    "ja": "最大 |u|"
+  },
+  "experiment.mean-drift.56b36a": {
+    "en": "Mean drift",
+    "ja": "平均値の変化"
+  },
+  "experiment.upwind.9af84d": {
+    "en": "Upwind",
+    "ja": "風上差分（upwind）"
+  },
+  "experiment.a-direction-aware-first-order-stencil-with.7ef1f2": {
+    "en": "A direction-aware first-order stencil. Within |C| ≤ 1 it damps high-frequency errors, but also smooths the physical wave.",
+    "ja": "流れの向きを考慮した1次差分です。|C|≤1では高周波誤差を減衰させますが、物理的な波もなまらせます。"
+  },
+  "experiment.neighbor-averaging-adds-numerical-diffusio.5b05f2": {
+    "en": "Neighbor averaging adds numerical diffusion. This classical fully discrete LF scheme is distinct from the local Rusanov flux used in the Sod comparison.",
+    "ja": "隣接点の平均によって数値拡散が加わります。この古典的な完全離散LF法は、Sod比較に使う局所Rusanov流束と異なります。"
+  },
+  "experiment.second-order-accuracy-for-smooth-solutions.1f4998": {
+    "en": "Second-order accuracy for smooth solutions reduces diffusion. Dispersion and oscillations near a discontinuity remain possible even within |C| ≤ 1.",
+    "ja": "滑らかな解には2次精度で拡散を抑えます。|C|≤1でも、不連続近傍では分散と振動が起こり得ます。"
+  },
+  "experiment.forward-euler-in-time-and-centered-differe.a81705": {
+    "en": "Forward Euler in time and centered differences in space. Some Fourier modes grow for every nonzero C, even when the domain-of-dependence CFL condition is satisfied.",
+    "ja": "時間は前進Euler、空間は中心差分です。依存領域のCFL条件を満たしても、ゼロでないCでは増幅するFourierモードがあります。"
+  },
+  "experiment.01-stability-laboratory.5bb01f": {
+    "en": "01 / Stability laboratory",
+    "ja": "01 / 安定性実験室"
+  },
+  "experiment.02-convergence-notebook.86bf0e": {
+    "en": "02 / Convergence notebook",
+    "ja": "02 / 収束ノート"
+  },
+  "experiment.03-time-integration.f26c76": {
+    "en": "03 / Time integration",
+    "ja": "03 / 時間積分"
+  },
+  "experiment.04-mesh-explorer.ad0767": {
+    "en": "04 / Mesh explorer",
+    "ja": "04 / 格子を調べる"
+  },
+  "experiment.05-hamiltonian-maps.4e225c": {
+    "en": "05 / Hamiltonian maps",
+    "ja": "05 / Hamilton写像"
+  },
+  "experiment.06-slope-limiters.f1a0e4": {
+    "en": "06 / Slope limiters",
+    "ja": "06 / 勾配制限"
+  },
+  "experiment.07-runge-kutta-families.f29be6": {
+    "en": "07 / Runge–Kutta families",
+    "ja": "07 / Runge–Kutta法"
+  },
+  "experiment.08-cip-profiles.19a8e7": {
+    "en": "08 / CIP profiles",
+    "ja": "08 / CIP分布"
+  },
+  "experiment.experiment-notebooks.5c188d": {
+    "en": "Experiment notebooks",
+    "ja": "実験ノート"
+  },
+  "experiment.read-the-computed-evidence.be45f6": {
+    "en": "READ THE COMPUTED EVIDENCE",
+    "ja": "計算による根拠を読む"
+  },
+  "experiment.smaller-cells-what-gets.e3910b": {
+    "en": "Smaller cells. What gets",
+    "ja": "セルを細かくすると、何が"
+  },
+  "experiment.better.6e211c": {
+    "en": "better?",
+    "ja": "改善する？"
+  },
+  "experiment.inspect-the-first-edition-grid-refinement-.c73ae8": {
+    "en": "Inspect the first-edition grid-refinement measurements. Compare errors, read observed orders, and distinguish elements from unknowns.",
+    "ja": "初版の格子細分化の測定値を調べます。誤差と実測次数を比較し、要素数と未知数を区別します。"
+  },
+  "experiment.refinement-study.95bbb3": {
+    "en": "Refinement study",
+    "ja": "細分化テスト"
+  },
+  "experiment.periodic-dg-advection-p0-p1-p2.29a28d": {
+    "en": "Periodic DG advection · P0 / P1 / P2",
+    "ja": "周期DG移流・P0／P1／P2"
+  },
+  "experiment.euler-entropy-wave-muscl-weno5-js.2cfca6": {
+    "en": "Euler entropy wave · MUSCL / WENO5-JS",
+    "ja": "Eulerエントロピー波・MUSCL／WENO5-JS"
+  },
+  "experiment.horizontal-axis.b2095a": {
+    "en": "Horizontal axis",
+    "ja": "横軸"
+  },
+  "experiment.elements-n.8180d4": {
+    "en": "Elements N",
+    "ja": "要素数 N"
+  },
+  "experiment.unknowns-n-p-1.2eb2a5": {
+    "en": "Unknowns N × (p + 1)",
+    "ja": "未知数 N × (p + 1)"
+  },
+  "experiment.log-log-scale.6692f9": {
+    "en": "LOG–LOG SCALE",
+    "ja": "両対数表示"
+  },
+  "experiment.what-is-being-compared.d4be76": {
+    "en": "WHAT IS BEING COMPARED?",
+    "ja": "何を比較しているか"
+  },
+  "experiment.how-to-read-the-order.d830da": {
+    "en": "How to read the order ↗",
+    "ja": "収束次数の読み方 ↗"
+  },
+  "experiment.inspect-the-measurements.f33089": {
+    "en": "Inspect the measurements",
+    "ja": "測定値を確認する"
+  },
+  "experiment.series.a8295e": {
+    "en": "Series",
+    "ja": "系列"
+  },
+  "experiment.scalar-unknowns.1b3421": {
+    "en": "Scalar unknowns",
+    "ja": "スカラー未知数"
+  },
+  "experiment.measured-error.cf2a09": {
+    "en": "Measured error",
+    "ja": "測定誤差"
+  },
+  "experiment.observed-order.60849a": {
+    "en": "Observed order",
+    "ja": "実測次数"
+  },
+  "experiment.evidence-not-a-universal-ranking.d02834": {
+    "en": "Evidence, not a universal ranking.",
+    "ja": "比較の根拠と適用範囲。"
+  },
+  "experiment.these-are-the-existing-gallery-measurement.d34216": {
+    "en": "These are the existing gallery measurements, not new timings. Different degrees of freedom, stencils, time integrators, and error definitions prevent a simple cost ranking. Expected spatial order, observed fully discrete order, and nonlinear stability are separate claims.",
+    "ja": "既存ギャラリーの測定値であり、新しい時間計測ではありません。自由度、差分、時間積分、誤差の定義が異なるため、単純な計算コストの順位は付けられません。期待空間次数、実測した完全離散次数、非線形安定性は別の性質です。"
+  },
+  "experiment.download-the-original-gallery-manifest.d4cef9": {
+    "en": "Download the original gallery manifest ↗",
+    "ja": "元のギャラリー記録をダウンロード ↗"
+  },
+  "experiment.scalar-unknowns-n-p-1.c47cab": {
+    "en": "SCALAR UNKNOWNS N × (p + 1)",
+    "ja": "スカラー未知数 N × (p + 1)"
+  },
+  "experiment.elements-n.bd3f48": {
+    "en": "ELEMENTS N",
+    "ja": "要素数 N"
+  },
+  "experiment.grid-points-cells-n.21e4fa": {
+    "en": "GRID POINTS / CELLS N",
+    "ja": "格子点数／セル数 N"
+  },
+  "experiment.measured-error.fd9a47": {
+    "en": "MEASURED ERROR",
+    "ja": "測定誤差"
+  },
+  "experiment.dg-grid-refinement-errors.5275e4": {
+    "en": "DG grid-refinement errors",
+    "ja": "DGの格子細分化誤差"
+  },
+  "experiment.euler-entropy-wave-grid-refinement-errors.67465d": {
+    "en": "Euler entropy-wave grid-refinement errors",
+    "ja": "Eulerエントロピー波の格子細分化誤差"
+  },
+  "experiment.periodic-dg-advection.1930b3": {
+    "en": "Periodic DG advection",
+    "ja": "周期DG移流"
+  },
+  "experiment.euler-entropy-wave.ff9d7d": {
+    "en": "Euler entropy wave",
+    "ja": "Eulerエントロピー波"
+  },
+  "experiment.elements-are-not-unknowns.0c54d6": {
+    "en": "Elements are not unknowns.",
+    "ja": "要素数と未知数は異なる。"
+  },
+  "experiment.dg-p0-p1-and-p2-store-1-2-and-3-scalar-unk.2f4e3f": {
+    "en": "DG P0, P1, and P2 store 1, 2, and 3 scalar unknowns per element. Change the horizontal axis to see that distinction.",
+    "ja": "DG P0、P1、P2は要素ごとに1、2、3個のスカラー未知数を持ちます。横軸を変えて違いを確認できます。"
+  },
+  "experiment.the-expected-smooth-spatial-orders-are-1-2.64df32": {
+    "en": "The expected smooth spatial orders are 1, 2, and 3. SSPRK3 also limits the fully discrete time order to three. Errors are sampled at the implementation’s quadrature points, rather than a separately integrated L2 norm.",
+    "ja": "滑らかな解の期待空間次数は1、2、3です。SSPRK3によって完全離散化の時間次数も3に制限されます。誤差は実装の求積点で標本化し、別途積分したL2ノルムではありません。"
+  },
+  "experiment.spatial-order-is-not-the-whole-story.c90658": {
+    "en": "Spatial order is not the whole story.",
+    "ja": "空間次数だけでは決まらない。"
+  },
+  "experiment.primitive-minmod-muscl-and-componentwise-f.193f79": {
+    "en": "Primitive minmod MUSCL and componentwise FD WENO5-JS evolve a smooth periodic Euler entropy wave at the listed CFL.",
+    "ja": "基本変数minmod MUSCLと成分別差分WENO5-JSで、表示したCFL数のもと滑らかな周期Eulerエントロピー波を発展させます。"
+  },
+  "experiment.weno5-js-has-fifth-order-spatial-reconstru.3ba8b4": {
+    "en": "WENO5-JS has fifth-order spatial reconstruction, while SSPRK3 is third order in time. The measured slopes reflect this fully discrete setup; they do not guarantee fifth-order behavior under unlimited refinement. The error is a pointwise density L1 comparison.",
+    "ja": "WENO5-JSの空間再構成は5次、SSPRK3の時間積分は3次です。測定した傾きはこの完全離散設定に対応し、無制限の細分化で5次になることを保証しません。誤差は密度点値のL1比較です。"
+  },
+  "experiment.points-cells-n.852f9b": {
+    "en": "Points / cells N",
+    "ja": "点数／セル数 N"
+  },
+  "experiment.the-equation-gallery-computed-profiles.c4e224": {
+    "en": "THE EQUATION GALLERY / COMPUTED PROFILES",
+    "ja": "方程式ギャラリー／計算した分布"
+  },
+  "experiment.choose-the-equation.802f46": {
+    "en": "Choose the equation.",
+    "ja": "方程式を選び、"
+  },
+  "experiment.follow-its.2e207b": {
+    "en": "Follow its",
+    "ja": "その"
+  },
+  "experiment.waves.3c3d26": {
+    "en": "waves.",
+    "ja": "波を追う。"
+  },
+  "experiment.a-shock-a-rarefaction-an-upstream-traffic-.64395c": {
+    "en": "A shock, a rarefaction, an upstream traffic jam, or a diffusing mode. Compare actual numerical profiles with the reference appropriate to each equation.",
+    "ja": "衝撃波、膨張波、上流へ進む渋滞、拡散するモード。実際の数値分布を、各方程式に適した参照解と比較します。"
+  },
+  "experiment.nine-cases-seven-families.29160a": {
+    "en": "NINE CASES / SEVEN FAMILIES",
+    "ja": "9ケース／7系統"
+  },
+  "experiment.equation-and-initial-data.69a521": {
+    "en": "Equation and initial data",
+    "ja": "方程式と初期条件"
+  },
+  "experiment.loading-computed-cases.ebe251": {
+    "en": "Loading computed cases…",
+    "ja": "計算ケースを読み込み中…"
+  },
+  "experiment.saved-physical-time.54a089": {
+    "en": "Saved physical time",
+    "ja": "保存した物理時刻"
+  },
+  "experiment.play.5840f0": {
+    "en": "Play ▷",
+    "ja": "再生 ▷"
+  },
+  "experiment.pause.296fc9": {
+    "en": "Pause Ⅱ",
+    "ja": "一時停止 Ⅱ"
+  },
+  "experiment.reset.daee76": {
+    "en": "Reset",
+    "ja": "リセット"
+  },
+  "experiment.definitions-reference-conventions.bd30d2": {
+    "en": "Definitions & reference conventions ↗",
+    "ja": "定義と参照解の規約 ↗"
+  },
+  "experiment.a-l-stability-error-norms.3ef631": {
+    "en": "A/L stability & error norms ↗",
+    "ja": "A／L安定性と誤差ノルム ↗"
+  },
+  "experiment.download-all-profiles.ce9365": {
+    "en": "Download all profiles ↓",
+    "ja": "全分布をダウンロード ↓"
+  },
+  "experiment.loading-numerical-data.4d9476": {
+    "en": "Loading numerical data…",
+    "ja": "数値データを読み込み中…"
+  },
+  "experiment.the-solution.4a2255": {
+    "en": "The solution",
+    "ja": "解の分布"
+  },
+  "experiment.read-the-propagation.0a7680": {
+    "en": "READ THE PROPAGATION",
+    "ja": "伝播を読む"
+  },
+  "experiment.characteristic-speed.a9692a": {
+    "en": "Characteristic speed",
+    "ja": "特性速度"
+  },
+  "experiment.inspect-the-frame.68e8be": {
+    "en": "Inspect the frame",
+    "ja": "フレームを調べる"
+  },
+  "experiment.find-the-source.d782a3": {
+    "en": "Find the source ↗",
+    "ja": "出典を探す ↗"
+  },
+  "experiment.expand-the-equation-map-status-shown-in-ea.c0ac71": {
+    "en": "EXPAND THE EQUATION MAP / STATUS SHOWN IN EACH CHAPTER",
+    "ja": "方程式の地図を広げる／各章に実装状況を明示"
+  },
+  "experiment.from-living-systems-to-rotating-fluids.c15821": {
+    "en": "From living systems to rotating fluids.",
+    "ja": "生物系から回転流体へ。"
+  },
+  "experiment.read-a-survey-of-22-biological-model-famil.b5cec1": {
+    "en": "Read a survey of 22 biological model families, then inspect Arakawa A/B/C variable placement and linear shallow-water wave dispersion.",
+    "ja": "22系統の生物モデルの文献調査と、Arakawa A／B／C格子の変数配置・線形浅水波の分散を調べます。"
+  },
+  "experiment.biological-models-literature-survey.7ab0c4": {
+    "en": "Biological models / literature survey ↗",
+    "ja": "生物モデル／文献調査 ↗"
+  },
+  "experiment.arakawa-grids-tested-linear-symbols.7ca80c": {
+    "en": "Arakawa grids / tested linear symbols ↗",
+    "ja": "Arakawa格子／検証した線形記号 ↗"
+  },
+  "experiment.kinetic-auxiliary-systems.528077": {
+    "en": "KINETIC & AUXILIARY SYSTEMS",
+    "ja": "運動論と補助変数系"
+  },
+  "experiment.another-route-to-the-fluid.7d5f9c": {
+    "en": "Another route to the fluid.",
+    "ja": "流体への別の道。"
+  },
+  "experiment.collide-and-stream.0af3f6": {
+    "en": "Collide and stream.",
+    "ja": "衝突させ、並進させる。"
+  },
+  "experiment.shear-mode-viscosity-forced-poiseuille-flo.591440": {
+    "en": "Shear-mode viscosity, forced Poiseuille flow, and half-way walls.",
+    "ja": "せん断モードの粘性、外力駆動Poiseuille流、中間壁。"
+  },
+  "experiment.chapman-enskog.5ee8c2": {
+    "en": "CHAPMAN–ENSKOG",
+    "ja": "Chapman–Enskog展開"
+  },
+  "experiment.recover-transport.f6f40a": {
+    "en": "Recover transport.",
+    "ja": "輸送方程式を導く。"
+  },
+  "experiment.equilibrium-nonequilibrium-stress-and-the-.088f7f": {
+    "en": "Equilibrium, nonequilibrium stress, and the discrete-time τ−1/2 correction.",
+    "ja": "平衡、非平衡応力、離散時間のτ−1/2補正。"
+  },
+  "experiment.nishikawa-steady-diffusion.14be06": {
+    "en": "NISHIKAWA / STEADY DIFFUSION",
+    "ja": "西川法／定常拡散"
+  },
+  "experiment.evolve-the-gradient.582b2d": {
+    "en": "Evolve the gradient.",
+    "ja": "勾配を発展させる。"
+  },
+  "experiment.a-first-order-hyperbolic-system-converges-.b6d19e": {
+    "en": "A first-order hyperbolic system converges in pseudo-time to a steady elliptic solution.",
+    "ja": "1階の双曲型系を擬似時間で発展させ、定常な楕円型の解へ収束させます。"
+  },
+  "experiment.keep-the-reference-convention-visible.35fa53": {
+    "en": "Keep the reference convention visible.",
+    "ja": "参照解の規約を明示する。"
+  },
+  "experiment.the-scalar-curves-compare-exact-cell-avera.8c39c5": {
+    "en": "The scalar curves compare exact cell averages. Sod uses point samples of the exact Euler solution. The wet dam-break and isothermal examples currently have no exact overlay. Fluid-system playback links independent final-time solves; the frame notes identify this explicitly.",
+    "ja": "スカラー曲線は厳密セル平均と比較し、SodはEuler厳密解の点値を使います。水深が正のダム崩壊と等温流には現在、厳密解の重ね描きがありません。流体系の再生は終了時刻ごとの独立計算をつないでおり、各フレームに明示します。"
+  },
+  "experiment.read-the-equation-definitions.8b8ee1": {
+    "en": "Read the equation definitions ↗",
+    "ja": "方程式の定義を読む ↗"
+  },
+  "experiment.periodic-incompressible-flow.cdedd6": {
+    "en": "Periodic incompressible flow ↗",
+    "ja": "周期非圧縮流 ↗"
+  },
+  "experiment.computed-profile.a47c0e": {
+    "en": "Computed profile",
+    "ja": "数値分布"
+  },
+  "experiment.no-exact-overlay-supplied.b53cb0": {
+    "en": "No exact overlay supplied",
+    "ja": "厳密解の重ね描きなし"
+  },
+  "experiment.no-exact-overlay-supplied.8c3969": {
+    "en": "no exact overlay supplied",
+    "ja": "厳密解の重ね描きなし"
+  },
+  "experiment.cell-averages.d8c138": {
+    "en": "cell averages",
+    "ja": "セル平均"
+  },
+  "experiment.point-sampled-exact-euler-density.17fdea": {
+    "en": "point-sampled exact Euler density",
+    "ja": "Euler厳密密度の点値"
+  },
+  "experiment.l1-mean-absolute-error.536fbf": {
+    "en": "L1 / mean absolute error",
+    "ja": "L1／平均絶対誤差"
+  },
+  "experiment.l2-rms-error.b50122": {
+    "en": "L2 / RMS error",
+    "ja": "L2／二乗平均平方根誤差"
+  },
+  "experiment.l-maximum-sampled-error.729d6e": {
+    "en": "L∞ / maximum sampled error",
+    "ja": "L∞／標本上の最大誤差"
+  },
+  "experiment.not-supplied.8b427d": {
+    "en": "Not supplied",
+    "ja": "参照値なし"
+  },
+  "experiment.discrete-mean.81e7cf": {
+    "en": "Discrete mean",
+    "ja": "離散平均"
+  },
+  "experiment.mean-change-conserved-quantity.75d747": {
+    "en": "Mean change / conserved quantity",
+    "ja": "平均の変化／保存量"
+  },
+  "experiment.mean-change-includes-boundary-flux.f5abe6": {
+    "en": "Mean change / includes boundary flux",
+    "ja": "平均の変化／境界流束を含む"
+  },
+  "experiment.reference-convention.4c1c8e": {
+    "en": "Reference convention",
+    "ja": "参照解の規約"
+  },
+  "experiment.the-equation-profiles-could-not-load-reloa.b14d0a": {
+    "en": "The equation profiles could not load. Reload to retry, or read the equation definitions below.",
+    "ja": "方程式の分布を読み込めませんでした。再読み込みするか、下の定義を参照してください。"
+  },
+  "experiment.burgers-shock.a88e2a": {
+    "en": "Burgers / shock",
+    "ja": "Burgers／衝撃波"
+  },
+  "experiment.burgers-rarefaction.58e497": {
+    "en": "Burgers / rarefaction",
+    "ja": "Burgers／膨張波"
+  },
+  "experiment.traffic-upstream-jam.ba335a": {
+    "en": "Traffic / upstream jam",
+    "ja": "交通流／上流へ進む渋滞"
+  },
+  "experiment.traffic-clearing-fan.a3c91b": {
+    "en": "Traffic / clearing fan",
+    "ja": "交通流／渋滞解消の膨張波"
+  },
+  "experiment.linear-advection-translation.c17317": {
+    "en": "Linear advection / translation",
+    "ja": "線形移流／平行移動"
+  },
+  "experiment.heat-mode-decay.380783": {
+    "en": "Heat / mode decay",
+    "ja": "熱拡散／モードの減衰"
+  },
+  "experiment.euler-sod-shock-tube.7e1393": {
+    "en": "Euler / Sod shock tube",
+    "ja": "Euler／Sod衝撃波管"
+  },
+  "experiment.shallow-water-wet-dam-break.010ef3": {
+    "en": "Shallow water / wet dam break",
+    "ja": "浅水流／水深が正のダム崩壊"
+  },
+  "experiment.isothermal-density-jump.dcc7bd": {
+    "en": "Isothermal / density jump",
+    "ja": "等温流／密度跳躍"
+  },
+  "experiment.scalar-conservation-law.033911": {
+    "en": "scalar conservation law",
+    "ja": "スカラー保存則"
+  },
+  "experiment.linear-hyperbolic.a54986": {
+    "en": "linear hyperbolic",
+    "ja": "線形双曲型"
+  },
+  "experiment.parabolic.6cd142": {
+    "en": "parabolic",
+    "ja": "放物型"
+  },
+  "experiment.hyperbolic-system.d14afe": {
+    "en": "hyperbolic system",
+    "ja": "双曲型方程式系"
+  },
+  "experiment.density.18efb3": {
+    "en": "density ρ",
+    "ja": "密度 ρ"
+  },
+  "experiment.depth-h.1843c1": {
+    "en": "depth h",
+    "ja": "水深 h"
+  },
+  "experiment.outflow-endpoint-continuation.05e4ae": {
+    "en": "Outflow / endpoint continuation",
+    "ja": "流出境界／端点値の外挿"
+  },
+  "experiment.outflow-jump-at-x-0-5.88f879": {
+    "en": "Outflow; jump at x=0.5",
+    "ja": "流出境界・初期の跳びはx=0.5"
+  },
+  "experiment.periodic-0-1.343710": {
+    "en": "Periodic [0,1]",
+    "ja": "周期境界 [0,1]"
+  },
+  "experiment.completed-adaptive-cfl-states-output-reque.656289": {
+    "en": "Completed adaptive-CFL states; output requests do not alter solver steps.",
+    "ja": "適応CFLによる完了ステップの状態。出力要求によって計算ステップは変わりません。"
+  },
+  "experiment.completed-solver-steps-snapshots-do-not-ch.5a3366": {
+    "en": "Completed solver steps; snapshots do not change time steps.",
+    "ja": "完了した計算ステップ。スナップショットは時間刻みを変更しません。"
+  },
+  "experiment.each-displayed-time-is-an-independent-solv.312152": {
+    "en": "Each displayed time is an independent solve from the same initial data, shortened only to its final time. Playback connects these separate runs.",
+    "ja": "各表示時刻は、同じ初期条件からその時刻まで個別に解いた結果です。再生はこれらの独立計算をつなぎます。"
+  },
+  "experiment.convex-flux-a-decreasing-jump-shocks-an-in.c4a8d5": {
+    "en": "Convex flux: a decreasing jump shocks; an increasing jump spreads into a fan.",
+    "ja": "凸流束：減少する跳びは衝撃波、増加する跳びは膨張波になります。"
+  },
+  "experiment.exact-cell-integrals-of-the-entropy-rieman.df73fc": {
+    "en": "Exact cell integrals of the entropy Riemann solution. An upstream traffic shock moves at −0.2 while vehicles move forward.",
+    "ja": "エントロピー・リーマン解の厳密セル積分。車両が前進していても、渋滞の衝撃波は−0.2で上流へ進みます。"
+  },
+  "experiment.exact-sine-mode-cell-averages-the-discrete.f735f6": {
+    "en": "Exact sine-mode cell averages; the discrete mean is conserved.",
+    "ja": "正弦モードの厳密セル平均。離散平均は保存されます。"
+  },
+  "experiment.euler-exact-reference-is-point-sampled-l1-.6ecd49": {
+    "en": "Euler exact reference is point sampled; L1 is a sample comparison, not an integrated FV error.",
+    "ja": "Euler厳密参照解は点値です。L1は標本比較であり、積分した有限体積誤差ではありません。"
+  },
+  "experiment.computed-baseline-only-exact-shallow-water.f2aa31": {
+    "en": "Computed baseline only. Exact shallow-water/isothermal overlays, dry beds and bottom topography remain separate work.",
+    "ja": "基準となる数値計算のみです。浅水・等温の厳密解、乾燥床、底面地形は別の課題です。"
+  },
+  "experiment.first-order-upwind-forward-euler.d79314": {
+    "en": "First-order upwind / forward Euler",
+    "ja": "1次風上法／前進Euler"
+  },
+  "experiment.centered-diffusion-forward-euler-t-x-0-4.05ec00": {
+    "en": "Centered diffusion / forward Euler; νΔt/Δx² ≤ 0.4",
+    "ja": "空間中心拡散／前進Euler・νΔt/Δx²≤0.4"
+  },
+  "experiment.godunov-flux-muscl-minmod-ssprk-3-3.c3ecbe": {
+    "en": "Godunov flux · MUSCL minmod · SSPRK(3,3)",
+    "ja": "Godunov流束・MUSCL minmod・SSPRK(3,3)"
+  },
+  "experiment.primitive-muscl-minmod-ssprk3-hllc.d05502": {
+    "en": "Primitive MUSCL minmod · SSPRK3 · HLLC",
+    "ja": "基本変数MUSCL minmod・SSPRK3・HLLC"
+  },
+  "experiment.primitive-muscl-minmod-ssprk3-hll.757b3c": {
+    "en": "Primitive MUSCL minmod · SSPRK3 · HLL",
+    "ja": "基本変数MUSCL minmod・SSPRK3・HLL"
+  },
+  "experiment.1-0-25-sin-2-x-initialized-as-exact-cell-a.44ef00": {
+    "en": "1 + 0.25 sin(2πx), initialized as exact cell averages",
+    "ja": "1 + 0.25 sin(2πx)、厳密セル平均で初期化"
+  },
+  "experiment.fourier-decay-exp-k-t-no-finite-characteri.9d1c9c": {
+    "en": "Fourier decay exp(−νk²t); no finite characteristic speed",
+    "ja": "Fourier減衰 exp(−νk²t)・有限の特性速度なし"
+  },
+  "experiment.f-1-2-vehicle-speed-1.c9942d": {
+    "en": "f′(ρ) = 1−2ρ; vehicle speed = 1−ρ",
+    "ja": "f′(ρ) = 1−2ρ・車両速度 = 1−ρ"
+  },
+  "experiment.rest-left-right-density-1-0-125-pressure-1.818420": {
+    "en": "Rest; left/right density 1 / 0.125, pressure 1 / 0.1",
+    "ja": "静止・左／右の密度1／0.125、圧力1／0.1"
+  },
+  "experiment.rest-left-right-depth-2-1.3423dd": {
+    "en": "Rest; left/right depth 2 / 1",
+    "ja": "静止・左／右の水深2／1"
+  },
+  "experiment.rest-left-right-density-1-0-125.892d34": {
+    "en": "Rest; left/right density 1 / 0.125",
+    "ja": "静止・左／右の密度1／0.125"
+  },
+  "experiment.left-left-right-right-jump-at-x-x.f2740c": {
+    "en": "Left {left}, right {right}; jump at x={x}",
+    "ja": "左{left}、右{right}・跳びの位置x={x}"
+  },
+  "experiment.solver-steps-count.105aa0": {
+    "en": "Solver steps: {count}",
+    "ja": "計算ステップ数：{count}"
+  },
+  "experiment.frame-index-total.2e6e8f": {
+    "en": "Frame {index} / {total}",
+    "ja": "フレーム {index}／{total}"
+  },
+  "experiment.measure-dashed.b52ce5": {
+    "en": "{measure} / dashed",
+    "ja": "{measure}／破線"
+  },
+  "experiment.title-at-physical-time-time.31c0e7": {
+    "en": "{title} at physical time {time}",
+    "ja": "{title}・物理時刻 {time}"
+  },
+  "experiment.t-time-steps-steps.97c186": {
+    "en": "t = {time} · {steps} steps",
+    "ja": "t = {time}・{steps}ステップ"
+  },
+  "experiment.method-solution-after-steps-time-steps-at-.08bcec": {
+    "en": "{method} solution after {steps} time steps at C={c}",
+    "ja": "{method}・C={c}で{steps}ステップ後の解"
+  },
+  "experiment.fourier-amplification-for-method.d7f842": {
+    "en": "Fourier amplification for {method}",
+    "ja": "{method}のFourier増幅係数"
+  },
+  "gallery.a-b-c-placements-and-four-semi-discrete-sh.df1b31": {
+    "en": "A/B/C placements and four semi-discrete shallow-water dispersion cuts, with the Coriolis interpolation and deformation-radius ratio stated.",
+    "ja": "A／B／C配置と、浅水波の半離散分散関係4例。Coriolis補間と変形半径比を明示します。"
+  },
+  "gallery.burgers-shocks-fans-upstream-traffic-jams-.6d5b5e": {
+    "en": "Burgers shocks/fans, upstream traffic jams, translation and physical heat diffusion against exact cell averages.",
+    "ja": "Burgersの衝撃波・膨張波、上流へ進む渋滞、移流、熱拡散を厳密セル平均と比較します。"
+  },
+  "gallery.triangular-fem-true-krylov-residuals-stiff.aec7c8": {
+    "en": "Triangular FEM, true Krylov residuals, stiff ODE refinement, and periodic MAC Taylor–Green verification.",
+    "ja": "三角形FEM、Krylov法の真の残差、硬いODEの収束、周期MAC Taylor–Green渦の検証。"
+  },
+  "gallery.d2q9-shear-decay-half-way-wall-poiseuille-.407446": {
+    "en": "D2Q9 shear decay, half-way-wall Poiseuille profiles, and an explicitly scoped hyperbolic-diffusion baseline.",
+    "ja": "D2Q9のせん断減衰、中間壁Poiseuille分布、適用範囲を明示した双曲型拡散の基準計算。"
+  },
+  "gallery.original-cubic-hermite-cip-with-smooth-and.0718b2": {
+    "en": "Original cubic-Hermite CIP with smooth and square profiles, independently evolved gradients, and an analytic conservation counterexample.",
+    "ja": "原型の3次Hermite CIP。滑らかな分布と矩形波、独立に発展する勾配、保存性の解析的な反例。"
+  },
+  "gallery.nine-explicit-rk-methods-shared-linear-sta.be2f57": {
+    "en": "Nine explicit RK methods: shared linear stability polynomials, different nonlinear stages, measured orders, and conditional SSP bounds.",
+    "ja": "9つの陽的RK法。同じ線形安定性多項式、異なる非線形段階、実測次数、条件付きSSP限界。"
+  },
+  "gallery.five-slope-choices-on-the-same-periodic-pu.a6dfa9": {
+    "en": "Five slope choices on the same periodic pulse and Sod problem, plus smooth-wave refinement. TVB and positive reconstruction have a separate advanced explanation.",
+    "ja": "同じ周期パルスとSod問題で5つの勾配制限を比較し、滑らかな波の収束も測定。TVBと正値再構成は別の発展解説で扱います。"
+  },
+  "gallery.original-second-order-cartesian-keep-rk4-s.4e6863": {
+    "en": "Original second-order Cartesian KEEP + RK4: smooth-vortex refinement and approximate entropy preservation. No shock stabilization or pressure-equilibrium extension.",
+    "ja": "原型の直交座標2次KEEP＋RK4。滑らかな渦の収束と近似的なエントロピー保存。衝撃波安定化や圧力平衡拡張は含みません。"
+  },
+  "gallery.five-fixed-step-integrators-on-harmonic-an.965728": {
+    "en": "Five fixed-step integrators on harmonic and quartic Hamiltonians. Energy histories to T=200 and phase orbits to T=10; no equal-cost ranking.",
+    "ja": "調和・4次Hamilton系で固定刻み5手法を比較。T=200までのエネルギーとT=10までの位相軌道を示し、同一コストの順位は付けません。"
+  },
+  "gallery.an-isolated-octree-compared-with-the-same-.bef448": {
+    "en": "An isolated octree compared with the same softened direct force sum, and a separate periodic CIC/FFT Poisson example.",
+    "ja": "孤立八分木を、同じ軟化を使った直接和と比較。別途、周期CIC／FFT Poissonの例も示します。"
+  },
+  "gallery.isolated-doubled-grid-convolution-a-slab-m.8300a3": {
+    "en": "Isolated doubled-grid convolution, a slab mean mode, and a sinusoidal sheet. Sampled DFT and continuous coefficients are distinct.",
+    "ja": "孤立倍格子の畳み込み、スラブ平均モード、正弦状薄層。標本DFTと連続Fourier係数を区別します。"
+  },
+  "gallery.computed-mach-10-reflection-at-t-0-2-on-25.1642f3": {
+    "en": "Computed Mach-10 reflection at t = 0.2 on 256 × 64 cells. First-order HLL + SSPRK2; a diffusive baseline, without a resolved fine wall jet.",
+    "ja": "256×64セルでt=0.2まで計算したMach 10の反射。1次HLL＋SSPRK2の拡散的な基準計算で、細い壁面ジェットは解像していません。"
+  },
+  "gallery.four-numerical-fluxes-meet-the-exact-densi.c2e595": {
+    "en": "Four numerical fluxes meet the exact density, velocity, and pressure profiles.",
+    "ja": "4つの数値流束を、密度・速度・圧力の厳密分布と比較します。"
+  },
+  "gallery.muscl-and-weno5-js-on-the-shu-osher-proble.6dd375": {
+    "en": "MUSCL and WENO5-JS on the Shu–Osher problem. A numerical comparison, without an exact final-time reference.",
+    "ja": "Shu–Osher問題のMUSCLとWENO5-JS。終了時刻の厳密参照解を用いない数値比較です。"
+  },
+  "gallery.periodic-dg-and-fourier-advection-plus-dg-.5e350d": {
+    "en": "Periodic DG and Fourier advection, plus DG grid refinement. Degrees of freedom and costs are not matched.",
+    "ja": "周期DG・Fourier移流とDGの格子細分化。自由度と計算コストを同一には揃えていません。"
+  },
+  "gallery.fourier-amplification-and-a-seeded-nyquist.28b45c": {
+    "en": "Fourier amplification and a seeded Nyquist mode reveal the effect of the Courant number.",
+    "ja": "Fourier増幅係数と初期に加えたNyquistモードから、Courant数の効果を調べます。"
+  },
+  "gallery.first-order-ct-and-glm-examples-on-a-perio.72ab0f": {
+    "en": "First-order CT and GLM examples on a periodic square. Their native divergence operators differ.",
+    "ja": "周期正方形上の1次CTとGLMの例。それぞれが用いる離散発散演算子は異なります。"
+  },
+  "gallery.a-longitudinal-magnetic-error-is-injected-.8efeb5": {
+    "en": "A longitudinal magnetic error is injected into OT data to isolate propagation and damping.",
+    "ja": "OTデータに縦方向の磁場誤差を加え、伝播と減衰を切り分けて調べます。"
+  },
+  "gallery.diffusion-time-integrators-and-three-poiss.245e43": {
+    "en": "Diffusion time integrators and three Poisson boundary-condition sets for a manufactured solution.",
+    "ja": "拡散の時間積分法と、製造解を使ったPoisson境界条件3組。"
+  },
+  "gallery.geometric-multigrid-residuals-and-the-spec.bcbb5f": {
+    "en": "Geometric multigrid residuals and the spectral radius of stationary iteration matrices.",
+    "ja": "幾何マルチグリッドの残差と、定常反復行列のスペクトル半径。"
+  },
+  "gallery.pseudo-time-residuals-for-bdf2-advection-a.d7466c": {
+    "en": "Pseudo-time residuals for BDF2 advection and symmetric Jacobi scaling of an SPD model matrix.",
+    "ja": "BDF2移流の擬似時間残差と、対称正定値モデル行列の対称Jacobiスケーリング。"
+  },
+  "gallery.the-lax-shock-tube-and-pointwise-density-e.d5eee0": {
+    "en": "The Lax shock tube and pointwise density error for a periodic Euler entropy wave.",
+    "ja": "Lax衝撃波管と、周期Eulerエントロピー波の密度点値誤差。"
+  },
+  "gallery.shallow-water-dam-break-and-isothermal-eul.19e4bd": {
+    "en": "Shallow-water dam break and isothermal Euler. Exact Riemann references are future work.",
+    "ja": "浅水ダム崩壊と等温Euler。厳密リーマン参照解は今後の課題です。"
+  },
+  "gallery.population-cohorts-and-epidemics.d17794": {
+    "en": "Population, cohorts and epidemics",
+    "ja": "個体群・年齢構造・感染症"
+  },
+  "gallery.read-positive-state-population-models-rene.3d8f4c": {
+    "en": "Read positive-state population models, renewal boundaries and epidemic invariants. Survey entries, not implemented biological solvers.",
+    "ja": "非負個体群モデル、更新境界、感染症の不変量を調べます。文献調査であり、生物ソルバーは未実装です。"
+  },
+  "gallery.fronts-excitation-and-morphogenesis.351248": {
+    "en": "Fronts, excitation and morphogenesis",
+    "ja": "前線・興奮・形態形成"
+  },
+  "gallery.a-biological-equation-map-connects-stiff-r.e4e47b": {
+    "en": "A biological equation map connects stiff reactions, diffusion, directed migration and pattern onset. Literature-only model catalog.",
+    "ja": "硬い反応、拡散、方向性移動、パターン発生をつなぐ生物方程式の地図。文献によるモデル一覧です。"
+  },
+  "gallery.place-the-variables-before-choosing-the-st.1a7b98": {
+    "en": "Place the variables before choosing the stencil",
+    "ja": "差分の前に変数配置を選ぶ"
+  },
+  "gallery.compare-a-b-c-placement-and-independently-.f21804": {
+    "en": "Compare A/B/C placement and independently tested semi-discrete rotating shallow-water wave symbols; D/E remain reading notes.",
+    "ja": "A／B／C配置と独立に検証した半離散回転浅水波の記号を比較。D／Eは解説のみです。"
+  },
+  "gallery.from-asymptotics-to-a-weak-form.d92681": {
+    "en": "From asymptotics to a weak form",
+    "ja": "漸近展開から弱形式へ"
+  },
+  "gallery.separate-kinetic-and-hydrodynamic-scales-a.459b73": {
+    "en": "Separate kinetic and hydrodynamic scales; assemble continuous P1 elements from a variational problem.",
+    "ja": "運動論と流体のスケールを分け、変分問題から連続P1要素を組み立てます。"
+  },
+  "gallery.a-shock-on-the-road.528784": {
+    "en": "A shock on the road",
+    "ja": "道路を進む衝撃波"
+  },
+  "gallery.compare-convex-and-concave-scalar-fluxes-e.794928": {
+    "en": "Compare convex and concave scalar fluxes, exact entropy fans and upstream traffic jams.",
+    "ja": "凸・凹のスカラー流束、厳密エントロピー膨張波、上流へ進む渋滞を比較します。"
+  },
+  "gallery.remove-the-discrete-divergence.ba9eff": {
+    "en": "Remove the discrete divergence",
+    "ja": "離散発散を取り除く"
+  },
+  "gallery.project-a-mac-velocity-with-compatible-gra.65da5e": {
+    "en": "Project a MAC velocity with compatible gradient and divergence operators and a discrete Poisson inverse.",
+    "ja": "整合する勾配・発散と離散Poisson逆演算子で、MAC速度を射影します。"
+  },
+  "gallery.an-implicit-stage-for-a-stiff-mode.4b82ad": {
+    "en": "An implicit stage for a stiff mode",
+    "ja": "硬いモードを陰的段階で解く"
+  },
+  "gallery.explore-l-stable-sdirk2-nonlinear-stage-re.bbec43": {
+    "en": "Explore L-stable SDIRK2, nonlinear stage residuals and separate adaptive time-error control.",
+    "ja": "L安定なSDIRK2、非線形段階残差、独立した適応時間誤差制御を調べます。"
+  },
+  "gallery.minimize-or-stabilize-the-residual.562fca": {
+    "en": "Minimize or stabilize the residual",
+    "ja": "残差を最小化・安定化する"
+  },
+  "gallery.solve-nonsymmetric-sparse-systems-with-fix.c1957f": {
+    "en": "Solve nonsymmetric sparse systems with fixed right preconditioning, true residuals and explicit failure reports.",
+    "ja": "固定した右前処理と真の残差で非対称疎行列系を解き、失敗も明示します。"
+  },
+  "gallery.collide-stream-then-measure-viscosity.62681c": {
+    "en": "Collide, stream, then measure viscosity",
+    "ja": "衝突・並進から粘性を測る"
+  },
+  "gallery.d2q9-lattice-bgk-force-discretization-chap.be873f": {
+    "en": "D2Q9 lattice BGK, force discretization, Chapman–Enskog moments and half-way-wall flow.",
+    "ja": "D2Q9格子BGK、外力離散化、Chapman–Enskogモーメント、中間壁の流れ。"
+  },
+  "gallery.diffusion-through-a-hyperbolic-system.89c578": {
+    "en": "Diffusion through a hyperbolic system",
+    "ja": "双曲型系を通して拡散を解く"
+  },
+  "gallery.auxiliary-gradients-turn-a-steady-second-o.5c4b83": {
+    "en": "Auxiliary gradients turn a steady second-order equation into a first-order system; distinguish the original RD from the local FV baseline.",
+    "ja": "補助勾配で定常2階方程式を1階系へ変換し、原型の残差分配法と局所の有限体積基準計算を区別します。"
+  },
+  "gallery.the-numerical-domain-of-dependence.da53af": {
+    "en": "The numerical domain of dependence",
+    "ja": "数値的な依存領域"
+  },
+  "gallery.a-discrete-stencil-must-reach-the-informat.a38996": {
+    "en": "A discrete stencil must reach the information required by the continuous problem.",
+    "ja": "離散ステンシルは、連続問題に必要な情報に届かなければなりません。"
+  },
+  "gallery.diffusion-implicit-steps-and-stability.ada2ae": {
+    "en": "Diffusion, implicit steps, and stability",
+    "ja": "拡散・陰解法・安定性"
+  },
+  "gallery.connect-time-stepping-to-a-linear-system-s.24e5eb": {
+    "en": "Connect time stepping to a linear-system solve, then ask what happens to each Fourier mode.",
+    "ja": "時間積分を線形方程式の解法と結び付け、各Fourierモードの挙動を調べます。"
+  },
+  "gallery.weak-solutions-and-conservation-form.d22ac1": {
+    "en": "Weak solutions and conservation form",
+    "ja": "弱解と保存形"
+  },
+  "gallery.move-from-a-difference-formula-to-a-conser.baef8c": {
+    "en": "Move from a difference formula to a conservative flux and the waves it resolves.",
+    "ja": "差分公式から保存的流束へ進み、解像する波を調べます。"
+  },
+  "gallery.different-scales-different-bases.5a701c": {
+    "en": "Different scales, different bases",
+    "ja": "異なるスケールと基底"
+  },
+  "gallery.smooth-fine-grid-error-correct-it-on-coars.66ec7f": {
+    "en": "Smooth fine-grid error, correct it on coarse grids, and explore local and global approximations.",
+    "ja": "細格子誤差を平滑化し、粗格子で補正し、局所・大域近似を調べます。"
+  },
+  "gallery.moving-with-the-fluid-or-moving-the-mesh.3cb93f": {
+    "en": "Moving with the fluid, or moving the mesh",
+    "ja": "流体と動くか、格子を動かすか"
+  },
+  "gallery.separate-mesh-velocity-from-fluid-velocity.014076": {
+    "en": "Separate mesh velocity from fluid velocity, then replace fixed connectivity by particle kernel sums.",
+    "ja": "格子速度と流速を分け、固定した接続関係から粒子カーネル和へ進みます。"
+  },
+  "gallery.a-shared-language-of-benchmarks.874a26": {
+    "en": "A shared language of benchmarks",
+    "ja": "テスト問題という共通言語"
+  },
+  "gallery.use-common-test-problems-to-compare-contac.8e23b3": {
+    "en": "Use common test problems to compare contacts, acoustic waves, and magnetic structures.",
+    "ja": "共通の問題で接触波、音響波、磁場構造を比較します。"
+  },
+  "gallery.particles-meshes-and-far-field-expansions.187a6a": {
+    "en": "Particles, meshes, and far-field expansions",
+    "ja": "粒子・格子・遠方展開"
+  },
+  "gallery.assign-mass-to-a-grid-organize-nearby-part.484c3e": {
+    "en": "Assign mass to a grid, organize nearby particles in a tree, and reuse distant interactions through expansions.",
+    "ja": "質量を格子に割り当て、近傍粒子を木で整理し、遠方相互作用を展開で再利用します。"
+  },
+  "gallery.limit-the-oscillations-retain-the-smooth-p.6ea201": {
+    "en": "Limit the oscillations, retain the smooth peaks",
+    "ja": "振動を抑え、滑らかな極値を残す"
+  },
+  "gallery.connect-scalar-tvd-bounds-to-slope-choices.6b52f8": {
+    "en": "Connect scalar TVD bounds to slope choices, then relax small extrema with a TVB threshold.",
+    "ja": "スカラーTVD条件と勾配選択を結び付け、TVB閾値で小さな極値の制限を緩和します。"
+  },
+  "gallery.higher-order-and-magnetic-constraints.19e6de": {
+    "en": "Higher order and magnetic constraints",
+    "ja": "高次精度と磁場の制約"
+  },
+  "gallery.high-order-positivity-entropy-correction-a.915bfc": {
+    "en": "High order, positivity, entropy correction, and magnetic divergence become distinct design questions.",
+    "ja": "高次精度、正値性、エントロピー修正、磁場発散を、それぞれ別の設計課題として扱います。"
+  },
+  "gallery.compose-a-canonical-map.c28bf2": {
+    "en": "Compose a canonical map",
+    "ja": "正準写像を合成する"
+  },
+  "gallery.build-higher-order-symplectic-steps-from-s.4578f7": {
+    "en": "Build higher-order symplectic steps from symmetric lower-order maps, and separate energy error from geometry.",
+    "ja": "対称な低次写像を合成して高次シンプレクティック法を作り、エネルギー誤差と幾何構造を分けます。"
+  },
+  "gallery.physical-time-and-nonlinear-weights.d9a58a": {
+    "en": "Physical time and nonlinear weights",
+    "ja": "物理時間と非線形重み"
+  },
+  "gallery.explore-dual-time-contact-restoration-low-.fc03a0": {
+    "en": "Explore dual time, contact restoration, low-density flows, and WENO5-JS reconstruction.",
+    "ja": "二重時間、接触波の回復、低密度流、WENO5-JS再構成を調べます。"
+  },
+  "gallery.multidimensional-robustness.40d7df": {
+    "en": "Multidimensional robustness",
+    "ja": "多次元での頑健性"
+  },
+  "gallery.examine-discrete-constraints-and-the-path-.d58935": {
+    "en": "Examine discrete constraints and the path toward residual distribution and rotated-hybrid fluxes.",
+    "ja": "離散制約と、残差分配・回転ハイブリッド流束への展開を調べます。"
+  },
+  "gallery.the-boundary-is-part-of-the-force.0318ff": {
+    "en": "The boundary is part of the force",
+    "ja": "境界も力の一部"
+  },
+  "gallery.split-short-and-long-ranges-then-distingui.9d7b2d": {
+    "en": "Split short and long ranges, then distinguish isolated kernels from periodic-horizontal disk gravity.",
+    "ja": "短距離と長距離を分割し、孤立核と水平周期円盤重力を区別します。"
+  },
+  "gallery.relativistic-conservative-fluids.578787": {
+    "en": "Relativistic conservative fluids",
+    "ja": "相対論的な保存形流体"
+  },
+  "gallery.follow-conservative-sr-gr-fluids-magnetic-.7620e7": {
+    "en": "Follow conservative SR/GR fluids, magnetic constraints, state recovery, radiation, and evolving-spacetime GPU calculations. Source notes, not an implemented relativistic solver.",
+    "ja": "保存形SR／GR流体、磁場制約、状態回復、放射、動的時空のGPU計算をたどります。出典ノートであり、相対論ソルバーは未実装です。"
+  },
+  "gallery.particles-meet-a-riemann-problem.632e66": {
+    "en": "Particles meet a Riemann problem",
+    "ja": "粒子とリーマン問題の出会い"
+  },
+  "gallery.trace-gsph-through-its-detailed-2002-formu.b94ec9": {
+    "en": "Trace GSPH through its detailed 2002 formulation, particle MHD, and special-relativistic SRGSPH. Literature and a staged implementation plan.",
+    "ja": "2002年の詳細な定式化から粒子MHD、特殊相対論SRGSPHまで。文献と段階的な実装計画です。"
+  },
+  "gallery.number-tag.5e7bf0": {
+    "en": "{number} / {tag}",
+    "ja": "{number} / {tag}"
+  },
+  "group.b332b708ab": {
+    "en": "Additional formulations",
+    "ja": "追加の定式化"
+  },
+  "group.b916d6c56c": {
+    "en": "Biological model survey",
+    "ja": "生物モデル調査"
+  },
+  "group.b185d19086": {
+    "en": "Coupling, constraints & particles",
+    "ja": "結合・制約・粒子"
+  },
+  "group.0b27e441b3": {
+    "en": "Limiters & admissibility",
+    "ja": "勾配制限と許容状態"
+  },
+  "group.301d5c0e14": {
+    "en": "Linear & nonlinear solvers",
+    "ja": "線形・非線形ソルバー"
+  },
+  "group.79ecd04555": {
+    "en": "Particle fields & gravity",
+    "ja": "粒子場と重力"
+  },
+  "group.fec299c105": {
+    "en": "Physics & mathematical models",
+    "ja": "物理・数学モデル"
+  },
+  "group.167bf7556b": {
+    "en": "Relativistic models",
+    "ja": "相対論モデル"
+  },
+  "group.fd9dab168c": {
+    "en": "Riemann fluxes & corrections",
+    "ja": "リーマン流束と修正"
+  },
+  "group.5ccb3bbfe5": {
+    "en": "Spatial discretization",
+    "ja": "空間離散化"
+  },
+  "group.bf9bbb8cbc": {
+    "en": "Time integration",
+    "ja": "時間積分"
+  }
+}

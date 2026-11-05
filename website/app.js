@@ -1,3 +1,5 @@
+import {glossaryPage,wireGlossary} from './glossary.js';
+import {configureLocale,currentLanguage,resolveLanguage,t,translateText,localizeTree,observeLocalization,languageURL,captureControls,restoreControls} from './i18n.js';
 import {coverageHighlights,coveragePage,wireCoverage} from './coverage.js';
 import {equationsPage,wireEquations,disposeEquations} from './equations.js';
 import {cipPage,wireCIP} from './cip.js';
@@ -97,7 +99,49 @@ const eras = [
  ['1994–1998','Relativistic conservative fluids','Martí–Müller · Banyuls et al. · Pons et al.','Follow conservative SR/GR fluids, magnetic constraints, state recovery, radiation, and evolving-spacetime GPU calculations. Source notes, not an implemented relativistic solver.','relativistic-hydrodynamics','banyuls1997'],
  ['1994–2026','Particles meet a Riemann problem','Inutsuka · Iwasaki · Kitajima · Seno','Trace GSPH through its detailed 2002 formulation, particle MHD, and special-relativistic SRGSPH. Literature and a staged implementation plan.','gsph','inutsuka2002']
 ].sort((a,b)=>parseInt(a[0],10)-parseInt(b[0],10));
-let documents, references, sod, experiments, foundations, coverage;
+let documents, references, sod, experiments, foundations, coverage, translationStatus, localeCatalog, glossary;
+const documentCache = new Map();
+const originalShell = new Map([...document.querySelectorAll('.site-header,.site-footer,#figure-dialog,.skip-link')].map(element => [element, element.innerHTML]));
+const englishNotebooks = new Set(['time-integration','meshes','hamiltonian','limiters','runge-kutta','cip','movies']);
+let navigationVersion = 0, switching = false;
+async function loadDocuments(language) {
+ if (!documentCache.has(language)) documentCache.set(language, fetch(`content.${language}.json`).then(response => {if(!response.ok)throw Error('Cannot load reading language');return response.json();}).catch(error => {documentCache.delete(language);throw error;}));
+ return documentCache.get(language);
+}
+function renderShell() {
+ for (const [element, html] of originalShell) element.innerHTML = html;
+ document.documentElement.lang = currentLanguage();
+ document.querySelectorAll('[data-language]').forEach(button => {
+  button.setAttribute('aria-pressed', String(button.dataset.language === currentLanguage()));
+  button.addEventListener('click', () => changeLanguage(button.dataset.language));
+ });
+ document.querySelector('.mobile-menu').addEventListener('click',event=>{const open=document.querySelector('.site-header').classList.toggle('menu-open');event.currentTarget.setAttribute('aria-expanded',String(open));});
+ document.querySelector('.dialog-close').addEventListener('click',()=>document.querySelector('#figure-dialog').close());
+ const description = currentLanguage()==='ja' ? '方程式、数値計算法、原論文、再現可能なテスト計算をつなぐ数値計算アトラス。' : 'A living atlas of numerical algorithms. Explore the original papers, understand the methods, and inspect reproducible benchmark results.';
+ document.querySelector('meta[name="description"]').content=description;
+ document.querySelector('meta[property="og:description"]').content=description;
+ document.querySelector('meta[property="og:title"]').content=translateText('The Art of Numerical Algorithms');
+ localizeTree(document.body);
+}
+async function changeLanguage(language, {historyEntry=true}={}) {
+ if (switching || language===currentLanguage()) return;
+ switching=true;
+ const previous=currentLanguage(), state=captureControls(main), scrollY=window.scrollY, originalRoute=location.hash;
+ main.setAttribute('aria-busy','true');document.querySelectorAll('[data-language]').forEach(button=>button.disabled=true);
+ const flux=document.querySelector('[data-flux][aria-pressed="true"]')?.dataset.flux;
+ try {
+  const nextDocuments=await loadDocuments(language);
+  configureLocale(localeCatalog,language); documents=nextDocuments;
+  try{localStorage.setItem('numart-language',language);}catch{}
+  if(historyEntry)history.pushState({},'',languageURL(location.href,language));
+  renderShell(); await route(location.hash===originalRoute?{state, scrollY, flux}:{});
+  document.querySelector(`[data-language="${language}"]`)?.focus({preventScroll:true});
+ } catch(error) {
+  configureLocale(localeCatalog,previous);
+  const notice=document.createElement('p');notice.className='language-error page-width';notice.setAttribute('role','alert');notice.textContent=t('translation.failed');main.prepend(notice);console.error(error);
+ } finally {switching=false;main.removeAttribute('aria-busy');document.querySelectorAll('[data-language]').forEach(button=>button.disabled=false);}
+}
+
 const eyebrow = text => `<p class="eyebrow">${text}</p>`;
 const arrow = '<span aria-hidden="true">↗</span>';
 const figureCard = (f, i) => `<article class="figure-card"><button class="figure-open" data-figure="${figures.indexOf(f)}" aria-label="Enlarge ${escapeHTML(f.title)}"><img src="assets/${f.file}" alt="${escapeHTML(f.description)}" loading="lazy" width="1000" height="450"><span class="enlarge" aria-hidden="true">＋</span></button><div class="figure-meta"><span>${f.category}</span><span>${f.year}</span></div><h3>${f.title}</h3><p>${f.description}</p><a class="text-link" href="#/read/${f.chapter}">Read the method ${arrow}</a>${f.movie?`<a class="text-link movie-card-link" href="#/movies?case=${f.movie}">Watch time evolution ▷</a>`:''}</article>`;
@@ -112,6 +156,7 @@ function plot(flux = 'roe') {
 }
 function home() {
  return `<section class="hero page-width"><div class="hero-copy">${eyebrow(`${coverage.counts.papers} PAPERS · ${coverage.counts.references} SOURCES · ONE ATLAS`)}<h1>The ideas behind<br>the <em>computation.</em></h1><p class="hero-description">From shock waves to living systems.<br>${coverage.counts.equations} equation &amp; model entries. ${coverage.counts.methods} numerical methods and building blocks.</p><div class="hero-actions"><a class="button primary" href="#/atlas">Explore the atlas <span aria-hidden="true">→</span></a><a class="text-link" href="#/coverage">What’s inside the atlas ${arrow}</a></div><div class="hero-footnote"><span class="status-dot"></span> Python · Reproducible examples · Public source</div></div><div class="hero-experiment"><div class="experiment-heading"><span class="eyebrow">A CLASSIC, COMPUTED</span><span class="small-mono">1978 / SOD</span></div><h2>One problem.<br>Different numerical lenses.</h2><div id="sod-chart">${plot()}</div><div class="chart-legend"><span class="legend-exact">Exact solution</span><span class="legend-numerical">MUSCL + <span id="flux-label">Roe</span></span></div><div class="flux-controls" aria-label="Choose Riemann flux">${['roe','hllc','hll','rusanov'].map((s,i)=>`<button data-flux="${s}" aria-pressed="${i===0}">${s==='roe'?'Roe':s==='rusanov'?'Rusanov':s.toUpperCase()}</button>`).join('')}</div><p class="experiment-note">N = 200 · t = 0.20 · pointwise density comparison</p><a class="experiment-source" href="#/read/benchmarks">See the setup & verification ${arrow}</a></div></section>
+ ${currentLanguage()==='ja'?`<aside class="translation-progress page-width"><span>${t('translation.progress',{count:translationStatus.translated,total:translationStatus.total})}。未訳章は英語版を表示します。</span><a href="#/read/stability">日本語解説から読む →</a><a href="#/glossary">日英用語集 →</a></aside>`:''}
  ${coverageHighlights(coverage)}
  <section class="principles page-width" id="reading-guide" aria-label="How to use the atlas"><div><span>01</span><p><strong>Read the paper.</strong> Find the original idea and the sources behind it.</p></div><div><span>02</span><p><strong>Understand the method.</strong> Follow the equations, assumptions, and limits.</p></div><div><span>03</span><p><strong>Run the benchmark.</strong> Inspect the result and the evidence that checks it.</p></div></section>
  <section class="section page-width"><div class="section-heading"><div>${eyebrow('FOLLOW THE IDEAS')}<h2>A century of better questions.</h2></div><a class="text-link" href="#/atlas">Open the historical atlas ${arrow}</a></div><div class="history-strip">${[['1928','Can the stencil reach it?','CFL'],['1959','What crosses the interface?','GODUNOV'],['1977','Which scale holds the error?','MULTIGRID'],['1996','Where should the weights go?','WENO5-JS']].map(([year,title,label])=>`<a href="#/atlas"><span class="history-year">${year}</span><h3>${title}</h3><span class="small-mono">${label} <span aria-hidden="true">→</span></span></a>`).join('')}</div></section>
@@ -141,22 +186,23 @@ function gallery() {
 }
 function referenceItem(e) {
  const source=e.doi?`https://doi.org/${e.doi}`:e.source;
- return `<article class="reference-item"><div class="reference-year">${e.year}</div><div><p class="reference-authors">${escapeHTML(e.author.replace(/ and /g,'; '))}</p><h2>${escapeHTML(e.title)}</h2><p class="reference-publication">${escapeHTML(e.journal||e.publisher||e.institution||e.booktitle||'')}${e.volume?` · ${escapeHTML(e.volume)}`:''}${e.pages?` · pp. ${escapeHTML(e.pages.replace('--','–'))}`:''}</p><p class="reference-note">${escapeHTML(e.note)}</p><div class="reference-links"><a href="${escapeHTML(source)}" target="_blank" rel="noopener">Original record ↗</a><a href="${escapeHTML(e.source)}" target="_blank" rel="noopener">Text / implementation source ↗</a><code>${e.id}</code></div></div></article>`;
+ return `<article class="reference-item"><div class="reference-year">${e.year}</div><div><p class="reference-authors" data-original>${escapeHTML(e.author.replace(/ and /g,'; '))}</p><h2 data-original lang="en">${escapeHTML(e.title)}</h2><p class="reference-publication" data-original>${escapeHTML(e.journal||e.publisher||e.institution||e.booktitle||'')}${e.volume?` · ${escapeHTML(e.volume)}`:''}${e.pages?` · pp. ${escapeHTML(e.pages.replace('--','–'))}`:''}</p><p class="reference-note" data-original lang="en">${escapeHTML(e.note)}</p><div class="reference-links"><a href="${escapeHTML(source)}" target="_blank" rel="noopener">Original record ↗</a><a href="${escapeHTML(e.source)}" target="_blank" rel="noopener">Text / implementation source ↗</a><code>${e.id}</code></div></div></article>`;
 }
 function referencePage(query='') {
- return `<section class="page-intro page-width">${eyebrow('THE REFERENCE LIBRARY')}<h1>Return to<br>the <em>source.</em></h1><p>${references.length} research and source records. Original publication dates, implementation sources, and honest notes on what has been verified.</p></section><section class="page-width reference-layout"><aside class="reference-aside"><label for="reference-search">Search the library</label><div class="search-wrap"><span aria-hidden="true">⌕</span><input id="reference-search" type="search" value="${escapeHTML(query)}" placeholder="Author, method, year…" autocomplete="off"></div><p id="reference-count" aria-live="polite"></p><a class="text-link" href="assets/references.bib" download>Download BibTeX ↓</a><p class="aside-note">A DOI identifies a publication. It does not imply that its full text has been inspected or its figures reproduced.</p><a href="#/read/references">Read the complete catalog →</a></aside><div id="reference-results"></div></section>`;
+ return `${currentLanguage()==='ja'?`<p class="translation-notice page-width">${t('translation.original')}</p>`:''}<section class="page-intro page-width">${eyebrow('THE REFERENCE LIBRARY')}<h1>Return to<br>the <em>source.</em></h1><p>${references.length} research and source records. Original publication dates, implementation sources, and honest notes on what has been verified.</p></section><section class="page-width reference-layout"><aside class="reference-aside"><label for="reference-search">Search the library</label><div class="search-wrap"><span aria-hidden="true">⌕</span><input id="reference-search" type="search" value="${escapeHTML(query)}" placeholder="Author, method, year…" autocomplete="off"></div><p id="reference-count" aria-live="polite"></p><a class="text-link" href="assets/references.bib" download>Download BibTeX ↓</a><p class="aside-note">A DOI identifies a publication. It does not imply that its full text has been inspected or its figures reproduced.</p><a href="#/read/references">Read the complete catalog →</a></aside><div id="reference-results"></div></section>`;
 }
 function filterReferences(query) {
  const q=query.toLowerCase().trim();
- const matches=references.filter(e=>[e.author,e.title,e.year,e.id,e.note].join(' ').toLowerCase().includes(q));
+ const matches=references.filter(e=>[e.author,e.title,e.year,e.id,e.note,translateText(e.note)].join(' ').toLowerCase().includes(q));
  document.querySelector('#reference-results').innerHTML=matches.length?matches.map(referenceItem).join(''):'<div class="empty-state"><h2>No references found.</h2><p>Try an author, a method such as WENO, or a publication year.</p></div>';
  document.querySelector('#reference-count').textContent=`${matches.length} of ${references.length} references`;
 }
 function chapter(id) {
  const d=documents[id];
  if(!d) return notFound();
- const links=[['site-coverage','Coverage & counting rules'],['history','Historical atlas'],['experiments','Interactive experiment guide'],['movies','Movie definitions & provenance'],...methods.filter((m,i,a)=>a.findIndex(x=>x.id===m.id)===i).map(m=>[m.id,m.title]),['roe-memorial','Remembering Philip L. Roe'],['nasa-2d','NASA case catalog'],['references','Reference catalog'],['roadmap','Implementation roadmap'],['release-notes-v0.1.0','First-edition notes']];
- return `<div class="reading-shell page-width"><aside class="reading-nav"><a class="back-link" href="#/methods">← Explore the methods</a><p class="eyebrow">IN THIS EDITION</p><nav aria-label="Reading chapters">${links.map(([key,label])=>`<a href="#/read/${key}" ${id===key?'aria-current="page"':''}>${label}</a>`).join('')}</nav><p class="small-mono">FIRST EDITION · v0.1.0</p></aside><div class="chapter-wrap"><div class="chapter-topline"><span>THE READING ROOM</span><a href="${repo}/blob/main/docs/${id}.md">View source ↗</a></div><article class="prose">${d.html}</article><div class="chapter-bottom"><span>Continue exploring</span><a href="#/atlas">Historical atlas →</a><a href="#/gallery">Computed gallery →</a></div></div><aside class="chapter-toc"><p class="eyebrow">ON THIS PAGE</p><nav aria-label="On this page">${d.headings.filter(h=>h.level===2).map(h=>`<a href="#/read/${id}?section=${h.id}">${h.title}</a>`).join('')}</nav></aside></div>`;
+ const links=[['accuracy-stability','A/L stability & error norms'],['site-coverage','Coverage & counting rules'],['history','Historical atlas'],['experiments','Interactive experiment guide'],['movies','Movie definitions & provenance'],...methods.filter((m,i,a)=>a.findIndex(x=>x.id===m.id)===i).map(m=>[m.id,m.title]),['roe-memorial','Remembering Philip L. Roe'],['nasa-2d','NASA case catalog'],['references','Reference catalog'],['roadmap','Implementation roadmap'],['release-notes-v0.1.0','First-edition notes']];
+ const notice=currentLanguage()==='ja' ? `<p class="translation-notice ${d.locale==='en'?'translation-fallback':''}">${d.locale==='en'?t('translation.fallback'):t(d.translation_status==='stale'?'translation.stale':'translation.draft')} <span>${t('translation.progress',{count:translationStatus.translated,total:translationStatus.total})}</span></p>` : '';
+ return `<div class="reading-shell page-width"><aside class="reading-nav"><a class="back-link" href="#/methods">← Explore the methods</a><p class="eyebrow">IN THIS EDITION</p><nav aria-label="Reading chapters">${links.map(([key,label])=>`<a href="#/read/${key}" ${id===key?'aria-current="page"':''}>${label}</a>`).join('')}</nav><p class="small-mono">FIRST EDITION · v0.1.0</p></aside><div class="chapter-wrap"><div class="chapter-topline"><span>THE READING ROOM</span><a href="${repo}/blob/main/docs/${d.locale==='ja'?'ja/':''}${id}.md">View source ↗</a></div>${notice}<article class="prose" lang="${d.locale||'en'}">${d.html}</article><div class="chapter-bottom"><span>Continue exploring</span><a href="#/atlas">Historical atlas →</a><a href="#/gallery">Computed gallery →</a></div></div><aside class="chapter-toc"><p class="eyebrow">ON THIS PAGE</p><nav aria-label="On this page">${d.headings.filter(h=>h.level===2).map(h=>`<a href="#/read/${id}?section=${h.id}">${h.title}</a>`).join('')}</nav></aside></div>`;
 }
 function notFound(){return `<section class="page-intro page-width"><p class="eyebrow">PAGE NOT FOUND</p><h1>Back to<br>the <em>atlas.</em></h1><p>This chapter could not be found.</p><a class="button primary" href="#/">Return home →</a></section>`;}
 function wire() {
@@ -167,7 +213,7 @@ function wire() {
  }));
  document.querySelectorAll('[data-figure]').forEach(button=>button.addEventListener('click',()=>{
    const f=figures[Number(button.dataset.figure)],dialog=document.querySelector('#figure-dialog');
-   dialog.querySelector('h2').textContent=f.title; dialog.querySelector('img').src=`assets/${f.file}`; dialog.querySelector('img').alt=f.description; dialog.querySelector('p').textContent=f.description; dialog.showModal();
+   dialog.querySelector('h2').textContent=translateText(f.title); dialog.querySelector('img').src=`assets/${f.file}`; dialog.querySelector('img').alt=translateText(f.description); dialog.querySelector('p').textContent=translateText(f.description); dialog.showModal();
  }));
  document.querySelectorAll('[data-gallery-filter]').forEach(button=>button.addEventListener('click',()=>{
    const category=button.dataset.galleryFilter;
@@ -183,16 +229,29 @@ function wire() {
    button.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(pre.querySelector('code').textContent);button.textContent='Copied';}catch{button.textContent='Select code to copy';}});pre.append(button);
  });
 }
-function route() {
+async function route(options={}) {
+ const version=++navigationVersion;
  disposeMovies();disposeEquations();
  const [path,queryString='']=(location.hash.slice(1)||'/').split('?');
  const parts=path.split('/').filter(Boolean),type=parts[0]||'home',query=new URLSearchParams(queryString);
- const renderers={home,atlas,coverage:()=>coveragePage(coverage),equations:equationsPage,methods:methodPage,gallery,movies:moviesPage,limiters:limiterPage,'runge-kutta':rkPage,cip:cipPage,experiments:stabilityPage,convergence:convergencePage,'time-integration':timePage,meshes:meshPage,hamiltonian:hamiltonianPage,references:()=>referencePage(query.get('q')||''),read:()=>chapter(parts[1])};
+ if(type==='read' && !documents[parts[1]]) {
+  const english=await loadDocuments('en');if(version!==navigationVersion)return;
+  if(english[parts[1]])documents[parts[1]]=english[parts[1]];
+ }
+ if(version!==navigationVersion)return;
+ const renderers={home,atlas,glossary:glossaryPage,coverage:()=>coveragePage(coverage),equations:equationsPage,methods:methodPage,gallery,movies:moviesPage,limiters:limiterPage,'runge-kutta':rkPage,cip:cipPage,experiments:stabilityPage,convergence:convergencePage,'time-integration':timePage,meshes:meshPage,hamiltonian:hamiltonianPage,references:()=>referencePage(query.get('q')||''),read:()=>chapter(parts[1])};
  main.innerHTML=(renderers[type]||notFound)();
  document.body.dataset.page=type;
+ main.lang=currentLanguage();main.removeAttribute('data-localize');
+ if(currentLanguage()==='ja' && englishNotebooks.has(type)) {
+  const wrapper=document.createElement('div');wrapper.lang='en';wrapper.dataset.localize='false';
+  while(main.firstChild)wrapper.append(main.firstChild);
+  const notice=document.createElement('p');notice.className='translation-notice page-width';notice.lang='ja';notice.textContent=t('translation.experiment');main.append(notice,wrapper);
+ }
  document.querySelectorAll('[data-nav]').forEach(a=>{if(a.dataset.nav===type||(type==='movies'&&a.dataset.nav==='gallery')||(['convergence','time-integration','meshes','hamiltonian','limiters','runge-kutta','cip'].includes(type)&&a.dataset.nav==='experiments'))a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
  document.querySelector('.site-header').classList.remove('menu-open');document.querySelector('.mobile-menu').setAttribute('aria-expanded','false');
- document.title=type==='home'?'The Art of Numerical Algorithms':`${type==='read'?(documents[parts[1]]?.title||'Reading room'):({coverage:'The atlas in numbers',equations:'Equation gallery',atlas:'Historical atlas',methods:'Explore the methods',gallery:'Numerical gallery',movies:'Motion gallery',references:'Reference library',experiments:'Stability laboratory',convergence:'Convergence notebook','time-integration':'Time integration notebook',meshes:'Mesh explorer',hamiltonian:'Hamiltonian map notebook',limiters:'Slope limiter notebook','runge-kutta':'Runge–Kutta family notebook',cip:'CIP profile notebook'}[type]||'Page not found')} · The Art of Numerical Algorithms`;
+ document.title=type==='home'?'The Art of Numerical Algorithms':`${type==='read'?(documents[parts[1]]?.title||'Reading room'):({glossary:currentLanguage()==='ja'?'日英用語集':'Bilingual glossary',coverage:'The atlas in numbers',equations:'Equation gallery',atlas:'Historical atlas',methods:'Explore the methods',gallery:'Numerical gallery',movies:'Motion gallery',references:'Reference library',experiments:'Stability laboratory',convergence:'Convergence notebook','time-integration':'Time integration notebook',meshes:'Mesh explorer',hamiltonian:'Hamiltonian map notebook',limiters:'Slope limiter notebook','runge-kutta':'Runge–Kutta family notebook',cip:'CIP profile notebook'}[type]||'Page not found')} · The Art of Numerical Algorithms`;
+ document.title=document.title.split(' · ').map(translateText).join(' · ');
  if(type==='read')document.querySelectorAll('.heading-anchor').forEach(a=>{a.href=`#/read/${parts[1]}?section=${a.parentElement.id}`;});
  if(type==='references') {filterReferences(query.get('q')||'');document.querySelector('#reference-search').addEventListener('input',e=>filterReferences(e.target.value));}
  wire();
@@ -200,21 +259,34 @@ function route() {
  if(type==='convergence')wireConvergence(experiments);
  if(type==='time-integration')wireTime(foundations);
  if(type==='meshes')wireMesh(foundations);
- if(type==='hamiltonian')wireHamiltonian();
- if(type==='limiters')wireLimiters();
- if(type==='runge-kutta')wireRK();
- if(type==='cip')wireCIP();
- if(type==='equations')wireEquations();
+ if(type==='hamiltonian')await wireHamiltonian();
+ if(type==='limiters')await wireLimiters();
+ if(type==='runge-kutta')await wireRK();
+ if(type==='cip')await wireCIP();
+ if(type==='equations')await wireEquations();
+ if(type==='coverage'&&currentLanguage()==='ja'){const note=document.createElement('p');note.className='translation-notice page-width';note.textContent='項目名は日英で検索できます。実装範囲と集計規則の詳細注記は、英語原文を表示しています。';main.prepend(note);}
+ if(type==='glossary')wireGlossary(glossary,query.get('q')||'');
  if(type==='coverage')wireCoverage(coverage,query.get('kind')||'all');
- if(type==='movies')wireMovies(query.get('case'));
- if(query.get('section'))requestAnimationFrame(()=>document.getElementById(query.get('section'))?.scrollIntoView());else window.scrollTo({top:0,behavior:'instant'});
+ if(type==='movies')await wireMovies(query.get('case'));
+ if(version!==navigationVersion)return;
+ if(options.state)restoreControls(main,options.state);
+ if(options.flux)document.querySelector(`[data-flux="${options.flux}"]`)?.click();
+ localizeTree(main);
+ if(options.scrollY!==undefined)window.scrollTo({top:options.scrollY,behavior:'instant'});
+ else if(query.get('section'))requestAnimationFrame(()=>document.getElementById(query.get('section'))?.scrollIntoView());else window.scrollTo({top:0,behavior:'instant'});
 }
 document.querySelector('.skip-link').addEventListener('click',e=>{e.preventDefault();main.focus();main.scrollIntoView();});
-document.querySelector('.mobile-menu').addEventListener('click',e=>{const open=document.querySelector('.site-header').classList.toggle('menu-open');e.currentTarget.setAttribute('aria-expanded',String(open));});
-document.querySelector('.dialog-close').addEventListener('click',()=>document.querySelector('#figure-dialog').close());
 document.querySelector('#figure-dialog').addEventListener('click',e=>{if(e.target===e.currentTarget)e.currentTarget.close();});
 try {
- [documents,references,sod,experiments,foundations,coverage]=await Promise.all(['content.json','references.json','sod.json','experiments.json','foundations.json','coverage.json'].map(async file=>{const response=await fetch(file);if(!response.ok)throw Error(`Cannot load ${file}`);return response.json();}));
+ [localeCatalog,references,sod,experiments,foundations,coverage,translationStatus,glossary]=await Promise.all(['locales/messages.json','references.json','sod.json','experiments.json','foundations.json','coverage.json','translation-status.json','glossary.json'].map(async file=>{const response=await fetch(file);if(!response.ok)throw Error(`Cannot load ${file}`);return response.json();}));
  references.sort((a,b)=>a.year-b.year||a.id.localeCompare(b.id));
- window.addEventListener('hashchange',route);route();
+ let saved;try{saved=localStorage.getItem('numart-language');}catch{}
+ configureLocale(localeCatalog,resolveLanguage(location.search,saved));
+ documents=await loadDocuments(currentLanguage());
+ renderShell();observeLocalization(document.body);
+ window.addEventListener('hashchange',()=>route().catch(console.error));
+ window.addEventListener('popstate',async()=>{
+  const requested=resolveLanguage(location.search);if(requested!==currentLanguage())await changeLanguage(requested,{historyEntry:false});else await route();
+ });
+ await route();
 } catch(error) {main.innerHTML=`<section class="page-intro page-width"><h1>The atlas could not load.</h1><p>Please reload the page, or read the complete edition on GitHub.</p><a class="button primary" href="${repo}">Open the source edition ↗</a></section>`;console.error(error);}

@@ -105,3 +105,7 @@ entries and bibliographic types imported from their existing catalogs.
 `docs/site-coverage.md` lists every counted entry and explains publication
 deduplication. Cite journal/conference paper counts separately from all
 sources; local examples and reading-only entries remain labeled.
+
+## Japanese and English
+
+The local bilingual edition adds a language switch, a bilingual glossary and four complete Japanese draft chapters. Other chapters retain an explicit English fallback; advanced notebooks and original source notes currently retain English. See [implementation status](../BILINGUAL_STATUS.md) and [migration plan](../BILINGUAL_PLAN.md). Translation files do not increase the logical chapter, method, model or publication counts.

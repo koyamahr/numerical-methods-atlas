@@ -27,6 +27,8 @@ generate('build_references.py')
 generate('build_biology_survey.py')
 for source in sorted((ROOT/'docs').glob('*.md')):
     copy_changed(source,SITE/'content'/source.name)
+for source in sorted((ROOT/'docs/ja').glob('*.md')):
+    copy_changed(source,SITE/'content/ja'/source.name)
 copy_changed(ROOT/'catalog/references.json',SITE/'content/references.json')
 copy_changed(ROOT/'references.bib',SITE/'public/assets/references.bib')
 for source in sorted((ROOT/'docs/figures').glob('*.png')):

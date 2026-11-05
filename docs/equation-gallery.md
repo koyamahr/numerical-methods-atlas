@@ -81,3 +81,6 @@ simulations. The [Arakawa grid chapter](geophysical-grids.md) adds computed
 A/B/C Fourier-symbol comparisons for linear rotating shallow water, rather
 than another fluid movie. These statuses remain distinct from the nine
 precomputed cases above.
+
+For definitions and comparisons of **A-stability, L-stability and L1/L2/L∞ error norms**,
+see the [shared accuracy and stability guide](accuracy-stability.md).

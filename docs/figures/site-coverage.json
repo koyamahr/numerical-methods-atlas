@@ -11,9 +11,9 @@
   "counts": {
     "equations": 42,
     "methods": 83,
-    "papers": 125,
-    "references": 145,
-    "journal_articles": 122,
+    "papers": 126,
+    "references": 146,
+    "journal_articles": 123,
     "conference_papers": 3,
     "books": 7,
     "chapters": 2,
@@ -26,7 +26,7 @@
     "biological_entries": 22,
     "gallery_cases": 9,
     "gallery_equations": 7,
-    "reading_chapters": 41
+    "reading_chapters": 42
   },
   "items": [
     {
@@ -1880,12 +1880,17 @@
       "id": "mitgcm-c-grid",
       "type": "misc",
       "identity": "work:mitgcmcontributors:cgridstaggeringofvariables:2026"
+    },
+    {
+      "id": "dahlquist1963",
+      "type": "article",
+      "identity": "doi:10.1007/bf01963532"
     }
   ],
   "source_sha256": {
     "catalog/coverage.json": "98caaa80e8f39bfa356e8608ed46466053464ddb92546f29a83523f6d76dbec1",
     "catalog/biological-models.json": "f0b55e0832cb17304b6d1bfdb626f2b66bb6e5c27a3730981ceb2b4fb151ab82",
-    "catalog/references.json": "36e1a83b0ae812b65a98448ea4d676822c40cdec0e3d33ac6a136f8d6ab24f89",
-    "scripts/build_coverage.py": "daa962bda57460252de9c32914bbfcad05630a825567d7f3db44f9fa04169d14"
+    "catalog/references.json": "e9a95506596c350839e9025bef653fbb013d7404d34b9fb94eeb6aaf9c97c5f8",
+    "scripts/build_coverage.py": "c52b3dc50bdd062825f07a52cbb1be5d20e3b7306ab2f0a2add89dec046789d0"
   }
 }

@@ -105,3 +105,6 @@ coefficients, nonnormal matrices, and multistep schemes need additional analysis
 
 These conservative choices are checked on selected examples. They are not
 rigorous nonlinear stability limits for every initial condition.
+
+For definitions and comparisons of **A-stability, L-stability and L1/L2/L∞ error norms**,
+see the [shared accuracy and stability guide](accuracy-stability.md).

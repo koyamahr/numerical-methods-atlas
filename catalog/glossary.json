@@ -1,0 +1,815 @@
+{
+  "schema_version": 1,
+  "terms": [
+    {
+      "id": "equation.linear-advection",
+      "en": "Linear advection",
+      "ja": "線形移流",
+      "chapter": "stability"
+    },
+    {
+      "id": "equation.heat",
+      "en": "Heat / diffusion",
+      "ja": "熱・拡散",
+      "chapter": "elliptic"
+    },
+    {
+      "id": "equation.poisson-laplace",
+      "en": "Poisson / Laplace",
+      "ja": "Poisson／Laplace方程式",
+      "chapter": "elliptic"
+    },
+    {
+      "id": "equation.burgers",
+      "en": "Inviscid Burgers",
+      "ja": "非粘性Burgers方程式",
+      "chapter": "equation-gallery"
+    },
+    {
+      "id": "equation.traffic",
+      "en": "LWR traffic flow",
+      "ja": "LWR交通流",
+      "chapter": "equation-gallery"
+    },
+    {
+      "id": "equation.euler",
+      "en": "Compressible Euler",
+      "ja": "圧縮性Euler方程式",
+      "chapter": "benchmarks"
+    },
+    {
+      "id": "equation.shallow-water",
+      "en": "Shallow water, including the rotating linear model",
+      "ja": "浅水方程式（線形回転モデルを含む）",
+      "chapter": "geophysical-grids"
+    },
+    {
+      "id": "equation.isothermal",
+      "en": "Isothermal Euler",
+      "ja": "等温Euler方程式",
+      "chapter": "benchmarks"
+    },
+    {
+      "id": "equation.mhd",
+      "en": "Ideal MHD",
+      "ja": "理想MHD",
+      "chapter": "mhd"
+    },
+    {
+      "id": "equation.navier-stokes",
+      "en": "Incompressible Navier–Stokes",
+      "ja": "非圧縮Navier–Stokes方程式",
+      "chapter": "incompressible"
+    },
+    {
+      "id": "equation.bgk",
+      "en": "Isothermal lattice BGK",
+      "ja": "等温格子BGK",
+      "chapter": "lattice-boltzmann"
+    },
+    {
+      "id": "equation.hamiltonian",
+      "en": "Hamiltonian oscillators",
+      "ja": "Hamilton振動子",
+      "chapter": "symplectic"
+    },
+    {
+      "id": "equation.particle-gravity",
+      "en": "Gravitational particle model",
+      "ja": "重力粒子モデル",
+      "chapter": "particle-gravity"
+    },
+    {
+      "id": "equation.bratu",
+      "en": "Bratu nonlinear boundary-value problem",
+      "ja": "Bratu非線形境界値問題",
+      "chapter": "sparse-nonlinear"
+    },
+    {
+      "id": "equation.hyperbolic-diffusion",
+      "en": "Auxiliary hyperbolic diffusion system",
+      "ja": "補助変数による双曲型拡散系",
+      "chapter": "hyperbolic-diffusion"
+    },
+    {
+      "id": "equation.srhd",
+      "en": "Special-relativistic hydrodynamics",
+      "ja": "特殊相対論的流体力学",
+      "chapter": "relativistic-hydrodynamics"
+    },
+    {
+      "id": "equation.grhd",
+      "en": "General-relativistic hydrodynamics",
+      "ja": "一般相対論的流体力学",
+      "chapter": "relativistic-hydrodynamics"
+    },
+    {
+      "id": "equation.grmhd",
+      "en": "General-relativistic MHD",
+      "ja": "一般相対論的MHD",
+      "chapter": "relativistic-hydrodynamics"
+    },
+    {
+      "id": "equation.m1-radiation",
+      "en": "Relativistic radiation moments / M1",
+      "ja": "相対論的放射モーメント／M1",
+      "chapter": "relativistic-hydrodynamics"
+    },
+    {
+      "id": "equation.causal-viscous",
+      "en": "Causal relativistic viscous fluid",
+      "ja": "因果的な相対論的粘性流体",
+      "chapter": "relativistic-hydrodynamics"
+    },
+    {
+      "id": "method.forward-difference",
+      "en": "Forward spatial difference",
+      "ja": "空間前進差分",
+      "chapter": "stability"
+    },
+    {
+      "id": "method.backward-difference",
+      "en": "Backward spatial difference",
+      "ja": "空間後退差分",
+      "chapter": "stability"
+    },
+    {
+      "id": "method.centered-difference",
+      "en": "Centered spatial difference",
+      "ja": "空間中心差分",
+      "chapter": "stability"
+    },
+    {
+      "id": "method.upwind",
+      "en": "Upwind finite differences",
+      "ja": "風上差分（upwind）",
+      "chapter": "stability"
+    },
+    {
+      "id": "method.lax-friedrichs",
+      "en": "Lax–Friedrichs",
+      "ja": "Lax–Friedrichs法",
+      "chapter": "stability"
+    },
+    {
+      "id": "method.lax-wendroff",
+      "en": "Lax–Wendroff",
+      "ja": "Lax–Wendroff法",
+      "chapter": "stability"
+    },
+    {
+      "id": "method.godunov",
+      "en": "Godunov-type finite volumes",
+      "ja": "Godunov型有限体積法",
+      "chapter": "benchmarks"
+    },
+    {
+      "id": "method.muscl",
+      "en": "MUSCL reconstruction",
+      "ja": "MUSCL再構成",
+      "chapter": "benchmarks"
+    },
+    {
+      "id": "method.weno-js",
+      "en": "WENO5-JS",
+      "ja": "WENO5-JS",
+      "chapter": "benchmarks"
+    },
+    {
+      "id": "method.dg",
+      "en": "Discontinuous Galerkin / Legendre",
+      "ja": "不連続Galerkin法／Legendre",
+      "chapter": "benchmarks"
+    },
+    {
+      "id": "method.fourier",
+      "en": "Fourier differentiation and evolution",
+      "ja": "Fourier微分と時間発展",
+      "chapter": "benchmarks"
+    },
+    {
+      "id": "method.cip",
+      "en": "Cubic-Hermite CIP",
+      "ja": "3次Hermite CIP",
+      "chapter": "cip"
+    },
+    {
+      "id": "method.p1-fem",
+      "en": "Continuous P1 Galerkin FEM",
+      "ja": "連続P1 Galerkin有限要素法",
+      "chapter": "fem"
+    },
+    {
+      "id": "method.rusanov",
+      "en": "Rusanov / local Lax–Friedrichs flux",
+      "ja": "Rusanov／局所Lax–Friedrichs流束",
+      "chapter": "benchmarks"
+    },
+    {
+      "id": "method.hll",
+      "en": "HLL",
+      "ja": "HLL",
+      "chapter": "benchmarks"
+    },
+    {
+      "id": "method.hllc",
+      "en": "HLLC",
+      "ja": "HLLC",
+      "chapter": "benchmarks"
+    },
+    {
+      "id": "method.roe",
+      "en": "Roe",
+      "ja": "Roe法",
+      "chapter": "benchmarks"
+    },
+    {
+      "id": "method.hlle",
+      "en": "HLLE / Einfeldt wave speeds",
+      "ja": "HLLE／Einfeldt波速",
+      "chapter": "benchmarks"
+    },
+    {
+      "id": "method.entropy-fix",
+      "en": "Acoustic Roe entropy correction",
+      "ja": "Roe音響波のエントロピー修正",
+      "chapter": "advanced"
+    },
+    {
+      "id": "method.rotated-hybrid",
+      "en": "Rotated-hybrid Riemann solver",
+      "ja": "回転ハイブリッド・リーマンソルバー",
+      "chapter": "advanced"
+    },
+    {
+      "id": "method.minmod",
+      "en": "Minmod",
+      "ja": "Minmod",
+      "chapter": "limiters"
+    },
+    {
+      "id": "method.superbee",
+      "en": "Superbee",
+      "ja": "Superbee",
+      "chapter": "limiters"
+    },
+    {
+      "id": "method.mc",
+      "en": "Monotonized central / MC",
+      "ja": "単調中心勾配制限／MC",
+      "chapter": "limiters"
+    },
+    {
+      "id": "method.van-leer",
+      "en": "Van Leer limiter",
+      "ja": "Van Leer勾配制限",
+      "chapter": "limiters"
+    },
+    {
+      "id": "method.van-albada",
+      "en": "Clipped Van Albada limiter",
+      "ja": "切り詰めたVan Albada勾配制限",
+      "chapter": "limiters"
+    },
+    {
+      "id": "method.tvb",
+      "en": "TVB modified minmod",
+      "ja": "TVB修正minmod",
+      "chapter": "advanced-limiters"
+    },
+    {
+      "id": "method.positive-scaling",
+      "en": "Mean-preserving positive-state scaling",
+      "ja": "平均を保つ正値状態スケーリング",
+      "chapter": "advanced-limiters"
+    },
+    {
+      "id": "method.forward-euler",
+      "en": "Forward Euler",
+      "ja": "前進Euler法",
+      "chapter": "time-integration"
+    },
+    {
+      "id": "method.backward-euler",
+      "en": "Backward Euler",
+      "ja": "後退Euler法",
+      "chapter": "time-integration"
+    },
+    {
+      "id": "method.heun",
+      "en": "Heun / SSPRK(2,2)",
+      "ja": "Heun法／SSPRK(2,2)",
+      "chapter": "time-integration"
+    },
+    {
+      "id": "method.explicit-midpoint",
+      "en": "Explicit midpoint RK2",
+      "ja": "陽的中点RK2",
+      "chapter": "time-integration"
+    },
+    {
+      "id": "method.ralston",
+      "en": "Ralston RK2",
+      "ja": "Ralston RK2",
+      "chapter": "time-integration"
+    },
+    {
+      "id": "method.kutta3",
+      "en": "Kutta RK3",
+      "ja": "Kutta RK3",
+      "chapter": "time-integration"
+    },
+    {
+      "id": "method.ssprk33",
+      "en": "SSPRK(3,3)",
+      "ja": "SSPRK(3,3)",
+      "chapter": "time-integration"
+    },
+    {
+      "id": "method.ssprk43",
+      "en": "SSPRK(4,3)",
+      "ja": "SSPRK(4,3)",
+      "chapter": "time-integration"
+    },
+    {
+      "id": "method.rk4",
+      "en": "Classical RK4",
+      "ja": "古典的RK4",
+      "chapter": "time-integration"
+    },
+    {
+      "id": "method.ssprk54",
+      "en": "SSPRK(5,4)",
+      "ja": "SSPRK(5,4)",
+      "chapter": "time-integration"
+    },
+    {
+      "id": "method.implicit-midpoint",
+      "en": "Implicit midpoint",
+      "ja": "陰的中点則",
+      "chapter": "time-integration"
+    },
+    {
+      "id": "method.leapfrog",
+      "en": "Two-step leapfrog",
+      "ja": "2ステップleapfrog法",
+      "chapter": "time-integration"
+    },
+    {
+      "id": "method.crank-nicolson",
+      "en": "Crank–Nicolson",
+      "ja": "Crank–Nicolson法",
+      "chapter": "elliptic"
+    },
+    {
+      "id": "method.bdf2",
+      "en": "BDF2",
+      "ja": "BDF2",
+      "chapter": "stiff-integration"
+    },
+    {
+      "id": "method.sdirk2",
+      "en": "L-stable SDIRK2",
+      "ja": "L安定なSDIRK2",
+      "chapter": "stiff-integration"
+    },
+    {
+      "id": "method.imex-euler",
+      "en": "IMEX Euler",
+      "ja": "IMEX Euler",
+      "chapter": "stiff-integration"
+    },
+    {
+      "id": "method.step-doubling",
+      "en": "Adaptive SDIRK2 / step doubling",
+      "ja": "適応SDIRK2／ステップ倍分割",
+      "chapter": "stiff-integration"
+    },
+    {
+      "id": "method.symplectic-euler",
+      "en": "Symplectic Euler",
+      "ja": "シンプレクティックEuler法",
+      "chapter": "symplectic"
+    },
+    {
+      "id": "method.verlet",
+      "en": "Velocity Verlet / particle leapfrog",
+      "ja": "速度Verlet／粒子leapfrog法",
+      "chapter": "symplectic"
+    },
+    {
+      "id": "method.yoshida4",
+      "en": "Yoshida fourth-order composition",
+      "ja": "吉田の4次合成法",
+      "chapter": "symplectic"
+    },
+    {
+      "id": "method.thomas",
+      "en": "Thomas tridiagonal elimination",
+      "ja": "Thomas法／三重対角消去",
+      "chapter": "elliptic"
+    },
+    {
+      "id": "method.jacobi-iteration",
+      "en": "Jacobi iteration",
+      "ja": "Jacobi反復",
+      "chapter": "elliptic"
+    },
+    {
+      "id": "method.gauss-seidel",
+      "en": "Gauss–Seidel iteration",
+      "ja": "Gauss–Seidel反復",
+      "chapter": "elliptic"
+    },
+    {
+      "id": "method.sor",
+      "en": "Successive over-relaxation / SOR",
+      "ja": "逐次過緩和法／SOR",
+      "chapter": "elliptic"
+    },
+    {
+      "id": "method.cg",
+      "en": "Conjugate gradients",
+      "ja": "共役勾配法",
+      "chapter": "elliptic"
+    },
+    {
+      "id": "method.rbgs",
+      "en": "Red-black Gauss–Seidel",
+      "ja": "赤黒Gauss–Seidel法",
+      "chapter": "elliptic"
+    },
+    {
+      "id": "method.multigrid",
+      "en": "Geometric multigrid V-cycle",
+      "ja": "幾何マルチグリッドVサイクル",
+      "chapter": "elliptic"
+    },
+    {
+      "id": "method.gmres",
+      "en": "Restarted GMRES",
+      "ja": "再始動GMRES",
+      "chapter": "sparse-nonlinear"
+    },
+    {
+      "id": "method.bicgstab",
+      "en": "BiCGSTAB",
+      "ja": "BiCGSTAB",
+      "chapter": "sparse-nonlinear"
+    },
+    {
+      "id": "method.jacobi-preconditioner",
+      "en": "Jacobi / diagonal preconditioning",
+      "ja": "Jacobi／対角前処理",
+      "chapter": "sparse-nonlinear"
+    },
+    {
+      "id": "method.ilu0",
+      "en": "Unpivoted ILU(0)",
+      "ja": "ピボット選択なしILU(0)",
+      "chapter": "sparse-nonlinear"
+    },
+    {
+      "id": "method.newton",
+      "en": "Armijo-damped Newton",
+      "ja": "Armijo減衰Newton法",
+      "chapter": "sparse-nonlinear"
+    },
+    {
+      "id": "method.newton-krylov",
+      "en": "Newton–Krylov with assembled Jacobian",
+      "ja": "組み立てたJacobianによるNewton–Krylov法",
+      "chapter": "sparse-nonlinear"
+    },
+    {
+      "id": "method.dual-time",
+      "en": "Dual time stepping",
+      "ja": "二重時間積分",
+      "chapter": "advanced"
+    },
+    {
+      "id": "method.residual-distribution",
+      "en": "Scalar residual distribution",
+      "ja": "スカラー残差分配法",
+      "chapter": "advanced"
+    },
+    {
+      "id": "method.low-mach-preconditioning",
+      "en": "Low-Mach PDE preconditioning",
+      "ja": "低Mach数のPDE前処理",
+      "chapter": "advanced"
+    },
+    {
+      "id": "method.ct",
+      "en": "Constrained transport / CT",
+      "ja": "制約輸送法／CT",
+      "chapter": "mhd"
+    },
+    {
+      "id": "method.glm",
+      "en": "GLM divergence cleaning",
+      "ja": "GLM発散クリーニング",
+      "chapter": "mhd"
+    },
+    {
+      "id": "method.projection",
+      "en": "MAC pressure projection",
+      "ja": "MAC圧力射影法",
+      "chapter": "incompressible"
+    },
+    {
+      "id": "method.d2q9-bgk",
+      "en": "D2Q9–BGK collision and streaming",
+      "ja": "D2Q9–BGK衝突・並進",
+      "chapter": "lattice-boltzmann"
+    },
+    {
+      "id": "method.guo",
+      "en": "Guo forcing",
+      "ja": "Guo外力",
+      "chapter": "lattice-boltzmann"
+    },
+    {
+      "id": "method.bounce-back",
+      "en": "Half-way bounce-back",
+      "ja": "中間壁バウンスバック",
+      "chapter": "lattice-boltzmann"
+    },
+    {
+      "id": "method.hyperbolic-diffusion",
+      "en": "First-order hyperbolic diffusion baseline",
+      "ja": "1次の双曲型拡散ベースライン",
+      "chapter": "hyperbolic-diffusion"
+    },
+    {
+      "id": "method.sph",
+      "en": "SPH kernel reconstruction",
+      "ja": "SPHカーネル再構成",
+      "chapter": "particles-sph"
+    },
+    {
+      "id": "method.ale",
+      "en": "ALE uniform-state / geometric-conservation model",
+      "ja": "ALE一様状態・幾何保存モデル",
+      "chapter": "ale"
+    },
+    {
+      "id": "method.gsph",
+      "en": "Godunov SPH / GSPH",
+      "ja": "Godunov SPH／GSPH",
+      "chapter": "gsph"
+    },
+    {
+      "id": "method.cic",
+      "en": "Cloud-in-cell assignment and interpolation",
+      "ja": "Cloud-in-cellの割当てと補間",
+      "chapter": "particle-gravity"
+    },
+    {
+      "id": "method.pm",
+      "en": "FFT particle–mesh forces",
+      "ja": "FFT粒子格子力",
+      "chapter": "particle-gravity"
+    },
+    {
+      "id": "method.barnes-hut",
+      "en": "Barnes–Hut octree",
+      "ja": "Barnes–Hut八分木",
+      "chapter": "particle-gravity"
+    },
+    {
+      "id": "method.multipole",
+      "en": "Monopole and second-moment expansion",
+      "ja": "単極と2次モーメント展開",
+      "chapter": "particle-gravity"
+    },
+    {
+      "id": "method.hockney",
+      "en": "Isolated doubled-grid FFT convolution",
+      "ja": "孤立境界の倍格子FFT畳み込み",
+      "chapter": "gravity-boundaries"
+    },
+    {
+      "id": "method.slab",
+      "en": "Horizontal-periodic slab Green-function FFT",
+      "ja": "水平周期スラブGreen関数FFT",
+      "chapter": "gravity-boundaries"
+    },
+    {
+      "id": "method.p3m",
+      "en": "P³M short-range correction",
+      "ja": "P³M短距離補正",
+      "chapter": "particle-gravity"
+    },
+    {
+      "id": "method.treepm",
+      "en": "TreePM force splitting",
+      "ja": "TreePM力分割",
+      "chapter": "particle-gravity"
+    },
+    {
+      "id": "method.fmm",
+      "en": "Fast multipole translations",
+      "ja": "高速多重極法の移動演算",
+      "chapter": "particle-gravity"
+    },
+    {
+      "id": "method.keep",
+      "en": "Original Cartesian KEEP split flux",
+      "ja": "直交座標の原KEEP分割流束",
+      "chapter": "keep"
+    },
+    {
+      "id": "equation.bio-logistic",
+      "en": "Logistic population growth",
+      "ja": "ロジスティック個体群増殖",
+      "chapter": "biological-models"
+    },
+    {
+      "id": "equation.bio-enzyme",
+      "en": "Michaelis–Menten and full enzyme kinetics",
+      "ja": "Michaelis–Mentenと完全酵素反応系",
+      "chapter": "biological-models"
+    },
+    {
+      "id": "equation.bio-lotka-volterra",
+      "en": "Lotka–Volterra predator–prey",
+      "ja": "Lotka–Volterra捕食・被食",
+      "chapter": "biological-models"
+    },
+    {
+      "id": "equation.bio-age-structure",
+      "en": "McKendrick age-structured population",
+      "ja": "McKendrick年齢構造個体群",
+      "chapter": "biological-models"
+    },
+    {
+      "id": "equation.bio-sir",
+      "en": "SIR and SEIR compartment models",
+      "ja": "SIR・SEIR区画モデル",
+      "chapter": "biological-models"
+    },
+    {
+      "id": "equation.bio-fisher-kpp",
+      "en": "Fisher–KPP invasion front",
+      "ja": "Fisher–KPP侵入前線",
+      "chapter": "biological-models"
+    },
+    {
+      "id": "equation.bio-monod",
+      "en": "Monod growth and chemostat",
+      "ja": "Monod増殖とケモスタット",
+      "chapter": "biological-models"
+    },
+    {
+      "id": "equation.bio-hodgkin-huxley",
+      "en": "Hodgkin–Huxley membrane dynamics",
+      "ja": "Hodgkin–Huxley膜動態",
+      "chapter": "biological-models"
+    },
+    {
+      "id": "equation.bio-turing",
+      "en": "Turing reaction–diffusion framework",
+      "ja": "Turing反応拡散の枠組み",
+      "chapter": "biological-models"
+    },
+    {
+      "id": "equation.bio-fitzhugh-nagumo",
+      "en": "FitzHugh–Nagumo excitation and recovery",
+      "ja": "FitzHugh–Nagumoの興奮と回復",
+      "chapter": "biological-models"
+    },
+    {
+      "id": "equation.bio-keller-segel",
+      "en": "Keller–Segel chemotaxis",
+      "ja": "Keller–Segel走化性",
+      "chapter": "biological-models"
+    },
+    {
+      "id": "equation.bio-gierer-meinhardt",
+      "en": "Gierer–Meinhardt activator–inhibitor",
+      "ja": "Gierer–Meinhardt活性化・抑制",
+      "chapter": "biological-models"
+    },
+    {
+      "id": "equation.bio-immersed-boundary",
+      "en": "Fluid–elastic structure and immersed boundaries",
+      "ja": "流体・弾性構造と埋め込み境界",
+      "chapter": "biological-models"
+    },
+    {
+      "id": "equation.bio-chemical-master",
+      "en": "Chemical master equation and Gillespie SSA",
+      "ja": "化学マスター方程式とGillespie SSA",
+      "chapter": "biological-models"
+    },
+    {
+      "id": "equation.bio-mackey-glass",
+      "en": "Mackey–Glass delayed physiological feedback",
+      "ja": "Mackey–Glass遅延生理フィードバック",
+      "chapter": "biological-models"
+    },
+    {
+      "id": "equation.bio-replicator",
+      "en": "Replicator evolutionary game dynamics",
+      "ja": "レプリケータ進化ゲーム動態",
+      "chapter": "biological-models"
+    },
+    {
+      "id": "equation.bio-schnakenberg",
+      "en": "Schnakenberg reaction–diffusion",
+      "ja": "Schnakenberg反応拡散",
+      "chapter": "biological-models"
+    },
+    {
+      "id": "equation.bio-skt",
+      "en": "Shigesada–Kawasaki–Teramoto cross-diffusion",
+      "ja": "Shigesada–Kawasaki–Teramoto交差拡散",
+      "chapter": "biological-models"
+    },
+    {
+      "id": "equation.bio-gray-scott",
+      "en": "Gray–Scott spatial autocatalysis",
+      "ja": "Gray–Scott空間自己触媒反応",
+      "chapter": "biological-models"
+    },
+    {
+      "id": "equation.bio-cardiac",
+      "en": "Aliev–Panfilov cardiac excitation",
+      "ja": "Aliev–Panfilov心筋興奮",
+      "chapter": "biological-models"
+    },
+    {
+      "id": "equation.bio-repressilator",
+      "en": "Repressilator mRNA–protein network",
+      "ja": "Repressilator mRNA・タンパク質回路",
+      "chapter": "biological-models"
+    },
+    {
+      "id": "equation.bio-toggle",
+      "en": "Genetic toggle switch",
+      "ja": "遺伝子トグルスイッチ",
+      "chapter": "biological-models"
+    },
+    {
+      "id": "concept.a-stability",
+      "en": "A-stability",
+      "ja": "A安定性"
+    },
+    {
+      "id": "concept.l-stability",
+      "en": "L-stability",
+      "ja": "L安定性"
+    },
+    {
+      "id": "concept.cfl",
+      "en": "CFL condition",
+      "ja": "CFL条件"
+    },
+    {
+      "id": "concept.von-neumann",
+      "en": "von Neumann stability analysis",
+      "ja": "von Neumann安定性解析"
+    },
+    {
+      "id": "concept.neumann",
+      "en": "Neumann boundary condition",
+      "ja": "Neumann境界条件"
+    },
+    {
+      "id": "concept.dirichlet",
+      "en": "Dirichlet boundary condition",
+      "ja": "Dirichlet境界条件"
+    },
+    {
+      "id": "concept.robin",
+      "en": "Robin boundary condition",
+      "ja": "Robin境界条件"
+    },
+    {
+      "id": "concept.spectral-radius",
+      "en": "Spectral radius",
+      "ja": "スペクトル半径"
+    },
+    {
+      "id": "concept.condition-number",
+      "en": "Condition number",
+      "ja": "条件数"
+    },
+    {
+      "id": "concept.entropy-wave",
+      "en": "Entropy wave",
+      "ja": "エントロピー波"
+    },
+    {
+      "id": "concept.riemann",
+      "en": "Riemann solver",
+      "ja": "リーマンソルバー"
+    },
+    {
+      "id": "concept.chapman-enskog",
+      "en": "Chapman–Enskog expansion",
+      "ja": "Chapman–Enskog展開"
+    }
+  ]
+}

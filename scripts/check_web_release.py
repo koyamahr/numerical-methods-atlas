@@ -58,10 +58,43 @@ for item in coverage['items']:
 for path,expected_hash in coverage['source_sha256'].items():
     source=ROOT/path
     require(source.is_file() and sha256(source.read_bytes()).hexdigest()==expected_hash,'Coverage source hash mismatch: '+path)
+# Localization adds language artifacts, never additional logical chapters or models.
+translations=json.loads((ROOT/'catalog/translations.json').read_text())
+japanese=json.loads((DIST/'content.ja.json').read_text())
+require(documents==json.loads((DIST/'content.en.json').read_text()),'English compatibility payload differs')
+translated=set(translations['chapters'])
+require(set(japanese)==translated,'Japanese chapter set differs from translation manifest')
+require({p.stem for p in (ROOT/'docs/ja').glob('*.md')}==translated,'Japanese source set differs from translation manifest')
+for name in sorted(translated):
+    source=ROOT/'docs/ja'/f'{name}.md'
+    require(source.read_bytes()==(SITE/'content/ja'/f'{name}.md').read_bytes(),f'Unsynced Japanese chapter: {name}')
+    require(japanese[name]['locale']=='ja',f'Incorrect Japanese document language: {name}')
+    require({h['id'] for h in japanese[name]['headings']}=={h['id'] for h in documents[name]['headings']},f'Cross-language section mismatch: {name}')
+    links=Links();links.feed(japanese[name]['html'])
+    for url in links.targets:
+        if url.startswith('#/read/'):
+            path,_,query=url.partition('?');chapter=unquote(path[len('#/read/'):])
+            require(chapter in documents,f'{name} (ja): unknown chapter {url}')
+            section=parse_qs(query).get('section',[])
+            if section and chapter in documents:
+                require(section[0] in {h['id'] for h in documents[chapter]['headings']},f'{name} (ja): unknown section {url}')
+        elif not url.startswith(('#','data:','mailto:')) and not urlsplit(url).scheme:
+            target=(DIST/unquote(urlsplit(url).path)).resolve()
+            require(DIST.resolve() in target.parents and target.is_file(),f'{name} (ja): missing local asset {url}')
+status=json.loads((DIST/'translation-status.json').read_text())
+require(status['total']==len(documents) and status['translated']==len(japanese),'Translation progress count is stale')
+require(set(status['chapters'])==set(documents),'Translation progress omits logical chapters')
+glossary=json.loads((ROOT/'catalog/glossary.json').read_text())
+require(glossary==json.loads((DIST/'glossary.json').read_text()),'Built glossary differs from its source')
+messages=json.loads((SITE/'locales/messages.json').read_text())
+require(messages==json.loads((DIST/'locales/messages.json').read_text()),'Built language messages are stale')
+for term in glossary['terms']:
+    require(messages.get('term.'+term['id'])=={key:term[key] for key in ('en','ja')},'Glossary message differs from source: '+term['id'])
 if errors:raise SystemExit('\n'.join(errors))
 files=sorted(p for p in DIST.rglob('*') if p.is_file())
 file_hashes={p.relative_to(DIST).as_posix():sha256(p.read_bytes()).hexdigest() for p in files}
 report=dict(scope='Offline static-release check; no external DOI/link verification or numerical reruns.',counts=coverage['counts'],
+    localization=dict(japanese_drafts=sum(e['status']=='draft' for e in status['chapters'].values()),japanese_reviewed=status['reviewed'],untranslated=sum(e['status']=='missing' for e in status['chapters'].values()),glossary_terms=len(glossary['terms'])),
     files=len(files),bytes=sum(p.stat().st_size for p in files),
     artifact_sha256=sha256(json.dumps(file_hashes,sort_keys=True,separators=(',',':')).encode()).hexdigest())
 if args.output:

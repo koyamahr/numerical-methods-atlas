@@ -60,3 +60,24 @@ body[data-page=cip] .page-intro{padding-top:45px;padding-bottom:30px}body[data-p
 .coverage-definitions{display:grid;grid-template-columns:1fr 1fr;gap:70px;padding-bottom:65px}.coverage-definitions h2{font-size:32px}.coverage-definitions p{font-size:13px;line-height:1.8}.coverage-publications{margin:25px 0}.coverage-publications>div{display:flex;gap:20px;justify-content:space-between;border-bottom:1px solid var(--line);padding:8px 0;font-size:12px}.coverage-publications dd{margin:0;font-family:var(--mono)}
 @media(max-width:800px){.coverage-metric-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.coverage-metric:nth-child(2){border-right:0}.coverage-metric:nth-child(n+3){border-top:1px solid var(--line)}.coverage-metric:nth-child(3){padding-left:0}.coverage-metric{padding-top:22px;padding-bottom:22px}.coverage-number{font-size:52px}.coverage-footnote{display:block}.coverage-footnote .text-link{margin-top:12px}.coverage-definitions{gap:30px}.coverage-filters{gap:15px}}
 @media(max-width:620px){.coverage-highlights{padding-top:0;padding-bottom:30px}.coverage-metric{padding-left:15px;padding-right:10px}.coverage-number{font-size:49px}.coverage-metric h2{font-size:12px;margin-top:11px}.coverage-metric p{font-size:8px}.coverage-metric .coverage-arrow{font-size:12px;top:26px;right:10px}.coverage-filters{grid-template-columns:1fr 1fr;gap:17px}.coverage-filters>div:last-child{grid-column:1/-1}.coverage-definitions{grid-template-columns:1fr;gap:30px}.coverage-group h2{font-size:27px}.coverage-group li{gap:15px}.coverage-group li a{font-size:13px}.coverage-status{font-size:8px;padding:3px 5px}.coverage-group li p{font-size:11px}.coverage-definitions h2{font-size:29px}.coverage-footnote p{font-size:9px}}
+
+/* Language controls and Japanese typography share the existing paper palette. */
+.language-switch{display:flex;align-items:center;gap:2px;border:1px solid var(--line);padding:3px;flex-shrink:0}
+.language-switch button{border:0;background:transparent;padding:6px 9px;font-size:11px;line-height:1.4;white-space:nowrap}
+.language-switch button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.translation-notice{font-size:12px;line-height:1.8;color:var(--muted);border-left:3px solid var(--orange);padding:10px 16px;background:var(--cream);margin-top:20px;margin-bottom:24px}
+.translation-notice span{display:block}.translation-fallback{color:var(--ink)}
+.language-error{color:#982d23;padding-block:16px}
+html:lang(ja){--sans:-apple-system,BlinkMacSystemFont,'Hiragino Kaku Gothic ProN','Yu Gothic',Meiryo,sans-serif;--serif:'Hiragino Mincho ProN','Yu Mincho',serif}
+html:lang(ja) h1,html:lang(ja) h2{letter-spacing:-.025em;line-height:1.35;font-feature-settings:'palt'}
+html:lang(ja) h1{font-size:clamp(38px,4.6vw,68px)}
+html:lang(ja) .eyebrow,html:lang(ja) .small-mono{letter-spacing:.04em}
+html:lang(ja) .prose{line-height:1.95;overflow-wrap:anywhere}
+html:lang(ja) .prose:lang(en){line-height:1.8}
+html:lang(ja) .site-header nav{gap:18px}
+html:lang(ja) .hero-description{line-height:1.95}
+html:lang(ja) .lab-svg .axis-title{font-family:var(--sans);font-size:11px}
+@media(max-width:1100px){.site-header .source-link{display:none}.language-switch{margin-left:auto;margin-right:16px}}
+@media(max-width:600px){.language-switch{margin-right:10px}.language-switch button{padding:5px 6px;font-size:10px}html:lang(ja) .brand{font-size:13px}html:lang(ja) .hero h1{font-size:42px}.translation-notice.page-width{margin-inline:20px;padding-inline:12px}}
+.term-english{display:block;font-size:11px;font-weight:400;color:var(--muted);margin-top:3px}.glossary-search{display:block;width:min(100%,520px);padding:12px 16px;border:1px solid var(--line);background:transparent;margin:10px 0 18px}.glossary-list>div{display:grid;grid-template-columns:1fr 1fr auto;gap:20px;padding:16px 0;border-top:1px solid var(--line)}.glossary-list dt{font-weight:500}.glossary-list dd{margin:0;font-size:13px}.glossary-list dd:last-child{color:var(--orange)}@media(max-width:650px){.glossary-list>div{grid-template-columns:1fr;gap:5px}}
+.translation-progress{display:flex;flex-wrap:wrap;gap:12px 25px;align-items:center;padding-top:15px;padding-bottom:25px;font-size:12px;color:var(--muted)}.translation-progress a{color:var(--orange);white-space:nowrap}

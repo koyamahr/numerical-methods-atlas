@@ -237,6 +237,14 @@ Nagumo, Jinichi and Arimoto, Suguru and Yoshizawa, Shuji. **An Active Pulse Tran
 
 Bibliographic cross-check only; full original not inspected. Independent electrical pulse-line contribution cited alongside FitzHugh rather than silently assigning both developments to a single paper.
 
+## 1963 · dahlquist1963
+
+Dahlquist, Germund G.. **A special stability problem for linear multistep methods**. BIT.
+
+[Original bibliographic record](https://doi.org/10.1007/BF01963532) · [Full text or implementation reference](https://link.springer.com/article/10.1007/BF01963532)
+
+Original publisher metadata and abstract checked. Foundational A-stability reference in the linear-multistep setting; full text not audited. The atlas distinguishes one-step stability functions, multistep root conditions, stiff damping and spatial error norms.
+
 ## 1968 · chorin1968
 
 Chorin, Alexandre Joel. **Numerical solution of the Navier-Stokes equations**. Mathematics of Computation.

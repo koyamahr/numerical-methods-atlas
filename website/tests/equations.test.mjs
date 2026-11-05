@@ -22,7 +22,11 @@ test('gallery profiles retain increasing actual times and reference conventions'
    if(f.exact){assert.equal(f.exact.length,c.n);assert.ok(f.exact.every(Number.isFinite));
     const error=f.u.reduce((s,v,j)=>s+Math.abs(v-f.exact[j]),0)/c.n;
     assert.ok(Math.abs(error-f.l1)<1e-13);
-   }else assert.equal(f.l1,null);
+    const rms=Math.sqrt(f.u.reduce((s,v,j)=>s+(v-f.exact[j])**2,0)/c.n);
+    const maximum=Math.max(...f.u.map((v,j)=>Math.abs(v-f.exact[j])));
+    assert.ok(Math.abs(rms-f.l2)<1e-13);assert.ok(Math.abs(maximum-f.linf)<1e-13);
+    assert.ok(f.l1<=f.l2+1e-14&&f.l2<=f.linf+1e-14);
+   }else {assert.equal(f.l1,null);assert.equal(f.l2,null);assert.equal(f.linf,null);}
    if(c.boundary.startsWith('Periodic'))assert.ok(Math.abs(f.mean_change)<1e-12);
   }
  }

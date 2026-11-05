@@ -2,9 +2,9 @@
 
 Prepared local edition, counted 2026-11-06. These are counts of catalog entries and documented examples, not a claim that every entry is a verified end-to-end solver.
 
-**42 equation/model entries · 83 methods and building blocks · 125 journal/conference papers · 145 total sources.**
+**42 equation/model entries · 83 methods and building blocks · 126 journal/conference papers · 146 total sources.**
 
-There are 9 saved-profile equation-gallery cases across 7 equation families, and 41 reading chapters including this inventory.
+There are 9 saved-profile equation-gallery cases across 7 equation families, and 42 reading chapters including this inventory.
 
 ## Equations and models
 
@@ -184,14 +184,14 @@ Unique bibliographic publications classified as journal articles or conference p
 
 Unique cataloged works across all publication types. An original publication and a later translation are separate works; duplicate DOI records are not. NASA case links in prose are not catalog records.
 
-- 122 journal-article records, including reviews, translations and explicitly labeled accepted papers.
+- 123 journal-article records, including reviews, translations and explicitly labeled accepted papers.
 - 3 conference papers.
 - 7 books.
 - 2 book chapters.
 - 3 technical/teaching reports.
 - 8 other records, including documentation and a separately identified preprint.
 
-A duplicate Cockburn–Shu 1989 record was merged. Burgers 1948 is classified as a book chapter. The revised total is 145 unique cataloged works, rather than the earlier 146 records. An original paper and a separately published translation remain separate works. The bibliography does not claim that every full text has been inspected; source notes preserve the inspection status.
+A duplicate Cockburn–Shu 1989 record was merged. Burgers 1948 is classified as a book chapter. The former 146-record total included that duplicate; subsequent source additions are reflected in the current unique-work totals above. An original paper and a separately published translation remain separate works. The bibliography does not claim that every full text has been inspected; source notes preserve the inspection status.
 
 ## Reproduction
 

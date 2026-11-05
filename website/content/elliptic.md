@@ -125,3 +125,6 @@ See [continuous P1 FEM](fem.md) for weak-form assembly,
 and [Nishikawa hyperbolic diffusion](hyperbolic-diffusion.md) for auxiliary-gradient
 pseudo-time iteration. The [equation gallery](equation-gallery.md) separately
 shows physical-time heat diffusion.
+
+For definitions and comparisons of **A-stability, L-stability and L1/L2/L∞ error norms**,
+see the [shared accuracy and stability guide](accuracy-stability.md).

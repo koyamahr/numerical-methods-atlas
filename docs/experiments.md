@@ -165,3 +165,6 @@ The [family notebook](https://koyamahr.github.io/the-art-of-numerical-algorithms
 ## CIP value and gradient transport
 
 The [CIP notebook](https://koyamahr.github.io/the-art-of-numerical-algorithms/#/cip) compares original cubic-Hermite CIP with linear point interpolation on uniform periodic scalar advection. It displays the independently transported gradient, derivative-initialization choices, smooth refinement, overshoot on a square pulse, and an analytic conservation counterexample. Read [the definitions](cip.md); point samples and finite-volume averages are not interchangeable. Rebuild with `python scripts/build_cip.py` before syncing.
+
+For definitions and comparisons of **A-stability, L-stability and L1/L2/L∞ error norms**,
+see the [shared accuracy and stability guide](accuracy-stability.md).

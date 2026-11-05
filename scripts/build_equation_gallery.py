@@ -25,6 +25,8 @@ def frame(t,step,u,exact,initial_mass,measure='cell averages'):
     return dict(time=float(t),step=int(step),u=np.asarray(u).tolist(),
                 exact=None if exact is None else np.asarray(exact).tolist(),
                 l1=None if exact is None else float(np.mean(abs(u-exact))),
+                l2=None if exact is None else float(np.sqrt(np.mean(abs(u-exact)**2))),
+                linf=None if exact is None else float(np.max(abs(u-exact))),
                 mean=float(np.mean(u)),mean_change=float(np.mean(u)-initial_mass),reference_measure=measure)
 
 n=128; x=(np.arange(n)+.5)/n; cases=[]

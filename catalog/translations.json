@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "source_language": "en",
+  "languages": [
+    "en",
+    "ja"
+  ],
+  "chapters": {
+    "stability": {
+      "ja": {
+        "status": "draft",
+        "source_sha256": "b0c0554021abbfe55f3946cfc4b9ffa253434a1fc70cff904d1405d6f61dce13",
+        "checked_on": null
+      }
+    },
+    "accuracy-stability": {
+      "ja": {
+        "status": "draft",
+        "source_sha256": "a9280ae3a8031d30c1c3939367b4719d972dcb409b1f0d82fbffec09d5f3adc9",
+        "checked_on": null
+      }
+    },
+    "equation-gallery": {
+      "ja": {
+        "status": "draft",
+        "source_sha256": "7c135d5e809acfdd9404874e71f72b838b2cd2e1f77689bf472964f62c93b301",
+        "checked_on": null
+      }
+    },
+    "experiments": {
+      "ja": {
+        "status": "draft",
+        "source_sha256": "574e55c108d9028c2d717f62986415acfcbb1569cf78369251a92de3bcb9dd4b",
+        "checked_on": null
+      }
+    }
+  }
+}
