@@ -1,0 +1,129 @@
+{
+  "python": "3.9.6",
+  "numpy": "2.0.2",
+  "source_sha256": {
+    "__init__.py": "7236458e494b37263cb625bb51a2fa2c65b284396fab9a0b5a05359770121628",
+    "advection.py": "ba81f593ca288fe480dc60f67bbc433320bb06c21f4b5fae4002d204b6a9b82d",
+    "benchmarks.py": "dc8f83aafea473b5f0e1e7bf82630484dd60aa446859c1f602571adc3c59f019",
+    "cli.py": "3fd1769b74ae81713365598e49a5d69a1a5cf437eb9c622bd6134672de4f7e7a",
+    "equations.py": "d1b589ad4b8a31d316c20926ef7104664609d789f31f6fb239c1d74bb310b619",
+    "linear.py": "d58db4efc09a3358b28cff07ba3a2e732244eaaf2f82a5fcf1ce0de001ba87a9",
+    "mhd.py": "14fe39abf43ef1ba47c3eb1dbe22bea462c12944ed28f37d2b33cfaee61fd0d9",
+    "multigrid.py": "45370e4ffeccfbabbce5ccf48eff90c5c99614d0549536dcd4209bd028ee2d75",
+    "riemann.py": "702ce9e08fbef67ed77363e8603e64f2da8a979d3b5abd6ffa62ab78344c95cf",
+    "solvers.py": "227d5c480e4cad8c5665b3afcdd22a631a3cac2bcedc2056bdb4d4f87fe7a5e7"
+  },
+  "git_revision": null,
+  "git_dirty": true,
+  "scope": "educational implementations; not original-figure reproductions",
+  "settings": {
+    "euler_cfl": 0.3,
+    "mhd_cfl": 0.3,
+    "dg_cfl": 0.2,
+    "mhd_ch": 3.0,
+    "mhd_damping": 0.18
+  },
+  "metrics": {
+    "sod_rusanov_density_L1": 0.005260769732920305,
+    "sod_hll_density_L1": 0.004349306103182766,
+    "sod_hllc_density_L1": 0.004204333412501788,
+    "sod_roe_density_L1": 0.004111885950514283,
+    "dg_p0_errors": [
+      0.3173576032585342,
+      0.17688504536042293,
+      0.0933353775729456,
+      0.04791951577234439
+    ],
+    "dg_p1_errors": [
+      0.027424044628649582,
+      0.007221859657150685,
+      0.0018372725857665679,
+      0.0004623145303491599
+    ],
+    "dg_p2_errors": [
+      0.0017735978739235939,
+      0.00021799282581466122,
+      2.7215688802135564e-05,
+      3.401095792422818e-06
+    ],
+    "orszag_tang_ct": {
+      "n": 64,
+      "steps": 454,
+      "time": 0.5,
+      "min_pressure": 0.1041994479913407,
+      "max_abs_divB": 1.1723955140041653e-13,
+      "relative_mass_drift": 4.440892098500626e-16,
+      "relative_energy_drift": 0.0
+    },
+    "orszag_tang_glm": {
+      "n": 64,
+      "steps": 640,
+      "time": 0.5,
+      "min_pressure": 0.16694186744620496,
+      "max_abs_divB": 2.6645352591003757e-15,
+      "relative_mass_drift": 4.440892098500626e-16,
+      "relative_energy_drift": 2.220446049250313e-16
+    },
+    "conditioning": {
+      "before": 17451180.570690874,
+      "after": 680.6170700217154
+    },
+    "dual_time": {
+      "n": 64,
+      "physical_dt": 0.02,
+      "time": 0.2,
+      "last_inner_residual": 3.995808128820499e-09,
+      "last_inner_iterations": 39
+    },
+    "entropy_muscl_density_L1": [
+      0.009102385393112557,
+      0.002674580058157812,
+      0.0007623807414468428
+    ],
+    "entropy_weno5_density_L1": [
+      2.101370487010146e-05,
+      6.819097100818627e-07,
+      2.4429211525206496e-08
+    ],
+    "diffusion_ftcs": {
+      "dt": 9.765625e-05,
+      "diffusion_number": 0.4,
+      "steps": 1024,
+      "time": 0.1,
+      "n": 63,
+      "max_error": 0.00010344248781352094
+    },
+    "diffusion_backward-euler": {
+      "dt": 0.005,
+      "diffusion_number": 20.48,
+      "steps": 20,
+      "time": 0.1,
+      "n": 63,
+      "max_error": 0.008964819676323565
+    },
+    "diffusion_crank-nicolson": {
+      "dt": 0.005,
+      "diffusion_number": 20.48,
+      "steps": 20,
+      "time": 0.1,
+      "n": 63,
+      "max_error": 7.746840213207484e-07
+    },
+    "multigrid": {
+      "n": 63,
+      "cycles": 8,
+      "final_relative_residual": 1.2439886296261601e-11,
+      "residual_history": [
+        63.0,
+        3.386917848281874,
+        0.13791464801242426,
+        0.005752958126060944,
+        0.00024237197441771694,
+        1.025593611687995e-05,
+        4.3485999047924873e-07,
+        1.845660118758885e-08,
+        7.837128366644808e-10
+      ]
+    }
+  }
+}
