@@ -29,10 +29,16 @@ For RANS, verify model implementations on flat-plate and bump cases before
 moving to airfoils, steps, diffusers, and humps. This order follows dependencies
 and difficulty and complements the atlas's publication chronology.
 
-## Future presentation
+## Web edition
 
-A future web edition can organize each exhibit as literature → equations →
-execution → figures → verification evidence. Exhibits should state whether they
-are tested educational examples, original-figure reproductions, prototypes,
-literature-only entries, or planned work. The first edition includes the
-library and documentation; a standalone website is a separate publishing step.
+[The public web edition](https://the-art-of-numerical-algorithms.riken-2026-5021.chatgpt.site/)
+organizes the first-edition library as a historical atlas, method reading room,
+computed gallery, and searchable reference library. Each exhibit connects
+literature, equations, execution, figures, and verification scope.
+
+The interactive Sod comparison switches between four precomputed MUSCL density
+curves from the Python library. Figures and the original gallery validation
+manifest remain available alongside the complete source edition. Future
+exhibits should continue to distinguish tested educational examples,
+original-figure reproductions, prototypes, literature-only entries, and
+planned work.

@@ -12,6 +12,8 @@ compare the results with analytical solutions and conservation checks. The
 library covers selected educational models; the [roadmap](docs/roadmap.md)
 identifies the extensions still to be implemented.
 
+**[Read the web edition](https://the-art-of-numerical-algorithms.riken-2026-5021.chatgpt.site/)** — browse the atlas, methods, gallery, and searchable references.
+
 ## Getting started
 
 Requires Python 3.9 or later.
@@ -121,3 +123,10 @@ reference list and BibTeX together with:
 ```bash
 python scripts/build_references.py
 ```
+
+## Build the web edition
+
+The static website lives in [`website/`](website/README.md). It renders all ten
+reading chapters and their equations, includes eleven gallery figures, and uses
+precomputed library results for the interactive Sod comparison. See the web
+README for local preview and content-refresh commands.

@@ -21,3 +21,17 @@ jobs:
         with:
           name: numerical-gallery-py${{ matrix.python-version }}
           path: outputs/gallery
+
+  website:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: website/package-lock.json
+      - run: npm ci
+        working-directory: website
+      - run: npm run build
+        working-directory: website

@@ -1,0 +1,449 @@
+@article{cfl1928,
+  author = {Courant, Richard and Friedrichs, Kurt and Lewy, Hans},
+  title = {Über die partiellen Differenzengleichungen der mathematischen Physik},
+  year = {1928},
+  journal = {Mathematische Annalen},
+  volume = {100},
+  pages = {32--74},
+  doi = {10.1007/BF01448839},
+  url = {https://www.stat.uchicago.edu/~lekheng/courses/302/classics/courant-friedrichs-lewy.pdf},
+  note = {Originally published in 1928; the linked source is a later English translation. Background on domains of dependence and the CFL condition.}
+}
+
+@article{crank1947,
+  author = {Crank, John and Nicolson, Phyllis},
+  title = {A practical method for numerical evaluation of solutions of partial differential equations of the heat-conduction type},
+  year = {1947},
+  journal = {Proceedings of the Cambridge Philosophical Society},
+  volume = {43},
+  pages = {50--67},
+  doi = {10.1017/S0305004100023197},
+  url = {https://doi.org/10.1007/BF02127704},
+  note = {Originally published in 1947; the linked source is a 1996 reprint. This edition implements the theta method for linear diffusion, rather than reproducing the original nonlinear problem.}
+}
+
+@techreport{thomas1949,
+  author = {Thomas, Llewellyn Hilleth},
+  title = {Elliptic problems in linear difference equations over a network},
+  year = {1949},
+  institution = {Watson Scientific Computing Laboratory, Columbia University},
+  url = {https://www.netlib.org/na-digest-html/96/v96n09.html},
+  note = {The original report and a holding URL have not been verified. This provisional record follows the historical citation in Netlib and does not imply direct inspection of the original.}
+}
+
+@article{charney1950,
+  author = {Charney, Jule G. and Fjørtoft, Ragnar and von Neumann, John},
+  title = {Numerical Integration of the Barotropic Vorticity Equation},
+  year = {1950},
+  journal = {Tellus},
+  volume = {2},
+  pages = {237--254},
+  doi = {10.1111/j.2153-3490.1950.tb00336.x},
+  url = {https://maths.ucd.ie/~plynch/eniac/CFvN-1950.pdf},
+  note = {Publicly accessible original paper. Historical context for stability analysis; the numerical weather forecast is not implemented here.}
+}
+
+@article{lax1954,
+  author = {Lax, Peter D.},
+  title = {Weak solutions of nonlinear hyperbolic equations and their numerical computation},
+  year = {1954},
+  journal = {Communications on Pure and Applied Mathematics},
+  volume = {7},
+  pages = {159--193},
+  doi = {10.1002/cpa.3160070112},
+  url = {https://onlinelibrary.wiley.com/doi/10.1002/cpa.3160070112},
+  note = {Publisher bibliographic record and abstract. Background on weak solutions and Lax-type differences. The Lax shock-tube parameters have not been matched directly to the original table.}
+}
+
+@article{lax1956,
+  author = {Lax, Peter D. and Richtmyer, Robert D.},
+  title = {Survey of the stability of linear finite difference equations},
+  year = {1956},
+  journal = {Communications on Pure and Applied Mathematics},
+  volume = {9},
+  pages = {267--293},
+  doi = {10.1002/cpa.3160090206},
+  url = {https://math.berkeley.edu/~wilken/228B.S07/LaxRichtmyer.pdf},
+  note = {Publicly accessible original paper. The equivalence theorem assumes a well-posed linear initial-value problem and a consistent linear approximation.}
+}
+
+@article{godunov1959,
+  author = {Godunov, Sergei K.},
+  title = {A difference method for numerical calculation of discontinuous solutions of the equations of hydrodynamics},
+  year = {1959},
+  journal = {Matematicheskii Sbornik},
+  volume = {47(89)},
+  pages = {271--306},
+  url = {https://www.mathnet.ru/eng/sm4873},
+  note = {Original publication in 1959, accepted in 1956. The godunov option in this edition is a Godunov-type finite-volume method with approximate fluxes.}
+}
+
+@article{lax1960,
+  author = {Lax, Peter D. and Wendroff, Burton},
+  title = {Systems of conservation laws},
+  year = {1960},
+  journal = {Communications on Pure and Applied Mathematics},
+  volume = {13},
+  pages = {217--237},
+  doi = {10.1002/cpa.3160130205},
+  url = {https://onlinelibrary.wiley.com/doi/10.1002/cpa.3160130205},
+  note = {Publisher bibliographic record. Background for linear-advection Lax–Wendroff and systems of conservation laws.}
+}
+
+@article{fedorenko1961,
+  author = {Fedorenko, Radii P.},
+  title = {A relaxation method for solving elliptic difference equations},
+  year = {1961},
+  journal = {Zhurnal Vychislitelnoi Matematiki i Matematicheskoi Fiziki},
+  volume = {1},
+  pages = {922--927},
+  url = {https://www.mathnet.ru/eng/zvmmf8014},
+  note = {Original publication in 1961; English translation in 1962. A historical entry point to multigrid.}
+}
+
+@article{rusanov1961,
+  author = {Rusanov, Vladimir V.},
+  title = {The calculation of the interaction of non-stationary shock waves with barriers},
+  year = {1961},
+  journal = {Zhurnal Vychislitelnoi Matematiki i Matematicheskoi Fiziki},
+  volume = {1},
+  pages = {267--279},
+  url = {https://www.mathnet.ru/eng/zvmmf7987},
+  note = {Russian original in 1961; English translation in 1962. This edition uses a modern local Lax–Friedrichs/Rusanov flux.}
+}
+
+@techreport{reed1973,
+  author = {Reed, W. H. and Hill, T. R.},
+  title = {Triangular mesh methods for the neutron transport equation},
+  year = {1973},
+  institution = {Los Alamos Scientific Laboratory},
+  number = {LA-UR-73-479},
+  url = {https://digital.library.unt.edu/ark:/67531/metadc1036080/},
+  note = {Public government-report record. This edition implements modal DG for 1D linear advection, rather than triangular-mesh neutron transport.}
+}
+
+@article{brandt1977,
+  author = {Brandt, Achi},
+  title = {Multi-level adaptive solutions to boundary-value problems},
+  year = {1977},
+  journal = {Mathematics of Computation},
+  volume = {31},
+  pages = {333--390},
+  doi = {10.1090/S0025-5718-1977-0431719-X},
+  url = {https://www.ams.org/mcom/1977-31-138/S0025-5718-1977-0431719-X/S0025-5718-1977-0431719-X.pdf},
+  note = {AMS-hosted original paper. This edition implements a fixed-grid geometric V-cycle, rather than the full adaptive framework.}
+}
+
+@book{spectral1977,
+  author = {Gottlieb, David and Orszag, Steven A.},
+  title = {Numerical Analysis of Spectral Methods: Theory and Applications},
+  year = {1977},
+  publisher = {SIAM},
+  doi = {10.1137/1.9781611970425},
+  url = {https://epubs.siam.org/doi/abs/10.1137/1.9781611970425.ch2},
+  note = {Publisher chapter information for a representative spectral-methods monograph. This edition is limited to periodic linear Fourier problems.}
+}
+
+@article{sod1978,
+  author = {Sod, Gary A.},
+  title = {A survey of several finite difference methods for systems of nonlinear hyperbolic conservation laws},
+  year = {1978},
+  journal = {Journal of Computational Physics},
+  volume = {27},
+  pages = {1--31},
+  doi = {10.1016/0021-9991(78)90023-2},
+  url = {https://faculty.washington.edu/rjl/riemann_book/Euler_equations.html},
+  note = {The DOI identifies the original paper; the source is an implementation reference for the standard Sod problem and exact solution. The original methods and figures are not reproduced in full.}
+}
+
+@article{orszag1979,
+  author = {Orszag, Steven A. and Tang, Cha-Mei},
+  title = {Small-scale structure of two-dimensional magnetohydrodynamic turbulence},
+  year = {1979},
+  journal = {Journal of Fluid Mechanics},
+  volume = {90},
+  pages = {129--143},
+  doi = {10.1017/S002211207900210X},
+  url = {https://doi.org/10.1017/S002211207900210X},
+  note = {The original study concerns incompressible MHD. Distinguish it from the normalization of the modern compressible Orszag–Tang test used here.}
+}
+
+@article{vanleer1979,
+  author = {van Leer, Bram},
+  title = {Towards the ultimate conservative difference scheme. V. A second-order sequel to Godunov's method},
+  year = {1979},
+  journal = {Journal of Computational Physics},
+  volume = {32},
+  pages = {101--136},
+  doi = {10.1016/0021-9991(79)90145-1},
+  url = {https://www.sciencedirect.com/science/article/pii/0021999179901451},
+  note = {Publisher bibliographic record and abstract. This edition uses minmod MUSCL with SSPRK3, rather than reproducing the original Lagrangian/remap construction.}
+}
+
+@article{roe1981,
+  author = {Roe, Philip L.},
+  title = {Approximate Riemann solvers, parameter vectors, and difference schemes},
+  year = {1981},
+  journal = {Journal of Computational Physics},
+  volume = {43},
+  pages = {357--372},
+  doi = {10.1016/0021-9991(81)90128-5},
+  url = {https://www.sciencedirect.com/science/article/pii/0021999181901285},
+  note = {Publisher bibliographic record and abstract. This edition implements 1D Euler with quadratic entropy smoothing of acoustic eigenvalues.}
+}
+
+@article{hll1983,
+  author = {Harten, Amiram and Lax, Peter D. and van Leer, Bram},
+  title = {On Upstream Differencing and Godunov-Type Schemes for Hyperbolic Conservation Laws},
+  year = {1983},
+  journal = {SIAM Review},
+  volume = {25},
+  pages = {35--61},
+  doi = {10.1137/1025002},
+  url = {https://www.ece.uvic.ca/~bctill/papers/numacoust/Harten_etal_1983.pdf},
+  note = {Publicly accessible original paper. Background on HLL; the hll implementation here uses Davis-type minimum/maximum acoustic wave speeds.}
+}
+
+@article{woodward1984,
+  author = {Woodward, Paul and Colella, Phillip},
+  title = {The numerical simulation of two-dimensional fluid flow with strong shocks},
+  year = {1984},
+  journal = {Journal of Computational Physics},
+  volume = {54},
+  pages = {115--173},
+  doi = {10.1016/0021-9991(84)90142-6},
+  url = {https://crd.lbl.gov/assets/pubs_presos/AMCS/ANAG/A31984.pdf},
+  note = {Publicly accessible original paper. Double Mach Reflection and step flows are candidates for future 2D exhibits and are not implemented here.}
+}
+
+@article{eno1987,
+  author = {Harten, Amiram and Engquist, Bjorn and Osher, Stanley and Chakravarthy, Sukumar R.},
+  title = {Uniformly high order accurate essentially non-oscillatory schemes, III},
+  year = {1987},
+  journal = {Journal of Computational Physics},
+  volume = {71},
+  pages = {231--303},
+  doi = {10.1016/0021-9991(87)90031-3},
+  url = {https://www.sciencedirect.com/science/article/pii/0021999187900313},
+  note = {Original publication in 1987, distinct from the 1997 reprint. A standalone ENO implementation is planned; this edition implements WENO5-JS.}
+}
+
+@article{turkel1987,
+  author = {Turkel, Eli},
+  title = {Preconditioned methods for solving the incompressible and low speed compressible equations},
+  year = {1987},
+  journal = {Journal of Computational Physics},
+  volume = {72},
+  pages = {277--298},
+  doi = {10.1016/0021-9991(87)90084-2},
+  url = {https://www.sciencedirect.com/science/article/pii/0021999187900842},
+  note = {Publisher bibliographic record and abstract. Low-speed PDE preconditioning is discussed as future work and is distinct from the Jacobi matrix-scaling example.}
+}
+
+@article{einfeldt1988,
+  author = {Einfeldt, Bernd},
+  title = {On Godunov-Type Methods for Gas Dynamics},
+  year = {1988},
+  journal = {SIAM Journal on Numerical Analysis},
+  volume = {25},
+  pages = {294--318},
+  doi = {10.1137/0725021},
+  url = {https://epubs.siam.org/doi/abs/10.1137/0725021},
+  note = {Publisher bibliographic record and abstract. Background for Einfeldt-type wave-speed estimates in Euler HLLE.}
+}
+
+@article{evans1988,
+  author = {Evans, Charles R. and Hawley, John F.},
+  title = {Simulation of magnetohydrodynamic flows: A constrained transport method},
+  year = {1988},
+  journal = {The Astrophysical Journal},
+  volume = {332},
+  pages = {659--677},
+  doi = {10.1086/166684},
+  url = {https://adsabs.harvard.edu/pdf/1988ApJ...332..659E},
+  note = {Publicly accessible original paper. This edition uses a Cartesian flux-CT-type construction and does not reproduce every part of the original method.}
+}
+
+@article{shu1988,
+  author = {Shu, Chi-Wang and Osher, Stanley},
+  title = {Efficient implementation of essentially non-oscillatory shock-capturing schemes},
+  year = {1988},
+  journal = {Journal of Computational Physics},
+  volume = {77},
+  pages = {439--471},
+  doi = {10.1016/0021-9991(88)90177-5},
+  url = {https://www.sciencedirect.com/science/article/pii/0021999188901775},
+  note = {Publisher bibliographic record and abstract. Background on TVD Runge–Kutta and flux-based constructions.}
+}
+
+@article{cockburn1989,
+  author = {Cockburn, Bernardo and Shu, Chi-Wang},
+  title = {TVB Runge-Kutta local projection discontinuous Galerkin finite element method for conservation laws. II. General framework},
+  year = {1989},
+  journal = {Mathematics of Computation},
+  volume = {52},
+  pages = {411--435},
+  doi = {10.1090/S0025-5718-1989-0983311-4},
+  url = {https://www-users.cse.umn.edu/~cockburn/lecture_notes/DG-4.pdf},
+  note = {The DOI identifies the original paper; the linked source is a later set of author lecture notes. This edition implements DG for smooth advection without a TVB limiter.}
+}
+
+@article{shu1989,
+  author = {Shu, Chi-Wang and Osher, Stanley},
+  title = {Efficient implementation of essentially non-oscillatory shock-capturing schemes, II},
+  year = {1989},
+  journal = {Journal of Computational Physics},
+  volume = {83},
+  pages = {32--78},
+  doi = {10.1016/0021-9991(89)90222-2},
+  url = {https://academic.oup.com/mnras/article/512/1/1430/6530656},
+  note = {The DOI identifies the original paper. Initial-condition parameters follow the later Quokka paper. Digitized comparisons with original figures have not been performed.}
+}
+
+@article{einfeldt1991,
+  author = {Einfeldt, Bernd and Munz, Claus-Dieter and Roe, Philip L. and Sjögreen, Björn},
+  title = {On Godunov-type methods near low densities},
+  year = {1991},
+  journal = {Journal of Computational Physics},
+  volume = {92},
+  pages = {273--295},
+  doi = {10.1016/0021-9991(91)90211-3},
+  url = {https://www.sciencedirect.com/science/article/pii/0021999191902113},
+  note = {Publisher bibliographic record and abstract. Background on low-density positivity; this edition uses the standard Toro formulation of the 1–2–3 problem.}
+}
+
+@inproceedings{jameson1991,
+  author = {Jameson, Antony},
+  title = {Time dependent calculations using multigrid, with applications to unsteady flows past airfoils and wings},
+  year = {1991},
+  booktitle = {10th AIAA Computational Fluid Dynamics Conference},
+  doi = {10.2514/6.1991-1596},
+  url = {https://cfd.ku.edu/JRV/Martinelli.pdf},
+  note = {The DOI identifies the original paper; the linked source is a later exposition by a coauthor. Dual time stepping here is a minimal linear-advection model.}
+}
+
+@article{hllc1994,
+  author = {Toro, E. F. and Spruce, M. and Speares, W.},
+  title = {Restoration of the contact surface in the HLL-Riemann solver},
+  year = {1994},
+  journal = {Shock Waves},
+  volume = {4},
+  pages = {25--34},
+  doi = {10.1007/BF01414629},
+  url = {https://doi.org/10.1007/BF01414629},
+  note = {Publisher bibliographic record and abstract. This edition uses HLLC with Davis-type wave speeds and does not implement every original wave-speed estimate or WAF construction.}
+}
+
+@book{templates1994,
+  author = {Barrett, Richard and Berry, Michael and Chan, Tony F. and Demmel, James and Donato, June and Dongarra, Jack and Eijkhout, Victor and Pozo, Roldan and Romine, Charles and van der Vorst, Henk},
+  title = {Templates for the Solution of Linear Systems: Building Blocks for Iterative Methods},
+  year = {1994},
+  publisher = {SIAM},
+  url = {https://www.netlib.org/templates/templates.html},
+  note = {Publicly available author-side reference material for Jacobi, Gauss–Seidel, preconditioning, and multigrid.}
+}
+
+@article{weno1994,
+  author = {Liu, Xu-Dong and Osher, Stanley and Chan, Tony},
+  title = {Weighted Essentially Non-oscillatory Schemes},
+  year = {1994},
+  journal = {Journal of Computational Physics},
+  volume = {115},
+  pages = {200--212},
+  doi = {10.1006/jcph.1994.1187},
+  url = {https://www.sciencedirect.com/science/article/pii/S0021999184711879},
+  note = {Publisher bibliographic record and abstract. Historical introduction to WENO; the weights implemented here are Jiang–Shu (1996).}
+}
+
+@article{jiang1996,
+  author = {Jiang, Guang-Shan and Shu, Chi-Wang},
+  title = {Efficient Implementation of Weighted ENO Schemes},
+  year = {1996},
+  journal = {Journal of Computational Physics},
+  volume = {126},
+  pages = {202--228},
+  doi = {10.1006/jcph.1996.0130},
+  url = {https://www.ece.uvic.ca/~bctill/papers/numacoust/Jiang_Shu_1996.pdf},
+  note = {Publicly accessible original paper. Reference for WENO5-JS flux reconstruction, smoothness indicators, and nonlinear weights.}
+}
+
+@article{toth2000,
+  author = {Tóth, Gábor},
+  title = {The ∇·B = 0 Constraint in Shock-Capturing Magnetohydrodynamics Codes},
+  year = {2000},
+  journal = {Journal of Computational Physics},
+  volume = {161},
+  pages = {605--652},
+  doi = {10.1006/jcph.2000.6519},
+  url = {https://public.websites.umich.edu/~gtoth/Papers/Toth2000_divb.pdf},
+  note = {Author-hosted original paper. Reference for CT variants and differences between discrete divergence operators.}
+}
+
+@article{dedner2002,
+  author = {Dedner, Andreas and Kemm, Friedemann and Kröner, Dietmar and Munz, Claus-Dieter and Schnitzer, Thomas and Wesenberg, Matthias},
+  title = {Hyperbolic Divergence Cleaning for the MHD Equations},
+  year = {2002},
+  journal = {Journal of Computational Physics},
+  volume = {175},
+  pages = {645--673},
+  doi = {10.1006/jcph.2001.6961},
+  url = {https://www.tp4.ruhr-uni-bochum.de/~sw/papers/JCP2002.6961.pdf},
+  note = {Publicly accessible original paper, published in 2002 despite 2001 appearing in the DOI. This edition uses a simplified GLM model with fixed cleaning speed.}
+}
+
+@book{leveque2002,
+  author = {LeVeque, Randall J.},
+  title = {Finite Volume Methods for Hyperbolic Problems},
+  year = {2002},
+  publisher = {Cambridge University Press},
+  doi = {10.1017/CBO9780511791253},
+  url = {https://www.cambridge.org/core/books/finite-volume-methods-for-hyperbolic-problems/97D5D1ACB1926DA1D4D52EAD6909E2B9},
+  note = {Publisher bibliographic record and abstract. Background for conservation laws and shallow-water implementations.}
+}
+
+@article{abgrall2006,
+  author = {Abgrall, Rémi},
+  title = {Residual distribution schemes: Current status and future trends},
+  year = {2006},
+  journal = {Computers & Fluids},
+  volume = {35},
+  pages = {641--669},
+  doi = {10.1016/j.compfluid.2005.01.007},
+  url = {https://www.math.u-bordeaux.fr/~rabgrall/mes_papiers/caf_2006_35.pdf},
+  note = {Author-hosted review. The 2006 date identifies the review, rather than the origin of residual distribution. This edition implements only 1D scalar RD.}
+}
+
+@article{nishikawa2008,
+  author = {Nishikawa, Hiroaki and Kitamura, Keiichi},
+  title = {Very simple, carbuncle-free, boundary-layer-resolving, rotated-hybrid Riemann solvers},
+  year = {2008},
+  journal = {Journal of Computational Physics},
+  volume = {227},
+  pages = {2560--2581},
+  doi = {10.1016/j.jcp.2007.11.003},
+  url = {https://www.sciencedirect.com/science/article/abs/pii/S0021999107004822},
+  note = {Publisher bibliographic record and abstract. The 2D rotated solver and carbuncle tests are future work.}
+}
+
+@book{toro2009,
+  author = {Toro, Eleuterio F.},
+  title = {Riemann Solvers and Numerical Methods for Fluid Dynamics: A Practical Introduction},
+  year = {2009},
+  publisher = {Springer},
+  edition = {3},
+  doi = {10.1007/b79761},
+  url = {https://doi.org/10.1007/b79761},
+  note = {Publisher bibliographic record. Background for exact Riemann solutions and the standard double-rarefaction setup.}
+}
+
+@article{quokka2022,
+  author = {Wibking, Benjamin D. and Krumholz, Mark R.},
+  title = {quokka: a code for two-moment AMR radiation hydrodynamics on GPUs},
+  year = {2022},
+  journal = {Monthly Notices of the Royal Astronomical Society},
+  volume = {512},
+  pages = {1430--1449},
+  doi = {10.1093/mnras/stac439},
+  url = {https://academic.oup.com/mnras/article/512/1/1430/6530656},
+  note = {Section 3.1.5 of the public paper is the reference for the adopted Shu–Osher parameters. The Quokka code itself is not reproduced.}
+}
