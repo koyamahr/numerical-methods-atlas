@@ -39,7 +39,7 @@ for name in ('limiters.json','runge-kutta.json','cip.json','basis.json','hamilto
 for name in ('validation.json','double-mach-run.json','double-mach.npz',
              'hamiltonian.json','particle-gravity.json','gravity-boundaries.json',
              'keep-vortex.json','equation-gallery.json','solver-foundations.json',
-             'biological-models.json','geophysical-grids.json','spherical-meshes.json'):
+             'biological-models.json','geophysical-grids.json','spherical-meshes.json','reference-solutions.json'):
     copy_changed(ROOT/'docs/figures'/name,SITE/'public/assets'/name)
 generate('build_coverage.py')
 generate('build_japanese_catalogs.py')

@@ -23,7 +23,7 @@
     "equation-gallery": {
       "ja": {
         "status": "draft",
-        "source_sha256": "7c135d5e809acfdd9404874e71f72b838b2cd2e1f77689bf472964f62c93b301",
+        "source_sha256": "d31a3f7a2751ff5cac4ab331e479a4dfbad4abc4be8ef0aab0ee2ed06095c6c4",
         "checked_on": null
       }
     },
@@ -86,7 +86,7 @@
     "benchmarks": {
       "ja": {
         "status": "draft",
-        "source_sha256": "9d76068c04ce06ba087fbe18b7c51e50c8f48e4fed648b83d056b158eef87779",
+        "source_sha256": "f0b4130a7b3a9912e360f1bb616c90fdb7f3acae24213109aacb664ac9c87491",
         "checked_on": null
       }
     },
@@ -268,7 +268,7 @@
     "roadmap": {
       "ja": {
         "status": "draft",
-        "source_sha256": "f65fa88c66c8d2a9a33d2eb882e1105a95688032004ed7fd9f03fb00720cecef",
+        "source_sha256": "4737849d96abe928bda039d4fea47a11d020d4596032e529c18e431ad8a51930",
         "checked_on": null
       }
     },
@@ -311,6 +311,13 @@
       "ja": {
         "status": "draft",
         "source_sha256": "d6b874f8af1870c9d07c3be8a93a6c348d5522fa5906f5601aefc1937d4b6c49",
+        "checked_on": null
+      }
+    },
+    "reference-solutions": {
+      "ja": {
+        "status": "draft",
+        "source_sha256": "5e1ef9eca8c6c641c114c608b7d247406596663567c57109b1e763e172a22bb8",
         "checked_on": null
       }
     }

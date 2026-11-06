@@ -4,7 +4,7 @@ Published web edition, counted 2026-11-06. These are counts of catalog entries a
 
 **42 equation/model entries · 90 methods and building blocks · 139 journal/conference papers · 176 total sources.**
 
-There are 9 saved-profile equation-gallery cases across 7 equation families, and 45 reading chapters including this inventory.
+There are 9 saved-profile equation-gallery cases across 7 equation families, and 46 reading chapters including this inventory.
 
 ## Equations and models
 

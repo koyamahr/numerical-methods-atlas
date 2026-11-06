@@ -14,7 +14,7 @@ NASA問題集には計算済みの15°楔の基準例と未実装候補が含ま
 
 - 計算記録と保存配列を強く結び、格子・時間細分化と実行時間を併記します。
 - 有限体積セル平均の初期化・積分参照、特性WENO、正値制限、強い衝撃波テストを加えます。
-- 浅水・等温厳密参照を追加し、地形、静水平衡保存、乾燥床を別段階で扱います。
+- 浅水・等温Riemann参照解を追加しました。地形、静水平衡保存、数値的な乾床の発展は別段階で扱います。
 - 新しいHLLD標準テストを、UCT-HLLD・強磁場問題・外部参照コード比較へ広げます。
 - 非線形Fourierとエイリアシング除去、制限付きEuler DG、多次元残差分配を調べます。
 - 低Mach PDE前処理と2次元Euler回転ハイブリッドを実装し、エントロピー修正、正値性、カーバンクルを別々に確認します。
@@ -60,7 +60,7 @@ MUSCL勾配の選択、TVB修正minmodと正値再構成、非線形段階検証
 
 ## 第6拡張：方程式、疎行列、運動論輸送 {#sixth-expansion-equations-sparse-systems-and-kinetic-transport}
 
-Burgers・LWR交通流を含む7系統9ケースの保存分布を追加し、スカラー厳密セル平均、Sod点値、浅水・等温の厳密重ね描きなしを区別します。
+Burgers・LWR交通流を含む7系統9ケースの保存分布を追加しました。スカラー厳密セル平均と、Euler・浅水・等温の半解析Riemann参照解の保存変数セル平均を区別します。[参照解ライブラリ](reference-solutions.md)には、真空・乾床の膨張波、粘性速度分布、Poisson製造解を含む18ケースを追加しました。
 
 [連続P1 FEM](fem.md)、[疎行列・非線形解法](sparse-nonlinear.md)、[硬いODE](stiff-integration.md)、[周期MAC射影](incompressible.md)、[D2Q9–BGK](lattice-boltzmann.md)、[1次双曲型拡散](hyperbolic-diffusion.md)に専用検査・図・ソースハッシュがあります。[Chapman–Enskog展開](chapman-enskog.md)は測定したせん断粘性へつなぐ形式導出です。これらの教育用実装は新しいアトラスで公開済みです。各章に実装範囲と残る検証を示しています。
 

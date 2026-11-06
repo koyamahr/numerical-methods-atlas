@@ -20,7 +20,7 @@ catalog inclusion alone does not indicate an implemented simulation.
 
 - Strengthen links between run manifests and saved arrays; report grid and time refinement together with wall-clock costs.
 - Add finite-volume cell-average initialization and integrated references, characteristic WENO, positivity limiters, and stronger shock tests.
-- Add exact shallow-water and isothermal references; treat topography, well balancing, and dry beds as separate implementation steps.
+- Added shallow-water and isothermal Riemann references; topography, well balancing, and numerical dry-bed evolution remain separate implementation steps.
 - Extend the new HLLD standard tests with UCT-HLLD, stronger-field cases and external reference-code comparisons.
 - Explore nonlinear Fourier methods and dealiasing, Euler DG with limiting, and multidimensional residual distribution.
 - Implement low-Mach PDE preconditioning and 2D Euler rotated-hybrid solvers; test entropy correction, positivity, and carbuncle resistance separately.
@@ -94,8 +94,10 @@ Added selectable MUSCL slopes, TVB modified-minmod and positive-reconstruction b
 ## Sixth expansion: equations, sparse systems and kinetic transport
 
 Added nine saved-profile cases across seven equation families, including
-Burgers and LWR traffic. Exact scalar cell averages, point-sampled Sod references,
-and missing shallow-water/isothermal overlays are explicitly distinguished.
+Burgers and LWR traffic. Scalar exact cell averages and conserved cell means of
+semi-analytic Euler/shallow-water/isothermal Riemann references are distinguished.
+The [reference library](reference-solutions.md) adds 18 formula-based cases,
+including vacuum/dry fans, viscous profiles and a manufactured Poisson field.
 
 The new [continuous P1 FEM](fem.md), [sparse/nonlinear solvers](sparse-nonlinear.md),
 [stiff ODE integrators](stiff-integration.md), [periodic MAC projection](incompressible.md),

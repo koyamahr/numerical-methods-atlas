@@ -50,9 +50,12 @@ Density bounds are checked; the solver does not silently clip them.
 ## Fluid systems and kinetic methods
 
 The existing Euler Sod, wet shallow-water dam-break and isothermal density-jump
-solvers are connected as additional cases. Sod overlays a point-sampled exact
-Euler reference; its sample L1 diagnostic is not an integrated FV error.
-Shallow-water and isothermal curves currently have **no exact overlay**.
+solvers are connected as additional cases. All three now overlay conserved cell
+means from semi-analytic Riemann references: known wave fronts split Gauss
+quadrature, and the 24/48-point difference estimates integration convergence.
+The [reference library](reference-solutions.md) explains the formulas, root
+residuals and point-versus-mean convention. Dry-bed reference formulas do not
+extend the positive-state numerical solver to dry states.
 Those models and positive-depth limits are defined in [the benchmark guide](benchmarks.md).
 
 [LBM](lattice-boltzmann.md), [Chapman–Enskog expansion](chapman-enskog.md),

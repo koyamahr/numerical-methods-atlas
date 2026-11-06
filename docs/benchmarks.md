@@ -63,7 +63,10 @@ well-balanced discretization, and wetting/drying are unsupported.
 `isothermal` uses `p=cs²ρ`, `cs=1`, left `ρ=1`, right `ρ=0.125`, and `u=0`
 on the same domain and time interval. Both use extrapolation boundaries.
 First-edition checks compare solvers, admissible states, and conservative
-form; exact Riemann references remain to be added.
+form. The [reference library](reference-solutions.md) now supplies semi-analytic
+Riemann states and conserved cell means for the equation gallery. The original
+`Problem.reference` callbacks for these two cases remain unset; use
+`get_reference` for the new evaluations.
 [LeVeque (2002)](https://doi.org/10.1017/CBO9780511791253).
 
 ## Riemann fluxes and reconstruction

@@ -32,7 +32,7 @@ Burgersと交通流には、MUSCL minmod、Godunov流束、SSPRK3、CFL≤0.4を
 
 ## 流体系と運動論的方法 {#fluid-systems-and-kinetic-methods}
 
-既存のEuler Sod問題、水深が正の浅水ダム崩壊、等温流の密度跳躍を追加ケースとして接続しています。SodではEuler厳密解の点値を重ねます。その標本L1診断は積分した有限体積誤差ではありません。浅水流と等温流には、現在**厳密解の重ね描きはありません**。モデルと正の水深に関する条件は[テスト問題の定義](benchmarks.md)で説明しています。
+既存のEuler Sod問題、水深が正の浅水ダム崩壊、等温流の密度跳躍を追加ケースとして接続しています。3ケースとも半解析Riemann解の保存変数セル平均を重ねます。既知の波面でGauss積分を分割し、24点・48点の差を積分の収束の目安とします。[参照解ライブラリ](reference-solutions.md)では式、求根の残差、点値と平均の違いを説明します。乾床の参照式は、正値状態を要求する数値ソルバーを乾床に対応させるものではありません。モデルと正の水深に関する条件は[テスト問題の定義](benchmarks.md)で説明しています。
 
 [格子Boltzmann法](lattice-boltzmann.md)、[Chapman–Enskog展開](chapman-enskog.md)、[周期非圧縮流](incompressible.md)、[双曲型拡散法](hyperbolic-diffusion.md)には別の計算展示があります。方程式、運動論モデル、離散化は異なる選択です。
 

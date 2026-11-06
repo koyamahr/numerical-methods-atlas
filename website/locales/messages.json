@@ -6179,5 +6179,301 @@
   "poisson.multigrid-books": {
     "en": "Multigrid textbooks ↗",
     "ja": "マルチグリッドの教科書 ↗"
+  },
+  "reference.7c2dc383ee39": {
+    "en": "11 / Exact & reference solutions",
+    "ja": "11／厳密解・参照解"
+  },
+  "reference.2f9b682dacc2": {
+    "en": "Exact & reference solutions",
+    "ja": "厳密解・参照解"
+  },
+  "reference.3cb027d1726a": {
+    "en": "EXACT & REFERENCE SOLUTIONS",
+    "ja": "厳密解・参照解"
+  },
+  "reference.67e882cc3f2f": {
+    "en": "Know the answer.",
+    "ja": "答えを知る。"
+  },
+  "reference.8f0343dbb0c3": {
+    "en": "Check the",
+    "ja": "近似を"
+  },
+  "reference.2acefc44bf4c": {
+    "en": "approximation.",
+    "ja": "検証する。"
+  },
+  "reference.1f7a51919419": {
+    "en": "Explore analytic formulas, root-solved Riemann waves and a manufactured solution. See why a point value and a finite-volume cell mean answer different questions.",
+    "ja": "解析式、数値求根を使うRiemann波、製造解を比較します。点値と有限体積セル平均が異なる理由を確かめます。"
+  },
+  "reference.31ac1eadf658": {
+    "en": "Reference problem",
+    "ja": "参照問題"
+  },
+  "reference.65e4e65f0d36": {
+    "en": "Reference component",
+    "ja": "参照する成分"
+  },
+  "reference.419a2b244008": {
+    "en": "Reference time",
+    "ja": "参照時刻"
+  },
+  "reference.cf3b6b004d9e": {
+    "en": "Reference solution",
+    "ja": "参照解"
+  },
+  "reference.4aa08533853d": {
+    "en": "Cells for averaging",
+    "ja": "平均を取るセル数"
+  },
+  "reference.94788d4b9f10": {
+    "en": "Loading reference solutions…",
+    "ja": "参照解を読み込み中…"
+  },
+  "reference.22d8f181bafd": {
+    "en": "Show cell-center point samples",
+    "ja": "セル中心の点値を表示"
+  },
+  "reference.85bb812c49b9": {
+    "en": "Saved formula evaluations; no PDE solver runs in this browser.",
+    "ja": "保存済みの式評価です。ブラウザーでPDEの数値計算は行いません。"
+  },
+  "reference.5cc3cf08bfcc": {
+    "en": "Formulas, API & verification ↗",
+    "ja": "式・API・検証 ↗"
+  },
+  "reference.6c130ab7574d": {
+    "en": "Compare computed profiles ↗",
+    "ja": "計算分布と比較 ↗"
+  },
+  "reference.153e0dc70e64": {
+    "en": "Download reference evaluations ↓",
+    "ja": "参照解データをダウンロード ↓"
+  },
+  "reference.26d95f468b52": {
+    "en": "Point reference",
+    "ja": "参照解の点値"
+  },
+  "reference.5b97a032e62c": {
+    "en": "Cell mean / piecewise constant",
+    "ja": "セル平均／区分一定表示"
+  },
+  "reference.f8bc9768ddf0": {
+    "en": "Cell-center point samples",
+    "ja": "セル中心の点値"
+  },
+  "reference.4f56e697c7a6": {
+    "en": "semi-analytic",
+    "ja": "半解析解"
+  },
+  "reference.1e1576145381": {
+    "en": "manufactured",
+    "ja": "製造解"
+  },
+  "reference.af57957bfb82": {
+    "en": "conserved",
+    "ja": "保存変数"
+  },
+  "reference.da3a456ba70b": {
+    "en": "scalar",
+    "ja": "スカラー"
+  },
+  "reference.83249e8f273b": {
+    "en": "velocity profile",
+    "ja": "速度分布"
+  },
+  "reference.5abb2c88b427": {
+    "en": "velocity and pressure",
+    "ja": "速度・圧力"
+  },
+  "reference.f7e57687a35b": {
+    "en": "Assumptions & boundaries",
+    "ja": "仮定と境界条件"
+  },
+  "reference.68c1a9858b5e": {
+    "en": "Reference accuracy",
+    "ja": "参照解の精度"
+  },
+  "reference.fdf375c74f9a": {
+    "en": "Original source",
+    "ja": "原典"
+  },
+  "reference.2931e4db0afd": {
+    "en": "Quadrature orders",
+    "ja": "求積の点数"
+  },
+  "reference.86cc458ef1c3": {
+    "en": "Maximum order difference",
+    "ja": "次数間差の最大値"
+  },
+  "reference.15b2446a4b95": {
+    "en": "Root iterations",
+    "ja": "求根の反復回数"
+  },
+  "reference.2ebd8ddbb446": {
+    "en": "Wave-matching residual",
+    "ja": "波の接続残差"
+  },
+  "reference.268eee8e13f1": {
+    "en": "Logarithmic bracket width",
+    "ja": "対数区間の幅"
+  },
+  "reference.bfa7908070a4": {
+    "en": "Quadrature order differences estimate convergence; they are not rigorous error bounds. Root solving and quadrature both use finite precision.",
+    "ja": "求積次数の差は収束の目安であり、厳密な誤差上限ではありません。求根と求積の両方に有限精度を使います。"
+  },
+  "reference.747ac14a9f50": {
+    "en": "A high-resolution numerical reference still has discretization error. It belongs to a separate category from these formula-based cases.",
+    "ja": "高解像度の数値参照解にも離散化誤差が残ります。ここで示す式による参照解とは別の区分です。"
+  },
+  "reference.f561b5bf7d94": {
+    "en": "Cell means of conserved variables, integrated across known wave fronts. Primitive variables of averaged states are not averages of primitive variables.",
+    "ja": "既知の波面で分割積分した保存変数のセル平均です。平均保存変数から求めた基本変数は、基本変数の平均とは異なります。"
+  },
+  "reference.139de9287d8e": {
+    "en": "Cell means of the displayed scalar or velocity profile, integrated across known fronts.",
+    "ja": "既知の波面で分割積分した、表示中のスカラーまたは速度分布のセル平均です。"
+  },
+  "reference.eefe5a346cf6": {
+    "en": "Taylor–Green: x-slice at y = π/4. These are point values, not two-dimensional cell averages.",
+    "ja": "Taylor–Green：y = π/4のx方向断面です。2次元セル平均ではなく点値を表示します。"
+  },
+  "reference.1792b45cb3c6": {
+    "en": "A reusable verification library.",
+    "ja": "再利用できる検証ライブラリ。"
+  },
+  "reference.9a28b3c70688": {
+    "en": "Python supports arbitrary one-dimensional cell edges, conserved-variable averages, volume-weighted error norms and smooth multidimensional box averages. Dry-bed and vacuum reference formulas do not extend the admissible states of the existing numerical solvers.",
+    "ja": "Pythonでは任意の1次元セル境界、保存変数平均、体積重み付き誤差ノルム、滑らかな多次元直方体セル平均を使えます。乾床・真空の参照式は、既存の数値ソルバーの許容状態を拡張するものではありません。"
+  },
+  "reference.922693c5ed9f": {
+    "en": "Read the reference guide ↗",
+    "ja": "参照解ガイドを読む ↗"
+  },
+  "reference.87701fb3ebe8": {
+    "en": "Explore exact & reference solutions ↗",
+    "ja": "厳密解・参照解を調べる ↗"
+  },
+  "reference.898056a77367": {
+    "en": "Reference data could not load. Reload to retry or read the reference guide.",
+    "ja": "参照解を読み込めませんでした。再読み込みするか、参照解ガイドをご覧ください。"
+  },
+  "reference.f7db139a5477": {
+    "en": "Scalar curves compare exact cell averages. Euler, shallow-water and isothermal profiles compare conserved cell means of semi-analytic Riemann references. Fluid-system playback links independent final-time solves; the frame notes identify this explicitly.",
+    "ja": "スカラーは厳密セル平均、Euler・浅水・等温流は半解析Riemann参照解の保存変数セル平均と比較します。流体系の再生は独立した最終時刻計算をつないだもので、各フレームに明示しています。"
+  },
+  "reference.6fd2016e58ca": {
+    "en": "conserved cell averages / front-split Gauss 48",
+    "ja": "保存変数セル平均／波面分割・Gauss48点"
+  },
+  "reference.d8752dac9ab4": {
+    "en": "Semi-analytic Riemann reference averaged over conserved variables. Known fronts split Gauss quadrature; the 24/48 order difference estimates integration convergence. Dry-bed reference formulas do not add dry-state support to this positive-state FV solver.",
+    "ja": "半解析Riemann参照解の保存変数を平均します。既知の波面でGauss積分を分割し、24点・48点の差で収束を見積もります。乾床の参照式は、正値状態を要求するこの有限体積ソルバーを乾床に対応させるものではありません。"
+  },
+  "reference.52caaf2fde97": {
+    "en": "Advection / sine translation",
+    "ja": "移流／正弦波の平行移動"
+  },
+  "reference.f87050abcc52": {
+    "en": "Heat / Fourier-mode decay",
+    "ja": "熱拡散／Fourierモードの減衰"
+  },
+  "reference.9a9cbe9600f7": {
+    "en": "Traffic / upstream shock",
+    "ja": "交通流／上流へ進む衝撃波"
+  },
+  "reference.9d9ec49feeec": {
+    "en": "Euler / Sod",
+    "ja": "Euler／Sod問題"
+  },
+  "reference.6fb89b118bdb": {
+    "en": "Euler / Lax",
+    "ja": "Euler／Lax問題"
+  },
+  "reference.44c8dd97cd40": {
+    "en": "Euler / double rarefaction",
+    "ja": "Euler／二重膨張波"
+  },
+  "reference.b318ad9456b1": {
+    "en": "Euler / generated vacuum",
+    "ja": "Euler／生成される真空"
+  },
+  "reference.f2bccf306220": {
+    "en": "Shallow water / dry-bed fan",
+    "ja": "浅水／乾床への膨張波"
+  },
+  "reference.0928c12c2afd": {
+    "en": "Shallow water / dry middle state",
+    "ja": "浅水／中央の乾燥領域"
+  },
+  "reference.f68703f7c1a6": {
+    "en": "Poisson / manufactured sine",
+    "ja": "Poisson／正弦波の製造解"
+  },
+  "reference.b702621ad7d1": {
+    "en": "Viscous channel / Poiseuille",
+    "ja": "粘性チャネル／Poiseuille流"
+  },
+  "reference.51356efc6021": {
+    "en": "Viscous channel / Couette",
+    "ja": "粘性チャネル／Couette流"
+  },
+  "reference.83eda34a85e3": {
+    "en": "Viscous flow / 2D Taylor–Green",
+    "ja": "粘性流／2次元Taylor–Green渦"
+  },
+  "reference.2002210464a4": {
+    "en": "Periodic unit interval; constant advection speed 1.",
+    "ja": "単位区間の周期境界、一定移流速度1。"
+  },
+  "reference.0536ffc545bb": {
+    "en": "Periodic unit interval; viscosity 0.02.",
+    "ja": "単位区間の周期境界、拡散係数0.02。"
+  },
+  "reference.58ce71f4a8f4": {
+    "en": "Entropy solution of a scalar whole-line Riemann problem; constant endpoint continuation.",
+    "ja": "全直線上のスカラーRiemann問題のエントロピー解。端点の外側は一定値で継続します。"
+  },
+  "reference.c4a4c84fb1e5": {
+    "en": "Ideal gas; gamma>1; planar 1D waves; vacuum has zero conserved state and undefined velocity.",
+    "ja": "比熱比gamma>1の理想気体、平面1次元波。真空の保存変数はゼロ、速度は未定義です。"
+  },
+  "reference.0106cd336e02": {
+    "en": "Flat bottom; constant g; dry states allowed in the reference only, not the existing FV solver.",
+    "ja": "平坦な底面と一定の重力g。乾床は参照解のみの対応で、既存の有限体積ソルバーでは扱えません。"
+  },
+  "reference.bf5a89d6daf0": {
+    "en": "p = c_s² rho; constant c_s; strictly positive initial density; no vacuum state or energy equation.",
+    "ja": "p = c_s² rho、一定の音速c_s。初期密度は厳密に正とし、真空状態とエネルギー方程式はありません。"
+  },
+  "reference.4a6d70f09dcf": {
+    "en": "Zero Dirichlet endpoints. The forcing is chosen from the target solution; this is not an arbitrary-source Poisson solution.",
+    "ja": "両端はゼロDirichlet条件。目標解から外力を選ぶ製造解であり、任意の外力のPoisson解ではありません。"
+  },
+  "reference.5ca69d497ebe": {
+    "en": "Fully developed planar steady channel, no slip, unit density; −dp/dx=G or body acceleration G.",
+    "ja": "十分に発達した平面定常チャネル、no-slip、単位密度。−dp/dx=G、または体積力加速度G。"
+  },
+  "reference.26a32086858c": {
+    "en": "Fully developed planar steady channel; walls u(0)=0,u(1)=1; zero pressure gradient.",
+    "ja": "十分に発達した平面定常チャネル。壁速度u(0)=0、u(1)=1、圧力勾配ゼロ。"
+  },
+  "reference.ba2e340686e7": {
+    "en": "Periodic [0,2π]²; unit density; viscosity 0.1; zero mean pressure. Web profile is an x-slice at y=π/4.",
+    "ja": "周期領域[0,2π]²、単位密度、動粘性係数0.1、圧力平均ゼロ。Webではy=π/4のx方向断面を表示します。"
+  },
+  "reference.dc9e841578d2": {
+    "en": "Analytic reference",
+    "ja": "解析解"
+  },
+  "reference.05bcb1be59b0": {
+    "en": "Semi-analytic reference",
+    "ja": "半解析解"
+  },
+  "reference.14f88d1b475d": {
+    "en": "Manufactured solution",
+    "ja": "製造解"
   }
 }

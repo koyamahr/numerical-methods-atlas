@@ -5,6 +5,7 @@ import numpy as np
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
 from numart.scalar_gallery import solve, riemann_cell_averages
 from numart.snapshots import SnapshotRecorder
+from numart.reference_solutions import get_reference
 from numart.benchmarks import get_problem
 from numart.solvers import solve as solve_system
 from numart.fem import poisson_2d, error_norms
@@ -67,18 +68,21 @@ for name,title,eq,characteristic in [('sod','Euler / Sod shock tube','Uₜ + F(U
     ('dam-break','Shallow water / wet dam break','hₜ + (hu)ₓ = 0; (hu)ₜ + (hu²+h²/2)ₓ = 0','u ± √h; g = 1'),
     ('isothermal','Isothermal / density jump','ρₜ + (ρu)ₓ = 0; (ρu)ₜ + (ρu²+ρ)ₓ = 0','u ± 1; cₛ = 1')]:
     p=get_problem(name);frames=[];m=p.initial(p.grid(n))[:,0].mean()
+    ref=get_reference({'sod':'euler-sod','dam-break':'swe-dam-break','isothermal':'isothermal-jump'}[name])
+    edges=np.linspace(0,1,n+1)
     for t in np.linspace(0,p.final_time,25):
         r=solve_system(p,n=n,riemann='hllc' if name=='sod' else 'hll',final_time=float(t))
-        exact=p.reference(r.x,t)[:,0] if p.reference else None
-        frames.append(frame(r.time,r.steps,r.q[:,0],exact,m,'point-sampled exact Euler density' if exact is not None else 'no exact overlay supplied'))
+        report=ref.cell_average_report(edges,r.time)
+        exact=report['values'][:,0]
+        frames.append(dict(frame(r.time,r.steps,r.q[:,0],exact,m,'conserved cell averages / front-split Gauss 48'),quadrature_difference=float(report['max_order_difference'][0])))
     cases.append(dict(id=name,title=title,family='hyperbolic system',equation=eq,characteristic=characteristic,
         initial='Rest; left/right density 1 / 0.125, pressure 1 / 0.1' if name=='sod' else 'Rest; left/right depth 2 / 1' if name=='dam-break' else 'Rest; left/right density 1 / 0.125',
         boundary='Outflow; jump at x=0.5',method='Primitive MUSCL minmod · SSPRK3 · '+('HLLC' if name=='sod' else 'HLL'),
-        field='depth h' if name=='dam-break' else 'density ρ',note='Euler exact reference is point sampled; L1 is a sample comparison, not an integrated FV error.' if name=='sod' else 'Computed baseline only. Exact shallow-water/isothermal overlays, dry beds and bottom topography remain separate work.',
+        field='depth h' if name=='dam-break' else 'density ρ',note='Semi-analytic Riemann reference averaged over conserved variables. Known fronts split Gauss quadrature; the 24/48 order difference estimates integration convergence. Dry-bed reference formulas do not add dry-state support to this positive-state FV solver.',
         reference='sod1978' if name=='sod' else 'leveque2002',chapter='benchmarks',n=n,x=x.tolist(),limits=[0,2.1] if name=='dam-break' else [0,1.1],
         sampling='Each displayed time is an independent solve from the same initial data, shortened only to its final time. Playback connects these separate runs.',frames=frames))
-data=dict(schema_version=1,cases=cases,source_sha256=digest(['numart/scalar_gallery.py','numart/snapshots.py','numart/solvers.py','numart/riemann.py','numart/equations.py','numart/benchmarks.py','scripts/build_equation_gallery.py']),
-          scope='Precomputed educational 1D profiles on [0,1]. Scalars use exact cell-average Riemann/sine references; Euler has point-sampled exact data; SWE/isothermal have no exact overlay. No browser PDE solver or solver-speed ranking.')
+data=dict(schema_version=1,cases=cases,source_sha256=digest(['numart/scalar_gallery.py','numart/snapshots.py','numart/solvers.py','numart/riemann.py','numart/equations.py','numart/benchmarks.py','numart/reference_solutions.py','numart/reference_riemann.py','scripts/build_equation_gallery.py']),
+          scope='Precomputed educational 1D profiles on [0,1]. Scalars use exact cell-average Riemann/sine references; Euler/SWE/isothermal use conserved cell means of semi-analytic Riemann references with front-split quadrature. No browser PDE solver or solver-speed ranking.')
 (OUT/'equation-gallery.json').write_text(json.dumps(data,separators=(',',':'),allow_nan=False)+'\n')
 fig,axs=plt.subplots(2,3,figsize=(13,7.3))
 for ax,c in zip(axs.flat,[cases[i] for i in (0,1,2,3,4,5)]):

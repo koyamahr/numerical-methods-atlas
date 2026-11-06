@@ -30,7 +30,7 @@ test('gallery profiles retain increasing actual times and reference conventions'
    if(c.boundary.startsWith('Periodic'))assert.ok(Math.abs(f.mean_change)<1e-12);
   }
  }
- for(const name of ['dam-break','isothermal'])assert.ok(data.cases.find(c=>c.id===name).frames.every(f=>f.exact===null));
+ for(const name of ['sod','dam-break','isothermal'])for(const f of data.cases.find(c=>c.id===name).frames){assert.ok(f.exact?.every(Number.isFinite));assert.match(f.reference_measure,/conserved cell averages/);assert.ok(f.quadrature_difference<1e-10);}
  assert.match(data.cases.find(c=>c.id==='sod').sampling,/independent solve/);
  assert.match(equationsPage(),/href="#\/read\/chapman-enskog"/);
  assert.match(equationsPage(),/id="equation-case" disabled/);
