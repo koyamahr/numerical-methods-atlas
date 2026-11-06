@@ -44,7 +44,7 @@
     "elliptic": {
       "ja": {
         "status": "draft",
-        "source_sha256": "ce1eedbd4d5e340ce3e8cf345dc08e618ab51e0782f25d133b43986f1921c79d",
+        "source_sha256": "c288ef1927e03281ac83f0e12e6a22a500c9c66e77fb47aa014867fc1c38cb9d",
         "checked_on": null
       }
     },
@@ -268,7 +268,7 @@
     "roadmap": {
       "ja": {
         "status": "draft",
-        "source_sha256": "4c70d67c27a7075ab1106fd2ee4045ad7101960cd46f7d5576008ffa179d5656",
+        "source_sha256": "f65fa88c66c8d2a9a33d2eb882e1105a95688032004ed7fd9f03fb00720cecef",
         "checked_on": null
       }
     },

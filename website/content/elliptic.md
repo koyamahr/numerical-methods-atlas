@@ -128,3 +128,88 @@ shows physical-time heat diffusion.
 
 For definitions and comparisons of **A-stability, L-stability and L1/L2/L∞ error norms**,
 see the [shared accuracy and stability guide](accuracy-stability.md).
+
+
+## Same-system Poisson comparison
+
+[Open the Poisson solver notebook](#/poisson-comparison). All 2D methods solve
+one constant-coefficient five-point SPD system on the unit square with zero
+Dirichlet boundaries. N=31,63,127 counts **interior nodes per side**, hence
+N² unknowns. Every iterative method starts from zero. The common stopping
+criterion uses the explicitly recomputed true residual, including for CG:
+
+\[
+ (A_hu)_{ij}=\frac{4u_{ij}-u_{i-1,j}-u_{i+1,j}-u_{i,j-1}-u_{i,j+1}}{h^2},\quad
+ h=\frac1{N+1},\qquad
+ \frac{\|f-A_hu\|_2}{\|f\|_2}\le 10^{-8}.
+\]
+
+Forcing choices are a broad smooth manufactured field and two localized
+opposite-sign sources. The manufactured solution is
+u=x(1−x)e^(2x)y(1−y)e^(−1.5y), with f=−Δu differentiated analytically.
+The localized forcing is
+100exp(−[(x−0.28)²+(y−0.35)²]/0.006)
+−60exp(−[(x−0.70)²+(y−0.65)²]/0.012), with no continuous exact solution supplied.
+Algebraic error is nodal RMS against the FFT/DST discrete solution;
+continuous nodal RMS for the manufactured field measures discretization error.
+Neither is a continuous integral L2 norm. Tight residuals do not remove
+second-order discretization error.
+
+The separate N=31 single-sine diagnostic uses u=sin(πx)sin(πy) and f=2π²u.
+It is one eigenvector of this discrete matrix: exact-arithmetic CG requires
+one iteration from zero. It is therefore unsuitable as the sole general
+solver benchmark. Broad forcing avoids this shortcut.
+
+The compared configurations are Jacobi, weighted Jacobi (ω=2/3), red-black
+Gauss–Seidel, red-black SOR, unpreconditioned CG, the existing geometric
+multigrid V-cycle, DST+Thomas and FFT/DST direct elimination. SOR uses
+ω=2/[1+sin(π/(N+1))] for this model and ordering. This is not a generally
+optimal setting for arbitrary meshes/operators. A sweep, CG iteration and
+V-cycle are different work units. Multigrid has three pre/post RBGS sweeps
+at every level and additional coarse-grid work. Its cycle count is not a
+fine-grid sweep count. [Netlib's SOR discussion](https://www.netlib.org/linalg/html_templates/node15.html)
+provides the method context.
+
+The FFT route uses an orthonormal DST-I computed with an odd extension and
+NumPy FFT, following the [DST-I definition](https://docs.scipy.org/doc/scipy/reference/generated/scipy.fft.dst.html).
+The 1D eigenvalues of the difference operator are
+λk=4h⁻²sin²[kπ/(2(N+1))]; in 2D divide by λk+λl.
+This solves the **same discrete operator**, rather than substituting continuum
+wave numbers k². Zero Dirichlet boundaries are not periodic boundaries.
+No SciPy dependency is required by the implementation.
+
+Plain Thomas solves 1D tridiagonal systems. The 2D separable direct route
+transforms y, solves N shifted tridiagonal x systems with Thomas, then applies
+the inverse transform. It is labeled DST+Thomas, not a generic 2D Thomas
+solver. Both FFT/DST routes rely on constant coefficients, a rectangular
+uniform mesh and separable boundary conditions. A separate 1D table compares
+plain Thomas with FFT/DST at N=63,255,1023 for u=x(1−x)e^(2x).
+
+### Timing protocol and downloadable evidence
+
+Each configuration is run three times after a small N=7 code-path warmup.
+The reported median trial supplies its own convergence history. Wall time
+includes solver setup, allocations, per-unit true-residual checks and logging;
+it excludes imports, problem/reference generation, file I/O and plotting.
+No cached factorization/eigenvalues are reused between trials. The 1D timings
+also include their final residual check. Hardware/software metadata and all
+three times are saved. Python loops and compiled NumPy kernels have different
+costs; these measurements rank these diagnostic implementations on one host,
+not algorithms independently of implementation or hardware.
+
+Direct solvers have only a completed-solve endpoint marker. The chart samples
+long histories and floors displayed residuals at 10⁻¹⁴; full values are in the
+table and download. The NPZ retains every selected-trial residual/timestamp
+and final fields. CG's recursive residual chooses directions, but its true
+residual decides convergence. Residual histories need not be monotone.
+
+![Poisson convergence and cost overview](figures/poisson-comparison/overview.png)
+
+Reproduce with `python scripts/build_poisson_comparison.py`. Download
+[settings, sampled histories, timings and source hashes](figures/poisson-comparison/comparison.json)
+and [fields and full selected histories](figures/poisson-comparison/fields-and-histories.npz).
+Tests independently check DST against a dense sine matrix, direct solves
+against dense linear systems, common true residuals, all method solutions,
+zero forcing and manufactured second-order refinement. Variable coefficients,
+anisotropy, irregular meshes, periodic/pure-Neumann nullspaces and parallel
+scaling require separate comparisons.

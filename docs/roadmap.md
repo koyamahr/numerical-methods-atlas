@@ -260,3 +260,8 @@ Reference-element basis functions now have an executable [Legendre/nodal noteboo
 ## Verified Euler and MHD comparisons
 
 Added 2D primitive MUSCL with minmod/MC, exact-cell-average smooth refinement, NASA wedge first/second-order comparisons on two grids, and three forward-step reconstruction clips. The [comparison page](#/flow-comparison) fixes HLL/SSPRK2 and exposes diagnostics. Added full-vector HLLD, Brio–Wu, four-grid circular Alfvén waves and weak magnetic loops on two grids with HLLE/HLLD × CT-Contact/GLM. Source/artifact hashes, conservative arrays, positivity/retry/fallback diagnostics and bilingual scope notes accompany the [MHD page](#/mhd-tests). These complete the agreed three web stages; books remain deferred.
+
+
+## Same-system Poisson solvers
+
+The [comparison notebook](#/poisson-comparison) adds Jacobi, weighted Jacobi, red-black GS/SOR, CG, V-cycles, FFT/DST and separable DST+Thomas under one residual target. Two broad-source problems, a single-eigenmode diagnostic, three timing trials and a separate 1D Thomas table expose the differences. [Definitions and limits](elliptic.md#same-system-poisson-comparison).

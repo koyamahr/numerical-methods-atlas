@@ -124,3 +124,8 @@ Burgers・LWR交通流を含む7系統9ケースの保存分布を追加し、�
 ## 検証付きEuler・MHD比較 {#verified-euler-and-mhd-comparisons}
 
 2次元基本変数MUSCLのminmod／MC、厳密セル平均の滑らかな解の細分化、NASA楔の2格子での1次・2次再構成比較、前向きステップの3再構成動画を追加しました。[比較ページ](#/flow-comparison)ではHLL／SSPRK2を固定し、診断値を表示します。完全な3成分のHLLD、Brio–Wu、4格子の円偏波Alfvén波、2格子の弱い磁場ループでのHLLE／HLLD × CT-Contact／GLMを追加しました。[MHDページ](#/mhd-tests)にはソース・成果物ハッシュ、保存変数配列、正値性・再試行・切替診断と日英の適用範囲があります。合意したWebの3段階を完了し、書籍は後回しです。
+
+
+## 同一Poisson系のソルバー比較 {#same-system-poisson-solvers}
+
+[比較ノート](#/poisson-comparison)に、Jacobi・重み付きJacobi・赤黒GS／SOR・CG・V-cycle・FFT／DST・分離DST＋Thomasを追加しました。同じ残差停止条件、2つの広帯域問題、単一固有モード診断、3回の時間計測と1次元Thomas表を備えます。[定義と限界](elliptic.md#same-system-poisson-comparison)を参照してください。

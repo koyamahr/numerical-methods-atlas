@@ -5919,5 +5919,225 @@
   "shock.velocity": {
     "en": "Velocity",
     "ja": "速度"
+  },
+  "poisson.14bd79b642a0": {
+    "en": "10 / Poisson solvers",
+    "ja": "10／Poissonソルバー"
+  },
+  "poisson.fa21adf3a479": {
+    "en": "ONE POISSON SYSTEM / DIFFERENT SOLVERS",
+    "ja": "同じPOISSON系／異なる解法"
+  },
+  "poisson.9747323960dc": {
+    "en": "Watch the residual fall.",
+    "ja": "残差が下がる様子を見る。"
+  },
+  "poisson.655674ae9501": {
+    "en": "Jacobi, Gauss–Seidel, SOR, CG, multigrid and FFT-based direct solves on the same discrete equation. Compare convergence first, then inspect the measured cost.",
+    "ja": "同じ離散方程式でJacobi・Gauss–Seidel・SOR・CG・マルチグリッド・FFT系直接法を比較します。収束を確かめ、計測した計算費用を調べます。"
+  },
+  "poisson.0b0f22fdb83a": {
+    "en": "Forcing",
+    "ja": "右辺の設定"
+  },
+  "poisson.da6fddaf864e": {
+    "en": "Broad smooth manufactured field",
+    "ja": "広帯域の滑らかな製造解"
+  },
+  "poisson.921dcd6afbf7": {
+    "en": "Localized positive / negative sources",
+    "ja": "正負の局在源"
+  },
+  "poisson.9caaab4cf618": {
+    "en": "Single sine mode / special diagnostic",
+    "ja": "単一正弦モード／特別な診断"
+  },
+  "poisson.7b6157d8327d": {
+    "en": "Interior nodes per side",
+    "ja": "1辺の内部節点数"
+  },
+  "poisson.fcb52fba9e36": {
+    "en": "Elapsed seconds / logarithmic scale",
+    "ja": "経過秒／対数目盛"
+  },
+  "poisson.28918c0fd3ad": {
+    "en": "Sweeps, CG iterations or V-cycles",
+    "ja": "掃引・CG反復・V-cycle"
+  },
+  "poisson.5ab691872e77": {
+    "en": "Definitions, timings and limits ↗",
+    "ja": "定義・時間計測・限界 ↗"
+  },
+  "poisson.d2c77128ae5b": {
+    "en": "Download solver measurements ↓",
+    "ja": "ソルバー測定値を取得 ↓"
+  },
+  "poisson.25a817b5201e": {
+    "en": "Download fields and full histories ↓",
+    "ja": "場と全履歴を取得 ↓"
+  },
+  "poisson.53c4cec40b19": {
+    "en": "Poisson forcing and discrete solution",
+    "ja": "Poissonの右辺と離散解"
+  },
+  "poisson.c2d7b4f1cb17": {
+    "en": "Thomas is direct in one dimension.",
+    "ja": "Thomas法は1次元の直接法。"
+  },
+  "poisson.c03b1c8ffa8c": {
+    "en": "Plain Thomas solves a tridiagonal 1D system. In the 2D comparison, DST + Thomas first transforms one direction and then solves independent tridiagonal systems in the other. FFT / DST-I transforms both directions. These direct methods exploit this separable constant-coefficient rectangular problem.",
+    "ja": "単純Thomasは1次元の三重対角系を解きます。2次元のDST＋Thomasは1方向を変換し、他方向の独立な三重対角系を解きます。FFT／DST-Iは両方向を変換します。これらの直接法は、分離可能な定数係数・矩形問題の構造を利用します。"
+  },
+  "poisson.9632d86be57e": {
+    "en": "Read the clock with the algorithm.",
+    "ja": "計算時間とアルゴリズムを併せて読む。"
+  },
+  "poisson.da35b98326d6": {
+    "en": "A sweep, a CG iteration and a V-cycle have different costs. Direct methods have only an endpoint marker. Times are medians of three diagnostic solves on one host, including setup, allocations, true residual checks and history logging. Python loops and compiled NumPy operations differ; this is not a universal speed ranking.",
+    "ja": "掃引・CG反復・V-cycleの費用は異なり、直接法は完了点だけを示します。時間は1台で診断計算を3回行った中央値で、設定・配列確保・真の残差検査・履歴記録を含みます。Pythonループとコンパイル済みNumPy処理は異なり、普遍的な速度順位ではありません。"
+  },
+  "poisson.ec86a16256cd": {
+    "en": "All paths use zero Dirichlet boundaries and the same five-point operator. FFT uses an odd-extension sine transform and discrete eigenvalues, not a periodic solve or continuum wave numbers.",
+    "ja": "全経路でゼロDirichlet境界と同じ五点差分を使います。FFTは奇拡張の正弦変換と離散固有値を使い、周期問題や連続波数の解法ではありません。"
+  },
+  "poisson.6fdfff18e25f": {
+    "en": "Recomputed relative residual by solver",
+    "ja": "各ソルバーの再計算した相対残差"
+  },
+  "poisson.8336a8005ab7": {
+    "en": "True relative residual",
+    "ja": "真の相対残差"
+  },
+  "poisson.4a46315cd5e0": {
+    "en": "Completed method units / unequal work",
+    "ja": "完了した手法単位／仕事量は異なる"
+  },
+  "poisson.723a3a89fffc": {
+    "en": "interior unknowns",
+    "ja": "内部未知数"
+  },
+  "poisson.1ed5ed53d82f": {
+    "en": "zero Dirichlet",
+    "ja": "ゼロDirichlet"
+  },
+  "poisson.da8d14fa1a89": {
+    "en": "relative tolerance",
+    "ja": "相対許容誤差"
+  },
+  "poisson.46a299c836e7": {
+    "en": "Same matrix, forcing, zero initial guess and residual target",
+    "ja": "行列・右辺・0初期値・残差目標を揃える"
+  },
+  "poisson.08499464bebf": {
+    "en": "This forcing is one eigenvector: CG converges in one iteration. It is a teaching diagnostic, not a general performance benchmark.",
+    "ja": "この右辺は1固有ベクトルなのでCGは1反復で収束します。仕組みを学ぶ診断であり、一般性能の基準ではありません。"
+  },
+  "poisson.8b485125c9aa": {
+    "en": "Broad-spectrum forcing avoids the one-eigenmode CG shortcut. The residual is recomputed as ||f − Au||₂ / ||f||₂ for every solver; CG recurrence residuals do not determine the stopping test.",
+    "ja": "広帯域の右辺でCGの単一モードの近道を避けます。全ソルバーで||f − Au||₂ / ||f||₂を再計算し、CGの再帰残差だけで停止を決めません。"
+  },
+  "poisson.2b7e03648ae5": {
+    "en": "Completed units",
+    "ja": "完了した単位"
+  },
+  "poisson.d6e43de6023f": {
+    "en": "Algebraic RMS",
+    "ja": "代数誤差RMS"
+  },
+  "poisson.0687d96e008d": {
+    "en": "Median seconds / min–max",
+    "ja": "中央値の秒／最小〜最大"
+  },
+  "poisson.20790e9853ec": {
+    "en": "No continuous exact solution is supplied for the localized sources. Algebraic RMS compares each final field with the FFT/DST discrete reference.",
+    "ja": "局在源には連続厳密解を用意していません。代数誤差RMSは最終場とFFT／DST離散参照との差です。"
+  },
+  "poisson.62cbf7477bde": {
+    "en": "Discrete reference versus continuous solution / nodal RMS",
+    "ja": "離散参照と連続解の差／節点RMS"
+  },
+  "poisson.82545de054f7": {
+    "en": "This discretization error is separate from the algebraic error in the table.",
+    "ja": "この離散化誤差は表の代数誤差と別です。"
+  },
+  "poisson.a6300501fcf7": {
+    "en": "Interior nodes",
+    "ja": "内部節点数"
+  },
+  "poisson.bde765b123fe": {
+    "en": "Direct method",
+    "ja": "直接法"
+  },
+  "poisson.b598e935dacc": {
+    "en": "Continuous nodal RMS",
+    "ja": "連続解に対する節点RMS"
+  },
+  "poisson.f678e886dd24": {
+    "en": "Median seconds",
+    "ja": "中央値の秒"
+  },
+  "poisson.14d67424e599": {
+    "en": "sweeps",
+    "ja": "掃引"
+  },
+  "poisson.64a5dd1ceac8": {
+    "en": "CG iterations",
+    "ja": "CG反復"
+  },
+  "poisson.a958c53b5e0f": {
+    "en": "V-cycles",
+    "ja": "V-cycle"
+  },
+  "poisson.b59cfcba1816": {
+    "en": "direct pass",
+    "ja": "直接解法の実行"
+  },
+  "poisson.9a460d97daa1": {
+    "en": "Jacobi",
+    "ja": "Jacobi法"
+  },
+  "poisson.40bb51123310": {
+    "en": "Weighted Jacobi / 2/3",
+    "ja": "重み付きJacobi／2/3"
+  },
+  "poisson.8fb34e943bfd": {
+    "en": "Red-black SOR / model omega",
+    "ja": "赤黒SOR／モデル用ω"
+  },
+  "poisson.1790048c01d5": {
+    "en": "Geometric multigrid / V-cycle",
+    "ja": "幾何マルチグリッド／V-cycle"
+  },
+  "poisson.f20b22676779": {
+    "en": "DST + Thomas / separable direct",
+    "ja": "DST＋Thomas／分離直接法"
+  },
+  "poisson.864569b2758c": {
+    "en": "FFT / DST-I direct",
+    "ja": "FFT／DST-I直接法"
+  },
+  "poisson.1a6b508a2ec4": {
+    "en": "Poisson solver comparison",
+    "ja": "Poissonソルバー比較"
+  },
+  "poisson.30696b2c8bbd": {
+    "en": "One Poisson system, different solvers",
+    "ja": "同じPoisson系を異なる手法で解く"
+  },
+  "poisson.488118bbc0a3": {
+    "en": "DIRECT / RELAXATION / KRYLOV / MULTILEVEL",
+    "ja": "直接法／緩和法／Krylov／多階層"
+  },
+  "poisson.1fa690fdfdb1": {
+    "en": "Compare true residuals, same-system errors and three-trial timings. Includes Jacobi, red-black GS/SOR, CG, V-cycles, FFT/DST and separable DST+Thomas.",
+    "ja": "真の残差・同じ系の誤差・3試行の時間を比較します。Jacobi、赤黒GS／SOR、CG、V-cycle、FFT／DST、分離DST＋Thomasを含みます。"
+  },
+  "poisson.1ab9226acbcb": {
+    "en": "Open the solver comparison ↗",
+    "ja": "ソルバー比較を開く ↗"
+  },
+  "poisson.b97cedc5a82b": {
+    "en": "Residuals below 10⁻¹⁴ use the chart display floor; the table and download retain the raw values.",
+    "ja": "図では残差10⁻¹⁴未満を表示下限に置き、表と取得データには生の値を残します。"
   }
 }
