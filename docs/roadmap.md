@@ -90,6 +90,11 @@ implementation limits and remaining verification work are stated in each chapter
 
 ## Authorized next work
 
+- **Planned explanation — Roe's Property U:** present the four original
+  conditions, derive the Roe averages, explain recognition of a single
+  Rankine–Hugoniot discontinuity, and distinguish these properties from the
+  entropy condition and entropy fixes. Add numerical checks of the jump
+  relation alongside the explanation. This expanded treatment is pending.
 - Inutsuka's GSPH: Gaussian convolution and specific-volume reconstruction,
   oriented pair Riemann states, a matched conservative energy update, and
   smooth/contact/shock-tube verification before variable smoothing lengths.
@@ -101,6 +106,18 @@ implementation limits and remaining verification work are stated in each chapter
   see the [development review checked in November 2026](relativistic-hydrodynamics.md).
 - PPM, characteristic reconstruction, and WENO-Z with controlled shock/contact comparisons.
 - HLLD, Brio–Wu, Alfvén-wave and field-loop verification, with explicit CT/GLM scope.
+- **Planned — electromagnetic FDTD (finite-difference time-domain):** Yee-grid
+  placement, leapfrog Maxwell updates, CFL limits and numerical dispersion;
+  start with vacuum-wave and conducting-cavity tests, then absorbing boundaries
+  and PML reflection checks. Implementation and dedicated verification are pending.
+- **Planned — plasma PIC (Particle-in-Cell):** start with electrostatic
+  particle–Poisson coupling, then electromagnetic particle–Maxwell coupling.
+  Cover particle shapes, deposition/gather, Boris pushing, charge-conserving
+  current deposition and Gauss-law diagnostics. Plan plasma-oscillation,
+  two-stream and Landau-damping tests, with energy, noise and grid/time/particle
+  refinement checks. Existing gravitational PM is a separate scoped example.
+  The [WarpX PIC theory notes](https://warpx.readthedocs.io/en/25.11/theory/pic.html)
+  are a starting reference; no plasma PIC solver is implemented here yet.
 - Stiff integration: higher-order IMEX, embedded DIRK, variable-step BDF and operator splitting beyond the implemented BE/BDF2/SDIRK2/IMEX-Euler models.
 - Sparse/nonlinear solvers: matrix-free Newton–Krylov, robust reorderings/fill, flexible preconditioning and broader nonlinear benchmarks beyond the implemented fixed-right GMRES/BiCGSTAB and ILU(0).
 - Viscous/incompressible flow: wall projection, SIMPLE/PISO, cavity and cylinder-wake validation beyond periodic Taylor–Green.
@@ -123,6 +140,56 @@ biological validation is added by the survey.
 tested semi-discrete f-plane Fourier symbols. D/E, vertical staggering,
 nonlinear potential-vorticity schemes, Kelvin/Rossby waves and coastlines
 remain additional work. This is not a full geophysical dynamical core.
+
+## Planned machine-learning numerics
+
+**Status: revision candidates; the dedicated explanations, implementations and
+verification below have not been added.** Start with stable function evaluation,
+automatic differentiation and optimization as shared foundations for Volume 1.
+Scientific machine-learning applications are later candidates. These plans do
+not add to implemented-method counts, and no release date is assigned.
+
+- [ ] **Softmax and log-sum-exp:** maximum shifting, log-softmax, exponential
+  overflow and underflow. Plan checks for large inputs, invariance under constant
+  shifts, probability sums and derivative consistency. See the
+  [SciPy softmax notes](https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.softmax.html).
+- [ ] **Cross-entropy and stable loss evaluation:** compute directly from logits,
+  connect to log-sum-exp, and cover sigmoid and binary cross-entropy. Check finite
+  values and analytic gradients for extreme inputs. Start from the
+  [PyTorch cross-entropy documentation](https://docs.pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html).
+- [ ] **Automatic differentiation and backpropagation:** forward/reverse modes,
+  the chain rule, Jacobian–vector products (JVPs), vector–Jacobian products (VJPs)
+  and Hessian–vector products. Distinguish symbolic and finite-difference
+  derivatives; cover roundoff, nondifferentiable points and intermediate-storage
+  costs. Use the [JAX autodiff guide](https://docs.jax.dev/en/latest/301/index.html)
+  and plan analytic/directional derivative comparisons.
+- [ ] **Implicit differentiation, adjoints and differentiable solvers:**
+  sensitivities through linear solves, converged nonlinear systems and time
+  evolution. Distinguish unrolling iterations from differentiating the defining
+  equations; state Jacobian invertibility, solve tolerances and gradient checks.
+  The [implicit-differentiation paper](https://papers.neurips.cc/paper_files/paper/2022/file/228b9279ecf9bbafe582406850c57115-Paper-Conference.pdf)
+  is a starting reference.
+- [ ] **Machine-learning optimization and low-precision arithmetic:** gradient
+  descent/SGD, momentum, Adam, L-BFGS and Gauss–Newton/Levenberg–Marquardt.
+  Distinguish objective minimization from the existing Newton root solves;
+  compare scaling, conditioning, learning rates, gradient norms, summation and
+  mixed precision. Do not claim universal convergence or a universal ranking.
+- [ ] **Application candidate — PINNs and inverse problems:** separate PDE,
+  initial/boundary and observation losses; compare with conventional finite
+  differences/FEM using shared error measures. A lower training loss alone is
+  not a PDE-error guarantee. See the [authors' PINN notes](https://maziarraissi.github.io/PINNs/)
+  and [failure-mode study](https://papers.nips.cc/paper_files/paper/2021/hash/df438e5206f31600e6ae4af72f2725f1-Abstract.html).
+- [ ] **Application candidate — neural operators/Fourier neural operators:**
+  connect learned function-to-solution maps with the existing Fourier bases and
+  spectral methods. Plan separate checks of out-of-distribution behavior, grid
+  changes, discretization and aliasing errors; changing grid resolution alone
+  does not guarantee accuracy. See the
+  [neural-operator paper](https://www.jmlr.org/papers/volume24/21-1524/21-1524.pdf).
+- [ ] **Application candidate — symbolic regression and equation discovery:**
+  search for explicit expressions from data or learned models, separately from
+  automatic derivative evaluation. Assess noise, dimensions/symmetries,
+  expression complexity and independent-data checks. Consider the study on
+  [extracting symbolic models from deep learning](https://proceedings.neurips.cc/paper_files/paper/2020/hash/c9f2f917078bd2db12f23c3b413d9cba-Abstract.html).
 
 ## Planned quantum chemistry and DFT
 

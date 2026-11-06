@@ -58,10 +58,13 @@ Burgers・LWR交通流を含む7系統9ケースの保存分布を追加し、�
 
 ## 承認済みの次の作業 {#authorized-next-work}
 
+- **解説予定 — RoeのProperty U**：原論文の4条件、Roe平均の導出、単一のRankine–Hugoniot不連続を認識できる理由、エントロピー条件・エントロピー修正との違いを説明します。ジャンプ関係の数値検証も併せて追加する予定です。この拡充は未完了です。
 - InutsukaのGSPH：Gaussian畳み込み、比体積再構成、向き付き粒子対リーマン状態、整合保存エネルギー更新を、可変平滑化長の前に滑らか・接触・衝撃波管で検証します。Iwasaki–InutsukaのGSPMHDは後の独立段階です。[出典と計画](gsph.md)。
 - 相対論流体：SRHD回復・特性を先に検査し、SRMHD、固定計量GR、独立検証Einstein物質結合へ進みます。放射とSRGSPHは別の分岐です。[2026年11月確認の調査](relativistic-hydrodynamics.md)。
 - PPM、特性再構成、WENO-Zの管理した衝撃波・接触比較。
 - HLLD、Brio–Wu、Alfvén波、磁場ループと明示したCT／GLM範囲。
+- **予定 — 電磁場のFDTD（時間領域有限差分法）**：Yee格子の変数配置、leapfrogによるMaxwell方程式の更新、CFL制限、数値分散。真空中の波と導体空洞のテストから始め、吸収境界・PMLの反射検査へ進みます。実装と専用の検証は未完了です。
+- **予定 — プラズマPIC（Particle-in-Cell法）**：静電的な粒子–Poisson連成から、電磁的な粒子–Maxwell連成へ進みます。粒子形状、格子への割当てと場の補間、Boris法、電荷保存電流割当て、Gauss則の診断を扱います。プラズマ振動、two-stream不安定性、Landau減衰を検証候補とし、エネルギー・ノイズ・格子／時間／粒子数依存性を確認します。既存の重力PM例とは適用範囲を分けます。[WarpXのPIC理論ノート](https://warpx.readthedocs.io/en/25.11/theory/pic.html)を出発点とし、プラズマPICソルバーは現時点では未実装です。
 - 硬い積分：BE／BDF2／SDIRK2／IMEX Eulerを超える高次IMEX、埋込みDIRK、可変BDF、演算子分割。
 - 疎行列・非線形：固定右GMRES／BiCGSTAB・ILU(0)を超える行列不要Newton–Krylov、頑健な並べ替え・フィル、可変前処理、広い非線形テスト。
 - 粘性・非圧縮：周期Taylor–Greenを超える壁射影、SIMPLE／PISO、キャビティ・円柱後流の妥当性確認。
@@ -76,6 +79,19 @@ Burgers・LWR交通流を含む7系統9ケースの保存分布を追加し、�
 [生物カタログ](biological-models.md)は22系統を文献のみで整理し、方程式、出典規約、検証案を含みます。実装順はロジスティック／SIR・酵素反応からFisher前線、FitzHugh–Nagumo、Schnakenberg、Keller–Segelへ進め、出生・死亡SSAを独立した確率分岐とします。生物ソルバーや生物の妥当性確認は追加していません。
 
 [Arakawa A／B／C](geophysical-grids.md)は配置図と検証済み半離散f平面記号を持ちます。D／E、鉛直配置、非線形渦位、Kelvin／Rossby、海岸は追加課題で、完全な地球流体コアではありません。
+
+## 機械学習に関連する数値計算の改訂候補 {#planned-machine-learning-numerics}
+
+**状態：改訂候補。以下の専用解説・実装・検証はまだ追加していません。** 第1巻の共通基盤につながる安定な関数評価、自動微分、最適化を先に扱い、科学技術機械学習の応用は後続の候補とします。予定項目を実装済み手法数には加えず、公開時期も未定です。
+
+- [ ] **softmaxとlog-sum-exp**：最大値を引くシフト、log-softmax、指数関数のオーバーフローとアンダーフロー。大きな入力、定数シフトに対する不変性、確率和、微分の整合性を検証候補とします。[SciPyのsoftmax解説](https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.softmax.html)を参照します。
+- [ ] **交差エントロピーと安定な損失評価**：確率を経由せずlogitsから計算する方法、log-sum-expとの関係、sigmoidと二値交差エントロピー。極端な入力での有限値と解析的な勾配を確認します。[PyTorchの交差エントロピー解説](https://docs.pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html)を出発点とします。
+- [ ] **自動微分・逆伝播**：前進／逆モード、連鎖律、Jacobian–vector積（JVP）、vector–Jacobian積（VJP）、Hessian–vector積。記号微分・有限差分との違い、丸め誤差、非微分点、保存する中間値とメモリの関係を扱います。[JAXの自動微分解説](https://docs.jax.dev/en/latest/301/index.html)を参照し、解析微分・方向微分との比較を計画します。
+- [ ] **陰関数微分・随伴法と微分可能なソルバー**：線形求解、収束した非線形系、時間発展を通した感度計算。反復を展開して微分する方法と、方程式から微分する方法を区別し、Jacobianの可逆性、求解許容誤差、勾配検査を明記します。[陰関数微分の原論文](https://papers.neurips.cc/paper_files/paper/2022/file/228b9279ecf9bbafe582406850c57115-Paper-Conference.pdf)を調査の入口とします。
+- [ ] **機械学習向け最適化と低精度演算**：勾配降下・SGD、momentum、Adam、L-BFGS、Gauss–Newton／Levenberg–Marquardt。既存のNewtonによる方程式求解と目的関数の最小化を区別し、尺度・条件数、学習率、勾配ノルム、総和と混合精度の影響を比較します。すべての目的関数に対する収束保証や優劣は主張しません。
+- [ ] **応用候補 — PINNsと逆問題**：PDE残差、初期・境界条件、観測データの損失を分け、通常の差分・FEMと同じ誤差指標で比較します。学習損失の低下だけをPDE解の精度保証とはしません。[PINNsの著者解説](https://maziarraissi.github.io/PINNs/)と[失敗モードの研究](https://papers.nips.cc/paper_files/paper/2021/hash/df438e5206f31600e6ae4af72f2725f1-Abstract.html)を参照します。
+- [ ] **応用候補 — Neural Operator／Fourier Neural Operator**：入力関数から解関数への写像を学習する考え方を、既存のFourier基底・スペクトル法と接続します。学習分布外、格子変更、離散化・aliasing誤差を独立に確認する計画とし、格子を変更できることだけで精度を保証しません。[Neural Operator原論文](https://www.jmlr.org/papers/volume24/21-1524/21-1524.pdf)を参照します。
+- [ ] **応用候補 — 記号回帰と方程式発見**：データや学習モデルから明示的な数式を探す方法。微分の自動計算と区別し、ノイズ、次元・対称性、式の複雑さ、別データでの再現性を評価します。[深層学習から記号モデルを抽出する研究](https://proceedings.neurips.cc/paper_files/paper/2020/hash/c9f2f917078bd2db12f23c3b413d9cba-Abstract.html)を調査候補とします。
 
 ## 量子化学・DFTの開発予定 {#planned-quantum-chemistry-and-dft}
 
