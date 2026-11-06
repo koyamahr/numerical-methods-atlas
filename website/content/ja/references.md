@@ -870,6 +870,22 @@ Publisher bibliographic record and abstract. This edition uses selectable-limite
 
 </div>
 
+## 1980 · patankar1980 {#1980-patankar1980}
+
+<div lang="en" data-original>
+
+Patankar, Suhas V.. **Numerical Heat Transfer and Fluid Flow**. CRC Press (current publisher record).
+
+</div>
+
+[原著の書誌情報](https://www.routledge.com/Numerical-Heat-Transfer-and-Fluid-Flow-1st-Edition/Patankar/p/book/9780891165224) · [全文または実装の参照資料](https://www.routledge.com/Numerical-Heat-Transfer-and-Fluid-Flow-1st-Edition/Patankar/p/book/9780891165224)
+
+<div lang="en" data-original>
+
+Current publisher first-edition record and contents checked; copyright year 1980. The linked CRC/Routledge record is a current listing of the work. Reading reference for conservative control-volume discretization and pressure-velocity coupling, not evidence of a complete SIMPLE implementation here.
+
+</div>
+
 ## 1981 · hockney1981book {#1981-hockney1981book}
 
 <div lang="en" data-original>
@@ -1222,6 +1238,38 @@ Publisher bibliographic record and abstract. Background on low-density positivit
 
 </div>
 
+## 1991 · fletcher1991v1 {#1991-fletcher1991v1}
+
+<div lang="en" data-original>
+
+Fletcher, Clive A. J.. **Computational Techniques for Fluid Dynamics 1: Fundamental and General Techniques**. Springer.
+
+</div>
+
+[原著の書誌情報](https://doi.org/10.1007/978-3-642-58229-5) · [全文または実装の参照資料](https://link.springer.com/book/10.1007/978-3-642-58229-5)
+
+<div lang="en" data-original>
+
+Publisher second-edition record and contents checked. Year follows the listed April 1991 print publication; the same current record displays copyright 1998 and eBook release 2012, which must not be mistaken for a new algorithm date. Reading reference for the textbook scope, not a claim of full-text audit or reproduction of every algorithm.
+
+</div>
+
+## 1991 · fletcher1991v2 {#1991-fletcher1991v2}
+
+<div lang="en" data-original>
+
+Fletcher, Clive A. J.. **Computational Techniques for Fluid Dynamics 2: Specific Techniques for Different Flow Categories**. Springer.
+
+</div>
+
+[原著の書誌情報](https://doi.org/10.1007/978-3-642-58239-4) · [全文または実装の参照資料](https://link.springer.com/book/10.1007/978-3-642-58239-4)
+
+<div lang="en" data-original>
+
+Publisher second-edition record and contents checked: print and copyright 1991; eBook release 2012 is a later digital issue. Reading reference for the textbook scope, not a claim of full-text audit or reproduction of every algorithm.
+
+</div>
+
 ## 1991 · jameson1991 {#1991-jameson1991}
 
 <div lang="en" data-original>
@@ -1462,6 +1510,22 @@ Publisher metadata/abstract inspected. AUSM+ is a separately planned extension; 
 
 </div>
 
+## 1996 · ronchi1996 {#1996-ronchi1996}
+
+<div lang="en" data-original>
+
+Ronchi, C. and Iacono, R. and Paolucci, P. S.. **The Cubed Sphere: A New Method for the Solution of Partial Differential Equations in Spherical Geometry**. Journal of Computational Physics.
+
+</div>
+
+[原著の書誌情報](https://doi.org/10.1006/jcph.1996.0047) · [全文または実装の参照資料](https://www.sciencedirect.com/science/article/pii/S0021999196900479)
+
+<div lang="en" data-original>
+
+Publisher bibliographic search record checked; full text not inspected. Atlas uses an explicitly specified equiangular gnomonic diagram and does not reproduce the paper solver.
+
+</div>
+
 ## 1996 · shewchuk1996 {#1996-shewchuk1996}
 
 <div lang="en" data-original>
@@ -1587,6 +1651,22 @@ Tóth, Gábor. **The ∇·B = 0 Constraint in Shock-Capturing Magnetohydrodynami
 <div lang="en" data-original>
 
 Author-hosted original paper. Reference for CT variants and differences between discrete divergence operators.
+
+</div>
+
+## 2000 · trefethen2000 {#2000-trefethen2000}
+
+<div lang="en" data-original>
+
+Trefethen, Lloyd N.. **Spectral Methods in MATLAB**. SIAM.
+
+</div>
+
+[原著の書誌情報](https://doi.org/10.1137/1.9780898719598) · [全文または実装の参照資料](https://people.maths.ox.ac.uk/trefethen/spectral.html)
+
+<div lang="en" data-original>
+
+Author-maintained book page checked: SIAM 2000, sample chapters, programs and errata. Reading reference for spectral differentiation and boundary-value problems; the author notes limited treatment of barycentric interpolation.
 
 </div>
 
@@ -1782,6 +1862,38 @@ Original article hosted by a university course. Reference for symplecticity, rev
 
 </div>
 
+## 2003 · saad2003book {#2003-saad2003book}
+
+<div lang="en" data-original>
+
+Saad, Yousef. **Iterative Methods for Sparse Linear Systems**. SIAM.
+
+</div>
+
+[原著の書誌情報](https://doi.org/10.1137/1.9780898718003) · [全文または実装の参照資料](https://www-users.cse.umn.edu/~saad/books.html)
+
+<div lang="en" data-original>
+
+Publisher second-edition record and author-maintained book page checked; original first edition was 1996. Author page provides the text and errata. Reading reference for Krylov methods and preconditioning; original algorithm papers remain separate citations.
+
+</div>
+
+## 2004 · kageyama2004 {#2004-kageyama2004}
+
+<div lang="en" data-original>
+
+Kageyama, Akira and Sato, Tetsuya. **The Yin-Yang Grid: An Overset Grid in Spherical Geometry**. Geochemistry, Geophysics, Geosystems.
+
+</div>
+
+[原著の書誌情報](https://doi.org/10.1029/2004GC000734) · [全文または実装の参照資料](https://arxiv.org/abs/physics/0403123)
+
+<div lang="en" data-original>
+
+Author preprint inspected for patch bounds, coordinate rotation and vector transformation. Atlas diagrams illustrate geometry only; overlap interpolation and a conservative flow solver are not implemented.
+
+</div>
+
 ## 2005 · duez2005grmhd {#2005-duez2005grmhd}
 
 <div lang="en" data-original>
@@ -1846,6 +1958,22 @@ Author-hosted review. The 2006 date identifies the review, rather than the origi
 
 </div>
 
+## 2006 · hairer2006book {#2006-hairer2006book}
+
+<div lang="en" data-original>
+
+Hairer, Ernst and Lubich, Christian and Wanner, Gerhard. **Geometric Numerical Integration: Structure-Preserving Algorithms for Ordinary Differential Equations**. Springer.
+
+</div>
+
+[原著の書誌情報](https://doi.org/10.1007/3-540-30666-8) · [全文または実装の参照資料](https://link.springer.com/book/10.1007/3-540-30666-8)
+
+<div lang="en" data-original>
+
+Publisher second-edition record and description checked. Reading reference for symplectic and symmetric methods, splitting and long-time behavior; symplecticity is distinct from exact conservation of the original Hamiltonian.
+
+</div>
+
 ## 2006 · liou2006 {#2006-liou2006}
 
 <div lang="en" data-original>
@@ -1875,6 +2003,38 @@ Noble, Scott C. and Gammie, Charles F. and McKinney, Jonathan C. and Del Zanna, 
 <div lang="en" data-original>
 
 Author abstract and journal metadata inspected for nonlinear conserved-to-primitive recovery and reduced systems. Reading context; current Newtonian primitive conversion is not this relativistic inversion.
+
+</div>
+
+## 2007 · hirsch2007 {#2007-hirsch2007}
+
+<div lang="en" data-original>
+
+Hirsch, Charles. **Numerical Computation of Internal and External Flows: The Fundamentals of Computational Fluid Dynamics**. Butterworth-Heinemann.
+
+</div>
+
+[原著の書誌情報](https://doi.org/10.1016/B978-0-7506-6594-0.X5037-1) · [全文または実装の参照資料](https://www.sciencedirect.com/book/monograph/9780750665940/numerical-computation-of-internal-and-external-flows)
+
+<div lang="en" data-original>
+
+Publisher edition record and contents checked. Cites the 2007 second-edition fundamentals volume, not the complete original two-volume set. Reading reference for discretization, grid properties, stability and flow solvers; not an audited implementation source for every chapter.
+
+</div>
+
+## 2007 · leveque2007 {#2007-leveque2007}
+
+<div lang="en" data-original>
+
+LeVeque, Randall J.. **Finite Difference Methods for Ordinary and Partial Differential Equations: Steady-State and Time-Dependent Problems**. SIAM.
+
+</div>
+
+[原著の書誌情報](https://doi.org/10.1137/1.9780898717839) · [全文または実装の参照資料](https://staff.washington.edu/rjl/booksnotes.html)
+
+<div lang="en" data-original>
+
+Author-maintained book list checked for year, title, DOI and companion materials. Reading reference for consistency, stability, boundary-value problems and time stepping; full book not audited here.
 
 </div>
 
@@ -1923,6 +2083,22 @@ Font, José A.. **Numerical Hydrodynamics and Magnetohydrodynamics in General Re
 <div lang="en" data-original>
 
 Open author review inspected for formulations and historical context. Explicitly the 2008 revision, following the 2000 and 2003 versions; used as review context rather than an invention date or a current code-performance comparison.
+
+</div>
+
+## 2008 · hesthaven2008book {#2008-hesthaven2008book}
+
+<div lang="en" data-original>
+
+Hesthaven, Jan S. and Warburton, Tim. **Nodal Discontinuous Galerkin Methods: Algorithms, Analysis, and Applications**. Springer.
+
+</div>
+
+[原著の書誌情報](https://doi.org/10.1007/978-0-387-72067-8) · [全文または実装の参照資料](https://link.springer.com/book/10.1007/978-0-387-72067-8)
+
+<div lang="en" data-original>
+
+Publisher copyright-edition record and contents checked: 2008. Reading reference for nodal bases, element operators and DG fluxes. The atlas currently has selected educational DG and basis examples, not all systems treated in the book.
 
 </div>
 
@@ -2006,6 +2182,22 @@ Publisher record identifies the time-filter paper. The ODE laboratory uses unfil
 
 </div>
 
+## 2010 · durran2010 {#2010-durran2010}
+
+<div lang="en" data-original>
+
+Durran, Dale R.. **Numerical Methods for Fluid Dynamics: With Applications to Geophysics**. Springer.
+
+</div>
+
+[原著の書誌情報](https://doi.org/10.1007/978-1-4419-6412-0) · [全文または実装の参照資料](https://link.springer.com/book/10.1007/978-1-4419-6412-0)
+
+<div lang="en" data-original>
+
+Publisher second-edition copyright record and description checked. Retitled revision of the earlier geophysical wave-equation text. Reading reference for wave propagation, dispersion, advection and time discretization; not a complete spherical dynamical-core implementation.
+
+</div>
+
 ## 2010 · mignone2010glm {#2010-mignone2010glm}
 
 <div lang="en" data-original>
@@ -2086,6 +2278,22 @@ Translation bibliographic record checked. This is a 2011 translation/commentary 
 
 </div>
 
+## 2013 · golub2013 {#2013-golub2013}
+
+<div lang="en" data-original>
+
+Golub, Gene H. and Van Loan, Charles F.. **Matrix Computations**. Johns Hopkins University Press.
+
+</div>
+
+[原著の書誌情報](https://doi.org/10.1137/1.9781421407944) · [全文または実装の参照資料](https://epubs.siam.org/doi/book/10.1137/1.9781421407944)
+
+<div lang="en" data-original>
+
+Fourth-edition publication and contents checked in the SIAM distribution record; publisher is Johns Hopkins University Press. Reading reference for factorizations, conditioning, eigenproblems and sparse systems; no claim of full-text audit.
+
+</div>
+
 ## 2013 · sadowski2013radiation {#2013-sadowski2013radiation}
 
 <div lang="en" data-original>
@@ -2099,6 +2307,22 @@ Sądowski, Aleksander and Narayan, Ramesh and Tchekhovskoy, Alexander and Zhu, Y
 <div lang="en" data-original>
 
 Author abstract and public original inspected for covariant M1 radiation moments and semi-implicit matter interactions in KORAL. Published 2013, preprint 2012. Radiation closure/source integration is reading context, not implemented here.
+
+</div>
+
+## 2013 · wan2013icon {#2013-wan2013icon}
+
+<div lang="en" data-original>
+
+Wan, H. and Giorgetta, M. A. and Zängl, G. and Restelli, M. and Majewski, D. and Bonaventura, L. and Fröhlich, K. and Reinert, D. and Rípodas, P. and Kornblueh, L. and Förstner, J.. **The ICON-1.2 hydrostatic atmospheric dynamical core on triangular grids – Part 1: Formulation and performance of the baseline version**. Geoscientific Model Development.
+
+</div>
+
+[原著の書誌情報](https://doi.org/10.5194/gmd-6-735-2013) · [全文または実装の参照資料](https://gmd.copernicus.org/articles/6/735/2013/gmd-6-735-2013.html)
+
+<div lang="en" data-original>
+
+Official model-description record and abstract checked for the triangular-grid C-staggering connection. Atlas midpoint-refined icosahedron and barycentric dual are illustrative, unoptimized meshes, not the ICON grid or dynamical core.
 
 </div>
 
@@ -2179,6 +2403,22 @@ Kovtun, Pavel. **First-order relativistic hydrodynamics is stable**. Journal of 
 <div lang="en" data-original>
 
 Author abstract and publisher record inspected for stable first-order hydrodynamic frames. Stability results retain the paper assumptions; numerical scheme stability is a separate question. Reading context, not an implemented solver.
+
+</div>
+
+## 2020 · ferziger2020 {#2020-ferziger2020}
+
+<div lang="en" data-original>
+
+Ferziger, Joel H. and Perić, Milovan and Street, Robert L.. **Computational Methods for Fluid Dynamics**. Springer.
+
+</div>
+
+[原著の書誌情報](https://doi.org/10.1007/978-3-319-99693-6) · [全文または実装の参照資料](https://link.springer.com/book/10.1007/978-3-319-99693-6)
+
+<div lang="en" data-original>
+
+Publisher edition metadata and contents checked. Uses the fourth-edition copyright year 2020; the publisher lists electronic publication in August 2019. Broad CFD reading reference, including incompressible flow and solution procedures; not a validation claim for all listed applications.
 
 </div>
 

@@ -437,6 +437,14 @@ van Leer, Bram. **Towards the ultimate conservative difference scheme. V. A seco
 
 Publisher bibliographic record and abstract. This edition uses selectable-limiter MUSCL with SSPRK3, rather than reproducing the original Lagrangian/remap construction.
 
+## 1980 · patankar1980
+
+Patankar, Suhas V.. **Numerical Heat Transfer and Fluid Flow**. CRC Press (current publisher record).
+
+[Original bibliographic record](https://www.routledge.com/Numerical-Heat-Transfer-and-Fluid-Flow-1st-Edition/Patankar/p/book/9780891165224) · [Full text or implementation reference](https://www.routledge.com/Numerical-Heat-Transfer-and-Fluid-Flow-1st-Edition/Patankar/p/book/9780891165224)
+
+Current publisher first-edition record and contents checked; copyright year 1980. The linked CRC/Routledge record is a current listing of the work. Reading reference for conservative control-volume discretization and pressure-velocity coupling, not evidence of a complete SIMPLE implementation here.
+
 ## 1981 · hockney1981book
 
 Hockney, R. W. and Eastwood, J. W.. **Computer Simulation Using Particles**. McGraw-Hill.
@@ -613,6 +621,22 @@ Einfeldt, Bernd and Munz, Claus-Dieter and Roe, Philip L. and Sjögreen, Björn.
 
 Publisher bibliographic record and abstract. Background on low-density positivity; this edition uses the standard Toro formulation of the 1–2–3 problem.
 
+## 1991 · fletcher1991v1
+
+Fletcher, Clive A. J.. **Computational Techniques for Fluid Dynamics 1: Fundamental and General Techniques**. Springer.
+
+[Original bibliographic record](https://doi.org/10.1007/978-3-642-58229-5) · [Full text or implementation reference](https://link.springer.com/book/10.1007/978-3-642-58229-5)
+
+Publisher second-edition record and contents checked. Year follows the listed April 1991 print publication; the same current record displays copyright 1998 and eBook release 2012, which must not be mistaken for a new algorithm date. Reading reference for the textbook scope, not a claim of full-text audit or reproduction of every algorithm.
+
+## 1991 · fletcher1991v2
+
+Fletcher, Clive A. J.. **Computational Techniques for Fluid Dynamics 2: Specific Techniques for Different Flow Categories**. Springer.
+
+[Original bibliographic record](https://doi.org/10.1007/978-3-642-58239-4) · [Full text or implementation reference](https://link.springer.com/book/10.1007/978-3-642-58239-4)
+
+Publisher second-edition record and contents checked: print and copyright 1991; eBook release 2012 is a later digital issue. Reading reference for the textbook scope, not a claim of full-text audit or reproduction of every algorithm.
+
 ## 1991 · jameson1991
 
 Jameson, Antony. **Time dependent calculations using multigrid, with applications to unsteady flows past airfoils and wings**. 10th AIAA Computational Fluid Dynamics Conference.
@@ -733,6 +757,14 @@ Liou, Meng-Sing. **A Sequel to AUSM: AUSM+**. Journal of Computational Physics.
 
 Publisher metadata/abstract inspected. AUSM+ is a separately planned extension; its original wave-speed/pressure choices and properties are not claimed by the local common-sound-speed AUSM baseline.
 
+## 1996 · ronchi1996
+
+Ronchi, C. and Iacono, R. and Paolucci, P. S.. **The Cubed Sphere: A New Method for the Solution of Partial Differential Equations in Spherical Geometry**. Journal of Computational Physics.
+
+[Original bibliographic record](https://doi.org/10.1006/jcph.1996.0047) · [Full text or implementation reference](https://www.sciencedirect.com/science/article/pii/S0021999196900479)
+
+Publisher bibliographic search record checked; full text not inspected. Atlas uses an explicitly specified equiangular gnomonic diagram and does not reproduce the paper solver.
+
 ## 1996 · shewchuk1996
 
 Shewchuk, Jonathan Richard. **Triangle: Engineering a 2D Quality Mesh Generator and Delaunay Triangulator**. Springer.
@@ -796,6 +828,14 @@ Tóth, Gábor. **The ∇·B = 0 Constraint in Shock-Capturing Magnetohydrodynami
 [Original bibliographic record](https://doi.org/10.1006/jcph.2000.6519) · [Full text or implementation reference](https://public.websites.umich.edu/~gtoth/Papers/Toth2000_divb.pdf)
 
 Author-hosted original paper. Reference for CT variants and differences between discrete divergence operators.
+
+## 2000 · trefethen2000
+
+Trefethen, Lloyd N.. **Spectral Methods in MATLAB**. SIAM.
+
+[Original bibliographic record](https://doi.org/10.1137/1.9780898719598) · [Full text or implementation reference](https://people.maths.ox.ac.uk/trefethen/spectral.html)
+
+Author-maintained book page checked: SIAM 2000, sample chapters, programs and errata. Reading reference for spectral differentiation and boundary-value problems; the author notes limited treatment of barycentric interpolation.
 
 ## 2001 · gottlieb2001ssp
 
@@ -893,6 +933,22 @@ Hairer, Ernst and Lubich, Christian and Wanner, Gerhard. **Geometric numerical i
 
 Original article hosted by a university course. Reference for symplecticity, reversibility, modified equations, and conditional long-time energy estimates; no general exact-energy claim is made.
 
+## 2003 · saad2003book
+
+Saad, Yousef. **Iterative Methods for Sparse Linear Systems**. SIAM.
+
+[Original bibliographic record](https://doi.org/10.1137/1.9780898718003) · [Full text or implementation reference](https://www-users.cse.umn.edu/~saad/books.html)
+
+Publisher second-edition record and author-maintained book page checked; original first edition was 1996. Author page provides the text and errata. Reading reference for Krylov methods and preconditioning; original algorithm papers remain separate citations.
+
+## 2004 · kageyama2004
+
+Kageyama, Akira and Sato, Tetsuya. **The Yin-Yang Grid: An Overset Grid in Spherical Geometry**. Geochemistry, Geophysics, Geosystems.
+
+[Original bibliographic record](https://doi.org/10.1029/2004GC000734) · [Full text or implementation reference](https://arxiv.org/abs/physics/0403123)
+
+Author preprint inspected for patch bounds, coordinate rotation and vector transformation. Atlas diagrams illustrate geometry only; overlap interpolation and a conservative flow solver are not implemented.
+
 ## 2005 · duez2005grmhd
 
 Duez, Matthew D. and Liu, Yuk Tung and Shapiro, Stuart L. and Stephens, Branson C.. **Relativistic Magnetohydrodynamics in Dynamical Spacetimes: Numerical Methods and Tests**. Physical Review D.
@@ -925,6 +981,14 @@ Abgrall, Rémi. **Residual distribution schemes: Current status and future trend
 
 Author-hosted review. The 2006 date identifies the review, rather than the origin of residual distribution. This edition implements only 1D scalar RD.
 
+## 2006 · hairer2006book
+
+Hairer, Ernst and Lubich, Christian and Wanner, Gerhard. **Geometric Numerical Integration: Structure-Preserving Algorithms for Ordinary Differential Equations**. Springer.
+
+[Original bibliographic record](https://doi.org/10.1007/3-540-30666-8) · [Full text or implementation reference](https://link.springer.com/book/10.1007/3-540-30666-8)
+
+Publisher second-edition record and description checked. Reading reference for symplectic and symmetric methods, splitting and long-time behavior; symplecticity is distinct from exact conservation of the original Hamiltonian.
+
 ## 2006 · liou2006
 
 Liou, Meng-Sing. **A sequel to AUSM, Part II: AUSM+-up for all speeds**. Journal of Computational Physics.
@@ -940,6 +1004,22 @@ Noble, Scott C. and Gammie, Charles F. and McKinney, Jonathan C. and Del Zanna, 
 [Original bibliographic record](https://doi.org/10.1086/500349) · [Full text or implementation reference](https://arxiv.org/abs/astro-ph/0512420)
 
 Author abstract and journal metadata inspected for nonlinear conserved-to-primitive recovery and reduced systems. Reading context; current Newtonian primitive conversion is not this relativistic inversion.
+
+## 2007 · hirsch2007
+
+Hirsch, Charles. **Numerical Computation of Internal and External Flows: The Fundamentals of Computational Fluid Dynamics**. Butterworth-Heinemann.
+
+[Original bibliographic record](https://doi.org/10.1016/B978-0-7506-6594-0.X5037-1) · [Full text or implementation reference](https://www.sciencedirect.com/book/monograph/9780750665940/numerical-computation-of-internal-and-external-flows)
+
+Publisher edition record and contents checked. Cites the 2007 second-edition fundamentals volume, not the complete original two-volume set. Reading reference for discretization, grid properties, stability and flow solvers; not an audited implementation source for every chapter.
+
+## 2007 · leveque2007
+
+LeVeque, Randall J.. **Finite Difference Methods for Ordinary and Partial Differential Equations: Steady-State and Time-Dependent Problems**. SIAM.
+
+[Original bibliographic record](https://doi.org/10.1137/1.9780898717839) · [Full text or implementation reference](https://staff.washington.edu/rjl/booksnotes.html)
+
+Author-maintained book list checked for year, title, DOI and companion materials. Reading reference for consistency, stability, boundary-value problems and time stepping; full book not audited here.
 
 ## 2007 · nishikawa2007
 
@@ -964,6 +1044,14 @@ Font, José A.. **Numerical Hydrodynamics and Magnetohydrodynamics in General Re
 [Original bibliographic record](https://doi.org/10.12942/lrr-2008-7) · [Full text or implementation reference](https://link.springer.com/article/10.12942/lrr-2008-7)
 
 Open author review inspected for formulations and historical context. Explicitly the 2008 revision, following the 2000 and 2003 versions; used as review context rather than an invention date or a current code-performance comparison.
+
+## 2008 · hesthaven2008book
+
+Hesthaven, Jan S. and Warburton, Tim. **Nodal Discontinuous Galerkin Methods: Algorithms, Analysis, and Applications**. Springer.
+
+[Original bibliographic record](https://doi.org/10.1007/978-0-387-72067-8) · [Full text or implementation reference](https://link.springer.com/book/10.1007/978-0-387-72067-8)
+
+Publisher copyright-edition record and contents checked: 2008. Reading reference for nodal bases, element operators and DG fluxes. The atlas currently has selected educational DG and basis examples, not all systems treated in the book.
 
 ## 2008 · nishikawa2008
 
@@ -1005,6 +1093,14 @@ Williams, Paul D.. **A Proposed Modification to the Robert–Asselin Time Filter
 
 Publisher record identifies the time-filter paper. The ODE laboratory uses unfiltered leapfrog with RK4 startup and does not implement this filter.
 
+## 2010 · durran2010
+
+Durran, Dale R.. **Numerical Methods for Fluid Dynamics: With Applications to Geophysics**. Springer.
+
+[Original bibliographic record](https://doi.org/10.1007/978-1-4419-6412-0) · [Full text or implementation reference](https://link.springer.com/book/10.1007/978-1-4419-6412-0)
+
+Publisher second-edition copyright record and description checked. Retitled revision of the earlier geophysical wave-equation text. Reading reference for wave propagation, dispersion, advection and time discretization; not a complete spherical dynamical-core implementation.
+
 ## 2010 · mignone2010glm
 
 Mignone, Andrea and Tzeferacos, Petros. **A second-order unsplit Godunov scheme for cell-centered MHD: The CTU-GLM scheme**. Journal of Computational Physics.
@@ -1045,6 +1141,14 @@ Johnson, Kenneth A. and Goody, Roger S.. **The Original Michaelis Constant: Tran
 
 Translation bibliographic record checked. This is a 2011 translation/commentary route to the 1913 original, not an original publication dated 2011.
 
+## 2013 · golub2013
+
+Golub, Gene H. and Van Loan, Charles F.. **Matrix Computations**. Johns Hopkins University Press.
+
+[Original bibliographic record](https://doi.org/10.1137/1.9781421407944) · [Full text or implementation reference](https://epubs.siam.org/doi/book/10.1137/1.9781421407944)
+
+Fourth-edition publication and contents checked in the SIAM distribution record; publisher is Johns Hopkins University Press. Reading reference for factorizations, conditioning, eigenproblems and sparse systems; no claim of full-text audit.
+
 ## 2013 · sadowski2013radiation
 
 Sądowski, Aleksander and Narayan, Ramesh and Tchekhovskoy, Alexander and Zhu, Yucong. **Semi-implicit scheme for treating radiation under M1 closure in general relativistic conservative fluid dynamics codes**. Monthly Notices of the Royal Astronomical Society.
@@ -1052,6 +1156,14 @@ Sądowski, Aleksander and Narayan, Ramesh and Tchekhovskoy, Alexander and Zhu, Y
 [Original bibliographic record](https://doi.org/10.1093/mnras/sts632) · [Full text or implementation reference](https://arxiv.org/abs/1212.5050)
 
 Author abstract and public original inspected for covariant M1 radiation moments and semi-implicit matter interactions in KORAL. Published 2013, preprint 2012. Radiation closure/source integration is reading context, not implemented here.
+
+## 2013 · wan2013icon
+
+Wan, H. and Giorgetta, M. A. and Zängl, G. and Restelli, M. and Majewski, D. and Bonaventura, L. and Fröhlich, K. and Reinert, D. and Rípodas, P. and Kornblueh, L. and Förstner, J.. **The ICON-1.2 hydrostatic atmospheric dynamical core on triangular grids – Part 1: Formulation and performance of the baseline version**. Geoscientific Model Development.
+
+[Original bibliographic record](https://doi.org/10.5194/gmd-6-735-2013) · [Full text or implementation reference](https://gmd.copernicus.org/articles/6/735/2013/gmd-6-735-2013.html)
+
+Official model-description record and abstract checked for the triangular-grid C-staggering connection. Atlas midpoint-refined icosahedron and barycentric dual are illustrative, unoptimized meshes, not the ICON grid or dynamical core.
 
 ## 2015 · teukolsky2015
 
@@ -1092,6 +1204,14 @@ Kovtun, Pavel. **First-order relativistic hydrodynamics is stable**. Journal of 
 [Original bibliographic record](https://doi.org/10.1007/JHEP10(2019)034) · [Full text or implementation reference](https://arxiv.org/abs/1907.08191)
 
 Author abstract and publisher record inspected for stable first-order hydrodynamic frames. Stability results retain the paper assumptions; numerical scheme stability is a separate question. Reading context, not an implemented solver.
+
+## 2020 · ferziger2020
+
+Ferziger, Joel H. and Perić, Milovan and Street, Robert L.. **Computational Methods for Fluid Dynamics**. Springer.
+
+[Original bibliographic record](https://doi.org/10.1007/978-3-319-99693-6) · [Full text or implementation reference](https://link.springer.com/book/10.1007/978-3-319-99693-6)
+
+Publisher edition metadata and contents checked. Uses the fourth-edition copyright year 2020; the publisher lists electronic publication in August 2019. Broad CFD reading reference, including incompressible flow and solution procedures; not a validation claim for all listed applications.
 
 ## 2020 · fest2020ausm
 

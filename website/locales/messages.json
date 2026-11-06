@@ -6139,5 +6139,41 @@
   "poisson.b97cedc5a82b": {
     "en": "Residuals below 10⁻¹⁴ use the chart display floor; the table and download retain the raw values.",
     "ja": "図では残差10⁻¹⁴未満を表示下限に置き、表と取得データには生の値を残します。"
+  },
+  "spherical.method.title": {
+    "en": "Spherical meshes & Arakawa grids",
+    "ja": "球面メッシュとArakawa格子"
+  },
+  "spherical.method.description": {
+    "en": "Compare Yin–Yang, cubed-sphere and icosahedral geometry, then inspect A/B/C placement and tested f-plane wave symbols.",
+    "ja": "陰陽・cubed-sphere・正二十面体の幾何を比較し、A／B／C配置と検証済みのf平面波の記号を調べます。"
+  },
+  "spherical.gallery.title": {
+    "en": "Cover a sphere without polar convergence",
+    "ja": "極への集中を避けて球面を覆う"
+  },
+  "spherical.gallery.description": {
+    "en": "Latitude–longitude, Yin–Yang, cubed-sphere and icosahedral geometry. Schematics show overlap, panel seams and five-valent vertices; no new flow simulation.",
+    "ja": "緯度経度・陰陽・cubed-sphere・正二十面体の幾何。重複、面の継ぎ目、5価の頂点を示す模式図です。"
+  },
+  "spherical.dual.title": {
+    "en": "Triangles, pentagons and hexagons",
+    "ja": "三角形・五角形・六角形"
+  },
+  "spherical.dual.description": {
+    "en": "The same refined icosahedron and its barycentric dual. Twelve pentagons replace sixfold connectivity; the diagram is not an optimized Voronoi grid.",
+    "ja": "細分化した正二十面体格子と重心型双対。12個の五角形を含み、最適化されたVoronoi格子ではありません。"
+  },
+  "books.choose": {
+    "en": "Choose a textbook ↗",
+    "ja": "教科書を選ぶ ↗"
+  },
+  "books.browse": {
+    "en": "Browse books only ↗",
+    "ja": "書籍のみ表示 ↗"
+  },
+  "books.nav": {
+    "en": "Textbook reading guide",
+    "ja": "教科書案内"
   }
 }

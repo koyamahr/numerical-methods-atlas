@@ -1,4 +1,4 @@
-# Arakawa A, B and C grids in geophysical fluid dynamics
+# Spherical meshes and Arakawa A, B and C grids
 
 A/B/C names specify **where different variables live on a mesh**. They are
 not an accuracy order, a mesh shape, or a time-stepping family. A structured
@@ -7,9 +7,132 @@ is described by [Arakawa–Lamb (1977)](https://doi.org/10.1016/B978-0-12-460817
 with a useful agency exposition in the
 [ECMWF numerical-methods notes](https://www.ecmwf.int/sites/default/files/elibrary/2002/16948-numerical-methods.pdf).
 
-**Implemented here:** placement diagrams and tested Fourier symbols for a
-linear periodic f-plane shallow-water system. This is not an A/B/C nonlinear
+**Implemented here:** spherical mesh geometry diagrams, plus placement diagrams
+and tested Fourier symbols for a linear periodic f-plane shallow-water system. This is not an A/B/C nonlinear
 weather or ocean model, and it introduces no new full flow simulation.
+
+## A sphere needs several charts {#spherical-meshes}
+
+Mesh geometry and variable staggering are separate choices. A cubed sphere
+can carry a C-grid arrangement; a triangular mesh can also store edge-normal
+velocities. A/B/C labels alone do not specify spherical connectivity or metrics.
+
+![Latitude–longitude, Yin–Yang, cubed-sphere and icosahedral mesh geometry in a shared orthographic view](figures/spherical-meshes.png)
+
+On a sphere of radius R, with latitude φ and longitude λ,
+
+\[
+ ds^2=R^2\left(d\varphi^2+\cos^2\varphi\,d\lambda^2\right),
+ \qquad \Delta s_\lambda\simeq R\cos\varphi\,\Delta\lambda.
+\]
+
+Geographic poles are regular physical locations. Longitude becomes undefined
+there, while equal longitude increments become very short near them. An
+explicit wave/advection CFL bound can therefore become restrictive. Pole
+filters, reduced grids and spectral methods are other responses; replacing
+the mesh is not the only option. The three constructions below avoid the
+single latitude–longitude chart's polar convergence, while introducing other
+coupling and metric questions. None is automatically equal-area.
+
+## Yin–Yang: two overlapping low-latitude patches {#yin-yang}
+
+[Kageyama–Sato (2004)](https://arxiv.org/abs/physics/0403123) combine two
+identical latitude–longitude patches. In each patch's own coordinates,
+
+\[
+ |\varphi|\leq\pi/4+\delta,\qquad |\lambda|\leq3\pi/4+\delta,
+ \qquad
+ \boldsymbol{x}^{\mathrm{Yang}}=
+ \begin{pmatrix}-1&0&0\\0&0&1\\0&1&0\end{pmatrix}
+ \boldsymbol{x}^{\mathrm{Yin}}.
+\]
+
+The rotation puts each chart's poles inside the other chart's low-latitude
+region. The figure uses δ=3°; purple marks overlap, not a third patch.
+Each component retains orthogonal latitude–longitude coordinates and familiar
+metrics. Boundary data must be transferred through the overlap. Interpolating
+scalar values alone does not guarantee a globally conservative mass budget;
+overlap ownership/weights and conservative coupling need explicit design.
+Velocity components must also rotate between local tangent bases. These
+transfers are explained here, but no overset transport solver is implemented.
+
+## Cubed sphere: six connected panels {#cubed-sphere}
+
+The six-face construction is associated with
+[Ronchi–Iacono–Paolucci (1996)](https://doi.org/10.1006/jcph.1996.0047).
+Our diagram chooses **equiangular gnomonic** coordinates. For an orthonormal
+face frame with outward normal n and tangent directions e₁,e₂,
+
+\[
+ \boldsymbol{x}(\xi,\eta)=R\,
+ \frac{\boldsymbol{n}+\tan\xi\,\boldsymbol{e}_1+\tan\eta\,\boldsymbol{e}_2}
+ {\left\lVert\boldsymbol{n}+\tan\xi\,\boldsymbol{e}_1+\tan\eta\,\boldsymbol{e}_2\right\rVert},
+ \qquad -\pi/4\leq\xi,\eta\leq\pi/4.
+\]
+
+The picture has 8×8 cells per panel. Adjacent panel boundaries match; three
+panels meet at each cube corner. This mapping avoids a latitude–longitude
+pole but is generally nonorthogonal inside a face, and cell areas and metric
+factors vary. Other cubed-sphere projections have different properties.
+Neighbor indices, vector components and numerical fluxes must agree across
+seams. A continuous-looking diagram is not a test of those operators.
+
+## Icosahedral triangles and their dual {#icosahedral}
+
+Start with 20 triangular faces, split each triangle into four using edge
+midpoints, and project new vertices radially onto the sphere. At level L,
+
+\[
+ F=20\,4^L,\qquad E=30\,4^L,\qquad V=10\,4^L+2,
+ \qquad V-E+F=2.
+\]
+
+![A refined icosahedral triangular mesh and its barycentric polygonal dual](figures/spherical-dual.png)
+
+Level 2 has 320 triangles, 480 edges and 162 vertices. Twelve vertices have
+five neighbors; the others have six. Connecting neighboring face centers through shared edge midpoints
+produces a dual with twelve pentagons and otherwise hexagons. Here the centers
+are **normalized triangle centroids**: this is a barycentric dual, not a claim
+of a Voronoi/Delaunay orthogonal pair. For this unoptimized sample, the largest
+triangle area is about 1.275 times the smallest, so quasi-uniform does not mean
+equal-area. The connectivity formulas apply to this regular refinement, not
+every possible spherical unstructured mesh.
+
+The [ICON model description](https://gmd.copernicus.org/articles/6/735/2013/gmd-6-735-2013.html)
+is a useful example of triangular mesh geometry combined with C-type
+staggering. Our illustration is not the optimized ICON mesh or its dynamical
+core. Accurate divergence, gradient, vorticity and wave dispersion still
+depend on compatible discrete operators.
+
+## Interfaces, vectors and what the figures verify {#spherical-interface-checks}
+
+A physical tangent velocity is one vector, even when its components differ
+between charts. If E_A and E_B have orthonormal tangent basis vectors as
+columns in one common Cartesian frame, then
+
+\[
+ \boldsymbol{v}=E_A\boldsymbol{u}_A=E_B\boldsymbol{u}_B,
+ \qquad \boldsymbol{u}_B=E_B^{\mathsf T}E_A\boldsymbol{u}_A.
+\]
+
+This formula uses orthonormal physical components. Covariant or contravariant
+components in nonorthogonal coordinates require the corresponding metric and
+dual basis. Copying two component arrays across a seam is insufficient.
+For finite volumes, a shared interface needs the same integrated flux with
+opposite signs in neighboring cell budgets. Overset grids additionally need
+a well-defined accounting of overlap; summing both full patches counts some
+area twice.
+
+The geometry tests check unit radii, matching cube-panel boundary nodes,
+icosahedral edge incidence and valence, Euler's identity, and total spherical
+triangle area 4π. A deterministic equal-area sample checks Yin–Yang coverage
+and overlap; this sampled check is not a formal coverage proof. Reproduce both
+figures with `python scripts/build_spherical_meshes.py`; the
+[geometry manifest](figures/spherical-meshes.json) records construction choices,
+area statistics and source/artifact hashes. These checks do not establish
+transport accuracy, seam conservation or geophysical wave convergence. Useful
+next tests would rotate a smooth tracer across every seam and monitor global
+mass, then compare balanced shallow-water waves under refinement.
 
 ## A, B and C specify relative placement
 

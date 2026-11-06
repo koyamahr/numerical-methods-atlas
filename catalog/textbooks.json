@@ -1,0 +1,248 @@
+{
+  "schema_version": 1,
+  "groups": [
+    {
+      "id": "cfd-foundations",
+      "title": {
+        "en": "CFD foundations and incompressible flow",
+        "ja": "CFDの基礎と非圧縮流れ"
+      },
+      "books": [
+        {
+          "reference": "hirsch2007",
+          "label": "Hirsch",
+          "purpose": {
+            "en": "Use this for the CFD framework: equations, grid properties, consistency, stability, discretization and solution procedures. The cited 2007 book is the second-edition fundamentals volume.",
+            "ja": "支配方程式、格子の性質、整合性・安定性、離散化から解法まで、CFD全体の枠組みを調べる本です。引用する2007年版は第2版の基礎巻です。"
+          },
+          "chapters": [
+            "stability",
+            "meshes",
+            "time-integration"
+          ]
+        },
+        {
+          "reference": "fletcher1991v1",
+          "label": "Fletcher / Volume I",
+          "purpose": {
+            "en": "Use Volume I for PDE classification, weighted residual methods, steady and diffusion problems, and linear/nonlinear convection. It supplies the common numerical tools before the flow-specific algorithms of Volume II.",
+            "ja": "I巻はPDEの分類、重み付き残差法、定常・拡散問題、線形・非線形移流を調べるために。II巻の流れ別の解法に進む前の共通の数値的道具を扱います。"
+          },
+          "chapters": [
+            "stability",
+            "fem",
+            "elliptic"
+          ]
+        },
+        {
+          "reference": "fletcher1991v2",
+          "label": "Fletcher / Volume II",
+          "purpose": {
+            "en": "Use Volume II to connect the general techniques of Volume I to different flow-equation categories and their computational solution procedures. Read assumptions and boundary conditions alongside each algorithm.",
+            "ja": "II巻はI巻の一般的手法を、流れの方程式の各分類とその数値解法に結びつけるために。各アルゴリズムと合わせて仮定や境界条件も確認します。"
+          },
+          "chapters": [
+            "incompressible",
+            "advanced",
+            "coordinates-viscosity"
+          ]
+        },
+        {
+          "reference": "ferziger2020",
+          "label": "Ferziger · Perić · Street",
+          "purpose": {
+            "en": "Use this when connecting discrete operators to a practical CFD solution procedure, especially incompressible pressure–velocity coupling and boundary conditions.",
+            "ja": "離散演算子を実際のCFD計算手順に結びつける際に。特に非圧縮流れの圧力・速度連成や境界条件を調べる入口です。"
+          },
+          "chapters": [
+            "incompressible",
+            "coordinates-viscosity"
+          ]
+        },
+        {
+          "reference": "patankar1980",
+          "label": "Patankar",
+          "purpose": {
+            "en": "Use this for the physical logic of control-volume balances and SIMPLE-type pressure–velocity coupling. Keep the book exposition separate from the original algorithm papers.",
+            "ja": "コントロールボリュームの収支とSIMPLE型の圧力・速度連成を、物理的な考え方から理解したいときに。教科書の解説と手法の原論文は区別します。"
+          },
+          "chapters": [
+            "incompressible",
+            "reconstruction"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hyperbolic",
+      "title": {
+        "en": "Conservation laws, Riemann solvers and shocks",
+        "ja": "保存則・Riemannソルバー・衝撃波"
+      },
+      "books": [
+        {
+          "reference": "leveque2002",
+          "label": "LeVeque / finite volume",
+          "purpose": {
+            "en": "Use this for weak solutions, finite-volume reasoning, wave propagation, limiters and multidimensional conservation laws. Companion Clawpack material connects the theory to computation.",
+            "ja": "弱解、有限体積法の考え方、波の伝播、リミター、多次元保存則を調べるときに。Clawpack関連資料から理論と実装を結びつけられます。"
+          },
+          "chapters": [
+            "reconstruction",
+            "limiters",
+            "equation-gallery"
+          ]
+        },
+        {
+          "reference": "toro2009",
+          "label": "Toro",
+          "purpose": {
+            "en": "Use this when deriving or comparing exact and approximate Euler Riemann solvers, contact waves and high-resolution shock-capturing methods.",
+            "ja": "Euler方程式の厳密・近似Riemannソルバー、接触波、高解像度の衝撃波捕獲法を導出・比較したいときに。"
+          },
+          "chapters": [
+            "advanced",
+            "reconstruction",
+            "benchmarks"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "common-numerics",
+      "title": {
+        "en": "Finite differences and linear algebra",
+        "ja": "差分法と線形代数"
+      },
+      "books": [
+        {
+          "reference": "leveque2007",
+          "label": "LeVeque / finite differences",
+          "purpose": {
+            "en": "Use this for the consistency–stability–convergence chain, ordinary differential equations, boundary-value problems and finite-difference PDE solvers.",
+            "ja": "整合性・安定性・収束の関係、常微分方程式、境界値問題、偏微分方程式の差分法を調べるときに。"
+          },
+          "chapters": [
+            "accuracy-stability",
+            "time-integration",
+            "elliptic"
+          ]
+        },
+        {
+          "reference": "golub2013",
+          "label": "Golub · Van Loan",
+          "purpose": {
+            "en": "Use this for conditioning, stable matrix factorizations, least squares and eigenproblems before choosing a solver solely by its name.",
+            "ja": "手法名だけでソルバーを選ぶ前に、条件数、安定な行列分解、最小二乗、固有値問題を確認するための本です。"
+          },
+          "chapters": [
+            "sparse-nonlinear",
+            "elliptic"
+          ]
+        },
+        {
+          "reference": "saad2003book",
+          "label": "Saad",
+          "purpose": {
+            "en": "Use this for Krylov subspaces, GMRES, BiCG-family methods and preconditioners. The author provides the second-edition text and corrections.",
+            "ja": "Krylov部分空間、GMRES、BiCG系の手法、前処理を調べるときに。著者のページで第2版の本文と訂正情報が公開されています。"
+          },
+          "chapters": [
+            "sparse-nonlinear",
+            "elliptic"
+          ]
+        },
+        {
+          "reference": "templates1994",
+          "label": "Barrett et al. / Templates",
+          "purpose": {
+            "en": "Use this open reference as a compact algorithm-and-selection companion for iterative linear solvers, with attention to matrix assumptions.",
+            "ja": "行列に必要な仮定を確認しながら、反復線形解法のアルゴリズムと選び方を手短に引く公開リファレンスです。"
+          },
+          "chapters": [
+            "sparse-nonlinear",
+            "elliptic"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "high-order",
+      "title": {
+        "en": "Spectral bases and discontinuous Galerkin",
+        "ja": "スペクトル基底と不連続Galerkin法"
+      },
+      "books": [
+        {
+          "reference": "trefethen2000",
+          "label": "Trefethen",
+          "purpose": {
+            "en": "Use this for spectral differentiation, Fourier/Chebyshev examples and short reproducible programs. Supplement its limited barycentric-interpolation coverage.",
+            "ja": "スペクトル微分、Fourier・Chebyshevの例、短い再現用プログラムを調べるときに。重心補間の扱いは限られるため補足資料も参照します。"
+          },
+          "chapters": [
+            "experiments",
+            "basis-functions"
+          ]
+        },
+        {
+          "reference": "hesthaven2008book",
+          "label": "Hesthaven · Warburton",
+          "purpose": {
+            "en": "Use this to connect nodal polynomial bases, quadrature and reference-element operators to DG interface fluxes and PDE algorithms.",
+            "ja": "節点多項式基底、求積、参照要素の演算子を、DGの要素間流束やPDE計算法につなげるための本です。"
+          },
+          "chapters": [
+            "basis-functions",
+            "experiments"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-geophysics-particles",
+      "title": {
+        "en": "Time integration, geophysics and particles",
+        "ja": "時間積分・地球流体・粒子法"
+      },
+      "books": [
+        {
+          "reference": "hairer2006book",
+          "label": "Hairer · Lubich · Wanner",
+          "purpose": {
+            "en": "Use this for symplectic maps, symmetric compositions, splitting and backward error analysis. Preserving symplectic structure does not mean exactly preserving the original Hamiltonian.",
+            "ja": "シンプレクティック写像、対称合成法、分割法、後退誤差解析を調べるときに。シンプレクティック構造の保存と元のHamiltonianの厳密保存は異なります。"
+          },
+          "chapters": [
+            "symplectic",
+            "time-integration"
+          ]
+        },
+        {
+          "reference": "durran2010",
+          "label": "Durran",
+          "purpose": {
+            "en": "Use this for dispersion, advection and time discretization in geophysical flows. Read it alongside the spherical-mesh and variable-staggering notes.",
+            "ja": "地球流体の分散、移流、時間離散化を調べるときに。球面メッシュと変数配置の解説と合わせて参照してください。"
+          },
+          "chapters": [
+            "geophysical-grids",
+            "runge-kutta"
+          ]
+        },
+        {
+          "reference": "hockney1981book",
+          "label": "Hockney · Eastwood",
+          "purpose": {
+            "en": "Use this for particle–mesh thinking, force assignment and Fourier-based field calculations. The cited original year is 1981; the linked DOI is a later reissue.",
+            "ja": "粒子・メッシュの考え方、力の割当て、Fourier変換による場の計算を調べるときに。初版は1981年で、リンク先DOIは後年の再刊です。"
+          },
+          "chapters": [
+            "particle-gravity",
+            "gravity-boundaries"
+          ]
+        }
+      ]
+    }
+  ]
+}

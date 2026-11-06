@@ -11,11 +11,11 @@
   "counts": {
     "equations": 42,
     "methods": 90,
-    "papers": 136,
-    "references": 158,
-    "journal_articles": 133,
+    "papers": 139,
+    "references": 173,
+    "journal_articles": 136,
     "conference_papers": 3,
-    "books": 7,
+    "books": 19,
     "chapters": 2,
     "reports": 3,
     "other_sources": 10,
@@ -26,7 +26,7 @@
     "biological_entries": 22,
     "gallery_cases": 9,
     "gallery_equations": 7,
-    "reading_chapters": 44
+    "reading_chapters": 45
   },
   "items": [
     {
@@ -2008,12 +2008,87 @@
       "id": "fest2020ausm",
       "type": "misc",
       "identity": "work:fest3dteam:fest3ddocumentedausmsource:2020"
+    },
+    {
+      "id": "hirsch2007",
+      "type": "book",
+      "identity": "doi:10.1016/b978-0-7506-6594-0.x5037-1"
+    },
+    {
+      "id": "leveque2007",
+      "type": "book",
+      "identity": "doi:10.1137/1.9780898717839"
+    },
+    {
+      "id": "patankar1980",
+      "type": "book",
+      "identity": "work:patankarsuhasv:numericalheattransferandfluidflow:1980"
+    },
+    {
+      "id": "ferziger2020",
+      "type": "book",
+      "identity": "doi:10.1007/978-3-319-99693-6"
+    },
+    {
+      "id": "saad2003book",
+      "type": "book",
+      "identity": "doi:10.1137/1.9780898718003"
+    },
+    {
+      "id": "golub2013",
+      "type": "book",
+      "identity": "doi:10.1137/1.9781421407944"
+    },
+    {
+      "id": "trefethen2000",
+      "type": "book",
+      "identity": "doi:10.1137/1.9780898719598"
+    },
+    {
+      "id": "hesthaven2008book",
+      "type": "book",
+      "identity": "doi:10.1007/978-0-387-72067-8"
+    },
+    {
+      "id": "hairer2006book",
+      "type": "book",
+      "identity": "doi:10.1007/3-540-30666-8"
+    },
+    {
+      "id": "durran2010",
+      "type": "book",
+      "identity": "doi:10.1007/978-1-4419-6412-0"
+    },
+    {
+      "id": "kageyama2004",
+      "type": "article",
+      "identity": "doi:10.1029/2004gc000734"
+    },
+    {
+      "id": "ronchi1996",
+      "type": "article",
+      "identity": "doi:10.1006/jcph.1996.0047"
+    },
+    {
+      "id": "wan2013icon",
+      "type": "article",
+      "identity": "doi:10.5194/gmd-6-735-2013"
+    },
+    {
+      "id": "fletcher1991v1",
+      "type": "book",
+      "identity": "doi:10.1007/978-3-642-58229-5"
+    },
+    {
+      "id": "fletcher1991v2",
+      "type": "book",
+      "identity": "doi:10.1007/978-3-642-58239-4"
     }
   ],
   "source_sha256": {
     "catalog/coverage.json": "353df5a32d8739a59050eee0fcf1632fea235308dd4bcd9d77393ea999c2365b",
     "catalog/biological-models.json": "f0b55e0832cb17304b6d1bfdb626f2b66bb6e5c27a3730981ceb2b4fb151ab82",
-    "catalog/references.json": "90c25f27f280fca7ebae1c496309f6d9c9301c9f7d45b84f12926698152fdb82",
+    "catalog/references.json": "61776007aa867339a3e4157fd66126eb5484684e4a14156c830606ef06f073d7",
     "scripts/build_coverage.py": "aa5736f70653801129a25f8b18726a6f993dc1c09bbbf68e4dcab48090cb7d0d"
   }
 }

@@ -205,7 +205,7 @@
     "geophysical-grids": {
       "ja": {
         "status": "draft",
-        "source_sha256": "788ae6f969980ab1822bd86a09558fd7be13a2fa88c4292dd780f2ff834f1c11",
+        "source_sha256": "9b93ba3dc23898f0249c87dccfd6c32394e29ce3fce28e4f611155e3d0caf78d",
         "checked_on": null
       }
     },
@@ -304,6 +304,13 @@
       "ja": {
         "status": "draft",
         "source_sha256": "373dd8a7a22adb2f9602be7323bbda35eba02d3b71109c20093a5471ebb8413a",
+        "checked_on": null
+      }
+    },
+    "textbooks": {
+      "ja": {
+        "status": "draft",
+        "source_sha256": "60e73f13b3c7f5c954aebe1bdca1c8cc4efa5f8db890f47ec16614e813b8d32c",
         "checked_on": null
       }
     }

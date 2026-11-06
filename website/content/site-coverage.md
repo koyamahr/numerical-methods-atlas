@@ -2,9 +2,9 @@
 
 Published web edition, counted 2026-11-06. These are counts of catalog entries and documented examples, not a claim that every entry is a verified end-to-end solver.
 
-**42 equation/model entries · 90 methods and building blocks · 136 journal/conference papers · 158 total sources.**
+**42 equation/model entries · 90 methods and building blocks · 139 journal/conference papers · 173 total sources.**
 
-There are 9 saved-profile equation-gallery cases across 7 equation families, and 44 reading chapters including this inventory.
+There are 9 saved-profile equation-gallery cases across 7 equation families, and 45 reading chapters including this inventory.
 
 ## Equations and models
 
@@ -194,9 +194,9 @@ Unique bibliographic publications classified as journal articles or conference p
 
 Unique cataloged works across all publication types. An original publication and a later translation are separate works; duplicate DOI records are not. NASA case links in prose are not catalog records.
 
-- 133 journal-article records, including reviews, translations and explicitly labeled accepted papers.
+- 136 journal-article records, including reviews, translations and explicitly labeled accepted papers.
 - 3 conference papers.
-- 7 books.
+- 19 books.
 - 2 book chapters.
 - 3 technical/teaching reports.
 - 10 other records, including documentation and a separately identified preprint.

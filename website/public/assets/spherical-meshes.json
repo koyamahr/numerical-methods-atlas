@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "scope": "Spherical geometry diagrams only; no transport or dynamical-core solver.",
+  "view_longitude_degrees": 30,
+  "view_latitude_degrees": 28,
+  "yin_yang_buffer_degrees": 3,
+  "cubed_sphere_cells_per_panel_axis": 8,
+  "icosphere": {
+    "level": 2,
+    "vertices": 162,
+    "edges": 480,
+    "faces": 320,
+    "area_sum": 12.566370614359144,
+    "area_max_over_min": 1.2745108681802655,
+    "dual": "Normalized face-centroid barycentric dual, not Voronoi"
+  },
+  "source_sha256": {
+    "numart/spherical_meshes.py": "6c11a57fb7ee91e97fbf20eb12eb76fe941f61d05f800a34cb3e4a44b6ff9c73",
+    "scripts/build_spherical_meshes.py": "2b590ae5a3ac54f075661c07ae6fb9aac83b870e44dba79aede98692aa0d00d1"
+  },
+  "artifact_sha256": {
+    "spherical-meshes.png": "3bb5c3d4326f0eb32fb4c13c55b5e565c568b6266fe194acb6992f25e83911fa",
+    "spherical-dual.png": "03c76113b0e0532500fc0891ee7fa8c91c874ebf612ac26ef7ad95ae3b685f15"
+  }
+}

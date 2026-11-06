@@ -24,6 +24,7 @@ def copy_changed(source,target):
 
 
 generate('build_references.py')
+generate('build_textbook_guide.py')
 generate('build_biology_survey.py')
 for source in sorted((ROOT/'docs').glob('*.md')):
     copy_changed(source,SITE/'content'/source.name)
@@ -38,7 +39,7 @@ for name in ('limiters.json','runge-kutta.json','cip.json','basis.json','hamilto
 for name in ('validation.json','double-mach-run.json','double-mach.npz',
              'hamiltonian.json','particle-gravity.json','gravity-boundaries.json',
              'keep-vortex.json','equation-gallery.json','solver-foundations.json',
-             'biological-models.json','geophysical-grids.json'):
+             'biological-models.json','geophysical-grids.json','spherical-meshes.json'):
     copy_changed(ROOT/'docs/figures'/name,SITE/'public/assets'/name)
 generate('build_coverage.py')
 generate('build_japanese_catalogs.py')
