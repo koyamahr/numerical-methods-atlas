@@ -124,10 +124,45 @@ tested semi-discrete f-plane Fourier symbols. D/E, vertical staggering,
 nonlinear potential-vorticity schemes, Kelvin/Rossby waves and coastlines
 remain additional work. This is not a full geophysical dynamical core.
 
-Quantum chemistry and electronic-structure methods could form an independent
-future branch: Schrödinger eigenproblems, Hartree–Fock, Kohn–Sham DFT, basis
-sets and self-consistent iteration. This is a scope idea, without a completed
-literature survey or an electronic-structure implementation in this edition.
+## Planned quantum chemistry and DFT
+
+**Status: planned; implementation and the dedicated literature review have not
+started. No release date is assigned.** This is a separate electronic-structure
+branch, with the following development checklist. None of these planned items
+adds to the current implemented-method or equation counts.
+
+- [ ] **Schrödinger eigenproblems:** begin with one-electron models, including
+  the harmonic oscillator and hydrogenic radial problem. Compare finite
+  differences, finite elements and spectral discretization, recording boundary,
+  domain-truncation and resolution errors separately.
+- [ ] **Electronic-structure bases:** introduce atomic orbitals, Gaussian and
+  Slater functions, plane waves and real-space grids. Include overlap matrices
+  and generalized eigenproblems. Connect to the existing
+  [element-basis notebook](basis-functions.md), while distinguishing its
+  mesh-local polynomial examples from molecular orbital basis sets.
+- [ ] **Coulomb and Hartree potentials:** connect electronic charge density to
+  Poisson solvers. State electrostatic units, charge signs, isolated/periodic
+  boundaries, zero modes and self-interaction conventions explicitly; do not
+  silently reuse gravitational signs or normalizations.
+- [ ] **Hartree–Fock:** develop a small closed-shell molecular example with
+  matrix assembly, a generalized eigenvalue solve and a self-consistent field
+  loop. Verify the required integral machinery before presenting energies.
+- [ ] **Kohn–Sham density functional theory:** explain the density, effective
+  potential and exchange–correlation approximation. Start with an explicitly
+  identified LDA model; GGA and later functionals require their own verification.
+- [ ] **SCF iteration and mixing:** compare damping, density/potential mixing
+  and Pulay/DIIS acceleration. Report electron-number checks, eigenproblem and
+  SCF residuals, energy changes and explicit nonconvergence.
+- [ ] **Verification examples:** use one-electron references and small atoms or
+  molecules, with basis/grid refinement and independent reference-code checks.
+  Separate discretization error, SCF tolerance and physical-model differences.
+
+The intended first milestones are a verified one-electron eigensolver, followed
+by a minimal-basis Hartree–Fock example, then a clearly scoped Kohn–Sham DFT
+example. Periodic materials, pseudopotentials, spin-dependent extensions and
+post-Hartree–Fock correlation are later branches, rather than promises of the
+first implementation. This plan does not change the current priority of the
+fluid-method work above, and AMR remains deferred.
 
 The next editorial priority is to connect shared equations to multiple
 verified discretizations, cost/error evidence and explicit failure cases,

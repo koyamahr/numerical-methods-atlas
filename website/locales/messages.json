@@ -5111,5 +5111,25 @@
   "term.basis.gll": {
     "en": "Gauss–Lobatto–Legendre nodes",
     "ja": "Gauss–Lobatto–Legendre節点"
+  },
+  "planned.quantum.eyebrow": {
+    "en": "PLANNED / QUANTUM CHEMISTRY + DFT",
+    "ja": "開発予定 / 量子化学・DFT"
+  },
+  "planned.quantum.title": {
+    "en": "From basis functions to electronic structure.",
+    "ja": "基底関数から電子状態計算へ。"
+  },
+  "planned.quantum.scope": {
+    "en": "Schrödinger eigenproblems, orbital and plane-wave bases, Hartree–Fock, Kohn–Sham DFT, SCF mixing and verification examples.",
+    "ja": "Schrödinger固有値問題、軌道・平面波基底、Hartree–Fock、Kohn–Sham DFT、SCF混合、検証例を予定しています。"
+  },
+  "planned.quantum.status": {
+    "en": "Status: planned. Implementation and a dedicated literature review have not started. No release date is assigned.",
+    "ja": "状態：予定。実装と専用の文献調査は未着手で、公開時期は未定です。"
+  },
+  "planned.quantum.link": {
+    "en": "Read the development checklist ↗",
+    "ja": "開発予定のリストを読む ↗"
   }
 }
