@@ -1918,7 +1918,7 @@
   "source_sha256": {
     "catalog/coverage.json": "69b2396e45a80c9ed760a4c32b6f7b2e15dce0a3aafb57242cb2674f250c40d4",
     "catalog/biological-models.json": "f0b55e0832cb17304b6d1bfdb626f2b66bb6e5c27a3730981ceb2b4fb151ab82",
-    "catalog/references.json": "d2724e706490b8da2c5241bbe40808254d220d16c88618fc8cd3f143fe4b7b2b",
+    "catalog/references.json": "c956899d303a3f5273fec0ed8cfc97166f83e7976bc026cb1dd0a6284902997e",
     "scripts/build_coverage.py": "aa5736f70653801129a25f8b18726a6f993dc1c09bbbf68e4dcab48090cb7d0d"
   }
 }

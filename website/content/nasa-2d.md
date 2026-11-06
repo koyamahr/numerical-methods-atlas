@@ -5,14 +5,72 @@ Start with the official [NPARC Verification and Validation Archive](https://www.
 and [Turbulence Modeling Resource](https://tmbwg.github.io/turbmodels/).
 NASA's [TMR information page](https://www.nasa.gov/nasa-turbulence-modeling-resource/)
 describes the resource's move to GitHub in February 2026.
-The entries below are **cataloged candidates**. This repository does not yet
-contain implementations or reproduction results for the NASA cases listed below.
-A separate classical [Double Mach Reflection baseline](double-mach.md) is now computed.
+The two **15-degree wedge flows are now computed educational Euler baselines**.
+The remaining NASA entries below are cataloged candidates. These independent
+calculations are not Wind-US output, experimental validations or reproductions
+of NASA's complete solver/grid comparison. A classical Mach-3 forward-facing
+step and [Double Mach Reflection](double-mach.md) complement the NASA cases.
+
+## Computed shock tests
+
+[Open the shock-containing fields in the gallery](https://koyamahr.github.io/numerical-methods-atlas/#/gallery).
+Both wedges start from uniform freestream with gamma 1.4, density 1 and sound
+speed 1. The independent body-fitted mesh spans x = −0.5 to 1, the lower wall
+y = max(x,0) tan(15°), and the upper boundary y = 1.2. The higher farfield keeps
+the Mach-2 weak shock below that boundary at the outlet; it differs from the
+height 1 of NASA's Mach-2.5 domain. Inlet and upper-boundary
+states are fixed at freestream, the outlet is extrapolated and the lower wall
+reflects normal momentum. Shared oriented face fluxes conserve the cell totals;
+cell areas and face normals come from the actual quadrilaterals.
+
+- **NASA wedge, Mach 2.0:** Mach and pressure maps on 240 × 80 cells at t = 3,
+  with the theoretical weak-shock line. A 120 × 40 run supplies a second grid.
+  [NASA setup](https://www.grc.nasa.gov/WWW/wind/valid/wedgeM2/wedgeM2.html).
+- **NASA wedge, Mach 2.5:** the same independent meshes and terminal time.
+  The reference shock angle is approximately 36.94490°, pressure ratio 2.467500,
+  and downstream Mach number 1.873526. The theta–beta–Mach root and normal-shock
+  relations supply the reference, with a numerical Rankine–Hugoniot check.
+  [NASA analytical comparison](https://www.grc.nasa.gov/WWW/wind/valid/wedge/wedge.html).
+- **Classical Mach-3 forward-facing step:** a 3 × 1 tunnel with the step at
+  x = 0.6 and height 0.2, uniform inflow (density 1.4, pressure 1, velocity 3),
+  reflecting walls and an extrapolated exit. A 240 × 80 grid reaches t = 4,
+  with 81 saved states and an MP4. [Watch the shock reflections](https://koyamahr.github.io/numerical-methods-atlas/#/movies?case=forward-step).
+  This is the classical Emery/Woodward–Colella benchmark, not a NASA-originated
+  experiment. The corner treatment differs from the corrected PPM comparison
+  in [Woodward–Colella §VI.b](https://www.researchgate.net/publication/222459521_The_numerical_simulation_of_two-dimensional_fluid_flow_with_strong_shocks):
+  this baseline applies plain reflection and does not reset entropy or enthalpy
+  near the step corner. Corner artifacts and smeared slip lines may remain.
+
+These use **first-order HLL finite volumes and SSPRK2**, with CFL 0.4. Wedges
+have no imposed analytical shock in their initial state. Their normalized L1
+density errors compare conservative cell averages with an exactly clipped
+piecewise-constant oblique-shock reference. Wall-pressure medians use the first
+fluid row over 0.5 < x < 0.9; a density-gradient fit over 0.35 < x < 0.85 estimates
+the shock angle. Two grids at one finite terminal time do not establish general
+asymptotic order or complete steady convergence. The step has no exact overlay
+and only one published grid; t = 4 is an unsteady snapshot.
+
+![NASA Mach-2 wedge](figures/nasa-wedge-m20.png)
+![NASA Mach-2.5 wedge](figures/nasa-wedge-m25.png)
+![Mach-3 forward-facing step](figures/forward-step.png)
+
+Reproduce with `python scripts/build_shock_gallery.py`; `--reuse` renders cached,
+source-checked trajectories. Download [run definitions, diagnostics and hashes](figures/shock-gallery.json),
+[final numerical fields](figures/shock-gallery.npz), and the
+[step movie manifest](https://koyamahr.github.io/numerical-methods-atlas/assets/movies/shock-catalog.json).
+
+## Shock-containing NASA cases still to implement
+
+The [Mach-5 shock/boundary-layer interaction](https://www.grc.nasa.gov/WWW/wind/valid/m5swbli/m5swbli.html),
+[Mach-7 laminar ramp](https://www.grc.nasa.gov/WWW/wind/valid/hypramp/hypramp.html),
+Sajben diffuser and RAE 2822 are later candidates. Their viscous, turbulence or
+gas-model requirements are part of each case; an inviscid wedge image is not
+a substitute for those validations. These cases have no computed exhibit here.
 
 ## Starting with Euler and analytical references
 
-- **15° wedge, Mach 2.0:** oblique shock, wall pressure, grid dependence, and Roe/HLLE comparisons. [NASA case](https://www.grc.nasa.gov/WWW/wind/valid/wedgeM2/wedgeM2.html).
-- **15° wedge, Mach 2.5:** compare shock angle and downstream states with theory. Pair this compression case with the expansion corner below. Find its entry through the [official archive](https://www.grc.nasa.gov/WWW/wind/valid/archive.html).
+- **15° wedge, Mach 2.0 — computed baseline:** oblique shock and wall pressure with two grids. Roe/HLLE method comparisons remain future work. [NASA case](https://www.grc.nasa.gov/WWW/wind/valid/wedgeM2/wedgeM2.html).
+- **15° wedge, Mach 2.5 — computed baseline:** shock angle and downstream-state reference. Pair this compression case with the planned expansion corner below. [NASA case](https://www.grc.nasa.gov/WWW/wind/valid/wedge/wedge.html).
 - **Prandtl–Meyer 15° expansion, Mach 2.5:** expansion-fan structure and analytical Mach/pressure relations. [Official archive](https://www.grc.nasa.gov/WWW/wind/valid/archive.html).
 
 ## Laminar flow, unsteadiness, and pressure Poisson problems
@@ -40,8 +98,9 @@ Double Mach Reflection, the Mach 3 forward-facing step, 2D Riemann
 configurations, the isentropic vortex, and odd-even shock/carbuncle tests are
 also useful flux demonstrations. The first two have a representative source
 in [Woodward–Colella (1984)](https://doi.org/10.1016/0021-9991(84)90142-6).
-[Our Double Mach Reflection exhibit](double-mach.md) is an implemented first-order
-HLL baseline; the step and other tests in this paragraph remain future work.
+[Our Double Mach Reflection exhibit](double-mach.md) and the forward step above
+are implemented first-order HLL baselines. Riemann configurations and controlled
+odd-even/carbuncle comparisons remain future work; the smooth KEEP vortex is computed.
 See the separate [carbuncle notes](carbuncle.md) for the required stability comparisons.
 Do not label all of these as NASA-originated problems. ONERA M6 is a 3D wing;
 axisymmetric bump and jet cases are also different from planar 2D cases and

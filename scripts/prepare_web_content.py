@@ -29,7 +29,7 @@ for source in sorted((ROOT/'docs').glob('*.md')):
     copy_changed(source,SITE/'content'/source.name)
 copy_changed(ROOT/'catalog/references.json',SITE/'content/references.json')
 copy_changed(ROOT/'references.bib',SITE/'public/assets/references.bib')
-for name in ('multidimensional-fields.json', 'multidimensional-fields.npz'):
+for name in ('multidimensional-fields.json', 'multidimensional-fields.npz', 'shock-gallery.json', 'shock-gallery.npz'):
     copy_changed(ROOT/'docs/figures'/name,SITE/'public/assets'/name)
 for source in sorted((ROOT/'docs/figures').glob('*.png')):
     copy_changed(source,SITE/'public/assets'/source.name)

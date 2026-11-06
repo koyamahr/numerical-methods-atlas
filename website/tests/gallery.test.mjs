@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {fieldFigures,matchesGallery} from '../gallery.js';
+import {combineMovieCatalogs} from '../movies.js';
 const read=p=>readFileSync(new URL(p,import.meta.url));
 const hash=b=>createHash('sha256').update(b).digest('hex');
 
@@ -14,15 +15,15 @@ test('dimension and subject filters intersect without labeling diagnostic plots 
   assert.equal(matchesGallery(three,'3','Particles & gravity'),true);
   assert.equal(matchesGallery(three,'2'),false);
   assert.equal(matchesGallery(three,'3','MHD'),false);
-  assert.equal(fieldFigures.filter(f=>matchesGallery(f,'2')).length,6);
+  assert.equal(fieldFigures.filter(f=>matchesGallery(f,'2')).length,9);
 });
 
-test('all four multidimensional movies have reachable field cards using their actual final states',()=>{
-  const catalog=JSON.parse(read('../public/assets/movies/catalog.json'));
-  for(const movie of catalog.movies){
+test('every multidimensional movie has a reachable field card',()=>{
+  const catalogs=['catalog.json','shock-catalog.json'].map(name=>JSON.parse(read('../public/assets/movies/'+name)));
+  for(const movie of catalogs.flatMap(c=>c.movies)){
     const card=fieldFigures.find(f=>f.movie===movie.id);
     assert.ok(card,movie.id);assert.equal(card.dimension,movie.shape.length);
-    assert.equal(card.file,'movies/'+movie.poster);
+    if(movie.id!=='forward-step')assert.equal(card.file,'movies/'+movie.poster);
     assert.equal(movie.poster,movie.frames.at(-1).file);
   }
   for(const card of fieldFigures)assert.ok(read('../public/assets/'+card.file).length);
@@ -37,4 +38,37 @@ test('new field views retain numerical provenance, arrays and appropriate diagno
   assert.ok(manifest.mac.max_native_divergence<1e-10);
   assert.deepEqual(manifest.poisson3d.shape,[32,32,32]);
   assert.ok(manifest.poisson3d.maximum_point_error<1e-12);
+});
+
+test('shock-case artifacts retain numerical provenance and analytical comparison',()=>{
+  const manifest=JSON.parse(read('../public/assets/shock-gallery.json'));
+  for(const [path,expected] of Object.entries(manifest.source_sha256))assert.equal(hash(read('../../'+path)),expected,path);
+  for(const [path,expected] of Object.entries(manifest.artifact_sha256))assert.equal(hash(read('../public/assets/'+path)),expected,path);
+  for(const grids of Object.values(manifest.wedges)){
+    assert.equal(grids.length,2);
+    assert.ok(grids[1].density_cell_average_l1<grids[0].density_cell_average_l1);
+    assert.ok(Math.abs(grids[1].wall_pressure_ratio_median/grids[1].pressure_ratio_exact-1)<.03);
+  }
+  const shocks=fieldFigures.filter(f=>matchesGallery(f,'2','2D shock interactions'));
+  assert.equal(shocks.length,4);
+});
+
+test('movie catalogs combine all five cases without overriding existing IDs',()=>{
+  const original=JSON.parse(read('../public/assets/movies/catalog.json'));
+  const extension=JSON.parse(read('../public/assets/movies/shock-catalog.json'));
+  assert.equal(combineMovieCatalogs(original,extension).movies.length,5);
+  assert.throws(()=>combineMovieCatalogs(original,original),/Duplicate movie/);
+  for(const [path,expected] of Object.entries(extension.source_sha256))assert.equal(hash(read('../../'+path)),expected,path);
+  for(const movie of extension.movies){
+    assert.equal(movie.frames.length,81);assert.equal(movie.frames[0].time,0);
+    assert.equal(movie.frames.at(-1).time,4);assert.equal(movie.frames.at(-1).step,movie.solver_steps);
+    assert.equal(hash(read('../public/assets/movies/'+movie.video)),movie.video_sha256);
+    for(const [i,frame] of movie.frames.entries()){
+      assert.equal(hash(read('../public/assets/movies/'+frame.file)),frame.image_sha256);
+      assert.ok(frame.min_density>0&&frame.min_pressure>0);
+      if(i)assert.ok(frame.time>movie.frames[i-1].time&&frame.step>movie.frames[i-1].step);
+      for(const [k,min,max] of [[0,'min_density','max_density'],[1,'min_pressure','max_pressure']])
+        assert.ok(movie.scales[k].min<=frame[min]&&frame[max]<=movie.scales[k].max);
+    }
+  }
 });

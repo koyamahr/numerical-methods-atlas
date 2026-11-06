@@ -56,7 +56,7 @@ the [A/L stability and error-norm guide](docs/accuracy-stability.md).
 4. [Benchmark library](docs/benchmarks.md): initial conditions, reference solutions, boundaries, and the limits of each comparison.
 5. [MHD: CT and GLM](docs/mhd.md): discrete magnetic divergence, Orszag–Tang, and injected-error diagnostics.
 6. [Preconditioning and advanced methods](docs/advanced.md): dual time stepping, residual distribution, and the path to multidimensional solvers.
-7. [NASA 2D case catalog](docs/nasa-2d.md): official verification and validation resources for future implementations.
+7. [NASA 2D case catalog](docs/nasa-2d.md): computed Mach-2/2.5 wedge baselines, a classical Mach-3 forward-step movie, and remaining verification/validation candidates.
 8. [References](docs/references.md), [BibTeX](references.bib), [roadmap](docs/roadmap.md), and [first-edition release notes](docs/release-notes-v0.1.0.md).
 
 Additional reading: [time integration and leapfrog](docs/time-integration.md), [meshes](docs/meshes.md), [SPH](docs/particles-sph.md), [ALE](docs/ale.md), [cylindrical tensors and viscosity](docs/coordinates-viscosity.md), [Double Mach Reflection](docs/double-mach.md), [carbuncle](docs/carbuncle.md), and [Remembering Philip L. Roe](docs/roe-memorial.md).

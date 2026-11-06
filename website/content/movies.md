@@ -4,12 +4,14 @@
 
 Use movies when the evolution is part of the question: a shock reflecting, a vortex advecting, or magnetic structures forming. Steady solutions, manufactured equilibrium profiles, and final elliptic fields remain still figures. A solver residual versus iteration is an algorithmic history, not a physical-time flow movie.
 
-## Four computed movies
+## Five computed movies
 
 - **Double Mach Reflection:** Mach-10 2D Euler reflection on 256 × 64 cells, t = 0 to 0.2, first-order HLL with SSPRK2 and CFL 0.4. The fine wall jet is not resolved. Read the [setup](double-mach.md).
 - **Orszag–Tang with CT:** 64² periodic planar ideal MHD, t = 0 to 0.5, first-order Rusanov with forward Euler and CFL 0.3. Magnetic divergence uses the staggered face operator.
 - **Orszag–Tang with GLM:** the same resolution and physical interval, with fixed cleaning speed 3 and damping 0.18. Its native divergence uses the cell-centered central operator. The CT and GLM plots do not form an equal-accuracy ranking. Read the [MHD definitions](mhd.md).
 - **Smooth isentropic vortex with original KEEP:** 96² periodic Euler on [−10,10]², t = 0 to 4, the second-order arithmetic-mean Cartesian KEEP flux and classical RK4, CFL 0.25. No shock stabilization, pressure-equilibrium-preserving extension, or exact entropy claim is included. Read the [KEEP chapter](keep.md).
+
+- **Mach-3 forward-facing step:** 240 × 80 cells, t = 0 to 4, first-order HLL and SSPRK2 with CFL 0.4. Grid-aligned blocked cells represent a step at x = 0.6 of height 0.2. Standard reflection is applied without an entropy/enthalpy corner reset. Diagnostics exclude solid cells. This is a classical inviscid benchmark, not a NASA experimental validation. See the [shock-case definitions](nasa-2d.md).
 
 Density and pressure appear together in every movie. These are rendered numerical states from the repository solvers, not interpolated illustrations or reproductions of original-paper movies.
 
@@ -35,14 +37,14 @@ python scripts/build_movies.py
 python scripts/check_movies.py
 ```
 
-The builder writes the published frames, MP4 files, and [movie catalog](https://koyamahr.github.io/numerical-methods-atlas/assets/movies/catalog.json) into `website/public/assets/movies`. It also saves full numerical snapshots as compressed NumPy arrays in the ignored `outputs/movies` directory for local inspection. Source hashes, image/video hashes, numerical-state hashes, software versions, methods, boundary conditions, physical scales, and per-frame diagnostics are recorded in the catalog.
+The builder writes the published frames, MP4 files, and [movie catalog](https://koyamahr.github.io/numerical-methods-atlas/assets/movies/catalog.json) into `website/public/assets/movies`. It also saves full numerical snapshots as compressed NumPy arrays in the ignored `outputs/movies` directory for local inspection. Source hashes, image/video hashes, numerical-state hashes, software versions, methods, boundary conditions, physical scales, and per-frame diagnostics are recorded in the catalog. The fifth movie is built by `python scripts/build_shock_gallery.py` and has a separate [shock catalog](https://koyamahr.github.io/numerical-methods-atlas/assets/movies/shock-catalog.json); the player combines both catalogs. Its full saved states are in `outputs/shock-gallery`.
 
 The checker validates hashes and metadata, opens each saved image, and decodes each MP4 to verify its dimensions, playback rate, and complete frame count. A short small-grid build can be made with `--quick --output <directory>`; its catalog is marked as a quick check and is not the published production run.
 
 ## Multidimensional still fields
 
 The [numerical gallery](https://koyamahr.github.io/numerical-methods-atlas/#/gallery)
-opens with 2D/3D spatial fields, including the four movie entry points above.
+opens with 2D/3D spatial fields, including the five movie entry points above.
 Dimension and subject filters can be combined; all dimensions also includes
 the 1D comparisons and algorithmic diagnostic figures.
 

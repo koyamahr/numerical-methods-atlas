@@ -489,9 +489,9 @@ Publisher record and abstract inspected. Historical scalar TVD flux-limiter fram
 
 Woodward, Paul and Colella, Phillip. **The numerical simulation of two-dimensional fluid flow with strong shocks**. Journal of Computational Physics.
 
-[Original bibliographic record](https://doi.org/10.1016/0021-9991(84)90142-6) · [Full text or implementation reference](https://www.nas.nasa.gov/LAVA/unst_docs/tutorials/double_mach/double_mach/)
+[Original bibliographic record](https://doi.org/10.1016/0021-9991(84)90142-6) · [Full text or implementation reference](https://www.researchgate.net/publication/222459521_The_numerical_simulation_of_two-dimensional_fluid_flow_with_strong_shocks)
 
-DOI identifies the original 1984 paper; linked NASA tutorial is a later setup reference. This edition computes a first-order 2D HLL Double Mach Reflection baseline, not the original PPM figure. Forward-facing step remains future work.
+Author-uploaded original text, Section VI.b setup and corner treatment checked 6 November 2026. The atlas computes first-order HLL Double Mach Reflection and Mach-3 forward-step baselines, not the original PPM figures. The step omits the paper’s entropy/enthalpy corner reset and has one published grid.
 
 ## 1985 · takewaki1985cip
 

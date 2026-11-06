@@ -6,6 +6,15 @@ export function matchesGallery(figure, dimension='fields', category='All figures
 }
 
 export const fieldFigures = [
+  {file:'nasa-wedge-m20.png',dimension:2,year:'NASA / MACH 2',title:'NASA wedge / Mach 2.0',
+    category:'2D shock interactions',chapter:'nasa-2d',
+    description:'15-degree wedge: computed Mach and pressure fields with the exact weak-shock line. Independent body-fitted HLL baseline; two-grid cell-average errors.'},
+  {file:'nasa-wedge-m25.png',dimension:2,year:'NASA / MACH 2.5',title:'NASA wedge / Mach 2.5',
+    category:'2D shock interactions',chapter:'nasa-2d',
+    description:'Oblique shock on a 15-degree wedge. Compare shock angle and wall pressure with NASA analytical values; independent Euler calculation, not Wind-US output.'},
+  {file:'forward-step.png',dimension:2,year:'CLASSICAL / MACH 3',title:'Mach 3 / forward-facing step',
+    category:'2D shock interactions',chapter:'nasa-2d',movie:'forward-step',
+    description:'A step generates shocks and wall reflections in a 3 × 1 wind tunnel. Watch 81 computed states to t = 4; first-order baseline without a special corner correction.'},
   {file:'movies/double-mach/frame-080.webp',dimension:2,year:'1984',title:'Double Mach Reflection',
     category:'2D shock interactions',chapter:'double-mach',movie:'double-mach',
     description:'2D Mach-10 shock reflection on 256 × 64 cells. Open the saved-state movie; first-order HLL is a diffusive baseline.'},

@@ -7,8 +7,9 @@ English method notes, a bibliographic catalog, comparison figures, and automated
 numerical checks. The repository is the first-edition distribution; the reading
 guide in the [README](../README.md) connects the material.
 
-The NASA case catalog and rotated-solver reading notes describe future work.
-Their inclusion does not indicate that those flow simulations are implemented.
+The NASA case catalog includes computed 15-degree wedge baselines and remaining
+implementation candidates. Rotated-solver notes still describe future work;
+catalog inclusion alone does not indicate an implemented simulation.
 
 ## Next verification work
 
@@ -28,6 +29,18 @@ and boundary treatments, then the cylinder to examine unsteady accuracy.
 For RANS, verify model implementations on flat-plate and bump cases before
 moving to airfoils, steps, diffusers, and humps. This order follows dependencies
 and difficulty and complements the atlas's publication chronology.
+
+## Shock gallery: NASA wedges and a forward-facing step
+
+Computed the NASA 15-degree wedges at Mach 2.0 and 2.5 with independent
+body-fitted first-order HLL / SSPRK2 finite volumes, two grids and oblique-shock
+references. Added the classical Mach-3 forward step on a 240 × 80 blocked-cell
+mesh, 81 saved states to t = 4 and an MP4, bringing the movie catalog to five.
+The step uses plain reflecting corners, not the entropy/enthalpy reset of the
+original PPM comparison. These are educational inviscid baselines, not Wind-US
+outputs or viscous experimental validations. [Setup and limits](nasa-2d.md).
+Mach-5 shock/boundary-layer interaction, Mach-7 viscous ramps and the existing
+transonic diffuser/airfoil cases remain implementation candidates.
 
 ## Web edition
 
@@ -59,7 +72,7 @@ The [experiment guide](experiments.md) records definitions and provenance.
 
 Added seven scalar ODE integrators with a temporal notebook; three mesh-connectivity examples with an explorer; 1D SPH kernel reconstruction; a 1D ALE geometric-conservation check; and cylindrical gradient, Newtonian stress, and stress-divergence operators verified against analytic fields. The [coordinate and viscosity chapter](coordinates-viscosity.md) distinguishes physical components from coordinate-basis tensors.
 
-[The 2D Double Mach Reflection baseline](double-mach.md) now computes an actual Mach-10 interaction with first-order HLL and SSPRK2. Higher-order reconstruction, full grid refinement, and resolution of the fine wall jet remain future work. This does not implement the other cataloged NASA cases. [Carbuncle comparisons](carbuncle.md), a complete SPH fluid solver, unstructured flow fluxes, and a complete ALE Euler solver also remain future work. [The Roe memorial](roe-memorial.md) is sourced from official university records.
+[The 2D Double Mach Reflection baseline](double-mach.md) now computes an actual Mach-10 interaction with first-order HLL and SSPRK2. Higher-order reconstruction, full grid refinement, and resolution of the fine wall jet remain future work. The NASA wedge baselines were added later; the cataloged viscous and turbulence cases remain unimplemented. [Carbuncle comparisons](carbuncle.md), a complete SPH fluid solver, unstructured flow fluxes, and a complete ALE Euler solver also remain future work. [The Roe memorial](roe-memorial.md) is sourced from official university records.
 
 ## Third expansion: Hamiltonian maps and particle gravity
 

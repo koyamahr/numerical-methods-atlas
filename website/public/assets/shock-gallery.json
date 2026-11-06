@@ -1,0 +1,127 @@
+{
+  "wedges": {
+    "mach-2": [
+      {
+        "shape": [
+          120,
+          40
+        ],
+        "time": 3.0,
+        "steps": 2562,
+        "beta_exact_degrees": 45.343616761854406,
+        "beta_gradient_fit_degrees": 45.321560881571756,
+        "pressure_ratio_exact": 2.1946531336076687,
+        "density_ratio_exact": 1.7289223315067432,
+        "downstream_mach_exact": 1.445716365140514,
+        "wall_pressure_ratio_median": 2.196557170860159,
+        "density_cell_average_l1": 0.01878266090575461,
+        "min_density": 1.0,
+        "min_pressure": 0.7142857142857144,
+        "final_maximum_conserved_update_rate": 0.00011112811286616319
+      },
+      {
+        "shape": [
+          240,
+          80
+        ],
+        "time": 3.0,
+        "steps": 5126,
+        "beta_exact_degrees": 45.343616761854406,
+        "beta_gradient_fit_degrees": 45.32944034184787,
+        "pressure_ratio_exact": 2.1946531336076687,
+        "density_ratio_exact": 1.7289223315067432,
+        "downstream_mach_exact": 1.445716365140514,
+        "wall_pressure_ratio_median": 2.195475054814246,
+        "density_cell_average_l1": 0.010114113603300211,
+        "min_density": 1.0,
+        "min_pressure": 0.7142857142857144,
+        "final_maximum_conserved_update_rate": 1.7161206831524993e-06
+      }
+    ],
+    "mach-2.5": [
+      {
+        "shape": [
+          120,
+          40
+        ],
+        "time": 3.0,
+        "steps": 2956,
+        "beta_exact_degrees": 36.944900329040664,
+        "beta_gradient_fit_degrees": 37.28012531267263,
+        "pressure_ratio_exact": 2.4675001278414825,
+        "density_ratio_exact": 1.866548630460768,
+        "downstream_mach_exact": 1.8735260067502537,
+        "wall_pressure_ratio_median": 2.467061122964372,
+        "density_cell_average_l1": 0.01982859201929471,
+        "min_density": 1.0,
+        "min_pressure": 0.7142857142857139,
+        "final_maximum_conserved_update_rate": 2.1850089410413162e-14
+      },
+      {
+        "shape": [
+          240,
+          80
+        ],
+        "time": 3.0,
+        "steps": 5913,
+        "beta_exact_degrees": 36.944900329040664,
+        "beta_gradient_fit_degrees": 37.05172983716702,
+        "pressure_ratio_exact": 2.4675001278414825,
+        "density_ratio_exact": 1.866548630460768,
+        "downstream_mach_exact": 1.8735260067502537,
+        "wall_pressure_ratio_median": 2.4675996697563285,
+        "density_cell_average_l1": 0.010995223488652974,
+        "min_density": 1.0,
+        "min_pressure": 0.7142857142857135,
+        "final_maximum_conserved_update_rate": 4.9705695803038094e-12
+      }
+    ]
+  },
+  "wedge_controls": {
+    "angle_degrees": 15.0,
+    "gamma": 1.4,
+    "cfl": 0.4,
+    "upstream_density": 1.0,
+    "upstream_pressure": 0.7142857142857143,
+    "upstream_sound_speed": 1.0,
+    "x_domain": [
+      -0.5,
+      1.0
+    ],
+    "upper_boundary_y": 1.2,
+    "lower_wall": "max(x,0)*tan(15 degrees)",
+    "boundaries": "fixed freestream inlet/top; extrapolated outlet; reflecting slip wall",
+    "initial_state": "uniform freestream, no imposed analytical shock"
+  },
+  "forward_step": {
+    "shape": [
+      240,
+      80
+    ],
+    "time": 4.0,
+    "steps": 5557,
+    "fluid_area": 2.5200000000000014,
+    "frames": 81,
+    "min_density": 0.6990444287976556,
+    "min_pressure": 0.806653319724824
+  },
+  "method": "First-order HLL / conservative body-fitted or grid-aligned finite volumes / SSPRK2",
+  "sources": [
+    "https://www.grc.nasa.gov/WWW/wind/valid/wedgeM2/wedgeM2.html",
+    "https://www.grc.nasa.gov/WWW/wind/valid/wedge/wedge.html",
+    "https://www.researchgate.net/publication/222459521_The_numerical_simulation_of_two-dimensional_fluid_flow_with_strong_shocks"
+  ],
+  "source_sha256": {
+    "numart/shock_cases.py": "1e8ac23fae1209c65cf42903779446a6da2e134a940234e1d6c52c3c59d00a93",
+    "numart/euler2d.py": "f924068bf0d79719f2650d148a3f8e07958493e0666ecad9628c59364db38f9a",
+    "numart/snapshots.py": "436beaf035322b75a98f3774d27fcbe6fc7668c6e25603ce1e7e0c48b0e949dd",
+    "scripts/build_shock_gallery.py": "cd68cec44209c9c6c2a6795a5d82a95ff6be54dea9a1f7d48b619a49bf310922"
+  },
+  "artifact_sha256": {
+    "nasa-wedge-m20.png": "aa56c1d5f5151ad6a7da6dae57305bfed710b6750538aa522db2434f4c05b4df",
+    "nasa-wedge-m25.png": "792549a037f48b1bfb2a25c5b48fc565c8502c683dbfd4c87fe41071eabafa4d",
+    "forward-step.png": "f1f25e06a70fc88d22441d27d8a14a3b6affc1664e01b311b230a8e77406989e",
+    "shock-gallery.npz": "3bbd7ba6baf5e81f5a6cf7fed616bb2c61293f288804386f7e272532094ace08"
+  },
+  "scope": "Independent nondimensional Euler baselines, not Wind-US output or original PPM reproduction. Wedges start from uniform freestream, with two grids at the same finite terminal time. Density errors compare exactly clipped reference cell averages. Step uses plain reflecting corner treatment, one grid, and no exact solution."
+}

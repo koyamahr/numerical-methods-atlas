@@ -5235,5 +5235,65 @@
   "gallery.steady-slices": {
     "en": "STEADY FIELD / SLICES",
     "ja": "定常場・断面"
+  },
+  "gallery.shock-intro": {
+    "en": "Start with shock waves: NASA wedge flows, a Mach-3 forward-facing step, and Double Mach Reflection. Compare computed fields with references, then follow the unsteady cases in saved-state movies.",
+    "ja": "まず衝撃波を見てみましょう。NASAの楔流れ、Mach 3前向きステップ、二重Mach反射の計算場と参照を比較し、非定常問題は保存状態の動画で追えます。"
+  },
+  "gallery.nasa-m2-title": {
+    "en": "NASA wedge / Mach 2.0",
+    "ja": "NASA楔／Mach 2.0"
+  },
+  "gallery.nasa-m25-title": {
+    "en": "NASA wedge / Mach 2.5",
+    "ja": "NASA楔／Mach 2.5"
+  },
+  "gallery.step-title": {
+    "en": "Mach 3 / forward-facing step",
+    "ja": "Mach 3／前向きステップ"
+  },
+  "movie.step-title": {
+    "en": "Mach 3 forward-facing step",
+    "ja": "Mach 3前向きステップ"
+  },
+  "gallery.nasa-m2-note": {
+    "en": "15-degree wedge: computed Mach and pressure fields with the exact weak-shock line. Independent body-fitted HLL baseline; two-grid cell-average errors.",
+    "ja": "15°楔のMach数・圧力の計算場と、弱い斜め衝撃波の厳密な線。独立した物体適合HLL基準計算で、2格子のセル平均誤差を示します。"
+  },
+  "gallery.nasa-m25-note": {
+    "en": "Oblique shock on a 15-degree wedge. Compare shock angle and wall pressure with NASA analytical values; independent Euler calculation, not Wind-US output.",
+    "ja": "15°楔の斜め衝撃波。衝撃波角と壁圧をNASAの解析値と比較します。独立したEuler計算で、Wind-USの出力ではありません。"
+  },
+  "gallery.step-note": {
+    "en": "A step generates shocks and wall reflections in a 3 × 1 wind tunnel. Watch 81 computed states to t = 4; first-order baseline without a special corner correction.",
+    "ja": "3 × 1流路の段差で生じる衝撃波と壁面反射。t=4まで81計算状態を動画で示します。角の特別な補正を使わない1次基準計算です。"
+  },
+  "movie.step-download": {
+    "en": "Download the forward-step manifest ↓",
+    "ja": "前向きステップの記録をダウンロード ↓"
+  },
+  "movie.step-boundary": {
+    "en": "fixed Mach-3 inflow / extrapolated outflow / reflecting tunnel and step walls",
+    "ja": "Mach 3固定流入／外挿流出／流路・段差の反射壁"
+  },
+  "movie.step-scope": {
+    "en": "Classical inviscid step, not a NASA experimental case. First-order diffusive baseline; no special corner entropy reset, no viscosity or grid-converged fine structures. Diagnostics exclude solid cells.",
+    "ja": "NASA実験ではなく、古典的な非粘性ステップ問題です。散逸的な1次基準計算で、角のエントロピー再設定、粘性、格子収束した微細構造は含みません。診断から固体セルを除きます。"
+  },
+  "gallery.nasa-m2-label": {
+    "en": "NASA / MACH 2",
+    "ja": "NASA／Mach 2"
+  },
+  "gallery.nasa-m25-label": {
+    "en": "NASA / MACH 2.5",
+    "ja": "NASA／Mach 2.5"
+  },
+  "gallery.step-label": {
+    "en": "CLASSICAL / MACH 3",
+    "ja": "古典的テスト／Mach 3"
+  },
+  "gallery.shock-manifest": {
+    "en": "Download shock-case definitions & diagnostics",
+    "ja": "衝撃波問題の定義・診断量をダウンロード"
   }
 }

@@ -240,14 +240,14 @@
     "movies": {
       "ja": {
         "status": "draft",
-        "source_sha256": "62430fb81976ff5446576b1cc7aa8aa41222b931977f2012cff3db6c7dff741b",
+        "source_sha256": "6d2bc7b15c43238324206418346787aca179bef38267afd075f074a88bc17b15",
         "checked_on": null
       }
     },
     "nasa-2d": {
       "ja": {
         "status": "draft",
-        "source_sha256": "2622f1800c86b11ece1ae2d5f2140aac46824b2eecf1dddc10618ba2e0eb4cb6",
+        "source_sha256": "15196702b88918bb2ee3001353ff80b3fc5d2759b79d187f776240a8ee121652",
         "checked_on": null
       }
     },
@@ -268,7 +268,7 @@
     "roadmap": {
       "ja": {
         "status": "draft",
-        "source_sha256": "cfec172eb930c068b3d7f9c95ee96845459a15b6bf08526769c63dbe2f37587f",
+        "source_sha256": "a61a73aac01ab0e5eedcee23c7c469b249e23d9c9282e1feafb7b89f8f9ebb51",
         "checked_on": null
       }
     },
