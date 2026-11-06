@@ -11,6 +11,7 @@ import {fieldFigures,matchesGallery} from './gallery.js';
 import {flowPage,wireFlow,mhdPage,wireMHD,disposeComparisons} from './comparisons.js';
 import {reconstructionPage,wireReconstruction,robustnessPage,wireRobustness} from './shock-methods.js';
 import {poissonPage,wirePoisson} from './poisson.js';
+import {wireBookCovers} from './books.js';
 import {hamiltonianPage,wireHamiltonian} from './hamiltonian.js';
 import {timePage,meshPage,wireTime,wireMesh} from './foundations.js';
 import {stabilityPage,convergencePage,wireStability,wireConvergence} from './experiments.js';
@@ -222,6 +223,7 @@ function chapter(id) {
 }
 function notFound(){return `<section class="page-intro page-width"><p class="eyebrow">PAGE NOT FOUND</p><h1>Back to<br>the <em>atlas.</em></h1><p>This chapter could not be found.</p><a class="button primary" href="#/">Return home →</a></section>`;}
 function wire() {
+ wireBookCovers(main);
  document.querySelectorAll('[data-flux]').forEach(button=>button.addEventListener('click',()=>{
    const flux=button.dataset.flux; document.querySelector('#sod-chart').innerHTML=plot(flux);
    document.querySelector('#flux-label').textContent=button.textContent;

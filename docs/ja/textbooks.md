@@ -8,7 +8,21 @@
 
 [参考文献庫を検索](#/references) · [登録済みの書籍のみ](#/references?q=type%3Abook) · [BibTeXをダウンロード](../references.bib)
 
+表紙は記載したISBNに対応する[Open Library](https://openlibrary.org/dev/docs/api/covers)の画像を表示します。各カードにAmazon Japanと出版社・書誌情報へのリンクがあります。表紙を取得できない場合も書名を表示します。
+
 ## CFDの基礎と非圧縮流れ {#cfd-foundations}
+
+<section class="textbook-card" aria-labelledby="hirsch2007">
+<div class="textbook-art">
+<div class="textbook-cover" data-cover-state="missing">
+<a href="https://openlibrary.org/isbn/9780750665940" target="_blank" rel="noopener" aria-label="Open Library: Numerical Computation of Internal and External Flows: The Fundamentals of Computational Fluid Dynamics">
+<span class="book-cover-placeholder" aria-hidden="true"><span class="book-placeholder-title" lang="en" data-original>Numerical Computation of Internal and External Flows: The Fundamentals of Computational Fluid Dynamics</span><span class="book-cover-loading">表紙を読み込み中</span><span class="book-cover-unavailable">表紙画像なし</span></span>
+</a>
+</div>
+<a class="book-cover-credit" href="https://openlibrary.org/isbn/9780750665940" target="_blank" rel="noopener">Open Libraryの書誌情報</a>
+<span class="book-isbn">ISBN 9780750665940</span>
+</div>
+<div class="textbook-details">
 
 ### Hirsch {#hirsch2007}
 
@@ -18,7 +32,26 @@ Hirsch, Charles. **Numerical Computation of Internal and External Flows: The Fun
 
 アトラスの関連章：[差分、CFL条件、von Neumann解析、Laxの定理](stability.md) · [構造格子、非構造格子、三角形格子](meshes.md) · [時間積分とleapfrog法](time-integration.md).
 
-[出版社・書誌情報](https://doi.org/10.1016/B978-0-7506-6594-0.X5037-1) · [著者・参照ページ](https://www.sciencedirect.com/book/monograph/9780750665940/numerical-computation-of-internal-and-external-flows) · `hirsch2007`
+<p class="book-links"><a class="book-purchase" href="https://www.amazon.co.jp/dp/0750665947" target="_blank" rel="noopener">Amazon Japan ↗</a>
+<a href="https://doi.org/10.1016/B978-0-7506-6594-0.X5037-1" target="_blank" rel="noopener">出版社・書誌情報 ↗</a>
+<a href="https://www.sciencedirect.com/book/monograph/9780750665940/numerical-computation-of-internal-and-external-flows" target="_blank" rel="noopener">著者・参照資料 ↗</a>
+<code>hirsch2007</code></p>
+
+</div>
+</section>
+
+<section class="textbook-card" aria-labelledby="fletcher1991v1">
+<div class="textbook-art">
+<div class="textbook-cover" data-cover-state="loading">
+<a href="https://openlibrary.org/isbn/9783540530589" target="_blank" rel="noopener" aria-label="Open Library: Computational Techniques for Fluid Dynamics 1: Fundamental and General Techniques">
+<span class="book-cover-placeholder" aria-hidden="true"><span class="book-placeholder-title" lang="en" data-original>Computational Techniques for Fluid Dynamics 1: Fundamental and General Techniques</span><span class="book-cover-loading">表紙を読み込み中</span><span class="book-cover-unavailable">表紙画像なし</span></span>
+<img class="book-cover-image" src="https://covers.openlibrary.org/b/id/2225072-M.jpg?default=false" alt="表紙：Computational Techniques for Fluid Dynamics 1: Fundamental and General Techniques" width="160" height="240" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+</a>
+</div>
+<a class="book-cover-credit" href="https://openlibrary.org/isbn/9783540530589" target="_blank" rel="noopener">表紙出典：Open Library</a>
+<span class="book-isbn">ISBN 9783540530589</span>
+</div>
+<div class="textbook-details">
 
 ### Fletcher / Volume I {#fletcher1991v1}
 
@@ -28,7 +61,25 @@ I巻はPDEの分類、重み付き残差法、定常・拡散問題、線形・�
 
 アトラスの関連章：[差分、CFL条件、von Neumann解析、Laxの定理](stability.md) · [連続有限要素法：弱形式から疎行列の組立てへ](fem.md) · [拡散、楕円型方程式、境界条件、反復法](elliptic.md).
 
-[出版社・書誌情報](https://doi.org/10.1007/978-3-642-58229-5) · [著者・参照ページ](https://link.springer.com/book/10.1007/978-3-642-58229-5) · `fletcher1991v1`
+<p class="book-links"><a class="book-purchase" href="https://www.amazon.co.jp/dp/3540530584" target="_blank" rel="noopener">Amazon Japan ↗</a>
+<a href="https://doi.org/10.1007/978-3-642-58229-5" target="_blank" rel="noopener">出版社・書誌情報 ↗</a>
+<a href="https://link.springer.com/book/10.1007/978-3-642-58229-5" target="_blank" rel="noopener">著者・参照資料 ↗</a>
+<code>fletcher1991v1</code></p>
+
+</div>
+</section>
+
+<section class="textbook-card" aria-labelledby="fletcher1991v2">
+<div class="textbook-art">
+<div class="textbook-cover" data-cover-state="missing">
+<a href="https://openlibrary.org/isbn/9783540536017" target="_blank" rel="noopener" aria-label="Open Library: Computational Techniques for Fluid Dynamics 2: Specific Techniques for Different Flow Categories">
+<span class="book-cover-placeholder" aria-hidden="true"><span class="book-placeholder-title" lang="en" data-original>Computational Techniques for Fluid Dynamics 2: Specific Techniques for Different Flow Categories</span><span class="book-cover-loading">表紙を読み込み中</span><span class="book-cover-unavailable">表紙画像なし</span></span>
+</a>
+</div>
+<a class="book-cover-credit" href="https://openlibrary.org/isbn/9783540536017" target="_blank" rel="noopener">Open Libraryの書誌情報</a>
+<span class="book-isbn">ISBN 9783540536017</span>
+</div>
+<div class="textbook-details">
 
 ### Fletcher / Volume II {#fletcher1991v2}
 
@@ -38,7 +89,26 @@ II巻はI巻の一般的手法を、流れの方程式の各分類とその数�
 
 アトラスの関連章：[非圧縮流：整合する離散演算子で射影する](incompressible.md) · [前処理、二重時間積分、残差分配法](advanced.md) · [極・円筒座標：テンソルと粘性](coordinates-viscosity.md).
 
-[出版社・書誌情報](https://doi.org/10.1007/978-3-642-58239-4) · [著者・参照ページ](https://link.springer.com/book/10.1007/978-3-642-58239-4) · `fletcher1991v2`
+<p class="book-links"><a class="book-purchase" href="https://www.amazon.co.jp/dp/3540536019" target="_blank" rel="noopener">Amazon Japan ↗</a>
+<a href="https://doi.org/10.1007/978-3-642-58239-4" target="_blank" rel="noopener">出版社・書誌情報 ↗</a>
+<a href="https://link.springer.com/book/10.1007/978-3-642-58239-4" target="_blank" rel="noopener">著者・参照資料 ↗</a>
+<code>fletcher1991v2</code></p>
+
+</div>
+</section>
+
+<section class="textbook-card" aria-labelledby="ferziger2020">
+<div class="textbook-art">
+<div class="textbook-cover" data-cover-state="loading">
+<a href="https://openlibrary.org/isbn/9783319996912" target="_blank" rel="noopener" aria-label="Open Library: Computational Methods for Fluid Dynamics">
+<span class="book-cover-placeholder" aria-hidden="true"><span class="book-placeholder-title" lang="en" data-original>Computational Methods for Fluid Dynamics</span><span class="book-cover-loading">表紙を読み込み中</span><span class="book-cover-unavailable">表紙画像なし</span></span>
+<img class="book-cover-image" src="https://covers.openlibrary.org/b/id/10130550-M.jpg?default=false" alt="表紙：Computational Methods for Fluid Dynamics" width="160" height="240" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+</a>
+</div>
+<a class="book-cover-credit" href="https://openlibrary.org/isbn/9783319996912" target="_blank" rel="noopener">表紙出典：Open Library</a>
+<span class="book-isbn">ISBN 9783319996912</span>
+</div>
+<div class="textbook-details">
 
 ### Ferziger · Perić · Street {#ferziger2020}
 
@@ -48,7 +118,26 @@ Ferziger, Joel H.; Perić, Milovan; Street, Robert L. **Computational Methods fo
 
 アトラスの関連章：[非圧縮流：整合する離散演算子で射影する](incompressible.md) · [極・円筒座標：テンソルと粘性](coordinates-viscosity.md).
 
-[出版社・書誌情報](https://doi.org/10.1007/978-3-319-99693-6) · [著者・参照ページ](https://link.springer.com/book/10.1007/978-3-319-99693-6) · `ferziger2020`
+<p class="book-links"><a class="book-purchase" href="https://www.amazon.co.jp/dp/3319996916" target="_blank" rel="noopener">Amazon Japan ↗</a>
+<a href="https://doi.org/10.1007/978-3-319-99693-6" target="_blank" rel="noopener">出版社・書誌情報 ↗</a>
+<a href="https://link.springer.com/book/10.1007/978-3-319-99693-6" target="_blank" rel="noopener">著者・参照資料 ↗</a>
+<code>ferziger2020</code></p>
+
+</div>
+</section>
+
+<section class="textbook-card" aria-labelledby="patankar1980">
+<div class="textbook-art">
+<div class="textbook-cover" data-cover-state="loading">
+<a href="https://openlibrary.org/isbn/9780891165224" target="_blank" rel="noopener" aria-label="Open Library: Numerical Heat Transfer and Fluid Flow">
+<span class="book-cover-placeholder" aria-hidden="true"><span class="book-placeholder-title" lang="en" data-original>Numerical Heat Transfer and Fluid Flow</span><span class="book-cover-loading">表紙を読み込み中</span><span class="book-cover-unavailable">表紙画像なし</span></span>
+<img class="book-cover-image" src="https://covers.openlibrary.org/b/id/12927123-M.jpg?default=false" alt="表紙：Numerical Heat Transfer and Fluid Flow" width="160" height="240" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+</a>
+</div>
+<a class="book-cover-credit" href="https://openlibrary.org/isbn/9780891165224" target="_blank" rel="noopener">表紙出典：Open Library</a>
+<span class="book-isbn">ISBN 9780891165224</span>
+</div>
+<div class="textbook-details">
 
 ### Patankar {#patankar1980}
 
@@ -58,19 +147,56 @@ Patankar, Suhas V. **Numerical Heat Transfer and Fluid Flow**. CRC Press (curren
 
 アトラスの関連章：[非圧縮流：整合する離散演算子で射影する](incompressible.md) · [Euler再構成：PPM・特性変数・WENO-Z・AUSM](reconstruction.md).
 
-[出版社・書誌情報](https://www.routledge.com/Numerical-Heat-Transfer-and-Fluid-Flow-1st-Edition/Patankar/p/book/9780891165224) · [著者・参照ページ](https://www.routledge.com/Numerical-Heat-Transfer-and-Fluid-Flow-1st-Edition/Patankar/p/book/9780891165224) · `patankar1980`
+<p class="book-links"><a class="book-purchase" href="https://www.amazon.co.jp/dp/0891165223" target="_blank" rel="noopener">Amazon Japan ↗</a>
+<a href="https://www.routledge.com/Numerical-Heat-Transfer-and-Fluid-Flow-1st-Edition/Patankar/p/book/9780891165224" target="_blank" rel="noopener">出版社・書誌情報 ↗</a>
+<code>patankar1980</code></p>
+
+</div>
+</section>
 
 ## 保存則・Riemannソルバー・衝撃波 {#hyperbolic}
+
+<section class="textbook-card" aria-labelledby="leveque2002">
+<div class="textbook-art">
+<div class="textbook-cover" data-cover-state="loading">
+<a href="https://openlibrary.org/isbn/9780521009249" target="_blank" rel="noopener" aria-label="Open Library: Finite Volume Methods for Hyperbolic Problems">
+<span class="book-cover-placeholder" aria-hidden="true"><span class="book-placeholder-title" lang="en" data-original>Finite Volume Methods for Hyperbolic Problems</span><span class="book-cover-loading">表紙を読み込み中</span><span class="book-cover-unavailable">表紙画像なし</span></span>
+<img class="book-cover-image" src="https://covers.openlibrary.org/b/id/328569-M.jpg?default=false" alt="表紙：Finite Volume Methods for Hyperbolic Problems" width="160" height="240" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+</a>
+</div>
+<a class="book-cover-credit" href="https://openlibrary.org/isbn/9780521009249" target="_blank" rel="noopener">表紙出典：Open Library</a>
+<span class="book-isbn">ISBN 9780521009249</span>
+</div>
+<div class="textbook-details">
 
 ### LeVeque / finite volume {#leveque2002}
 
 LeVeque, Randall J. **Finite Volume Methods for Hyperbolic Problems**. Cambridge University Press, 2002.
 
-弱解、有限体積法の考え方、波の伝播、リミター、多次元保存則を調べるときに。Clawpack関連資料から理論と実装を結びつけられます。 ご指定のペーパーバックISBN 0521009243はこの本です。出版社の正式題名はFinite Volume Methods for Hyperbolic Problemsです。
+弱解、有限体積法の考え方、波の伝播、リミター、多次元保存則を調べるときに。Clawpack関連資料から理論と実装を結びつけられます。
 
 アトラスの関連章：[Euler再構成：PPM・特性変数・WENO-Z・AUSM](reconstruction.md) · [勾配制限：minmod、Superbee、MC、van Leer、van Albada](limiters.md) · [方程式ギャラリー：計算法の前に方程式を選ぶ](equation-gallery.md).
 
-[出版社・書誌情報](https://doi.org/10.1017/CBO9780511791253) · [著者・参照ページ](https://www.cambridge.org/core/books/finite-volume-methods-for-hyperbolic-problems/97D5D1ACB1926DA1D4D52EAD6909E2B9) · `leveque2002`
+<p class="book-links"><a class="book-purchase" href="https://www.amazon.co.jp/dp/0521009243" target="_blank" rel="noopener">Amazon Japan ↗</a>
+<a href="https://doi.org/10.1017/CBO9780511791253" target="_blank" rel="noopener">出版社・書誌情報 ↗</a>
+<a href="https://www.cambridge.org/core/books/finite-volume-methods-for-hyperbolic-problems/97D5D1ACB1926DA1D4D52EAD6909E2B9" target="_blank" rel="noopener">著者・参照資料 ↗</a>
+<code>leveque2002</code></p>
+
+</div>
+</section>
+
+<section class="textbook-card" aria-labelledby="toro2009">
+<div class="textbook-art">
+<div class="textbook-cover" data-cover-state="loading">
+<a href="https://openlibrary.org/isbn/9783540252023" target="_blank" rel="noopener" aria-label="Open Library: Riemann Solvers and Numerical Methods for Fluid Dynamics: A Practical Introduction">
+<span class="book-cover-placeholder" aria-hidden="true"><span class="book-placeholder-title" lang="en" data-original>Riemann Solvers and Numerical Methods for Fluid Dynamics: A Practical Introduction</span><span class="book-cover-loading">表紙を読み込み中</span><span class="book-cover-unavailable">表紙画像なし</span></span>
+<img class="book-cover-image" src="https://covers.openlibrary.org/b/id/7368028-M.jpg?default=false" alt="表紙：Riemann Solvers and Numerical Methods for Fluid Dynamics: A Practical Introduction" width="160" height="240" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+</a>
+</div>
+<a class="book-cover-credit" href="https://openlibrary.org/isbn/9783540252023" target="_blank" rel="noopener">表紙出典：Open Library</a>
+<span class="book-isbn">ISBN 9783540252023</span>
+</div>
+<div class="textbook-details">
 
 ### Toro {#toro2009}
 
@@ -80,19 +206,55 @@ Euler方程式の厳密・近似Riemannソルバー、接触波、高解像度�
 
 アトラスの関連章：[前処理、二重時間積分、残差分配法](advanced.md) · [Euler再構成：PPM・特性変数・WENO-Z・AUSM](reconstruction.md) · [テスト計算ライブラリ](benchmarks.md).
 
-[出版社・書誌情報](https://doi.org/10.1007/b79761) · [著者・参照ページ](https://doi.org/10.1007/b79761) · `toro2009`
+<p class="book-links"><a class="book-purchase" href="https://www.amazon.co.jp/dp/3540252029" target="_blank" rel="noopener">Amazon Japan ↗</a>
+<a href="https://doi.org/10.1007/b79761" target="_blank" rel="noopener">出版社・書誌情報 ↗</a>
+<code>toro2009</code></p>
+
+</div>
+</section>
+
+<section class="textbook-card" aria-labelledby="godlewski1996book">
+<div class="textbook-art">
+<div class="textbook-cover" data-cover-state="loading">
+<a href="https://openlibrary.org/isbn/9780387945293" target="_blank" rel="noopener" aria-label="Open Library: Numerical Approximation of Hyperbolic Systems of Conservation Laws">
+<span class="book-cover-placeholder" aria-hidden="true"><span class="book-placeholder-title" lang="en" data-original>Numerical Approximation of Hyperbolic Systems of Conservation Laws</span><span class="book-cover-loading">表紙を読み込み中</span><span class="book-cover-unavailable">表紙画像なし</span></span>
+<img class="book-cover-image" src="https://covers.openlibrary.org/b/id/245411-M.jpg?default=false" alt="表紙：Numerical Approximation of Hyperbolic Systems of Conservation Laws" width="160" height="240" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+</a>
+</div>
+<a class="book-cover-credit" href="https://openlibrary.org/isbn/9780387945293" target="_blank" rel="noopener">表紙出典：Open Library</a>
+<span class="book-isbn">ISBN 9780387945293</span>
+</div>
+<div class="textbook-details">
 
 ### Godlewski · Raviart {#godlewski1996book}
 
 Godlewski, Edwige; Raviart, Pierre-Arnaud. **Numerical Approximation of Hyperbolic Systems of Conservation Laws**. Springer, 1996・第1版.
 
-非線形双曲型保存則系とその数値近似を数学的に学び、Riemann問題や気体力学を詳しく調べるための本です。有限体積法の考え方にはLeVeque、ソルバーの構成にはToroを併読するとつながります。この項目はご指定の1996年初版を引用し、[2021年の改訂第2版](https://link.springer.com/book/10.1007/978-1-0716-1344-3)も案内します。
+非線形双曲型保存則系とその数値近似を数学的に学び、Riemann問題や気体力学を詳しく調べるための本です。有限体積法の考え方にはLeVeque、ソルバーの構成にはToroを併読するとつながります。この項目は1996年初版を引用し、[2021年の改訂第2版](https://link.springer.com/book/10.1007/978-1-0716-1344-3)も案内します。
 
 アトラスの関連章：[前処理、二重時間積分、残差分配法](advanced.md) · [Euler再構成：PPM・特性変数・WENO-Z・AUSM](reconstruction.md) · [A安定性、L安定性、誤差ノルム](accuracy-stability.md).
 
-[出版社・書誌情報](https://doi.org/10.1007/978-1-4612-0713-9) · [著者・参照ページ](https://link.springer.com/book/10.1007/978-1-4612-0713-9) · `godlewski1996book`
+<p class="book-links"><a class="book-purchase" href="https://www.amazon.co.jp/dp/0387945296" target="_blank" rel="noopener">Amazon Japan ↗</a>
+<a href="https://doi.org/10.1007/978-1-4612-0713-9" target="_blank" rel="noopener">出版社・書誌情報 ↗</a>
+<a href="https://link.springer.com/book/10.1007/978-1-4612-0713-9" target="_blank" rel="noopener">著者・参照資料 ↗</a>
+<code>godlewski1996book</code></p>
+
+</div>
+</section>
 
 ## 差分法と線形代数 {#common-numerics}
+
+<section class="textbook-card" aria-labelledby="leveque2007">
+<div class="textbook-art">
+<div class="textbook-cover" data-cover-state="missing">
+<a href="https://openlibrary.org/isbn/9780898716290" target="_blank" rel="noopener" aria-label="Open Library: Finite Difference Methods for Ordinary and Partial Differential Equations: Steady-State and Time-Dependent Problems">
+<span class="book-cover-placeholder" aria-hidden="true"><span class="book-placeholder-title" lang="en" data-original>Finite Difference Methods for Ordinary and Partial Differential Equations: Steady-State and Time-Dependent Problems</span><span class="book-cover-loading">表紙を読み込み中</span><span class="book-cover-unavailable">表紙画像なし</span></span>
+</a>
+</div>
+<a class="book-cover-credit" href="https://openlibrary.org/isbn/9780898716290" target="_blank" rel="noopener">Open Libraryの書誌情報</a>
+<span class="book-isbn">ISBN 9780898716290</span>
+</div>
+<div class="textbook-details">
 
 ### LeVeque / finite differences {#leveque2007}
 
@@ -102,7 +264,26 @@ LeVeque, Randall J. **Finite Difference Methods for Ordinary and Partial Differe
 
 アトラスの関連章：[A安定性、L安定性、誤差ノルム](accuracy-stability.md) · [時間積分とleapfrog法](time-integration.md) · [拡散、楕円型方程式、境界条件、反復法](elliptic.md).
 
-[出版社・書誌情報](https://doi.org/10.1137/1.9780898717839) · [著者・参照ページ](https://staff.washington.edu/rjl/booksnotes.html) · `leveque2007`
+<p class="book-links"><a class="book-purchase" href="https://www.amazon.co.jp/dp/0898716292" target="_blank" rel="noopener">Amazon Japan ↗</a>
+<a href="https://doi.org/10.1137/1.9780898717839" target="_blank" rel="noopener">出版社・書誌情報 ↗</a>
+<a href="https://staff.washington.edu/rjl/booksnotes.html" target="_blank" rel="noopener">著者・参照資料 ↗</a>
+<code>leveque2007</code></p>
+
+</div>
+</section>
+
+<section class="textbook-card" aria-labelledby="golub2013">
+<div class="textbook-art">
+<div class="textbook-cover" data-cover-state="loading">
+<a href="https://openlibrary.org/isbn/9781421407944" target="_blank" rel="noopener" aria-label="Open Library: Matrix Computations">
+<span class="book-cover-placeholder" aria-hidden="true"><span class="book-placeholder-title" lang="en" data-original>Matrix Computations</span><span class="book-cover-loading">表紙を読み込み中</span><span class="book-cover-unavailable">表紙画像なし</span></span>
+<img class="book-cover-image" src="https://covers.openlibrary.org/b/id/8779096-M.jpg?default=false" alt="表紙：Matrix Computations" width="160" height="240" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+</a>
+</div>
+<a class="book-cover-credit" href="https://openlibrary.org/isbn/9781421407944" target="_blank" rel="noopener">表紙出典：Open Library</a>
+<span class="book-isbn">ISBN 9781421407944</span>
+</div>
+<div class="textbook-details">
 
 ### Golub · Van Loan {#golub2013}
 
@@ -112,7 +293,26 @@ Golub, Gene H.; Van Loan, Charles F. **Matrix Computations**. Johns Hopkins Univ
 
 アトラスの関連章：[疎行列・非線形方程式系：真の残差を測る](sparse-nonlinear.md) · [拡散、楕円型方程式、境界条件、反復法](elliptic.md).
 
-[出版社・書誌情報](https://doi.org/10.1137/1.9781421407944) · [著者・参照ページ](https://epubs.siam.org/doi/book/10.1137/1.9781421407944) · `golub2013`
+<p class="book-links"><a class="book-purchase" href="https://www.amazon.co.jp/dp/1421407949" target="_blank" rel="noopener">Amazon Japan ↗</a>
+<a href="https://doi.org/10.1137/1.9781421407944" target="_blank" rel="noopener">出版社・書誌情報 ↗</a>
+<a href="https://epubs.siam.org/doi/book/10.1137/1.9781421407944" target="_blank" rel="noopener">著者・参照資料 ↗</a>
+<code>golub2013</code></p>
+
+</div>
+</section>
+
+<section class="textbook-card" aria-labelledby="saad2003book">
+<div class="textbook-art">
+<div class="textbook-cover" data-cover-state="loading">
+<a href="https://openlibrary.org/isbn/9780898715347" target="_blank" rel="noopener" aria-label="Open Library: Iterative Methods for Sparse Linear Systems">
+<span class="book-cover-placeholder" aria-hidden="true"><span class="book-placeholder-title" lang="en" data-original>Iterative Methods for Sparse Linear Systems</span><span class="book-cover-loading">表紙を読み込み中</span><span class="book-cover-unavailable">表紙画像なし</span></span>
+<img class="book-cover-image" src="https://covers.openlibrary.org/b/id/698819-M.jpg?default=false" alt="表紙：Iterative Methods for Sparse Linear Systems" width="160" height="240" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+</a>
+</div>
+<a class="book-cover-credit" href="https://openlibrary.org/isbn/9780898715347" target="_blank" rel="noopener">表紙出典：Open Library</a>
+<span class="book-isbn">ISBN 9780898715347</span>
+</div>
+<div class="textbook-details">
 
 ### Saad {#saad2003book}
 
@@ -122,7 +322,26 @@ Krylov部分空間、GMRES、BiCG系の手法、前処理を調べるときに�
 
 アトラスの関連章：[疎行列・非線形方程式系：真の残差を測る](sparse-nonlinear.md) · [拡散、楕円型方程式、境界条件、反復法](elliptic.md).
 
-[出版社・書誌情報](https://doi.org/10.1137/1.9780898718003) · [著者・参照ページ](https://www-users.cse.umn.edu/~saad/books.html) · `saad2003book`
+<p class="book-links"><a class="book-purchase" href="https://www.amazon.co.jp/dp/0898715342" target="_blank" rel="noopener">Amazon Japan ↗</a>
+<a href="https://doi.org/10.1137/1.9780898718003" target="_blank" rel="noopener">出版社・書誌情報 ↗</a>
+<a href="https://www-users.cse.umn.edu/~saad/books.html" target="_blank" rel="noopener">著者・参照資料 ↗</a>
+<code>saad2003book</code></p>
+
+</div>
+</section>
+
+<section class="textbook-card" aria-labelledby="templates1994">
+<div class="textbook-art">
+<div class="textbook-cover" data-cover-state="loading">
+<a href="https://openlibrary.org/isbn/9780898713282" target="_blank" rel="noopener" aria-label="Open Library: Templates for the Solution of Linear Systems: Building Blocks for Iterative Methods">
+<span class="book-cover-placeholder" aria-hidden="true"><span class="book-placeholder-title" lang="en" data-original>Templates for the Solution of Linear Systems: Building Blocks for Iterative Methods</span><span class="book-cover-loading">表紙を読み込み中</span><span class="book-cover-unavailable">表紙画像なし</span></span>
+<img class="book-cover-image" src="https://covers.openlibrary.org/b/id/698646-M.jpg?default=false" alt="表紙：Templates for the Solution of Linear Systems: Building Blocks for Iterative Methods" width="160" height="240" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+</a>
+</div>
+<a class="book-cover-credit" href="https://openlibrary.org/isbn/9780898713282" target="_blank" rel="noopener">表紙出典：Open Library</a>
+<span class="book-isbn">ISBN 9780898713282</span>
+</div>
+<div class="textbook-details">
 
 ### Barrett et al. / Templates {#templates1994}
 
@@ -132,9 +351,27 @@ Barrett, Richard; Berry, Michael; Chan, Tony F.; Demmel, James; Donato, June; Do
 
 アトラスの関連章：[疎行列・非線形方程式系：真の残差を測る](sparse-nonlinear.md) · [拡散、楕円型方程式、境界条件、反復法](elliptic.md).
 
-[出版社・書誌情報](https://www.netlib.org/templates/templates.html) · [著者・参照ページ](https://www.netlib.org/templates/templates.html) · `templates1994`
+<p class="book-links"><a class="book-purchase" href="https://www.amazon.co.jp/dp/0898713285" target="_blank" rel="noopener">Amazon Japan ↗</a>
+<a href="https://www.netlib.org/templates/templates.html" target="_blank" rel="noopener">出版社・書誌情報 ↗</a>
+<code>templates1994</code></p>
+
+</div>
+</section>
 
 ## マルチグリッド：直観・解析・実装 {#multigrid}
+
+<section class="textbook-card" aria-labelledby="briggs2000book">
+<div class="textbook-art">
+<div class="textbook-cover" data-cover-state="loading">
+<a href="https://openlibrary.org/isbn/9780898714623" target="_blank" rel="noopener" aria-label="Open Library: A Multigrid Tutorial">
+<span class="book-cover-placeholder" aria-hidden="true"><span class="book-placeholder-title" lang="en" data-original>A Multigrid Tutorial</span><span class="book-cover-loading">表紙を読み込み中</span><span class="book-cover-unavailable">表紙画像なし</span></span>
+<img class="book-cover-image" src="https://covers.openlibrary.org/b/id/698765-M.jpg?default=false" alt="表紙：A Multigrid Tutorial" width="160" height="240" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+</a>
+</div>
+<a class="book-cover-credit" href="https://openlibrary.org/isbn/9780898714623" target="_blank" rel="noopener">表紙出典：Open Library</a>
+<span class="book-isbn">ISBN 9780898714623</span>
+</div>
+<div class="textbook-details">
 
 ### Briggs · Henson · McCormick / A Multigrid Tutorial {#briggs2000book}
 
@@ -144,7 +381,26 @@ Briggs, William L.; Henson, Van Emden; McCormick, Steve F. **A Multigrid Tutoria
 
 アトラスの関連章：[拡散、楕円型方程式、境界条件、反復法](elliptic.md) · [疎行列・非線形方程式系：真の残差を測る](sparse-nonlinear.md).
 
-[出版社・書誌情報](https://doi.org/10.1137/1.9780898719505) · [著者・参照ページ](https://epubs.siam.org/doi/book/10.1137/1.9780898719505) · `briggs2000book`
+<p class="book-links"><a class="book-purchase" href="https://www.amazon.co.jp/dp/0898714621" target="_blank" rel="noopener">Amazon Japan ↗</a>
+<a href="https://doi.org/10.1137/1.9780898719505" target="_blank" rel="noopener">出版社・書誌情報 ↗</a>
+<a href="https://epubs.siam.org/doi/book/10.1137/1.9780898719505" target="_blank" rel="noopener">著者・参照資料 ↗</a>
+<code>briggs2000book</code></p>
+
+</div>
+</section>
+
+<section class="textbook-card" aria-labelledby="trottenberg2001">
+<div class="textbook-art">
+<div class="textbook-cover" data-cover-state="loading">
+<a href="https://openlibrary.org/isbn/9780127010700" target="_blank" rel="noopener" aria-label="Open Library: Multigrid">
+<span class="book-cover-placeholder" aria-hidden="true"><span class="book-placeholder-title" lang="en" data-original>Multigrid</span><span class="book-cover-loading">表紙を読み込み中</span><span class="book-cover-unavailable">表紙画像なし</span></span>
+<img class="book-cover-image" src="https://covers.openlibrary.org/b/id/1100584-M.jpg?default=false" alt="表紙：Multigrid" width="160" height="240" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+</a>
+</div>
+<a class="book-cover-credit" href="https://openlibrary.org/isbn/9780127010700" target="_blank" rel="noopener">表紙出典：Open Library</a>
+<span class="book-isbn">ISBN 9780127010700</span>
+</div>
+<div class="textbook-details">
 
 ### Trottenberg · Oosterlee · Schüller / Multigrid {#trottenberg2001}
 
@@ -154,9 +410,27 @@ Trottenberg, Ulrich; Oosterlee, Cornelius W.; Schüller, Anton. **Multigrid**. A
 
 アトラスの関連章：[拡散、楕円型方程式、境界条件、反復法](elliptic.md) · [疎行列・非線形方程式系：真の残差を測る](sparse-nonlinear.md) · [粒子重力：PM、P³M、ツリー、多重極、マルチグリッド](particle-gravity.md).
 
-[出版社・書誌情報](https://shop.elsevier.com/books/multigrid/trottenberg/978-0-08-047956-9) · [著者・参照ページ](https://shop.elsevier.com/books/multigrid/trottenberg/978-0-08-047956-9) · `trottenberg2001`
+<p class="book-links"><a class="book-purchase" href="https://www.amazon.co.jp/dp/012701070X" target="_blank" rel="noopener">Amazon Japan ↗</a>
+<a href="https://shop.elsevier.com/books/multigrid/trottenberg/978-0-08-047956-9" target="_blank" rel="noopener">出版社・書誌情報 ↗</a>
+<code>trottenberg2001</code></p>
+
+</div>
+</section>
 
 ## スペクトル基底と不連続Galerkin法 {#high-order}
+
+<section class="textbook-card" aria-labelledby="trefethen2000">
+<div class="textbook-art">
+<div class="textbook-cover" data-cover-state="loading">
+<a href="https://openlibrary.org/isbn/9780898714654" target="_blank" rel="noopener" aria-label="Open Library: Spectral Methods in MATLAB">
+<span class="book-cover-placeholder" aria-hidden="true"><span class="book-placeholder-title" lang="en" data-original>Spectral Methods in MATLAB</span><span class="book-cover-loading">表紙を読み込み中</span><span class="book-cover-unavailable">表紙画像なし</span></span>
+<img class="book-cover-image" src="https://covers.openlibrary.org/b/id/698768-M.jpg?default=false" alt="表紙：Spectral Methods in MATLAB" width="160" height="240" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+</a>
+</div>
+<a class="book-cover-credit" href="https://openlibrary.org/isbn/9780898714654" target="_blank" rel="noopener">表紙出典：Open Library</a>
+<span class="book-isbn">ISBN 9780898714654</span>
+</div>
+<div class="textbook-details">
 
 ### Trefethen {#trefethen2000}
 
@@ -166,7 +440,26 @@ Trefethen, Lloyd N. **Spectral Methods in MATLAB**. SIAM, 2000.
 
 アトラスの関連章：[インタラクティブ実験ガイド](experiments.md) · [Orthogonal polynomials and mesh basis functions](basis-functions.md).
 
-[出版社・書誌情報](https://doi.org/10.1137/1.9780898719598) · [著者・参照ページ](https://people.maths.ox.ac.uk/trefethen/spectral.html) · `trefethen2000`
+<p class="book-links"><a class="book-purchase" href="https://www.amazon.co.jp/dp/0898714656" target="_blank" rel="noopener">Amazon Japan ↗</a>
+<a href="https://doi.org/10.1137/1.9780898719598" target="_blank" rel="noopener">出版社・書誌情報 ↗</a>
+<a href="https://people.maths.ox.ac.uk/trefethen/spectral.html" target="_blank" rel="noopener">著者・参照資料 ↗</a>
+<code>trefethen2000</code></p>
+
+</div>
+</section>
+
+<section class="textbook-card" aria-labelledby="hesthaven2008book">
+<div class="textbook-art">
+<div class="textbook-cover" data-cover-state="loading">
+<a href="https://openlibrary.org/isbn/9780387720654" target="_blank" rel="noopener" aria-label="Open Library: Nodal Discontinuous Galerkin Methods: Algorithms, Analysis, and Applications">
+<span class="book-cover-placeholder" aria-hidden="true"><span class="book-placeholder-title" lang="en" data-original>Nodal Discontinuous Galerkin Methods: Algorithms, Analysis, and Applications</span><span class="book-cover-loading">表紙を読み込み中</span><span class="book-cover-unavailable">表紙画像なし</span></span>
+<img class="book-cover-image" src="https://covers.openlibrary.org/b/id/2412519-M.jpg?default=false" alt="表紙：Nodal Discontinuous Galerkin Methods: Algorithms, Analysis, and Applications" width="160" height="240" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+</a>
+</div>
+<a class="book-cover-credit" href="https://openlibrary.org/isbn/9780387720654" target="_blank" rel="noopener">表紙出典：Open Library</a>
+<span class="book-isbn">ISBN 9780387720654</span>
+</div>
+<div class="textbook-details">
 
 ### Hesthaven · Warburton {#hesthaven2008book}
 
@@ -176,9 +469,28 @@ Hesthaven, Jan S.; Warburton, Tim. **Nodal Discontinuous Galerkin Methods: Algor
 
 アトラスの関連章：[Orthogonal polynomials and mesh basis functions](basis-functions.md) · [インタラクティブ実験ガイド](experiments.md).
 
-[出版社・書誌情報](https://doi.org/10.1007/978-0-387-72067-8) · [著者・参照ページ](https://link.springer.com/book/10.1007/978-0-387-72067-8) · `hesthaven2008book`
+<p class="book-links"><a class="book-purchase" href="https://www.amazon.co.jp/dp/0387720650" target="_blank" rel="noopener">Amazon Japan ↗</a>
+<a href="https://doi.org/10.1007/978-0-387-72067-8" target="_blank" rel="noopener">出版社・書誌情報 ↗</a>
+<a href="https://link.springer.com/book/10.1007/978-0-387-72067-8" target="_blank" rel="noopener">著者・参照資料 ↗</a>
+<code>hesthaven2008book</code></p>
+
+</div>
+</section>
 
 ## 時間積分・地球流体・粒子法 {#time-geophysics-particles}
+
+<section class="textbook-card" aria-labelledby="hairer2006book">
+<div class="textbook-art">
+<div class="textbook-cover" data-cover-state="loading">
+<a href="https://openlibrary.org/isbn/9783540306634" target="_blank" rel="noopener" aria-label="Open Library: Geometric Numerical Integration: Structure-Preserving Algorithms for Ordinary Differential Equations">
+<span class="book-cover-placeholder" aria-hidden="true"><span class="book-placeholder-title" lang="en" data-original>Geometric Numerical Integration: Structure-Preserving Algorithms for Ordinary Differential Equations</span><span class="book-cover-loading">表紙を読み込み中</span><span class="book-cover-unavailable">表紙画像なし</span></span>
+<img class="book-cover-image" src="https://covers.openlibrary.org/b/id/2221190-M.jpg?default=false" alt="表紙：Geometric Numerical Integration: Structure-Preserving Algorithms for Ordinary Differential Equations" width="160" height="240" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+</a>
+</div>
+<a class="book-cover-credit" href="https://openlibrary.org/isbn/9783540306634" target="_blank" rel="noopener">表紙出典：Open Library</a>
+<span class="book-isbn">ISBN 9783540306634</span>
+</div>
+<div class="textbook-details">
 
 ### Hairer · Lubich · Wanner {#hairer2006book}
 
@@ -188,7 +500,26 @@ Hairer, Ernst; Lubich, Christian; Wanner, Gerhard. **Geometric Numerical Integra
 
 アトラスの関連章：[シンプレクティック積分：正準写像とエネルギーを分ける](symplectic.md) · [時間積分とleapfrog法](time-integration.md).
 
-[出版社・書誌情報](https://doi.org/10.1007/3-540-30666-8) · [著者・参照ページ](https://link.springer.com/book/10.1007/3-540-30666-8) · `hairer2006book`
+<p class="book-links"><a class="book-purchase" href="https://www.amazon.co.jp/dp/3540306633" target="_blank" rel="noopener">Amazon Japan ↗</a>
+<a href="https://doi.org/10.1007/3-540-30666-8" target="_blank" rel="noopener">出版社・書誌情報 ↗</a>
+<a href="https://link.springer.com/book/10.1007/3-540-30666-8" target="_blank" rel="noopener">著者・参照資料 ↗</a>
+<code>hairer2006book</code></p>
+
+</div>
+</section>
+
+<section class="textbook-card" aria-labelledby="durran2010">
+<div class="textbook-art">
+<div class="textbook-cover" data-cover-state="loading">
+<a href="https://openlibrary.org/isbn/9781441964113" target="_blank" rel="noopener" aria-label="Open Library: Numerical Methods for Fluid Dynamics: With Applications to Geophysics">
+<span class="book-cover-placeholder" aria-hidden="true"><span class="book-placeholder-title" lang="en" data-original>Numerical Methods for Fluid Dynamics: With Applications to Geophysics</span><span class="book-cover-loading">表紙を読み込み中</span><span class="book-cover-unavailable">表紙画像なし</span></span>
+<img class="book-cover-image" src="https://covers.openlibrary.org/b/id/8701007-M.jpg?default=false" alt="表紙：Numerical Methods for Fluid Dynamics: With Applications to Geophysics" width="160" height="240" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+</a>
+</div>
+<a class="book-cover-credit" href="https://openlibrary.org/isbn/9781441964113" target="_blank" rel="noopener">表紙出典：Open Library</a>
+<span class="book-isbn">ISBN 9781441964113</span>
+</div>
+<div class="textbook-details">
 
 ### Durran {#durran2010}
 
@@ -198,7 +529,25 @@ Durran, Dale R. **Numerical Methods for Fluid Dynamics: With Applications to Geo
 
 アトラスの関連章：[球面メッシュとArakawa A・B・C格子](geophysical-grids.md) · [Runge–Kutta法：段数、次数、安定性、SSP](runge-kutta.md).
 
-[出版社・書誌情報](https://doi.org/10.1007/978-1-4419-6412-0) · [著者・参照ページ](https://link.springer.com/book/10.1007/978-1-4419-6412-0) · `durran2010`
+<p class="book-links"><a class="book-purchase" href="https://www.amazon.co.jp/dp/1441964118" target="_blank" rel="noopener">Amazon Japan ↗</a>
+<a href="https://doi.org/10.1007/978-1-4419-6412-0" target="_blank" rel="noopener">出版社・書誌情報 ↗</a>
+<a href="https://link.springer.com/book/10.1007/978-1-4419-6412-0" target="_blank" rel="noopener">著者・参照資料 ↗</a>
+<code>durran2010</code></p>
+
+</div>
+</section>
+
+<section class="textbook-card" aria-labelledby="hockney1981book">
+<div class="textbook-art">
+<div class="textbook-cover" data-cover-state="missing">
+<a href="https://openlibrary.org/isbn/9780070291089" target="_blank" rel="noopener" aria-label="Open Library: Computer Simulation Using Particles">
+<span class="book-cover-placeholder" aria-hidden="true"><span class="book-placeholder-title" lang="en" data-original>Computer Simulation Using Particles</span><span class="book-cover-loading">表紙を読み込み中</span><span class="book-cover-unavailable">表紙画像なし</span></span>
+</a>
+</div>
+<a class="book-cover-credit" href="https://openlibrary.org/isbn/9780070291089" target="_blank" rel="noopener">Open Libraryの書誌情報</a>
+<span class="book-isbn">ISBN 9780070291089</span>
+</div>
+<div class="textbook-details">
 
 ### Hockney · Eastwood {#hockney1981book}
 
@@ -208,4 +557,9 @@ Hockney, R. W.; Eastwood, J. W. **Computer Simulation Using Particles**. McGraw-
 
 アトラスの関連章：[粒子重力：PM、P³M、ツリー、多重極、マルチグリッド](particle-gravity.md) · [重力核：孤立FFTと周期スラブ](gravity-boundaries.md).
 
-[出版社・書誌情報](https://doi.org/10.1201/9780367806934) · [著者・参照ページ](https://doi.org/10.1201/9780367806934) · `hockney1981book`
+<p class="book-links"><a class="book-purchase" href="https://www.amazon.co.jp/dp/007029108X" target="_blank" rel="noopener">Amazon Japan ↗</a>
+<a href="https://doi.org/10.1201/9780367806934" target="_blank" rel="noopener">出版社・書誌情報 ↗</a>
+<code>hockney1981book</code></p>
+
+</div>
+</section>

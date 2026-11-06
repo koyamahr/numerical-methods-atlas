@@ -19,7 +19,14 @@
             "stability",
             "meshes",
             "time-integration"
-          ]
+          ],
+          "isbn": "9780750665940",
+          "cover": {
+            "available": false,
+            "checked_on": "2026-11-06",
+            "record": "https://openlibrary.org/books/OL16724935M",
+            "note": "The registered image is a scanned title page rather than the book cover."
+          }
         },
         {
           "reference": "fletcher1991v1",
@@ -32,7 +39,14 @@
             "stability",
             "fem",
             "elliptic"
-          ]
+          ],
+          "isbn": "9783540530589",
+          "cover": {
+            "available": true,
+            "checked_on": "2026-11-06",
+            "record": "https://openlibrary.org/books/OL1864352M",
+            "image_id": 2225072
+          }
         },
         {
           "reference": "fletcher1991v2",
@@ -45,7 +59,14 @@
             "incompressible",
             "advanced",
             "coordinates-viscosity"
-          ]
+          ],
+          "isbn": "9783540536017",
+          "cover": {
+            "available": false,
+            "checked_on": "2026-11-06",
+            "record": "https://openlibrary.org/books/OL22836672M",
+            "note": "No cover is registered for this edition in the checked Open Library record."
+          }
         },
         {
           "reference": "ferziger2020",
@@ -57,7 +78,14 @@
           "chapters": [
             "incompressible",
             "coordinates-viscosity"
-          ]
+          ],
+          "isbn": "9783319996912",
+          "cover": {
+            "available": true,
+            "checked_on": "2026-11-06",
+            "record": "https://openlibrary.org/books/OL28194625M",
+            "image_id": 10130550
+          }
         },
         {
           "reference": "patankar1980",
@@ -69,7 +97,14 @@
           "chapters": [
             "incompressible",
             "reconstruction"
-          ]
+          ],
+          "isbn": "9780891165224",
+          "cover": {
+            "available": true,
+            "checked_on": "2026-11-06",
+            "record": "https://openlibrary.org/books/OL14752701M",
+            "image_id": 12927123
+          }
         }
       ]
     },
@@ -84,14 +119,21 @@
           "reference": "leveque2002",
           "label": "LeVeque / finite volume",
           "purpose": {
-            "en": "Use this for weak solutions, finite-volume reasoning, wave propagation, limiters and multidimensional conservation laws. Companion Clawpack material connects the theory to computation. The requested paperback ISBN 0521009243 is this book, whose publisher title is Finite Volume Methods for Hyperbolic Problems.",
-            "ja": "弱解、有限体積法の考え方、波の伝播、リミター、多次元保存則を調べるときに。Clawpack関連資料から理論と実装を結びつけられます。 ご指定のペーパーバックISBN 0521009243はこの本です。出版社の正式題名はFinite Volume Methods for Hyperbolic Problemsです。"
+            "en": "Use this for weak solutions, finite-volume reasoning, wave propagation, limiters and multidimensional conservation laws. Companion Clawpack material connects the theory to computation.",
+            "ja": "弱解、有限体積法の考え方、波の伝播、リミター、多次元保存則を調べるときに。Clawpack関連資料から理論と実装を結びつけられます。"
           },
           "chapters": [
             "reconstruction",
             "limiters",
             "equation-gallery"
-          ]
+          ],
+          "isbn": "9780521009249",
+          "cover": {
+            "available": true,
+            "checked_on": "2026-11-06",
+            "record": "https://openlibrary.org/books/OL7713017M",
+            "image_id": 328569
+          }
         },
         {
           "reference": "toro2009",
@@ -104,20 +146,34 @@
             "advanced",
             "reconstruction",
             "benchmarks"
-          ]
+          ],
+          "isbn": "9783540252023",
+          "cover": {
+            "available": true,
+            "checked_on": "2026-11-06",
+            "record": "https://openlibrary.org/books/OL9898238M",
+            "image_id": 7368028
+          }
         },
         {
           "reference": "godlewski1996book",
           "label": "Godlewski · Raviart",
           "purpose": {
-            "en": "Use this for a mathematical treatment of nonlinear hyperbolic systems and their numerical approximation, including Riemann problems and gas dynamics. Read it alongside LeVeque for finite-volume reasoning and Toro for solver construction. This entry cites the requested 1996 first edition; a [revised second edition appeared in 2021](https://link.springer.com/book/10.1007/978-1-0716-1344-3).",
-            "ja": "非線形双曲型保存則系とその数値近似を数学的に学び、Riemann問題や気体力学を詳しく調べるための本です。有限体積法の考え方にはLeVeque、ソルバーの構成にはToroを併読するとつながります。この項目はご指定の1996年初版を引用し、[2021年の改訂第2版](https://link.springer.com/book/10.1007/978-1-0716-1344-3)も案内します。"
+            "en": "Use this for a mathematical treatment of nonlinear hyperbolic systems and their numerical approximation, including Riemann problems and gas dynamics. Read it alongside LeVeque for finite-volume reasoning and Toro for solver construction. This entry cites the 1996 first edition; a [revised second edition appeared in 2021](https://link.springer.com/book/10.1007/978-1-0716-1344-3).",
+            "ja": "非線形双曲型保存則系とその数値近似を数学的に学び、Riemann問題や気体力学を詳しく調べるための本です。有限体積法の考え方にはLeVeque、ソルバーの構成にはToroを併読するとつながります。この項目は1996年初版を引用し、[2021年の改訂第2版](https://link.springer.com/book/10.1007/978-1-0716-1344-3)も案内します。"
           },
           "chapters": [
             "advanced",
             "reconstruction",
             "accuracy-stability"
-          ]
+          ],
+          "isbn": "9780387945293",
+          "cover": {
+            "available": true,
+            "checked_on": "2026-11-06",
+            "record": "https://openlibrary.org/books/OL976467M",
+            "image_id": 245411
+          }
         }
       ]
     },
@@ -139,7 +195,14 @@
             "accuracy-stability",
             "time-integration",
             "elliptic"
-          ]
+          ],
+          "isbn": "9780898716290",
+          "cover": {
+            "available": false,
+            "checked_on": "2026-11-06",
+            "record": "https://openlibrary.org/books/OL9597259M",
+            "note": "The ISBN cover returned Numerical Methods for Special Functions by Gil, Segura and Temme, a different book; excluded after visual inspection."
+          }
         },
         {
           "reference": "golub2013",
@@ -151,7 +214,14 @@
           "chapters": [
             "sparse-nonlinear",
             "elliptic"
-          ]
+          ],
+          "isbn": "9781421407944",
+          "cover": {
+            "available": true,
+            "checked_on": "2026-11-06",
+            "record": "https://openlibrary.org/books/OL27306100M",
+            "image_id": 8779096
+          }
         },
         {
           "reference": "saad2003book",
@@ -163,7 +233,14 @@
           "chapters": [
             "sparse-nonlinear",
             "elliptic"
-          ]
+          ],
+          "isbn": "9780898715347",
+          "cover": {
+            "available": true,
+            "checked_on": "2026-11-06",
+            "record": "https://openlibrary.org/books/OL3566942M",
+            "image_id": 698819
+          }
         },
         {
           "reference": "templates1994",
@@ -175,7 +252,14 @@
           "chapters": [
             "sparse-nonlinear",
             "elliptic"
-          ]
+          ],
+          "isbn": "9780898713282",
+          "cover": {
+            "available": true,
+            "checked_on": "2026-11-06",
+            "record": "https://openlibrary.org/books/OL1152306M",
+            "image_id": 698646
+          }
         }
       ]
     },
@@ -196,7 +280,14 @@
           "chapters": [
             "elliptic",
             "sparse-nonlinear"
-          ]
+          ],
+          "isbn": "9780898714623",
+          "cover": {
+            "available": true,
+            "checked_on": "2026-11-06",
+            "record": "https://openlibrary.org/books/OL6779456M",
+            "image_id": 698765
+          }
         },
         {
           "reference": "trottenberg2001",
@@ -209,7 +300,14 @@
             "elliptic",
             "sparse-nonlinear",
             "particle-gravity"
-          ]
+          ],
+          "isbn": "9780127010700",
+          "cover": {
+            "available": true,
+            "checked_on": "2026-11-06",
+            "record": "https://openlibrary.org/books/OL7329264M",
+            "image_id": 1100584
+          }
         }
       ]
     },
@@ -230,7 +328,14 @@
           "chapters": [
             "experiments",
             "basis-functions"
-          ]
+          ],
+          "isbn": "9780898714654",
+          "cover": {
+            "available": true,
+            "checked_on": "2026-11-06",
+            "record": "https://openlibrary.org/books/OL8271871M",
+            "image_id": 698768
+          }
         },
         {
           "reference": "hesthaven2008book",
@@ -242,7 +347,14 @@
           "chapters": [
             "basis-functions",
             "experiments"
-          ]
+          ],
+          "isbn": "9780387720654",
+          "cover": {
+            "available": true,
+            "checked_on": "2026-11-06",
+            "record": "https://openlibrary.org/books/OL10154752M",
+            "image_id": 2412519
+          }
         }
       ]
     },
@@ -263,7 +375,14 @@
           "chapters": [
             "symplectic",
             "time-integration"
-          ]
+          ],
+          "isbn": "9783540306634",
+          "cover": {
+            "available": true,
+            "checked_on": "2026-11-06",
+            "record": "https://openlibrary.org/books/OL9056139M",
+            "image_id": 2221190
+          }
         },
         {
           "reference": "durran2010",
@@ -275,7 +394,14 @@
           "chapters": [
             "geophysical-grids",
             "runge-kutta"
-          ]
+          ],
+          "isbn": "9781441964113",
+          "cover": {
+            "available": true,
+            "checked_on": "2026-11-06",
+            "record": "https://openlibrary.org/books/OL25321547M",
+            "image_id": 8701007
+          }
         },
         {
           "reference": "hockney1981book",
@@ -287,7 +413,14 @@
           "chapters": [
             "particle-gravity",
             "gravity-boundaries"
-          ]
+          ],
+          "isbn": "9780070291089",
+          "cover": {
+            "available": false,
+            "checked_on": "2026-11-06",
+            "record": "https://openlibrary.org/books/OL4115362M",
+            "note": "The registered image is a scanned title page rather than the book cover."
+          }
         }
       ]
     }
