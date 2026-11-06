@@ -88,11 +88,13 @@ Burgers・LWR交通流を含む7系統9ケースの保存分布を追加し、�
 
 **状態：改訂候補。以下の専用解説・実装・検証はまだ追加していません。** 第1巻の共通基盤につながる安定な関数評価、自動微分、最適化を先に扱い、科学技術機械学習の応用は後続の候補とします。予定項目を実装済み手法数には加えず、公開時期も未定です。
 
+混合精度演算・低精度GPU計算の設計は、今回のスコープから外します。通常の浮動小数点の丸め誤差と、安定な関数評価は共通基礎として扱います。
+
 - [ ] **softmaxとlog-sum-exp**：最大値を引くシフト、log-softmax、指数関数のオーバーフローとアンダーフロー。大きな入力、定数シフトに対する不変性、確率和、微分の整合性を検証候補とします。[SciPyのsoftmax解説](https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.softmax.html)を参照します。
 - [ ] **交差エントロピーと安定な損失評価**：確率を経由せずlogitsから計算する方法、log-sum-expとの関係、sigmoidと二値交差エントロピー。極端な入力での有限値と解析的な勾配を確認します。[PyTorchの交差エントロピー解説](https://docs.pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html)を出発点とします。
 - [ ] **自動微分・逆伝播**：前進／逆モード、連鎖律、Jacobian–vector積（JVP）、vector–Jacobian積（VJP）、Hessian–vector積。記号微分・有限差分との違い、丸め誤差、非微分点、保存する中間値とメモリの関係を扱います。[JAXの自動微分解説](https://docs.jax.dev/en/latest/301/index.html)を参照し、解析微分・方向微分との比較を計画します。
 - [ ] **陰関数微分・随伴法と微分可能なソルバー**：線形求解、収束した非線形系、時間発展を通した感度計算。反復を展開して微分する方法と、方程式から微分する方法を区別し、Jacobianの可逆性、求解許容誤差、勾配検査を明記します。[陰関数微分の原論文](https://papers.neurips.cc/paper_files/paper/2022/file/228b9279ecf9bbafe582406850c57115-Paper-Conference.pdf)を調査の入口とします。
-- [ ] **機械学習向け最適化と低精度演算**：勾配降下・SGD、momentum、Adam、L-BFGS、Gauss–Newton／Levenberg–Marquardt。既存のNewtonによる方程式求解と目的関数の最小化を区別し、尺度・条件数、学習率、勾配ノルム、総和と混合精度の影響を比較します。すべての目的関数に対する収束保証や優劣は主張しません。
+- [ ] **機械学習向け最適化**：勾配降下・SGD、momentum、Adam、L-BFGS、Gauss–Newton／Levenberg–Marquardt。既存のNewtonによる方程式求解と目的関数の最小化を区別し、尺度・条件数、学習率、勾配ノルムを比較します。すべての目的関数に対する収束保証や優劣は主張しません。
 - [ ] **応用候補 — PINNsと逆問題**：PDE残差、初期・境界条件、観測データの損失を分け、通常の差分・FEMと同じ誤差指標で比較します。学習損失の低下だけをPDE解の精度保証とはしません。[PINNsの著者解説](https://maziarraissi.github.io/PINNs/)と[失敗モードの研究](https://papers.nips.cc/paper_files/paper/2021/hash/df438e5206f31600e6ae4af72f2725f1-Abstract.html)を参照します。
 - [ ] **応用候補 — Neural Operator／Fourier Neural Operator**：入力関数から解関数への写像を学習する考え方を、既存のFourier基底・スペクトル法と接続します。学習分布外、格子変更、離散化・aliasing誤差を独立に確認する計画とし、格子を変更できることだけで精度を保証しません。[Neural Operator原論文](https://www.jmlr.org/papers/volume24/21-1524/21-1524.pdf)を参照します。
 - [ ] **応用候補 — 記号回帰と方程式発見**：データや学習モデルから明示的な数式を探す方法。微分の自動計算と区別し、ノイズ、次元・対称性、式の複雑さ、別データでの再現性を評価します。[深層学習から記号モデルを抽出する研究](https://proceedings.neurips.cc/paper_files/paper/2020/hash/c9f2f917078bd2db12f23c3b413d9cba-Abstract.html)を調査候補とします。

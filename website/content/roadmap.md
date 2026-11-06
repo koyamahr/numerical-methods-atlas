@@ -162,6 +162,10 @@ automatic differentiation and optimization as shared foundations for Volume 1.
 Scientific machine-learning applications are later candidates. These plans do
 not add to implemented-method counts, and no release date is assigned.
 
+Mixed-precision arithmetic and the design of low-precision GPU computations are
+outside the current scope. Ordinary floating-point roundoff and stable function
+evaluation remain part of the shared foundations.
+
 - [ ] **Softmax and log-sum-exp:** maximum shifting, log-softmax, exponential
   overflow and underflow. Plan checks for large inputs, invariance under constant
   shifts, probability sums and derivative consistency. See the
@@ -182,11 +186,11 @@ not add to implemented-method counts, and no release date is assigned.
   equations; state Jacobian invertibility, solve tolerances and gradient checks.
   The [implicit-differentiation paper](https://papers.neurips.cc/paper_files/paper/2022/file/228b9279ecf9bbafe582406850c57115-Paper-Conference.pdf)
   is a starting reference.
-- [ ] **Machine-learning optimization and low-precision arithmetic:** gradient
+- [ ] **Machine-learning optimization:** gradient
   descent/SGD, momentum, Adam, L-BFGS and Gauss–Newton/Levenberg–Marquardt.
   Distinguish objective minimization from the existing Newton root solves;
-  compare scaling, conditioning, learning rates, gradient norms, summation and
-  mixed precision. Do not claim universal convergence or a universal ranking.
+  compare scaling, conditioning, learning rates and gradient norms.
+  Do not claim universal convergence or a universal ranking.
 - [ ] **Application candidate — PINNs and inverse problems:** separate PDE,
   initial/boundary and observation losses; compare with conventional finite
   differences/FEM using shared error measures. A lower training loss alone is
