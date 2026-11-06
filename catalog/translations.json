@@ -44,7 +44,7 @@
     "elliptic": {
       "ja": {
         "status": "draft",
-        "source_sha256": "c288ef1927e03281ac83f0e12e6a22a500c9c66e77fb47aa014867fc1c38cb9d",
+        "source_sha256": "fe571ec9d906b5c25f1c60e7d97031bdac764a2f3f4a52be49e5983058f71148",
         "checked_on": null
       }
     },
@@ -310,7 +310,7 @@
     "textbooks": {
       "ja": {
         "status": "draft",
-        "source_sha256": "60e73f13b3c7f5c954aebe1bdca1c8cc4efa5f8db890f47ec16614e813b8d32c",
+        "source_sha256": "c9ffa7ab9ff4b07163140657050e3cb367ce6eccf56b3b90b6667e3494e920ae",
         "checked_on": null
       }
     }

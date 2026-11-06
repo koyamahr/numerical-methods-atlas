@@ -167,6 +167,40 @@
       ]
     },
     {
+      "id": "multigrid",
+      "title": {
+        "en": "Multigrid: intuition, analysis and implementation",
+        "ja": "マルチグリッド：直観・解析・実装"
+      },
+      "books": [
+        {
+          "reference": "briggs2000book",
+          "label": "Briggs · Henson · McCormick / A Multigrid Tutorial",
+          "purpose": {
+            "en": "Start here for why relaxation damps oscillatory error while coarse grids address the remaining smooth error. Follow the model problems into residual correction, restriction, prolongation and a working multigrid cycle. The second edition also introduces nonlinear problems and AMG.",
+            "ja": "緩和法が振動的な誤差を減らし、粗格子が残った滑らかな誤差を扱う理由を知る入口です。モデル問題から残差補正、制限・延長、マルチグリッドサイクルの実装へ進めます。第2版では非線形問題やAMGも導入します。"
+          },
+          "chapters": [
+            "elliptic",
+            "sparse-nonlinear"
+          ]
+        },
+        {
+          "reference": "trottenberg2001",
+          "label": "Trottenberg · Oosterlee · Schüller / Multigrid",
+          "purpose": {
+            "en": "Use this as the detailed reference after the tutorial: elementary multigrid theory, local Fourier analysis, smoother and coarse-grid choices, parallel implementation, systems and an AMG appendix. For the atlas Poisson comparison, use it to ask why a cycle converges and how its work changes; AMG, anisotropy and parallel performance need separate implementations and tests.",
+            "ja": "入門の次に引く詳しい参考書です。マルチグリッドの基礎理論、局所Fourier解析、スムーザーと粗格子の選び方、並列実装、連立系、付録のAMGを調べられます。アトラスのPoisson比較では、サイクルが収束する理由と仕事量を考えるために参照します。AMG・異方性・並列性能には個別の実装と検証が必要です。"
+          },
+          "chapters": [
+            "elliptic",
+            "sparse-nonlinear",
+            "particle-gravity"
+          ]
+        }
+      ]
+    },
+    {
       "id": "high-order",
       "title": {
         "en": "Spectral bases and discontinuous Galerkin",

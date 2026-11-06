@@ -124,6 +124,28 @@ Atlas connections: [Sparse and nonlinear systems: measure the actual residual](s
 
 [Publisher / bibliographic record](https://www.netlib.org/templates/templates.html) · [Author / source page](https://www.netlib.org/templates/templates.html) · `templates1994`
 
+## Multigrid: intuition, analysis and implementation {#multigrid}
+
+### Briggs · Henson · McCormick / A Multigrid Tutorial {#briggs2000book}
+
+Briggs, William L.; Henson, Van Emden; McCormick, Steve F. **A Multigrid Tutorial**. SIAM, 2000 · edition 2.
+
+Start here for why relaxation damps oscillatory error while coarse grids address the remaining smooth error. Follow the model problems into residual correction, restriction, prolongation and a working multigrid cycle. The second edition also introduces nonlinear problems and AMG.
+
+Atlas connections: [Diffusion, elliptic equations, boundary conditions, and iteration](elliptic.md) · [Sparse and nonlinear systems: measure the actual residual](sparse-nonlinear.md).
+
+[Publisher / bibliographic record](https://doi.org/10.1137/1.9780898719505) · [Author / source page](https://epubs.siam.org/doi/book/10.1137/1.9780898719505) · `briggs2000book`
+
+### Trottenberg · Oosterlee · Schüller / Multigrid {#trottenberg2001}
+
+Trottenberg, Ulrich; Oosterlee, Cornelius W.; Schüller, Anton. **Multigrid**. Academic Press, 2001 · edition 1.
+
+Use this as the detailed reference after the tutorial: elementary multigrid theory, local Fourier analysis, smoother and coarse-grid choices, parallel implementation, systems and an AMG appendix. For the atlas Poisson comparison, use it to ask why a cycle converges and how its work changes; AMG, anisotropy and parallel performance need separate implementations and tests.
+
+Atlas connections: [Diffusion, elliptic equations, boundary conditions, and iteration](elliptic.md) · [Sparse and nonlinear systems: measure the actual residual](sparse-nonlinear.md) · [Particle gravity: PM, P³M, Tree, multipoles, and multigrid](particle-gravity.md).
+
+[Publisher / bibliographic record](https://shop.elsevier.com/books/multigrid/trottenberg/978-0-08-047956-9) · [Author / source page](https://shop.elsevier.com/books/multigrid/trottenberg/978-0-08-047956-9) · `trottenberg2001`
+
 ## Spectral bases and discontinuous Galerkin {#high-order}
 
 ### Trefethen {#trefethen2000}

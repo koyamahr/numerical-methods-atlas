@@ -1606,6 +1606,22 @@ Original publisher abstract inspected for multidimensional Godunov-type relativi
 
 </div>
 
+## 2000 · briggs2000book {#2000-briggs2000book}
+
+<div lang="en" data-original>
+
+Briggs, William L. and Henson, Van Emden and McCormick, Steve F.. **A Multigrid Tutorial**. SIAM.
+
+</div>
+
+[原著の書誌情報](https://doi.org/10.1137/1.9780898719505) · [全文または実装の参照資料](https://epubs.siam.org/doi/book/10.1137/1.9780898719505)
+
+<div lang="en" data-original>
+
+Publisher book record, contents and front-matter metadata checked. Second edition published in 2000; the 2012 online publication date is a later digital issue. Introductory reading on smoothing, coarse-grid correction, implementation, nonlinear problems and AMG. The atlas geometric Poisson V-cycle is a limited educational baseline, not a reproduction of the entire book.
+
+</div>
+
 ## 2000 · elowitz2000 {#2000-elowitz2000}
 
 <div lang="en" data-original>
@@ -1699,6 +1715,22 @@ Pandolfi, Maurizio and D’Ambrosio, Domenic. **Numerical Instabilities in Upwin
 <div lang="en" data-original>
 
 Publisher record and abstract. Linearized shock-instability analysis and localized cures; the proposed methods are not implemented in this edition.
+
+</div>
+
+## 2001 · trottenberg2001 {#2001-trottenberg2001}
+
+<div lang="en" data-original>
+
+Trottenberg, Ulrich and Oosterlee, Cornelius W. and Schüller, Anton. **Multigrid**. Academic Press.
+
+</div>
+
+[原著の書誌情報](https://shop.elsevier.com/books/multigrid/trottenberg/978-0-08-047956-9) · [全文または実装の参照資料](https://shop.elsevier.com/books/multigrid/trottenberg/978-0-08-047956-9)
+
+<div lang="en" data-original>
+
+Publisher first-edition description and contents checked. Uses the conventional 2001 bibliographic year, also cited in Elsevier reference material; the current publisher shop lists release on November 20, 2000. Reference for multigrid theory, local Fourier analysis, parallel methods, systems and AMG. Full text not audited; these topics are not all implemented in the atlas.
 
 </div>
 

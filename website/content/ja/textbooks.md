@@ -124,6 +124,28 @@ Barrett, Richard; Berry, Michael; Chan, Tony F.; Demmel, James; Donato, June; Do
 
 [出版社・書誌情報](https://www.netlib.org/templates/templates.html) · [著者・参照ページ](https://www.netlib.org/templates/templates.html) · `templates1994`
 
+## マルチグリッド：直観・解析・実装 {#multigrid}
+
+### Briggs · Henson · McCormick / A Multigrid Tutorial {#briggs2000book}
+
+Briggs, William L.; Henson, Van Emden; McCormick, Steve F. **A Multigrid Tutorial**. SIAM, 2000・第2版.
+
+緩和法が振動的な誤差を減らし、粗格子が残った滑らかな誤差を扱う理由を知る入口です。モデル問題から残差補正、制限・延長、マルチグリッドサイクルの実装へ進めます。第2版では非線形問題やAMGも導入します。
+
+アトラスの関連章：[拡散、楕円型方程式、境界条件、反復法](elliptic.md) · [疎行列・非線形方程式系：真の残差を測る](sparse-nonlinear.md).
+
+[出版社・書誌情報](https://doi.org/10.1137/1.9780898719505) · [著者・参照ページ](https://epubs.siam.org/doi/book/10.1137/1.9780898719505) · `briggs2000book`
+
+### Trottenberg · Oosterlee · Schüller / Multigrid {#trottenberg2001}
+
+Trottenberg, Ulrich; Oosterlee, Cornelius W.; Schüller, Anton. **Multigrid**. Academic Press, 2001・第1版.
+
+入門の次に引く詳しい参考書です。マルチグリッドの基礎理論、局所Fourier解析、スムーザーと粗格子の選び方、並列実装、連立系、付録のAMGを調べられます。アトラスのPoisson比較では、サイクルが収束する理由と仕事量を考えるために参照します。AMG・異方性・並列性能には個別の実装と検証が必要です。
+
+アトラスの関連章：[拡散、楕円型方程式、境界条件、反復法](elliptic.md) · [疎行列・非線形方程式系：真の残差を測る](sparse-nonlinear.md) · [粒子重力：PM、P³M、ツリー、多重極、マルチグリッド](particle-gravity.md).
+
+[出版社・書誌情報](https://shop.elsevier.com/books/multigrid/trottenberg/978-0-08-047956-9) · [著者・参照ページ](https://shop.elsevier.com/books/multigrid/trottenberg/978-0-08-047956-9) · `trottenberg2001`
+
 ## スペクトル基底と不連続Galerkin法 {#high-order}
 
 ### Trefethen {#trefethen2000}

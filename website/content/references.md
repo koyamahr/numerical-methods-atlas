@@ -805,6 +805,14 @@ Komissarov, S. S.. **A Godunov-type scheme for relativistic magnetohydrodynamics
 
 Original publisher abstract inspected for multidimensional Godunov-type relativistic MHD and magnetic-flux conservation. Historical reading, not an implemented RMHD method.
 
+## 2000 · briggs2000book
+
+Briggs, William L. and Henson, Van Emden and McCormick, Steve F.. **A Multigrid Tutorial**. SIAM.
+
+[Original bibliographic record](https://doi.org/10.1137/1.9780898719505) · [Full text or implementation reference](https://epubs.siam.org/doi/book/10.1137/1.9780898719505)
+
+Publisher book record, contents and front-matter metadata checked. Second edition published in 2000; the 2012 online publication date is a later digital issue. Introductory reading on smoothing, coarse-grid correction, implementation, nonlinear problems and AMG. The atlas geometric Poisson V-cycle is a limited educational baseline, not a reproduction of the entire book.
+
 ## 2000 · elowitz2000
 
 Elowitz, Michael B. and Leibler, Stanislas. **A synthetic oscillatory network of transcriptional regulators**. Nature.
@@ -852,6 +860,14 @@ Pandolfi, Maurizio and D’Ambrosio, Domenic. **Numerical Instabilities in Upwin
 [Original bibliographic record](https://doi.org/10.1006/jcph.2000.6652) · [Full text or implementation reference](https://www.sciencedirect.com/science/article/pii/S002199910096652X)
 
 Publisher record and abstract. Linearized shock-instability analysis and localized cures; the proposed methods are not implemented in this edition.
+
+## 2001 · trottenberg2001
+
+Trottenberg, Ulrich and Oosterlee, Cornelius W. and Schüller, Anton. **Multigrid**. Academic Press.
+
+[Original bibliographic record](https://shop.elsevier.com/books/multigrid/trottenberg/978-0-08-047956-9) · [Full text or implementation reference](https://shop.elsevier.com/books/multigrid/trottenberg/978-0-08-047956-9)
+
+Publisher first-edition description and contents checked. Uses the conventional 2001 bibliographic year, also cited in Elsevier reference material; the current publisher shop lists release on November 20, 2000. Reference for multigrid theory, local Fourier analysis, parallel methods, systems and AMG. Full text not audited; these topics are not all implemented in the atlas.
 
 ## 2001 · yabe2001csl
 

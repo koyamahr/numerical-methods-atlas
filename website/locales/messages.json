@@ -6175,5 +6175,9 @@
   "books.nav": {
     "en": "Textbook reading guide",
     "ja": "教科書案内"
+  },
+  "poisson.multigrid-books": {
+    "en": "Multigrid textbooks ↗",
+    "ja": "マルチグリッドの教科書 ↗"
   }
 }

@@ -114,6 +114,8 @@ coefficients, anisotropy, curved grids, AMG, and FAS are outside this edition.
 [Fedorenko (1961)](https://www.mathnet.ru/eng/zvmmf8014),
 [Brandt (1977)](https://doi.org/10.1090/S0025-5718-1977-0431719-X).
 
+For a teaching path, start with [Briggs–Henson–McCormick, *A Multigrid Tutorial*, second edition (2000)](https://doi.org/10.1137/1.9780898719505), then use [Trottenberg–Oosterlee–Schüller, *Multigrid*](https://shop.elsevier.com/books/multigrid/trottenberg/978-0-08-047956-9) for local Fourier analysis, algorithm design and advanced applications. The [textbook guide](#/read/textbooks?section=multigrid) explains where each book fits. Their broader scope includes methods beyond the geometric V-cycle implemented here.
+
 ## Particle and disk gravity
 
 The new [particle-gravity chapter](particle-gravity.md) connects PM, P³M, Tree, multipoles, and multigrid. [Gravity boundary kernels](gravity-boundaries.md) adds Hockney–Eastwood isolated convolution and Koyama–Ostriker slab Fourier kernels. The existing multigrid example retains its 2D zero-Dirichlet operator; it is not a 3D open-boundary gravity solver.

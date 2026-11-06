@@ -66,6 +66,8 @@ Dirichlet条件は値`u=g_D`、Neumann条件は外向き法線微分`∂u/∂n=g
 
 各辺の内部節点数は`N=2^k-1`です。粗格子では5点演算子を再離散化し、未知数が1つの最粗格子は直接解きます。テストでは補間、制限、格子間隔、境界の整合性を確認します。変係数、異方性、曲線格子、代数マルチグリッド（AMG）、完全近似方式（FAS）は初版の範囲外です。[Fedorenko（1961）](https://www.mathnet.ru/eng/zvmmf8014)、[Brandt（1977）](https://doi.org/10.1090/S0025-5718-1977-0431719-X)。
 
+学習の入口には[Briggs–Henson–McCormick『A Multigrid Tutorial』第2版（2000）](https://doi.org/10.1137/1.9780898719505)、局所Fourier解析・アルゴリズム設計・発展的応用を詳しく調べるには[Trottenberg–Oosterlee–Schüller『Multigrid』](https://shop.elsevier.com/books/multigrid/trottenberg/978-0-08-047956-9)を参照してください。[教科書案内](#/read/textbooks?section=multigrid)で使い分けを説明しています。両書は、ここで実装した幾何Vサイクルより広い範囲を扱います。
+
 ## 粒子と円盤の重力 {#particle-and-disk-gravity}
 
 [粒子重力の章](particle-gravity.md)はPM、P³M、ツリー、多重極、マルチグリッドをつなぎます。[重力境界核](gravity-boundaries.md)はHockney–Eastwoodの孤立畳み込みとKoyama–OstrikerのスラブFourier核を加えます。既存のマルチグリッド例は2次元ゼロDirichlet演算子を維持し、3次元開放境界の重力ソルバーではありません。
