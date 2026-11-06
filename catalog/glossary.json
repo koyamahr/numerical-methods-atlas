@@ -852,6 +852,36 @@
       "en": "HLLD MHD Riemann solver",
       "ja": "HLLDのMHDリーマン解法",
       "chapter": "mhd"
+    },
+    {
+      "id": "method.ppm",
+      "en": "Limited PPM reconstruction",
+      "ja": "制限付きPPM再構成",
+      "chapter": "reconstruction"
+    },
+    {
+      "id": "method.characteristic-reconstruction",
+      "en": "Euler characteristic reconstruction",
+      "ja": "Eulerの特性変数再構成",
+      "chapter": "reconstruction"
+    },
+    {
+      "id": "method.weno-z",
+      "en": "FD WENO5-Z",
+      "ja": "有限差分WENO5-Z",
+      "chapter": "reconstruction"
+    },
+    {
+      "id": "method.ausm",
+      "en": "AUSM-family flux splitting",
+      "ja": "AUSM系列の流束分割",
+      "chapter": "reconstruction"
+    },
+    {
+      "id": "concept.roe-property-u",
+      "en": "Roe's Property U",
+      "ja": "RoeのProperty U",
+      "chapter": "advanced"
     }
   ]
 }

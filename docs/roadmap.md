@@ -1,5 +1,10 @@
 # Implementation roadmap
 
+## Current priority: shock methods
+
+Shock-method expansion takes priority over relativity and new subject areas.
+The first published stage adds [limited parabolic FV, characteristics, WENO-Z and an AUSM baseline](reconstruction.md), [Roe's Property U with numerical counterexamples](advanced.md#roes-property-u), and [controlled planar odd–even diagnostics](carbuncle.md). Original PPM wave tracing/contact steepening/shock flattening, AUSM+/AUSM+-up, blunt-body carbuncle tests and rotated-hybrid schemes remain the next steps in this priority group. They are not silently marked complete by the scoped experiments.
+
 ## First edition: executable foundations
 
 Version 0.1.0 brings together an educational Python library, a historical atlas,
@@ -72,7 +77,7 @@ The [experiment guide](experiments.md) records definitions and provenance.
 
 Added seven scalar ODE integrators with a temporal notebook; three mesh-connectivity examples with an explorer; 1D SPH kernel reconstruction; a 1D ALE geometric-conservation check; and cylindrical gradient, Newtonian stress, and stress-divergence operators verified against analytic fields. The [coordinate and viscosity chapter](coordinates-viscosity.md) distinguishes physical components from coordinate-basis tensors.
 
-[The 2D Double Mach Reflection baseline](double-mach.md) now computes an actual Mach-10 interaction with first-order HLL and SSPRK2. Higher-order reconstruction, full grid refinement, and resolution of the fine wall jet remain future work. The NASA wedge baselines were added later; the cataloged viscous and turbulence cases remain unimplemented. [Carbuncle comparisons](carbuncle.md), a complete SPH fluid solver, unstructured flow fluxes, and a complete ALE Euler solver also remain future work. [The Roe memorial](roe-memorial.md) is sourced from official university records.
+[The 2D Double Mach Reflection baseline](double-mach.md) now computes an actual Mach-10 interaction with first-order HLL and SSPRK2. Higher-order reconstruction, full grid refinement, and resolution of the fine wall jet remain future work. The NASA wedge baselines were added later; the cataloged viscous and turbulence cases remain unimplemented. [Blunt-body carbuncle comparisons beyond the new planar diagnostic](carbuncle.md), a complete SPH fluid solver, unstructured flow fluxes, and a complete ALE Euler solver also remain future work. [The Roe memorial](roe-memorial.md) is sourced from official university records.
 
 ## Third expansion: Hamiltonian maps and particle gravity
 
@@ -103,11 +108,7 @@ implementation limits and remaining verification work are stated in each chapter
 
 ## Authorized next work
 
-- **Planned explanation — Roe's Property U:** present the four original
-  conditions, derive the Roe averages, explain recognition of a single
-  Rankine–Hugoniot discontinuity, and distinguish these properties from the
-  entropy condition and entropy fixes. Add numerical checks of the jump
-  relation alongside the explanation. This expanded treatment is pending.
+- **Added — Roe's Property U:** original four conditions, parameter-vector derivation, jump/consistency/eigenbasis checks and an expansion-discontinuity counterexample; see [the explanation](advanced.md#roes-property-u).
 - Inutsuka's GSPH: Gaussian convolution and specific-volume reconstruction,
   oriented pair Riemann states, a matched conservative energy update, and
   smooth/contact/shock-tube verification before variable smoothing lengths.
@@ -117,7 +118,8 @@ implementation limits and remaining verification work are stated in each chapter
   and characteristic tests before SRMHD, fixed-metric GR, and independently
   verified Einstein–matter coupling. Radiation and SRGSPH are separate branches;
   see the [development review checked in November 2026](relativistic-hydrodynamics.md).
-- PPM, characteristic reconstruction, and WENO-Z with controlled shock/contact comparisons.
+- **First stage added:** limited parabolic FV, conservative characteristics and FD WENO-Z with Sod/contact/Shu–Osher comparisons. Complete original PPM features remain pending; see [the scope](reconstruction.md).
+- AUSM common-sound-speed/cubic-pressure baseline added; AUSM+ and AUSM+-up are planned separately.
 - **Completed web stage:** HLLD with Brio–Wu, Alfvén-wave refinement and weak field-loop CT-Contact/GLM comparisons; see the [MHD tests](#/mhd-tests).
 - **Planned — electromagnetic FDTD (finite-difference time-domain):** Yee-grid
   placement, leapfrog Maxwell updates, CFL limits and numerical dispersion;

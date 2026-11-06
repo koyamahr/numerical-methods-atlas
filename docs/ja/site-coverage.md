@@ -2,9 +2,9 @@
 
 公開Web版、集計日2026-11-06。数えるのはカタログ項目と記載した実験例です。すべての項目が検証済みの完全なソルバーであるという意味ではありません。
 
-**方程式・モデル42項目・計算法と構成要素86項目・学術誌／会議論文131件・全参考資料152件。**
+**方程式・モデル42項目・計算法と構成要素90項目・学術誌／会議論文136件・全参考資料158件。**
 
-保存済み計算を用いる方程式ギャラリーは7系統・9例、読書章はこの一覧を含め43章です。
+保存済み計算を用いる方程式ギャラリーは7系統・9例、読書章はこの一覧を含め44章です。
 
 ## 方程式とモデル {#equations-and-models}
 
@@ -71,7 +71,7 @@
 
 名前付きの離散化法、積分法、線形・非線形解法、連成演算子を数えます。パラメータの違いでは増やしません。
 
-ローカル実験のある項目は80、文献解説のみは6です。再構成の制限関数、前処理、連成演算子は構成要素であり、完全なPDEソルバーではありません。格子配置、CFL条件、定理は計算法の数に含めません。
+ローカル実験のある項目は84、文献解説のみは6です。再構成の制限関数、前処理、連成演算子は構成要素であり、完全なPDEソルバーではありません。格子配置、CFL条件、定理は計算法の数に含めません。
 
 ### 空間離散化 {#spatial-discretization}
 
@@ -88,6 +88,9 @@
 - [Fourier微分と時間発展（Fourier differentiation and evolution）](benchmarks.md) — ローカル実験あり。
 - [3次Hermite CIP（Cubic-Hermite CIP）](cip.md) — ローカル実験あり。
 - [連続P1 Galerkin有限要素法（Continuous P1 Galerkin FEM）](fem.md) — ローカル実験あり。
+- [制限付きPPM再構成（Limited PPM reconstruction）](reconstruction.md) — ローカル実験あり。 <span lang="en" data-original>Method-of-lines parabolic FV only; no original wave tracing, contact steepening, flattening or remap.</span>
+- [Eulerの特性変数再構成（Euler characteristic reconstruction）](reconstruction.md) — ローカル実験あり。 <span lang="en" data-original>Local conservative FV basis or face-frozen Roe FD basis; controlled component/characteristic comparisons.</span>
+- [有限差分WENO5-Z（FD WENO5-Z）](reconstruction.md) — ローカル実験あり。 <span lang="en" data-original>Global LF splitting, exponent 2, fixed epsilon 1e-6; point values, not FV state interpolation.</span>
 
 ### リーマン流束と修正 {#riemann-fluxes-amp-corrections}
 
@@ -99,6 +102,7 @@
 - [Roe音響波のエントロピー修正（Acoustic Roe entropy correction）](advanced.md) — ローカル実験あり。
 - [回転ハイブリッド・リーマンソルバー（Rotated-hybrid Riemann solver）](advanced.md) — 文献解説のみ。
 - [HLLDのMHDリーマン解法（HLLD MHD Riemann solver）](mhd.md) — ローカル実験あり。 <span lang="en" data-original>Full-vector adiabatic HLLD/HLLE with Brio-Wu, circular Alfven refinement and weak field-loop tests. CT-Contact and GLM, not UCT-HLLD.</span>
+- [AUSM系列の流束分割（AUSM-family flux splitting）](reconstruction.md) — ローカル実験あり。 <span lang="en" data-original>Common arithmetic sound speed and cubic pressure baseline, with 1D/2D tests. AUSM+ and AUSM+-up remain planned.</span>
 
 ### 勾配制限と許容状態 {#limiters-amp-admissibility}
 
@@ -190,12 +194,12 @@
 
 論文数は学術誌論文と会議論文です。総説、翻訳、採録済みであることを明記した論文も含みます。全参考資料は、それに書籍、章、技術資料、文書、個別に識別したプレプリント等を加えた、重複を除く出版物の数です。
 
-- 128件：学術誌論文（総説・翻訳・採録済み論文を含む）
+- 133件：学術誌論文（総説・翻訳・採録済み論文を含む）
 - 3件：会議論文
 - 7件：書籍
 - 2件：書籍の章
 - 3件：技術・教育レポート
-- 9件：その他の資料・文書・プレプリント
+- 10件：その他の資料・文書・プレプリント
 
 Cockburn–Shu 1989の重複書誌を統合し、Burgers 1948を書籍の章に分類しました。以前の146レコードには重複があり、その後の出典追加も現在の重複を除く総数に反映しています。原著と別途出版された翻訳は異なる出版物です。すべての全文を確認済みとは主張せず、確認状態を各出典注記に残します。
 

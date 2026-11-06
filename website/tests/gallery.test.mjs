@@ -15,7 +15,7 @@ test('dimension and subject filters intersect without labeling diagnostic plots 
   assert.equal(matchesGallery(three,'3','Particles & gravity'),true);
   assert.equal(matchesGallery(three,'2'),false);
   assert.equal(matchesGallery(three,'3','MHD'),false);
-  assert.equal(fieldFigures.filter(f=>matchesGallery(f,'2')).length,10);
+  assert.equal(fieldFigures.filter(f=>matchesGallery(f,'2')).length,11);
 });
 
 test('every multidimensional movie has a reachable field card',()=>{
@@ -50,7 +50,7 @@ test('shock-case artifacts retain numerical provenance and analytical comparison
     assert.ok(Math.abs(grids[1].wall_pressure_ratio_median/grids[1].pressure_ratio_exact-1)<.03);
   }
   const shocks=fieldFigures.filter(f=>matchesGallery(f,'2','2D shock interactions'));
-  assert.equal(shocks.length,4);
+  assert.equal(shocks.length,5);
 });
 
 test('movie catalogs combine all five cases without overriding existing IDs',()=>{

@@ -250,8 +250,8 @@
     "volume": "43",
     "pages": "357--372",
     "doi": "10.1016/0021-9991(81)90128-5",
-    "source": "https://www.sciencedirect.com/science/article/pii/0021999181901285",
-    "note": "Publisher bibliographic record and abstract. This edition implements 1D Euler with quadratic entropy smoothing of acoustic eigenvalues."
+    "source": "https://www.researchgate.net/publication/222453065_Approximate_Riemann_Solvers_Parameter_Vector_and_Difference_Schemes",
+    "note": "Author-uploaded original full text inspected, including the four Property U conditions on pp.359-360. Independent ideal-gas parameter-vector, eigenbasis, jump and consistency checks accompany single discontinuities and an expansion counterexample. Acoustic entropy smoothing is a separate flux modification."
   },
   {
     "id": "hll1983",
@@ -442,7 +442,7 @@
     "pages": "555--574",
     "doi": "10.1002/fld.1650180603",
     "source": "https://onlinelibrary.wiley.com/doi/10.1002/fld.1650180603",
-    "note": "Publisher record and abstract. Background for shock instability and complementary fluxes. Controlled odd-even and blunt-body carbuncle experiments remain future work."
+    "note": "Original bibliographic record and abstract; background for shock instability and complementary fluxes. The local stationary planar row-displacement diagnostic is an independent experiment, not a reproduction of the original moving-shock perturbed-grid duct. Blunt-body carbuncle tests remain pending."
   },
   {
     "id": "templates1994",
@@ -1776,5 +1776,74 @@
     "doi": "10.1016/j.jcp.2020.109748",
     "source": "https://arxiv.org/abs/2004.10542",
     "note": "Public 2020 author manuscript inspected, especially CT-Contact equations 20-22. The local shared-corner update uses contact-upwinded transverse EMF derivatives and verifies the one-dimensional face-flux limit; UCT-HLLD itself is not implemented."
+  },
+  {
+    "id": "colella1984ppm",
+    "year": 1984,
+    "author": "Colella, Phillip and Woodward, Paul R.",
+    "title": "The Piecewise Parabolic Method (PPM) for gas-dynamical simulations",
+    "journal": "Journal of Computational Physics",
+    "volume": "54",
+    "pages": "174--201",
+    "doi": "10.1016/0021-9991(84)90143-8",
+    "source": "https://escholarship.org/uc/item/5sr307f1",
+    "note": "Original 1984 journal metadata; linked public author report is the earlier July 1982 preprint and was inspected for parabolic interpolation/monotonicity. The local method-of-lines limited parabolic FV excludes wave tracing, contact steepening, shock flattening and Lagrange/remap; it is not a full original-PPM reproduction."
+  },
+  {
+    "id": "borges2008",
+    "year": 2008,
+    "author": "Borges, Rafael and Carmona, Monique and Costa, Bruno and Don, Wai Sun",
+    "title": "An improved weighted essentially non-oscillatory scheme for hyperbolic conservation laws",
+    "journal": "Journal of Computational Physics",
+    "volume": "227",
+    "pages": "3191--3211",
+    "doi": "10.1016/j.jcp.2007.11.038",
+    "source": "https://www.sciencedirect.com/science/article/abs/pii/S0021999107005232",
+    "note": "Original 2008 publisher metadata/abstract inspected. A public 2006 three-author earlier manuscript was also consulted and has different weight conventions; no complete final-paper inspection is claimed. The local FD WENO-Z variant explicitly defines tau5=abs(beta0-beta2), exponent 2 and epsilon=1e-6, with characteristic/component tests and smooth refinement."
+  },
+  {
+    "id": "liou1993",
+    "year": 1993,
+    "author": "Liou, Meng-Sing and Steffen, Christopher J., Jr.",
+    "title": "A New Flux Splitting Scheme",
+    "journal": "Journal of Computational Physics",
+    "volume": "107",
+    "pages": "23--39",
+    "doi": "10.1006/jcph.1993.1122",
+    "source": "https://www.sciencedirect.com/science/article/pii/S0021999183711228",
+    "note": "Original AUSM publisher metadata/abstract inspected; no full 1993-paper inspection is claimed. The independent local AUSM-family baseline uses common arithmetic sound speed and cubic pressure splitting, cross-checked with official FEST-3D documentation, and is not every original variant or AUSM+-up."
+  },
+  {
+    "id": "liou1996",
+    "year": 1996,
+    "author": "Liou, Meng-Sing",
+    "title": "A Sequel to AUSM: AUSM+",
+    "journal": "Journal of Computational Physics",
+    "volume": "129",
+    "pages": "364--382",
+    "doi": "10.1006/jcph.1996.0256",
+    "source": "https://www.sciencedirect.com/science/article/pii/S0021999196902569",
+    "note": "Publisher metadata/abstract inspected. AUSM+ is a separately planned extension; its original wave-speed/pressure choices and properties are not claimed by the local common-sound-speed AUSM baseline."
+  },
+  {
+    "id": "liou2006",
+    "year": 2006,
+    "author": "Liou, Meng-Sing",
+    "title": "A sequel to AUSM, Part II: AUSM+-up for all speeds",
+    "journal": "Journal of Computational Physics",
+    "volume": "214",
+    "pages": "137--170",
+    "doi": "10.1016/j.jcp.2005.09.020",
+    "source": "https://www.sciencedirect.com/science/article/abs/pii/S0021999105004274",
+    "note": "Publisher metadata/abstract inspected. Planned all-speed AUSM-family extension; the local baseline has no AUSM+-up pressure/velocity correction or low-Mach verification."
+  },
+  {
+    "id": "fest2020ausm",
+    "type": "misc",
+    "year": 2020,
+    "author": "FEST-3D Team",
+    "title": "FEST-3D documented AUSM source",
+    "source": "https://fest3d.github.io/sourcefile/ausm.f90.html",
+    "note": "Official source documentation generated 10 February 2020. Consulted to cross-check common arithmetic interface sound speed, Mach polynomials, cubic pressure fractions and enthalpy transport. The local independent vectorized implementation does not use FEST-3D output."
   }
 ]

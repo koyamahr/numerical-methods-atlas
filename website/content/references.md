@@ -457,9 +457,9 @@ Original newsletter scan hosted by CCP5. Describes mesh forces plus short-range 
 
 Roe, Philip L.. **Approximate Riemann solvers, parameter vectors, and difference schemes**. Journal of Computational Physics.
 
-[Original bibliographic record](https://doi.org/10.1016/0021-9991(81)90128-5) · [Full text or implementation reference](https://www.sciencedirect.com/science/article/pii/0021999181901285)
+[Original bibliographic record](https://doi.org/10.1016/0021-9991(81)90128-5) · [Full text or implementation reference](https://www.researchgate.net/publication/222453065_Approximate_Riemann_Solvers_Parameter_Vector_and_Difference_Schemes)
 
-Publisher bibliographic record and abstract. This edition implements 1D Euler with quadratic entropy smoothing of acoustic eigenvalues.
+Author-uploaded original full text inspected, including the four Property U conditions on pp.359-360. Independent ideal-gas parameter-vector, eigenbasis, jump and consistency checks accompany single discontinuities and an expansion counterexample. Acoustic entropy smoothing is a separate flux modification.
 
 ## 1983 · gray1983
 
@@ -476,6 +476,14 @@ Harten, Amiram and Lax, Peter D. and van Leer, Bram. **On Upstream Differencing 
 [Original bibliographic record](https://doi.org/10.1137/1025002) · [Full text or implementation reference](https://www.ece.uvic.ca/~bctill/papers/numacoust/Harten_etal_1983.pdf)
 
 Publicly accessible original paper. Background on HLL; the hll implementation here uses Davis-type minimum/maximum acoustic wave speeds.
+
+## 1984 · colella1984ppm
+
+Colella, Phillip and Woodward, Paul R.. **The Piecewise Parabolic Method (PPM) for gas-dynamical simulations**. Journal of Computational Physics.
+
+[Original bibliographic record](https://doi.org/10.1016/0021-9991(84)90143-8) · [Full text or implementation reference](https://escholarship.org/uc/item/5sr307f1)
+
+Original 1984 journal metadata; linked public author report is the earlier July 1982 preprint and was inspected for parabolic interpolation/monotonicity. The local method-of-lines limited parabolic FV excludes wave tracing, contact steepening, shock flattening and Lagrange/remap; it is not a full original-PPM reproduction.
 
 ## 1984 · sweby1984
 
@@ -637,6 +645,14 @@ van der Vorst, Henk A.. **Bi-CGSTAB: A Fast and Smoothly Converging Variant of B
 
 Original publisher record checked. BiCGSTAB source; the educational implementation reports true residuals, breakdown and iteration-limit failures. Residual monotonicity is not promised.
 
+## 1993 · liou1993
+
+Liou, Meng-Sing and Steffen, Christopher J., Jr.. **A New Flux Splitting Scheme**. Journal of Computational Physics.
+
+[Original bibliographic record](https://doi.org/10.1006/jcph.1993.1122) · [Full text or implementation reference](https://www.sciencedirect.com/science/article/pii/S0021999183711228)
+
+Original AUSM publisher metadata/abstract inspected; no full 1993-paper inspection is claimed. The independent local AUSM-family baseline uses common arithmetic sound speed and cubic pressure splitting, cross-checked with official FEST-3D documentation, and is not every original variant or AUSM+-up.
+
 ## 1993 · pearson1993
 
 Pearson, John E.. **Complex Patterns in a Simple System**. Science.
@@ -675,7 +691,7 @@ Quirk, James J.. **A contribution to the great Riemann solver debate**. Internat
 
 [Original bibliographic record](https://doi.org/10.1002/fld.1650180603) · [Full text or implementation reference](https://onlinelibrary.wiley.com/doi/10.1002/fld.1650180603)
 
-Publisher record and abstract. Background for shock instability and complementary fluxes. Controlled odd-even and blunt-body carbuncle experiments remain future work.
+Original bibliographic record and abstract; background for shock instability and complementary fluxes. The local stationary planar row-displacement diagnostic is an independent experiment, not a reproduction of the original moving-shock perturbed-grid duct. Blunt-body carbuncle tests remain pending.
 
 ## 1994 · templates1994
 
@@ -708,6 +724,14 @@ Jiang, Guang-Shan and Shu, Chi-Wang. **Efficient Implementation of Weighted ENO 
 [Original bibliographic record](https://doi.org/10.1006/jcph.1996.0130) · [Full text or implementation reference](https://www.ece.uvic.ca/~bctill/papers/numacoust/Jiang_Shu_1996.pdf)
 
 Publicly accessible original paper. Reference for WENO5-JS flux reconstruction, smoothness indicators, and nonlinear weights.
+
+## 1996 · liou1996
+
+Liou, Meng-Sing. **A Sequel to AUSM: AUSM+**. Journal of Computational Physics.
+
+[Original bibliographic record](https://doi.org/10.1006/jcph.1996.0256) · [Full text or implementation reference](https://www.sciencedirect.com/science/article/pii/S0021999196902569)
+
+Publisher metadata/abstract inspected. AUSM+ is a separately planned extension; its original wave-speed/pressure choices and properties are not claimed by the local common-sound-speed AUSM baseline.
 
 ## 1996 · shewchuk1996
 
@@ -901,6 +925,14 @@ Abgrall, Rémi. **Residual distribution schemes: Current status and future trend
 
 Author-hosted review. The 2006 date identifies the review, rather than the origin of residual distribution. This edition implements only 1D scalar RD.
 
+## 2006 · liou2006
+
+Liou, Meng-Sing. **A sequel to AUSM, Part II: AUSM+-up for all speeds**. Journal of Computational Physics.
+
+[Original bibliographic record](https://doi.org/10.1016/j.jcp.2005.09.020) · [Full text or implementation reference](https://www.sciencedirect.com/science/article/abs/pii/S0021999105004274)
+
+Publisher metadata/abstract inspected. Planned all-speed AUSM-family extension; the local baseline has no AUSM+-up pressure/velocity correction or low-Mach verification.
+
 ## 2006 · noble2006recovery
 
 Noble, Scott C. and Gammie, Charles F. and McKinney, Jonathan C. and Del Zanna, Luca. **Primitive Variable Solvers for Conservative General Relativistic Magnetohydrodynamics**. The Astrophysical Journal.
@@ -916,6 +948,14 @@ Nishikawa, Hiroaki. **A first-order system approach for diffusion equation. I: S
 [Original bibliographic record](https://doi.org/10.1016/j.jcp.2007.07.029) · [Full text or implementation reference](https://www.sciencedirect.com/science/article/pii/S002199910700335X)
 
 Original publisher metadata and abstract checked, full text not audited. The atlas implements an independent periodic first-order upwind baseline for the equivalent steady system, not the paper's second-order residual-distribution schemes.
+
+## 2008 · borges2008
+
+Borges, Rafael and Carmona, Monique and Costa, Bruno and Don, Wai Sun. **An improved weighted essentially non-oscillatory scheme for hyperbolic conservation laws**. Journal of Computational Physics.
+
+[Original bibliographic record](https://doi.org/10.1016/j.jcp.2007.11.038) · [Full text or implementation reference](https://www.sciencedirect.com/science/article/abs/pii/S0021999107005232)
+
+Original 2008 publisher metadata/abstract inspected. A public 2006 three-author earlier manuscript was also consulted and has different weight conventions; no complete final-paper inspection is claimed. The local FD WENO-Z variant explicitly defines tau5=abs(beta0-beta2), exponent 2 and epsilon=1e-6, with characteristic/component tests and smooth refinement.
 
 ## 2008 · font2008grhd
 
@@ -1052,6 +1092,14 @@ Kovtun, Pavel. **First-order relativistic hydrodynamics is stable**. Journal of 
 [Original bibliographic record](https://doi.org/10.1007/JHEP10(2019)034) · [Full text or implementation reference](https://arxiv.org/abs/1907.08191)
 
 Author abstract and publisher record inspected for stable first-order hydrodynamic frames. Stability results retain the paper assumptions; numerical scheme stability is a separate question. Reading context, not an implemented solver.
+
+## 2020 · fest2020ausm
+
+FEST-3D Team. **FEST-3D documented AUSM source**. .
+
+[Original bibliographic record](https://fest3d.github.io/sourcefile/ausm.f90.html) · [Full text or implementation reference](https://fest3d.github.io/sourcefile/ausm.f90.html)
+
+Official source documentation generated 10 February 2020. Consulted to cross-check common arithmetic interface sound speed, Mach polynomials, cubic pressure fractions and enthalpy transport. The local independent vectorized implementation does not use FEST-3D output.
 
 ## 2020 · saito2020rcip
 

@@ -962,6 +962,42 @@
       "status": "local-example",
       "group": "Riemann fluxes & corrections",
       "scope": "Full-vector adiabatic HLLD/HLLE with Brio-Wu, circular Alfven refinement and weak field-loop tests. CT-Contact and GLM, not UCT-HLLD."
+    },
+    {
+      "kind": "method",
+      "id": "ppm",
+      "label": "Limited PPM reconstruction",
+      "chapter": "reconstruction",
+      "status": "local-example",
+      "group": "Spatial discretization",
+      "scope": "Method-of-lines parabolic FV only; no original wave tracing, contact steepening, flattening or remap."
+    },
+    {
+      "kind": "method",
+      "id": "characteristic-reconstruction",
+      "label": "Euler characteristic reconstruction",
+      "chapter": "reconstruction",
+      "status": "local-example",
+      "group": "Spatial discretization",
+      "scope": "Local conservative FV basis or face-frozen Roe FD basis; controlled component/characteristic comparisons."
+    },
+    {
+      "kind": "method",
+      "id": "weno-z",
+      "label": "FD WENO5-Z",
+      "chapter": "reconstruction",
+      "status": "local-example",
+      "group": "Spatial discretization",
+      "scope": "Global LF splitting, exponent 2, fixed epsilon 1e-6; point values, not FV state interpolation."
+    },
+    {
+      "kind": "method",
+      "id": "ausm",
+      "label": "AUSM-family flux splitting",
+      "chapter": "reconstruction",
+      "status": "local-example",
+      "group": "Riemann fluxes & corrections",
+      "scope": "Common arithmetic sound speed and cubic pressure baseline, with 1D/2D tests. AUSM+ and AUSM+-up remain planned."
     }
   ]
 }

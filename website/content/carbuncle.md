@@ -46,6 +46,52 @@ Record its time history and the maximum over the shock neighborhood, together wi
 
 ## Status in this edition
 
-The [Double Mach Reflection exhibit](double-mach.md) is an actual **first-order HLL computation** of an oblique shock interaction. It is not a controlled Roe-versus-HLL carbuncle experiment and supplies no carbuncle-free certification. The planar-shock perturbation and blunt-body comparison described above remain future work. The physical cylindrical [viscous stress](coordinates-viscosity.md) and numerical shock dissipation also represent different operators.
+The [Double Mach Reflection exhibit](double-mach.md) is an actual **first-order HLL computation** of an oblique shock interaction. It is not a controlled Roe-versus-HLL carbuncle experiment and supplies no carbuncle-free certification. The planar-shock section below adds a controlled row-perturbation diagnostic; blunt-body comparisons remain future work. The physical cylindrical [viscous stress](coordinates-viscosity.md) and numerical shock dissipation also represent different operators.
 
 Continue with [Roe’s legacy](roe-memorial.md), [the flux benchmarks](benchmarks.md), and [the implementation roadmap](roadmap.md).
+
+
+## Computed planar odd–even diagnostic
+
+[Open the controlled comparison](#/shock-robustness). This independent test
+uses a stationary Mach-6 normal shock in [0,1] × [0,0.25], γ=1.4,
+upstream (ρ,u,v,p)=(1.4,6,0,1), and exact normal-shock downstream states.
+Both x boundaries are fixed, y is periodic, and cells are square. Compare
+64 × 16 and 128 × 32 at t=0.2 using first-order space, SSPRK2 and CFL 0.3.
+The shock is either at x=0.5, aligned with a face, or half a cell farther right.
+Initial conservative means integrate a row-dependent front displacement of
+±10⁻⁴Δx exactly. Each configuration has an unperturbed control.
+
+Compare raw Roe, Roe with acoustic smoothing δ=0.1c̃, Davis HLL,
+Einfeldt-type HLLE, a pressure-sensor Roe/HLLE blend, and the common-sound-speed
+cubic-pressure [AUSM baseline](reconstruction.md). All runs use the same
+spatial/time settings; their step counts and costs need not match.
+The blend uses S=max_neighbors |p_neighbor−p|/min(p_neighbor,p),
+θ=clip((S−0.05)/0.2,0,1), and the maximum adjacent cell θ at each face.
+F=(1−θ)F_Roe_fixed+θF_HLLE. The x-pressure jump can therefore activate
+HLLE on nearby transverse faces. This is an explicit educational sensor,
+not the published rotated-hybrid construction or a universal cure.
+
+Measure max_i Aπ over |x−xshock|<0.1, pressure/density admissibility, retry
+counts, transverse velocity and each row's integrated mass-deficit position.
+The latter is not a pointwise detected front location. Density maps subtract
+the transverse row mean, using one signed color range per comparison.
+The history's logarithmic display floors values at 10⁻¹⁶; raw values remain
+in the download. No state clipping or hidden flux replacement is used.
+
+Face-aligned Roe runs amplify the chosen row mode; shifting the shock half a
+cell changes the response substantially. The entropy correction does not
+remove this position sensitivity. HLL/HLLE and the other fluxes must be judged
+from these stated runs, rather than their names. The special Nyquist seed
+preserves a symmetry with zero transverse velocity even as density rows
+separate, so this experiment does not probe general transverse motion.
+
+![Controlled planar-shock comparison](figures/shock-methods/planar-128-0.png)
+
+Reproduce with `python scripts/build_shock_robustness.py`. Download
+[all perturbed/control histories, definitions and source hashes](figures/shock-methods/robustness.json)
+and [final conservative fields](figures/shock-methods/planar-fields.npz).
+This is not the original Quirk moving-shock/perturbed-grid duct or a blunt-body
+carbuncle bulge. Other wavelengths, mesh rotations, blunt-body cases and
+broader CFL/strength sweeps remain required work; no carbuncle-free claim is made.
+See [Property U](advanced.md#roes-property-u) for the separate single-jump algebra.

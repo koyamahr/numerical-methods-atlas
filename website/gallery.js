@@ -6,6 +6,7 @@ export function matchesGallery(figure, dimension='fields', category='All figures
 }
 
 export const fieldFigures = [
+  {file:'shock-methods/planar-128-0.png',dimension:2,year:'ROE / HLL / HLLE / AUSM',title:'When neighboring shock rows decouple',category:'2D shock interactions',chapter:'carbuncle',shockmethod:'shock-robustness',description:'A controlled stationary Mach-6 odd–even diagnostic. Compare fluxes, unperturbed controls, two grids and two subcell shock positions; no carbuncle-free claim.'},
   {file:'comparisons/wedge-m2-mc.png',comparison:'wedge-m2',dimension:2,year:'NASA / MACH 2',title:'NASA wedge / Mach 2.0',
     category:'2D shock interactions',chapter:'nasa-2d',
     description:'Compare first-order, minmod and MC reconstruction on the NASA wedge. Same HLL flux, SSPRK2 and grids; exact weak-shock line and two-grid density errors.'},

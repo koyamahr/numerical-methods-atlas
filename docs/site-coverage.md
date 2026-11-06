@@ -2,9 +2,9 @@
 
 Published web edition, counted 2026-11-06. These are counts of catalog entries and documented examples, not a claim that every entry is a verified end-to-end solver.
 
-**42 equation/model entries · 86 methods and building blocks · 131 journal/conference papers · 152 total sources.**
+**42 equation/model entries · 90 methods and building blocks · 136 journal/conference papers · 158 total sources.**
 
-There are 9 saved-profile equation-gallery cases across 7 equation families, and 43 reading chapters including this inventory.
+There are 9 saved-profile equation-gallery cases across 7 equation families, and 44 reading chapters including this inventory.
 
 ## Equations and models
 
@@ -69,7 +69,7 @@ Named equation/model entries, not scalar component equations or mathematically d
 
 Named numerical methods and building blocks with a reading chapter. Aliases count once; RK stages, dimensions, parameter combinations, mesh layouts and theoretical conditions do not add methods. A family and a separately explained algorithm may both appear. Not a count of mutually exclusive end-to-end solvers.
 
-80 entries have scoped local examples; 6 are reading-only. Reconstruction limiters, preconditioners and coupling operators are building blocks, not complete PDE solvers. Mesh layouts, CFL conditions and theorems are not counted as numerical methods.
+84 entries have scoped local examples; 6 are reading-only. Reconstruction limiters, preconditioners and coupling operators are building blocks, not complete PDE solvers. Mesh layouts, CFL conditions and theorems are not counted as numerical methods.
 
 ### Spatial discretization
 
@@ -86,6 +86,9 @@ Named numerical methods and building blocks with a reading chapter. Aliases coun
 - [Fourier differentiation and evolution](benchmarks.md) — Local example.
 - [Cubic-Hermite CIP](cip.md) — Local example.
 - [Continuous P1 Galerkin FEM](fem.md) — Local example.
+- [Limited PPM reconstruction](reconstruction.md) — Local example. Method-of-lines parabolic FV only; no original wave tracing, contact steepening, flattening or remap.
+- [Euler characteristic reconstruction](reconstruction.md) — Local example. Local conservative FV basis or face-frozen Roe FD basis; controlled component/characteristic comparisons.
+- [FD WENO5-Z](reconstruction.md) — Local example. Global LF splitting, exponent 2, fixed epsilon 1e-6; point values, not FV state interpolation.
 
 ### Riemann fluxes & corrections
 
@@ -97,6 +100,7 @@ Named numerical methods and building blocks with a reading chapter. Aliases coun
 - [Acoustic Roe entropy correction](advanced.md) — Local example.
 - [Rotated-hybrid Riemann solver](advanced.md) — Reading only.
 - [HLLD MHD Riemann solver](mhd.md) — Local example. Full-vector adiabatic HLLD/HLLE with Brio-Wu, circular Alfven refinement and weak field-loop tests. CT-Contact and GLM, not UCT-HLLD.
+- [AUSM-family flux splitting](reconstruction.md) — Local example. Common arithmetic sound speed and cubic pressure baseline, with 1D/2D tests. AUSM+ and AUSM+-up remain planned.
 
 ### Limiters & admissibility
 
@@ -190,12 +194,12 @@ Unique bibliographic publications classified as journal articles or conference p
 
 Unique cataloged works across all publication types. An original publication and a later translation are separate works; duplicate DOI records are not. NASA case links in prose are not catalog records.
 
-- 128 journal-article records, including reviews, translations and explicitly labeled accepted papers.
+- 133 journal-article records, including reviews, translations and explicitly labeled accepted papers.
 - 3 conference papers.
 - 7 books.
 - 2 book chapters.
 - 3 technical/teaching reports.
-- 9 other records, including documentation and a separately identified preprint.
+- 10 other records, including documentation and a separately identified preprint.
 
 A duplicate Cockburn–Shu 1989 record was merged. Burgers 1948 is classified as a book chapter. The former 146-record total included that duplicate; subsequent source additions are reflected in the current unique-work totals above. An original paper and a separately published translation remain separate works. The bibliography does not claim that every full text has been inspected; source notes preserve the inspection status.
 

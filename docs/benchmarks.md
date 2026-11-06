@@ -79,8 +79,9 @@ MUSCL uses selectable minmod (default), Superbee, MC, van Leer, or clipped
 van Albada reconstruction in primitive variables; see [limiters](limiters.md).
 WENO5-JS is a
 componentwise **finite-difference** implementation with pointwise fluxes and
-global LF splitting. Characteristic reconstruction, WENO-Z, and fully discrete
-positivity preservation are future work. A separate [advanced limiter](advanced-limiters.md)
+global LF splitting. A separate reconstruction chapter below adds characteristics
+and WENO-Z; this original solver remains unchanged. Fully discrete positivity
+preservation is still future work. A separate [advanced limiter](advanced-limiters.md)
 exhibit implements TVB modified minmod and positive Euler reconstruction scaling;
 neither is coupled to these Euler time updates. Errors are labeled `pointwise`: finite-volume cell
 averages and finite-difference point values are not strictly interchangeable.
@@ -98,3 +99,8 @@ The [equation gallery](equation-gallery.md) adds Burgers and LWR traffic
 Riemann problems with exact cell-integrated references, plus advection and heat
 mode tests. It also connects the existing Sod, wet dam-break and isothermal
 baselines, with each reference convention explicitly labeled.
+
+
+## Expanded reconstruction and flux tests
+
+The [new reconstruction chapter](reconstruction.md) and [interactive comparison](#/reconstruction) add limited parabolic FV, conservative characteristics, FD WENO-Z and an explicit AUSM-family baseline. The original code described above remains a componentwise baseline. [Planar shock sensitivity](carbuncle.md) and [Roe's Property U](advanced.md#roes-property-u) have separate verification.

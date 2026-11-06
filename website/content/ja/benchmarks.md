@@ -28,7 +28,7 @@
 
 RusanovとHLLはEuler・浅水・等温流に対応します。HLLC、Roe、HLLEは現在、理想気体Eulerだけに対応します。HLLは局所音響速度の最小・最大、HLLEはRoe平均を含むEinfeldt型推定を使います。Roeは音響固有値に`δ=0.1ã`の2次エントロピー平滑化を適用し、接触固有値は変更しません。低密度の正値性修正や、一般的なエントロピー安定流束の構成とは別です。
 
-MUSCLは基本変数についてminmod（既定）、Superbee、MC、van Leer、切り詰めたvan Albadaを選べます。[勾配制限](limiters.md)を参照してください。WENO5-JSは点値流束と大域LF分割を使う、成分別の**有限差分**実装です。特性再構成、WENO-Z、完全離散の正値性保存は今後の課題です。別の[発展的な勾配制限](advanced-limiters.md)ではTVB修正minmodとEulerの正値再構成スケーリングを実装していますが、これらのEuler時間更新とは結合していません。
+MUSCLは基本変数についてminmod（既定）、Superbee、MC、van Leer、切り詰めたvan Albadaを選べます。[勾配制限](limiters.md)を参照してください。WENO5-JSは点値流束と大域LF分割を使う、成分別の**有限差分**実装です。後述の別章に特性再構成・WENO-Zを追加し、この従来ソルバーは変更していません。完全離散の正値性保存は今後の課題です。別の[発展的な勾配制限](advanced-limiters.md)ではTVB修正minmodとEulerの正値再構成スケーリングを実装していますが、これらのEuler時間更新とは結合していません。
 
 誤差は`pointwise`と表示します。有限体積セル平均と差分点値は厳密には交換できません。Orszag–Tangの定義と限界は[MHD](mhd.md)、拡散・Poisson問題は[楕円型問題](elliptic.md)を参照してください。
 
@@ -39,3 +39,8 @@ MUSCLは基本変数についてminmod（既定）、Superbee、MC、van Leer、
 ## 方程式から始めるスカラー比較 {#equation-first-scalar-comparisons}
 
 [方程式ギャラリー](equation-gallery.md)では、厳密なセル積分を持つBurgers・LWR交通流のリーマン問題、移流・熱拡散モードを加えています。既存のSod、水深が正のダム崩壊、等温流の基準計算にもつなぎ、参照解の規約を明示します。
+
+
+## 再構成・流束テストの拡充 {#expanded-reconstruction-and-flux-tests}
+
+[新しい再構成章](reconstruction.md)と[操作できる比較](#/reconstruction)に、制限付き放物線FV・保存特性変数・FD WENO-Z・変種を明示したAUSM系列基準例を追加しました。上記の従来コードは成分ごとの基準例として残します。[平面衝撃波の感度](carbuncle.md)と[RoeのProperty U](advanced.md#roes-property-u)は別に検証します。

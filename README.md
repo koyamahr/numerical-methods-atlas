@@ -33,12 +33,12 @@ source hashes to identify the implementation.
 
 ## The atlas in numbers — published edition
 
-**42 equation/model entries · 86 numerical methods and building blocks ·
-131 journal/conference papers · 152 unique sources in all.**
+**42 equation/model entries · 90 numerical methods and building blocks ·
+136 journal/conference papers · 158 unique sources in all.**
 
-The paper count is 128 journal articles plus 3 conference papers; other sources
+The paper count is 133 journal articles plus 3 conference papers; other sources
 include books, chapters, reports, documentation and a separately identified
-preprint. The named inventory distinguishes 15 model entries and 80 method
+preprint. The named inventory distinguishes 15 model entries and 84 method
 entries with scoped local examples from reading-only material. These are not
 counts of independent, complete production solvers. The equation gallery has
 9 saved-profile cases across 7 families.
@@ -69,6 +69,10 @@ These are reading notes and staged implementation plans; no GSPH or relativistic
 fluid solver is implemented in the current library.
 
 New exhibits: [CIP value/gradient transport](docs/cip.md), [Runge–Kutta families](docs/runge-kutta.md), [slope limiters](docs/limiters.md), [advanced TVB and positive-state scaling](docs/advanced-limiters.md), [nonsteady movies](docs/movies.md), and [original KEEP with smooth tests and caveats](docs/keep.md). Steady fields remain still figures.
+
+## Current priority: shock methods
+
+[Reconstruction and flux comparisons](https://koyamahr.github.io/numerical-methods-atlas/#/reconstruction) add limited parabolic FV, conservative characteristics, FD WENO-Z and a defined AUSM-family baseline. [Stationary odd–even shock diagnostics](https://koyamahr.github.io/numerical-methods-atlas/#/shock-robustness) compare six flux settings, two grids, two shock positions and unperturbed controls. [Roe's Property U](docs/advanced.md#roes-property-u) has parameter-vector and single-wave checks, including an entropy counterexample. Original PPM tracing/steepening/flattening, AUSM+/AUSM+-up and blunt-body/rotated-hybrid tests remain the next steps before new subject areas.
 
 ## Euler reconstruction and full-vector MHD comparisons
 

@@ -10,23 +10,23 @@
   },
   "counts": {
     "equations": 42,
-    "methods": 86,
-    "papers": 131,
-    "references": 152,
-    "journal_articles": 128,
+    "methods": 90,
+    "papers": 136,
+    "references": 158,
+    "journal_articles": 133,
     "conference_papers": 3,
     "books": 7,
     "chapters": 2,
     "reports": 3,
-    "other_sources": 9,
+    "other_sources": 10,
     "local_equations": 15,
     "reading_equations": 27,
-    "local_methods": 80,
+    "local_methods": 84,
     "reading_methods": 6,
     "biological_entries": 22,
     "gallery_cases": 9,
     "gallery_equations": 7,
-    "reading_chapters": 43
+    "reading_chapters": 44
   },
   "items": [
     {
@@ -982,6 +982,42 @@
       "status": "local-example",
       "group": "Riemann fluxes & corrections",
       "scope": "Full-vector adiabatic HLLD/HLLE with Brio-Wu, circular Alfven refinement and weak field-loop tests. CT-Contact and GLM, not UCT-HLLD."
+    },
+    {
+      "kind": "method",
+      "id": "ppm",
+      "label": "Limited PPM reconstruction",
+      "chapter": "reconstruction",
+      "status": "local-example",
+      "group": "Spatial discretization",
+      "scope": "Method-of-lines parabolic FV only; no original wave tracing, contact steepening, flattening or remap."
+    },
+    {
+      "kind": "method",
+      "id": "characteristic-reconstruction",
+      "label": "Euler characteristic reconstruction",
+      "chapter": "reconstruction",
+      "status": "local-example",
+      "group": "Spatial discretization",
+      "scope": "Local conservative FV basis or face-frozen Roe FD basis; controlled component/characteristic comparisons."
+    },
+    {
+      "kind": "method",
+      "id": "weno-z",
+      "label": "FD WENO5-Z",
+      "chapter": "reconstruction",
+      "status": "local-example",
+      "group": "Spatial discretization",
+      "scope": "Global LF splitting, exponent 2, fixed epsilon 1e-6; point values, not FV state interpolation."
+    },
+    {
+      "kind": "method",
+      "id": "ausm",
+      "label": "AUSM-family flux splitting",
+      "chapter": "reconstruction",
+      "status": "local-example",
+      "group": "Riemann fluxes & corrections",
+      "scope": "Common arithmetic sound speed and cubic pressure baseline, with 1D/2D tests. AUSM+ and AUSM+-up remain planned."
     },
     {
       "kind": "equation",
@@ -1942,12 +1978,42 @@
       "id": "mignone2021uct",
       "type": "article",
       "identity": "doi:10.1016/j.jcp.2020.109748"
+    },
+    {
+      "id": "colella1984ppm",
+      "type": "article",
+      "identity": "doi:10.1016/0021-9991(84)90143-8"
+    },
+    {
+      "id": "borges2008",
+      "type": "article",
+      "identity": "doi:10.1016/j.jcp.2007.11.038"
+    },
+    {
+      "id": "liou1993",
+      "type": "article",
+      "identity": "doi:10.1006/jcph.1993.1122"
+    },
+    {
+      "id": "liou1996",
+      "type": "article",
+      "identity": "doi:10.1006/jcph.1996.0256"
+    },
+    {
+      "id": "liou2006",
+      "type": "article",
+      "identity": "doi:10.1016/j.jcp.2005.09.020"
+    },
+    {
+      "id": "fest2020ausm",
+      "type": "misc",
+      "identity": "work:fest3dteam:fest3ddocumentedausmsource:2020"
     }
   ],
   "source_sha256": {
-    "catalog/coverage.json": "0e9a0f602a1e0e8f4c78c0fdba532da220cd2a15e891dbe46d359c48ab47ec30",
+    "catalog/coverage.json": "353df5a32d8739a59050eee0fcf1632fea235308dd4bcd9d77393ea999c2365b",
     "catalog/biological-models.json": "f0b55e0832cb17304b6d1bfdb626f2b66bb6e5c27a3730981ceb2b4fb151ab82",
-    "catalog/references.json": "84ea6a11bfdc1128b6e3f1b98d6c9d496cf31d59bd5a4e7b6627d1df6427c03e",
+    "catalog/references.json": "90c25f27f280fca7ebae1c496309f6d9c9301c9f7d45b84f12926698152fdb82",
     "scripts/build_coverage.py": "aa5736f70653801129a25f8b18726a6f993dc1c09bbbf68e4dcab48090cb7d0d"
   }
 }

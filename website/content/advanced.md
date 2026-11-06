@@ -82,3 +82,57 @@ rotation alone does not reproduce this construction. This edition supplies
 the literature context; 2D Euler geometry, direction selection, and carbuncle
 tests are next implementation steps.
 [Nishikawa–Kitamura (2008)](https://doi.org/10.1016/j.jcp.2007.11.003).
+
+
+## Roe's Property U {#roes-property-u}
+
+[Roe's 1981 paper, author-uploaded full text, pp. 359–360](https://www.researchgate.net/publication/222453065_Approximate_Riemann_Solvers_Parameter_Vector_and_Difference_Schemes)
+uses four conditions: (i) a linear mapping from conserved-state space to
+flux space for each fixed state pair; (ii) the coincident-state limit equals
+the physical Jacobian; (iii) the matrix maps the state jump exactly onto
+the flux jump; (iv) its eigenvectors are linearly independent. The two-state
+matrix need not depend linearly on its arguments. For physical ideal-gas Euler
+states the construction below also has real acoustic/contact speeds.
+
+Here is the algebra implemented and independently checked in this atlas.
+For U=(ρ,ρu,E), H=(E+p)/ρ, set z=√ρ(1,u,H). Then
+
+\[
+ U(z)=\begin{pmatrix}z_1^2\\z_1z_2\\
+ (z_1z_3+(\gamma-1)z_2^2/2)/\gamma\end{pmatrix},\qquad
+ F(z)=\begin{pmatrix}z_1z_2\\
+ ((\gamma+1)z_2^2/2+(\gamma-1)z_1z_3)/\gamma\\z_2z_3\end{pmatrix}.
+\]
+
+Both maps are quadratic. Their midpoint Jacobians B=∂U/∂z and C=∂F/∂z
+therefore satisfy ΔU=B(z̄)Δz and ΔF=C(z̄)Δz exactly. Consequently
+Ã=C(z̄)B(z̄)⁻¹ has the jump property. Ratios of z̄ give
+
+\[
+ \widetilde u=\frac{\sqrt{\rho_L}u_L+\sqrt{\rho_R}u_R}{\sqrt{\rho_L}+\sqrt{\rho_R}},\quad
+ \widetilde H=\frac{\sqrt{\rho_L}H_L+\sqrt{\rho_R}H_R}{\sqrt{\rho_L}+\sqrt{\rho_R}},\quad
+ \widetilde c^2=(\gamma-1)(\widetilde H-\widetilde u^2/2).
+\]
+
+At equal states, the chain rule gives CB⁻¹=∂F/∂U. The independently constructed
+eigenbasis has speeds ũ−c̃,ũ,ũ+c̃. Since c̃>0, its three eigenvectors span
+the state space. We check the parameter-vector matrix against this eigenbasis,
+the analytic Jacobian, and 2000 deterministic physical state pairs.
+
+If ΔF=sΔU for a single nonzero Rankine–Hugoniot jump, then ÃΔU=sΔU:
+the jump lies in the speed-s eigenspace. The unmodified Roe flux consequently
+recognizes isolated contact/shock jumps. This does not make every reconstructed,
+time-discretized shock calculation exact. Smoothing |λ| changes the flux
+without changing the matrix identity, and can smear a stationary shock.
+
+An expansion discontinuity can also satisfy the jump relation. Our reversed
+stationary normal-shock pair passes Property U but the raw Roe flux differs
+from the entropy Riemann reference. This is a numerical counterexample to
+confusing the jump property with entropy selection. The entropy fix is an
+additional design choice; neither gives a multidimensional carbuncle guarantee.
+
+![Roe flux-jump residuals](figures/shock-methods/roe-property-u.png)
+
+`python scripts/build_shock_robustness.py` saves the matrix checks, moving and
+stationary shocks, a contact and the expansion counterexample in the
+[diagnostic manifest](figures/shock-methods/robustness.json).

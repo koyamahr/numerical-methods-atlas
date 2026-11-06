@@ -5631,5 +5631,293 @@
   "comparison.hlld-link": {
     "en": "HLLD standard tests ↗",
     "ja": "HLLD標準テスト ↗"
+  },
+  "term.method.ppm": {
+    "en": "Limited PPM reconstruction",
+    "ja": "制限付きPPM再構成"
+  },
+  "term.method.characteristic-reconstruction": {
+    "en": "Euler characteristic reconstruction",
+    "ja": "Eulerの特性変数再構成"
+  },
+  "term.method.weno-z": {
+    "en": "FD WENO5-Z",
+    "ja": "有限差分WENO5-Z"
+  },
+  "term.method.ausm": {
+    "en": "AUSM-family flux splitting",
+    "ja": "AUSM系列の流束分割"
+  },
+  "term.concept.roe-property-u": {
+    "en": "Roe's Property U",
+    "ja": "RoeのProperty U"
+  },
+  "shock.cbb853df9a65": {
+    "en": "SHOCK METHODS / RECONSTRUCTION",
+    "ja": "衝撃波手法／再構成"
+  },
+  "shock.72d9c8f6aa39": {
+    "en": "Reconstruct the waves.",
+    "ja": "波を再構成する。"
+  },
+  "shock.6e6483cfae84": {
+    "en": "Compare limited parabolic finite volumes, characteristic reconstruction and FD WENO-Z. Then hold MUSCL fixed and compare HLLC, Roe, HLLE and an AUSM baseline.",
+    "ja": "制限付き放物線有限体積、特性変数再構成、FD WENO-Zを比較します。次にMUSCLを固定し、HLLC・Roe・HLLE・AUSM基準例を比較します。"
+  },
+  "shock.05e3343d067f": {
+    "en": "Euler test",
+    "ja": "Eulerのテスト"
+  },
+  "shock.3c5f8dc4f611": {
+    "en": "Shu–Osher shock / entropy waves",
+    "ja": "Shu–Osher衝撃波・エントロピー波"
+  },
+  "shock.e02b033d0201": {
+    "en": "Moving contact",
+    "ja": "移動接触面"
+  },
+  "shock.571527339d0e": {
+    "en": "Comparison",
+    "ja": "比較"
+  },
+  "shock.a26a74252431": {
+    "en": "Reconstruction / fixed basis",
+    "ja": "再構成／基底固定"
+  },
+  "shock.9c13ebf8d76c": {
+    "en": "Flux / fixed characteristic MUSCL",
+    "ja": "流束／特性MUSCL固定"
+  },
+  "shock.4fa6823847a2": {
+    "en": "Reconstruction basis",
+    "ja": "再構成の基底"
+  },
+  "shock.86fa23fca06a": {
+    "en": "Characteristic variables",
+    "ja": "特性変数"
+  },
+  "shock.226f00316432": {
+    "en": "Conservative components",
+    "ja": "保存変数の成分"
+  },
+  "shock.f45fc1dfdc96": {
+    "en": "Field",
+    "ja": "表示する場"
+  },
+  "shock.71b22adb13cb": {
+    "en": "Definitions and verification ↗",
+    "ja": "定義と検証 ↗"
+  },
+  "shock.08974252962b": {
+    "en": "Test odd–even shock sensitivity ↗",
+    "ja": "衝撃波のodd–even感度を調べる ↗"
+  },
+  "shock.e4015347b2ae": {
+    "en": "Roe’s Property U ↗",
+    "ja": "RoeのProperty U ↗"
+  },
+  "shock.646002da6a4b": {
+    "en": "Download reconstruction diagnostics ↓",
+    "ja": "再構成の診断を取得 ↓"
+  },
+  "shock.c9babb2d86dc": {
+    "en": "Measure smooth accuracy separately.",
+    "ja": "滑らかな解の精度は別に測る。"
+  },
+  "shock.a5b235591085": {
+    "en": "Reconstruction profiles and smooth refinement",
+    "ja": "再構成の分布と滑らかな解の細分化"
+  },
+  "shock.0626f0bc6a9d": {
+    "en": "FV curves are derived from conservative cell averages; FD WENO curves represent point values. Their fluxes and error norms differ. This is not a matched-cost ranking. SSPRK3 uses a smaller CFL under refinement to expose spatial accuracy.",
+    "ja": "FV曲線は保存変数セル平均から変換し、FD WENO曲線は点値を表します。流束・誤差ノルムが異なり、同じ計算費用での順位ではありません。SSPRK3は細分化とともにCFLを小さくし、空間精度を調べます。"
+  },
+  "shock.a3eb90a2a98a": {
+    "en": "Limited PPM here is a method-of-lines parabolic reconstruction. Original PPM wave tracing, contact steepening, shock flattening and Lagrange/remap are not included. AUSM uses a common arithmetic sound speed and cubic pressure splitting; AUSM+ and AUSM+-up remain planned.",
+    "ja": "本PPMはmethod of linesによる制限付き放物線再構成です。原型の波の追跡・接触面強調・衝撃波平坦化・Lagrange／再配置は含みません。AUSMは共通算術平均音速・3次圧力分割を使い、AUSM+・AUSM+-upは今後です。"
+  },
+  "shock.cde9cc4423ed": {
+    "en": "Fixed characteristic MUSCL / changing flux",
+    "ja": "特性MUSCL固定／流束を変更"
+  },
+  "shock.131f2a3cd180": {
+    "en": "Fixed reconstruction basis / changing method",
+    "ja": "再構成の基底を固定／手法を変更"
+  },
+  "shock.0149a627f623": {
+    "en": "Internal N=960 reference",
+    "ja": "内部数値参照 N=960"
+  },
+  "shock.1a3b72c1949d": {
+    "en": "Shu–Osher uses an internal characteristic FD WENO-Z reference at N=960, not an exact solution.",
+    "ja": "Shu–Osherの参照は内部の特性FD WENO-Z・N=960で、厳密解ではありません。"
+  },
+  "shock.bbae20c605ec": {
+    "en": "The dashed analytic profile is pointwise. FV density errors use 128-node cell quadrature; its 64/128-node difference is available in the download.",
+    "ja": "解析解の破線は点値です。FV密度誤差にはセル内128点求積を使い、64／128点の差も取得データに含みます。"
+  },
+  "shock.15ecda5bfdb8": {
+    "en": "Representation",
+    "ja": "表現"
+  },
+  "shock.802d6d94680c": {
+    "en": "Density L1 error",
+    "ja": "密度L1誤差"
+  },
+  "shock.0ef3bb4dec74": {
+    "en": "point values",
+    "ja": "点値"
+  },
+  "shock.489c6fd3a258": {
+    "en": "FD WENO5-JS",
+    "ja": "有限差分WENO5-JS"
+  },
+  "shock.447533c1d48e": {
+    "en": "FD WENO5-Z / exponent 2",
+    "ja": "有限差分WENO5-Z／指数2"
+  },
+  "shock.c613bc9d41dc": {
+    "en": "Roe / acoustic smoothing 0.1c",
+    "ja": "Roe／音響平滑化0.1c"
+  },
+  "shock.867cfce6e5d0": {
+    "en": "AUSM / common sound speed",
+    "ja": "AUSM／共通音速"
+  },
+  "shock.f7299658214b": {
+    "en": "SHOCK METHODS / ODD–EVEN DIAGNOSTIC",
+    "ja": "衝撃波手法／odd–even診断"
+  },
+  "shock.ec749f7ec0d6": {
+    "en": "A sharp shock can still fail.",
+    "ja": "鮮明な衝撃波にも破綻は起こる。"
+  },
+  "shock.e4ff5103f2dc": {
+    "en": "Compare a stationary Mach-6 shock under one controlled alternating-row perturbation. Change grid resolution and the shock’s subcell position, then inspect perturbed runs alongside unperturbed controls.",
+    "ja": "管理した交互行摂動で定常Mach 6衝撃波を比較します。格子解像度とセル内の衝撃波位置を変え、無摂動対照と併せて確認します。"
+  },
+  "shock.3fc98f25940c": {
+    "en": "Shock position within a cell",
+    "ja": "セル内の衝撃波位置"
+  },
+  "shock.40208301bdb6": {
+    "en": "Aligned with a face",
+    "ja": "面に一致"
+  },
+  "shock.f1143fbd80a7": {
+    "en": "Half-cell shift",
+    "ja": "半セル移動"
+  },
+  "shock.e3364465d109": {
+    "en": "Mach 6 · first order · SSPRK2",
+    "ja": "Mach 6・空間1次・SSPRK2"
+  },
+  "shock.5f237df208a5": {
+    "en": "Alternating displacement: ±10⁻⁴ Δx",
+    "ja": "交互変位：±10⁻⁴ Δx"
+  },
+  "shock.c233453a1df4": {
+    "en": "Definitions and limits ↗",
+    "ja": "定義と限界 ↗"
+  },
+  "shock.04faced8ac62": {
+    "en": "Return to the reconstruction tests ↗",
+    "ja": "再構成テストへ戻る ↗"
+  },
+  "shock.ce771b650e6a": {
+    "en": "Download shock diagnostics ↓",
+    "ja": "衝撃波診断を取得 ↓"
+  },
+  "shock.f2f6b3667fb3": {
+    "en": "Planar shock row differences and alternating-mode history",
+    "ja": "平面衝撃波の行差と交互モード履歴"
+  },
+  "shock.32aae3ab86b3": {
+    "en": "Density maps subtract the transverse row mean and share one signed color range. The log plot displays zero below 10⁻¹⁶ at its display floor.",
+    "ja": "密度図は横方向の行平均を差し引き、正負の色範囲を共通にしています。対数図では10⁻¹⁶未満を表示下限に置きます。"
+  },
+  "shock.c9fd9be16b30": {
+    "en": "Position sensitivity is part of the result.",
+    "ja": "位置への感度も結果の一部。"
+  },
+  "shock.6b667b1a7889": {
+    "en": "This is an independent planar odd–even diagnostic, not Quirk’s original perturbed-grid duct or a blunt-body carbuncle test. The chosen Nyquist perturbation preserves a symmetry with zero transverse velocity. Other wavelengths, mesh rotations and blunt-body flows remain to be tested. No method receives a carbuncle-free certification.",
+    "ja": "独立した平面odd–even診断で、Quirkの原型の摂動格子ダクトや鈍頭物体カーバンクルではありません。選んだNyquist摂動は横速度0の対称性を保ちます。他波長・格子回転・鈍頭流れは今後で、どの手法にもカーバンクルがない保証を与えません。"
+  },
+  "shock.d5eb3a815997": {
+    "en": "The pressure-sensor blend is a defined educational Roe/HLLE experiment. It is not a rotated-hybrid solver. AUSM is the common-sound-speed, cubic-pressure baseline, not AUSM+-up.",
+    "ja": "圧力センサー混合は定義を明示した教育用Roe／HLLE実験で、回転ハイブリッドではありません。AUSMは共通音速・3次圧力の基準例で、AUSM+-upではありません。"
+  },
+  "shock.e6245cf69f16": {
+    "en": "Initial alternating density",
+    "ja": "初期交互密度振幅"
+  },
+  "shock.b4c3742aa59e": {
+    "en": "Final alternating density",
+    "ja": "最終交互密度振幅"
+  },
+  "shock.2a8e8b52b4cb": {
+    "en": "Unperturbed control",
+    "ja": "無摂動対照"
+  },
+  "shock.b9a56decded7": {
+    "en": "Roe / no entropy smoothing",
+    "ja": "Roe／エントロピー平滑化なし"
+  },
+  "shock.bbca16b1d3d4": {
+    "en": "HLL / Davis bounds",
+    "ja": "HLL／Davis境界速度"
+  },
+  "shock.b383e9b031e0": {
+    "en": "HLLE / Einfeldt-type bounds",
+    "ja": "HLLE／Einfeldt型境界速度"
+  },
+  "shock.fd5d78375bda": {
+    "en": "Pressure-sensor Roe/HLLE blend",
+    "ja": "圧力センサーRoe／HLLE混合"
+  },
+  "shock.00a1eaffe37d": {
+    "en": "PPM, characteristics & WENO-Z ↗",
+    "ja": "PPM・特性変数・WENO-Z ↗"
+  },
+  "shock.9d66c7217b4b": {
+    "en": "Odd–even shock diagnostic ↗",
+    "ja": "衝撃波のodd–even診断 ↗"
+  },
+  "shock.b2c7d56faf27": {
+    "en": "Open the shock-method comparison ↗",
+    "ja": "衝撃波手法の比較を開く ↗"
+  },
+  "shock.b9fe3884c74d": {
+    "en": "High-order Euler reconstruction",
+    "ja": "Eulerの高次再構成"
+  },
+  "shock.467f0f736d1d": {
+    "en": "Odd–even shock diagnostic",
+    "ja": "衝撃波のodd–even診断"
+  },
+  "shock.7ad4d4483823": {
+    "en": "PPM, characteristics, WENO-Z & AUSM",
+    "ja": "PPM・特性変数・WENO-Z・AUSM"
+  },
+  "shock.1f902a47bfac": {
+    "en": "PPM, characteristics and WENO-Z",
+    "ja": "PPM・特性変数とWENO-Z"
+  },
+  "shock.58df51c3322f": {
+    "en": "Sod, a moving contact and Shu–Osher; compare conservative components and characteristics, then compare fluxes including an explicit AUSM baseline.",
+    "ja": "Sod・移動接触面・Shu–Osherで保存成分と特性変数を比較し、変種を明示したAUSMを含む流束を比較します。"
+  },
+  "shock.cbe574cb84b1": {
+    "en": "When neighboring shock rows decouple",
+    "ja": "隣接する衝撃波の行が分離するとき"
+  },
+  "shock.f23736158286": {
+    "en": "A controlled stationary Mach-6 odd–even diagnostic. Compare fluxes, unperturbed controls, two grids and two subcell shock positions; no carbuncle-free claim.",
+    "ja": "定常Mach 6の管理したodd–even診断です。流束・無摂動対照・2格子・セル内2位置を比較し、カーバンクルがないとは主張しません。"
+  },
+  "shock.velocity": {
+    "en": "Velocity",
+    "ja": "速度"
   }
 }

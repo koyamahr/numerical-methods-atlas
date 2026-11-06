@@ -39,3 +39,35 @@ Roeは`F_R-F_L=Ã(U_R-U_L)`を満たす線形化と固有系を使います。�
 エントロピー修正は、絶対値がδ未満の音響固有値を`(λ²+δ²)/(2δ)`で置き換えます。HLLEは、強い低密度膨張に対してEinfeldt型の左右波速を使う別の流束です。Roeのエントロピー修正、HLLEの正値性、カーバンクル処理は別の問題を扱います。[Einfeldt（1988）](https://doi.org/10.1137/0725021)、[Einfeldtら（1991）](https://doi.org/10.1016/0021-9991(91)90211-3)。
 
 回転ハイブリッド・リーマンソルバーは面法線以外の方向も使って流束を組み合わせ、衝撃波に対する頑健性とせん断層の解像を両立させます。座標を回すだけではこの構成になりません。初版は文献上の背景を示し、2次元Eulerの幾何、方向選択、カーバンクルテストを次の実装課題とします。[Nishikawa–Kitamura（2008）](https://doi.org/10.1016/j.jcp.2007.11.003)。
+
+
+## RoeのProperty U {#roes-property-u}
+
+[Roeの1981年論文の著者公開全文、359〜360頁](https://www.researchgate.net/publication/222453065_Approximate_Riemann_Solvers_Parameter_Vector_and_Difference_Schemes)の4条件は、(i)固定した状態対ごとに保存変数空間から流束空間への線形写像である、(ii)状態が一致する極限で物理Jacobianになる、(iii)状態ジャンプを流束ジャンプへ厳密に写す、(iv)固有ベクトルが線形独立、です。2状態への依存そのものが線形という意味ではありません。物理的な理想気体Eulerでは、以下の構成は実数の音響・接触速度も持ちます。
+
+以下はアトラスで実装し、独立に検査する代数です。U=(ρ,ρu,E)、H=(E+p)/ρ、z=√ρ(1,u,H)とすると、
+
+\[
+ U(z)=\begin{pmatrix}z_1^2\\z_1z_2\\
+ (z_1z_3+(\gamma-1)z_2^2/2)/\gamma\end{pmatrix},\qquad
+ F(z)=\begin{pmatrix}z_1z_2\\
+ ((\gamma+1)z_2^2/2+(\gamma-1)z_1z_3)/\gamma\\z_2z_3\end{pmatrix}.
+\]
+
+です。両方が2次式なので、中点のJacobian B=∂U/∂z、C=∂F/∂zはΔU=B(z̄)Δz、ΔF=C(z̄)Δzを厳密に満たします。したがってÃ=C(z̄)B(z̄)⁻¹はジャンプ条件を持ち、z̄の比から、
+
+\[
+ \widetilde u=\frac{\sqrt{\rho_L}u_L+\sqrt{\rho_R}u_R}{\sqrt{\rho_L}+\sqrt{\rho_R}},\quad
+ \widetilde H=\frac{\sqrt{\rho_L}H_L+\sqrt{\rho_R}H_R}{\sqrt{\rho_L}+\sqrt{\rho_R}},\quad
+ \widetilde c^2=(\gamma-1)(\widetilde H-\widetilde u^2/2).
+\]
+
+を得ます。同一状態では連鎖則からCB⁻¹=∂F/∂Uです。別に構成した固有系の速度はũ−c̃,ũ,ũ+c̃で、c̃>0なら3固有ベクトルが状態空間を張ります。パラメータ行列・固有基底・解析Jacobianと、決定的に生成した2000組の物理状態で照合します。
+
+単一の非零Rankine–HugoniotジャンプΔF=sΔUならÃΔU=sΔUであり、そのジャンプは速度sの固有空間に属します。無修正Roe流束が孤立した接触面・衝撃波を認識する理由です。任意の再構成・時間離散化を施した衝撃波計算全体が厳密になる意味ではありません。|λ|の平滑化は行列恒等式を変えずに流束を変え、静止衝撃波を広げる場合があります。
+
+膨張不連続もジャンプ関係を満たし得ます。静止垂直衝撃波の左右を逆転した対はProperty Uを満たしますが、無修正Roe流束はエントロピーを満たすリーマン参照と異なります。ジャンプ性質とエントロピー選択を同一視できない数値反例です。エントロピー修正は追加の設計で、いずれも多次元のカーバンクル保証ではありません。
+
+![Roeの流束ジャンプ残差](figures/shock-methods/roe-property-u.png)
+
+`python scripts/build_shock_robustness.py`で行列検査・移動／静止衝撃波・接触面・膨張反例を[診断マニフェスト](figures/shock-methods/robustness.json)に保存します。
