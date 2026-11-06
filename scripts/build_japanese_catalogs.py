@@ -86,7 +86,7 @@ write_chapter('references', '\n\n'.join(parts) + '\n')
 coverage = load('website/content/coverage.json')
 c = coverage['counts']
 parts = ['# 収録範囲と数え方',
-         f"ローカル準備版、集計日{coverage['counted_on']}。数えるのはカタログ項目と記載した実験例です。すべての項目が検証済みの完全なソルバーであるという意味ではありません。",
+         f"公開Web版、集計日{coverage['counted_on']}。数えるのはカタログ項目と記載した実験例です。すべての項目が検証済みの完全なソルバーであるという意味ではありません。",
          f"**方程式・モデル{c['equations']}項目・計算法と構成要素{c['methods']}項目・学術誌／会議論文{c['papers']}件・全参考資料{c['references']}件。**",
          f"保存済み計算を用いる方程式ギャラリーは{c['gallery_equations']}系統・{c['gallery_cases']}例、読書章はこの一覧を含め{c['reading_chapters']}章です。",
          '## 方程式とモデル',

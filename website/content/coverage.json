@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "edition": "Prepared local edition",
+  "edition": "Published web edition",
   "counted_on": "2026-11-06",
   "policy": {
     "equations": "Named equation/model entries, not scalar component equations or mathematically disjoint families. Includes frameworks and auxiliary formulations; variants share one entry except the three separately explained SR/GR fluid systems. Biological entries are imported once from their own catalog.",
@@ -1916,9 +1916,9 @@
     }
   ],
   "source_sha256": {
-    "catalog/coverage.json": "2e9b56c3232d7746e1b01973d53c80b33eac67d7f98b59a3b2305fda42d58a0e",
+    "catalog/coverage.json": "69b2396e45a80c9ed760a4c32b6f7b2e15dce0a3aafb57242cb2674f250c40d4",
     "catalog/biological-models.json": "f0b55e0832cb17304b6d1bfdb626f2b66bb6e5c27a3730981ceb2b4fb151ab82",
     "catalog/references.json": "d2724e706490b8da2c5241bbe40808254d220d16c88618fc8cd3f143fe4b7b2b",
-    "scripts/build_coverage.py": "c52b3dc50bdd062825f07a52cbb1be5d20e3b7306ab2f0a2add89dec046789d0"
+    "scripts/build_coverage.py": "aa5736f70653801129a25f8b18726a6f993dc1c09bbbf68e4dcab48090cb7d0d"
   }
 }

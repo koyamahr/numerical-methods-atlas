@@ -43,7 +43,7 @@ text=json.dumps(data,ensure_ascii=False,indent=2)+'\n'
 (ROOT/'website/content/coverage.json').write_text(text)
 (ROOT/'docs/figures/site-coverage.json').write_text(text)
 (ROOT/'website/public/assets/site-coverage.json').write_text(text)
-lines=['# Site coverage and counting rules','',f"Prepared local edition, counted {data['counted_on']}. These are counts of catalog entries and documented examples, not a claim that every entry is a verified end-to-end solver.",'',
+lines=['# Site coverage and counting rules','',f"{data['edition']}, counted {data['counted_on']}. These are counts of catalog entries and documented examples, not a claim that every entry is a verified end-to-end solver.",'',
  f"**{counts['equations']} equation/model entries · {counts['methods']} methods and building blocks · {counts['papers']} journal/conference papers · {counts['references']} total sources.**",'',
  f"There are {counts['gallery_cases']} saved-profile equation-gallery cases across {counts['gallery_equations']} equation families, and {counts['reading_chapters']} reading chapters including this inventory.",'',
  '## Equations and models','',registry['policy']['equations'],'',

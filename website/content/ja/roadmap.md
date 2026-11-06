@@ -54,7 +54,7 @@ MUSCL勾配の選択、TVB修正minmodと正値再構成、非線形段階検証
 
 Burgers・LWR交通流を含む7系統9ケースの保存分布を追加し、スカラー厳密セル平均、Sod点値、浅水・等温の厳密重ね描きなしを区別します。
 
-[連続P1 FEM](fem.md)、[疎行列・非線形解法](sparse-nonlinear.md)、[硬いODE](stiff-integration.md)、[周期MAC射影](incompressible.md)、[D2Q9–BGK](lattice-boltzmann.md)、[1次双曲型拡散](hyperbolic-diffusion.md)に専用検査・図・ソースハッシュがあります。[Chapman–Enskog展開](chapman-enskog.md)は測定したせん断粘性へつなぐ形式導出です。これらはレビュー準備中で、この拡張による公開はまだしていません。
+[連続P1 FEM](fem.md)、[疎行列・非線形解法](sparse-nonlinear.md)、[硬いODE](stiff-integration.md)、[周期MAC射影](incompressible.md)、[D2Q9–BGK](lattice-boltzmann.md)、[1次双曲型拡散](hyperbolic-diffusion.md)に専用検査・図・ソースハッシュがあります。[Chapman–Enskog展開](chapman-enskog.md)は測定したせん断粘性へつなぐ形式導出です。これらの教育用実装は新しいアトラスで公開済みです。各章に実装範囲と残る検証を示しています。
 
 ## 承認済みの次の作業 {#authorized-next-work}
 

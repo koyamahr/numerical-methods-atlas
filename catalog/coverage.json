@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "edition": "Prepared local edition",
+  "edition": "Published web edition",
   "counted_on": "2026-11-06",
   "policy": {
     "equations": "Named equation/model entries, not scalar component equations or mathematically disjoint families. Includes frameworks and auxiliary formulations; variants share one entry except the three separately explained SR/GR fluid systems. Biological entries are imported once from their own catalog.",

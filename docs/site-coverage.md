@@ -1,6 +1,6 @@
 # Site coverage and counting rules
 
-Prepared local edition, counted 2026-11-06. These are counts of catalog entries and documented examples, not a claim that every entry is a verified end-to-end solver.
+Published web edition, counted 2026-11-06. These are counts of catalog entries and documented examples, not a claim that every entry is a verified end-to-end solver.
 
 **42 equation/model entries · 85 methods and building blocks · 127 journal/conference papers · 148 total sources.**
 

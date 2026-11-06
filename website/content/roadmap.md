@@ -84,8 +84,9 @@ The new [continuous P1 FEM](fem.md), [sparse/nonlinear solvers](sparse-nonlinear
 [D2Q9–BGK](lattice-boltzmann.md), and [first-order hyperbolic diffusion baseline](hyperbolic-diffusion.md)
 have dedicated numerical checks, figures and source-hashed manifests.
 [Chapman–Enskog expansion](chapman-enskog.md) is a formal derivation linked to
-the measured shear viscosity. These local additions are prepared for review;
-they have not been deployed by this expansion.
+the measured shear viscosity. These educational additions are included in the
+published atlas at https://koyamahr.github.io/numerical-methods-atlas/ . Their
+implementation limits and remaining verification work are stated in each chapter.
 
 ## Authorized next work
 

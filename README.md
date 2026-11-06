@@ -12,7 +12,7 @@ compare the results with analytical solutions and conservation checks. The
 library covers selected educational models; the [roadmap](docs/roadmap.md)
 identifies the extensions still to be implemented.
 
-**[Read the currently published edition](https://koyamahr.github.io/the-art-of-numerical-algorithms/)** — the existing site remains live during preparation. The approved new address is `https://koyamahr.github.io/numerical-methods-atlas/`; it is not deployed yet. See [URL migration](URL_MIGRATION.md).
+**[Read the published atlas](https://koyamahr.github.io/numerical-methods-atlas/)** — published November 6, 2026. The former address forwards language, chapter, section and search parameters to this edition. Source and ongoing development: [koyamahr/numerical-methods-atlas](https://github.com/koyamahr/numerical-methods-atlas). See the [migration record and rollback information](URL_MIGRATION.md).
 
 ## Getting started
 
@@ -31,7 +31,7 @@ Figures, numerical data, settings, and source SHA-256 hashes are saved together.
 Runs made before the first Git commit record a `null` Git revision and use the
 source hashes to identify the implementation.
 
-## The atlas in numbers — prepared local edition
+## The atlas in numbers — published edition
 
 **42 equation/model entries · 85 numerical methods and building blocks ·
 127 journal/conference papers · 148 unique sources in all.**
@@ -231,10 +231,10 @@ python scripts/check_movies.py
 python scripts/sync_web_content.py
 ```
 
-## Bilingual edition in preparation
+## Published bilingual edition
 
-English title: **An Atlas of Numerical Methods**. Japanese title: **数値計算法アトラス**. Interactive links in this README target the planned new address; the published edition above still uses the old address.
+English title: **An Atlas of Numerical Methods**. Japanese title: **数値計算法アトラス**. Both languages use the published `numerical-methods-atlas/` address.
 
-The local review candidate now supports Japanese/English switching, 137 bilingual terms, all 42 reading chapters in Japanese draft, and Japanese controls/explanations across the experiment notebooks. Original bibliography metadata, source notes and image/video lettering remain shared. The drafts still need editorial review. See [implementation status](BILINGUAL_STATUS.md) and [migration plan](BILINGUAL_PLAN.md). These changes have not been deployed to the public site.
+The published edition supports Japanese/English switching and 143 bilingual terms. Japanese drafts cover 42 of the 43 reading chapters; the new reference-element basis chapter and notebook currently use English. Established experiment notebooks have Japanese controls and explanations. Original bibliography metadata, source notes and image/video lettering remain shared. The drafts still need editorial review. See [implementation status](BILINGUAL_STATUS.md) and the [original migration plan](BILINGUAL_PLAN.md).
 
 Reference-element basis functions now have a dedicated [chapter](docs/basis-functions.md) and [interactive notebook](https://koyamahr.github.io/numerical-methods-atlas/#/basis): Legendre modes, nodal Lagrange functions, Gauss/GLL quadrature, exact versus lumped mass, and triangular P1/P2 shapes. Other orthogonal families are explained with their domains and weights.

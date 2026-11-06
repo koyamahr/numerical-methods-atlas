@@ -1,5 +1,7 @@
 # Atlas expansion prepared for review
 
+> Publication update, November 6, 2026: the reviewed expansion and subsequent bilingual/basis additions are now published at https://koyamahr.github.io/numerical-methods-atlas/ . The following is the retained pre-publication review record; current counts and translation scope are in README.md and BILINGUAL_STATUS.md.
+
 This candidate adds the equation gallery, solver foundations, source-based
 biology/GSPH/relativistic chapters, Arakawa-grid comparisons and audited
 homepage coverage. It is prepared on a review branch and does not update the public website.
