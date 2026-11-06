@@ -33,12 +33,12 @@ source hashes to identify the implementation.
 
 ## The atlas in numbers — published edition
 
-**42 equation/model entries · 85 numerical methods and building blocks ·
-127 journal/conference papers · 148 unique sources in all.**
+**42 equation/model entries · 86 numerical methods and building blocks ·
+131 journal/conference papers · 152 unique sources in all.**
 
-The paper count is 124 journal articles plus 3 conference papers; other sources
+The paper count is 128 journal articles plus 3 conference papers; other sources
 include books, chapters, reports, documentation and a separately identified
-preprint. The named inventory distinguishes 15 model entries and 79 method
+preprint. The named inventory distinguishes 15 model entries and 80 method
 entries with scoped local examples from reading-only material. These are not
 counts of independent, complete production solvers. The equation gallery has
 9 saved-profile cases across 7 families.
@@ -69,6 +69,10 @@ These are reading notes and staged implementation plans; no GSPH or relativistic
 fluid solver is implemented in the current library.
 
 New exhibits: [CIP value/gradient transport](docs/cip.md), [Runge–Kutta families](docs/runge-kutta.md), [slope limiters](docs/limiters.md), [advanced TVB and positive-state scaling](docs/advanced-limiters.md), [nonsteady movies](docs/movies.md), and [original KEEP with smooth tests and caveats](docs/keep.md). Steady fields remain still figures.
+
+## Euler reconstruction and full-vector MHD comparisons
+
+[Compare first order, minmod and MC](https://koyamahr.github.io/numerical-methods-atlas/#/flow-comparison) on the NASA wedges and forward step, with exact-cell-average smooth refinement and paired 81-state step clips. [HLLD standard tests](https://koyamahr.github.io/numerical-methods-atlas/#/mhd-tests) add Brio–Wu, circular Alfvén refinement and weak field loops with CT-Contact/GLM diagnostics. Run `python scripts/build_euler_comparison.py` and `python scripts/build_mhd_tests.py` with the movie dependencies to regenerate source-hashed artifacts. Scope and remaining verification are documented in [the NASA chapter](docs/nasa-2d.md) and [the MHD chapter](docs/mhd.md).
 
 ## Local expansion: equation gallery and solver foundations
 

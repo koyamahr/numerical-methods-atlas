@@ -846,6 +846,12 @@
       "en": "Gauss–Lobatto–Legendre nodes",
       "ja": "Gauss–Lobatto–Legendre節点",
       "chapter": "basis-functions"
+    },
+    {
+      "id": "method.hlld",
+      "en": "HLLD MHD Riemann solver",
+      "ja": "HLLDのMHDリーマン解法",
+      "chapter": "mhd"
     }
   ]
 }

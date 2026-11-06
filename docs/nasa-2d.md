@@ -46,7 +46,10 @@ have no imposed analytical shock in their initial state. Their normalized L1
 density errors compare conservative cell averages with an exactly clipped
 piecewise-constant oblique-shock reference. Wall-pressure medians use the first
 fluid row over 0.5 < x < 0.9; a density-gradient fit over 0.35 < x < 0.85 estimates
-the shock angle. Two grids at one finite terminal time do not establish general
+the shock angle. Mach-2 MC still has local time variation at t = 3 (maximum conserved update
+rate approximately 6.08 in the published run); it is not a converged steady
+solution. This residual is exposed alongside the sharper density error.
+Two grids at one finite terminal time do not establish general
 asymptotic order or complete steady convergence. The step has no exact overlay
 and only one published grid; t = 4 is an unsteady snapshot.
 
@@ -115,3 +118,44 @@ steps, and definitions of Cp/Cf/Cl/Cd. A decreasing residual alone establishes
 neither grid convergence nor agreement with experiments. Add the original
 measurement papers at implementation time rather than citing only NASA's
 resource pages.
+
+
+## MUSCL reconstruction comparisons
+
+[Compare first order, minmod and MC](#/flow-comparison?case=wedge-m2.5&method=mc).
+The new runs keep acoustic HLL, SSPRK2 and nominal CFL 0.4 fixed. Primitive
+variables are reconstructed from physical gradients at quadrilateral area
+centroids to face midpoints. On the body-fitted grid, x secants account for
+the accompanying physical y displacement. A shared face flux updates both
+neighbors. The limiter choices are minmod(a,b) and
+MC(a,b) = minmod(2a,(a+b)/2,2b); see the [limiter definitions](limiters.md).
+Boundary reconstruction excludes solid neighbors and reflects fluid-side
+states. One cellwise factor scales reconstructed deviations when a face
+would have nonpositive density or pressure. Failed SSPRK2 steps halve the
+step size and retry; these events are recorded. Conserved means are not clipped.
+This is a tested safeguard, not a general positivity theorem for this solver.
+
+Both NASA wedges have all three reconstructions on 120 × 40 and 240 × 80
+meshes at t = 3. Wall pressure, fitted shock angle and integrated density
+errors use the definitions above. A separate periodic entropy wave uses
+velocity (0.7,0.3), pressure 1 and density
+1 + 0.2 sin(2πx) sin(2πy), initialized and compared as exact cell averages.
+Grids 16², 32², 64² and 128² reach t = 0.5. Observed orders are printed in the
+comparison page; MC approaches second order on this smooth test. Limiter
+activation at extrema affects the measured minmod order. Shock errors have
+a different convergence regime and do not establish smooth second order.
+
+![Smooth two-dimensional refinement](figures/comparisons/smooth-refinement.png)
+
+The [forward-step comparison](#/flow-comparison?case=forward-step&method=mc)
+adds minmod and MC stills and 81-state clips on the same 240 × 80 mesh. All
+three clips share density/pressure scales and requested output times, but
+actual intermediate timestamps can differ by one adaptive solver step.
+Nominal CFL and grids do not imply equal computational cost. These are three
+reconstructions of one physical case; the original first-order movie remains
+available. The corner treatment is unchanged and the t = 4 flow is unsteady.
+
+Reproduce with `python scripts/build_euler_comparison.py`. Download the
+[comparison definitions, diagnostics and hashes](figures/comparisons/euler-comparison.json)
+and [final conservative arrays](figures/comparisons/final-fields.npz).
+Full trajectories are cached locally under `outputs/euler-comparison`.

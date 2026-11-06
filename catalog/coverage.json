@@ -763,7 +763,7 @@
       "chapter": "mhd",
       "status": "local-example",
       "group": "Coupling, constraints & particles",
-      "scope": ""
+      "scope": "Original arithmetic flux-CT OT baseline plus contact-upwinded CT loop tests. Native face divergence; not UCT-HLLD."
     },
     {
       "kind": "method",
@@ -772,7 +772,7 @@
       "chapter": "mhd",
       "status": "local-example",
       "group": "Coupling, constraints & particles",
-      "scope": ""
+      "scope": "Original Rusanov OT baseline plus HLLD/HLLE loop tests with an exact longitudinal cleaning solve and split damping. Native cell-centered divergence."
     },
     {
       "kind": "method",
@@ -953,6 +953,15 @@
       "status": "local-example",
       "group": "Element bases & approximation",
       "scope": "Interval cardinal functions, modal transforms, exact versus quadrature mass, and P1/P2 triangle shapes."
+    },
+    {
+      "kind": "method",
+      "id": "hlld",
+      "label": "HLLD MHD Riemann solver",
+      "chapter": "mhd",
+      "status": "local-example",
+      "group": "Riemann fluxes & corrections",
+      "scope": "Full-vector adiabatic HLLD/HLLE with Brio-Wu, circular Alfven refinement and weak field-loop tests. CT-Contact and GLM, not UCT-HLLD."
     }
   ]
 }

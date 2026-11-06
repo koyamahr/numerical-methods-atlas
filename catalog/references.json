@@ -1728,5 +1728,53 @@
     "doi": "10.1016/j.jcp.2014.12.012",
     "source": "https://arxiv.org/html/1412.2276v1",
     "note": "Author preprint posted in December 2014, full HTML consulted. Explains exact and GLL-quadrature mass matrices and their rank-one difference. The reference-element notebook tests this distinction; it is not a reproduction of a full spectral-element PDE solver."
+  },
+  {
+    "id": "brio1988",
+    "year": 1988,
+    "author": "Brio, Moysey and Wu, Cheng-chin",
+    "title": "An upwind differencing scheme for the equations of ideal magnetohydrodynamics",
+    "journal": "Journal of Computational Physics",
+    "volume": "75",
+    "pages": "400--422",
+    "doi": "10.1016/0021-9991(88)90120-9",
+    "source": "https://www.sciencedirect.com/science/article/pii/0021999188901209",
+    "note": "Original bibliographic record for the Brio-Wu coplanar shock tube. Publisher metadata checked; no claim of full-text inspection or exact-solution reproduction. The local HLLD/HLLE comparison records its gamma=2 initial states and numerical grid comparison."
+  },
+  {
+    "id": "miyoshi2005",
+    "year": 2005,
+    "author": "Miyoshi, Takahiro and Kusano, Kanya",
+    "title": "A multi-state HLL approximate Riemann solver for ideal magnetohydrodynamics",
+    "journal": "Journal of Computational Physics",
+    "volume": "208",
+    "pages": "315--344",
+    "doi": "10.1016/j.jcp.2005.02.017",
+    "source": "https://github.com/PrincetonUniversity/athena-public-version/blob/master/src/hydro/rsolvers/mhd/hlld.cpp",
+    "note": "Original HLLD bibliographic record; publisher abstract/metadata, not the complete original paper, inspected. Star and double-star equations cross-checked against the linked official Athena++ implementation. The local independent implementation has contact, rotational-wave and standard-test checks; no Athena++ output is reproduced."
+  },
+  {
+    "id": "mignone2010glm",
+    "year": 2010,
+    "author": "Mignone, Andrea and Tzeferacos, Petros",
+    "title": "A second-order unsplit Godunov scheme for cell-centered MHD: The CTU-GLM scheme",
+    "journal": "Journal of Computational Physics",
+    "volume": "229",
+    "pages": "2117--2138",
+    "doi": "10.1016/j.jcp.2009.11.026",
+    "source": "https://arxiv.org/abs/0911.3410",
+    "note": "Public author manuscript inspected for the conservative GLM equations and longitudinal cleaning subsystem. The local loop test uses MC/SSPRK2 and split psi damping, not the paper's CTU integrator or EGLM variant."
+  },
+  {
+    "id": "mignone2021uct",
+    "year": 2021,
+    "author": "Mignone, Andrea and Del Zanna, Luca",
+    "title": "Systematic construction of upwind constrained transport schemes for MHD",
+    "journal": "Journal of Computational Physics",
+    "volume": "424",
+    "pages": "109748",
+    "doi": "10.1016/j.jcp.2020.109748",
+    "source": "https://arxiv.org/abs/2004.10542",
+    "note": "Public 2020 author manuscript inspected, especially CT-Contact equations 20-22. The local shared-corner update uses contact-upwinded transverse EMF derivatives and verifies the one-dimensional face-flux limit; UCT-HLLD itself is not implemented."
   }
 ]

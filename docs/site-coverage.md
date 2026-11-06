@@ -2,7 +2,7 @@
 
 Published web edition, counted 2026-11-06. These are counts of catalog entries and documented examples, not a claim that every entry is a verified end-to-end solver.
 
-**42 equation/model entries · 85 methods and building blocks · 127 journal/conference papers · 148 total sources.**
+**42 equation/model entries · 86 methods and building blocks · 131 journal/conference papers · 152 total sources.**
 
 There are 9 saved-profile equation-gallery cases across 7 equation families, and 43 reading chapters including this inventory.
 
@@ -69,7 +69,7 @@ Named equation/model entries, not scalar component equations or mathematically d
 
 Named numerical methods and building blocks with a reading chapter. Aliases count once; RK stages, dimensions, parameter combinations, mesh layouts and theoretical conditions do not add methods. A family and a separately explained algorithm may both appear. Not a count of mutually exclusive end-to-end solvers.
 
-79 entries have scoped local examples; 6 are reading-only. Reconstruction limiters, preconditioners and coupling operators are building blocks, not complete PDE solvers. Mesh layouts, CFL conditions and theorems are not counted as numerical methods.
+80 entries have scoped local examples; 6 are reading-only. Reconstruction limiters, preconditioners and coupling operators are building blocks, not complete PDE solvers. Mesh layouts, CFL conditions and theorems are not counted as numerical methods.
 
 ### Spatial discretization
 
@@ -96,6 +96,7 @@ Named numerical methods and building blocks with a reading chapter. Aliases coun
 - [HLLE / Einfeldt wave speeds](benchmarks.md) — Local example.
 - [Acoustic Roe entropy correction](advanced.md) — Local example.
 - [Rotated-hybrid Riemann solver](advanced.md) — Reading only.
+- [HLLD MHD Riemann solver](mhd.md) — Local example. Full-vector adiabatic HLLD/HLLE with Brio-Wu, circular Alfven refinement and weak field-loop tests. CT-Contact and GLM, not UCT-HLLD.
 
 ### Limiters & admissibility
 
@@ -151,8 +152,8 @@ Named numerical methods and building blocks with a reading chapter. Aliases coun
 - [Dual time stepping](advanced.md) — Local example.
 - [Scalar residual distribution](advanced.md) — Local example. 1D P1 upwind equivalent, not multidimensional Euler RD.
 - [Low-Mach PDE preconditioning](advanced.md) — Reading only.
-- [Constrained transport / CT](mhd.md) — Local example.
-- [GLM divergence cleaning](mhd.md) — Local example.
+- [Constrained transport / CT](mhd.md) — Local example. Original arithmetic flux-CT OT baseline plus contact-upwinded CT loop tests. Native face divergence; not UCT-HLLD.
+- [GLM divergence cleaning](mhd.md) — Local example. Original Rusanov OT baseline plus HLLD/HLLE loop tests with an exact longitudinal cleaning solve and split damping. Native cell-centered divergence.
 - [MAC pressure projection](incompressible.md) — Local example.
 - [D2Q9–BGK collision and streaming](lattice-boltzmann.md) — Local example.
 - [Guo forcing](lattice-boltzmann.md) — Local example.
@@ -189,7 +190,7 @@ Unique bibliographic publications classified as journal articles or conference p
 
 Unique cataloged works across all publication types. An original publication and a later translation are separate works; duplicate DOI records are not. NASA case links in prose are not catalog records.
 
-- 124 journal-article records, including reviews, translations and explicitly labeled accepted papers.
+- 128 journal-article records, including reviews, translations and explicitly labeled accepted papers.
 - 3 conference papers.
 - 7 books.
 - 2 book chapters.

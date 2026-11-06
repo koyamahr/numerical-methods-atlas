@@ -71,3 +71,8 @@ separate evidence.
 ## What a movie does not establish
 
 A visually smooth evolution does not establish mesh convergence, an entropy inequality, shock robustness, long-time turbulent accuracy, or agreement with experiments. The [KEEP vortex refinement](keep.md) supplies separate smooth-error measurements. The [carbuncle chapter](carbuncle.md) explains why a shock movie alone cannot certify multidimensional stability.
+
+
+## Reconstruction comparison clips
+
+The [Euler comparison page](#/flow-comparison?case=forward-step&method=mc) adds paired first-order/minmod/MC clips of the same forward-step case, with shared color scales and 81 output states per method. Read actual timestamps in the frames: adaptive solver steps need not land on identical intermediate times. These compare reconstructions; they do not add physical cases to the five-case movie catalog. `python scripts/build_euler_comparison.py` builds them and decodes each MP4 to check its frame count.

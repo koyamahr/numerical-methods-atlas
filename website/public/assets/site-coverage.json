@@ -10,10 +10,10 @@
   },
   "counts": {
     "equations": 42,
-    "methods": 85,
-    "papers": 127,
-    "references": 148,
-    "journal_articles": 124,
+    "methods": 86,
+    "papers": 131,
+    "references": 152,
+    "journal_articles": 128,
     "conference_papers": 3,
     "books": 7,
     "chapters": 2,
@@ -21,7 +21,7 @@
     "other_sources": 9,
     "local_equations": 15,
     "reading_equations": 27,
-    "local_methods": 79,
+    "local_methods": 80,
     "reading_methods": 6,
     "biological_entries": 22,
     "gallery_cases": 9,
@@ -783,7 +783,7 @@
       "chapter": "mhd",
       "status": "local-example",
       "group": "Coupling, constraints & particles",
-      "scope": ""
+      "scope": "Original arithmetic flux-CT OT baseline plus contact-upwinded CT loop tests. Native face divergence; not UCT-HLLD."
     },
     {
       "kind": "method",
@@ -792,7 +792,7 @@
       "chapter": "mhd",
       "status": "local-example",
       "group": "Coupling, constraints & particles",
-      "scope": ""
+      "scope": "Original Rusanov OT baseline plus HLLD/HLLE loop tests with an exact longitudinal cleaning solve and split damping. Native cell-centered divergence."
     },
     {
       "kind": "method",
@@ -973,6 +973,15 @@
       "status": "local-example",
       "group": "Element bases & approximation",
       "scope": "Interval cardinal functions, modal transforms, exact versus quadrature mass, and P1/P2 triangle shapes."
+    },
+    {
+      "kind": "method",
+      "id": "hlld",
+      "label": "HLLD MHD Riemann solver",
+      "chapter": "mhd",
+      "status": "local-example",
+      "group": "Riemann fluxes & corrections",
+      "scope": "Full-vector adiabatic HLLD/HLLE with Brio-Wu, circular Alfven refinement and weak field-loop tests. CT-Contact and GLM, not UCT-HLLD."
     },
     {
       "kind": "equation",
@@ -1913,12 +1922,32 @@
       "id": "teukolsky2015",
       "type": "article",
       "identity": "doi:10.1016/j.jcp.2014.12.012"
+    },
+    {
+      "id": "brio1988",
+      "type": "article",
+      "identity": "doi:10.1016/0021-9991(88)90120-9"
+    },
+    {
+      "id": "miyoshi2005",
+      "type": "article",
+      "identity": "doi:10.1016/j.jcp.2005.02.017"
+    },
+    {
+      "id": "mignone2010glm",
+      "type": "article",
+      "identity": "doi:10.1016/j.jcp.2009.11.026"
+    },
+    {
+      "id": "mignone2021uct",
+      "type": "article",
+      "identity": "doi:10.1016/j.jcp.2020.109748"
     }
   ],
   "source_sha256": {
-    "catalog/coverage.json": "69b2396e45a80c9ed760a4c32b6f7b2e15dce0a3aafb57242cb2674f250c40d4",
+    "catalog/coverage.json": "0e9a0f602a1e0e8f4c78c0fdba532da220cd2a15e891dbe46d359c48ab47ec30",
     "catalog/biological-models.json": "f0b55e0832cb17304b6d1bfdb626f2b66bb6e5c27a3730981ceb2b4fb151ab82",
-    "catalog/references.json": "c956899d303a3f5273fec0ed8cfc97166f83e7976bc026cb1dd0a6284902997e",
+    "catalog/references.json": "84ea6a11bfdc1128b6e3f1b98d6c9d496cf31d59bd5a4e7b6627d1df6427c03e",
     "scripts/build_coverage.py": "aa5736f70653801129a25f8b18726a6f993dc1c09bbbf68e4dcab48090cb7d0d"
   }
 }

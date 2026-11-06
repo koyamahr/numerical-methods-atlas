@@ -1078,6 +1078,22 @@ Publisher bibliographic record and abstract. Low-speed PDE preconditioning is di
 
 </div>
 
+## 1988 · brio1988 {#1988-brio1988}
+
+<div lang="en" data-original>
+
+Brio, Moysey and Wu, Cheng-chin. **An upwind differencing scheme for the equations of ideal magnetohydrodynamics**. Journal of Computational Physics.
+
+</div>
+
+[原著の書誌情報](https://doi.org/10.1016/0021-9991(88)90120-9) · [全文または実装の参照資料](https://www.sciencedirect.com/science/article/pii/0021999188901209)
+
+<div lang="en" data-original>
+
+Original bibliographic record for the Brio-Wu coplanar shock tube. Publisher metadata checked; no claim of full-text inspection or exact-solution reproduction. The local HLLD/HLLE comparison records its gamma=2 initial states and numerical grid comparison.
+
+</div>
+
 ## 1988 · einfeldt1988 {#1988-einfeldt1988}
 
 <div lang="en" data-original>
@@ -1734,6 +1750,22 @@ Author abstract and journal metadata inspected. Coupled Einstein–Maxwell–MHD
 
 </div>
 
+## 2005 · miyoshi2005 {#2005-miyoshi2005}
+
+<div lang="en" data-original>
+
+Miyoshi, Takahiro and Kusano, Kanya. **A multi-state HLL approximate Riemann solver for ideal magnetohydrodynamics**. Journal of Computational Physics.
+
+</div>
+
+[原著の書誌情報](https://doi.org/10.1016/j.jcp.2005.02.017) · [全文または実装の参照資料](https://github.com/PrincetonUniversity/athena-public-version/blob/master/src/hydro/rsolvers/mhd/hlld.cpp)
+
+<div lang="en" data-original>
+
+Original HLLD bibliographic record; publisher abstract/metadata, not the complete original paper, inspected. Star and double-star equations cross-checked against the linked official Athena++ implementation. The local independent implementation has contact, rotational-wave and standard-test checks; no Athena++ output is reproduced.
+
+</div>
+
 ## 2005 · springel2005 {#2005-springel2005}
 
 <div lang="en" data-original>
@@ -1891,6 +1923,22 @@ Williams, Paul D.. **A Proposed Modification to the Robert–Asselin Time Filter
 <div lang="en" data-original>
 
 Publisher record identifies the time-filter paper. The ODE laboratory uses unfiltered leapfrog with RK4 startup and does not implement this filter.
+
+</div>
+
+## 2010 · mignone2010glm {#2010-mignone2010glm}
+
+<div lang="en" data-original>
+
+Mignone, Andrea and Tzeferacos, Petros. **A second-order unsplit Godunov scheme for cell-centered MHD: The CTU-GLM scheme**. Journal of Computational Physics.
+
+</div>
+
+[原著の書誌情報](https://doi.org/10.1016/j.jcp.2009.11.026) · [全文または実装の参照資料](https://arxiv.org/abs/0911.3410)
+
+<div lang="en" data-original>
+
+Public author manuscript inspected for the conservative GLM equations and longitudinal cleaning subsystem. The local loop test uses MC/SSPRK2 and split psi damping, not the paper's CTU integrator or EGLM variant.
 
 </div>
 
@@ -2067,6 +2115,22 @@ Saito, Fuyuki and Obase, Takashi and Abe-Ouchi, Ayako. **Implementation of the R
 <div lang="en" data-original>
 
 Open primary paper inspected. CIP-family value/gradient transport, velocity-gradient terms, and rational reconstruction conventions. The atlas does not implement this RCIP ice-age model or its variable-velocity departure correction.
+
+</div>
+
+## 2021 · mignone2021uct {#2021-mignone2021uct}
+
+<div lang="en" data-original>
+
+Mignone, Andrea and Del Zanna, Luca. **Systematic construction of upwind constrained transport schemes for MHD**. Journal of Computational Physics.
+
+</div>
+
+[原著の書誌情報](https://doi.org/10.1016/j.jcp.2020.109748) · [全文または実装の参照資料](https://arxiv.org/abs/2004.10542)
+
+<div lang="en" data-original>
+
+Public 2020 author manuscript inspected, especially CT-Contact equations 20-22. The local shared-corner update uses contact-upwinded transverse EMF derivatives and verifies the one-dimensional face-flux limit; UCT-HLLD itself is not implemented.
 
 </div>
 

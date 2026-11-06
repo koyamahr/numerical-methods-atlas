@@ -2,7 +2,7 @@
 
 公開Web版、集計日2026-11-06。数えるのはカタログ項目と記載した実験例です。すべての項目が検証済みの完全なソルバーであるという意味ではありません。
 
-**方程式・モデル42項目・計算法と構成要素85項目・学術誌／会議論文127件・全参考資料148件。**
+**方程式・モデル42項目・計算法と構成要素86項目・学術誌／会議論文131件・全参考資料152件。**
 
 保存済み計算を用いる方程式ギャラリーは7系統・9例、読書章はこの一覧を含め43章です。
 
@@ -71,7 +71,7 @@
 
 名前付きの離散化法、積分法、線形・非線形解法、連成演算子を数えます。パラメータの違いでは増やしません。
 
-ローカル実験のある項目は79、文献解説のみは6です。再構成の制限関数、前処理、連成演算子は構成要素であり、完全なPDEソルバーではありません。格子配置、CFL条件、定理は計算法の数に含めません。
+ローカル実験のある項目は80、文献解説のみは6です。再構成の制限関数、前処理、連成演算子は構成要素であり、完全なPDEソルバーではありません。格子配置、CFL条件、定理は計算法の数に含めません。
 
 ### 空間離散化 {#spatial-discretization}
 
@@ -98,6 +98,7 @@
 - [HLLE／Einfeldt波速（HLLE / Einfeldt wave speeds）](benchmarks.md) — ローカル実験あり。
 - [Roe音響波のエントロピー修正（Acoustic Roe entropy correction）](advanced.md) — ローカル実験あり。
 - [回転ハイブリッド・リーマンソルバー（Rotated-hybrid Riemann solver）](advanced.md) — 文献解説のみ。
+- [HLLDのMHDリーマン解法（HLLD MHD Riemann solver）](mhd.md) — ローカル実験あり。 <span lang="en" data-original>Full-vector adiabatic HLLD/HLLE with Brio-Wu, circular Alfven refinement and weak field-loop tests. CT-Contact and GLM, not UCT-HLLD.</span>
 
 ### 勾配制限と許容状態 {#limiters-amp-admissibility}
 
@@ -153,8 +154,8 @@
 - [二重時間積分（Dual time stepping）](advanced.md) — ローカル実験あり。
 - [スカラー残差分配法（Scalar residual distribution）](advanced.md) — ローカル実験あり。 <span lang="en" data-original>1D P1 upwind equivalent, not multidimensional Euler RD.</span>
 - [低Mach数のPDE前処理（Low-Mach PDE preconditioning）](advanced.md) — 文献解説のみ。
-- [制約輸送法／CT（Constrained transport / CT）](mhd.md) — ローカル実験あり。
-- [GLM発散クリーニング（GLM divergence cleaning）](mhd.md) — ローカル実験あり。
+- [制約輸送法／CT（Constrained transport / CT）](mhd.md) — ローカル実験あり。 <span lang="en" data-original>Original arithmetic flux-CT OT baseline plus contact-upwinded CT loop tests. Native face divergence; not UCT-HLLD.</span>
+- [GLM発散クリーニング（GLM divergence cleaning）](mhd.md) — ローカル実験あり。 <span lang="en" data-original>Original Rusanov OT baseline plus HLLD/HLLE loop tests with an exact longitudinal cleaning solve and split damping. Native cell-centered divergence.</span>
 - [MAC圧力射影法（MAC pressure projection）](incompressible.md) — ローカル実験あり。
 - [D2Q9–BGK衝突・並進（D2Q9–BGK collision and streaming）](lattice-boltzmann.md) — ローカル実験あり。
 - [Guo外力（Guo forcing）](lattice-boltzmann.md) — ローカル実験あり。
@@ -189,7 +190,7 @@
 
 論文数は学術誌論文と会議論文です。総説、翻訳、採録済みであることを明記した論文も含みます。全参考資料は、それに書籍、章、技術資料、文書、個別に識別したプレプリント等を加えた、重複を除く出版物の数です。
 
-- 124件：学術誌論文（総説・翻訳・採録済み論文を含む）
+- 128件：学術誌論文（総説・翻訳・採録済み論文を含む）
 - 3件：会議論文
 - 7件：書籍
 - 2件：書籍の章

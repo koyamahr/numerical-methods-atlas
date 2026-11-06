@@ -5295,5 +5295,341 @@
   "gallery.shock-manifest": {
     "en": "Download shock-case definitions & diagnostics",
     "ja": "衝撃波問題の定義・診断量をダウンロード"
+  },
+  "comparison.7952493acfd6": {
+    "en": "EULER / RECONSTRUCTION COMPARISON",
+    "ja": "EULER／再構成の比較"
+  },
+  "comparison.69b79d0224d1": {
+    "en": "Compare the reconstruction.",
+    "ja": "再構成を比較する。"
+  },
+  "comparison.3af7b84c250c": {
+    "en": "First order, minmod or MC on shared grids. Keep the HLL flux and SSPRK2 fixed, then inspect the shock, wall pressure and smooth-wave refinement.",
+    "ja": "同じ格子で1次・minmod・MCを比較します。HLL流束とSSPRK2を固定し、衝撃波・壁圧・滑らかな波の細分化を調べます。"
+  },
+  "comparison.d4df20e82648": {
+    "en": "Flow test",
+    "ja": "流れのテスト"
+  },
+  "comparison.2e438a2dd1fc": {
+    "en": "Compare with first order",
+    "ja": "1次と比較する再構成"
+  },
+  "comparison.0eeaf124b4e7": {
+    "en": "MUSCL / MC",
+    "ja": "MUSCL／MC"
+  },
+  "comparison.4f939edfebc2": {
+    "en": "MUSCL / minmod",
+    "ja": "MUSCL／minmod"
+  },
+  "comparison.97d1cc1b20c7": {
+    "en": "Setup, references & boundary conditions ↗",
+    "ja": "設定・出典・境界条件 ↗"
+  },
+  "comparison.0cbb9b2b6d36": {
+    "en": "Download comparison diagnostics ↓",
+    "ja": "比較診断をダウンロード ↓"
+  },
+  "comparison.4d3ff982404d": {
+    "en": "Return to the gallery ↗",
+    "ja": "ギャラリーへ戻る ↗"
+  },
+  "comparison.455cc2ca644f": {
+    "en": "Loading comparison data…",
+    "ja": "比較データを読み込み中…"
+  },
+  "comparison.a3bdad046b10": {
+    "en": "First order",
+    "ja": "1次"
+  },
+  "comparison.4611715f5048": {
+    "en": "Watch the shock reflections",
+    "ja": "衝撃波の反射を見る"
+  },
+  "comparison.1b91c0e6fcc9": {
+    "en": "Both clips use the same requested output times and playback rate. Intermediate physical timestamps can differ by one solver step; read the time printed in each frame.",
+    "ja": "両動画は要求出力時刻と再生速度を共通にします。途中の物理時刻は時間刻み1段分ずれる場合があるため、各フレームの時刻を確認してください。"
+  },
+  "comparison.2bd627dfd8f2": {
+    "en": "Play both ▷",
+    "ja": "両方を再生 ▷"
+  },
+  "comparison.c52c6a0de0a4": {
+    "en": "Pause both",
+    "ja": "両方を一時停止"
+  },
+  "comparison.fde38f322d95": {
+    "en": "Reset both",
+    "ja": "両方を先頭へ"
+  },
+  "comparison.bcc4ab7c3771": {
+    "en": "Smooth accuracy is a separate test.",
+    "ja": "滑らかな解の精度は別に検証する。"
+  },
+  "comparison.99ee3c374a75": {
+    "en": "Periodic 2D entropy advection compares exact density cell averages. A sharp shock image does not establish second-order convergence.",
+    "ja": "周期2次元エントロピー移流を厳密な密度セル平均と比較します。鮮明な衝撃波の画像だけでは2次収束を示せません。"
+  },
+  "comparison.5d3abab31a6d": {
+    "en": "Same grid and nominal CFL do not mean equal step counts or equal computational cost. Reconstructed face states may be scaled for positivity; failed steps are retried and counted. Cell averages are never clipped. The step corner has no entropy reset.",
+    "ja": "同じ格子・公称CFLでも刻み数・計算費用は等しくありません。面状態は正値性のために縮小する場合があり、失敗した刻みは再試行して数えます。セル平均はクリップせず、ステップ角のエントロピー再設定も行いません。"
+  },
+  "comparison.a5f8aad64fa7": {
+    "en": "HLLD / STANDARD MHD TESTS",
+    "ja": "HLLD／MHD標準テスト"
+  },
+  "comparison.9d0b1263a5c3": {
+    "en": "Resolve the magnetic waves.",
+    "ja": "磁気波を解像する。"
+  },
+  "comparison.9a196dd67a5a": {
+    "en": "Inspect Brio–Wu, a circularly polarized Alfvén wave and a weak magnetic field loop. Separate Riemann fluxes, reconstruction and magnetic-divergence control.",
+    "ja": "Brio–Wu、円偏波Alfvén波、弱い磁場ループを調べます。リーマン流束・再構成・磁場発散の制御を区別します。"
+  },
+  "comparison.cb8820e712a9": {
+    "en": "MHD test",
+    "ja": "MHDテスト"
+  },
+  "comparison.e12e22509957": {
+    "en": "Magnetic field loop",
+    "ja": "磁場ループ"
+  },
+  "comparison.01b80576b837": {
+    "en": "Brio–Wu shock tube",
+    "ja": "Brio–Wu衝撃波管"
+  },
+  "comparison.d4bfe486e23f": {
+    "en": "Circular Alfvén wave",
+    "ja": "円偏波Alfvén波"
+  },
+  "comparison.a26ae86a6a78": {
+    "en": "MC reconstruction / SSPRK2",
+    "ja": "MC再構成／SSPRK2"
+  },
+  "comparison.240559781b2f": {
+    "en": "Read the MHD definitions ↗",
+    "ja": "MHDの定義を読む ↗"
+  },
+  "comparison.259811e276c4": {
+    "en": "Download MHD diagnostics ↓",
+    "ja": "MHD診断をダウンロード ↓"
+  },
+  "comparison.c418f1a13a13": {
+    "en": "CT and GLM need their own diagnostics.",
+    "ja": "CT・GLMそれぞれの診断を使う。"
+  },
+  "comparison.2761281b7c3c": {
+    "en": "CT uses a face-field divergence and a contact-upwinded corner electric field. GLM uses cell-centered fields, a longitudinal cleaning-wave solve and split damping. Their initial discretizations and divergence operators differ. HLLD star-state failures fall back to HLLE and are counted.",
+    "ja": "CTは面磁場の発散と接触波で風上化した角の電場を使います。GLMはセル中心磁場、縦方向クリーニング波の解法、分離減衰を使います。初期離散化・発散演算子は異なります。HLLDの中間状態が失敗した場合はHLLEに切り替え、回数を記録します。"
+  },
+  "comparison.df933fc1a0ee": {
+    "en": "Wall pressure ratio",
+    "ja": "壁面圧力比"
+  },
+  "comparison.c35ea1d3c9e7": {
+    "en": "Fitted shock angle (degrees)",
+    "ja": "当てはめた衝撃波角（度）"
+  },
+  "comparison.6a3e24d17e7d": {
+    "en": "Density cell-average L1",
+    "ja": "密度セル平均のL1誤差"
+  },
+  "comparison.bf2ad6f8ef8a": {
+    "en": "Final max conserved update rate",
+    "ja": "最終時の最大保存変数更新率"
+  },
+  "comparison.86ba89627261": {
+    "en": "Mach-2 MC retains local time variation at t = 3; this is not a converged steady solution.",
+    "ja": "Mach 2のMCにはt=3でも局所的な時間変動が残ります。定常収束解ではありません。"
+  },
+  "comparison.b1fa878a98a1": {
+    "en": "Diagnostic",
+    "ja": "診断"
+  },
+  "comparison.1322ea1d0bcc": {
+    "en": "Analytical reference",
+    "ja": "解析的な参照"
+  },
+  "comparison.e00b03c3f9d0": {
+    "en": "Two-grid density errors",
+    "ja": "2格子の密度誤差"
+  },
+  "comparison.46f951333d4b": {
+    "en": "Minimum density",
+    "ja": "最小密度"
+  },
+  "comparison.0b5d5b341b38": {
+    "en": "Solver steps",
+    "ja": "時間刻み数"
+  },
+  "comparison.e46f3eca8d15": {
+    "en": "Retried steps",
+    "ja": "再試行数"
+  },
+  "comparison.39a9f3a48123": {
+    "en": "Face positivity scaling events",
+    "ja": "面の正値性のための縮小回数"
+  },
+  "comparison.14947a56d0bb": {
+    "en": "Reconstruction",
+    "ja": "再構成"
+  },
+  "comparison.4963f1ec0254": {
+    "en": "Fine-grid observed order",
+    "ja": "最細格子の観測次数"
+  },
+  "comparison.6bbe97540dc2": {
+    "en": "Comparison data could not load. Reload the page.",
+    "ja": "比較データを読み込めませんでした。ページを再読み込みしてください。"
+  },
+  "comparison.52a0f9b65b27": {
+    "en": "Method",
+    "ja": "手法"
+  },
+  "comparison.e37ba50b10bc": {
+    "en": "Magnetic energy fraction",
+    "ja": "磁気エネルギー比"
+  },
+  "comparison.30533612ec16": {
+    "en": "Native max divergence",
+    "ja": "固有演算子の最大発散"
+  },
+  "comparison.e293b96295e8": {
+    "en": "HLLE fallback faces",
+    "ja": "HLLEへ切り替えた面数"
+  },
+  "comparison.2cdbbcb43d46": {
+    "en": "Fine-grid error",
+    "ja": "最細格子の誤差"
+  },
+  "comparison.5e4c0462d3c9": {
+    "en": "First-order computed field",
+    "ja": "1次計算の場"
+  },
+  "comparison.808175732bd1": {
+    "en": "Selected reconstruction computed field",
+    "ja": "選択した再構成の計算場"
+  },
+  "comparison.ffa8314d39cc": {
+    "en": "Two-dimensional smooth entropy-wave refinement",
+    "ja": "滑らかな2次元エントロピー波の細分化"
+  },
+  "comparison.e537839bee83": {
+    "en": "Computed MHD test and comparison",
+    "ja": "計算したMHDテストの比較"
+  },
+  "comparison.e34544bf52ec": {
+    "en": "Magnetic energy and native divergence histories",
+    "ja": "磁気エネルギーと離散発散の履歴"
+  },
+  "comparison.d67d2dabf569": {
+    "en": "Compare first order / MUSCL ↗",
+    "ja": "1次／MUSCLを比較 ↗"
+  },
+  "comparison.27fb6477e7d4": {
+    "en": "Open the MHD test ↗",
+    "ja": "MHDテストを開く ↗"
+  },
+  "comparison.ef884a130ba5": {
+    "en": "Watch the first-order movie ▷",
+    "ja": "1次計算の動画を見る ▷"
+  },
+  "comparison.ca8ff409f8d4": {
+    "en": "Euler reconstruction comparison",
+    "ja": "Euler再構成の比較"
+  },
+  "comparison.e0779750faa1": {
+    "en": "HLLD standard tests",
+    "ja": "HLLD標準テスト"
+  },
+  "comparison.161de6869c1b": {
+    "en": "NASA 15-degree wedge / Mach 2",
+    "ja": "NASAの15度楔／Mach 2"
+  },
+  "comparison.e2b6f41ce89f": {
+    "en": "NASA 15-degree wedge / Mach 2.5",
+    "ja": "NASAの15度楔／Mach 2.5"
+  },
+  "comparison.6e4124542fc5": {
+    "en": "Mach-3 forward-facing step",
+    "ja": "Mach 3前向きステップ"
+  },
+  "comparison.7a2e8612b512": {
+    "en": "Advect a magnetic field loop",
+    "ja": "磁場ループを移流する"
+  },
+  "comparison.8264c6e9fcd2": {
+    "en": "Brio–Wu / HLLD and HLLE",
+    "ja": "Brio–Wu／HLLDとHLLE"
+  },
+  "comparison.59eee524e4d6": {
+    "en": "A circularly polarized Alfvén wave",
+    "ja": "円偏波Alfvén波"
+  },
+  "comparison.728896e85205": {
+    "en": "EXACT PERIODIC WAVE",
+    "ja": "厳密な周期波"
+  },
+  "comparison.fb8f603c3958": {
+    "en": "Compare first-order, minmod and MC reconstruction on the NASA wedge. Same HLL flux, SSPRK2 and grids; exact weak-shock line and two-grid density errors.",
+    "ja": "NASA楔の1次・minmod・MC再構成を比較します。HLL流束・SSPRK2・格子を共通にし、厳密な弱い衝撃波の線と2格子の密度誤差を示します。"
+  },
+  "comparison.14a0808b7809": {
+    "en": "Compare first-order and MUSCL Mach/pressure fields, shock angle and wall pressure against the oblique-shock reference. Independent Euler calculations, not Wind-US output.",
+    "ja": "1次・MUSCLのMach数／圧力場、衝撃波角、壁圧を斜め衝撃波の参照と比較します。Wind-USの出力ではなく独立したEuler計算です。"
+  },
+  "comparison.e7f370bbe31d": {
+    "en": "First-order and MUSCL minmod/MC shock reflections, with side-by-side 81-state clips to t = 4 on common color scales. No step-corner entropy reset.",
+    "ja": "1次・MUSCL minmod／MCの衝撃波反射を、t=4までの各81状態の動画で並べて比較します。色範囲は共通で、角のエントロピー再設定は行いません。"
+  },
+  "comparison.303b1d71f665": {
+    "en": "Weak-field loop over one periodic transit. Compare HLLD/HLLE with CT-Contact and GLM; native divergence and initial magnetic discretizations differ.",
+    "ja": "弱磁場ループの周期1周をCT-Contact・GLMとHLLD／HLLEで比較します。離散発散演算子と初期磁場離散化は異なります。"
+  },
+  "comparison.287b264bb78b": {
+    "en": "Full-vector coplanar MHD shock tube at gamma 2, with MC reconstruction, SSPRK2 and numerical grid comparisons. No exact-reference overlay.",
+    "ja": "γ=2の全3成分・共面MHD衝撃波管をMC再構成・SSPRK2で解き、格子を比較します。厳密解の重ね描きではありません。"
+  },
+  "comparison.67fbe10ba0dc": {
+    "en": "One full period against exact conservative cell averages, with transverse vectors and four-grid HLLD/HLLE refinement.",
+    "ja": "1周期を厳密な保存変数セル平均と比較し、横成分と4格子のHLLD／HLLE細分化を示します。"
+  },
+  "comparison.9041aabaede3": {
+    "en": "Compare full-vector HLLD/HLLE standard tests, contact-upwinded CT and GLM cleaning. Each divergence measurement retains its discrete operator.",
+    "ja": "全3成分のHLLD／HLLE標準テスト、接触波で風上化したCT、GLMクリーニングを比較します。発散の測定には離散演算子を明記します。"
+  },
+  "comparison.0b5d295b4c22": {
+    "en": "IDEAL MHD · HLLD · CT · GLM",
+    "ja": "理想MHD・HLLD・CT・GLM"
+  },
+  "comparison.8bca5763b433": {
+    "en": "HLLD MHD Riemann solver",
+    "ja": "HLLDのMHDリーマン解法"
+  },
+  "comparison.ace23ad36c51": {
+    "en": "Coplanar gamma=2 Brio-Wu. No exact solution overlay or universal uniqueness claim.",
+    "ja": "γ=2の共面Brio–Wu問題です。厳密解の重ね描きや普遍的な一意性の主張ではありません。"
+  },
+  "comparison.5340b99a96a8": {
+    "en": "1D circularly polarized nonlinear wave; exact conservative cell averages, including constant total energy.",
+    "ja": "1次元の円偏波非線形波です。一定の全エネルギーを含む厳密な保存変数セル平均を使います。"
+  },
+  "comparison.8bac9b7ef26e": {
+    "en": "Weak-field MHD translation diagnostic, not an exact finite-field solution. CT initializes face B with a corner-potential curl; GLM uses a cell-potential central curl. No equal-accuracy or matched-cost ranking. CT uses contact-upwinded edge EMF, not UCT-HLLD. GLM has ch=4, damping=0.18*ch/h and no psi contribution to total energy.",
+    "ja": "弱磁場MHDの移流診断で、有限磁場の厳密解ではありません。CTは角ポテンシャルの回転から面磁場、GLMはセルポテンシャルの中心差分回転から初期化します。同一精度・同一費用での順位は導けません。CTは接触波で風上化した角EMFを使い、UCT-HLLDではありません。GLMはch=4、減衰率0.18*ch/hで、全エネルギーにψを含めません。"
+  },
+  "term.method.hlld": {
+    "en": "HLLD MHD Riemann solver",
+    "ja": "HLLDのMHDリーマン解法"
+  },
+  "comparison.grid": {
+    "en": "Grid",
+    "ja": "格子"
+  },
+  "comparison.hlld-link": {
+    "en": "HLLD standard tests ↗",
+    "ja": "HLLD標準テスト ↗"
   }
 }

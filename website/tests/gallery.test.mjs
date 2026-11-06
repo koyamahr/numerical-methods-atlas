@@ -15,7 +15,7 @@ test('dimension and subject filters intersect without labeling diagnostic plots 
   assert.equal(matchesGallery(three,'3','Particles & gravity'),true);
   assert.equal(matchesGallery(three,'2'),false);
   assert.equal(matchesGallery(three,'3','MHD'),false);
-  assert.equal(fieldFigures.filter(f=>matchesGallery(f,'2')).length,9);
+  assert.equal(fieldFigures.filter(f=>matchesGallery(f,'2')).length,10);
 });
 
 test('every multidimensional movie has a reachable field card',()=>{

@@ -783,6 +783,18 @@
   note = {Publisher bibliographic record and abstract. Low-speed PDE preconditioning is discussed as future work and is distinct from the Jacobi matrix-scaling example.}
 }
 
+@article{brio1988,
+  author = {Brio, Moysey and Wu, Cheng-chin},
+  title = {An upwind differencing scheme for the equations of ideal magnetohydrodynamics},
+  year = {1988},
+  journal = {Journal of Computational Physics},
+  volume = {75},
+  pages = {400--422},
+  doi = {10.1016/0021-9991(88)90120-9},
+  url = {https://www.sciencedirect.com/science/article/pii/0021999188901209},
+  note = {Original bibliographic record for the Brio-Wu coplanar shock tube. Publisher metadata checked; no claim of full-text inspection or exact-solution reproduction. The local HLLD/HLLE comparison records its gamma=2 initial states and numerical grid comparison.}
+}
+
 @article{einfeldt1988,
   author = {Einfeldt, Bernd},
   title = {On Godunov-Type Methods for Gas Dynamics},
@@ -1261,6 +1273,18 @@
   note = {Author abstract and journal metadata inspected. Coupled Einstein–Maxwell–MHD with BSSN and conservative matter evolution; historical source for the dynamical-spacetime step. No such coupling implemented here.}
 }
 
+@article{miyoshi2005,
+  author = {Miyoshi, Takahiro and Kusano, Kanya},
+  title = {A multi-state HLL approximate Riemann solver for ideal magnetohydrodynamics},
+  year = {2005},
+  journal = {Journal of Computational Physics},
+  volume = {208},
+  pages = {315--344},
+  doi = {10.1016/j.jcp.2005.02.017},
+  url = {https://github.com/PrincetonUniversity/athena-public-version/blob/master/src/hydro/rsolvers/mhd/hlld.cpp},
+  note = {Original HLLD bibliographic record; publisher abstract/metadata, not the complete original paper, inspected. Star and double-star equations cross-checked against the linked official Athena++ implementation. The local independent implementation has contact, rotational-wave and standard-test checks; no Athena++ output is reproduced.}
+}
+
 @article{springel2005,
   author = {Springel, Volker},
   title = {The cosmological simulation code GADGET-2},
@@ -1377,6 +1401,18 @@
   doi = {10.1175/2009MWR2724.1},
   url = {https://journals.ametsoc.org/abstract/journals/mwre/137/8/2009mwr2724.1.xml},
   note = {Publisher record identifies the time-filter paper. The ODE laboratory uses unfiltered leapfrog with RK4 startup and does not implement this filter.}
+}
+
+@article{mignone2010glm,
+  author = {Mignone, Andrea and Tzeferacos, Petros},
+  title = {A second-order unsplit Godunov scheme for cell-centered MHD: The CTU-GLM scheme},
+  year = {2010},
+  journal = {Journal of Computational Physics},
+  volume = {229},
+  pages = {2117--2138},
+  doi = {10.1016/j.jcp.2009.11.026},
+  url = {https://arxiv.org/abs/0911.3410},
+  note = {Public author manuscript inspected for the conservative GLM equations and longitudinal cleaning subsystem. The local loop test uses MC/SSPRK2 and split psi damping, not the paper's CTU integrator or EGLM variant.}
 }
 
 @article{nishikawa2010,
@@ -1506,6 +1542,18 @@
   doi = {10.5194/gmd-13-5875-2020},
   url = {https://gmd.copernicus.org/articles/13/5875/2020/},
   note = {Open primary paper inspected. CIP-family value/gradient transport, velocity-gradient terms, and rational reconstruction conventions. The atlas does not implement this RCIP ice-age model or its variable-velocity departure correction.}
+}
+
+@article{mignone2021uct,
+  author = {Mignone, Andrea and Del Zanna, Luca},
+  title = {Systematic construction of upwind constrained transport schemes for MHD},
+  year = {2021},
+  journal = {Journal of Computational Physics},
+  volume = {424},
+  pages = {109748},
+  doi = {10.1016/j.jcp.2020.109748},
+  url = {https://arxiv.org/abs/2004.10542},
+  note = {Public 2020 author manuscript inspected, especially CT-Contact equations 20-22. The local shared-corner update uses contact-upwinded transverse EMF derivatives and verifies the one-dimensional face-flux limit; UCT-HLLD itself is not implemented.}
 }
 
 @article{shima2021,

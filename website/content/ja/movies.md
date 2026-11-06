@@ -58,3 +58,8 @@ python scripts/check_movies.py
 ## 動画だけでは示せないこと {#what-a-movie-does-not-establish}
 
 滑らかな見た目だけでは、格子収束、エントロピー不等式、衝撃波の頑健性、長時間乱流精度、実験一致は示せません。[KEEP渦の収束](keep.md)には独立した滑らか誤差の測定があり、[カーバンクルの章](carbuncle.md)は衝撃波動画だけで多次元安定性を保証できない理由を説明します。
+
+
+## 再構成の比較動画 {#reconstruction-comparison-clips}
+
+[Euler比較ページ](#/flow-comparison?case=forward-step&method=mc)では、同じ前向きステップ問題について1次・minmod・MCの動画を並べ、共通の色範囲と各81出力状態で比較できます。適応時間刻みの途中時刻は完全には一致しないため、フレーム内の実際の時刻を確認してください。再構成の比較であり、5物理問題の動画カタログの問題数は増えません。`python scripts/build_euler_comparison.py`で生成し、各MP4を復号してフレーム数を確認します。

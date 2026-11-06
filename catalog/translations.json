@@ -93,7 +93,7 @@
     "mhd": {
       "ja": {
         "status": "draft",
-        "source_sha256": "c9de55f11ac9716bd15f36b8b936f05874775dcf4d6b0d6b8d21c6a28756b157",
+        "source_sha256": "b429a1d6ad72618c06d2607c6728aa7b59ce06c9abf1a88db244aa8382452d3f",
         "checked_on": null
       }
     },
@@ -240,14 +240,14 @@
     "movies": {
       "ja": {
         "status": "draft",
-        "source_sha256": "6d2bc7b15c43238324206418346787aca179bef38267afd075f074a88bc17b15",
+        "source_sha256": "4fb4a1561a220f677b1fba64547dbd15ab5c15266617e471a42b4dfdb0dee96c",
         "checked_on": null
       }
     },
     "nasa-2d": {
       "ja": {
         "status": "draft",
-        "source_sha256": "15196702b88918bb2ee3001353ff80b3fc5d2759b79d187f776240a8ee121652",
+        "source_sha256": "8332cf571a1cf4085e0b850a1d9bcc3a9ae068b3e09904be2e84c28782fb5166",
         "checked_on": null
       }
     },
@@ -268,7 +268,7 @@
     "roadmap": {
       "ja": {
         "status": "draft",
-        "source_sha256": "1033ba3392bbfd2113384dddad75a38f43f2faef5758d3015f5119c3938ab5a3",
+        "source_sha256": "15968033e1fb59242a41ae64f443c9574331e835b75008822b0edb77e935bc8f",
         "checked_on": null
       }
     },

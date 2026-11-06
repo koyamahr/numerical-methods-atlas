@@ -84,3 +84,8 @@ html:lang(ja) .lab-svg .axis-title{font-family:var(--sans);font-size:11px}
 
 /* Reference-element basis exhibit. */
 .basis-matrix-svg,.basis-triangle-svg{display:block;width:min(100%,390px);margin:auto}.rk-details .lab-chart-header select{max-width:100%;font-size:12px;background:var(--paper);border:1px solid var(--line);padding:8px}.rk-details .lab-chart-header label{display:block;font-size:11px}body[data-page=basis] .lab-results{min-width:0}
+
+/* Saved-field comparisons keep numerical images uncropped. */
+.comparison-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-block:20px}.comparison-grid figure{margin:0;min-width:0}.comparison-image{display:block;width:100%;height:auto;object-fit:contain}.comparison-grid video{display:block;width:100%;height:auto;background:#111}.comparison-grid h2{font-size:20px}.comparison-grid figcaption{margin-bottom:10px}.comparison-refinement{display:block;width:min(100%,850px);height:auto;margin-block:24px}.comparison-grid+.measurement-scroll{margin-top:20px}
+@media(max-width:800px){.comparison-grid{grid-template-columns:1fr}.comparison-grid h2{font-size:21px}}
+.comparison-image[hidden]{display:none}

@@ -541,6 +541,14 @@ Turkel, Eli. **Preconditioned methods for solving the incompressible and low spe
 
 Publisher bibliographic record and abstract. Low-speed PDE preconditioning is discussed as future work and is distinct from the Jacobi matrix-scaling example.
 
+## 1988 · brio1988
+
+Brio, Moysey and Wu, Cheng-chin. **An upwind differencing scheme for the equations of ideal magnetohydrodynamics**. Journal of Computational Physics.
+
+[Original bibliographic record](https://doi.org/10.1016/0021-9991(88)90120-9) · [Full text or implementation reference](https://www.sciencedirect.com/science/article/pii/0021999188901209)
+
+Original bibliographic record for the Brio-Wu coplanar shock tube. Publisher metadata checked; no claim of full-text inspection or exact-solution reproduction. The local HLLD/HLLE comparison records its gamma=2 initial states and numerical grid comparison.
+
 ## 1988 · einfeldt1988
 
 Einfeldt, Bernd. **On Godunov-Type Methods for Gas Dynamics**. SIAM Journal on Numerical Analysis.
@@ -869,6 +877,14 @@ Duez, Matthew D. and Liu, Yuk Tung and Shapiro, Stuart L. and Stephens, Branson 
 
 Author abstract and journal metadata inspected. Coupled Einstein–Maxwell–MHD with BSSN and conservative matter evolution; historical source for the dynamical-spacetime step. No such coupling implemented here.
 
+## 2005 · miyoshi2005
+
+Miyoshi, Takahiro and Kusano, Kanya. **A multi-state HLL approximate Riemann solver for ideal magnetohydrodynamics**. Journal of Computational Physics.
+
+[Original bibliographic record](https://doi.org/10.1016/j.jcp.2005.02.017) · [Full text or implementation reference](https://github.com/PrincetonUniversity/athena-public-version/blob/master/src/hydro/rsolvers/mhd/hlld.cpp)
+
+Original HLLD bibliographic record; publisher abstract/metadata, not the complete original paper, inspected. Star and double-star equations cross-checked against the linked official Athena++ implementation. The local independent implementation has contact, rotational-wave and standard-test checks; no Athena++ output is reproduced.
+
 ## 2005 · springel2005
 
 Springel, Volker. **The cosmological simulation code GADGET-2**. Monthly Notices of the Royal Astronomical Society.
@@ -948,6 +964,14 @@ Williams, Paul D.. **A Proposed Modification to the Robert–Asselin Time Filter
 [Original bibliographic record](https://doi.org/10.1175/2009MWR2724.1) · [Full text or implementation reference](https://journals.ametsoc.org/abstract/journals/mwre/137/8/2009mwr2724.1.xml)
 
 Publisher record identifies the time-filter paper. The ODE laboratory uses unfiltered leapfrog with RK4 startup and does not implement this filter.
+
+## 2010 · mignone2010glm
+
+Mignone, Andrea and Tzeferacos, Petros. **A second-order unsplit Godunov scheme for cell-centered MHD: The CTU-GLM scheme**. Journal of Computational Physics.
+
+[Original bibliographic record](https://doi.org/10.1016/j.jcp.2009.11.026) · [Full text or implementation reference](https://arxiv.org/abs/0911.3410)
+
+Public author manuscript inspected for the conservative GLM equations and longitudinal cleaning subsystem. The local loop test uses MC/SSPRK2 and split psi damping, not the paper's CTU integrator or EGLM variant.
 
 ## 2010 · nishikawa2010
 
@@ -1036,6 +1060,14 @@ Saito, Fuyuki and Obase, Takashi and Abe-Ouchi, Ayako. **Implementation of the R
 [Original bibliographic record](https://doi.org/10.5194/gmd-13-5875-2020) · [Full text or implementation reference](https://gmd.copernicus.org/articles/13/5875/2020/)
 
 Open primary paper inspected. CIP-family value/gradient transport, velocity-gradient terms, and rational reconstruction conventions. The atlas does not implement this RCIP ice-age model or its variable-velocity departure correction.
+
+## 2021 · mignone2021uct
+
+Mignone, Andrea and Del Zanna, Luca. **Systematic construction of upwind constrained transport schemes for MHD**. Journal of Computational Physics.
+
+[Original bibliographic record](https://doi.org/10.1016/j.jcp.2020.109748) · [Full text or implementation reference](https://arxiv.org/abs/2004.10542)
+
+Public 2020 author manuscript inspected, especially CT-Contact equations 20-22. The local shared-corner update uses contact-upwinded transverse EMF derivatives and verifies the one-dimensional face-flux limit; UCT-HLLD itself is not implemented.
 
 ## 2021 · shima2021
 

@@ -16,7 +16,7 @@ catalog inclusion alone does not indicate an implemented simulation.
 - Strengthen links between run manifests and saved arrays; report grid and time refinement together with wall-clock costs.
 - Add finite-volume cell-average initialization and integrated references, characteristic WENO, positivity limiters, and stronger shock tests.
 - Add exact shallow-water and isothermal references; treat topography, well balancing, and dry beds as separate implementation steps.
-- Extend MHD verification with Alfvén waves, Brio–Wu, field loops, less dissipative upwind CT, and external reference-code comparisons.
+- Extend the new HLLD standard tests with UCT-HLLD, stronger-field cases and external reference-code comparisons.
 - Explore nonlinear Fourier methods and dealiasing, Euler DG with limiting, and multidimensional residual distribution.
 - Implement low-Mach PDE preconditioning and 2D Euler rotated-hybrid solvers; test entropy correction, positivity, and carbuncle resistance separately.
 - Extend elliptic solvers to variable coefficients, anisotropy, line smoothing, FAS, AMG, and 2D mixed boundaries.
@@ -118,7 +118,7 @@ implementation limits and remaining verification work are stated in each chapter
   verified Einstein–matter coupling. Radiation and SRGSPH are separate branches;
   see the [development review checked in November 2026](relativistic-hydrodynamics.md).
 - PPM, characteristic reconstruction, and WENO-Z with controlled shock/contact comparisons.
-- HLLD, Brio–Wu, Alfvén-wave and field-loop verification, with explicit CT/GLM scope.
+- **Completed web stage:** HLLD with Brio–Wu, Alfvén-wave refinement and weak field-loop CT-Contact/GLM comparisons; see the [MHD tests](#/mhd-tests).
 - **Planned — electromagnetic FDTD (finite-difference time-domain):** Yee-grid
   placement, leapfrog Maxwell updates, CFL limits and numerical dispersion;
   start with vacuum-wave and conducting-cavity tests, then absorbing boundaries
@@ -253,3 +253,8 @@ verified discretizations, cost/error evidence and explicit failure cases,
 while retaining separate labels for surveys, prototypes and verified models.
 
 Reference-element basis functions now have an executable [Legendre/nodal notebook](basis-functions.md), including exact and quadrature mass, affine metric scaling and triangular P2 shapes. Curved-element metrics, orthogonal simplex modes and higher-order FEM/DG fluid assembly remain separate extensions.
+
+
+## Verified Euler and MHD comparisons
+
+Added 2D primitive MUSCL with minmod/MC, exact-cell-average smooth refinement, NASA wedge first/second-order comparisons on two grids, and three forward-step reconstruction clips. The [comparison page](#/flow-comparison) fixes HLL/SSPRK2 and exposes diagnostics. Added full-vector HLLD, Brio–Wu, four-grid circular Alfvén waves and weak magnetic loops on two grids with HLLE/HLLD × CT-Contact/GLM. Source/artifact hashes, conservative arrays, positivity/retry/fallback diagnostics and bilingual scope notes accompany the [MHD page](#/mhd-tests). These complete the agreed three web stages; books remain deferred.
