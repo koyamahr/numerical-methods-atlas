@@ -935,6 +935,24 @@
       "status": "local-example",
       "group": "Additional formulations",
       "scope": ""
+    },
+    {
+      "kind": "method",
+      "id": "legendre-basis",
+      "label": "Legendre modal basis / orthonormal scaling",
+      "chapter": "basis-functions",
+      "status": "local-example",
+      "group": "Element bases & approximation",
+      "scope": "Reference-element tabulation, derivatives, projection and affine mass/stiffness matrices."
+    },
+    {
+      "kind": "method",
+      "id": "nodal-basis",
+      "label": "Lagrange nodal basis / GLL collocation",
+      "chapter": "basis-functions",
+      "status": "local-example",
+      "group": "Element bases & approximation",
+      "scope": "Interval cardinal functions, modal transforms, exact versus quadrature mass, and P1/P2 triangle shapes."
     }
   ]
 }

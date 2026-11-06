@@ -131,3 +131,5 @@ literature survey or an electronic-structure implementation in this edition.
 The next editorial priority is to connect shared equations to multiple
 verified discretizations, cost/error evidence and explicit failure cases,
 while retaining separate labels for surveys, prototypes and verified models.
+
+Reference-element basis functions now have an executable [Legendre/nodal notebook](basis-functions.md), including exact and quadrature mass, affine metric scaling and triangular P2 shapes. Curved-element metrics, orthogonal simplex modes and higher-order FEM/DG fluid assembly remain separate extensions.

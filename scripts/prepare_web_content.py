@@ -31,7 +31,7 @@ copy_changed(ROOT/'catalog/references.json',SITE/'content/references.json')
 copy_changed(ROOT/'references.bib',SITE/'public/assets/references.bib')
 for source in sorted((ROOT/'docs/figures').glob('*.png')):
     copy_changed(source,SITE/'public/assets'/source.name)
-for name in ('limiters.json','runge-kutta.json','cip.json','hamiltonian.json','equation-gallery.json'):
+for name in ('limiters.json','runge-kutta.json','cip.json','basis.json','hamiltonian.json','equation-gallery.json'):
     copy_changed(ROOT/'docs/figures'/name,SITE/'content'/name)
 for name in ('validation.json','double-mach-run.json','double-mach.npz',
              'hamiltonian.json','particle-gravity.json','gravity-boundaries.json',

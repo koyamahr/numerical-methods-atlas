@@ -4,6 +4,8 @@
 Poisson with Dirichlet data, consistent mass matrices, and quadrature error norms.
 This is distinct from the atlas's discontinuous Galerkin advection example.
 
+The [basis-function chapter and notebook](basis-functions.md) connect these nodal shapes to Legendre modes, GLL nodes, exact and quadrature mass matrices, and triangular P2 functions. The assembler in this FEM chapter remains P1.
+
 ## 1943: a variational route
 
 [Courant (1943)](https://doi.org/10.1090/S0002-9904-1943-07818-4)

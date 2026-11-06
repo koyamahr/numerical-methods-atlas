@@ -1974,6 +1974,22 @@ Author abstract and public original inspected for covariant M1 radiation moments
 
 </div>
 
+## 2015 · teukolsky2015 {#2015-teukolsky2015}
+
+<div lang="en" data-original>
+
+Teukolsky, Saul A.. **Short note on the mass matrix for Gauss-Lobatto grid points**. Journal of Computational Physics.
+
+</div>
+
+[原著の書誌情報](https://doi.org/10.1016/j.jcp.2014.12.012) · [全文または実装の参照資料](https://arxiv.org/html/1412.2276v1)
+
+<div lang="en" data-original>
+
+Author preprint posted in December 2014, full HTML consulted. Explains exact and GLL-quadrature mass matrices and their rank-one difference. The reference-element notebook tests this distinction; it is not a reproduction of a full spectral-element PDE solver.
+
+</div>
+
 ## 2016 · fitzpatrick2016 {#2016-fitzpatrick2016}
 
 <div lang="en" data-original>
@@ -2307,6 +2323,22 @@ Musolino, Carlo and Ecker, Christian and Topolski, Konrad and Cassing, Marie and
 <div lang="en" data-original>
 
 APS accepted-paper page checked 6 November 2026: accepted 2 November 2026, not a verified final volume/page record. July 2026 preprint arXiv:2607.09854 uses the GRACE title prefix. Kokkos, CT, Z4c and merger examples are reported; no local implementation or rerun.
+
+</div>
+
+## 2026 · nist-orthogonal {#2026-nist-orthogonal}
+
+<div lang="en" data-original>
+
+NIST Digital Library of Mathematical Functions. **Classical orthogonal polynomials: definitions, weights and recurrence relations**. .
+
+</div>
+
+[原著の書誌情報](https://dlmf.nist.gov/18.3) · [全文または実装の参照資料](https://dlmf.nist.gov/18.3)
+
+<div lang="en" data-original>
+
+Living mathematical reference, checked November 2026. Sections 18.2, 18.3 and 18.9 consulted for domains, weights, normalization and recurrences; the year denotes this consultation, not the historical origin of Legendre polynomials.
 
 </div>
 

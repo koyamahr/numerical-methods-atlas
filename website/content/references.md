@@ -989,6 +989,14 @@ Sądowski, Aleksander and Narayan, Ramesh and Tchekhovskoy, Alexander and Zhu, Y
 
 Author abstract and public original inspected for covariant M1 radiation moments and semi-implicit matter interactions in KORAL. Published 2013, preprint 2012. Radiation closure/source integration is reading context, not implemented here.
 
+## 2015 · teukolsky2015
+
+Teukolsky, Saul A.. **Short note on the mass matrix for Gauss-Lobatto grid points**. Journal of Computational Physics.
+
+[Original bibliographic record](https://doi.org/10.1016/j.jcp.2014.12.012) · [Full text or implementation reference](https://arxiv.org/html/1412.2276v1)
+
+Author preprint posted in December 2014, full HTML consulted. Explains exact and GLL-quadrature mass matrices and their rank-one difference. The reference-element notebook tests this distinction; it is not a reproduction of a full spectral-element PDE solver.
+
 ## 2016 · fitzpatrick2016
 
 Fitzpatrick, Richard. **Fluid Equations in Cylindrical Coordinates**. University of Texas at Austin.
@@ -1156,6 +1164,14 @@ Musolino, Carlo and Ecker, Christian and Topolski, Konrad and Cassing, Marie and
 [Original bibliographic record](https://doi.org/10.1103/yq78-m749) · [Full text or implementation reference](https://journals.aps.org/prd/accepted/10.1103/yq78-m749)
 
 APS accepted-paper page checked 6 November 2026: accepted 2 November 2026, not a verified final volume/page record. July 2026 preprint arXiv:2607.09854 uses the GRACE title prefix. Kokkos, CT, Z4c and merger examples are reported; no local implementation or rerun.
+
+## 2026 · nist-orthogonal
+
+NIST Digital Library of Mathematical Functions. **Classical orthogonal polynomials: definitions, weights and recurrence relations**. .
+
+[Original bibliographic record](https://dlmf.nist.gov/18.3) · [Full text or implementation reference](https://dlmf.nist.gov/18.3)
+
+Living mathematical reference, checked November 2026. Sections 18.2, 18.3 and 18.9 consulted for domains, weights, normalization and recurrences; the year denotes this consultation, not the historical origin of Legendre polynomials.
 
 ## 2026 · numipediark
 

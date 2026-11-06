@@ -2,9 +2,9 @@
 
 Prepared local edition, counted 2026-11-06. These are counts of catalog entries and documented examples, not a claim that every entry is a verified end-to-end solver.
 
-**42 equation/model entries · 83 methods and building blocks · 126 journal/conference papers · 146 total sources.**
+**42 equation/model entries · 85 methods and building blocks · 127 journal/conference papers · 148 total sources.**
 
-There are 9 saved-profile equation-gallery cases across 7 equation families, and 42 reading chapters including this inventory.
+There are 9 saved-profile equation-gallery cases across 7 equation families, and 43 reading chapters including this inventory.
 
 ## Equations and models
 
@@ -69,7 +69,7 @@ Named equation/model entries, not scalar component equations or mathematically d
 
 Named numerical methods and building blocks with a reading chapter. Aliases count once; RK stages, dimensions, parameter combinations, mesh layouts and theoretical conditions do not add methods. A family and a separately explained algorithm may both appear. Not a count of mutually exclusive end-to-end solvers.
 
-77 entries have scoped local examples; 6 are reading-only. Reconstruction limiters, preconditioners and coupling operators are building blocks, not complete PDE solvers. Mesh layouts, CFL conditions and theorems are not counted as numerical methods.
+79 entries have scoped local examples; 6 are reading-only. Reconstruction limiters, preconditioners and coupling operators are building blocks, not complete PDE solvers. Mesh layouts, CFL conditions and theorems are not counted as numerical methods.
 
 ### Spatial discretization
 
@@ -178,18 +178,23 @@ Named numerical methods and building blocks with a reading chapter. Aliases coun
 
 - [Original Cartesian KEEP split flux](keep.md) — Local example.
 
+### Element bases & approximation
+
+- [Legendre modal basis / orthonormal scaling](basis-functions.md) — Local example. Reference-element tabulation, derivatives, projection and affine mass/stiffness matrices.
+- [Lagrange nodal basis / GLL collocation](basis-functions.md) — Local example. Interval cardinal functions, modal transforms, exact versus quadrature mass, and P1/P2 triangle shapes.
+
 ## Papers versus all sources
 
 Unique bibliographic publications classified as journal articles or conference papers, deduplicated by DOI or author/title/year. Includes reviews, translations and explicitly labeled accepted papers; not a claim that every full text was inspected. Books, chapters, reports, preprints and documentation are separate.
 
 Unique cataloged works across all publication types. An original publication and a later translation are separate works; duplicate DOI records are not. NASA case links in prose are not catalog records.
 
-- 123 journal-article records, including reviews, translations and explicitly labeled accepted papers.
+- 124 journal-article records, including reviews, translations and explicitly labeled accepted papers.
 - 3 conference papers.
 - 7 books.
 - 2 book chapters.
 - 3 technical/teaching reports.
-- 8 other records, including documentation and a separately identified preprint.
+- 9 other records, including documentation and a separately identified preprint.
 
 A duplicate Cockburn–Shu 1989 record was merged. Burgers 1948 is classified as a book chapter. The former 146-record total included that duplicate; subsequent source additions are reflected in the current unique-work totals above. An original paper and a separately published translation remain separate works. The bibliography does not claim that every full text has been inspected; source notes preserve the inspection status.
 

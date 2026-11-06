@@ -1707,5 +1707,26 @@
     "doi": "10.1007/BF01963532",
     "source": "https://link.springer.com/article/10.1007/BF01963532",
     "note": "Original publisher metadata and abstract checked. Foundational A-stability reference in the linear-multistep setting; full text not audited. The atlas distinguishes one-step stability functions, multistep root conditions, stiff damping and spatial error norms."
+  },
+  {
+    "id": "nist-orthogonal",
+    "type": "misc",
+    "year": 2026,
+    "author": "NIST Digital Library of Mathematical Functions",
+    "title": "Classical orthogonal polynomials: definitions, weights and recurrence relations",
+    "source": "https://dlmf.nist.gov/18.3",
+    "note": "Living mathematical reference, checked November 2026. Sections 18.2, 18.3 and 18.9 consulted for domains, weights, normalization and recurrences; the year denotes this consultation, not the historical origin of Legendre polynomials."
+  },
+  {
+    "id": "teukolsky2015",
+    "year": 2015,
+    "author": "Teukolsky, Saul A.",
+    "title": "Short note on the mass matrix for Gauss-Lobatto grid points",
+    "journal": "Journal of Computational Physics",
+    "volume": "283",
+    "pages": "408--413",
+    "doi": "10.1016/j.jcp.2014.12.012",
+    "source": "https://arxiv.org/html/1412.2276v1",
+    "note": "Author preprint posted in December 2014, full HTML consulted. Explains exact and GLL-quadrature mass matrices and their rank-one difference. The reference-element notebook tests this distinction; it is not a reproduction of a full spectral-element PDE solver."
   }
 ]

@@ -1,5 +1,7 @@
 # Benchmark library
 
+For the representation behind DG and spectral examples, see [orthogonal polynomials and element bases](basis-functions.md): Legendre modes, nodal transforms, quadrature, and their mass matrices.
+
 Each 1D `Problem` stores the equation, domain, final time, boundaries, initial
 condition, reference solution, and citation keys. `get_problem(name)` exposes
 the same definition to every method. The last array axis contains variables:

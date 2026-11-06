@@ -10,23 +10,23 @@
   },
   "counts": {
     "equations": 42,
-    "methods": 83,
-    "papers": 126,
-    "references": 146,
-    "journal_articles": 123,
+    "methods": 85,
+    "papers": 127,
+    "references": 148,
+    "journal_articles": 124,
     "conference_papers": 3,
     "books": 7,
     "chapters": 2,
     "reports": 3,
-    "other_sources": 8,
+    "other_sources": 9,
     "local_equations": 15,
     "reading_equations": 27,
-    "local_methods": 77,
+    "local_methods": 79,
     "reading_methods": 6,
     "biological_entries": 22,
     "gallery_cases": 9,
     "gallery_equations": 7,
-    "reading_chapters": 42
+    "reading_chapters": 43
   },
   "items": [
     {
@@ -957,6 +957,24 @@
       "scope": ""
     },
     {
+      "kind": "method",
+      "id": "legendre-basis",
+      "label": "Legendre modal basis / orthonormal scaling",
+      "chapter": "basis-functions",
+      "status": "local-example",
+      "group": "Element bases & approximation",
+      "scope": "Reference-element tabulation, derivatives, projection and affine mass/stiffness matrices."
+    },
+    {
+      "kind": "method",
+      "id": "nodal-basis",
+      "label": "Lagrange nodal basis / GLL collocation",
+      "chapter": "basis-functions",
+      "status": "local-example",
+      "group": "Element bases & approximation",
+      "scope": "Interval cardinal functions, modal transforms, exact versus quadrature mass, and P1/P2 triangle shapes."
+    },
+    {
       "kind": "equation",
       "id": "bio-logistic",
       "label": "Logistic population growth",
@@ -1885,12 +1903,22 @@
       "id": "dahlquist1963",
       "type": "article",
       "identity": "doi:10.1007/bf01963532"
+    },
+    {
+      "id": "nist-orthogonal",
+      "type": "misc",
+      "identity": "work:nistdigitallibraryofmathematicalfunctions:classicalorthogonalpolynomialsdefinitionsweightsandrecurrencerelations:2026"
+    },
+    {
+      "id": "teukolsky2015",
+      "type": "article",
+      "identity": "doi:10.1016/j.jcp.2014.12.012"
     }
   ],
   "source_sha256": {
-    "catalog/coverage.json": "98caaa80e8f39bfa356e8608ed46466053464ddb92546f29a83523f6d76dbec1",
+    "catalog/coverage.json": "2e9b56c3232d7746e1b01973d53c80b33eac67d7f98b59a3b2305fda42d58a0e",
     "catalog/biological-models.json": "f0b55e0832cb17304b6d1bfdb626f2b66bb6e5c27a3730981ceb2b4fb151ab82",
-    "catalog/references.json": "e9a95506596c350839e9025bef653fbb013d7404d34b9fb94eeb6aaf9c97c5f8",
+    "catalog/references.json": "d2724e706490b8da2c5241bbe40808254d220d16c88618fc8cd3f143fe4b7b2b",
     "scripts/build_coverage.py": "c52b3dc50bdd062825f07a52cbb1be5d20e3b7306ab2f0a2add89dec046789d0"
   }
 }

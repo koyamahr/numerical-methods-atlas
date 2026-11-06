@@ -33,12 +33,12 @@ source hashes to identify the implementation.
 
 ## The atlas in numbers — prepared local edition
 
-**42 equation/model entries · 83 numerical methods and building blocks ·
-126 journal/conference papers · 146 unique sources in all.**
+**42 equation/model entries · 85 numerical methods and building blocks ·
+127 journal/conference papers · 148 unique sources in all.**
 
-The paper count is 123 journal articles plus 3 conference papers; other sources
+The paper count is 124 journal articles plus 3 conference papers; other sources
 include books, chapters, reports, documentation and a separately identified
-preprint. The named inventory distinguishes 15 model entries and 77 method
+preprint. The named inventory distinguishes 15 model entries and 79 method
 entries with scoped local examples from reading-only material. These are not
 counts of independent, complete production solvers. The equation gallery has
 9 saved-profile cases across 7 families.
@@ -236,3 +236,5 @@ python scripts/sync_web_content.py
 English title: **An Atlas of Numerical Methods**. Japanese title: **数値計算法アトラス**. Interactive links in this README target the planned new address; the published edition above still uses the old address.
 
 The local review candidate now supports Japanese/English switching, 137 bilingual terms, all 42 reading chapters in Japanese draft, and Japanese controls/explanations across the experiment notebooks. Original bibliography metadata, source notes and image/video lettering remain shared. The drafts still need editorial review. See [implementation status](BILINGUAL_STATUS.md) and [migration plan](BILINGUAL_PLAN.md). These changes have not been deployed to the public site.
+
+Reference-element basis functions now have a dedicated [chapter](docs/basis-functions.md) and [interactive notebook](https://koyamahr.github.io/numerical-methods-atlas/#/basis): Legendre modes, nodal Lagrange functions, Gauss/GLL quadrature, exact versus lumped mass, and triangular P1/P2 shapes. Other orthogonal families are explained with their domains and weights.

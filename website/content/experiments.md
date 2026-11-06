@@ -1,5 +1,7 @@
 # Interactive experiment guide
 
+The [basis notebook](https://koyamahr.github.io/numerical-methods-atlas/#/basis) adds computed reference-element algebra: Legendre and Lagrange shapes, exact versus GLL-quadrature matrices, smooth/jump approximation, and triangular P2 functions. Its saved arrays and source hashes come from `scripts/build_basis.py`; it does not introduce a new PDE evolution solver.
+
 The web edition now includes a [stability laboratory](https://koyamahr.github.io/numerical-methods-atlas/#/experiments)
 and a [convergence notebook](https://koyamahr.github.io/numerical-methods-atlas/#/convergence).
 The laboratory computes in the browser; the convergence notebook displays

@@ -2,9 +2,9 @@
 
 ローカル準備版、集計日2026-11-06。数えるのはカタログ項目と記載した実験例です。すべての項目が検証済みの完全なソルバーであるという意味ではありません。
 
-**方程式・モデル42項目・計算法と構成要素83項目・学術誌／会議論文126件・全参考資料146件。**
+**方程式・モデル42項目・計算法と構成要素85項目・学術誌／会議論文127件・全参考資料148件。**
 
-保存済み計算を用いる方程式ギャラリーは7系統・9例、読書章はこの一覧を含め42章です。
+保存済み計算を用いる方程式ギャラリーは7系統・9例、読書章はこの一覧を含め43章です。
 
 ## 方程式とモデル {#equations-and-models}
 
@@ -71,7 +71,7 @@
 
 名前付きの離散化法、積分法、線形・非線形解法、連成演算子を数えます。パラメータの違いでは増やしません。
 
-ローカル実験のある項目は77、文献解説のみは6です。再構成の制限関数、前処理、連成演算子は構成要素であり、完全なPDEソルバーではありません。格子配置、CFL条件、定理は計算法の数に含めません。
+ローカル実験のある項目は79、文献解説のみは6です。再構成の制限関数、前処理、連成演算子は構成要素であり、完全なPDEソルバーではありません。格子配置、CFL条件、定理は計算法の数に含めません。
 
 ### 空間離散化 {#spatial-discretization}
 
@@ -180,16 +180,21 @@
 
 - [直交座標の原KEEP分割流束（Original Cartesian KEEP split flux）](keep.md) — ローカル実験あり。
 
+### 要素基底・関数近似 {#element-bases-amp-approximation}
+
+- [Legendreモード基底・正規直交化（Legendre modal basis / orthonormal scaling）](basis-functions.md) — ローカル実験あり。 <span lang="en" data-original>Reference-element tabulation, derivatives, projection and affine mass/stiffness matrices.</span>
+- [Lagrange節点基底・GLL選点法（Lagrange nodal basis / GLL collocation）](basis-functions.md) — ローカル実験あり。 <span lang="en" data-original>Interval cardinal functions, modal transforms, exact versus quadrature mass, and P1/P2 triangle shapes.</span>
+
 ## 論文数と全資料数の区別 {#papers-versus-all-sources}
 
 論文数は学術誌論文と会議論文です。総説、翻訳、採録済みであることを明記した論文も含みます。全参考資料は、それに書籍、章、技術資料、文書、個別に識別したプレプリント等を加えた、重複を除く出版物の数です。
 
-- 123件：学術誌論文（総説・翻訳・採録済み論文を含む）
+- 124件：学術誌論文（総説・翻訳・採録済み論文を含む）
 - 3件：会議論文
 - 7件：書籍
 - 2件：書籍の章
 - 3件：技術・教育レポート
-- 8件：その他の資料・文書・プレプリント
+- 9件：その他の資料・文書・プレプリント
 
 Cockburn–Shu 1989の重複書誌を統合し、Burgers 1948を書籍の章に分類しました。以前の146レコードには重複があり、その後の出典追加も現在の重複を除く総数に反映しています。原著と別途出版された翻訳は異なる出版物です。すべての全文を確認済みとは主張せず、確認状態を各出典注記に残します。
 
