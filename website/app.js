@@ -7,6 +7,7 @@ import {cipPage,wireCIP} from './cip.js';
 import {rkPage,wireRK} from './runge-kutta.js';
 import {limiterPage,wireLimiters} from './limiters.js';
 import {moviesPage,wireMovies,disposeMovies} from './movies.js';
+import {fieldFigures,matchesGallery} from './gallery.js';
 import {hamiltonianPage,wireHamiltonian} from './hamiltonian.js';
 import {timePage,meshPage,wireTime,wireMesh} from './foundations.js';
 import {stabilityPage,convergencePage,wireStability,wireConvergence} from './experiments.js';
@@ -50,6 +51,7 @@ const methods = [
   {id:'basis-functions',number:'34',title:'Orthogonal polynomials & element bases',description:'Legendre modes, nodal Lagrange functions, Gauss and GLL quadrature, exact versus lumped mass, and triangular shape functions.',formula:'∫ Pᵢ Pⱼ = 2δᵢⱼ/(2i+1)',tag:'MODES · NODES · ELEMENTS'}
 ];
 const figures = [
+ ...fieldFigures,
  {file:'basis.png',year:'Reference-element algebra',title:'A mesh needs a basis',category:'Elliptic & iterative',chapter:'basis-functions',description:'Legendre modes, GLL cardinal functions, exact nodal mass, smooth and discontinuous approximation, and a triangular P2 edge function.'},
  {"file": "geophysical-grids.png", "year": "1977", "title": "Stagger the variables. Change the waves.", "category": "Advection & stability", "chapter": "geophysical-grids", "description": "A/B/C placements and four semi-discrete shallow-water dispersion cuts, with the Coriolis interpolation and deformation-radius ratio stated."},
  {"file": "equation-gallery.png", "year": "1948–1956", "title": "Equations and their waves", "category": "Conservation laws", "chapter": "equation-gallery", "description": "Burgers shocks/fans, upstream traffic jams, translation and physical heat diffusion against exact cell averages."},
@@ -62,12 +64,10 @@ const figures = [
  {file:'hamiltonian.png',title:'Canonical maps and energy',category:'Particles & gravity',year:'1990–2003',description:'Five fixed-step integrators on harmonic and quartic Hamiltonians. Energy histories to T=200 and phase orbits to T=10; no equal-cost ranking.',chapter:'symplectic'},
  {file:'particle-gravity.png',title:'PM, Tree, and multipole forces',category:'Particles & gravity',year:'1981–2005',description:'An isolated octree compared with the same softened direct force sum, and a separate periodic CIC/FFT Poisson example.',chapter:'particle-gravity'},
  {file:'gravity-boundaries.png',title:'Gravity follows the boundary',category:'Particles & gravity',year:'1981–2009',description:'Isolated doubled-grid convolution, a slab mean mode, and a sinusoidal sheet. Sampled DFT and continuous coefficients are distinct.',chapter:'gravity-boundaries'},
- {file:'double-mach.png',title:'Double Mach Reflection',category:'2D shock interactions',year:'1984',description:'Computed Mach-10 reflection at t = 0.2 on 256 × 64 cells. First-order HLL + SSPRK2; a diffusive baseline, without a resolved fine wall jet.',chapter:'double-mach',movie:'double-mach'},
  {file:'sod.png',title:'Sod shock tube',category:'Conservation laws',year:'1978',description:'Four numerical fluxes meet the exact density, velocity, and pressure profiles.',chapter:'benchmarks'},
  {file:'shu-osher.png',title:'Shock meets a density wave',category:'Conservation laws',year:'1989',description:'MUSCL and WENO5-JS on the Shu–Osher problem. A numerical comparison, without an exact final-time reference.',chapter:'benchmarks'},
  {file:'dg-spectral.png',title:'Local polynomials, global waves',category:'Advection & stability',year:'1973–1977',description:'Periodic DG and Fourier advection, plus DG grid refinement. Degrees of freedom and costs are not matched.',chapter:'benchmarks'},
  {file:'stability.png',title:'The shape of stability',category:'Advection & stability',year:'1928–1960',description:'Fourier amplification and a seeded Nyquist mode reveal the effect of the Courant number.',chapter:'stability'},
- {file:'orszag-tang.png',title:'Orszag–Tang vortex',category:'MHD',year:'1979',description:'First-order CT and GLM examples on a periodic square. Their native divergence operators differ.',chapter:'mhd',movie:'orszag-tang-ct'},
  {file:'glm-cleaning.png',title:'Where divergence errors go',category:'MHD',year:'2002',description:'A longitudinal magnetic error is injected into OT data to isolate propagation and damping.',chapter:'mhd'},
  {file:'diffusion-boundaries.png',title:'The boundary changes the problem',category:'Elliptic & iterative',year:'1947',description:'Diffusion time integrators and three Poisson boundary-condition sets for a manufactured solution.',chapter:'elliptic'},
  {file:'multigrid-radius.png',title:'From smoothing to correction',category:'Elliptic & iterative',year:'1961–1977',description:'Geometric multigrid residuals and the spectral radius of stationary iteration matrices.',chapter:'elliptic'},
@@ -148,7 +148,7 @@ const eyebrow = text => `<p class="eyebrow">${text}</p>`;
 const arrow = '<span aria-hidden="true">↗</span>';
 const plannedQuantumNotice = () => `<aside class="callout page-width planned-extension" id="quantum-plan" aria-labelledby="quantum-plan-title"><p class="eyebrow">PLANNED / QUANTUM CHEMISTRY + DFT</p><h2 id="quantum-plan-title">From basis functions to electronic structure.</h2><p>Schrödinger eigenproblems, orbital and plane-wave bases, Hartree–Fock, Kohn–Sham DFT, SCF mixing and verification examples.</p><p class="planned-status">Status: planned. Implementation and a dedicated literature review have not started. No release date is assigned.</p><a class="text-link" href="#/read/roadmap?section=planned-quantum-chemistry-and-dft">Read the development checklist ↗</a></aside>`;
 
-const figureCard = (f, i) => `<article class="figure-card"><button class="figure-open" data-figure="${figures.indexOf(f)}" aria-label="Enlarge ${escapeHTML(f.title)}"><img src="assets/${f.file}" alt="${escapeHTML(f.description)}" loading="lazy" width="1000" height="450"><span class="enlarge" aria-hidden="true">＋</span></button><div class="figure-meta"><span>${f.category}</span><span>${f.year}</span></div><h3>${f.title}</h3><p>${f.description}</p><a class="text-link" href="#/read/${f.chapter}">Read the method ${arrow}</a>${f.movie?`<a class="text-link movie-card-link" href="#/movies?case=${f.movie}">Watch time evolution ▷</a>`:''}</article>`;
+const figureCard = (f, i) => `<article class="figure-card"><button class="figure-open" data-figure="${figures.indexOf(f)}" aria-label="Enlarge ${escapeHTML(f.title)}"><img src="assets/${f.file}" alt="${escapeHTML(f.description)}" loading="lazy" width="1000" height="450"><span class="enlarge" aria-hidden="true">＋</span></button><div class="figure-meta">${f.dimension?`<span>${f.dimension}D</span>`:''}<span>${f.category}</span><span>${f.year}</span></div><h3>${f.title}</h3><p>${f.description}</p><a class="text-link" href="#/read/${f.chapter}">Read the method ${arrow}</a>${f.movie?`<a class="text-link movie-card-link" href="#/movies?case=${f.movie}">Watch time evolution ▷</a>`:''}</article>`;
 const methodCard = m => `<a class="method-card" href="#/read/${m.id}"><div class="method-top"><span>${m.number} / ${m.tag}</span><span aria-hidden="true">↗</span></div><p class="method-formula" aria-hidden="true">${m.formula}</p><h3>${m.title}</h3><p>${m.description}</p></a>`;
 function plot(flux = 'roe') {
  const width=530, height=270, left=45, right=15, top=24, bottom=35;
@@ -188,7 +188,7 @@ function methodPage() {
  return `<section class="page-intro page-width">${eyebrow('EXPLORE BY METHOD')}<h1>Understand the<br><em>discretization.</em></h1><p>${coverage.counts.methods} named numerical methods and building blocks across ${methods.length} reading entry points. <a href="#/coverage?kind=method">Inspect the counted inventory →</a></p><p> Start with the equations, follow the numerical choices, and check the evidence.</p></section><section class="page-width method-grid full-methods">${methods.map(methodCard).join('')}</section>${plannedQuantumNotice()}<aside class="callout page-width"><h2>Implementation and ambition, clearly separated.</h2><p>The first edition includes selected educational models. Multidimensional Euler rotated-hybrid fluxes, low-Mach PDE preconditioning, Euler/MHD DG, and the cataloged NASA airfoil, viscous, and turbulence cases remain future work.</p><a class="text-link" href="#/read/roadmap">Read the implementation roadmap ${arrow}</a></aside>`;
 }
 function gallery() {
- return `<section class="page-intro page-width">${eyebrow('THE NUMERICAL GALLERY')}<h1>Look closely<br>at the <em>result.</em></h1><p>Computed figures from the first edition. Steady fields stay as still images; unsteady tests also have saved-state movies.</p><a class="button primary" href="#/movies">Watch the motion gallery ▷</a> <a class="text-link" href="#/equations">Explore equations →</a></section><section class="page-width"><div class="filter-bar" aria-label="Filter gallery">${['All figures','Particles & gravity','2D shock interactions','Conservation laws','Advection & stability','MHD','Elliptic & iterative'].map((c,i)=>`<button data-gallery-filter="${c}" aria-pressed="${i===0}">${c}</button>`).join('')}</div><div class="figure-grid gallery-grid">${figures.map(figureCard).join('')}</div><p class="scope-note">These comparisons are educational examples, not reproductions of original-paper figures. Read the method notes before comparing accuracy, cost, or magnetic-divergence measures.</p><a class="text-link" href="assets/validation.json">Download the original eleven-figure validation manifest ${arrow}</a><br><a class="text-link" href="assets/double-mach-run.json">Download the Double Mach Reflection run manifest ${arrow}</a></section>`;
+ return `<section class="page-intro page-width">${eyebrow('THE NUMERICAL GALLERY')}<h1>Look closely<br>at the <em>result.</em></h1><p>Start with two-dimensional fields and slices of a three-dimensional solve. Unsteady tests link to saved-state movies; steady fields remain still images.</p><a class="button primary" href="#/movies">Watch the motion gallery ▷</a> <a class="text-link" href="#/equations">Explore equations →</a></section><section class="page-width"><div class="filter-bar" aria-label="Spatial dimension">${[['fields','2D & 3D fields'],['2','2D fields'],['3','3D fields / slices'],['all','All dimensions & diagnostics']].map(([id,label],i)=>`<button data-gallery-dimension="${id}" aria-pressed="${i===0}">${label}</button>`).join('')}</div><div class="filter-bar" aria-label="Filter gallery">${['All figures','Particles & gravity','2D shock interactions','Conservation laws','Advection & stability','MHD','Elliptic & iterative'].map((c,i)=>`<button data-gallery-filter="${c}" aria-pressed="${i===0}">${c}</button>`).join('')}</div><p id="gallery-count" aria-live="polite"></p><p id="gallery-empty" hidden>No figures match both filters. Try another dimension or category.</p><div class="figure-grid gallery-grid">${figures.map(figureCard).join('')}</div><p class="scope-note">Dimensions describe the solved spatial field. A 3D slice is a view of a three-dimensional Poisson solve, not a three-dimensional fluid simulation. Single-resolution images and movies do not establish grid convergence.</p><a class="text-link" href="assets/multidimensional-fields.json">Download field definitions & diagnostics ${arrow}</a><br><a class="text-link" href="assets/multidimensional-fields.npz" download>Download computed field arrays ↓</a><br><a class="text-link" href="assets/validation.json">Download the original eleven-figure validation manifest ${arrow}</a><br><a class="text-link" href="assets/double-mach-run.json">Download the Double Mach Reflection run manifest ${arrow}</a></section>`;
 }
 function referenceItem(e) {
  const source=e.doi?`https://doi.org/${e.doi}`:e.source;
@@ -221,11 +221,23 @@ function wire() {
    const f=figures[Number(button.dataset.figure)],dialog=document.querySelector('#figure-dialog');
    dialog.querySelector('h2').textContent=translateText(f.title); dialog.querySelector('img').src=`assets/${f.file}`; dialog.querySelector('img').alt=translateText(f.description); dialog.querySelector('p').textContent=translateText(f.description); dialog.showModal();
  }));
- document.querySelectorAll('[data-gallery-filter]').forEach(button=>button.addEventListener('click',()=>{
-   const category=button.dataset.galleryFilter;
-   document.querySelectorAll('[data-gallery-filter]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
-   document.querySelectorAll('.gallery-grid .figure-card').forEach((card,i)=>card.hidden=category!=='All figures'&&figures[i].category!==category);
- }));
+ const filterGallery=()=>{
+   const dimension=document.querySelector('[data-gallery-dimension][aria-pressed="true"]')?.dataset.galleryDimension;
+   const category=document.querySelector('[data-gallery-filter][aria-pressed="true"]')?.dataset.galleryFilter;
+   let visible=0;
+   document.querySelectorAll('.gallery-grid .figure-card').forEach((card,i)=>{
+     card.hidden=!matchesGallery(figures[i],dimension,category); if(!card.hidden)visible++;
+   });
+   const count=document.querySelector('#gallery-count');
+   if(count){count.textContent=translateText(`Showing ${visible} of ${figures.length} figures`);document.querySelector('#gallery-empty').hidden=visible>0;}
+ };
+ for(const selector of ['[data-gallery-filter]','[data-gallery-dimension]']){
+   document.querySelectorAll(selector).forEach(button=>button.addEventListener('click',()=>{
+     document.querySelectorAll(selector).forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+     filterGallery();
+   }));
+ }
+ filterGallery();
  document.querySelectorAll('.copy-command').forEach(button=>button.addEventListener('click',async()=>{
    try {await navigator.clipboard.writeText(button.dataset.copy);button.textContent='Copied';setTimeout(()=>button.textContent='Copy',1800);}
    catch {button.textContent='Select the command below';}

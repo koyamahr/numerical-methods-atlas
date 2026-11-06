@@ -39,6 +39,33 @@ The builder writes the published frames, MP4 files, and [movie catalog](https://
 
 The checker validates hashes and metadata, opens each saved image, and decodes each MP4 to verify its dimensions, playback rate, and complete frame count. A short small-grid build can be made with `--quick --output <directory>`; its catalog is marked as a quick check and is not the published production run.
 
+## Multidimensional still fields
+
+The [numerical gallery](https://koyamahr.github.io/numerical-methods-atlas/#/gallery)
+opens with 2D/3D spatial fields, including the four movie entry points above.
+Dimension and subject filters can be combined; all dimensions also includes
+the 1D comparisons and algorithmic diagnostic figures.
+
+Three additional still figures expose fields from existing solvers:
+
+- **2D triangular P1 Poisson:** 24 × 24 split squares (1152 triangles), zero
+  Dirichlet data and exact solution sin(πx)sin(πy). The second panel is nodal
+  error; continuous L2/H1 errors are measured separately inside elements.
+- **2D periodic Taylor–Green:** 64 × 64 MAC cells, viscosity 0.1, t = 0.5.
+  Speed/arrows average face velocities to cell centers only for visualization;
+  velocity RMS and divergence diagnostics use the native MAC arrays.
+- **3D periodic Poisson:** a 32³ FFT solve with density
+  1 + 0.3 cos(2πx)cos(4πy)cos(2πz), G = 1 and zero-mean potential.
+  Three orthogonal slices at coordinate 0.5 use the same color limits.
+  This is a static 3D field checked against one exact Fourier mode, not a
+  3D fluid or particle-evolution simulation.
+
+Reproduce these still fields with `python scripts/build_multidimensional_gallery.py`.
+Download the [definitions, diagnostics and source hashes](figures/multidimensional-fields.json)
+and [computed arrays](figures/multidimensional-fields.npz). These views add no new
+solver or convergence study; the existing FEM and MAC refinement tests remain
+separate evidence.
+
 ## What a movie does not establish
 
 A visually smooth evolution does not establish mesh convergence, an entropy inequality, shock robustness, long-time turbulent accuracy, or agreement with experiments. The [KEEP vortex refinement](keep.md) supplies separate smooth-error measurements. The [carbuncle chapter](carbuncle.md) explains why a shock movie alone cannot certify multidimensional stability.

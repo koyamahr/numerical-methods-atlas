@@ -5131,5 +5131,109 @@
   "planned.quantum.link": {
     "en": "Read the development checklist ↗",
     "ja": "開発予定のリストを読む ↗"
+  },
+  "gallery.field-intro": {
+    "en": "Start with two-dimensional fields and slices of a three-dimensional solve. Unsteady tests link to saved-state movies; steady fields remain still images.",
+    "ja": "2次元の場と3次元計算の断面から見てみましょう。非定常テストには保存状態の動画があり、定常場は静止図で示します。"
+  },
+  "gallery.spatial-dimension": {
+    "en": "Spatial dimension",
+    "ja": "空間次元"
+  },
+  "gallery.fields": {
+    "en": "2D & 3D fields",
+    "ja": "2D・3Dの場"
+  },
+  "gallery.2d": {
+    "en": "2D fields",
+    "ja": "2Dの場"
+  },
+  "gallery.3d": {
+    "en": "3D fields / slices",
+    "ja": "3Dの場・断面"
+  },
+  "gallery.all-dimensions": {
+    "en": "All dimensions & diagnostics",
+    "ja": "全次元・診断図"
+  },
+  "gallery.showing": {
+    "en": "Showing {visible} of {total} figures",
+    "ja": "{total}図中{visible}図を表示"
+  },
+  "gallery.empty": {
+    "en": "No figures match both filters. Try another dimension or category.",
+    "ja": "両方の条件に一致する図がありません。次元または分類を変えてください。"
+  },
+  "gallery.dimension-scope": {
+    "en": "Dimensions describe the solved spatial field. A 3D slice is a view of a three-dimensional Poisson solve, not a three-dimensional fluid simulation. Single-resolution images and movies do not establish grid convergence.",
+    "ja": "次元は計算した場の空間次元です。3D断面は3次元Poisson解の表示で、3次元流体計算ではありません。単一解像度の図や動画だけでは格子収束は確認できません。"
+  },
+  "gallery.field-manifest": {
+    "en": "Download field definitions & diagnostics",
+    "ja": "場の定義・診断量をダウンロード"
+  },
+  "gallery.field-arrays": {
+    "en": "Download computed field arrays ↓",
+    "ja": "計算した場の配列をダウンロード ↓"
+  },
+  "gallery.ot-ct-title": {
+    "en": "Orszag–Tang / constrained transport",
+    "ja": "Orszag–Tang／制約付き輸送法"
+  },
+  "gallery.ot-glm-title": {
+    "en": "Orszag–Tang / GLM cleaning",
+    "ja": "Orszag–Tang／GLMクリーニング"
+  },
+  "gallery.keep-field-title": {
+    "en": "KEEP / a moving smooth vortex",
+    "ja": "KEEP／移動する滑らかな渦"
+  },
+  "gallery.fem-field-title": {
+    "en": "Poisson on triangular elements",
+    "ja": "三角形要素上のPoisson解"
+  },
+  "gallery.mac-field-title": {
+    "en": "Taylor–Green / speed and pressure",
+    "ja": "Taylor–Green渦／速さと圧力"
+  },
+  "gallery.poisson-3d-title": {
+    "en": "A 3D Poisson field in three slices",
+    "ja": "3断面で見る3次元Poisson場"
+  },
+  "gallery.dmr-field-note": {
+    "en": "2D Mach-10 shock reflection on 256 × 64 cells. Open the saved-state movie; first-order HLL is a diffusive baseline.",
+    "ja": "256 × 64セルの2次元Mach 10衝撃波反射。保存状態の動画を開けます。1次HLLによる散逸的な基準計算です。"
+  },
+  "gallery.ct-field-note": {
+    "en": "2D periodic MHD on 64 × 64 cells. CT uses a staggered magnetic field and its native face-divergence operator.",
+    "ja": "64 × 64セルの2次元周期MHD。CTはスタガード磁場と対応する面発散演算子を使います。"
+  },
+  "gallery.glm-field-note": {
+    "en": "2D periodic MHD on 64 × 64 cells. Inspect GLM time evolution; its cell-centered divergence is distinct from CT.",
+    "ja": "64 × 64セルの2次元周期MHD。GLMの時間発展を確認できます。セル中心の発散はCTの演算子と異なります。"
+  },
+  "gallery.keep-field-note": {
+    "en": "2D Euler vortex on 96 × 96 cells. Original Cartesian KEEP with RK4; smooth-flow test without shock stabilization.",
+    "ja": "96 × 96セルの2次元Euler渦。原型の直交KEEPとRK4を使う滑らかな流れのテストで、衝撃波安定化は含みません。"
+  },
+  "gallery.fem-field-note": {
+    "en": "2D P1 finite elements: computed solution and nodal error on 1152 triangles. Continuous L2/H1 errors use inside-element quadrature.",
+    "ja": "1152三角形上の2次元P1有限要素解と節点誤差。連続的なL2・H1誤差は要素内部の求積で測ります。"
+  },
+  "gallery.mac-field-note": {
+    "en": "2D periodic MAC projection on 64 × 64 cells. Velocity arrows are averaged to cell centers; diagnostics use native face velocities.",
+    "ja": "64 × 64セルの2次元周期MAC射影。速度矢印はセル中心への平均で表示し、診断量には面上の速度を使います。"
+  },
+  "gallery.poisson3d-field-note": {
+    "en": "3D periodic FFT Poisson on a 32 × 32 × 32 mesh, checked against one exact Fourier mode. Three orthogonal potential slices; no 3D fluid evolution.",
+    "ja": "32 × 32 × 32格子の3次元周期FFT Poisson解を、一つの厳密Fourierモードと照合。ポテンシャルの直交3断面で、3次元流体の時間発展ではありません。"
+  },
+  "gallery.steady-field": {
+    "en": "STEADY FIELD",
+    "ja": "定常場"
+  },
+  "gallery.steady-slices": {
+    "en": "STEADY FIELD / SLICES",
+    "ja": "定常場・断面"
   }
 }

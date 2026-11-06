@@ -1,0 +1,53 @@
+{
+  "scope": "New views of existing educational solvers. No new solver or 3D fluid evolution. One resolution per exhibit; the 3D spectral single-mode check is not a general convergence study.",
+  "fem": {
+    "dimension": 2,
+    "subdivisions": 24,
+    "triangles": 1152,
+    "l2": 0.002397959864651509,
+    "h1_seminorm": 0.145228781041822,
+    "residual": 2.646581930017215e-12,
+    "boundary": "zero Dirichlet",
+    "exact": "sin(pi*x)*sin(pi*y)"
+  },
+  "mac": {
+    "dimension": 2,
+    "shape": [
+      64,
+      64
+    ],
+    "time": 0.5,
+    "viscosity": 0.1,
+    "velocity_rms": 5.137961209377578e-05,
+    "max_native_divergence": 2.2617277734851675e-15,
+    "boundary": "periodic",
+    "display": "face velocities averaged to cell centers"
+  },
+  "poisson3d": {
+    "dimension": 3,
+    "shape": [
+      32,
+      32,
+      32
+    ],
+    "boundary": "periodic",
+    "gravity": 1.0,
+    "density": "1 + 0.3*cos(2*pi*x)*cos(4*pi*y)*cos(2*pi*z)",
+    "potential_gauge": "zero mean",
+    "maximum_point_error": 1.214306433183765e-17,
+    "display": "x/y/z = 0.5 slices; static field, no particle evolution"
+  },
+  "source_sha256": {
+    "scripts/build_multidimensional_gallery.py": "ba3691774afad40bfd1a2075bfd22284fa53c5887a2e6657900e2a713c3db6ed",
+    "numart/fem.py": "def8018fcf5b3c0c5ffa763b978a2cd47b62f54be240ec831e5f49613790f740",
+    "numart/krylov.py": "3241dc174c3e0cf496723152ec92f81e1b741cb4d826c02f88395621b965ae2d",
+    "numart/incompressible.py": "d723907a2d25d066bea530b27e9666c0bbede5883ab54a657d4c6d57238fde60",
+    "numart/particle_gravity.py": "710fde37b69214cdd1adb97c86bea4eff45ad861e1d2c4e8194a5bd1ab4b540b"
+  },
+  "artifact_sha256": {
+    "field-fem-poisson.png": "5cb31b1cb182fa6509de11f0cafcc2368b9136b46d625bc6183df2a648f9af29",
+    "field-taylor-green.png": "89d51b4bdc8650fd270de49d92f3109e0d2b0feb27f3e62ae509ea550fe33a19",
+    "field-poisson-3d.png": "8988cdb2747b9da6cc88bc7374275a4238557d7fa24d56ad0756f9435b322bb7",
+    "multidimensional-fields.npz": "d5f808cb1a239e5c451aa924976ecbd944dbc872bd395a6fa49fd195425d5ade"
+  }
+}
