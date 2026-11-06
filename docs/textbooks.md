@@ -66,7 +66,7 @@ Atlas connections: [Incompressible flow: project with compatible discrete operat
 
 LeVeque, Randall J. **Finite Volume Methods for Hyperbolic Problems**. Cambridge University Press, 2002.
 
-Use this for weak solutions, finite-volume reasoning, wave propagation, limiters and multidimensional conservation laws. Companion Clawpack material connects the theory to computation.
+Use this for weak solutions, finite-volume reasoning, wave propagation, limiters and multidimensional conservation laws. Companion Clawpack material connects the theory to computation. The requested paperback ISBN 0521009243 is this book, whose publisher title is Finite Volume Methods for Hyperbolic Problems.
 
 Atlas connections: [Euler reconstruction: PPM, characteristics, WENO-Z and AUSM](reconstruction.md) · [Slope limiters: minmod, Superbee, MC, van Leer, and van Albada](limiters.md) · [Equation gallery: choose the equation before the algorithm](equation-gallery.md).
 
@@ -81,6 +81,16 @@ Use this when deriving or comparing exact and approximate Euler Riemann solvers,
 Atlas connections: [Preconditioning, dual time stepping, and residual distribution](advanced.md) · [Euler reconstruction: PPM, characteristics, WENO-Z and AUSM](reconstruction.md) · [Benchmark library](benchmarks.md).
 
 [Publisher / bibliographic record](https://doi.org/10.1007/b79761) · [Author / source page](https://doi.org/10.1007/b79761) · `toro2009`
+
+### Godlewski · Raviart {#godlewski1996book}
+
+Godlewski, Edwige; Raviart, Pierre-Arnaud. **Numerical Approximation of Hyperbolic Systems of Conservation Laws**. Springer, 1996 · edition 1.
+
+Use this for a mathematical treatment of nonlinear hyperbolic systems and their numerical approximation, including Riemann problems and gas dynamics. Read it alongside LeVeque for finite-volume reasoning and Toro for solver construction. This entry cites the requested 1996 first edition; a [revised second edition appeared in 2021](https://link.springer.com/book/10.1007/978-1-0716-1344-3).
+
+Atlas connections: [Preconditioning, dual time stepping, and residual distribution](advanced.md) · [Euler reconstruction: PPM, characteristics, WENO-Z and AUSM](reconstruction.md) · [A-stability, L-stability and error norms](accuracy-stability.md).
+
+[Publisher / bibliographic record](https://doi.org/10.1007/978-1-4612-0713-9) · [Author / source page](https://link.springer.com/book/10.1007/978-1-4612-0713-9) · `godlewski1996book`
 
 ## Finite differences and linear algebra {#common-numerics}
 

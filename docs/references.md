@@ -741,6 +741,14 @@ Aliev, R. R. and Panfilov, A. V.. **A simple two-variable model of cardiac excit
 
 Physiome-hosted model encoding and bibliographic identification checked; original full paper not audited. A reduced phenomenological cardiac model, not a detailed human ionic-cell model or a complete bidomain model.
 
+## 1996 · godlewski1996book
+
+Godlewski, Edwige and Raviart, Pierre-Arnaud. **Numerical Approximation of Hyperbolic Systems of Conservation Laws**. Springer.
+
+[Original bibliographic record](https://doi.org/10.1007/978-1-4612-0713-9) · [Full text or implementation reference](https://link.springer.com/book/10.1007/978-1-4612-0713-9)
+
+Publisher first-edition record, description and contents checked: Applied Mathematical Sciences, volume 118, copyright 1996; the 2013 eBook release is a later digital issue. This record identifies the requested first edition, not the revised second edition of 2021 (DOI 10.1007/978-1-0716-1344-3). Reading reference for nonlinear hyperbolic systems and their numerical approximation; full text and all proofs have not been audited.
+
 ## 1996 · jiang1996
 
 Jiang, Guang-Shan and Shu, Chi-Wang. **Efficient Implementation of Weighted ENO Schemes**. Journal of Computational Physics.
@@ -907,7 +915,7 @@ LeVeque, Randall J.. **Finite Volume Methods for Hyperbolic Problems**. Cambridg
 
 [Original bibliographic record](https://doi.org/10.1017/CBO9780511791253) · [Full text or implementation reference](https://www.cambridge.org/core/books/finite-volume-methods-for-hyperbolic-problems/97D5D1ACB1926DA1D4D52EAD6909E2B9)
 
-Publisher bibliographic record and abstract. Background for conservation laws and shallow-water implementations.
+Publisher/author bibliographic records and Cambridge front matter checked. Paperback ISBN 0-521-00924-3 (978-0-521-00924-9) identifies Finite Volume Methods for Hyperbolic Problems, first published in 2002; retailer wording with Hyperbolic Systems does not identify a separate book. Reading reference for conservation laws, wave-propagation methods, limiters and shallow-water implementations; not a full-text audit.
 
 ## 2002 · murray2002
 

@@ -1478,6 +1478,22 @@ Physiome-hosted model encoding and bibliographic identification checked; origina
 
 </div>
 
+## 1996 · godlewski1996book {#1996-godlewski1996book}
+
+<div lang="en" data-original>
+
+Godlewski, Edwige and Raviart, Pierre-Arnaud. **Numerical Approximation of Hyperbolic Systems of Conservation Laws**. Springer.
+
+</div>
+
+[原著の書誌情報](https://doi.org/10.1007/978-1-4612-0713-9) · [全文または実装の参照資料](https://link.springer.com/book/10.1007/978-1-4612-0713-9)
+
+<div lang="en" data-original>
+
+Publisher first-edition record, description and contents checked: Applied Mathematical Sciences, volume 118, copyright 1996; the 2013 eBook release is a later digital issue. This record identifies the requested first edition, not the revised second edition of 2021 (DOI 10.1007/978-1-0716-1344-3). Reading reference for nonlinear hyperbolic systems and their numerical approximation; full text and all proofs have not been audited.
+
+</div>
+
 ## 1996 · jiang1996 {#1996-jiang1996}
 
 <div lang="en" data-original>
@@ -1810,7 +1826,7 @@ LeVeque, Randall J.. **Finite Volume Methods for Hyperbolic Problems**. Cambridg
 
 <div lang="en" data-original>
 
-Publisher bibliographic record and abstract. Background for conservation laws and shallow-water implementations.
+Publisher/author bibliographic records and Cambridge front matter checked. Paperback ISBN 0-521-00924-3 (978-0-521-00924-9) identifies Finite Volume Methods for Hyperbolic Problems, first published in 2002; retailer wording with Hyperbolic Systems does not identify a separate book. Reading reference for conservation laws, wave-propagation methods, limiters and shallow-water implementations; not a full-text audit.
 
 </div>
 

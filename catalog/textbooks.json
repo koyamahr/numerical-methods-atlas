@@ -84,8 +84,8 @@
           "reference": "leveque2002",
           "label": "LeVeque / finite volume",
           "purpose": {
-            "en": "Use this for weak solutions, finite-volume reasoning, wave propagation, limiters and multidimensional conservation laws. Companion Clawpack material connects the theory to computation.",
-            "ja": "弱解、有限体積法の考え方、波の伝播、リミター、多次元保存則を調べるときに。Clawpack関連資料から理論と実装を結びつけられます。"
+            "en": "Use this for weak solutions, finite-volume reasoning, wave propagation, limiters and multidimensional conservation laws. Companion Clawpack material connects the theory to computation. The requested paperback ISBN 0521009243 is this book, whose publisher title is Finite Volume Methods for Hyperbolic Problems.",
+            "ja": "弱解、有限体積法の考え方、波の伝播、リミター、多次元保存則を調べるときに。Clawpack関連資料から理論と実装を結びつけられます。 ご指定のペーパーバックISBN 0521009243はこの本です。出版社の正式題名はFinite Volume Methods for Hyperbolic Problemsです。"
           },
           "chapters": [
             "reconstruction",
@@ -104,6 +104,19 @@
             "advanced",
             "reconstruction",
             "benchmarks"
+          ]
+        },
+        {
+          "reference": "godlewski1996book",
+          "label": "Godlewski · Raviart",
+          "purpose": {
+            "en": "Use this for a mathematical treatment of nonlinear hyperbolic systems and their numerical approximation, including Riemann problems and gas dynamics. Read it alongside LeVeque for finite-volume reasoning and Toro for solver construction. This entry cites the requested 1996 first edition; a [revised second edition appeared in 2021](https://link.springer.com/book/10.1007/978-1-0716-1344-3).",
+            "ja": "非線形双曲型保存則系とその数値近似を数学的に学び、Riemann問題や気体力学を詳しく調べるための本です。有限体積法の考え方にはLeVeque、ソルバーの構成にはToroを併読するとつながります。この項目はご指定の1996年初版を引用し、[2021年の改訂第2版](https://link.springer.com/book/10.1007/978-1-0716-1344-3)も案内します。"
+          },
+          "chapters": [
+            "advanced",
+            "reconstruction",
+            "accuracy-stability"
           ]
         }
       ]

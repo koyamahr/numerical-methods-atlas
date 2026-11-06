@@ -12,10 +12,10 @@
     "equations": 42,
     "methods": 90,
     "papers": 139,
-    "references": 175,
+    "references": 176,
     "journal_articles": 136,
     "conference_papers": 3,
-    "books": 21,
+    "books": 22,
     "chapters": 2,
     "reports": 3,
     "other_sources": 10,
@@ -2093,12 +2093,17 @@
       "id": "trottenberg2001",
       "type": "book",
       "identity": "work:trottenbergulrichandoosterleecorneliuswandschülleranton:multigrid:2001"
+    },
+    {
+      "id": "godlewski1996book",
+      "type": "book",
+      "identity": "doi:10.1007/978-1-4612-0713-9"
     }
   ],
   "source_sha256": {
     "catalog/coverage.json": "353df5a32d8739a59050eee0fcf1632fea235308dd4bcd9d77393ea999c2365b",
     "catalog/biological-models.json": "f0b55e0832cb17304b6d1bfdb626f2b66bb6e5c27a3730981ceb2b4fb151ab82",
-    "catalog/references.json": "6157cb1e910e511919bc520d810022b1a1f2eff68b8d1089bc4accda1cf83ec9",
+    "catalog/references.json": "d2e65849db4d82a0b10c9beb3565293081134eaa302194a1c7cebd16d392bbc2",
     "scripts/build_coverage.py": "aa5736f70653801129a25f8b18726a6f993dc1c09bbbf68e4dcab48090cb7d0d"
   }
 }

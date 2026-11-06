@@ -66,7 +66,7 @@ Patankar, Suhas V. **Numerical Heat Transfer and Fluid Flow**. CRC Press (curren
 
 LeVeque, Randall J. **Finite Volume Methods for Hyperbolic Problems**. Cambridge University Press, 2002.
 
-弱解、有限体積法の考え方、波の伝播、リミター、多次元保存則を調べるときに。Clawpack関連資料から理論と実装を結びつけられます。
+弱解、有限体積法の考え方、波の伝播、リミター、多次元保存則を調べるときに。Clawpack関連資料から理論と実装を結びつけられます。 ご指定のペーパーバックISBN 0521009243はこの本です。出版社の正式題名はFinite Volume Methods for Hyperbolic Problemsです。
 
 アトラスの関連章：[Euler再構成：PPM・特性変数・WENO-Z・AUSM](reconstruction.md) · [勾配制限：minmod、Superbee、MC、van Leer、van Albada](limiters.md) · [方程式ギャラリー：計算法の前に方程式を選ぶ](equation-gallery.md).
 
@@ -81,6 +81,16 @@ Euler方程式の厳密・近似Riemannソルバー、接触波、高解像度�
 アトラスの関連章：[前処理、二重時間積分、残差分配法](advanced.md) · [Euler再構成：PPM・特性変数・WENO-Z・AUSM](reconstruction.md) · [テスト計算ライブラリ](benchmarks.md).
 
 [出版社・書誌情報](https://doi.org/10.1007/b79761) · [著者・参照ページ](https://doi.org/10.1007/b79761) · `toro2009`
+
+### Godlewski · Raviart {#godlewski1996book}
+
+Godlewski, Edwige; Raviart, Pierre-Arnaud. **Numerical Approximation of Hyperbolic Systems of Conservation Laws**. Springer, 1996・第1版.
+
+非線形双曲型保存則系とその数値近似を数学的に学び、Riemann問題や気体力学を詳しく調べるための本です。有限体積法の考え方にはLeVeque、ソルバーの構成にはToroを併読するとつながります。この項目はご指定の1996年初版を引用し、[2021年の改訂第2版](https://link.springer.com/book/10.1007/978-1-0716-1344-3)も案内します。
+
+アトラスの関連章：[前処理、二重時間積分、残差分配法](advanced.md) · [Euler再構成：PPM・特性変数・WENO-Z・AUSM](reconstruction.md) · [A安定性、L安定性、誤差ノルム](accuracy-stability.md).
+
+[出版社・書誌情報](https://doi.org/10.1007/978-1-4612-0713-9) · [著者・参照ページ](https://link.springer.com/book/10.1007/978-1-4612-0713-9) · `godlewski1996book`
 
 ## 差分法と線形代数 {#common-numerics}
 
