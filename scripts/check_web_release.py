@@ -107,6 +107,10 @@ for filename in ['index.html','404.html','migration.js']:
     require((legacy/filename).is_file(),'Missing legacy landing artifact: '+filename)
 require((legacy/'migration.js').read_bytes()==(SITE/'migration.js').read_bytes(),'Legacy migration module is stale')
 require(site['publicUrl'] in (legacy/'index.html').read_text(),'Legacy landing points to the wrong site')
+legacy_module=urlsplit(site['legacyPublicUrl']).path+'migration.js'
+for name in ('index.html','404.html'):
+    require('from '+json.dumps(legacy_module) in (legacy/name).read_text(),
+            'Legacy redirect must load its module from the project root, including nested 404 paths: '+name)
 if errors:raise SystemExit('\n'.join(errors))
 files=sorted(p for p in DIST.rglob('*') if p.is_file())
 file_hashes={p.relative_to(DIST).as_posix():sha256(p.read_bytes()).hexdigest() for p in files}
