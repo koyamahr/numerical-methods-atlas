@@ -81,15 +81,20 @@ def test_tracing_matches_time_integrals_of_frozen_linearized_system(velocity):
     dt=.05;gamma=1.4;rho,u,p=center[0]
     matrix=np.array([[u,rho,0],[0,u,1/rho],[0,gamma*p,u]])
     eigenvalues,r=np.linalg.eig(matrix);l=np.linalg.inv(r)
+    # LAPACK/NumPy may use a complex container for this real eigensystem.
+    # Check the imaginary parts instead of discarding them implicitly.
+    np.testing.assert_allclose(eigenvalues.imag,0,atol=1e-13)
+    np.testing.assert_allclose(r@np.diag(eigenvalues)@l,matrix,atol=1e-13)
     nodes,weights=leggauss(12);times=.5*dt*(nodes+1)
     side=1 if velocity>0 else -1
     six=6*center[0]-3*(left[0]+right[0]);delta=right[0]-left[0]
-    expected=np.zeros(3)
+    expected=np.zeros(3,dtype=complex)
     for k,speed in enumerate(eigenvalues):
         xi=(1 if side==1 else 0)-speed*times
         values=left[0]+xi[:,None]*(delta+(1-xi[:,None])*six)
         mean=.5*np.einsum('i,ij->j',weights,values)
         expected += r[:,k]*(l[k]@mean)
+    np.testing.assert_allclose(expected.imag,0,atol=1e-13)
     a,b=trace(center,left,right,dt,gamma)
     np.testing.assert_allclose(b[0] if side==1 else a[0],expected,atol=1e-15)
 
