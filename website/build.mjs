@@ -1,3 +1,4 @@
+import {buildReadingPages} from './build-reading.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
@@ -11,7 +12,7 @@ const site = JSON.parse(fs.readFileSync('site.config.json', 'utf8'));
 const publicURL = new URL(site.publicUrl);
 if (publicURL.protocol !== 'https:' || publicURL.pathname !== `/${site.publicationRepository.split('/')[1]}/`) throw new Error('Publication URL and repository do not match');
 fs.mkdirSync('dist', { recursive: true });
-for (const f of ['index.html', 'style.css', 'app.js', 'i18n.js', 'glossary.js', 'experiments.js', 'foundations.js', 'hamiltonian.js', 'movies.js', 'gallery.js', 'comparisons.js', 'shock-methods.js', 'shock-expansion.js', 'poisson.js', 'books.js', 'limiters.js', 'runge-kutta.js', 'cip.js', 'basis.js', 'equations.js', 'reference-solutions.js', 'coverage.js', 'numerics.js', 'favicon.svg']) fs.copyFileSync(f, `dist/${f}`);
+for (const f of ['index.html', 'style.css', 'app.js', 'reading.js', 'reading-urls.js', 'i18n.js', 'glossary.js', 'experiments.js', 'foundations.js', 'hamiltonian.js', 'movies.js', 'gallery.js', 'comparisons.js', 'shock-methods.js', 'shock-expansion.js', 'poisson.js', 'books.js', 'limiters.js', 'runge-kutta.js', 'cip.js', 'basis.js', 'equations.js', 'reference-solutions.js', 'coverage.js', 'numerics.js', 'favicon.svg']) fs.copyFileSync(f, `dist/${f}`);
 const escapeHTML = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const substitutions = {SITE_TITLE:site.title.en, BRAND_LEAD:site.brand.lead, BRAND_SUBJECT:site.brand.subject, SITE_URL:site.publicUrl, REPOSITORY_URL:site.repositoryUrl, LEGACY_REPOSITORY_URL:site.legacyRepositoryUrl};
 let index = fs.readFileSync('index.html', 'utf8');
@@ -85,7 +86,10 @@ const hosting = JSON.parse(fs.readFileSync('.openai/hosting.json', 'utf8'));
 if (hosting.static?.directory !== 'dist') throw new Error('Unexpected Site configuration');
 const origin = site.publicUrl.replace(/\/$/, '');
 fs.writeFileSync('dist/robots.txt', `User-agent: *\nAllow: /\nSitemap: ${origin}/sitemap.xml\n`);
-fs.writeFileSync('dist/sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${origin}/</loc></url></urlset>\n`);
+const readingPages = buildReadingPages({ directory: path.resolve('dist'), site, documents, japanese });
+const sitemapEntries = [{url:site.publicUrl, alternatives:[]}, ...readingPages].map(({url,alternatives}) => `<url><loc>${escapeHTML(url)}</loc>${alternatives.map(({lang,url})=>`<xhtml:link rel="alternate" hreflang="${lang}" href="${escapeHTML(url)}"/>`).join('')}</url>`);
+fs.writeFileSync('dist/sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">${sitemapEntries.join('')}</urlset>\n`);
+console.log(`Built ${readingPages.length} static reading pages with canonical URLs and language alternates.`);
 console.log(`Built static web edition with ${Object.keys(documents).length} complete reading chapters.`);
 
 // Keep the old-address landing page separate from the atlas deployment artifact.

@@ -1,3 +1,4 @@
+import {readingURL,rewriteReadingLinks} from './reading-urls.js';
 import {expansionPage,wireExpansion} from './shock-expansion.js';
 import {referencePage as exactPage,wireReferences} from './reference-solutions.js';
 import {glossaryPage,wireGlossary} from './glossary.js';
@@ -135,6 +136,7 @@ function renderShell() {
  document.querySelector('meta[name="description"]').content=description;
  document.querySelector('meta[property="og:description"]').content=description;
  document.querySelector('meta[property="og:title"]').content=site.title[currentLanguage()];
+ document.querySelectorAll('[data-reading-index]').forEach(a=>{a.href=readingURL(new URL('.',import.meta.url), '', currentLanguage());});
  localizeTree(document.body);
 }
 async function changeLanguage(language, {historyEntry=true}={}) {
@@ -271,8 +273,12 @@ async function route(options={}) {
   if(english[parts[1]])documents[parts[1]]=english[parts[1]];
  }
  if(version!==navigationVersion)return;
+ if(type==='read' && documents[parts[1]]) {
+  location.replace(readingURL(new URL('.',import.meta.url), parts[1], documents[parts[1]].locale || currentLanguage(), query.get('section') || ''));
+  return;
+ }
  const renderers={home,atlas,'exact-solutions':exactPage,'shock-expansion':expansionPage,glossary:glossaryPage,coverage:()=>coveragePage(coverage),equations:equationsPage,methods:methodPage,gallery,movies:moviesPage,'flow-comparison':flowPage,'mhd-tests':mhdPage,reconstruction:reconstructionPage,'shock-robustness':robustnessPage,'poisson-comparison':poissonPage,limiters:limiterPage,'runge-kutta':rkPage,cip:cipPage,basis:basisPage,experiments:stabilityPage,convergence:convergencePage,'time-integration':timePage,meshes:meshPage,hamiltonian:hamiltonianPage,references:()=>referencePage(query.get('q')||''),read:()=>chapter(parts[1])};
- main.innerHTML=(renderers[type]||notFound)();
+ main.innerHTML=rewriteReadingLinks((renderers[type]||notFound)(),new URL('.',import.meta.url),currentLanguage(),currentLanguage()==='ja'?Object.keys(documents).filter(id=>documents[id].locale==='ja'):[]);
  document.body.dataset.page=type;
  main.lang=currentLanguage();main.removeAttribute('data-localize');
  document.querySelectorAll('[data-nav]').forEach(a=>{if(a.dataset.nav===type||(['movies','flow-comparison','mhd-tests','reconstruction','shock-robustness','shock-expansion'].includes(type)&&a.dataset.nav==='gallery')||(['convergence','time-integration','meshes','hamiltonian','limiters','runge-kutta','cip','basis','poisson-comparison','exact-solutions'].includes(type)&&a.dataset.nav==='experiments'))a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});

@@ -105,3 +105,7 @@ html:lang(ja) .lab-svg .axis-title{font-family:var(--sans);font-size:11px}
 
 /* Keep wide diagnostic tables inside their scroll containers. */
 body[data-page=shock-expansion] .lab-results,body[data-page=shock-expansion] .lab-lower>*,body[data-page=shock-expansion] .lab-controls{min-width:0}
+
+/* Static reading pages retain crawlable, keyboard-accessible language links. */
+.language-switch a{font:inherit;font-size:11px;padding:5px 9px;text-decoration:none;color:var(--ink)}
+.language-switch a[aria-current="page"]{text-decoration:underline;text-underline-offset:4px}

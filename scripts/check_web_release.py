@@ -3,7 +3,8 @@ from argparse import ArgumentParser
 from hashlib import sha256
 from html.parser import HTMLParser
 from pathlib import Path
-from urllib.parse import unquote, urlsplit, parse_qs
+from urllib.parse import unquote, urlsplit, parse_qs, urljoin
+from xml.etree import ElementTree
 import json,re
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -99,6 +100,32 @@ require(f'<meta property="og:url" content="{site["publicUrl"]}">' in index,'Inco
 require('{{SITE_' not in index and '{{BRAND_' not in index,'Unrendered site metadata')
 require(site['publicUrl'] in (DIST/'sitemap.xml').read_text(),'Sitemap points to the wrong site')
 require(site['publicUrl']+'sitemap.xml' in (DIST/'robots.txt').read_text(),'Robots sitemap points to the wrong site')
+# Each translated reading chapter is a real file with its full text and page metadata.
+sitemap=ElementTree.parse(DIST/'sitemap.xml')
+ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
+static_urls=[node.text for node in sitemap.findall('s:url/s:loc',ns)]
+reading_urls=[url for url in static_urls if '/read/' in url]
+require(len(reading_urls)==len(documents)+len(japanese)+2,'Sitemap omits static reading chapters')
+require(len(static_urls)==len(set(static_urls)),'Duplicate sitemap URL')
+site_path=urlsplit(site['publicUrl']).path
+for url in reading_urls:
+    relative=unquote(urlsplit(url).path[len(site_path):])
+    target=DIST/relative/'index.html'
+    require(target.is_file(),'Missing static chapter: '+url)
+    if not target.is_file():continue
+    html=target.read_text();language=relative.split('/')[0]
+    require(f'<html lang="{language}">' in html,'Wrong chapter language: '+url)
+    require(f'<link rel="canonical" href="{url}">' in html,'Wrong chapter canonical: '+url)
+    require('<meta name="description" content="' in html,'Missing chapter description: '+url)
+    require('<h1>' in html and '<article class="prose"' in html,'Missing static article: '+url)
+    require('href="#/read/' not in html,'Unmigrated reading link: '+url)
+    links=Links();links.feed(html)
+    for link in links.targets:
+        resolved=urljoin(url,link);parsed=urlsplit(resolved)
+        if not resolved.startswith(site['publicUrl']):continue
+        local=DIST/unquote(parsed.path[len(site_path):])
+        if parsed.path.endswith('/'):local=local/'index.html'
+        require(local.is_file(),f'{url}: broken generated link or asset {link}')
 for name,document in documents.items():
     require('href="'+site['legacyPublicUrl']+'#/' not in document['html'],f'{name}: legacy site link remains')
     require('href="'+site['publicUrl']+'#/' not in document['html'],f'{name}: same-site link would leave the current language')

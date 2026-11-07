@@ -54,6 +54,28 @@ this workspace does not enable public Sites hosting.
 
 ## Reading routes
 
+Every available reading chapter is also published as full-text static HTML at
+`/en/read/<chapter>/` and `/ja/read/<chapter>/`. These pages include rendered
+equations, local figures, per-page descriptions, canonical URLs, reciprocal
+language alternates, and ordinary section anchors without requiring JavaScript.
+The build includes reading indexes and all 95 reading pages in `sitemap.xml`.
+Untranslated chapters link to their English edition without advertising a
+nonexistent Japanese URL. Old `#/read/<chapter>?section=<id>` links forward to
+the corresponding static page and section. Interactive experiment routes remain
+available from the chapters. `scripts/check_web_release.py` checks the generated
+pages and their assets/links before deployment.
+
+For a local preview of these project-prefixed URLs, serve a parent folder with
+`dist/` mounted as `numerical-methods-atlas/`, for example from this directory:
+
+```bash
+mkdir -p .preview
+ln -s ../dist .preview/numerical-methods-atlas
+python3 -m http.server 8765 --directory .preview --bind 127.0.0.1
+```
+
+Open `http://127.0.0.1:8765/numerical-methods-atlas/en/read/stability/`.
+
 - `#/`: introduction and interactive Sod density comparison.
 - `#/atlas`: historical reading path.
 - `#/methods`: methods and implementation scope.
