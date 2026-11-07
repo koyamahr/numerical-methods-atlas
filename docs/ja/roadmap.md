@@ -2,13 +2,13 @@
 
 ## 現在の最優先：衝撃波手法 {#current-priority-shock-methods}
 
-相対論・新分野より、衝撃波手法の拡充を優先します。最初の公開段階として[制限付き放物線FV・特性変数・WENO-Z・AUSM基準例](reconstruction.md)、[数値反例を含むRoeのProperty U](advanced.md#roes-property-u)、[管理した平面odd–even診断](carbuncle.md)を追加しました。原型PPMの波の追跡・接触面強調・衝撃波平坦化、AUSM+／AUSM+-up、鈍頭物体カーバンクル、回転ハイブリッドが、この優先群の次の段階です。範囲を限定した実験だけで全体を完了扱いにはしません。
+相対論・新分野より、衝撃波手法の拡充を優先します。最初の公開段階として[制限付き放物線FV・特性変数・WENO-Z・AUSM基準例](reconstruction.md)、[数値反例を含むRoeのProperty U](advanced.md#roes-property-u)、[管理した平面odd–even診断](carbuncle.md)を追加しました。[第2段階](shock-expansion.md)では、急峻化・平坦化を独立に切り替える直接Euler型波追跡PPM、定義を明示したAUSM+／AUSM+-up、方向分解HLLE/Roe実験を含む物体適合格子の円柱前半部を追加しました。強圧力差でのAUSM+停止、有限時刻の弓形衝撃波、未解決の検証を明示します。Lagrange/remap、原型Rotated-RHLLの最適化、幅広い強度・回転条件、外部コード比較は今後です。
 
 ## 初版：実行可能な基礎 {#first-edition-executable-foundations}
 
 v0.1.0は教育用Pythonライブラリ、歴史アトラス、英語解説、文献カタログ、比較図、自動数値検査をまとめています。リポジトリが初版配布物で、[README](../README.md)のガイドが資料をつなぎます。
 
-NASA問題集には計算済みの15°楔の基準例と未実装候補が含まれます。回転ソルバーノートは今後の計画であり、カタログへの収録だけでは実装済みを意味しません。
+NASA問題集には計算済みの15°楔の基準例と未実装候補が含まれます。別の物体適合格子の前面診断に方向分解ハイブリッドを追加しました。カタログへの収録だけでは、引き続き実装済みを意味しません。
 
 ## 次の検証 {#next-verification-work}
 
@@ -17,7 +17,7 @@ NASA問題集には計算済みの15°楔の基準例と未実装候補が含ま
 - 浅水・等温Riemann参照解を追加しました。地形、静水平衡保存、数値的な乾床の発展は別段階で扱います。
 - 新しいHLLD標準テストを、UCT-HLLD・強磁場問題・外部参照コード比較へ広げます。
 - 非線形Fourierとエイリアシング除去、制限付きEuler DG、多次元残差分配を調べます。
-- 低Mach PDE前処理と2次元Euler回転ハイブリッドを実装し、エントロピー修正、正値性、カーバンクルを別々に確認します。
+- 低Mach PDE前処理を実装し、方向分解2次元Eulerハイブリッドを前面テスト以外へ広げます。エントロピー修正、正値性、カーバンクルを別々に確認します。
 - 楕円解法を変係数、異方性、線緩和、FAS、AMG、2次元混合境界へ拡張します。
 
 ## NASA問題の推奨順序 {#suggested-order-for-nasa-cases}
@@ -69,8 +69,8 @@ Burgers・LWR交通流を含む7系統9ケースの保存分布を追加しま�
 - **追加済み — RoeのProperty U**：原典の4条件、パラメータベクトルの導出、ジャンプ・整合性・固有基底の検査、膨張不連続の反例。[解説](advanced.md#roes-property-u)を参照。
 - InutsukaのGSPH：Gaussian畳み込み、比体積再構成、向き付き粒子対リーマン状態、整合保存エネルギー更新を、可変平滑化長の前に滑らか・接触・衝撃波管で検証します。Iwasaki–InutsukaのGSPMHDは後の独立段階です。[出典と計画](gsph.md)。
 - 相対論流体：SRHD回復・特性を先に検査し、SRMHD、固定計量GR、独立検証Einstein物質結合へ進みます。放射とSRGSPHは別の分岐です。[2026年11月確認の調査](relativistic-hydrodynamics.md)。
-- **第1段階を追加**：制限付き放物線FV、保存特性変数、FD WENO-ZのSod・接触面・Shu–Osher比較。原型PPM全機能は今後です。[範囲](reconstruction.md)を参照。
-- 共通音速・3次圧力分割のAUSM基準例を追加。AUSM+・AUSM+-upは独立した予定です。
+- **第1段階を追加**：制限付き放物線FV、保存特性変数、FD WENO-ZのSod・接触面・Shu–Osher比較。直接Euler型の波追跡・急峻化・平坦化は[第2段階](shock-expansion.md)に追加しました。Lagrange/remapは別課題です。
+- 従来のAUSM共通音速基準例を維持し、[第2段階](shock-expansion.md)に定義を明示したAUSM+／AUSM+-up、波追跡PPM条件を揃えた比較、許容状態を保てない停止例を追加しました。
 - **Web実装済み**：HLLD、Brio–Wu、Alfvén波の格子細分化、弱い磁場ループのCT-Contact／GLM比較。[MHDテスト](#/mhd-tests)を参照。
 - **予定 — 電磁場のFDTD（時間領域有限差分法）**：Yee格子の変数配置、leapfrogによるMaxwell方程式の更新、CFL制限、数値分散。真空中の波と導体空洞のテストから始め、吸収境界・PMLの反射検査へ進みます。実装と専用の検証は未完了です。
 - **予定 — プラズマPIC（Particle-in-Cell法）**：静電的な粒子–Poisson連成から、電磁的な粒子–Maxwell連成へ進みます。粒子形状、格子への割当てと場の補間、Boris法、電荷保存電流割当て、Gauss則の診断を扱います。プラズマ振動、two-stream不安定性、Landau減衰を検証候補とし、エネルギー・ノイズ・格子／時間／粒子数依存性を確認します。既存の重力PM例とは適用範囲を分けます。[WarpXのPIC理論ノート](https://warpx.readthedocs.io/en/25.11/theory/pic.html)を出発点とし、プラズマPICソルバーは現時点では未実装です。

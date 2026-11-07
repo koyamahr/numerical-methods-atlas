@@ -6475,5 +6475,333 @@
   "reference.14f88d1b475d": {
     "en": "Manufactured solution",
     "ja": "製造解"
+  },
+  "shock-expansion.e86a5ce4ebcf": {
+    "en": "Traced PPM, AUSM & bow shocks",
+    "ja": "波追跡PPM・AUSM・弓形衝撃波"
+  },
+  "shock-expansion.9700de27ae3a": {
+    "en": "Traced PPM, AUSM & bow shocks ↗",
+    "ja": "波追跡PPM・AUSM・弓形衝撃波 ↗"
+  },
+  "shock-expansion.3a63da0197a4": {
+    "en": "SHOCK METHODS / SECOND COMPUTED STAGE",
+    "ja": "衝撃波手法／計算展示の第2段階"
+  },
+  "shock-expansion.dce3f76ae40d": {
+    "en": "Trace the waves.",
+    "ja": "波を追跡する。"
+  },
+  "shock-expansion.9098f508b848": {
+    "en": "Challenge the",
+    "ja": "衝撃波の"
+  },
+  "shock-expansion.0a53ea9da2d0": {
+    "en": "shock.",
+    "ja": "限界を調べる。"
+  },
+  "shock-expansion.fe9cdddecd71": {
+    "en": "Direct-Eulerian PPM with separate contact and shock switches, specified AUSM variants, and a Mach-6 cylinder forebody on a conforming grid.",
+    "ja": "接触面・衝撃波の処理を切り替える直接Euler型PPM、定義を明示したAUSM系、物体適合格子でのMach 6円柱前面を比較します。"
+  },
+  "shock-expansion.3575ca72bd8d": {
+    "en": "Read formulas, controls & caveats ↗",
+    "ja": "式・設定・注意点を読む ↗"
+  },
+  "shock-expansion.ad6606b44d64": {
+    "en": "Earlier planar odd–even tests ↗",
+    "ja": "従来の平面odd–evenテスト ↗"
+  },
+  "shock-expansion.f8aec4e3154d": {
+    "en": "Controlled comparison",
+    "ja": "条件を揃えた比較"
+  },
+  "shock-expansion.2be97c748031": {
+    "en": "PPM contact / shock switches",
+    "ja": "PPMの接触面・衝撃波処理"
+  },
+  "shock-expansion.3ea79a1fd505": {
+    "en": "Fixed traced PPM / changing flux",
+    "ja": "波追跡PPMを固定／流束を変更"
+  },
+  "shock-expansion.440dac357270": {
+    "en": "Initial-value problem",
+    "ja": "初期値問題"
+  },
+  "shock-expansion.4d05d995a877": {
+    "en": "Displayed primitive field",
+    "ja": "表示する基本変数"
+  },
+  "shock-expansion.c09ee14680e7": {
+    "en": "Strong pressure jump / 1000 to 0.01",
+    "ja": "強い圧力差／1000対0.01"
+  },
+  "shock-expansion.8467b644aadc": {
+    "en": "FV curves are primitive variables of conserved means. The dashed curve shows point values. Only completed runs share the requested final time.",
+    "ja": "FV曲線は平均保存変数から求めた基本変数です。破線は点値です。要求した最終時刻が揃うのは、完了した計算だけです。"
+  },
+  "shock-expansion.70f3a8c1e4bc": {
+    "en": "Download controls & results ↓",
+    "ja": "設定と結果をダウンロード ↓"
+  },
+  "shock-expansion.f44cfc111aa6": {
+    "en": "Download conserved fields ↓",
+    "ja": "保存変数場をダウンロード ↓"
+  },
+  "shock-expansion.5af733f98603": {
+    "en": "Traced PPM",
+    "ja": "波追跡PPM"
+  },
+  "shock-expansion.cdf566d5cde3": {
+    "en": "Traced PPM uses one conservative update from characteristic domain averages. It is not a tracing predictor wrapped in SSPRK3. Changing only steepening and flattening isolates those switches.",
+    "ja": "波追跡PPMは特性領域平均から1回の保存更新を行います。予測の外側にSSPRK3を適用する方法ではありません。急峻化・平坦化だけを変えて、その効果を調べます。"
+  },
+  "shock-expansion.680c453981e1": {
+    "en": "Smooth entropy-wave refinement",
+    "ja": "滑らかなエントロピー波の細分化"
+  },
+  "shock-expansion.b81fb325211c": {
+    "en": "CFL 0.4; N = 32, 64, 128; t = 0.2. This sequence measures the complete traced method, including its time error and extremum limiter.",
+    "ja": "CFL 0.4、N = 32, 64, 128、t = 0.2。時間誤差と極値制限を含む波追跡法全体の収束です。"
+  },
+  "shock-expansion.f2a7f3b3df44": {
+    "en": "Low-Mach flux response",
+    "ja": "低Machでの流束応答"
+  },
+  "shock-expansion.6fa940e378bc": {
+    "en": "Mass-flux response / pressure jump",
+    "ja": "質量流束応答／圧力差"
+  },
+  "shock-expansion.3a2b570902a3": {
+    "en": "The graph varies a reference Mach cutoff for a fixed tiny pressure jump. It measures a numerical flux response, not a low-Mach flow solution or a universal accuracy claim.",
+    "ja": "小さな固定圧力差に対し、参照Mach数の下限を変えます。数値流束の応答であり、低Mach流の解や普遍的な精度の主張ではありません。"
+  },
+  "shock-expansion.0ab1c8884241": {
+    "en": "BODY-CONFORMING GRID / INVISCID FOREBODY",
+    "ja": "物体適合格子／非粘性の前面"
+  },
+  "shock-expansion.1a4c195159dd": {
+    "en": "Look around the nose.",
+    "ja": "円柱前面を調べる。"
+  },
+  "shock-expansion.ab453b8c9b11": {
+    "en": "Forebody grid",
+    "ja": "前面の格子"
+  },
+  "shock-expansion.006c9e13b8af": {
+    "en": "Initial density perturbation",
+    "ja": "初期密度の摂動"
+  },
+  "shock-expansion.4674c5e10d5f": {
+    "en": "ε = 10⁻⁴ / angular mode 12",
+    "ja": "ε = 10⁻⁴／角方向モード12"
+  },
+  "shock-expansion.fb369d7ae657": {
+    "en": "ε = 0 / control",
+    "ja": "ε = 0／対照計算"
+  },
+  "shock-expansion.f0e607e41be0": {
+    "en": "Forebody field",
+    "ja": "前面の物理量"
+  },
+  "shock-expansion.d81ce19081d4": {
+    "en": "Time-history diagnostic",
+    "ja": "時間履歴の診断"
+  },
+  "shock-expansion.cc509a6348cd": {
+    "en": "Density reflection defect",
+    "ja": "密度の反射対称性欠損"
+  },
+  "shock-expansion.c2b17ab8199e": {
+    "en": "Normalized conserved update rate",
+    "ja": "規格化した保存変数更新率"
+  },
+  "shock-expansion.6a10ad0bc5a3": {
+    "en": "Slip wall, fixed outer free stream and extrapolated angular exits. The wake is outside this domain.",
+    "ja": "slip壁、外周一様流固定、角方向出口は外挿です。後流は領域外です。"
+  },
+  "shock-expansion.8050d764bb79": {
+    "en": "Cylinder forebody shock fields and slip-wall pressure coefficients",
+    "ja": "円柱前面の衝撃波分布とslip壁の圧力係数"
+  },
+  "shock-expansion.3ee2924b2bc3": {
+    "en": "All five field panels in each image share one color range. Images are terminal snapshots; nonzero update rates are retained.",
+    "ja": "各画像の5つの場は共通の色範囲です。終了時刻のスナップショットであり、ゼロでない更新率も残します。"
+  },
+  "shock-expansion.c32c678fd9e5": {
+    "en": "Read the time history",
+    "ja": "時間履歴を読む"
+  },
+  "shock-expansion.28cf824b6a8a": {
+    "en": "History values are shown as log10. Zeros use a display floor of 10⁻¹⁶; raw values remain in the download.",
+    "ja": "履歴はlog10で表示します。ゼロには表示上の下限10⁻¹⁶を使い、生の値はダウンロードに残します。"
+  },
+  "shock-expansion.8ab698184ece": {
+    "en": "Keep the failure modes visible.",
+    "ja": "失敗の現れ方も残す。"
+  },
+  "shock-expansion.80730a4b094f": {
+    "en": "Roe can develop a strong asymmetry on the finer grid. Grid dependence, unperturbed controls, nose-pressure errors and remaining time variation matter together. Small perturbation growth is not a carbuncle-free certification.",
+    "ja": "Roeは細かい格子で強い非対称性を示す場合があります。格子依存性、摂動なしの対照、先端圧力誤差、残る時間変動を合わせて見ます。摂動の成長が小さいだけでは、カーバンクルを生じない保証になりません。"
+  },
+  "shock-expansion.04e35c39c76f": {
+    "en": "The directional HLLE/Roe experiment decomposes the face normal along and across the velocity jump. It is separate from the earlier pressure-sensor blend and from the optimized published Rotated-RHLL dissipation formula.",
+    "ja": "方向分解HLLE/Roe実験は、速度差の方向とその直交方向へ面法線を分解します。従来の圧力センサー混合や、原論文の最適化したRotated-RHLL散逸式とは区別します。"
+  },
+  "shock-expansion.4563675d62cf": {
+    "en": "This is inviscid cylinder-forebody shock verification. It supplies no viscous wake, total-cylinder drag, lift or Strouhal-number validation.",
+    "ja": "非粘性の円柱前面衝撃波の検証です。粘性後流、円柱全体の抗力・揚力・Strouhal数の検証は含みません。"
+  },
+  "shock-expansion.f6ae2487181a": {
+    "en": "Fixed HLLC / changing PPM switches",
+    "ja": "HLLCを固定／PPMの処理を変更"
+  },
+  "shock-expansion.19668e25cb4c": {
+    "en": "Tracing only",
+    "ja": "波追跡のみ"
+  },
+  "shock-expansion.7f5b499acffb": {
+    "en": "Tracing + contact steepening",
+    "ja": "波追跡＋接触面急峻化"
+  },
+  "shock-expansion.d15eb3853222": {
+    "en": "Tracing + shock flattening",
+    "ja": "波追跡＋衝撃波平坦化"
+  },
+  "shock-expansion.436f48c1d29b": {
+    "en": "Tracing + both switches",
+    "ja": "波追跡＋両方の処理"
+  },
+  "shock-expansion.3c6ebb3c5f68": {
+    "en": "AUSM / arithmetic sound speed",
+    "ja": "AUSM／算術平均音速"
+  },
+  "shock-expansion.ecac40cab4f9": {
+    "en": "AUSM+-up / reference Mach 0.1",
+    "ja": "AUSM+-up／参照Mach数0.1"
+  },
+  "shock-expansion.3740f7fa7a57": {
+    "en": "Directional HLLE/Roe",
+    "ja": "方向分解HLLE/Roe"
+  },
+  "shock-expansion.920e413c7d41": {
+    "en": "Status",
+    "ja": "状態"
+  },
+  "shock-expansion.2c5a35929598": {
+    "en": "Actual time",
+    "ja": "実際の時刻"
+  },
+  "shock-expansion.79c3ede6ef06": {
+    "en": "Density cell-mean L1",
+    "ja": "密度セル平均のL1"
+  },
+  "shock-expansion.e9de4876764c": {
+    "en": "Steepened cells / summed over steps",
+    "ja": "急峻化セル数／ステップ総和"
+  },
+  "shock-expansion.dfb5a2c22b2f": {
+    "en": "Flattened cells / summed over steps",
+    "ja": "平坦化セル数／ステップ総和"
+  },
+  "shock-expansion.4ddb3e96801a": {
+    "en": "completed",
+    "ja": "完了"
+  },
+  "shock-expansion.5d28a90f4498": {
+    "en": "failed",
+    "ja": "停止"
+  },
+  "shock-expansion.f4dea7bc4227": {
+    "en": "Failed runs are excluded from the final-time curves. Their last accepted conserved states, actual times and failure reasons remain in the download.",
+    "ja": "停止した計算は最終時刻の曲線から除外します。最後の許容保存状態、実際の時刻、停止理由はダウンロードに残します。"
+  },
+  "shock-expansion.6071ce9c959b": {
+    "en": "Admissibility retries exhausted: Nonpositive pressure; reduce CFL or change method",
+    "ja": "許容状態を得る再試行を使い切りました：圧力が正ではありません。CFLの低減や手法の変更が必要です。"
+  },
+  "shock-expansion.67fac9bafbe8": {
+    "en": "Semi-analytic Riemann point curve; density errors use front-split conserved means.",
+    "ja": "半解析Riemann解の点値曲線です。密度誤差には波面分割した保存変数セル平均を使います。"
+  },
+  "shock-expansion.8b9f13033fb6": {
+    "en": "Exact periodic contact point curve; cell means agree with the initial grid after one crossing.",
+    "ja": "周期接触面の厳密点値曲線です。1周期の移動後、セル平均は初期格子と一致します。"
+  },
+  "shock-expansion.bf0b6d13c421": {
+    "en": "Internal numerical reference / characteristic FD WENO-Z N=960; not exact.",
+    "ja": "内部の数値参照解／特性FD WENO-Z N=960。厳密解ではありません。"
+  },
+  "shock-expansion.75dcc06107f3": {
+    "en": "Internal N=960 numerical reference",
+    "ja": "内部N=960数値参照解"
+  },
+  "shock-expansion.98ab9589fe45": {
+    "en": "Nose pressure",
+    "ja": "先端圧力"
+  },
+  "shock-expansion.d3b37c8feb42": {
+    "en": "Relative nose-pressure error",
+    "ja": "先端圧力の相対誤差"
+  },
+  "shock-expansion.b5309a24f4c4": {
+    "en": "Unperturbed control / final defect",
+    "ja": "摂動なし対照／最終欠損"
+  },
+  "shock-expansion.785fd681ab52": {
+    "en": "Final update rate",
+    "ja": "最終更新率"
+  },
+  "shock-expansion.c9cc40767155": {
+    "en": "log10 density reflection defect",
+    "ja": "密度反射対称性欠損のlog10"
+  },
+  "shock-expansion.4974b0a672a0": {
+    "en": "log10 normalized update rate",
+    "ja": "規格化更新率のlog10"
+  },
+  "shock-expansion.c20c2929c337": {
+    "en": "Forebody time histories",
+    "ja": "円柱前面の時間履歴"
+  },
+  "shock-expansion.0299cd9d400a": {
+    "en": "Limited PPM here is a method-of-lines parabolic reconstruction. Original PPM wave tracing, contact steepening, shock flattening and Lagrange/remap are not included. AUSM uses a common arithmetic sound speed and cubic pressure splitting. The next computed stage adds traced PPM, AUSM+ and AUSM+-up, plus conforming-grid bow-shock tests.",
+    "ja": "この表示の制限付きPPMはmethod of linesの放物線再構成です。波追跡・急峻化・平坦化・Lagrange/remapを含みません。AUSMは算術平均音速と3次圧力分割です。次の計算段階には波追跡PPM、AUSM+、AUSM+-up、物体適合格子の弓形衝撃波テストを追加しました。"
+  },
+  "shock-expansion.6c0d0943c3b3": {
+    "en": "This is an independent planar odd–even diagnostic, not Quirk’s original perturbed-grid duct or a blunt-body carbuncle test. The chosen Nyquist perturbation preserves a symmetry with zero transverse velocity. Other wavelengths and mesh rotations remain to be tested. A separate stage adds cylinder-forebody snapshots. No method receives a carbuncle-free certification.",
+    "ja": "独立した平面odd–even診断で、Quirk原型の摂動格子ダクトや鈍頭物体テストではありません。選んだNyquist摂動は横速度ゼロの対称性を保ちます。他波長と格子回転は今後の検証です。別段階に円柱前半部のスナップショットを追加しました。どの手法もカーバンクル非発生を認定しません。"
+  },
+  "shock-expansion.6999a9be00de": {
+    "en": "Method-of-lines parabolic FV and a separate direct-Eulerian traced primitive PPM with contact steepening and shock flattening switches. No Lagrange/remap or multidimensional CTU.",
+    "ja": "method of linesの放物線FVと、独立した直接Euler型・基本変数の波追跡PPM。接触面急峻化・衝撃波平坦化を切り替えます。Lagrange/remap・多次元CTUは対象外です。"
+  },
+  "shock-expansion.ea2f691746e7": {
+    "en": "Arithmetic-sound-speed AUSM plus specified critical-sound-speed AUSM+ and AUSM+-up. Matched traced-PPM cases, a recorded strong-jump failure and forebody tests; no low-Mach PDE certification.",
+    "ja": "算術平均音速AUSMと、臨界音速を明示したAUSM+・AUSM+-up。波追跡PPMで揃えたケース、強圧力差の停止例、前面テストを収録。低Mach PDEの認定ではありません。"
+  },
+  "shock-expansion.9a8454a8e46c": {
+    "en": "Explicit directional HLLE/Roe composition with unit-normal flux checks and conforming cylinder-forebody controls. Distinct from the optimized 2008 Rotated-RHLL formula; no universal carbuncle-free claim.",
+    "ja": "方向分解HLLE/Roe合成を、単位法線流束と物体適合円柱前面の対照計算で検証。2008年の最適化Rotated-RHLL式と区別し、普遍的なカーバンクル非発生は主張しません。"
+  },
+  "shock-expansion.48df811b6a10": {
+    "en": "The publicly available accepted author manuscript, especially Appendix A, was inspected to cross-check PPM reconstruction and tracing. The atlas uses an independent specified 1D implementation, not Cholla output, GPU timings or a reproduction of its full multidimensional CTU scheme.",
+    "ja": "公開された採択済み著者原稿、特に付録AをPPM再構成と波追跡の照合に使いました。アトラスは定義を明示した独立の1次元実装であり、Chollaの出力・GPU時間・完全な多次元CTU法の再現ではありません。"
+  },
+  "shock-expansion.f2e998138401": {
+    "en": "MACH 6 / CONFORMING GRID",
+    "ja": "MACH 6／物体適合格子"
+  },
+  "shock-expansion.f9305280fa8b": {
+    "en": "A bow shock around the cylinder nose",
+    "ja": "円柱前面の弓形衝撃波"
+  },
+  "shock-expansion.b7b27dce26c3": {
+    "en": "Five fluxes on a conforming cylinder-forebody grid: Roe, HLLE, AUSM+, AUSM+-up and directional HLLE/Roe. Two grids, seeded/control runs, wall pressures and time histories; no steady or carbuncle-free certification.",
+    "ja": "物体適合格子の円柱前半部で、Roe・HLLE・AUSM+・AUSM+-up・方向分解HLLE/Roeを比較。2格子、摂動と対照、壁圧力、時間履歴を収録。定常収束やカーバンクル非発生の認定ではありません。"
+  },
+  "shock-expansion.4df18123802a": {
+    "en": "{method} / stopped before final time",
+    "ja": "{method}／最終時刻前に停止"
   }
 }

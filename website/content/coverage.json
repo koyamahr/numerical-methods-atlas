@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "edition": "Published web edition",
-  "counted_on": "2026-11-06",
+  "counted_on": "2026-11-07",
   "policy": {
     "equations": "Named equation/model entries, not scalar component equations or mathematically disjoint families. Includes frameworks and auxiliary formulations; variants share one entry except the three separately explained SR/GR fluid systems. Biological entries are imported once from their own catalog.",
     "methods": "Named numerical methods and building blocks with a reading chapter. Aliases count once; RK stages, dimensions, parameter combinations, mesh layouts and theoretical conditions do not add methods. A family and a separately explained algorithm may both appear. Not a count of mutually exclusive end-to-end solvers.",
@@ -11,9 +11,9 @@
   "counts": {
     "equations": 42,
     "methods": 90,
-    "papers": 139,
-    "references": 176,
-    "journal_articles": 136,
+    "papers": 140,
+    "references": 177,
+    "journal_articles": 137,
     "conference_papers": 3,
     "books": 22,
     "chapters": 2,
@@ -21,12 +21,12 @@
     "other_sources": 10,
     "local_equations": 15,
     "reading_equations": 27,
-    "local_methods": 84,
-    "reading_methods": 6,
+    "local_methods": 85,
+    "reading_methods": 5,
     "biological_entries": 22,
     "gallery_cases": 9,
     "gallery_equations": 7,
-    "reading_chapters": 46
+    "reading_chapters": 47
   },
   "items": [
     {
@@ -384,10 +384,10 @@
       "kind": "method",
       "id": "rotated-hybrid",
       "label": "Rotated-hybrid Riemann solver",
-      "chapter": "advanced",
-      "status": "reading",
+      "chapter": "shock-expansion",
+      "status": "local-example",
       "group": "Riemann fluxes & corrections",
-      "scope": ""
+      "scope": "Explicit directional HLLE/Roe composition with unit-normal flux checks and conforming cylinder-forebody controls. Distinct from the optimized 2008 Rotated-RHLL formula; no universal carbuncle-free claim."
     },
     {
       "kind": "method",
@@ -987,10 +987,10 @@
       "kind": "method",
       "id": "ppm",
       "label": "Limited PPM reconstruction",
-      "chapter": "reconstruction",
+      "chapter": "shock-expansion",
       "status": "local-example",
       "group": "Spatial discretization",
-      "scope": "Method-of-lines parabolic FV only; no original wave tracing, contact steepening, flattening or remap."
+      "scope": "Method-of-lines parabolic FV and a separate direct-Eulerian traced primitive PPM with contact steepening and shock flattening switches. No Lagrange/remap or multidimensional CTU."
     },
     {
       "kind": "method",
@@ -1014,10 +1014,10 @@
       "kind": "method",
       "id": "ausm",
       "label": "AUSM-family flux splitting",
-      "chapter": "reconstruction",
+      "chapter": "shock-expansion",
       "status": "local-example",
       "group": "Riemann fluxes & corrections",
-      "scope": "Common arithmetic sound speed and cubic pressure baseline, with 1D/2D tests. AUSM+ and AUSM+-up remain planned."
+      "scope": "Arithmetic-sound-speed AUSM plus specified critical-sound-speed AUSM+ and AUSM+-up. Matched traced-PPM cases, a recorded strong-jump failure and forebody tests; no low-Mach PDE certification."
     },
     {
       "kind": "equation",
@@ -2098,12 +2098,17 @@
       "id": "godlewski1996book",
       "type": "book",
       "identity": "doi:10.1007/978-1-4612-0713-9"
+    },
+    {
+      "id": "schneider2015cholla",
+      "type": "article",
+      "identity": "doi:10.1088/0067-0049/217/2/24"
     }
   ],
   "source_sha256": {
-    "catalog/coverage.json": "353df5a32d8739a59050eee0fcf1632fea235308dd4bcd9d77393ea999c2365b",
+    "catalog/coverage.json": "6c95b385c8cba05a13e9f205d1f18d0b448caf876fcbac8639f3eb04b7298256",
     "catalog/biological-models.json": "f0b55e0832cb17304b6d1bfdb626f2b66bb6e5c27a3730981ceb2b4fb151ab82",
-    "catalog/references.json": "d2e65849db4d82a0b10c9beb3565293081134eaa302194a1c7cebd16d392bbc2",
+    "catalog/references.json": "0880b7808eae809d8238e9999cac8f27f1ba64143ba506d25c5b0243948ea16d",
     "scripts/build_coverage.py": "aa5736f70653801129a25f8b18726a6f993dc1c09bbbf68e4dcab48090cb7d0d"
   }
 }

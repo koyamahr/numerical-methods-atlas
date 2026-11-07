@@ -41,6 +41,8 @@ for name in ('validation.json','double-mach-run.json','double-mach.npz',
              'keep-vortex.json','equation-gallery.json','solver-foundations.json',
              'biological-models.json','geophysical-grids.json','spherical-meshes.json','reference-solutions.json'):
     copy_changed(ROOT/'docs/figures'/name,SITE/'public/assets'/name)
+for source in sorted((ROOT/'docs/figures/shock-expansion').glob('*')):
+    if source.is_file():copy_changed(source,SITE/'public/assets/shock-expansion'/source.name)
 generate('build_coverage.py')
 generate('build_japanese_catalogs.py')
 for source in sorted((ROOT/'docs/ja').glob('*.md')):

@@ -78,9 +78,7 @@ positivity properties, and carbuncle treatments address different problems.
 
 Rotated-hybrid Riemann solvers combine fluxes using directions beyond the face
 normal to balance shock robustness and shear-layer resolution. A coordinate
-rotation alone does not reproduce this construction. This edition supplies
-the literature context; 2D Euler geometry, direction selection, and carbuncle
-tests are next implementation steps.
+rotation alone does not reproduce this construction. This edition adds a specified [directional HLLE/Roe composition and cylinder-forebody tests](shock-expansion.md). This explicit two-flux experiment is distinct from an optimized reproduction of the original Rotated-RHLL dissipation formula.
 [Nishikawa–Kitamura (2008)](https://doi.org/10.1016/j.jcp.2007.11.003).
 
 

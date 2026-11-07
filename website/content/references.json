@@ -2058,5 +2058,18 @@
     "doi": "10.1007/978-1-4612-0713-9",
     "source": "https://link.springer.com/book/10.1007/978-1-4612-0713-9",
     "note": "Publisher first-edition record, description and contents checked: Applied Mathematical Sciences, volume 118, copyright 1996; the 2013 eBook release is a later digital issue. This record identifies the requested first edition, not the revised second edition of 2021 (DOI 10.1007/978-1-0716-1344-3). Reading reference for nonlinear hyperbolic systems and their numerical approximation; full text and all proofs have not been audited."
+  },
+  {
+    "id": "schneider2015cholla",
+    "type": "article",
+    "year": 2015,
+    "author": "Schneider, Evan E. and Robertson, Brant E.",
+    "title": "Cholla: A New Massively-Parallel Hydrodynamics Code for Astrophysical Simulation",
+    "journal": "The Astrophysical Journal Supplement Series",
+    "volume": "217",
+    "pages": "24",
+    "doi": "10.1088/0067-0049/217/2/24",
+    "source": "https://arxiv.org/abs/1410.4194",
+    "note": "The publicly available accepted author manuscript, especially Appendix A, was inspected to cross-check PPM reconstruction and tracing. The atlas uses an independent specified 1D implementation, not Cholla output, GPU timings or a reproduction of its full multidimensional CTU scheme."
   }
 ]

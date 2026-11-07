@@ -3,7 +3,7 @@
 ## Current priority: shock methods
 
 Shock-method expansion takes priority over relativity and new subject areas.
-The first published stage adds [limited parabolic FV, characteristics, WENO-Z and an AUSM baseline](reconstruction.md), [Roe's Property U with numerical counterexamples](advanced.md#roes-property-u), and [controlled planar odd–even diagnostics](carbuncle.md). Original PPM wave tracing/contact steepening/shock flattening, AUSM+/AUSM+-up, blunt-body carbuncle tests and rotated-hybrid schemes remain the next steps in this priority group. They are not silently marked complete by the scoped experiments.
+The first published stage adds [limited parabolic FV, characteristics, WENO-Z and an AUSM baseline](reconstruction.md), [Roe's Property U with numerical counterexamples](advanced.md#roes-property-u), and [controlled planar odd–even diagnostics](carbuncle.md). The [second computed stage](shock-expansion.md) adds direct-Eulerian traced PPM with independent steepening/flattening switches, specified AUSM+/AUSM+-up fluxes, and conforming-grid cylinder-forebody tests including a directional HLLE/Roe experiment. The recorded strong-jump AUSM+ failure, finite-time bow-shock behavior and unresolved verification are explicit. Lagrange/remap, optimized original Rotated-RHLL, broader strength/rotation studies and external-code comparisons remain future work.
 
 ## First edition: executable foundations
 
@@ -13,8 +13,8 @@ numerical checks. The repository is the first-edition distribution; the reading
 guide in the [README](../README.md) connects the material.
 
 The NASA case catalog includes computed 15-degree wedge baselines and remaining
-implementation candidates. Rotated-solver notes still describe future work;
-catalog inclusion alone does not indicate an implemented simulation.
+implementation candidates. A separate conforming-grid forebody diagnostic now includes a directional hybrid;
+catalog inclusion alone still does not indicate an implemented simulation.
 
 ## Next verification work
 
@@ -23,7 +23,7 @@ catalog inclusion alone does not indicate an implemented simulation.
 - Added shallow-water and isothermal Riemann references; topography, well balancing, and numerical dry-bed evolution remain separate implementation steps.
 - Extend the new HLLD standard tests with UCT-HLLD, stronger-field cases and external reference-code comparisons.
 - Explore nonlinear Fourier methods and dealiasing, Euler DG with limiting, and multidimensional residual distribution.
-- Implement low-Mach PDE preconditioning and 2D Euler rotated-hybrid solvers; test entropy correction, positivity, and carbuncle resistance separately.
+- Implement low-Mach PDE preconditioning and extend the directional 2D Euler hybrid beyond its stated forebody tests; test entropy correction, positivity, and carbuncle resistance separately.
 - Extend elliptic solvers to variable coefficients, anisotropy, line smoothing, FAS, AMG, and 2D mixed boundaries.
 
 ## Suggested order for NASA cases
@@ -120,8 +120,8 @@ implementation limits and remaining verification work are stated in each chapter
   and characteristic tests before SRMHD, fixed-metric GR, and independently
   verified Einstein–matter coupling. Radiation and SRGSPH are separate branches;
   see the [development review checked in November 2026](relativistic-hydrodynamics.md).
-- **First stage added:** limited parabolic FV, conservative characteristics and FD WENO-Z with Sod/contact/Shu–Osher comparisons. Complete original PPM features remain pending; see [the scope](reconstruction.md).
-- AUSM common-sound-speed/cubic-pressure baseline added; AUSM+ and AUSM+-up are planned separately.
+- **First stage added:** limited parabolic FV, conservative characteristics and FD WENO-Z with Sod/contact/Shu–Osher comparisons. Direct-Eulerian tracing/steepening/flattening are now added in [the second stage](shock-expansion.md); Lagrange/remap remain separate.
+- AUSM common-sound-speed baseline retained; specified AUSM+ and AUSM+-up fluxes, matched traced-PPM cases and a recorded admissibility failure are added in [the second stage](shock-expansion.md).
 - **Completed web stage:** HLLD with Brio–Wu, Alfvén-wave refinement and weak field-loop CT-Contact/GLM comparisons; see the [MHD tests](#/mhd-tests).
 - **Planned — electromagnetic FDTD (finite-difference time-domain):** Yee-grid
   placement, leapfrog Maxwell updates, CFL limits and numerical dispersion;

@@ -11,7 +11,7 @@ const site = JSON.parse(fs.readFileSync('site.config.json', 'utf8'));
 const publicURL = new URL(site.publicUrl);
 if (publicURL.protocol !== 'https:' || publicURL.pathname !== `/${site.publicationRepository.split('/')[1]}/`) throw new Error('Publication URL and repository do not match');
 fs.mkdirSync('dist', { recursive: true });
-for (const f of ['index.html', 'style.css', 'app.js', 'i18n.js', 'glossary.js', 'experiments.js', 'foundations.js', 'hamiltonian.js', 'movies.js', 'gallery.js', 'comparisons.js', 'shock-methods.js', 'poisson.js', 'books.js', 'limiters.js', 'runge-kutta.js', 'cip.js', 'basis.js', 'equations.js', 'reference-solutions.js', 'coverage.js', 'numerics.js', 'favicon.svg']) fs.copyFileSync(f, `dist/${f}`);
+for (const f of ['index.html', 'style.css', 'app.js', 'i18n.js', 'glossary.js', 'experiments.js', 'foundations.js', 'hamiltonian.js', 'movies.js', 'gallery.js', 'comparisons.js', 'shock-methods.js', 'shock-expansion.js', 'poisson.js', 'books.js', 'limiters.js', 'runge-kutta.js', 'cip.js', 'basis.js', 'equations.js', 'reference-solutions.js', 'coverage.js', 'numerics.js', 'favicon.svg']) fs.copyFileSync(f, `dist/${f}`);
 const escapeHTML = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const substitutions = {SITE_TITLE:site.title.en, BRAND_LEAD:site.brand.lead, BRAND_SUBJECT:site.brand.subject, SITE_URL:site.publicUrl, REPOSITORY_URL:site.repositoryUrl, LEGACY_REPOSITORY_URL:site.legacyRepositoryUrl};
 let index = fs.readFileSync('index.html', 'utf8');

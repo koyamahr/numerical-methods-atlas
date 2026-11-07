@@ -46,7 +46,7 @@ A_\pi(i,t)=\left|\frac{1}{N_y}\sum_{j=0}^{N_y-1}(-1)^j
 
 ## 初版の状況 {#status-in-this-edition}
 
-[二重Mach反射](double-mach.md)は斜め衝撃波干渉の実際の**1次HLL計算**です。管理したRoe対HLLのカーバンクル比較ではなく、カーバンクルがない保証を与えません。後述の平面衝撃波節に管理した行摂動診断を追加しました。鈍頭物体比較は今後の課題です。物理的な円筒[粘性応力](coordinates-viscosity.md)と数値衝撃波散逸も別の演算子です。
+[二重Mach反射](double-mach.md)は斜め衝撃波干渉の実際の**1次HLL計算**です。管理したRoe対HLLのカーバンクル比較ではなく、カーバンクルがない保証を与えません。後述の平面衝撃波節に管理した行摂動診断を追加しました。[別の段階](shock-expansion.md)では、物体に沿う格子の円柱前半部スナップショットと対照計算を追加しました。物理的な円筒[粘性応力](coordinates-viscosity.md)と数値衝撃波散逸も別の演算子です。
 
 [Roeの業績](roe-memorial.md)、[流束のテスト](benchmarks.md)、[実装ロードマップ](roadmap.md)へ進んでください。
 
@@ -63,4 +63,4 @@ A_\pi(i,t)=\left|\frac{1}{N_y}\sum_{j=0}^{N_y-1}(-1)^j
 
 ![平面衝撃波の比較](figures/shock-methods/planar-128-0.png)
 
-再現は`python scripts/build_shock_robustness.py`です。[全摂動・対照履歴、設定、ソースハッシュ](figures/shock-methods/robustness.json)と[最終保存変数場](figures/shock-methods/planar-fields.npz)を取得できます。原型Quirkの移動衝撃波・摂動格子ダクトや鈍頭物体のこぶではありません。他波長、格子回転、鈍頭物体、広いCFL・強度の検査は今後で、カーバンクルを生じないとの主張はしません。単一ジャンプの代数は[Property U](advanced.md#roes-property-u)を参照してください。
+再現は`python scripts/build_shock_robustness.py`です。[全摂動・対照履歴、設定、ソースハッシュ](figures/shock-methods/robustness.json)と[最終保存変数場](figures/shock-methods/planar-fields.npz)を取得できます。原型Quirkの移動衝撃波・摂動格子ダクトや鈍頭物体のこぶではありません。[円柱前半部](shock-expansion.md)は別段階の計算例として追加しました。他波長、格子回転、広いCFL・強度の検査は今後で、カーバンクルを生じないとの主張はしません。単一ジャンプの代数は[Property U](advanced.md#roes-property-u)を参照してください。

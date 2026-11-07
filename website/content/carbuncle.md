@@ -46,7 +46,7 @@ Record its time history and the maximum over the shock neighborhood, together wi
 
 ## Status in this edition
 
-The [Double Mach Reflection exhibit](double-mach.md) is an actual **first-order HLL computation** of an oblique shock interaction. It is not a controlled Roe-versus-HLL carbuncle experiment and supplies no carbuncle-free certification. The planar-shock section below adds a controlled row-perturbation diagnostic; blunt-body comparisons remain future work. The physical cylindrical [viscous stress](coordinates-viscosity.md) and numerical shock dissipation also represent different operators.
+The [Double Mach Reflection exhibit](double-mach.md) is an actual **first-order HLL computation** of an oblique shock interaction. It is not a controlled Roe-versus-HLL carbuncle experiment and supplies no carbuncle-free certification. The planar-shock section below adds a controlled row-perturbation diagnostic; [a separate stage](shock-expansion.md) adds conforming-grid cylinder-forebody snapshots and controls. The physical cylindrical [viscous stress](coordinates-viscosity.md) and numerical shock dissipation also represent different operators.
 
 Continue with [Roe’s legacy](roe-memorial.md), [the flux benchmarks](benchmarks.md), and [the implementation roadmap](roadmap.md).
 
@@ -92,6 +92,6 @@ Reproduce with `python scripts/build_shock_robustness.py`. Download
 [all perturbed/control histories, definitions and source hashes](figures/shock-methods/robustness.json)
 and [final conservative fields](figures/shock-methods/planar-fields.npz).
 This is not the original Quirk moving-shock/perturbed-grid duct or a blunt-body
-carbuncle bulge. Other wavelengths, mesh rotations, blunt-body cases and
+carbuncle bulge. [Cylinder-forebody cases](shock-expansion.md) are now a separate computed stage. Other wavelengths, mesh rotations and
 broader CFL/strength sweeps remain required work; no carbuncle-free claim is made.
 See [Property U](advanced.md#roes-property-u) for the separate single-jump algebra.

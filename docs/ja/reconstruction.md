@@ -10,7 +10,7 @@
 
 ## 制限付き放物線有限体積 {#limited-parabolic-finite-volumes}
 
-[Colella–Woodward（1984）](https://doi.org/10.1016/0021-9991(84)90143-8)の再構成の考え方に沿い、セル平均と両端値から放物線を作ります。確認した公開資料は[1982年の著者プレプリント](https://escholarship.org/uc/item/5sr307f1)で、最終学術誌版とは異なります。本実装は端値補間・単調性制約を含み、method of linesでSSPRK3と結合します。原型PPMの波の追跡、接触面強調、衝撃波平坦化、Lagrange発展・再配置は今後の課題です。
+[Colella–Woodward（1984）](https://doi.org/10.1016/0021-9991(84)90143-8)の再構成の考え方に沿い、セル平均と両端値から放物線を作ります。確認した公開資料は[1982年の著者プレプリント](https://escholarship.org/uc/item/5sr307f1)で、最終学術誌版とは異なります。本実装は端値補間・単調性制約を含み、method of linesでSSPRK3と結合します。この経路には波追跡・接触面急峻化・衝撃波平坦化を含めません。それらを加えた直接Euler型は[第2段階](shock-expansion.md)で提供します。Lagrange発展・remapは今後の課題です。
 
 セル平均Q、端値L,R、ξ∈[0,1]として、
 
@@ -41,7 +41,7 @@ AUSMの原典は[Liou–Steffen（1993）](https://doi.org/10.1006/jcph.1993.112
 
 Mf=M+(uL/a)+M−(uR/a)を使い、(ρ,ρu,ρv,ρH)を左のa max(Mf,0)と右のa min(Mf,0)で輸送します。pL P+(uL/a)+pR P−(uR/a)を法線運動量だけに加え、エネルギーには全エンタルピーを輸送します。一様場、両向き超音速、Mach ±1の分岐、静止・移動接触面、Euler問題を検証します。
 
-[AUSM+（1996）](https://doi.org/10.1006/jcph.1996.0256)、[AUSM+-up（2006）](https://doi.org/10.1016/j.jcp.2005.09.020)は独立した拡張予定です。現基準例に全速度補正や低Mach検証はありません。名称だけで普遍的な衝撃波安定性は導けません。[odd–even比較](#/shock-robustness)も参照してください。
+[AUSM+（1996）](https://doi.org/10.1006/jcph.1996.0256)、[AUSM+-up（2006）](https://doi.org/10.1016/j.jcp.2005.09.020)は[新しい波追跡PPM比較](shock-expansion.md)で別々に定義しています。現基準例に全速度補正や低Mach検証はありません。名称だけで普遍的な衝撃波安定性は導けません。[odd–even比較](#/shock-robustness)も参照してください。
 
 ## 問題・参照・精度 {#problems-references-and-accuracy}
 

@@ -1189,6 +1189,14 @@ Wan, H. and Giorgetta, M. A. and Zängl, G. and Restelli, M. and Majewski, D. an
 
 Official model-description record and abstract checked for the triangular-grid C-staggering connection. Atlas midpoint-refined icosahedron and barycentric dual are illustrative, unoptimized meshes, not the ICON grid or dynamical core.
 
+## 2015 · schneider2015cholla
+
+Schneider, Evan E. and Robertson, Brant E.. **Cholla: A New Massively-Parallel Hydrodynamics Code for Astrophysical Simulation**. The Astrophysical Journal Supplement Series.
+
+[Original bibliographic record](https://doi.org/10.1088/0067-0049/217/2/24) · [Full text or implementation reference](https://arxiv.org/abs/1410.4194)
+
+The publicly available accepted author manuscript, especially Appendix A, was inspected to cross-check PPM reconstruction and tracing. The atlas uses an independent specified 1D implementation, not Cholla output, GPU timings or a reproduction of its full multidimensional CTU scheme.
+
 ## 2015 · teukolsky2015
 
 Teukolsky, Saul A.. **Short note on the mass matrix for Gauss-Lobatto grid points**. Journal of Computational Physics.

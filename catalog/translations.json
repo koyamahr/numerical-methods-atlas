@@ -100,7 +100,7 @@
     "advanced": {
       "ja": {
         "status": "draft",
-        "source_sha256": "957901233cff1a1df2a5927f50f77644f07829d9b218ce66c1b968e11a5fbf72",
+        "source_sha256": "6e75f84da1db711262a2bb0f5121a82a3a1f621160c33667973ad930b6ce5530",
         "checked_on": null
       }
     },
@@ -191,7 +191,7 @@
     "carbuncle": {
       "ja": {
         "status": "draft",
-        "source_sha256": "260d158412dcb7b82809d1a1fca8ad68e75b934e33c0fb3fbc12749d296441a5",
+        "source_sha256": "4943156f60fbdbfbe37860328d67723b81bd9984828d1f2b114ef41bdbf5c58a",
         "checked_on": null
       }
     },
@@ -268,7 +268,7 @@
     "roadmap": {
       "ja": {
         "status": "draft",
-        "source_sha256": "4737849d96abe928bda039d4fea47a11d020d4596032e529c18e431ad8a51930",
+        "source_sha256": "27d06702bfed6a79895350063cf513c947ab07e9ed85665698564519e7130e8a",
         "checked_on": null
       }
     },
@@ -303,7 +303,7 @@
     "reconstruction": {
       "ja": {
         "status": "draft",
-        "source_sha256": "373dd8a7a22adb2f9602be7323bbda35eba02d3b71109c20093a5471ebb8413a",
+        "source_sha256": "66d1f7820554b5418adc405d3b4ce2f80de98198665e3e51ad92b1ab0214d2f9",
         "checked_on": null
       }
     },
@@ -318,6 +318,13 @@
       "ja": {
         "status": "draft",
         "source_sha256": "5e1ef9eca8c6c641c114c608b7d247406596663567c57109b1e763e172a22bb8",
+        "checked_on": null
+      }
+    },
+    "shock-expansion": {
+      "ja": {
+        "status": "draft",
+        "source_sha256": "4b5ac5c188ece08e3b1b611e7aedfb5d94753bdf1ed767f7d4a0aef118e7d5d9",
         "checked_on": null
       }
     }

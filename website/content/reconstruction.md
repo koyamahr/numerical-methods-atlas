@@ -26,7 +26,7 @@ form a parabola in each cell from its mean and two edges. The inspected public
 version, not the final journal layout. This implementation includes limited
 edge interpolation and monotonicity constraints, coupled by method of lines
 to SSPRK3. It excludes original PPM wave tracing, contact steepening, shock
-flattening, Lagrangian evolution and remap. Those remain explicit future work.
+flattening, Lagrangian evolution and remap. Direct-Eulerian tracing, contact steepening and flattening are now available in [the second computed stage](shock-expansion.md); Lagrangian evolution and remap remain future work.
 
 For a cell mean Q and edges L,R, use the local coordinate ξ in [0,1]:
 
@@ -87,8 +87,7 @@ enthalpy. Tests include uniform states, both supersonic directions, Mach ±1
 branch limits, stationary/moving contacts and the computed Euler problems.
 
 [AUSM+ (1996)](https://doi.org/10.1006/jcph.1996.0256) and
-[AUSM+-up (2006)](https://doi.org/10.1016/j.jcp.2005.09.020) are distinct planned
-extensions. The current baseline has no all-speed correction or low-Mach
+[AUSM+-up (2006)](https://doi.org/10.1016/j.jcp.2005.09.020) are separately defined in [the new traced-PPM comparison](shock-expansion.md). The current baseline has no all-speed correction or low-Mach
 verification. None of these names implies universal shock stability; inspect
 the separate [odd–even comparison](#/shock-robustness).
 

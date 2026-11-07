@@ -2374,6 +2374,22 @@ Official model-description record and abstract checked for the triangular-grid C
 
 </div>
 
+## 2015 · schneider2015cholla {#2015-schneider2015cholla}
+
+<div lang="en" data-original>
+
+Schneider, Evan E. and Robertson, Brant E.. **Cholla: A New Massively-Parallel Hydrodynamics Code for Astrophysical Simulation**. The Astrophysical Journal Supplement Series.
+
+</div>
+
+[原著の書誌情報](https://doi.org/10.1088/0067-0049/217/2/24) · [全文または実装の参照資料](https://arxiv.org/abs/1410.4194)
+
+<div lang="en" data-original>
+
+The publicly available accepted author manuscript, especially Appendix A, was inspected to cross-check PPM reconstruction and tracing. The atlas uses an independent specified 1D implementation, not Cholla output, GPU timings or a reproduction of its full multidimensional CTU scheme.
+
+</div>
+
 ## 2015 · teukolsky2015 {#2015-teukolsky2015}
 
 <div lang="en" data-original>

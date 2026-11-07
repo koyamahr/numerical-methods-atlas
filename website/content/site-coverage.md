@@ -1,10 +1,10 @@
 # Site coverage and counting rules
 
-Published web edition, counted 2026-11-06. These are counts of catalog entries and documented examples, not a claim that every entry is a verified end-to-end solver.
+Published web edition, counted 2026-11-07. These are counts of catalog entries and documented examples, not a claim that every entry is a verified end-to-end solver.
 
-**42 equation/model entries · 90 methods and building blocks · 139 journal/conference papers · 176 total sources.**
+**42 equation/model entries · 90 methods and building blocks · 140 journal/conference papers · 177 total sources.**
 
-There are 9 saved-profile equation-gallery cases across 7 equation families, and 46 reading chapters including this inventory.
+There are 9 saved-profile equation-gallery cases across 7 equation families, and 47 reading chapters including this inventory.
 
 ## Equations and models
 
@@ -69,7 +69,7 @@ Named equation/model entries, not scalar component equations or mathematically d
 
 Named numerical methods and building blocks with a reading chapter. Aliases count once; RK stages, dimensions, parameter combinations, mesh layouts and theoretical conditions do not add methods. A family and a separately explained algorithm may both appear. Not a count of mutually exclusive end-to-end solvers.
 
-84 entries have scoped local examples; 6 are reading-only. Reconstruction limiters, preconditioners and coupling operators are building blocks, not complete PDE solvers. Mesh layouts, CFL conditions and theorems are not counted as numerical methods.
+85 entries have scoped local examples; 5 are reading-only. Reconstruction limiters, preconditioners and coupling operators are building blocks, not complete PDE solvers. Mesh layouts, CFL conditions and theorems are not counted as numerical methods.
 
 ### Spatial discretization
 
@@ -86,7 +86,7 @@ Named numerical methods and building blocks with a reading chapter. Aliases coun
 - [Fourier differentiation and evolution](benchmarks.md) — Local example.
 - [Cubic-Hermite CIP](cip.md) — Local example.
 - [Continuous P1 Galerkin FEM](fem.md) — Local example.
-- [Limited PPM reconstruction](reconstruction.md) — Local example. Method-of-lines parabolic FV only; no original wave tracing, contact steepening, flattening or remap.
+- [Limited PPM reconstruction](shock-expansion.md) — Local example. Method-of-lines parabolic FV and a separate direct-Eulerian traced primitive PPM with contact steepening and shock flattening switches. No Lagrange/remap or multidimensional CTU.
 - [Euler characteristic reconstruction](reconstruction.md) — Local example. Local conservative FV basis or face-frozen Roe FD basis; controlled component/characteristic comparisons.
 - [FD WENO5-Z](reconstruction.md) — Local example. Global LF splitting, exponent 2, fixed epsilon 1e-6; point values, not FV state interpolation.
 
@@ -98,9 +98,9 @@ Named numerical methods and building blocks with a reading chapter. Aliases coun
 - [Roe](benchmarks.md) — Local example.
 - [HLLE / Einfeldt wave speeds](benchmarks.md) — Local example.
 - [Acoustic Roe entropy correction](advanced.md) — Local example.
-- [Rotated-hybrid Riemann solver](advanced.md) — Reading only.
+- [Rotated-hybrid Riemann solver](shock-expansion.md) — Local example. Explicit directional HLLE/Roe composition with unit-normal flux checks and conforming cylinder-forebody controls. Distinct from the optimized 2008 Rotated-RHLL formula; no universal carbuncle-free claim.
 - [HLLD MHD Riemann solver](mhd.md) — Local example. Full-vector adiabatic HLLD/HLLE with Brio-Wu, circular Alfven refinement and weak field-loop tests. CT-Contact and GLM, not UCT-HLLD.
-- [AUSM-family flux splitting](reconstruction.md) — Local example. Common arithmetic sound speed and cubic pressure baseline, with 1D/2D tests. AUSM+ and AUSM+-up remain planned.
+- [AUSM-family flux splitting](shock-expansion.md) — Local example. Arithmetic-sound-speed AUSM plus specified critical-sound-speed AUSM+ and AUSM+-up. Matched traced-PPM cases, a recorded strong-jump failure and forebody tests; no low-Mach PDE certification.
 
 ### Limiters & admissibility
 
@@ -194,7 +194,7 @@ Unique bibliographic publications classified as journal articles or conference p
 
 Unique cataloged works across all publication types. An original publication and a later translation are separate works; duplicate DOI records are not. NASA case links in prose are not catalog records.
 
-- 136 journal-article records, including reviews, translations and explicitly labeled accepted papers.
+- 137 journal-article records, including reviews, translations and explicitly labeled accepted papers.
 - 3 conference papers.
 - 22 books.
 - 2 book chapters.
